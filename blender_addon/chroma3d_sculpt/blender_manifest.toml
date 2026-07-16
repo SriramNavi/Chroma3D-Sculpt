@@ -1,0 +1,9 @@
+schema_version = "1.0.0"
+id = "chroma3d_sculpt"
+version = "0.1.0"
+name = "Chroma3D Sculpt"
+tagline = "Analyze and prepare detailed meshes for reliable 3D printing"
+maintainer = "Chroma3D"
+type = "add-on"
+blender_version_min = "4.4.0"
+license = ["SPDX:GPL-3.0-or-later"]
