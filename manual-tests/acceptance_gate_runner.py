@@ -36,8 +36,8 @@ from chroma3d_sculpt.ui.properties import CHROMA3D_PG_session_state  # noqa: E40
 
 REPORTS_DIRECTORY = REPOSITORY_ROOT / "manual-tests" / "reports"
 ARTIFACTS_DIRECTORY = REPOSITORY_ROOT / "manual-tests" / "artifacts"
-RESULTS_PATH = REPORTS_DIRECTORY / "acceptance_results.json"
-EXPORTED_REPORT_PATH = REPORTS_DIRECTORY / "default_cube_chroma3d_analysis.json"
+RESULTS_PATH = REPORTS_DIRECTORY / "sprint0_regression_on_sprint1.json"
+EXPORTED_REPORT_PATH = REPORTS_DIRECTORY / "sprint0_regression_default_cube.json"
 SCENE_ARTIFACT_PATH = ARTIFACTS_DIRECTORY / "acceptance_test_scene.blend"
 
 GateFunction = Callable[[], tuple[dict[str, Any], list[str], list[str]]]
@@ -734,7 +734,7 @@ def _write_results(started_at: datetime, started_timer: float, python_launcher: 
             "destructive_analysis_operations_used": False,
             "files_changed_outside_repository": False,
             "automatic_commits_created": False,
-            "sprint_1_started": False,
+            "sprint_1_started": True,
         },
     }
     RESULTS_PATH.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")

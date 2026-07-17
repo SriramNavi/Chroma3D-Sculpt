@@ -26,9 +26,9 @@ LOGS_DIRECTORY = MANUAL_TESTS / "logs"
 REPORTS_DIRECTORY = MANUAL_TESTS / "reports"
 BLENDER_LOG_PATH = LOGS_DIRECTORY / "blender_acceptance.log"
 VALIDATION_LOG_PATH = LOGS_DIRECTORY / "validation_commands.log"
-RESULTS_PATH = REPORTS_DIRECTORY / "acceptance_results.json"
-MARKDOWN_PATH = MANUAL_TESTS / "ACCEPTANCE_RESULTS.md"
-PACKAGE_PATH = REPOSITORY_ROOT / "dist" / "chroma3d_sculpt-0.1.0-alpha.1.zip"
+RESULTS_PATH = REPORTS_DIRECTORY / "sprint0_regression_on_sprint1.json"
+MARKDOWN_PATH = REPORTS_DIRECTORY / "sprint0_regression_on_sprint1.md"
+PACKAGE_PATH = REPOSITORY_ROOT / "dist" / "chroma3d_sculpt-0.2.0-alpha.1.zip"
 
 
 def _utc_now() -> datetime:
@@ -133,7 +133,7 @@ def _fallback_report(discovery: BlenderDiscovery, started_at: datetime) -> dict[
     return {
         "schema_version": "1.0",
         "project": "Chroma3D Sculpt",
-        "extension_version": "0.1.0-alpha.1",
+        "extension_version": "0.2.0-alpha.1",
         "repository_root": str(REPOSITORY_ROOT),
         "blender_executable": str(discovery.executable),
         "blender_version": discovery.version,

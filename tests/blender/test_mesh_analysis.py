@@ -184,7 +184,7 @@ class MeshAnalysisTests(unittest.TestCase):
         obj = self.create_mesh("CON.txt", vertices, faces=faces)
         result = self.analyze(obj)
         payload = json.loads(result.to_json())
-        self.assertEqual(payload["schema_version"], "1.0.0")
+        self.assertEqual(payload["schema_version"], "2.0")
         self.assertEqual(payload["object_metadata"]["object_name"], "CON.txt")
         self.assertTrue(sanitize_report_filename(obj.name).startswith("_CON.txt_"))
 

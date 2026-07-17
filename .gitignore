@@ -17,4 +17,13 @@ Desktop.ini
 manual-tests/artifacts/*
 manual-tests/logs/*
 manual-tests/reports/*.json
+manual-tests/reports/
 manual-tests/screenshots/*
+manual-tests/sprint1/reports/
+manual-tests/sprint1/logs/
+manual-tests/sprint1/artifacts/
+manual-tests/sprint1/screenshots/
+manual-tests/sprint1-final/reports/
+manual-tests/sprint1-final/logs/
+manual-tests/sprint1-final/artifacts/
+manual-tests/sprint1-final/screenshots/
