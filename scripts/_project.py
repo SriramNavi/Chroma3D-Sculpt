@@ -22,6 +22,7 @@ PACKAGE_PATH = DIST_DIRECTORY / PACKAGE_FILENAME
 
 REQUIRED_SOURCE_FILES = (
     "__init__.py",
+    "analysis_settings.py",
     "blender_manifest.toml",
     "metadata.py",
     "session.py",
@@ -30,8 +31,13 @@ REQUIRED_SOURCE_FILES = (
     "operators/__init__.py",
     "operators/analyze_mesh.py",
     "operators/export_report.py",
+    "operators/select_issue.py",
     "services/__init__.py",
     "services/mesh_analyzer.py",
+    "services/topology_analyzer.py",
+    "services/shell_analyzer.py",
+    "services/deep_diagnostics.py",
+    "services/build_volume_analyzer.py",
     "services/report_generator.py",
     "ui/__init__.py",
     "ui/panels.py",
@@ -39,8 +45,10 @@ REQUIRED_SOURCE_FILES = (
     "utilities/__init__.py",
     "utilities/blender_paths.py",
     "utilities/context.py",
+    "utilities/geometry.py",
     "utilities/logging.py",
     "utilities/units.py",
+    "utilities/signatures.py",
 )
 
 
@@ -72,4 +80,3 @@ def validate_source_layout() -> None:
     mismatches = [f"{key}={manifest.get(key)!r} (expected {value!r})" for key, value in expected.items() if manifest.get(key) != value]
     if mismatches:
         raise ValueError("Invalid manifest metadata: " + "; ".join(mismatches))
-

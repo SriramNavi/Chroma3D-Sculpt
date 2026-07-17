@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import bpy
 
+from ..analysis_settings import settings_from_property_group
 from ..services.mesh_analyzer import analyze_mesh
 from ..session import store_result
 from ..ui.properties import update_session_state
@@ -34,9 +35,11 @@ class CHROMA3D_OT_analyze_mesh(bpy.types.Operator):
 
         identity_before = capture_context_identity(context)
         try:
+            settings = settings_from_property_group(context.window_manager.chroma3d_sculpt_state)
             result = analyze_mesh(
                 obj,
                 context.scene,
+                settings=settings,
                 blender_version=bpy.app.version_string,
                 blend_file_path=bpy.data.filepath,
             )
@@ -60,4 +63,3 @@ class CHROMA3D_OT_analyze_mesh(bpy.types.Operator):
 
 
 CLASSES = (CHROMA3D_OT_analyze_mesh,)
-

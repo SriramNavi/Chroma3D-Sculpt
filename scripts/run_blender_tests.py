@@ -1,4 +1,4 @@
-"""Run Sprint 0 unittest fixtures inside a factory-startup Blender process."""
+"""Run all Blender unittest fixtures inside a factory-startup Blender process."""
 
 from __future__ import annotations
 
@@ -20,7 +20,7 @@ def main() -> int:
         print("Blender was not found. Set BLENDER_EXECUTABLE or pass --blender.", file=sys.stderr)
         return 2
 
-    test_file = REPOSITORY_ROOT / "tests" / "blender" / "test_mesh_analysis.py"
+    test_file = REPOSITORY_ROOT / "tests" / "blender" / "run_all_tests.py"
     command = [
         str(discovery.executable),
         "--background",
@@ -42,4 +42,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

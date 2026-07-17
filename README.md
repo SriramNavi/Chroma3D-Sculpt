@@ -1,98 +1,78 @@
 # Chroma3D Sculpt
 
-Chroma3D Sculpt is a local Blender extension foundation for inspecting detailed meshes before later 3D-print preparation workflows. Sprint 0 is deterministic and read-only: it reports basic geometry, transforms, dimensions, topology signals, and a portable JSON record without changing the mesh or scene.
+Chroma3D Sculpt is a local Blender extension for read-only diagnostics of complex printable statue meshes. Sprint 1 adds production-grade topology, shell, physical-metric, spatial, build-volume, issue-evidence, and timing reports without repairing or modifying geometry.
 
-**Current status:** Sprint 0 — Windows foundation and read-only mesh analysis  
-**Version:** 0.1.0-alpha.1  
-**Minimum supported Blender version:** 4.4  
-**Current runtime validation:** Blender 4.4.3 on Windows  
-**Future compatibility target:** Blender 4.5 LTS and newer
+**Current status:** Sprint 1 accepted
 
-## Sprint 0 features
+**Version:** 0.2.0-alpha.1
 
-- Modern `blender_manifest.toml` extension package.
-- 3D Viewport > Sidebar > Chroma3D > Chroma3D Sculpt panel.
-- Original-datablock geometry and triangulation estimates.
-- Millimetre dimensions respecting scene scale and object scale.
-- Read-only transform, boundary, non-manifold, loose, zero-length, degenerate, component, duplicate-position, and face-winding diagnostics.
-- Session-only latest report per analyzed object.
-- Blender file-browser JSON export.
-- Windows Blender discovery, packaging, validation, installation helper, PowerShell wrappers, and background tests.
+**JSON schema:** 2.0
 
-No external Python package, administrator privilege, VS Code, WSL, Node.js, or network access is required.
+**Minimum Blender:** 4.4.0
 
-## Repository setup
+**Validated runtime:** Blender 4.4.3 on Windows 11
 
-The development repository root is:
+**Future target:** Blender 4.5 LTS and newer
 
-```text
-E:\VPRS\Sriram\Projects\Chroma3D Sculpt
-```
+## Diagnostics
 
-Use PowerShell and quote every path that contains spaces:
+Standard profile runs the practical deterministic checks used for routine review:
+
+- Exact loose, boundary, two-face manifold, and high-incidence edge classification.
+- Vertex face-fan manifold anomalies, face-connected shells, and object/per-shell topological watertightness.
+- World-space dimensions, surface area, and reliable closed-shell volume in millimetres.
+- Shared-edge orientation consistency and closed-shell outward/inward state.
+- Deterministic main shell, combined-criteria tiny-shell candidates, and neutral disconnected external-shell classification.
+- Optional Bambu Lab X1 Carbon or custom rectangular build-volume evaluation in the current orientation.
+- Bounded issue evidence, per-check status, timing, settings snapshot, analysis ID, and topology signature.
+
+Deep profile includes Standard plus bounded BVH self-intersection candidates and closed-shell containment heuristics. Deep checks report `COMPLETED`, `SKIPPED`, `FAILED`, or `NOT_APPLICABLE`; a skipped check never appears as a successful zero-result check.
+
+`Topologically watertight` means the required topology checks completed and the analyzed original mesh has closed face shells with no boundary, loose, high-incidence, or detected vertex-manifold anomaly. It is not a printability, wall-thickness, leak-proofing, or manufacturing guarantee.
+
+Volume is reported as reliable only for closed, orientation-consistent shells. Surface area is world-space triangle area. Object transforms and scene scale are respected without applying transforms. Modifier output is not analyzed.
+
+Shell classifications are `MAIN_SHELL`, `DISCONNECTED_EXTERNAL`, and Deep-only `POSSIBLY_INTERNAL`. Tiny shells and possible internal shells are review candidates, not guaranteed defects. Self-intersection findings are candidate face pairs produced by Blender's BVH overlap API after shared-topology filtering.
+
+## Blender panel
+
+Open **3D Viewport > Sidebar > Chroma3D > Chroma3D Sculpt**.
+
+1. Select Standard or Deep.
+2. Optionally select **Bambu Lab X1 Carbon** (256 × 256 × 256 mm) or enter a Custom build volume.
+3. Select an active mesh in Object Mode and choose **Analyze Mesh**.
+4. Review topology, physical metrics, shells, Deep states, build-volume fit, issue counts, and timings.
+5. Use an issue-selection button to inspect stored vertex, edge, or face evidence in Edit Mode.
+6. Choose **Export JSON Report** for a UTF-8 schema 2.0 report.
+
+Issue selection is the only intentional state-changing Sprint 1 action. It changes selection/mode for inspection but never changes geometry. If topology changed after analysis it refuses with `Analysis is stale. Run Analyze Mesh again.`
+
+## Build, test, and acceptance
+
+From the repository root:
 
 ```powershell
 Set-Location "E:\VPRS\Sriram\Projects\Chroma3D Sculpt"
-py scripts\find_blender.py
-```
-
-Set `BLENDER_EXECUTABLE` or pass `--blender` when Blender is installed in a custom location:
-
-```powershell
-$env:BLENDER_EXECUTABLE = "D:\Applications\Blender\blender.exe"
-py scripts\run_blender_tests.py
-```
-
-## Build and validate
-
-Preferred PowerShell commands:
-
-```powershell
-.\scripts\package_extension.ps1
-.\scripts\validate_package.ps1
-.\scripts\run_blender_tests.ps1
-```
-
-Equivalent Python commands:
-
-```powershell
+py -m compileall -q blender_addon scripts tests manual-tests
+py scripts\run_blender_tests.py --blender "D:\Softwares\Design\Blender\blender.exe"
+py manual-tests\run_acceptance_gates.py --blender "D:\Softwares\Design\Blender\blender.exe"
+py manual-tests\sprint1\run_sprint1_acceptance.py --blender "D:\Softwares\Design\Blender\blender.exe"
 py scripts\package_extension.py
 py scripts\validate_package.py
-py scripts\run_blender_tests.py
+& "D:\Softwares\Design\Blender\blender.exe" --background --command extension validate "E:\VPRS\Sriram\Projects\Chroma3D Sculpt\dist\chroma3d_sculpt-0.2.0-alpha.1.zip"
 ```
 
-The package is written to `dist\chroma3d_sculpt-0.1.0-alpha.1.zip`. The archive contains only runtime extension files and its license; the manifest is at the archive root for modern Blender installation. If script execution is locally restricted, run the Python commands directly or use a one-process execution-policy bypass—do not change machine policy permanently.
+The installable archive is `dist\chroma3d_sculpt-0.2.0-alpha.1.zip`. Install it through Blender's **Edit > Preferences > Extensions > Install from Disk**, then enable the extension if prompted.
 
-## Install in Blender
-
-1. Build the ZIP, then open Blender 4.4 or newer.
-2. Open **Edit > Preferences > Extensions** (the exact label can vary slightly by Blender point release).
-3. Open the Extensions menu and choose **Install from Disk**.
-4. Select `E:\VPRS\Sriram\Projects\Chroma3D Sculpt\dist\chroma3d_sculpt-0.1.0-alpha.1.zip`.
-5. Enable the extension if Blender requests it.
-6. In the 3D Viewport press `N`, open **Chroma3D**, then **Chroma3D Sculpt**.
-
-`py scripts\install_dev_extension.py` builds and validates without modifying external files. Add `--install` to request Blender's extension command, or provide an existing `--user-extension-dir`; the helper refuses to overwrite an existing extension folder.
-
-## Analyze and export
-
-Select a mesh object in Object Mode and choose **Analyze Mesh**. Results update immediately in the panel and remain in memory for the current Blender session. Edit Mode is never changed automatically; exit it before analysis.
-
-Choose **Export JSON Report**, confirm the suggested Windows-safe filename, and use Blender's standard overwrite confirmation. JSON contains the `.blend` file path when the file has been saved; this is documented metadata and is not displayed in the panel.
-
-For runtime logs on Windows, open **Window > Toggle System Console**.
-
-## Troubleshooting
-
-- **Analyze is disabled:** make a mesh object active. Cameras, lights, curves, and missing datablocks are not valid inputs.
-- **Edit Mode message:** return to Object Mode; the extension deliberately does not change modes.
-- **Blender not found:** run `py scripts\find_blender.py --blender "C:\path\to\blender.exe"` or set `BLENDER_EXECUTABLE`.
-- **Python launcher not found:** try `python` instead of `py`, or invoke the scripts with Blender's bundled Python.
-- **Export fails:** choose an existing writable folder and a valid filename.
-- **Large mesh warning:** the conservative duplicate-position check is skipped above 500,000 vertices; the report records `SKIPPED` rather than silently omitting it.
+The background suite contains the preserved 12 Sprint 0 tests plus 36 Sprint 1 tests. Sprint 1 evidence is generated under `manual-tests\sprint1`; generated JSON/log folders and ZIP files remain ignored.
 
 ## Known limitations and safety
 
-Sprint 0 does not repair meshes, guarantee watertightness, validate wall thickness, guarantee printability, use AI, or connect to the internet. Normal consistency is a shared-edge winding signal and is explicitly not evaluated when topology makes the result unreliable. Dimensions are object local-axis dimensions with scale; `NONE` unit scenes use the documented convention 1 Blender unit = 1 metre.
+- Modifier output, wall thickness, support clearances, purge zones, and optimal print orientation are not evaluated.
+- Self-intersection results are candidates; containment is a bounded heuristic with confidence evidence.
+- Build-volume evaluation is rectangular, current-orientation only, and performs no rotation or scaling.
+- There is no repair, hole filling, normal recalculation, Boolean operation, remeshing, decimation, deletion, joining, separation, transform application, or print support generation.
+- Printability and manufacturing success are not guaranteed.
+- Runtime code is offline and uses only Blender APIs plus Python's standard library. It contains no AI API, telemetry, credentials, server, downloaded code, arbitrary `eval`/`exec`, or external package.
 
-The extension makes no network request, stores no credential, loads no external dependency, applies no modifier or transform, calls no destructive Blender operator, saves no `.blend` file, requires no administrator rights, and derives runtime paths dynamically.
+Runtime paths are derived from Blender APIs and package-relative files. Windows paths containing spaces are supported.

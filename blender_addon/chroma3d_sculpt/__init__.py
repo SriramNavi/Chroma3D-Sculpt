@@ -6,7 +6,7 @@ import bpy
 from bpy.props import PointerProperty
 
 from .metadata import DISPLAY_VERSION, EXTENSION_NAME, EXTENSION_VERSION
-from .operators import ANALYZE_CLASSES, EXPORT_CLASSES
+from .operators import ANALYZE_CLASSES, EXPORT_CLASSES, SELECTION_CLASSES
 from .session import clear as clear_session
 from .ui import PANEL_CLASSES, PROPERTY_CLASSES
 from .utilities.logging import get_logger
@@ -22,7 +22,7 @@ bl_info = {
 }
 
 logger = get_logger()
-_RUNTIME_CLASSES = ANALYZE_CLASSES + EXPORT_CLASSES + PANEL_CLASSES
+_RUNTIME_CLASSES = ANALYZE_CLASSES + EXPORT_CLASSES + SELECTION_CLASSES + PANEL_CLASSES
 
 
 def register() -> None:
