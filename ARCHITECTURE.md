@@ -2,6 +2,10 @@
 
 Chroma3D Sculpt 0.3.0-alpha.1 is a synchronous, local Blender extension with independent diagnostic and controlled-repair paths. Dependency direction is `UI -> operators -> coordinator -> focused services -> typed models/utilities`. Diagnostic services do not import repair services or UI modules; repair services may reuse diagnostics.
 
+## Authoritative repair contract
+
+[REPAIR_SAFETY.md](REPAIR_SAFETY.md) is the authoritative contract for every geometry-changing operation. The repair architecture and all future repair implementations must conform to it.
+
 ## Coordinator flow
 
 `chroma3d.analyze_mesh` captures active-object and selection identity, rejects Edit Mode, snapshots immutable settings from `WindowManager`, and calls `services/mesh_analyzer.py`. The coordinator:

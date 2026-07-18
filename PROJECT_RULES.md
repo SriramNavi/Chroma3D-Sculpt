@@ -24,6 +24,7 @@
 
 ## Sprint 2 repair policy
 
+- [REPAIR_SAFETY.md](REPAIR_SAFETY.md) is the authoritative contract for all geometry-changing behavior.
 - Geometry-changing operations run only on an independent workspace object with an independent mesh datablock; the protected source signature is verified before and after every operation.
 - Every operation creates an independent checkpoint. Failures restore automatically; successful checkpoints are retained to the configured bounded depth. Undo and restore invalidate the plan and rerun diagnostics.
 - Repair plans bind the session, analysis ID, source signature, workspace signature, settings, order, evidence, and candidate mappings. Stale plans never execute.

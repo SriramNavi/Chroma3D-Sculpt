@@ -49,6 +49,10 @@ Safe Repair is an explicit, synchronous workflow:
 
 Tiny-shell deletion and hole filling are never preselected. Normal changes require explicit selection. Stale plans, changed sources, changed workspaces, invalid candidate mappings, main-shell deletion, and oversized or unsafe holes are rejected.
 
+## Repair Safety
+
+All geometry-changing behavior is governed by the authoritative [Repair Safety Contract](REPAIR_SAFETY.md).
+
 ## Blender panel
 
 Open **3D Viewport > Sidebar > Chroma3D > Chroma3D Sculpt**.
