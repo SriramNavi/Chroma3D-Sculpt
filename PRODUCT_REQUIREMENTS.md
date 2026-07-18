@@ -3,9 +3,9 @@
 | Metadata | Value |
 |---|---|
 | Document status | Living product specification; planning baseline for review |
-| Current product version | `0.2.0-alpha.1` |
-| Current completed sprint | Sprint 1 — Production Diagnostics; accepted on the feature branch |
-| Next planned sprint | Sprint 2 — Safe Mesh Repair; not started |
+| Current product version | `0.3.0-alpha.1` |
+| Current completed sprint | Sprint 2 — Safe Mesh Repair; automated acceptance complete |
+| Next planned sprint | Sprint 3 — Printability Engine; not started |
 | Primary platform | Windows 11, local Blender extension |
 | Primary validated Blender version | Blender 4.4.3; minimum supported version 4.4.0 |
 | Owner | Chroma3D Product and Engineering |
@@ -14,9 +14,9 @@
 
 ## Product Summary
 
-Chroma3D Sculpt is a Blender-native engineering and creation workflow for high-detail statue meshes. The current internal alpha is a local, read-only diagnostic extension. Standard and Deep profiles report topology, shells, world-space physical metrics, orientation, bounded issue evidence, build-volume fit, and candidate-based spatial findings; they do not repair geometry or guarantee printability.
+Chroma3D Sculpt is a Blender-native engineering and creation workflow for high-detail statue meshes. The current internal alpha provides local read-only diagnostics plus controlled repair on an independent workspace copy. Standard and Deep profiles report topology, shells, world-space physical metrics, orientation, bounded issue evidence, build-volume fit, and candidate-based spatial findings. Sprint 2 can apply explicitly selected bounded repairs without replacing the source; it does not guarantee printability.
 
-Sprint 0 and Sprint 1 are accepted in repository evidence. Sprint 1 is committed on `feature/sprint-1-production-diagnostics`, while `main` and the latest tag still identify Sprint 0. Interactive installed-panel and real Chroma3D statue smoke tests remain prerequisites to Sprint 2. The product should mature from diagnostics into safe repair, print preparation, controlled optimization, domain assets, bounded AI-assisted recommendations, and commercial delivery in that order.
+Sprint 0 and Sprint 1 are accepted and tagged. Sprint 2 automated background, regression, stress, package, and security evidence is implemented on `feature/sprint-2-safe-mesh-repair`; interactive installed-panel and real Chroma3D statue repair UAT remain deferred. Sprint 3 has not started.
 
 ## User Personas
 
@@ -68,7 +68,7 @@ Import or select mesh → choose Standard or Deep profile → optionally choose 
 
 The analysis reads the original mesh datablock. Issue selection may change mode and selection only after topology-signature validation; it does not modify geometry.
 
-### Journey B — Safely repair a model (future)
+### Journey B — Safely repair a model (internal alpha)
 
 Diagnose → duplicate and protect the original → create a repair workspace → preview a controlled repair plan → approve selected operations → execute deterministic operators → compare before/after analysis and signatures → undo, reject, or accept → export a repair audit record.
 
@@ -113,17 +113,17 @@ Status values are **Implemented**, **Partial**, **Planned**, and **Deferred**. F
 
 | ID | Requirement | User value | Status | Target milestone | Acceptance evidence |
 |---|---|---|---|---|---|
-| FR-REPAIR-001 | Create a protected backup and separate repair workspace copy before any geometry-changing action. | Preserves the original and provides recovery. | Planned | Sprint 2 | Identity, linkage, save/reload, and original-immutability tests |
-| FR-REPAIR-002 | Generate a controlled repair plan from completed diagnostic evidence and record unavailable prerequisites. | Shows scope and risk before action. | Planned | Sprint 2 | Plan schema tests and operator-review UAT |
-| FR-REPAIR-003 | Offer tolerance-bounded merge-by-distance with previewed counts and explicit approval. | Removes intended duplicates without silent over-merging. | Planned | Sprint 2 | Boundary fixtures, tolerance tests, and before/after signatures |
-| FR-REPAIR-004 | Remove approved loose vertices, edges, and geometry without affecting unrelated shells. | Clears non-contributing elements safely. | Planned | Sprint 2 | Mixed-fixture regression and original-immutability evidence |
-| FR-REPAIR-005 | Detect and remove zero-length edges and degenerate faces through deterministic operations. | Resolves common invalid geometry. | Planned | Sprint 2 | Focused fixtures and post-repair diagnostic evidence |
-| FR-REPAIR-006 | Repair normals only when preconditions are met and expose the intended orientation result. | Corrects winding without hidden global changes. | Planned | Sprint 2 | Open/closed/mixed-orientation fixtures and comparison report |
-| FR-REPAIR-007 | Fill only policy-approved small holes within explicit size and topology limits. | Addresses routine gaps while avoiding invented large surfaces. | Planned | Sprint 2 | Hole-size boundary fixtures, preview, cancellation, and rollback tests |
-| FR-REPAIR-008 | Present tiny-shell candidates for individual review and removal; never auto-delete solely from a heuristic label. | Removes debris while protecting intentional ornamentation. | Planned | Sprint 2 | Multi-shell UAT and user-confirmation evidence |
-| FR-REPAIR-009 | Re-run diagnostics and show before/after metrics, issue deltas, signatures, and new warnings. | Makes repair quality measurable. | Planned | Sprint 2 | Comparison schema and regression suite |
-| FR-REPAIR-010 | Support Blender undo plus explicit cancellation between safe operation boundaries. | Gives the operator a practical escape path. | Planned | Sprint 2 | Undo/cancel state tests and manual UI checks |
-| FR-REPAIR-011 | Export a repair audit log containing plan, approvals, parameters, operations, outcomes, and analysis references. | Enables traceability and support. | Planned | Sprint 2 | Versioned audit-schema validation and deterministic serialization tests |
+| FR-REPAIR-001 | Create a protected backup and separate repair workspace copy before any geometry-changing action. | Preserves the original and provides recovery. | Implemented | Sprint 2 | S2-02/S2-09; live session is not restart-persistent |
+| FR-REPAIR-002 | Generate a controlled repair plan from completed diagnostic evidence and record unavailable prerequisites. | Shows scope and risk before action. | Implemented | Sprint 2 | S2-03 and plan serialization tests |
+| FR-REPAIR-003 | Offer tolerance-bounded merge-by-distance with previewed counts and explicit approval. | Removes intended duplicates without silent over-merging. | Implemented | Sprint 2 | S2-04 and spatial-cell/non-uniform-scale tests |
+| FR-REPAIR-004 | Remove approved loose vertices, edges, and geometry without affecting unrelated shells. | Clears non-contributing elements safely. | Implemented | Sprint 2 | S2-05 mixed fixtures |
+| FR-REPAIR-005 | Detect and remove zero-length edges and degenerate faces through deterministic operations. | Resolves common invalid geometry. | Implemented | Sprint 2 | Focused Blender fixtures and S2-05 |
+| FR-REPAIR-006 | Repair normals only when preconditions are met and expose the intended orientation result. | Corrects winding without hidden global changes. | Implemented | Sprint 2 | S2-06 open/closed/inward fixtures |
+| FR-REPAIR-007 | Fill only policy-approved small holes within explicit size and topology limits. | Addresses routine gaps while avoiding invented large surfaces. | Implemented | Sprint 2 | S2-08 bounded/rejected/undo fixtures |
+| FR-REPAIR-008 | Present tiny-shell candidates for individual review and removal; never auto-delete solely from a heuristic label. | Removes debris while protecting intentional ornamentation. | Implemented | Sprint 2 | S2-07 candidate/main-shell/undo fixtures |
+| FR-REPAIR-009 | Re-run diagnostics and show before/after metrics, issue deltas, signatures, and new warnings. | Makes repair quality measurable. | Implemented | Sprint 2 | S2-10 comparison evidence |
+| FR-REPAIR-010 | Support Blender undo plus explicit cancellation between safe operation boundaries. | Gives the operator a practical escape path. | Partial | Sprint 2 | Extension checkpoints, undo-last, restore, and failure rollback implemented; mid-operation cancellation and installed UI test deferred |
+| FR-REPAIR-011 | Export a repair audit log containing plan, approvals, parameters, operations, outcomes, and analysis references. | Enables traceability and support. | Implemented | Sprint 2 | S2-12 repair audit schema 1.0 |
 
 ### Printability
 
@@ -206,7 +206,7 @@ Performance expectations below are planning targets unless backed by named evide
 | NFR-PERF-004 | High-density statue meshes | Plan for tens-of-seconds work, bounded memory, progress, and cancellation. Across Windows and Blender 4.4.3 validation runs, Standard analysis of the current approximately 147,000-vertex synthetic fixture has ranged from about 12 to 29 seconds against the repository's 20-second performance warning threshold. Performance remains active technical debt; this synthetic range is not a hard guarantee for production models, and real Chroma3D statue benchmarking is still required. | Sprint 1 acceptance and final-validation evidence; real-model baseline required in Sprint 5 |
 | NFR-PERF-005 | Standard versus Deep | Standard remains the routine deterministic path. Deep adds BVH and containment work and may return explicit limit skips; it must never silently downgrade or serialize a skip as zero findings. | Implemented policy; broaden evidence in Sprint 5 |
 | NFR-REL-001 | Reliability | A failed or skipped check must remain distinct from a successful zero finding in UI, reports, comparisons, and gates. | Implemented for diagnostics; required everywhere |
-| NFR-REL-002 | Reliability | Geometry-changing workflows must be transactional at safe boundaries, preserve the original, and provide recovery evidence. | Planned for Sprint 2 |
+| NFR-REL-002 | Reliability | Geometry-changing workflows must be transactional at safe boundaries, preserve the original, and provide recovery evidence. | Implemented and validated in Sprint 2 |
 | NFR-SEC-001 | Security | Use Blender APIs and the Python standard library for the local core; prohibit hidden network activity, downloaded code, `eval`, `exec`, and generated-code execution. | Current static audit passed; permanent gate |
 | NFR-PRIV-001 | Privacy | Keep local assets local by default. Any upload requires purpose-specific consent, a clear data inventory, retention policy, and redaction controls. | Required before any service integration |
 | NFR-COMP-001 | Compatibility | Support Blender 4.4.0 minimum; validate against Blender 4.4.3 on Windows today and establish a commercial Blender LTS/version policy before external beta. | 4.4.3 validated; 4.5 LTS not yet tested |
@@ -214,10 +214,10 @@ Performance expectations below are planning targets unless backed by named evide
 | NFR-MAINT-001 | Maintainability | Preserve dependency direction from UI to operators to coordinator to focused services and typed models; avoid circular imports and hidden registration. | Current architecture documented and validated |
 | NFR-ACC-001 | Accessibility | UI controls must have descriptive labels, logical grouping, keyboard reachability where Blender supports it, readable states, and no color-only meaning. | Manual UI gate required for each external release |
 | NFR-I18N-001 | Internationalization | Keep user-facing text separable from logic, use UTF-8, avoid text embedded in evidence keys, and design layouts for longer translations. | Readiness required by beta; localization deferred |
-| NFR-OFF-001 | Offline operation | Diagnostics, safe repair, print-prep core, optimization, and local assets must work without network access. | Diagnostics currently offline |
-| NFR-DET-001 | Determinism | Given the same supported Blender version, mesh, transforms, settings, and operation version, diagnostic and deterministic-operation outputs must be stable within documented numeric tolerances. | Diagnostics validated; repair evidence planned |
-| NFR-LOG-001 | Logging | Store bounded operational evidence with IDs and actionable failures; avoid per-element logs and sensitive content. | Analysis/report logging implemented; repair audit planned |
-| NFR-REC-001 | Recovery | Preserve originals, support undo/cancel, persist recoverable plans where appropriate, and explain partial completion after interruption. | Planned from Sprint 2 |
+| NFR-OFF-001 | Offline operation | Diagnostics, safe repair, print-prep core, optimization, and local assets must work without network access. | Diagnostics and Sprint 2 repair validated offline |
+| NFR-DET-001 | Determinism | Given the same supported Blender version, mesh, transforms, settings, and operation version, diagnostic and deterministic-operation outputs must be stable within documented numeric tolerances. | Diagnostics and repair fixtures validated |
+| NFR-LOG-001 | Logging | Store bounded operational evidence with IDs and actionable failures; avoid per-element logs and sensitive content. | Analysis reports and repair audit schema 1.0 implemented |
+| NFR-REC-001 | Recovery | Preserve originals, support undo/cancel, persist recoverable plans where appropriate, and explain partial completion after interruption. | Checkpoint undo/restore/failure rollback implemented; restart persistence deferred |
 | NFR-PKG-001 | Packaging | Reject nested roots, tests, secrets, bytecode, traversal paths, generated evidence, and undeclared dependencies from release packages. | Sprint 0/1 package validators passed |
 | NFR-UPG-001 | Upgrade safety | Version schemas, assets, settings, and repair policies; preserve old scenes or provide explicit migration and rollback. | Policy required before external alpha |
 
@@ -257,7 +257,7 @@ Performance expectations below are planning targets unless backed by named evide
 
 | Capability | Status | Version | Validation | Known limitation |
 |---|---|---|---|---|
-| Modern extension registration, panel, session state, and JSON export | Implemented | 0.1.0–0.2.0-alpha.1 | Sprint 0 acceptance; Sprint 1 regression | Windows/Blender 4.4.3 is the primary validated runtime |
+| Modern extension registration, panel, session state, and JSON export | Implemented | 0.1.0–0.3.0-alpha.1 | Sprint 0–2 acceptance | Windows/Blender 4.4.3 is the primary validated runtime |
 | Read-only original-mesh analysis | Implemented | 0.1.0-alpha.1 | Immutability and stability gates | Modifier output is not analyzed |
 | Standard/Deep profiles and explicit evaluation states | Implemented | 0.2.0-alpha.1 | Sprint 1 S1-01/S1-11 | Deep checks are bounded and may skip |
 | Edge and vertex manifold diagnostics | Implemented | 0.2.0-alpha.1 | 48-test suite and topology matrices | Evidence samples are capped by design |
@@ -268,7 +268,7 @@ Performance expectations below are planning targets unless backed by named evide
 | Bambu X1 Carbon/custom rectangular build-volume fit | Implemented | 0.2.0-alpha.1 | S1-08 | Current orientation only; no support/purge clearance |
 | Bounded evidence, stale protection, and issue selection | Implemented | 0.2.0-alpha.1 | S1-09 and final validation | Selection changes mode/selection but not geometry |
 | Schema 2.0 reports and performance timings | Implemented | 0.2.0-alpha.1 | S1-10/S1-12 | Current schema compatibility policy needs formalization |
-| Safe mesh repair | Planned | Sprint 2 target | No implementation evidence | No current repair, hole filling, cleanup, or normal correction |
+| Safe mesh repair | Implemented | 0.3.0-alpha.1 | 56 focused tests and S2-02 through S2-14 | Workspace copies require human review; session restart persistence and real-statue UAT deferred |
 | Printability engine | Planned | Sprint 3 target | No implementation evidence | No thickness, overhang, contact, support, or orientation analysis |
 | Controlled optimization | Planned | Sprint 4 target | No implementation evidence | No decimation or remeshing |
 | Asset workflows, AI assistance, and commercial platform | Planned/Deferred | Sprints 6–10/post-v1 | No implementation evidence | No asset library, AI, cloud, licensing, billing, or marketplace |

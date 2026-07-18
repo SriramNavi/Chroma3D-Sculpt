@@ -257,9 +257,9 @@ def _gate_static() -> dict[str, Any]:
                 ops_hits.append(f"{path.relative_to(REPOSITORY_ROOT).as_posix()}:{line_number}:{line.strip()}")
     _require(len(ops_hits) == 2 and all("mode_set" in item for item in ops_hits), f"Unexpected runtime bpy.ops calls: {ops_hits}")
     manifest = (runtime / "blender_manifest.toml").read_text(encoding="utf-8")
-    _require('version = "0.2.0"' in manifest, "Manifest version is not 0.2.0.")
+    _require('version = "0.3.0"' in manifest, "Manifest version is not 0.3.0.")
     _require('blender_version_min = "4.4.0"' in manifest, "Minimum Blender is not 4.4.0.")
-    _require(EXTENSION_VERSION == "0.2.0" and DISPLAY_VERSION == "0.2.0-alpha.1", "Display metadata mismatch.")
+    _require(EXTENSION_VERSION == "0.3.0" and DISPLAY_VERSION == "0.3.0-alpha.1", "Display metadata mismatch.")
     _require(SCHEMA_VERSION == "2.0", "Analysis schema mismatch.")
     return {
         "runtime_python_files": len(source_files),
@@ -267,7 +267,7 @@ def _gate_static() -> dict[str, Any]:
         "overclaiming_wording": wording_hits,
         "bpy_ops_calls": ops_hits,
         "versions": {"manifest": EXTENSION_VERSION, "display": DISPLAY_VERSION, "blender_min": "4.4.0", "json_schema": SCHEMA_VERSION},
-        "temporary_bmesh_usage": False,
+        "temporary_bmesh_usage": True,
         "bvh_scope": "Function-local BVHTree objects; Blender exposes no explicit BVHTree free method.",
     }
 
@@ -743,7 +743,7 @@ def _render_markdown(report: dict[str, Any]) -> str:
         if result == "PASS"
         else "SPRINT 1 FINAL VALIDATION FAILED"
     )
-    lines.extend(["", "## 17. Tests Not Run", "", "- Installed-package smoke execution and external regression/package commands are pending finalization.", "- Interactive sidebar panel smoke test was not run in background mode.", "", "## 18. Known Limitations", "", "- Modifier output is not analyzed.", "- Self-intersection diagnostics are candidate-based.", "- Internal-shell classification is heuristic.", "- No wall-thickness analysis.", "- No repair.", "- No support generation.", "- No printability guarantee.", "", "## 19. Safety Confirmation", "", "- No production model files modified.", "- No network, credentials, administrator access, geometry repair, commit, push, or Sprint 2 work.", "", "## 20. Final Decision", "", f"**{decision}**", "", "## 21. One Immediate Next Action", "", "Manually smoke-test the installed 0.2.0-alpha.1 panel on one real Chroma3D statue before committing.", ""])
+    lines.extend(["", "## 17. Tests Not Run", "", "- Interactive installed-panel smoke test was not run in background mode.", "- Real-statue repair UAT was not run.", "", "## 18. Known Limitations", "", "- Modifier output is not analyzed.", "- Self-intersection diagnostics are candidate-based.", "- Internal-shell classification is heuristic.", "- No wall-thickness analysis.", "- This runner validates the Sprint 1 diagnostic path and does not apply Sprint 2 repair operations.", "- No support generation or printability guarantee.", "", "## 19. Safety Confirmation", "", "- No production model files modified.", "- No network, credentials, administrator access, geometry mutation, commit, or push.", "", "## 20. Final Decision", "", f"**{decision}**", "", "## 21. One Immediate Next Action", "", "Review the Sprint 2 evidence and perform an installed-panel smoke test before committing the feature branch.", ""])
     return "\n".join(lines)
 
 
