@@ -20,7 +20,7 @@ LOGS_DIRECTORY = SPRINT_DIRECTORY / "logs"
 RESULTS_PATH = REPORTS_DIRECTORY / "sprint1_acceptance_results.json"
 MARKDOWN_PATH = SPRINT_DIRECTORY / "SPRINT1_ACCEPTANCE_RESULTS.md"
 LOG_PATH = LOGS_DIRECTORY / "blender_sprint1_acceptance.log"
-PACKAGE_PATH = REPOSITORY_ROOT / "dist" / "chroma3d_sculpt-0.2.0-alpha.1.zip"
+PACKAGE_PATH = REPOSITORY_ROOT / "dist" / "chroma3d_sculpt-0.3.0-alpha.1.zip"
 DEFAULT_BLENDER = Path(r"D:\Softwares\Design\Blender\blender.exe")
 
 
@@ -105,7 +105,7 @@ def _render_markdown(report: dict[str, Any]) -> str:
         f"- Repository: `{REPOSITORY_ROOT}`", f"- Branch: `{report.get('branch')}`", f"- Baseline tag: `{report.get('baseline_tag')}`",
         f"- Blender: `{report.get('blender_version')}` at `{report.get('blender_executable')}`", f"- Python launcher: `{report.get('python_launcher')}`", f"- Version: `{report.get('version')}`", "",
         "## 3. Git Baseline", "", f"- Main baseline: `{report.get('baseline_commit')}`", f"- Tag preserved: `{report.get('baseline_tag')}`", "",
-        "## 4. Version", "", "- Extension: `0.2.0-alpha.1`", "- JSON schema: `2.0`", "",
+        "## 4. Version", "", f"- Extension: `{report.get('version')}`", "- JSON schema: `2.0`", "",
         "## 5. Gate Summary Table", "", "| Gate | Result | Duration |", "|---|---|---:|",
     ]
     lines.extend(f"| {gate['id']} - {gate['name']} | {gate['status']} | {gate.get('duration_seconds', 0):.3f}s |" for gate in gates)

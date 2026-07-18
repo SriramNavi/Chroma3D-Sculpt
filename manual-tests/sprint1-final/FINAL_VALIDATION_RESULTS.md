@@ -11,14 +11,14 @@
 ## 3. Environment
 
 - Repository: `E:\VPRS\Sriram\Projects\Chroma3D Sculpt`
-- Branch: `feature/sprint-1-production-diagnostics`
+- Branch: `feature/sprint-2-safe-mesh-repair`
 - Baseline tag: `v0.1.0-alpha.1`
 - Blender path: `D:\Softwares\Design\Blender\blender.exe`
 - Blender version: `4.4.3`
 - Python: `3.11.11`
-- Extension version: `0.2.0-alpha.1`
+- Extension version: `0.3.0-alpha.1`
 - Schema version: `2.0`
-- Total duration: `108.706s`
+- Total duration: `112.185s`
 
 ## 4. Static Safety Audit
 
@@ -55,7 +55,7 @@
 
 ## 8. Self-Intersection Validation
 
-- `{"method": "BVHTree overlap candidates with shared-topology filtering; not an exact printability proof.", "clean": {"status": "COMPLETED", "candidates": 0}, "separated_candidates": 0, "intersecting_candidates": 4, "adjacent_candidates": 0, "limit": {"name": "self_intersection_candidates", "status": "SKIPPED", "message": "Skipped: 12 triangles exceed the configured limit of 1.", "duration_ms": 0.008999999408842996, "actual_size": 12, "configured_limit": 1}, "truncation": {"total_candidates": 4, "stored_pairs": 1, "truncated": true, "evidence_total_faces": 2}}`
+- `{"method": "BVHTree overlap candidates with shared-topology filtering; not an exact printability proof.", "clean": {"status": "COMPLETED", "candidates": 0}, "separated_candidates": 0, "intersecting_candidates": 4, "adjacent_candidates": 0, "limit": {"name": "self_intersection_candidates", "status": "SKIPPED", "message": "Skipped: 12 triangles exceed the configured limit of 1.", "duration_ms": 0.00960000033956021, "actual_size": 12, "configured_limit": 1}, "truncation": {"total_candidates": 4, "stored_pairs": 1, "truncated": true, "evidence_total_faces": 2}}`
 
 ## 9. Build-Volume Validation
 
@@ -67,11 +67,11 @@
 
 ## 11. Stress-Test Performance
 
-- `{"vertices": 146968, "edges": 293888, "faces": 146950, "triangles": 293876, "shell_count": 15, "main_shell_id": 0, "tiny_shell_ids": [13], "external_shell_ids": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "dimensions_mm": [104.19999808073044, 99.99999403953552, 167.00001060962677], "surface_area_mm2": 55285.04406960632, "volume_status": "COMPLETED", "watertightness": "TOPOLOGICALLY_WATERTIGHT", "orientation": "CONSISTENT", "duration_ms": 12291.702799999257, "prior_accepted_duration_ms": 12479.0, "performance_ratio_to_prior": 0.984991008894884, "performance_target_ms": 20000.0, "performance_warning": false, "timings": {"object_metadata": {"status": "COMPLETED", "duration_ms": 982.0175000004383, "detail": ""}, "geometry_metrics": {"status": "COMPLETED", "duration_ms": 1963.9921000007234, "detail": ""}, "base_topology": {"status": "COMPLETED", "duration_ms": 2757.7838999995947, "detail": "Face-edge incidence collected."}, "edge_manifold_classification": {"status": "COMPLETED", "duration_ms": 148.93129999927623, "detail": ""}, "topology_defects": {"status": "COMPLETED", "duration_ms": 1700.972399999955, "detail": ""}, "vertex_manifold_classification": {"status": "COMPLETED", "duration_ms": 1750.580599999921, "detail": ""}, "shell_decomposition": {"status": "COMPLETED", "duration_ms": 163.20429999996122, "detail": ""}, "orientation_consistency": {"status": "COMPLETED", "duration_ms": 148.93129999927623, "detail": "All evaluated two-face adjacencies use opposite shared-edge winding."}, "duplicate_position_detection": {"status": "COMPLETED", "duration_ms": 2024.054000000433, "detail": "Spatial-hash duplicate-position check completed in object-local coordinates."}, "surface_area": {"status": "COMPLETED", "duration_ms": 114.8087999999916, "detail": ""}, "volume": {"status": "COMPLETED", "duration_ms": 216.72600000056264, "detail": ""}, "shell_metrics": {"status": "COMPLETED", "duration_ms": 383.2953000000998, "detail": ""}, "tiny_shell_classification": {"status": "COMPLETED", "duration_ms": 0.543199999810895, "detail": ""}, "build_volume_evaluation": {"status": "NOT_APPLICABLE", "duration_ms": 0.018400000044493936, "detail": "No printer build-volume profile is selected."}, "self_intersection_candidate_detection": {"status": "NOT_APPLICABLE", "duration_ms": 0.0, "detail": "Deep diagnostics were not requested by the Standard profile."}, "containment_analysis": {"status": "NOT_APPLICABLE", "duration_ms": 0.0, "detail": "Deep diagnostics were not requested by the Standard profile."}, "total_analysis": {"status": "COMPLETED", "duration_ms": 12291.702799999257, "detail": ""}}, "duplicate_status": "COMPLETED", "geometry_unchanged": true}`
+- `{"vertices": 146968, "edges": 293888, "faces": 146950, "triangles": 293876, "shell_count": 15, "main_shell_id": 0, "tiny_shell_ids": [13], "external_shell_ids": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "dimensions_mm": [104.19999808073044, 99.99999403953552, 167.00001060962677], "surface_area_mm2": 55285.04406960635, "volume_status": "COMPLETED", "watertightness": "TOPOLOGICALLY_WATERTIGHT", "orientation": "CONSISTENT", "duration_ms": 13057.296399994812, "prior_accepted_duration_ms": 12479.0, "performance_ratio_to_prior": 1.0463415658301796, "performance_target_ms": 20000.0, "performance_warning": false, "timings": {"object_metadata": {"status": "COMPLETED", "duration_ms": 993.4725999992224, "detail": ""}, "geometry_metrics": {"status": "COMPLETED", "duration_ms": 2090.6537999981083, "detail": ""}, "base_topology": {"status": "COMPLETED", "duration_ms": 2988.338700000895, "detail": "Face-edge incidence collected."}, "edge_manifold_classification": {"status": "COMPLETED", "duration_ms": 156.22520000033546, "detail": ""}, "topology_defects": {"status": "COMPLETED", "duration_ms": 1752.0188999988022, "detail": ""}, "vertex_manifold_classification": {"status": "COMPLETED", "duration_ms": 1997.691999997187, "detail": ""}, "shell_decomposition": {"status": "COMPLETED", "duration_ms": 183.98639999941224, "detail": ""}, "orientation_consistency": {"status": "COMPLETED", "duration_ms": 156.22520000033546, "detail": "All evaluated two-face adjacencies use opposite shared-edge winding."}, "duplicate_position_detection": {"status": "COMPLETED", "duration_ms": 2117.4458999958006, "detail": "Spatial-hash duplicate-position check completed in object-local coordinates."}, "surface_area": {"status": "COMPLETED", "duration_ms": 111.5429999990738, "detail": ""}, "volume": {"status": "COMPLETED", "duration_ms": 213.46359999733977, "detail": ""}, "shell_metrics": {"status": "COMPLETED", "duration_ms": 362.2535999966203, "detail": ""}, "tiny_shell_classification": {"status": "COMPLETED", "duration_ms": 0.5950999984634109, "detail": ""}, "build_volume_evaluation": {"status": "NOT_APPLICABLE", "duration_ms": 0.018100006855092943, "detail": "No printer build-volume profile is selected."}, "self_intersection_candidate_detection": {"status": "NOT_APPLICABLE", "duration_ms": 0.0, "detail": "Deep diagnostics were not requested by the Standard profile."}, "containment_analysis": {"status": "NOT_APPLICABLE", "duration_ms": 0.0, "detail": "Deep diagnostics were not requested by the Standard profile."}, "total_analysis": {"status": "COMPLETED", "duration_ms": 13057.296399994812, "detail": ""}}, "duplicate_status": "COMPLETED", "geometry_unchanged": true}`
 
 ## 12. Deep Diagnostics
 
-- `{"completed": {"intersection_status": "COMPLETED", "intersection_candidates": 4, "containment_status": "COMPLETED", "internal_ids": [1], "external_ids": [2, 3], "timings": {"object_metadata": 0.22420000004785834, "geometry_metrics": 0.30600000081904, "base_topology": 0.3808999999819207, "edge_manifold_classification": 0.028100000236008782, "topology_defects": 0.273600000582519, "vertex_manifold_classification": 0.25769999956537504, "shell_decomposition": 0.03219999962311704, "orientation_consistency": 0.028100000236008782, "duplicate_position_detection": 0.36920000002282904, "surface_area": 0.021600000764010474, "volume": 0.12570000035339035, "shell_metrics": 0.11019999965355964, "tiny_shell_classification": 0.12990000050194794, "build_volume_evaluation": 0.009299999874201603, "self_intersection_candidate_detection": 0.14370000008057104, "containment_analysis": 0.10130000009667128, "total_analysis": 2.9640000002473244}}, "over_limit": {"intersection_status": "SKIPPED", "containment_status": "SKIPPED", "checks": {"self_intersection_candidates": {"name": "self_intersection_candidates", "status": "SKIPPED", "message": "Skipped: 48 triangles exceed the configured limit of 1.", "duration_ms": 0.0070000005507608876, "actual_size": 48, "configured_limit": 1}, "containment_analysis": {"name": "containment_analysis", "status": "SKIPPED", "message": "Skipped: 4 shells exceed the configured limit of 1.", "duration_ms": 0.0031999998100218363, "actual_size": 4, "configured_limit": 1}}}, "geometry_unchanged": true}`
+- `{"completed": {"intersection_status": "COMPLETED", "intersection_candidates": 4, "containment_status": "COMPLETED", "internal_ids": [1], "external_ids": [2, 3], "timings": {"object_metadata": 0.22529999841935933, "geometry_metrics": 0.37739999970654026, "base_topology": 0.37290000182110816, "edge_manifold_classification": 0.029100003303028643, "topology_defects": 0.2736999958870001, "vertex_manifold_classification": 0.24950000079115853, "shell_decomposition": 0.03290000313427299, "orientation_consistency": 0.029100003303028643, "duplicate_position_detection": 0.3667999990284443, "surface_area": 0.022300002456177026, "volume": 0.1322999960393645, "shell_metrics": 0.19969999993918464, "tiny_shell_classification": 0.13100000069243833, "build_volume_evaluation": 0.0092999980552122, "self_intersection_candidate_detection": 0.14600000577047467, "containment_analysis": 0.09960000170394778, "total_analysis": 3.13579999783542}}, "over_limit": {"intersection_status": "SKIPPED", "containment_status": "SKIPPED", "checks": {"self_intersection_candidates": {"name": "self_intersection_candidates", "status": "SKIPPED", "message": "Skipped: 48 triangles exceed the configured limit of 1.", "duration_ms": 0.005900001269765198, "actual_size": 48, "configured_limit": 1}, "containment_analysis": {"name": "containment_analysis", "status": "SKIPPED", "message": "Skipped: 4 shells exceed the configured limit of 1.", "duration_ms": 0.0030999945010989904, "actual_size": 4, "configured_limit": 1}}}, "geometry_unchanged": true}`
 
 ## 13. JSON Report Audit
 
@@ -92,8 +92,8 @@
 
 ## 17. Tests Not Run
 
-- Installed-package smoke execution and external regression/package commands are pending finalization.
-- Interactive sidebar panel smoke test was not run in background mode.
+- Interactive installed-panel smoke test was not run in background mode.
+- Real-statue repair UAT was not run.
 
 ## 18. Known Limitations
 
@@ -101,14 +101,13 @@
 - Self-intersection diagnostics are candidate-based.
 - Internal-shell classification is heuristic.
 - No wall-thickness analysis.
-- No repair.
-- No support generation.
-- No printability guarantee.
+- This runner validates the Sprint 1 diagnostic path and does not apply Sprint 2 repair operations.
+- No support generation or printability guarantee.
 
 ## 19. Safety Confirmation
 
 - No production model files modified.
-- No network, credentials, administrator access, geometry repair, commit, push, or Sprint 2 work.
+- No network, credentials, administrator access, geometry mutation, commit, or push.
 
 ## 20. Final Decision
 
@@ -116,4 +115,4 @@
 
 ## 21. One Immediate Next Action
 
-Manually smoke-test the installed 0.2.0-alpha.1 panel on one real Chroma3D statue before committing.
+Review the Sprint 2 evidence and perform an installed-panel smoke test before committing the feature branch.

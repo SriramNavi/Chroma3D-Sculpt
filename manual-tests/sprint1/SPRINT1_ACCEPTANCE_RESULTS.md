@@ -7,11 +7,11 @@
 ## 2. Environment
 
 - Repository: `E:\VPRS\Sriram\Projects\Chroma3D Sculpt`
-- Branch: `feature/sprint-1-production-diagnostics`
+- Branch: `feature/sprint-2-safe-mesh-repair`
 - Baseline tag: `v0.1.0-alpha.1`
 - Blender: `4.4.3` at `D:\Softwares\Design\Blender\blender.exe`
 - Python launcher: `C:\Users\sriram\AppData\Local\Programs\Python\Python312\python.exe`
-- Version: `0.2.0-alpha.1`
+- Version: `0.3.0-alpha.1`
 
 ## 3. Git Baseline
 
@@ -20,24 +20,24 @@
 
 ## 4. Version
 
-- Extension: `0.2.0-alpha.1`
+- Extension: `0.3.0-alpha.1`
 - JSON schema: `2.0`
 
 ## 5. Gate Summary Table
 
 | Gate | Result | Duration |
 |---|---|---:|
-| S1-01 - Sprint 0 regression | PASS | 0.001s |
-| S1-02 - Topological watertightness | PASS | 0.013s |
-| S1-03 - Physical metrics | PASS | 0.007s |
-| S1-04 - Orientation | PASS | 0.011s |
-| S1-05 - Shell classification | PASS | 0.008s |
-| S1-06 - Internal-shell heuristic | PASS | 0.018s |
-| S1-07 - Self-intersection candidates | PASS | 0.010s |
-| S1-08 - Build-volume checks | PASS | 0.011s |
-| S1-09 - Issue selection | PASS | 0.005s |
-| S1-10 - Standard stress test | PASS | 106.265s |
-| S1-11 - Deep bounded diagnostics | PASS | 0.008s |
+| S1-01 - Sprint 0 regression | PASS | 0.002s |
+| S1-02 - Topological watertightness | PASS | 0.011s |
+| S1-03 - Physical metrics | PASS | 0.005s |
+| S1-04 - Orientation | PASS | 0.010s |
+| S1-05 - Shell classification | PASS | 0.007s |
+| S1-06 - Internal-shell heuristic | PASS | 0.015s |
+| S1-07 - Self-intersection candidates | PASS | 0.009s |
+| S1-08 - Build-volume checks | PASS | 0.010s |
+| S1-09 - Issue selection | PASS | 0.004s |
+| S1-10 - Standard stress test | PASS | 110.053s |
+| S1-11 - Deep bounded diagnostics | PASS | 0.007s |
 | S1-12 - Report and package | PASS | 0.006s |
 
 ## 6. Topology Results
@@ -73,8 +73,8 @@
 ## 13. Stress-Test Performance
 
 - V/E/F/T: `146968/293888/146950/293876`; shells: `15`.
-- Standard duration: `12083.199599999716` ms versus Sprint 0 evidence `5377.0` ms.
-- Timings: `{"object_metadata": 940.624800000478, "geometry_metrics": 1918.2794999996986, "base_topology": 2728.294900000037, "edge_manifold_classification": 151.65190000061557, "topology_defects": 1654.1759000001548, "vertex_manifold_classification": 1731.2444999997751, "shell_decomposition": 172.42199999964214, "orientation_consistency": 151.65190000061557, "duplicate_position_detection": 2022.511499999382, "surface_area": 108.17330000008951, "volume": 211.83689999998023, "shell_metrics": 359.88540000016656, "tiny_shell_classification": 0.7076000001688953, "build_volume_evaluation": 0.02949999998236308, "self_intersection_candidate_detection": 0.0, "containment_analysis": 0.0, "total_analysis": 12083.199599999716}`
+- Standard duration: `12547.673500004748` ms versus Sprint 0 evidence `5377.0` ms.
+- Timings: `{"object_metadata": 1012.2736999983317, "geometry_metrics": 2058.063600001333, "base_topology": 2809.625699999742, "edge_manifold_classification": 150.57629999500932, "topology_defects": 1700.1641999959247, "vertex_manifold_classification": 1790.0493999986793, "shell_decomposition": 168.9022000064142, "orientation_consistency": 150.57629999500932, "duplicate_position_detection": 2069.58719999966, "surface_area": 112.15860000083921, "volume": 216.7362000036519, "shell_metrics": 367.8654000032111, "tiny_shell_classification": 0.5098999972688034, "build_volume_evaluation": 0.031299998227041215, "self_intersection_candidate_detection": 0.0, "containment_analysis": 0.0, "total_analysis": 12547.673500004748}`
 
 ## 14. Immutability Evidence
 
@@ -86,9 +86,9 @@
 
 ## 16. Package Validation
 
-- Package: `E:\VPRS\Sriram\Projects\Chroma3D Sculpt\dist\chroma3d_sculpt-0.2.0-alpha.1.zip`
-- SHA-256: `c8102a3bb443d915871e6c83f6b4ff5e8df0ab60b605d3ff99691b516b03d262`
-- Size: `49366` bytes.
+- Package: `E:\VPRS\Sriram\Projects\Chroma3D Sculpt\dist\chroma3d_sculpt-0.3.0-alpha.1.zip`
+- SHA-256: `b4434241a409f4e0c7e1a2e0a1d9c82f1150cd99588f4101bdbc7b0817f4b0cb`
+- Size: `78909` bytes.
 
 ## 17. Defects Found and Fixed
 

@@ -1,6 +1,10 @@
-# Sprint 1 Architecture
+# Sprint 2 Architecture
 
-Chroma3D Sculpt 0.2.0-alpha.1 is a synchronous, local, diagnostic-only Blender extension. Dependency direction is `UI -> operators -> coordinator -> focused services -> typed models/utilities`. Diagnostic services do not import UI modules.
+Chroma3D Sculpt 0.3.0-alpha.1 is a synchronous, local Blender extension with independent diagnostic and controlled-repair paths. Dependency direction is `UI -> operators -> coordinator -> focused services -> typed models/utilities`. Diagnostic services do not import repair services or UI modules; repair services may reuse diagnostics.
+
+## Authoritative repair contract
+
+[REPAIR_SAFETY.md](REPAIR_SAFETY.md) is the authoritative contract for every geometry-changing operation. The repair architecture and all future repair implementations must conform to it.
 
 ## Coordinator flow
 
@@ -52,3 +56,33 @@ Repository tooling discovers Blender safely, runs all background `unittest` file
 ## Performance boundaries
 
 Core passes are linear in vertices, edges, face loops, or triangles. Duplicate detection uses fixed-neighbour spatial hashing and skips above 500,000 vertices by default. Self-intersection defaults to 50,000 triangles; containment defaults to 64 shells and 100,000 triangles. Issue indices and candidate pairs default to 10,000 stored items per configured cap. Every major check and total analysis use `perf_counter` timing.
+
+## Repair lifecycle
+
+`services/repair_session.py` captures a protected source snapshot containing object/mesh identity, names, geometry hash, connectivity and winding, transforms, modifiers, materials, collection membership, custom properties, and visibility. It copies both the object and mesh datablock, links the copy beside the source, verifies the datablocks are independent, creates the initial checkpoint, runs complete diagnostics on the workspace, and activates only the workspace for repair. The live session stores identities and JSON-safe evidence, not serializable Blender objects.
+
+An unfinished session is intentionally session-only. Extension unload releases zero-user checkpoint meshes but leaves the workspace as ordinary user-visible scene data; it never attempts an unsafe implicit resume or deletes the workspace.
+
+## Plan and stale protection
+
+`services/repair_plan.py` previews targeted evidence without mutation and binds the plan ID to the session, analysis ID, source signature, workspace signature, analysis profile, immutable repair settings, operation order, recommendations, bounded candidate mappings, warnings, and limitations. Repair commands reject a missing/deleted source or workspace, changed source state, replaced workspace datablock, external workspace geometry change, settings mismatch, analysis mismatch, stale plan, unrelated active object, or stale candidate fingerprint.
+
+Tiny-shell mappings derive from stable world-space coordinate fingerprints and Sprint 1 shell classifications, with an additional physical diagonal criterion for deletion eligibility. Small-hole mappings derive from simple closed boundary components. Neither candidate type is preselected.
+
+## Controlled operations
+
+`services/repair_operations.py` owns focused workspace-only BMesh mutations. Duplicate detection uses neighboring world-space millimetre cells and deterministic lowest-index representatives. Zero-length edges use deterministic connected endpoint groups. Degenerate faces use world-space area and `FACES_ONLY` deletion. Loose cleanup deletes zero-face edges and then isolated vertices while preserving disconnected face shells. Normal consistency and valid closed-shell outward orientation do not change coordinates. Tiny-shell removal deletes only selected disconnected shell vertices. Hole fill passes only selected eligible boundary edges to Blender's supported BMesh hole-fill operation.
+
+`services/repair_coordinator.py` is the only normal orchestration entry. It validates the protected source, creates a checkpoint, dispatches one operation, revalidates the source, reruns diagnostics, records the outcome, and either retains a bounded undo checkpoint or discards a no-change checkpoint. Exceptions restore the checkpoint before the failure is surfaced. Batch execution follows the documented safe order and uses Blender progress reporting.
+
+## Checkpoints, undo, and memory
+
+The initial and per-operation checkpoints are independent zero-user mesh copies held only by the session service. The initial snapshot is retained for restore-to-start. Applied-operation history is bounded by the centralized depth; eviction occurs only after a geometry-changing operation succeeds, so a failed or no-change attempt cannot remove an earlier undo point. Undo replaces the workspace mesh from the immediate checkpoint, marks the operation `UNDONE`, reruns diagnostics, and stales the plan. Restore-to-start replaces from the initial snapshot, clears retained operation checkpoints, marks applied history undone, clears plan/comparison state, and reruns diagnostics. Accepted and rolled-back sessions clear all checkpoint datablocks.
+
+The default checkpoint depth is three. Candidate evidence defaults to 10,000 indices. Repair code avoids per-element logs and O(n²) all-mesh comparisons. The Sprint 2 stress gate records fixture construction separately from repair duration and treats 60 seconds as a warning threshold.
+
+## Comparison, audit, and finalization
+
+After repair, the coordinator compares geometry counts and diagnostic issue metrics, preserving improved, unchanged, regressed, skipped, and failed states rather than treating lower geometry counts as success. Accept reruns diagnostics, renames the workspace to a collision-safe repaired-copy name, keeps both objects, clears checkpoints, and never saves. Rollback removes only the workspace and unused workspace mesh, clears checkpoints, restores captured selection where practical, and preserves an exportable archived audit summary.
+
+`services/repair_audit.py` exports repair audit schema 1.0 with extension/analysis versions, environment, session and plan IDs, protected and workspace signatures, immutable settings, bounded candidates, operation/checkpoint/undo/failure records, comparison, decision, timing, warnings, errors, and limitations. JSON is UTF-8, readable, newline-terminated, and Windows-safe; raw mesh data and Blender objects are excluded.

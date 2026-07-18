@@ -24,6 +24,13 @@ The repository root is `E:\VPRS\Sriram\Projects\Chroma3D Sculpt`.
 - Preserve Sprint 0 regressions, run Blender background tests before completion, and keep JSON schema changes explicit.
 - Never commit secrets, `.env` files, generated archives, or Python bytecode.
 - Never commit or push automatically.
+- Follow [REPAIR_SAFETY.md](REPAIR_SAFETY.md) whenever changing repair behavior.
+- Never repair the protected source directly; every geometry mutation must target the independent repair workspace.
+- Create a retained checkpoint before every repair operation and restore it automatically after a failure.
+- Reject stale repair plans, changed source signatures, changed workspace signatures, and stale candidate mappings.
+- Tiny-shell removal and hole filling require explicit candidate selection; never perform silent cleanup or auto-delete the main shell.
+- Preserve safe operation ordering, bounded evidence, session cleanup, and schema 1.0 repair audit history.
+- Run Sprint 0, Sprint 1, and Sprint 2 regressions before Sprint 2 completion.
 
 ## Token and context management
 

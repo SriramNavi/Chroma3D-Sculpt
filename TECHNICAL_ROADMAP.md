@@ -22,15 +22,17 @@ Sprint 0 established the Windows-first modern Blender extension, registration li
 
 ### Sprint 1 — Production Diagnostics
 
-**Status:** Implemented, independently validated, accepted, and committed on `feature/sprint-1-production-diagnostics`; not yet merged to `main` and not tagged as `0.2.0-alpha.1`.
+**Status:** Implemented, independently validated, accepted, merged to `main`, and tagged `v0.2.0-alpha.1`.
 
 Sprint 1 added Standard and Deep profiles; explicit evaluation states; exact edge incidence and vertex face-fan diagnostics; topological watertightness; stable shell decomposition; main, tiny-candidate, disconnected-external, and possibly-internal classifications; world-space dimensions, area, reliable volume, and orientation; bounded self-intersection candidates and containment heuristics; current-orientation build-volume checks; bounded issue evidence; stale-analysis protection; issue selection; timings; and JSON schema 2.0.
 
 Repository evidence records 48 passing Blender background tests, 12 Sprint 1 acceptance gates, preserved Sprint 0 regression, package/security validation, and independent final validation on Blender 4.4.3/Windows. Across those Windows and Blender 4.4.3 runs, Standard analysis of the current approximately 147,000-vertex synthetic fixture has ranged from about 12 to 29 seconds against the repository's 20-second performance warning threshold. Dense-mesh performance remains active technical debt. The synthetic range is not a hard guarantee for real production models, and benchmarking on real Chroma3D statues is still required.
 
-Outstanding integration evidence before Sprint 2 is an interactive installed-panel smoke test, at least one permissioned real Chroma3D statue analysis, merge to `main`, and an approved Sprint 1 tag/release checkpoint.
+Interactive installed-panel and permissioned real Chroma3D statue analysis remain useful deferred evidence; Sprint 1 merge and tag checkpoints are complete.
 
 ## Sprint 2 — Safe Mesh Repair
+
+**Status:** Implemented and accepted by automated Blender 4.4.3 gates on `feature/sprint-2-safe-mesh-repair` as `0.3.0-alpha.1`. Installed-panel smoke testing, Blender 4.5 LTS compatibility, and real-statue repair UAT remain deferred. Sprint 3 has not started.
 
 **Objective:** Introduce controlled, reversible mesh-repair operations without weakening the read-only diagnostic path or original-asset safety.
 
@@ -56,27 +58,27 @@ Outstanding integration evidence before Sprint 2 is an interactive installed-pan
 - Unreviewed destructive operations or automatic deletion based only on heuristic classification.
 - Modifier-output repair, arbitrary Python execution, printability claims, or support generation.
 
-### Technical dependencies
+### Implemented technical foundation
 
-- Sprint 1 results, topology signatures, issue evidence, settings, and schema semantics must be stable and integrated.
-- A repair workspace/original identity model and backup policy must be approved.
-- Typed repair-plan, operation-result, and audit-report models require explicit schema versions.
-- Repair operators must remain separate from diagnostics, UI, services, and serialization.
-- Each operation needs centralized tolerances, preconditions, deterministic ordering, evidence caps, and failure semantics.
-- Long-running operations need progress and cancellation design compatible with Blender context and undo.
-- Test fixtures must cover safe boundaries, stale state, idempotency where applicable, undo, save/reload, and partial failure.
+- Sprint 1 results remain independently usable and analysis schema 2.0 is unchanged.
+- Protected source and independent workspace identities, full source signatures, live-session checkpoints, and rollback are implemented.
+- Typed repair-plan, candidate, operation, checkpoint, comparison, session, and repair-audit models serialize without Blender objects; repair audit schema is 1.0.
+- Repair operators, coordinator, geometry services, diagnostics, UI, and serialization remain separate.
+- Centralized millimetre tolerances, deterministic safe ordering, bounded evidence, explicit selection, and failure restoration are implemented.
+- Blender progress reporting is synchronous. Safe-boundary undo/restore is implemented; mid-operation cancellation remains deferred.
+- Focused fixtures cover safe boundaries, stale state, idempotency, undo, restore, failed-operation rollback, finalization, audit, and stress. Restart persistence and real-model UAT remain deferred.
 
 ### Acceptance gates
 
 1. The original object's geometry, transforms, materials, name, modifiers, and source file remain unchanged in all default paths.
-2. Backup and repair-workspace identity survive save/reload and cannot be confused with the original.
+2. Source and repair-workspace identities remain distinct for the live session and cannot be confused; unfinished sessions are explicitly not restart-persistent.
 3. Each repair operation passes focused boundary fixtures, mixed-defect fixtures, and no-op cases.
 4. Stale evidence, invalid context, unsupported topology, and out-of-policy parameters fail without partial hidden edits.
 5. Before/after analysis exposes resolved, unchanged, and newly introduced findings.
-6. Undo, cancellation, interruption, and recovery paths pass automated checks where possible and installed-panel manual checks.
+6. Checkpoint undo, restore, failed-operation rollback, and cleanup pass automated checks; mid-operation cancellation and installed-panel manual checks remain deferred.
 7. Repair plans and audit reports validate against explicit schemas and contain no Blender object references or sensitive data.
 8. Sprint 0/1 regression, background tests, package validators, Blender-native validation, security audit, and `git diff --check` pass.
-9. At least one sanitized real statue is repaired under operator review with retained evidence and no unapproved detail loss.
+9. At least one sanitized real statue is repaired under operator review with retained evidence and no unapproved detail loss. **Deferred and not counted as passed for the current internal alpha.**
 10. Known limitations and excluded operations are reflected consistently in UI, reports, README, and release notes.
 
 ### Likely risks
@@ -379,14 +381,12 @@ Each decision must be reevaluated against differentiation, total cost, privacy, 
 
 ## Immediate Next Milestone
 
-The recommended next engineering milestone is **Sprint 2 — Safe Mesh Repair**, but coding should begin only after the following integration and policy prerequisites are approved:
+Sprint 2 implementation is complete. Before committing or beginning Sprint 3:
 
-- Merge the accepted Sprint 1 branch into `main` through the project's review process.
-- Create the approved Sprint 1 version tag/release checkpoint.
-- Complete an installed-package interactive Blender panel smoke test.
-- Analyze at least one permissioned real Chroma3D statue and retain reviewed evidence.
-- Approve the repair policy, including eligible operations, parameter bounds, batch rules, and explicit exclusions.
-- Approve the original-protection, backup, repair-workspace, undo, cancellation, and rollback design.
-- Freeze or define compatibility rules for analysis schema 2.0 before adding repair-plan and audit schemas.
+- Review the Sprint 2 machine and Markdown evidence.
+- Perform an installed-package interactive Blender panel smoke test.
+- Repair at least one permissioned real Chroma3D statue under operator review and retain evidence.
+- Validate Blender 4.5 LTS when that runtime is available.
+- Decide whether mid-operation cancellation or restart-persistent sessions are required before external alpha.
 
-After these prerequisites, Sprint 2 should start with the protected repair workspace and audit contract before implementing individual geometry operations.
+Sprint 3 remains unstarted until the Sprint 2 review checkpoint is approved.

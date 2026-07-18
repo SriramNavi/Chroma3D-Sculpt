@@ -1,6 +1,6 @@
 schema_version = "1.0.0"
 id = "chroma3d_sculpt"
-version = "0.2.0"
+version = "0.3.0"
 name = "Chroma3D Sculpt"
 tagline = "Analyze and prepare detailed meshes for reliable 3D printing"
 maintainer = "Chroma3D"
