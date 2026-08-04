@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SriramNavi/Chroma3D-Sculpt/schemas/printer-profile-1.0.0.json",
+  "title": "Chroma3D printability printer profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "profile_schema_version", "profile_id", "display_name", "manufacturer",
+    "printer_model", "process_type", "source_classification", "source_references",
+    "build_volume_mm", "dimensional_safety_margin_mm", "nozzle_diameter_mm",
+    "nominal_layer_height_mm", "wall_thickness_warning_mm",
+    "wall_thickness_critical_mm", "minimum_feature_warning_mm",
+    "minimum_feature_critical_mm", "overhang_warning_angle_deg",
+    "overhang_critical_angle_deg", "build_plate_contact_tolerance_mm",
+    "bridge_guidance", "support_assumption", "material_family", "notes",
+    "confidence", "user_editable_fields", "created_at", "updated_at"
+  ],
+  "properties": {
+    "profile_schema_version": { "const": "1.0.0" },
+    "profile_id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9_-]{2,63}$" },
+    "display_name": { "type": "string", "minLength": 1 },
+    "manufacturer": { "type": "string", "minLength": 1 },
+    "printer_model": { "type": "string", "minLength": 1 },
+    "process_type": { "enum": ["FDM", "RESIN", "CUSTOM"] },
+    "source_classification": { "$ref": "#/$defs/classification" },
+    "source_references": { "$ref": "#/$defs/sourceReferences" },
+    "build_volume_mm": { "$ref": "#/$defs/dimension" },
+    "dimensional_safety_margin_mm": { "$ref": "#/$defs/threshold" },
+    "nozzle_diameter_mm": { "$ref": "#/$defs/threshold" },
+    "nominal_layer_height_mm": { "$ref": "#/$defs/threshold" },
+    "wall_thickness_warning_mm": { "$ref": "#/$defs/threshold" },
+    "wall_thickness_critical_mm": { "$ref": "#/$defs/threshold" },
+    "minimum_feature_warning_mm": { "$ref": "#/$defs/threshold" },
+    "minimum_feature_critical_mm": { "$ref": "#/$defs/threshold" },
+    "overhang_warning_angle_deg": { "$ref": "#/$defs/angle" },
+    "overhang_critical_angle_deg": { "$ref": "#/$defs/angle" },
+    "build_plate_contact_tolerance_mm": { "$ref": "#/$defs/threshold" },
+    "bridge_guidance": { "$ref": "#/$defs/guidance" },
+    "support_assumption": { "$ref": "#/$defs/support" },
+    "material_family": { "type": "string", "minLength": 1 },
+    "notes": { "type": "string" },
+    "confidence": { "$ref": "#/$defs/confidence" },
+    "user_editable_fields": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "$defs": {
+    "classification": {
+      "enum": [
+        "AUTHORITATIVE_SOURCE", "STANDARDS_BASED", "PEER_REVIEWED_METHOD",
+        "MANUFACTURER_SPECIFIC", "SLICER_GUIDANCE", "PROJECT_DEFAULT",
+        "CONSERVATIVE_HEURISTIC", "USER_CONFIGURABLE", "EXPERIMENTAL",
+        "NOT_YET_DEFINED"
+      ]
+    },
+    "confidence": { "enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"] },
+    "sourceReferences": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^SRC-[0-9]{3}$" },
+      "uniqueItems": true
+    },
+    "threshold": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "classification", "source_references", "rationale", "confidence", "user_editable"],
+      "properties": {
+        "value": { "type": "number", "exclusiveMinimum": 0 },
+        "classification": { "$ref": "#/$defs/classification" },
+        "source_references": { "$ref": "#/$defs/sourceReferences" },
+        "rationale": { "type": "string", "minLength": 1 },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "user_editable": { "type": "boolean" }
+      }
+    },
+    "angle": {
+      "allOf": [
+        { "$ref": "#/$defs/threshold" },
+        { "properties": { "value": { "type": "number", "minimum": 0, "maximum": 90 } } }
+      ]
+    },
+    "dimension": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y", "z", "unit", "classification", "source_references", "rationale", "confidence"],
+      "properties": {
+        "x": { "type": "number", "exclusiveMinimum": 0 },
+        "y": { "type": "number", "exclusiveMinimum": 0 },
+        "z": { "type": "number", "exclusiveMinimum": 0 },
+        "unit": { "const": "mm" },
+        "classification": { "$ref": "#/$defs/classification" },
+        "source_references": { "$ref": "#/$defs/sourceReferences" },
+        "rationale": { "type": "string", "minLength": 1 },
+        "confidence": { "$ref": "#/$defs/confidence" }
+      }
+    },
+    "guidance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "classification", "source_references", "description", "confidence", "user_editable"],
+      "properties": {
+        "mode": { "enum": ["QUALITATIVE", "SLICER_SETTING_REQUIRED", "NOT_DEFINED"] },
+        "classification": { "$ref": "#/$defs/classification" },
+        "source_references": { "$ref": "#/$defs/sourceReferences" },
+        "description": { "type": "string", "minLength": 1 },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "user_editable": { "type": "boolean" }
+      }
+    },
+    "support": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "classification", "source_references", "description", "confidence", "user_editable"],
+      "properties": {
+        "mode": { "enum": ["REVIEW_REQUIRED", "ASSUME_UNSUPPORTED", "ASSUME_SUPPORTED"] },
+        "classification": { "$ref": "#/$defs/classification" },
+        "source_references": { "$ref": "#/$defs/sourceReferences" },
+        "description": { "type": "string", "minLength": 1 },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "user_editable": { "type": "boolean" }
+      }
+    }
+  }
+}

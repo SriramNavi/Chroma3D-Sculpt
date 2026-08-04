@@ -146,6 +146,20 @@ tracing; candidate-based destructive and orientation repairs remain unselected
 unless production defaults select them; and automated real-statue execution
 does not replace operator-reviewed visual UAT or guarantee printability.
 
+## Sprint 2.8 — Printability Engineering Specification
+
+**Status:** Specification complete on the review branch; Sprint 3 remains
+unstarted. This milestone adds no runtime engine, Blender operator, diagnostic,
+repair, dataset, benchmark, package, version, or release-tag behavior.
+
+The authoritative contract is [PRINTABILITY_SPECIFICATION.md](PRINTABILITY_SPECIFICATION.md)
+with detailed measurement methods, profile classifications, JSON schemas,
+validation fixtures, source ledger, performance modes, report/stale-state rules,
+and Sprint 3 gates under [docs/printability](docs/printability/README.md).
+Generic profile thresholds are project defaults or user-configurable; cited
+manufacturer values are limited to documented hardware/build-volume facts.
+Review and approval are required before Sprint 3 runtime implementation.
+
 ## Sprint 3 — Printability Engine
 
 **Objective:** Add process-aware risk analysis and controlled preparation after safe repair is proven.

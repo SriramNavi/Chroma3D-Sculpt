@@ -2,6 +2,16 @@
 
 Chroma3D Sculpt 0.3.0-alpha.1 is a synchronous, local Blender extension with independent diagnostic and controlled-repair paths. Dependency direction is `UI -> operators -> coordinator -> focused services -> typed models/utilities`. Diagnostic services do not import repair services or UI modules; repair services may reuse diagnostics.
 
+## Sprint 2.8 specification boundary
+
+Sprint 2.8 is documentation and validation only. The future Printability Engine
+is specified as a separate advisory path: geometry facts -> profile evaluation
+-> risk items -> score/status/confidence -> bounded report evidence. It must not
+change diagnostics, repair algorithms, mesh geometry, transforms, dataset or
+benchmark behavior, or the extension version. Printer profiles carry source
+classification per threshold; manufacturer facts do not become universal
+process limits. Sprint 3 remains unstarted until the specification is approved.
+
 ## Authoritative repair contract
 
 [REPAIR_SAFETY.md](REPAIR_SAFETY.md) is the authoritative contract for every geometry-changing operation. The repair architecture and all future repair implementations must conform to it.

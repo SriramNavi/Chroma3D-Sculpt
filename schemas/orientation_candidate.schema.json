@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SriramNavi/Chroma3D-Sculpt/schemas/orientation-candidate-1.0.0.json",
+  "title": "Chroma3D orientation candidate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "candidate_schema_version", "candidate_id", "rotation_quaternion",
+    "source", "score", "overall_risk", "advantages", "trade_offs",
+    "confidence", "measurement_summary", "recommendation_reason", "state"
+  ],
+  "properties": {
+    "candidate_schema_version": { "const": "1.0.0" },
+    "candidate_id": { "type": "string", "pattern": "^orientation-[a-z0-9_-]{3,64}$" },
+    "rotation_quaternion": { "type": "array", "prefixItems": [{"type":"number"},{"type":"number"},{"type":"number"},{"type":"number"}], "items": false, "minItems": 4, "maxItems": 4 },
+    "source": { "enum": ["CURRENT", "PRINCIPAL_AXIS", "BOUNDING_BOX_AXIS", "PLANAR_FACE", "STABLE_CONTACT", "SAMPLED"] },
+    "score": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+    "overall_risk": { "enum": ["PASS", "WARNING", "CRITICAL", "NOT_EVALUATED", "NOT_APPLICABLE", "SKIPPED_LIMIT", "INDETERMINATE", "FAILED"] },
+    "advantages": { "type": "array", "items": { "type": "string" }, "maxItems": 20 },
+    "trade_offs": { "type": "array", "items": { "type": "string" }, "maxItems": 20 },
+    "confidence": { "enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"] },
+    "measurement_summary": { "type": "object" },
+    "recommendation_reason": { "type": "string", "minLength": 1 },
+    "state": { "enum": ["CURRENT", "STALE_GEOMETRY", "STALE_TRANSFORM", "STALE_PROFILE", "STALE_SETTINGS"] }
+  }
+}
