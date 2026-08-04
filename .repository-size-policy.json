@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "max_tracked_file_size_bytes": 26214400,
+  "max_tracked_image_size_bytes": 5242880,
+  "max_total_tracked_benchmark_payload_bytes": 26214400,
+  "image_extensions": [
+    ".png",
+    ".jpg",
+    ".jpeg"
+  ],
+  "reviewed_exceptions": []
+}

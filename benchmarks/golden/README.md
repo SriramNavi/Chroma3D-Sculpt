@@ -74,3 +74,9 @@ exclusive final decisions. Raw statue files are never modified.
 Timing improvements do not fail. Any intentional product/schema/dataset change
 requires explicit review and a new benchmark version; never silently overwrite
 this baseline.
+
+## Storage and acquisition
+
+Golden Benchmark `1.0.0` is packaged as `chroma3d-golden-benchmark-1.0.0.zip` for the staged external dataset repository. The product repository retains the authoritative manifest, canonical statistics, lightweight summaries, schema, comparator, and runner. Raw golden truth, per-mesh reports, comparisons, timings, and generated thumbnails are ignored local payloads.
+
+Fetch and verify with `py scripts\fetch_validation_assets.py benchmark` and `py scripts\fetch_validation_assets.py verify`. The lock file binds Dataset `1.0.0`, the source software release recorded by the baseline (`0.3.0-alpha.1` / `v0.3.0-alpha.1`), the current product packaging release (`v0.3.1-alpha.1`), archive and manifest hashes, counts, and extraction root. Sprint 2.7 does not regenerate or rewrite this baseline.

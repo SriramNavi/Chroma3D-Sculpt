@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+import argparse
 import json
 from collections import Counter
 from pathlib import Path
@@ -9,10 +10,6 @@ from typing import Any
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 DATASET_ROOT = REPOSITORY_ROOT / "datasets" / "statues"
-RAW_ROOT = DATASET_ROOT / "raw"
-METADATA_ROOT = DATASET_ROOT / "metadata"
-THUMBNAIL_ROOT = DATASET_ROOT / "thumbnails"
-MANIFEST_PATH = DATASET_ROOT / "manifests" / "statue_dataset_manifest.json"
 
 REQUIRED_METADATA_FIELDS = {
     "unique_id",
@@ -35,16 +32,6 @@ REQUIRED_METADATA_FIELDS = {
     "notes",
 }
 ACCEPTED_FORMATS = {"OBJ", "PLY", "STL", "FBX", "GLB", "GLTF"}
-REQUIRED_DOCUMENTS = (
-    DATASET_ROOT / "README.md",
-    DATASET_ROOT / "DATASET_SUMMARY.md",
-    DATASET_ROOT / "processed" / "README.md",
-    DATASET_ROOT / "licenses" / "ATTRIBUTIONS.md",
-    DATASET_ROOT / "licenses" / "LICENSE_INDEX.md",
-    REPOSITORY_ROOT / "manual-tests" / "datasets" / "REAL_STATUE_DATASET.md",
-)
-
-
 def _read_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -62,8 +49,28 @@ def _check(condition: bool, message: str) -> None:
         raise AssertionError(message)
 
 
-def main() -> int:
-    manifest = _read_json(MANIFEST_PATH)
+def _dataset_path(dataset_root: Path, recorded_path: str) -> Path:
+    prefix = "datasets/statues/"
+    if recorded_path.startswith(prefix):
+        return dataset_root / Path(*recorded_path[len(prefix) :].split("/"))
+    return REPOSITORY_ROOT / Path(*recorded_path.split("/"))
+
+
+def main(dataset_root: Path | None = None) -> int:
+    dataset_root = (dataset_root or DATASET_ROOT).resolve()
+    raw_root = dataset_root / "raw"
+    metadata_root = dataset_root / "metadata"
+    thumbnail_root = dataset_root / "thumbnails"
+    manifest_path = dataset_root / "manifests" / "statue_dataset_manifest.json"
+    required_documents = (
+        dataset_root / "README.md",
+        dataset_root / "DATASET_SUMMARY.md",
+        dataset_root / "processed" / "README.md",
+        dataset_root / "licenses" / "ATTRIBUTIONS.md",
+        dataset_root / "licenses" / "LICENSE_INDEX.md",
+        REPOSITORY_ROOT / "manual-tests" / "datasets" / "REAL_STATUE_DATASET.md",
+    )
+    manifest = _read_json(manifest_path)
     assets = manifest["assets"]
     _check(manifest["dataset_version"] == "1.0.0", "unexpected dataset version")
     _check(20 <= manifest["asset_count"] <= 50, "asset count is outside 20–50")
@@ -86,7 +93,7 @@ def main() -> int:
     )
     print("PASS unique IDs and required metadata fields")
 
-    metadata_files = sorted(METADATA_ROOT.glob("statue-*.json"))
+    metadata_files = sorted(metadata_root.glob("statue-*.json"))
     _check(len(metadata_files) == len(assets), "per-asset metadata count mismatch")
     metadata_by_id = {
         item["unique_id"]: item for item in map(_read_json, metadata_files)
@@ -101,7 +108,7 @@ def main() -> int:
     manifest_raw_names = set()
     for asset in assets:
         _check(asset["file_format"] in ACCEPTED_FORMATS, "unaccepted mesh format")
-        raw_path = REPOSITORY_ROOT / asset["stored_path"]
+        raw_path = _dataset_path(dataset_root, asset["stored_path"])
         manifest_raw_names.add(raw_path.name)
         _check(raw_path.is_file(), f"missing raw mesh: {asset['unique_id']}")
         _check(raw_path.stat().st_size > 0, f"empty raw mesh: {asset['unique_id']}")
@@ -113,7 +120,7 @@ def main() -> int:
             _sha256(raw_path) == asset["checksum_sha256"],
             f"SHA-256 mismatch: {asset['unique_id']}",
         )
-    raw_names = {path.name for path in RAW_ROOT.glob("*") if path.is_file()}
+    raw_names = {path.name for path in raw_root.glob("*") if path.is_file()}
     _check(raw_names == manifest_raw_names, "raw directory/manifest mismatch")
     print("PASS 27 raw mesh sizes and SHA-256 checksums")
 
@@ -138,7 +145,7 @@ def main() -> int:
     print("PASS Blender readability and bounded geometry validation")
 
     for asset in assets:
-        thumbnail_path = REPOSITORY_ROOT / asset["thumbnail_path"]
+        thumbnail_path = _dataset_path(dataset_root, asset["thumbnail_path"])
         _check(
             thumbnail_path.is_file() and thumbnail_path.stat().st_size > 0,
             f"missing thumbnail: {asset['unique_id']}",
@@ -147,7 +154,7 @@ def main() -> int:
             _sha256(thumbnail_path) == asset["thumbnail_checksum_sha256"],
             f"thumbnail SHA-256 mismatch: {asset['unique_id']}",
         )
-    thumbnail_names = {path.name for path in THUMBNAIL_ROOT.glob("*.png")}
+    thumbnail_names = {path.name for path in thumbnail_root.glob("*.png")}
     _check(len(thumbnail_names) == len(assets), "thumbnail count mismatch")
     print("PASS thumbnail presence and SHA-256 checksums")
 
@@ -173,14 +180,14 @@ def main() -> int:
         "format summary mismatch",
     )
     for asset in assets:
-        license_path = REPOSITORY_ROOT / asset["license_document"]
+        license_path = _dataset_path(dataset_root, asset["license_document"])
         _check(
             license_path.is_file() and license_path.stat().st_size > 0,
             f"missing license document: {asset['license']}",
         )
     print("PASS license, category, and format summaries")
 
-    rejected = _read_json(METADATA_ROOT / "rejected_assets.json")
+    rejected = _read_json(metadata_root / "rejected_assets.json")
     _check(
         len(rejected["policy_rejections"])
         == manifest["policy_rejected_candidate_count"],
@@ -193,7 +200,7 @@ def main() -> int:
     )
     print("PASS rejection and zero-failure accounting")
 
-    for document in REQUIRED_DOCUMENTS:
+    for document in required_documents:
         _check(
             document.is_file() and document.stat().st_size > 0,
             f"missing required documentation: {document}",
@@ -218,4 +225,6 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    parser = argparse.ArgumentParser(description="Validate the Chroma3D statue dataset.")
+    parser.add_argument("--dataset-root", type=Path, default=DATASET_ROOT)
+    raise SystemExit(main(parser.parse_args().dataset_root))

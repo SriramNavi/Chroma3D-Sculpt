@@ -60,3 +60,9 @@ Each mesh runs in a fresh Blender factory-startup process and follows:
 No repair parameter is changed. Candidate-based destructive operations and
 orientation operations remain unselected unless production defaults select
 them.
+
+Sprint 2.7 packages the stored baseline through `build_benchmark_release.py` and
+verifies it with the standard-library storage tools. A clean product checkout
+can run the lightweight manifest checks without downloading the benchmark; use
+`py scripts\fetch_validation_assets.py benchmark` only for the full artifact
+corpus and use `--offline` after the first verified acquisition.

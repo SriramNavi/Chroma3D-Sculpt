@@ -10,13 +10,9 @@ from typing import Any
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_BASELINE_ROOT = REPOSITORY_ROOT / "benchmarks" / "golden"
-DATASET_MANIFEST_PATH = (
-    REPOSITORY_ROOT
-    / "datasets"
-    / "statues"
-    / "manifests"
-    / "statue_dataset_manifest.json"
-)
+DATASET_ROOT = REPOSITORY_ROOT / "datasets" / "statues"
+DATASET_MANIFEST_PATH = DATASET_ROOT / "manifests" / "statue_dataset_manifest.json"
+BASELINE_ROOT = DEFAULT_BASELINE_ROOT
 RUNNER_PATH = Path(__file__).with_name("run_golden_benchmark.py")
 
 EXPECTED_BENCHMARK_VERSION = "1.0.0"
@@ -104,13 +100,23 @@ def _check(condition: bool, message: str) -> None:
 
 
 def _resolved_artifact_path(recorded_path: str) -> Path:
-    path = (REPOSITORY_ROOT / recorded_path).resolve()
+    if recorded_path.startswith("benchmarks/golden/"):
+        path = (BASELINE_ROOT / Path(*recorded_path[len("benchmarks/golden/") :].split("/"))).resolve()
+    elif recorded_path.startswith("datasets/statues/"):
+        path = (DATASET_ROOT / Path(*recorded_path[len("datasets/statues/") :].split("/"))).resolve()
+    else:
+        path = (REPOSITORY_ROOT / recorded_path).resolve()
     try:
         path.relative_to(REPOSITORY_ROOT.resolve())
     except ValueError as exc:
-        raise AssertionError(
-            f"Artifact path escapes repository: {recorded_path}"
-        ) from exc
+        for allowed_root in (BASELINE_ROOT, DATASET_ROOT):
+            try:
+                path.relative_to(allowed_root.resolve())
+                break
+            except ValueError:
+                continue
+        else:
+            raise AssertionError(f"Artifact path escapes allowed roots: {recorded_path}") from exc
     return path
 
 
@@ -202,15 +208,9 @@ def _verify_entry(
     )
 
     hashes = golden["hashes"]
-    source_path = REPOSITORY_ROOT / dataset_asset["stored_path"]
-    metadata_path = (
-        REPOSITORY_ROOT
-        / "datasets"
-        / "statues"
-        / "metadata"
-        / f"{mesh_id}.json"
-    )
-    source_thumbnail = REPOSITORY_ROOT / dataset_asset["thumbnail_path"]
+    source_path = _resolved_artifact_path(dataset_asset["stored_path"])
+    metadata_path = DATASET_ROOT / "metadata" / f"{mesh_id}.json"
+    source_thumbnail = _resolved_artifact_path(dataset_asset["thumbnail_path"])
     _check(_sha256(source_path) == hashes["source_mesh_sha256"], f"source hash mismatch: {mesh_id}")
     _check(_sha256(metadata_path) == hashes["metadata_sha256"], f"metadata hash mismatch: {mesh_id}")
     _check(_sha256(source_thumbnail) == hashes["thumbnail_sha256"], f"source thumbnail hash mismatch: {mesh_id}")
@@ -313,12 +313,21 @@ def _parse_arguments() -> argparse.Namespace:
         type=Path,
         default=DEFAULT_BASELINE_ROOT,
     )
+    parser.add_argument(
+        "--dataset-root",
+        type=Path,
+        default=DATASET_ROOT,
+    )
     return parser.parse_args()
 
 
 def main() -> int:
+    global BASELINE_ROOT, DATASET_ROOT, DATASET_MANIFEST_PATH
     arguments = _parse_arguments()
     baseline_root = arguments.baseline_root.resolve()
+    BASELINE_ROOT = baseline_root
+    DATASET_ROOT = arguments.dataset_root.resolve()
+    DATASET_MANIFEST_PATH = DATASET_ROOT / "manifests" / "statue_dataset_manifest.json"
     _check(RUNNER_PATH.is_file(), "golden regression runner is missing")
     _check(DATASET_MANIFEST_PATH.is_file(), "dataset manifest is missing")
     for name in REQUIRED_DIRECTORIES:

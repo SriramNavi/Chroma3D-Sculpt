@@ -446,3 +446,7 @@ Sprint 2.6 benchmark engineering is complete. Sprint 3 remains unstarted. Before
 - Decide whether mid-operation cancellation or restart-persistent sessions are required before external alpha.
 
 Sprint 3 remains unstarted until the Sprint 2 review checkpoint is approved.
+
+## Sprint 2.7 — Dataset Storage Architecture
+
+**Status:** Implemented on the review branch. Product code and published history remain unchanged. Dataset `1.0.0` and Golden Benchmark `1.0.0` are independently locked and packaged as deterministic, SHA-256-verified GitHub Release assets for the staged external repository. Current HEAD retains metadata, provenance, licenses, manifests, schemas, summaries, and tooling while externalizing raw meshes, generated thumbnails, and regenerable benchmark payloads. The separate repository is staged but not initialized or published. Historical Git size remains unchanged; Sprint 3 has not started.
