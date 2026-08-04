@@ -4,12 +4,13 @@
 |---|---|
 | Document status | Living product specification; planning baseline for review |
 | Current product version | `0.3.0-alpha.1` |
+| Repository release at Sprint 2.8 | `v0.3.1-alpha.1` |
 | Current completed sprint | Sprint 2 — Safe Mesh Repair; automated acceptance complete |
 | Next planned sprint | Sprint 3 — Printability Engine; not started |
 | Primary platform | Windows 11, local Blender extension |
 | Primary validated Blender version | Blender 4.4.3; minimum supported version 4.4.0 |
 | Owner | Chroma3D Product and Engineering |
-| Last updated | 2026-07-18 |
+| Last updated | 2026-08-04 |
 | Document purpose | Define product behavior, value, evidence, safety, and release expectations without implementing future sprints |
 
 ## Product Summary
@@ -17,6 +18,12 @@
 Chroma3D Sculpt is a Blender-native engineering and creation workflow for high-detail statue meshes. The current internal alpha provides local read-only diagnostics plus controlled repair on an independent workspace copy. Standard and Deep profiles report topology, shells, world-space physical metrics, orientation, bounded issue evidence, build-volume fit, and candidate-based spatial findings. Sprint 2 can apply explicitly selected bounded repairs without replacing the source; it does not guarantee printability.
 
 Sprint 0 and Sprint 1 are accepted and tagged. Sprint 2 automated background, regression, stress, package, and security evidence is implemented on `feature/sprint-2-safe-mesh-repair`; interactive installed-panel and real Chroma3D statue repair UAT remain deferred. Sprint 3 has not started.
+
+Sprint 2.8 is a documentation, research, schema, and validation-contract
+milestone. The [Printability Engineering Specification](PRINTABILITY_SPECIFICATION.md)
+defines the future advisory engine without changing runtime behavior, the
+extension version, Dataset `1.0.0`, or Golden Benchmark `1.0.0`. Sprint 3 remains
+unstarted until the specification is reviewed and approved.
 
 ## User Personas
 

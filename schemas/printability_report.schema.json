@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SriramNavi/Chroma3D-Sculpt/schemas/printability-report-1.0.0.json",
+  "title": "Chroma3D printability report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "report_schema_version", "extension_version", "blender_version",
+    "operating_system", "analysis_id", "printability_run_id", "object_metadata",
+    "geometry_signature", "transform_signature", "printer_profile_snapshot",
+    "settings_snapshot", "build_direction", "geometry_facts", "check_results",
+    "risk_items", "score", "overall_status", "confidence",
+    "orientation_candidates", "evidence_summaries", "skipped_checks",
+    "failed_checks", "timings", "warnings", "limitations", "stale_state"
+  ],
+  "properties": {
+    "report_schema_version": { "const": "1.0.0" },
+    "extension_version": { "type": "string", "minLength": 1 },
+    "blender_version": { "type": "string", "minLength": 1 },
+    "operating_system": { "type": "string", "minLength": 1 },
+    "analysis_id": { "type": "string", "minLength": 1 },
+    "printability_run_id": { "type": "string", "minLength": 1 },
+    "object_metadata": { "type": "object" },
+    "geometry_signature": { "type": "string", "minLength": 1 },
+    "transform_signature": { "type": "string", "minLength": 1 },
+    "printer_profile_snapshot": { "type": "object" },
+    "settings_snapshot": { "type": "object" },
+    "build_direction": { "type": "array", "prefixItems": [{"type":"number"},{"type":"number"},{"type":"number"}], "items": false, "minItems": 3, "maxItems": 3 },
+    "geometry_facts": { "$ref": "#/$defs/geometryFacts" },
+    "check_results": { "type": "array", "items": { "type": "object" } },
+    "risk_items": { "type": "array", "items": { "$ref": "printability_risk_item.schema.json" } },
+    "score": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+    "overall_status": { "$ref": "#/$defs/resultState" },
+    "confidence": { "$ref": "#/$defs/confidence" },
+    "orientation_candidates": { "type": "array", "items": { "$ref": "orientation_candidate.schema.json" } },
+    "evidence_summaries": { "type": "array", "items": { "type": "object" } },
+    "skipped_checks": { "type": "array", "items": { "type": "object" } },
+    "failed_checks": { "type": "array", "items": { "type": "object" } },
+    "timings": { "type": "object" },
+    "warnings": { "type": "array", "items": { "type": "string" } },
+    "limitations": { "type": "array", "items": { "type": "string" } },
+    "stale_state": { "$ref": "#/$defs/staleState" }
+  },
+  "$defs": {
+    "resultState": { "enum": ["PASS", "WARNING", "CRITICAL", "NOT_EVALUATED", "NOT_APPLICABLE", "SKIPPED_LIMIT", "INDETERMINATE", "FAILED"] },
+    "confidence": { "enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"] },
+    "staleState": { "enum": ["CURRENT", "STALE_GEOMETRY", "STALE_TRANSFORM", "STALE_PROFILE", "STALE_SETTINGS"] },
+    "geometryFacts": {
+      "type": "object",
+      "required": ["dimensions_mm", "shell_count", "triangle_count", "surface_area_mm2"],
+      "properties": {
+        "dimensions_mm": { "type": "array", "prefixItems": [{"type":"number"},{"type":"number"},{"type":"number"}], "items": false, "minItems": 3, "maxItems": 3 },
+        "shell_count": { "type": "integer", "minimum": 0 },
+        "triangle_count": { "type": "integer", "minimum": 0 },
+        "surface_area_mm2": { "type": "number", "minimum": 0 },
+        "reliable_volume_mm3": { "type": ["number", "null"], "minimum": 0 },
+        "floating_shell_ids": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

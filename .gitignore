@@ -38,6 +38,7 @@ manual-tests/sprint2-final/screenshots/
 manual-tests/sprint2.7/reports/
 manual-tests/sprint2.7/logs/
 manual-tests/sprint2.7/artifacts/
+manual-tests/printability-specification/reports/
 
 # Sprint 2.7 external validation payloads and release staging.
 datasets/statues/raw/

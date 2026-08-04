@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SriramNavi/Chroma3D-Sculpt/schemas/printability-settings-1.0.0.json",
+  "title": "Chroma3D printability settings",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "settings_schema_version", "performance_mode", "build_direction",
+    "wall_sample_limit", "triangle_limit", "orientation_candidate_limit",
+    "evidence_cap", "ray_origin_offset_mm", "maximum_wall_search_distance_mm",
+    "contact_tolerance_mm", "small_face_area_mm2", "support_assumption",
+    "weights_version", "cancellation_enabled"
+  ],
+  "properties": {
+    "settings_schema_version": { "const": "1.0.0" },
+    "performance_mode": { "enum": ["FAST", "STANDARD", "DEEP"] },
+    "build_direction": {
+      "type": "array", "prefixItems": [
+        { "type": "number" }, { "type": "number" }, { "type": "number" }
+      ], "items": false, "minItems": 3, "maxItems": 3
+    },
+    "wall_sample_limit": { "type": "integer", "minimum": 1 },
+    "triangle_limit": { "type": "integer", "minimum": 1 },
+    "orientation_candidate_limit": { "type": "integer", "minimum": 1, "maximum": 128 },
+    "evidence_cap": { "type": "integer", "minimum": 1 },
+    "ray_origin_offset_mm": { "type": "number", "exclusiveMinimum": 0 },
+    "maximum_wall_search_distance_mm": { "type": "number", "exclusiveMinimum": 0 },
+    "contact_tolerance_mm": { "type": "number", "exclusiveMinimum": 0 },
+    "small_face_area_mm2": { "type": "number", "minimum": 0 },
+    "support_assumption": { "enum": ["REVIEW_REQUIRED", "ASSUME_UNSUPPORTED", "ASSUME_SUPPORTED"] },
+    "weights_version": { "const": "1.0.0" },
+    "cancellation_enabled": { "type": "boolean" }
+  }
+}

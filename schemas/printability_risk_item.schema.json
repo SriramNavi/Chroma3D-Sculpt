@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SriramNavi/Chroma3D-Sculpt/schemas/printability-risk-item-1.0.0.json",
+  "title": "Chroma3D printability risk item",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "risk_item_schema_version", "risk_id", "rule_id", "category", "state",
+    "severity", "confidence", "evidence_state", "message", "review_action",
+    "source_classification", "source_references", "evidence_refs"
+  ],
+  "properties": {
+    "risk_item_schema_version": { "const": "1.0.0" },
+    "risk_id": { "type": "string", "pattern": "^risk-[a-z0-9_-]{3,64}$" },
+    "rule_id": { "type": "string", "pattern": "^RULE-[0-9]{3}$" },
+    "category": { "enum": ["TOPOLOGY", "WALL_THICKNESS", "THIN_FEATURE", "OVERHANG", "FLOATING_COMPONENT", "BUILD_CONTACT", "BUILD_VOLUME", "ORIENTATION"] },
+    "state": { "enum": ["PASS", "WARNING", "CRITICAL", "NOT_EVALUATED", "NOT_APPLICABLE", "SKIPPED_LIMIT", "INDETERMINATE", "FAILED"] },
+    "severity": { "enum": ["INFO", "WARNING", "CRITICAL"] },
+    "confidence": { "enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"] },
+    "evidence_state": { "enum": ["COMPLETE", "BOUNDED", "TRUNCATED", "UNAVAILABLE"] },
+    "message": { "type": "string", "minLength": 1 },
+    "review_action": { "type": "string", "minLength": 1 },
+    "source_classification": { "type": "string" },
+    "source_references": { "type": "array", "items": { "type": "string", "pattern": "^SRC-[0-9]{3}$" }, "uniqueItems": true },
+    "evidence_refs": { "type": "array", "items": { "type": "string" }, "maxItems": 10000 },
+    "metrics": { "type": "object" },
+    "limitations": { "type": "array", "items": { "type": "string" } }
+  }
+}
