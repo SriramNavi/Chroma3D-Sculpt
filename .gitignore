@@ -35,3 +35,20 @@ manual-tests/sprint2-final/reports/
 manual-tests/sprint2-final/logs/
 manual-tests/sprint2-final/artifacts/
 manual-tests/sprint2-final/screenshots/
+manual-tests/sprint2.7/reports/
+manual-tests/sprint2.7/logs/
+manual-tests/sprint2.7/artifacts/
+
+# Sprint 2.7 external validation payloads and release staging.
+datasets/statues/raw/
+datasets/statues/thumbnails/
+datasets/statues/thumbnails/generated/
+benchmarks/golden/raw/
+benchmarks/golden/timings/
+benchmarks/golden/comparisons/
+benchmarks/golden/logs/
+benchmarks/golden/reports/*_benchmark_report.json
+benchmarks/golden/thumbnails/
+release-staging/
+.validation-assets/
+*.part

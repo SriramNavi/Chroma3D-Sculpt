@@ -4,6 +4,8 @@ Chroma3D Sculpt is a local Blender extension for production mesh diagnostics and
 
 **Current status:** Sprint 2.6 Golden Benchmark Baseline complete for all 27 validated statue meshes; installed-panel and operator-reviewed real-statue repair UAT remain deferred; Sprint 3 has not started
 
+Sprint 2.7 adds the dataset storage architecture on the review branch: Dataset `1.0.0` and Golden Benchmark `1.0.0` are packaged as verified release assets, while manifests, provenance, licenses, schemas, locks, and tooling remain in this product repository. The existing `v0.3.1-alpha.1` history is immutable; the extension version remains unchanged.
+
 **Version:** 0.3.0-alpha.1
 
 **JSON schema:** 2.0
@@ -127,6 +129,19 @@ bounded same-machine timing degradation as WARNING or FAIL; and warn when a
 machine mismatch makes timing non-comparable. An intentional product, schema,
 dataset, or benchmark-policy change requires explicit review and a new
 versioned baseline.
+
+## External validation assets
+
+Large local payloads are acquired into an ignored cache and are not required for ordinary lint or unit-test jobs:
+
+```powershell
+py scripts\fetch_validation_assets.py status --json
+py scripts\fetch_validation_assets.py dataset
+py scripts\fetch_validation_assets.py benchmark
+py scripts\fetch_validation_assets.py verify --json
+```
+
+Use `--offline` after acquisition. See [DATASET_STORAGE_POLICY.md](DATASET_STORAGE_POLICY.md), [VERSIONING_DATASETS_AND_BENCHMARKS.md](VERSIONING_DATASETS_AND_BENCHMARKS.md), and [docs/DATASET_CI_GUIDE.md](docs/DATASET_CI_GUIDE.md). The separate dataset repository and its releases are staged locally but are not published by Sprint 2.7. Historical Git size remains a known limitation, and Sprint 3 remains unstarted.
 
 ## Known limitations and safety
 

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SriramNavi/Chroma3D-Benchmark-Dataset/schemas/dataset-manifest-1.0.0.json",
+  "title": "Chroma3D statue dataset manifest",
+  "type": "object",
+  "required": ["dataset_version", "asset_count", "assets", "license_summary"],
+  "properties": {
+    "dataset_version": { "const": "1.0.0" },
+    "asset_count": { "type": "integer", "minimum": 1 },
+    "validated_asset_count": { "type": "integer", "minimum": 0 },
+    "license_summary": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0 } },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["unique_id", "source_url", "license", "stored_path", "checksum_sha256"],
+        "properties": {
+          "unique_id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "source_url": { "type": "string", "format": "uri" },
+          "license": { "type": "string" },
+          "stored_path": { "type": "string" },
+          "checksum_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+        }
+      }
+    }
+  }
+}

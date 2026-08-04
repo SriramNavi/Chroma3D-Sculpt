@@ -1,0 +1,25 @@
+{
+  "asset_count": 27,
+  "asset_filename": "chroma3d-statue-dataset-1.0.0.zip",
+  "asset_sha256": "ea260e588c1f7cbeed8798a11e2928491566882ee4ff867b4937e955ff399a13",
+  "asset_size_bytes": 407971411,
+  "created_at_utc": "2026-07-26T06:36:25.857971Z",
+  "dataset_lock_schema_version": "1.0.0",
+  "dataset_name": "Chroma3D Statue Dataset",
+  "dataset_repository": "SriramNavi/Chroma3D-Benchmark-Dataset",
+  "dataset_version": "1.0.0",
+  "license_summary": {
+    "CC-BY-4.0": 4,
+    "CC-BY-SA-4.0": 11,
+    "CC0-1.0": 12
+  },
+  "manifest_sha256": "3e763782e6271eff153c8c4097a8b841423b31962d1222e2baf208178559df9a",
+  "minimum_acquisition_tool_version": "1.0.0",
+  "packaged_for_product_release": "v0.3.1-alpha.1",
+  "release_identifier": "dataset-v1.0.0",
+  "release_tag": "dataset-v1.0.0",
+  "release_url": "https://github.com/SriramNavi/Chroma3D-Benchmark-Dataset/releases/download/dataset-v1.0.0/chroma3d-statue-dataset-1.0.0.zip",
+  "required_extracted_directory": "dataset",
+  "schema_version": "1.0.0",
+  "source_software_compatibility_notes": "Dataset 1.0.0 is the rights-cleared STL corpus validated by Blender 4.4.3; it makes no claim of watertightness, printability, diagnostic cleanliness, or repair success."
+}

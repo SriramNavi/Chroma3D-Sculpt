@@ -1,0 +1,23 @@
+{
+  "asset_filename": "chroma3d-golden-benchmark-1.0.0.zip",
+  "asset_sha256": "23a67ec383f65c2b706237f151e45718f937e8832c9b55fe404ebae22bbba3df",
+  "asset_size_bytes": 5393918,
+  "benchmark_lock_schema_version": "1.0.0",
+  "benchmark_name": "Chroma3D Golden Benchmark Baseline",
+  "benchmark_version": "1.0.0",
+  "comparator_compatibility_notes": "Use the stored benchmark comparator and the exact Dataset 1.0.0 manifest. The baseline was generated with the product runtime recorded in the golden manifest.",
+  "created_at_utc": "2026-07-26T11:22:22.046119Z",
+  "dataset_repository": "SriramNavi/Chroma3D-Benchmark-Dataset",
+  "dataset_version_dependency": "1.0.0",
+  "expected_json_artifact_count": 193,
+  "expected_mesh_count": 27,
+  "extraction_directory": "benchmark",
+  "manifest_sha256": "5bafdbfdedf72afd1098a12d895dbbb538c997e9f6f87ae7f8d33316aff7f8bc",
+  "packaged_for_product_release": "v0.3.1-alpha.1",
+  "release_identifier": "benchmark-v1.0.0",
+  "release_tag": "benchmark-v1.0.0",
+  "release_url": "https://github.com/SriramNavi/Chroma3D-Benchmark-Dataset/releases/download/benchmark-v1.0.0/chroma3d-golden-benchmark-1.0.0.zip",
+  "schema_version": "1.0.0",
+  "software_release_used_to_generate": "0.3.0-alpha.1",
+  "source_git_tag": "v0.3.0-alpha.1"
+}

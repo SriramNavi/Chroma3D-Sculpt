@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SriramNavi/Chroma3D-Sculpt/schemas/archive-index-1.0.0.json",
+  "title": "Chroma3D archive index",
+  "type": "object",
+  "required": [
+    "archive_index_schema_version",
+    "archive_type",
+    "archive_root",
+    "index_path",
+    "files"
+  ],
+  "properties": {
+    "archive_index_schema_version": { "const": "1.0.0" },
+    "archive_type": { "type": "string" },
+    "archive_root": { "type": "string", "pattern": "^[^./][^/]*$" },
+    "index_path": { "type": "string", "pattern": "^[^./][^/]*(/[^/]+)+$" },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "size_bytes", "sha256", "source_id", "license_id"],
+        "properties": {
+          "path": { "type": "string" },
+          "size_bytes": { "type": "integer", "minimum": 0 },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "source_id": { "type": ["string", "null"] },
+          "license_id": { "type": ["string", "null"] }
+        }
+      }
+    }
+  }
+}

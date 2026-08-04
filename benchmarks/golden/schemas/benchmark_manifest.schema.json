@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SriramNavi/Chroma3D-Benchmark-Dataset/schemas/benchmark-manifest-1.0.0.json",
+  "title": "Chroma3D golden benchmark manifest",
+  "type": "object",
+  "required": ["golden_manifest_schema_version", "benchmark_version", "dataset_version", "software_version", "mesh_count", "benchmark_entries"],
+  "properties": {
+    "golden_manifest_schema_version": { "type": "string" },
+    "benchmark_version": { "const": "1.0.0" },
+    "dataset_version": { "const": "1.0.0" },
+    "software_version": { "type": "string" },
+    "mesh_count": { "type": "integer", "minimum": 1 },
+    "dataset_manifest_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "benchmark_entries": { "type": "array", "minItems": 1 }
+  }
+}

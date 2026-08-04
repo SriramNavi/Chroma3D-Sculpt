@@ -90,3 +90,9 @@ byte-verified, readable, non-empty, finite, and structurally reasonable. It does
 not mean watertight, printable, diagnostically clean, culturally neutral, or
 safe for automatic repair. Always use an independent repair workspace and
 retain the protected raw source.
+
+## Storage and acquisition
+
+Dataset `1.0.0` is distributed as `chroma3d-statue-dataset-1.0.0.zip` from the staged external dataset repository. The product repository retains this manifest, per-asset metadata, licenses, attribution, source URLs, checksums, and the acquisition/verification tools; raw STL payloads and generated thumbnails are ignored local cache content.
+
+After the release is published, use `py scripts\fetch_validation_assets.py dataset` from the product root. Use `--offline` for later verification. The lock file binds the exact archive name, release URL, archive SHA-256, manifest SHA-256, count, and extraction root. A modified local installation is reported and is never silently repaired.

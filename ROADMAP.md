@@ -13,3 +13,5 @@
 - Later commercial work: packaging, licensing, support, and distribution design.
 
 The roadmap does not promise fully autonomous museum-quality sculpting or guaranteed print success.
+
+Sprint 2.7 storage architecture is implemented on the review branch: external release-asset packaging, deterministic archive verification, independent locks/versioning, offline fetch tooling, and current-HEAD payload externalization. External repository publication remains pending review; Sprint 3 remains unstarted.
