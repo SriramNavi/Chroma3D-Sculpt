@@ -1,0 +1,18 @@
+{
+  "regression_report_schema_version": "1.0",
+  "benchmark_version": "1.0.0",
+  "generated_at_utc": "2026-07-26T11:27:59.196232+00:00",
+  "overall_status": "PASS",
+  "mesh_count": 1,
+  "status_counts": {
+    "PASS": 1
+  },
+  "results": [
+    {
+      "mesh_id": "statue-bastet",
+      "status": "PASS",
+      "failures": [],
+      "warnings": []
+    }
+  ]
+}

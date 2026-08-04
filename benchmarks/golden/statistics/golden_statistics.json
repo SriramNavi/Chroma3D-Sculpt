@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "mesh_count": 27,
+  "triangle_count": {
+    "minimum": 16520.0,
+    "median": 280209.0,
+    "mean": 478730.037037,
+    "p95": 1234782.1,
+    "maximum": 1998496.0,
+    "total": 12925711.0
+  },
+  "timing_class_distribution": {
+    "Extreme": 3,
+    "Huge": 9,
+    "Large": 2,
+    "Medium": 5,
+    "Small": 7,
+    "Tiny": 1
+  },
+  "mesh_classification_distribution": {
+    "Animal": 5,
+    "Architectural carving": 5,
+    "Bust": 4,
+    "Full statue": 14,
+    "Guardian": 1,
+    "High-detail sculpture": 12,
+    "Human": 20,
+    "Museum Scan": 15,
+    "Photogrammetry": 8,
+    "Printable STL": 1
+  },
+  "severity_before_distribution": {
+    "PASS": 7,
+    "WARNING": 20
+  },
+  "severity_after_distribution": {
+    "PASS": 7,
+    "WARNING": 20
+  },
+  "selected_operation_distribution": {
+    "MERGE_DUPLICATE_VERTICES": 2
+  },
+  "repair_operation_status_distribution": {
+    "APPLIED": 2,
+    "UNDONE": 2
+  },
+  "repair_operation_type_distribution": {
+    "MERGE_DUPLICATE_VERTICES": 4
+  },
+  "warning_total": 89,
+  "wall_seconds": {
+    "minimum": 10.955022,
+    "median": 153.150218,
+    "mean": 275.267538,
+    "p95": 613.201571,
+    "maximum": 1589.033629,
+    "total": 7432.223514
+  },
+  "cpu_seconds": {
+    "minimum": 10.6875,
+    "median": 147.75,
+    "mean": 266.975116,
+    "p95": 594.954687,
+    "maximum": 1545.90625,
+    "total": 7208.328125
+  },
+  "analysis_duration_ms": {
+    "minimum": 1086.3336,
+    "median": 16087.5868,
+    "mean": 28326.508081,
+    "p95": 67293.62696,
+    "maximum": 101966.1205,
+    "total": 764815.7182
+  },
+  "canonical_repair_wall_seconds": {
+    "minimum": 0.0,
+    "median": 0.0,
+    "mean": 9.919136,
+    "p95": 16.318408,
+    "maximum": 244.504658,
+    "total": 267.81667
+  },
+  "peak_working_set_bytes": {
+    "minimum": 202715136.0,
+    "median": 814772224.0,
+    "mean": 1163912685.037037,
+    "p95": 2802549964.8,
+    "maximum": 3767922688.0,
+    "total": 31425642496.0
+  }
+}

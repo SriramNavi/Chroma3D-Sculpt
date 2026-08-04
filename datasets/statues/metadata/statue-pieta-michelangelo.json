@@ -1,0 +1,89 @@
+{
+  "unique_id": "statue-pieta-michelangelo",
+  "title": "Pietà",
+  "subject": "Michelangelo's Pietà",
+  "category": "figure_group",
+  "religious_cultural_classification": "Christian; Italian Renaissance",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Scan_the_World_-_Piet%C3%A0_(Michelangelo).stl",
+  "source_revision_url": "https://commons.wikimedia.org/wiki/File:Scan_the_World_-_Piet%C3%A0_(Michelangelo).stl?oldid=874140670",
+  "source_page_revision_id": 874140670,
+  "source_page_revision_timestamp": "2024-05-05T14:16:02Z",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Scan_the_World_-_Piet%C3%A0_%28Michelangelo%29.stl",
+  "download_date": "2026-07-26",
+  "download_timestamp_utc": "2026-07-26T06:35:39.842785+00:00",
+  "author": "Scan the World",
+  "credit": "Own work",
+  "original_repository": "Scan the World via Wikimedia Commons",
+  "upstream_source_urls": [],
+  "license": "CC-BY-SA-4.0",
+  "license_source_label": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "license_document": "datasets/statues/licenses/CC-BY-SA-4.0.txt",
+  "file_format": "STL",
+  "mime_type": "application/sla",
+  "vertex_count": 407674,
+  "triangle_count": 815738,
+  "bounding_box": {
+    "coordinate_space": "Blender world space after default STL import",
+    "source_units": "unspecified",
+    "minimum": [
+      0.006,
+      0.004,
+      0.006
+    ],
+    "maximum": [
+      130.006011963,
+      85.468002319,
+      123.942008972
+    ],
+    "dimensions": [
+      130.000015259,
+      85.464004517,
+      123.936012268
+    ],
+    "diagonal": 198.907603835
+  },
+  "checksum_sha256": "f77f638262a0e0fc7f3dc763bfeee228faad21057659de75c6c6697f420f60b4",
+  "source_checksum_sha1": "12f711151a9df8d81d15d4c5f4e1da777219e2ef",
+  "original_filename": "Scan the World - Pietà (Michelangelo).stl",
+  "stored_filename": "statue-pieta-michelangelo.stl",
+  "stored_path": "datasets/statues/raw/statue-pieta-michelangelo.stl",
+  "file_size_bytes": 40786984,
+  "thumbnail_path": "datasets/statues/thumbnails/statue-pieta-michelangelo.png",
+  "thumbnail_checksum_sha256": "cfcc9515d3528365dd006d2777bd9a53e3ae5cb3749876eb9954c918f2655720",
+  "source_description": "This object is part of \"Scan The World\". Scan the World is a non-profit initiative introduced by MyMiniFactory, through which we are creating a digital archive of fully 3D printable sculptures, artworks and landmarks from across the globe for the public to access for free.",
+  "notes": [
+    "Drapery-rich two-figure composition."
+  ],
+  "validation": {
+    "status": "validated",
+    "validated_at_utc": "2026-07-26T06:36:17.993574+00:00",
+    "validator": "Blender 4.4.3 native STL importer",
+    "readable": true,
+    "non_empty": true,
+    "reasonable_mesh": true,
+    "obvious_corruption": false,
+    "stl_encoding": "binary",
+    "binary_size_consistent": true,
+    "declared_triangle_count": 815738,
+    "triangle_count_matches_header": true,
+    "triangle_count_delta_from_header": 0,
+    "imported_object_count": 1,
+    "edge_count": 1223607,
+    "polygon_count": 815738,
+    "non_finite_vertex_count": 0,
+    "import_seconds": 0.819626,
+    "validation_seconds": 2.259254,
+    "checks": [
+      "File exists and is non-empty.",
+      "Current SHA-256 matches acquisition metadata.",
+      "STL container structure is recognized.",
+      "Blender native importer completed and produced mesh data.",
+      "Vertex and triangle counts exceed bounded minimums.",
+      "All imported vertex coordinates and bounds are finite.",
+      "Bounding-box diagonal is non-zero.",
+      "Binary STL header/import triangle delta is recorded; Blender may omit duplicate or degenerate facets during import."
+    ],
+    "warnings": []
+  }
+}

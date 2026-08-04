@@ -1,0 +1,29 @@
+{
+  "mesh_id": "statue-cosmic-buddha-smithsonian-150k",
+  "status": "PASS",
+  "timing_class": "Medium",
+  "mesh_classifications": [
+    "Museum Scan",
+    "Photogrammetry",
+    "Full statue",
+    "Human"
+  ],
+  "triangle_count": 150000,
+  "severity_before": "PASS",
+  "severity_after": "PASS",
+  "selected_operations": [],
+  "operation_record_count": 0,
+  "warning_count": 0,
+  "total_wall_seconds": 76.144892,
+  "total_cpu_seconds": 73.796875,
+  "peak_working_set_bytes": 527568896,
+  "artifacts": {
+    "analysis": "benchmarks/golden/raw/statue-cosmic-buddha-smithsonian-150k_analysis.json",
+    "repair_audit": "benchmarks/golden/raw/statue-cosmic-buddha-smithsonian-150k_repair_audit.json",
+    "rollback_audit": "benchmarks/golden/raw/statue-cosmic-buddha-smithsonian-150k_rollback_audit.json",
+    "golden": "benchmarks/golden/raw/statue-cosmic-buddha-smithsonian-150k_golden.json",
+    "comparison": "benchmarks/golden/comparisons/statue-cosmic-buddha-smithsonian-150k_comparison.json",
+    "timings": "benchmarks/golden/timings/statue-cosmic-buddha-smithsonian-150k_timings.json",
+    "report": "benchmarks/golden/reports/statue-cosmic-buddha-smithsonian-150k_benchmark_report.json"
+  }
+}

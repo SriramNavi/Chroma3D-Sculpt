@@ -1,0 +1,29 @@
+{
+  "mesh_id": "statue-dainichi-nyorai-tower",
+  "status": "PASS",
+  "timing_class": "Extreme",
+  "mesh_classifications": [
+    "Photogrammetry",
+    "High-detail sculpture",
+    "Architectural carving",
+    "Animal"
+  ],
+  "triangle_count": 1249711,
+  "severity_before": "WARNING",
+  "severity_after": "WARNING",
+  "selected_operations": [],
+  "operation_record_count": 0,
+  "warning_count": 6,
+  "total_wall_seconds": 601.49954,
+  "total_cpu_seconds": 583.984375,
+  "peak_working_set_bytes": 2836389888,
+  "artifacts": {
+    "analysis": "benchmarks/golden/raw/statue-dainichi-nyorai-tower_analysis.json",
+    "repair_audit": "benchmarks/golden/raw/statue-dainichi-nyorai-tower_repair_audit.json",
+    "rollback_audit": "benchmarks/golden/raw/statue-dainichi-nyorai-tower_rollback_audit.json",
+    "golden": "benchmarks/golden/raw/statue-dainichi-nyorai-tower_golden.json",
+    "comparison": "benchmarks/golden/comparisons/statue-dainichi-nyorai-tower_comparison.json",
+    "timings": "benchmarks/golden/timings/statue-dainichi-nyorai-tower_timings.json",
+    "report": "benchmarks/golden/reports/statue-dainichi-nyorai-tower_benchmark_report.json"
+  }
+}

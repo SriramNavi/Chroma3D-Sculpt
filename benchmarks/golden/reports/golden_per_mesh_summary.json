@@ -1,0 +1,770 @@
+{
+  "benchmark_version": "1.0.0",
+  "mesh_count": 27,
+  "entries": [
+    {
+      "mesh_id": "statue-asad-al-lat",
+      "status": "PASS",
+      "timing_class": "Small",
+      "mesh_classifications": [
+        "Architectural carving",
+        "Animal"
+      ],
+      "triangle_count": 29402,
+      "severity_before": "WARNING",
+      "severity_after": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 5,
+      "total_wall_seconds": 17.222326,
+      "total_cpu_seconds": 16.8125,
+      "peak_working_set_bytes": 234430464,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-asad-al-lat_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-asad-al-lat_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-asad-al-lat_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-asad-al-lat_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-asad-al-lat_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-asad-al-lat_timings.json",
+        "report": "benchmarks/golden/reports/statue-asad-al-lat_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-bastet",
+      "status": "PASS",
+      "timing_class": "Tiny",
+      "mesh_classifications": [
+        "Printable STL",
+        "Animal"
+      ],
+      "triangle_count": 16520,
+      "severity_before": "WARNING",
+      "severity_after": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 5,
+      "total_wall_seconds": 10.955022,
+      "total_cpu_seconds": 10.6875,
+      "peak_working_set_bytes": 202715136,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-bastet_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-bastet_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-bastet_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-bastet_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-bastet_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-bastet_timings.json",
+        "report": "benchmarks/golden/reports/statue-bastet_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-bato-kannon-shirane",
+      "status": "PASS",
+      "timing_class": "Huge",
+      "mesh_classifications": [
+        "Photogrammetry",
+        "High-detail sculpture",
+        "Architectural carving"
+      ],
+      "triangle_count": 995673,
+      "severity_before": "WARNING",
+      "severity_after": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 7,
+      "total_wall_seconds": 552.095393,
+      "total_cpu_seconds": 537.921875,
+      "peak_working_set_bytes": 2000130048,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-bato-kannon-shirane_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-bato-kannon-shirane_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-bato-kannon-shirane_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-bato-kannon-shirane_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-bato-kannon-shirane_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-bato-kannon-shirane_timings.json",
+        "report": "benchmarks/golden/reports/statue-bato-kannon-shirane_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-belvedere-torso",
+      "status": "PASS",
+      "timing_class": "Small",
+      "mesh_classifications": [
+        "Museum Scan",
+        "Human"
+      ],
+      "triangle_count": 97796,
+      "severity_before": "PASS",
+      "severity_after": "PASS",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 0,
+      "total_wall_seconds": 49.944533,
+      "total_cpu_seconds": 48.609375,
+      "peak_working_set_bytes": 411099136,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-belvedere-torso_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-belvedere-torso_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-belvedere-torso_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-belvedere-torso_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-belvedere-torso_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-belvedere-torso_timings.json",
+        "report": "benchmarks/golden/reports/statue-belvedere-torso_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-caracalla-bust",
+      "status": "PASS",
+      "timing_class": "Medium",
+      "mesh_classifications": [
+        "Bust",
+        "Human"
+      ],
+      "triangle_count": 181169,
+      "severity_before": "WARNING",
+      "severity_after": "WARNING",
+      "selected_operations": [
+        "MERGE_DUPLICATE_VERTICES"
+      ],
+      "operation_record_count": 2,
+      "warning_count": 7,
+      "total_wall_seconds": 153.150218,
+      "total_cpu_seconds": 147.75,
+      "peak_working_set_bytes": 623300608,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-caracalla-bust_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-caracalla-bust_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-caracalla-bust_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-caracalla-bust_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-caracalla-bust_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-caracalla-bust_timings.json",
+        "report": "benchmarks/golden/reports/statue-caracalla-bust_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-castlestrange-stone",
+      "status": "PASS",
+      "timing_class": "Small",
+      "mesh_classifications": [
+        "Architectural carving"
+      ],
+      "triangle_count": 67652,
+      "severity_before": "WARNING",
+      "severity_after": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 5,
+      "total_wall_seconds": 34.800258,
+      "total_cpu_seconds": 32.953125,
+      "peak_working_set_bytes": 326066176,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-castlestrange-stone_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-castlestrange-stone_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-castlestrange-stone_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-castlestrange-stone_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-castlestrange-stone_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-castlestrange-stone_timings.json",
+        "report": "benchmarks/golden/reports/statue-castlestrange-stone_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-cosmic-buddha-smithsonian-150k",
+      "status": "PASS",
+      "timing_class": "Medium",
+      "mesh_classifications": [
+        "Museum Scan",
+        "Photogrammetry",
+        "Full statue",
+        "Human"
+      ],
+      "triangle_count": 150000,
+      "severity_before": "PASS",
+      "severity_after": "PASS",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 0,
+      "total_wall_seconds": 76.144892,
+      "total_cpu_seconds": 73.796875,
+      "peak_working_set_bytes": 527568896,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-cosmic-buddha-smithsonian-150k_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-cosmic-buddha-smithsonian-150k_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-cosmic-buddha-smithsonian-150k_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-cosmic-buddha-smithsonian-150k_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-cosmic-buddha-smithsonian-150k_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-cosmic-buddha-smithsonian-150k_timings.json",
+        "report": "benchmarks/golden/reports/statue-cosmic-buddha-smithsonian-150k_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-dainichi-nyorai-tower",
+      "status": "PASS",
+      "timing_class": "Extreme",
+      "mesh_classifications": [
+        "Photogrammetry",
+        "High-detail sculpture",
+        "Architectural carving",
+        "Animal"
+      ],
+      "triangle_count": 1249711,
+      "severity_before": "WARNING",
+      "severity_after": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 6,
+      "total_wall_seconds": 601.49954,
+      "total_cpu_seconds": 583.984375,
+      "peak_working_set_bytes": 2836389888,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-dainichi-nyorai-tower_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-dainichi-nyorai-tower_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-dainichi-nyorai-tower_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-dainichi-nyorai-tower_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-dainichi-nyorai-tower_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-dainichi-nyorai-tower_timings.json",
+        "report": "benchmarks/golden/reports/statue-dainichi-nyorai-tower_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-danaid-rodin",
+      "status": "PASS",
+      "timing_class": "Medium",
+      "mesh_classifications": [
+        "Museum Scan",
+        "Full statue",
+        "Human"
+      ],
+      "triangle_count": 110538,
+      "severity_before": "PASS",
+      "severity_after": "PASS",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 0,
+      "total_wall_seconds": 57.30907,
+      "total_cpu_seconds": 55.78125,
+      "peak_working_set_bytes": 430292992,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-danaid-rodin_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-danaid-rodin_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-danaid-rodin_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-danaid-rodin_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-danaid-rodin_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-danaid-rodin_timings.json",
+        "report": "benchmarks/golden/reports/statue-danaid-rodin_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-david-michelangelo",
+      "status": "PASS",
+      "timing_class": "Extreme",
+      "mesh_classifications": [
+        "Museum Scan",
+        "Photogrammetry",
+        "High-detail sculpture",
+        "Full statue",
+        "Human"
+      ],
+      "triangle_count": 1199948,
+      "severity_before": "WARNING",
+      "severity_after": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 3,
+      "total_wall_seconds": 618.216727,
+      "total_cpu_seconds": 599.65625,
+      "peak_working_set_bytes": 2723590144,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-david-michelangelo_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-david-michelangelo_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-david-michelangelo_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-david-michelangelo_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-david-michelangelo_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-david-michelangelo_timings.json",
+        "report": "benchmarks/golden/reports/statue-david-michelangelo_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-ganesha-java-10c",
+      "status": "PASS",
+      "timing_class": "Small",
+      "mesh_classifications": [
+        "Museum Scan",
+        "Full statue",
+        "Human"
+      ],
+      "triangle_count": 63950,
+      "severity_before": "PASS",
+      "severity_after": "PASS",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 0,
+      "total_wall_seconds": 32.572592,
+      "total_cpu_seconds": 31.203125,
+      "peak_working_set_bytes": 317214720,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-ganesha-java-10c_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-ganesha-java-10c_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-ganesha-java-10c_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-ganesha-java-10c_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-ganesha-java-10c_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-ganesha-java-10c_timings.json",
+        "report": "benchmarks/golden/reports/statue-ganesha-java-10c_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-greek-slave-smithsonian-150k",
+      "status": "PASS",
+      "timing_class": "Medium",
+      "mesh_classifications": [
+        "Museum Scan",
+        "Full statue",
+        "Human"
+      ],
+      "triangle_count": 149965,
+      "severity_before": "WARNING",
+      "severity_after": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 6,
+      "total_wall_seconds": 75.170498,
+      "total_cpu_seconds": 72.109375,
+      "peak_working_set_bytes": 529358848,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-greek-slave-smithsonian-150k_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-greek-slave-smithsonian-150k_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-greek-slave-smithsonian-150k_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-greek-slave-smithsonian-150k_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-greek-slave-smithsonian-150k_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-greek-slave-smithsonian-150k_timings.json",
+        "report": "benchmarks/golden/reports/statue-greek-slave-smithsonian-150k_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-hercules-archer-mia",
+      "status": "PASS",
+      "timing_class": "Small",
+      "mesh_classifications": [
+        "Museum Scan",
+        "Full statue",
+        "Human"
+      ],
+      "triangle_count": 99983,
+      "severity_before": "WARNING",
+      "severity_after": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 5,
+      "total_wall_seconds": 50.829024,
+      "total_cpu_seconds": 49.6875,
+      "peak_working_set_bytes": 410914816,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-hercules-archer-mia_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-hercules-archer-mia_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-hercules-archer-mia_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-hercules-archer-mia_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-hercules-archer-mia_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-hercules-archer-mia_timings.json",
+        "report": "benchmarks/golden/reports/statue-hercules-archer-mia_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-heroic-head-pierre-de-wissant",
+      "status": "PASS",
+      "timing_class": "Huge",
+      "mesh_classifications": [
+        "High-detail sculpture",
+        "Bust",
+        "Human"
+      ],
+      "triangle_count": 623366,
+      "severity_before": "WARNING",
+      "severity_after": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 2,
+      "total_wall_seconds": 329.10334,
+      "total_cpu_seconds": 319.375,
+      "peak_working_set_bytes": 1535692800,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-heroic-head-pierre-de-wissant_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-heroic-head-pierre-de-wissant_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-heroic-head-pierre-de-wissant_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-heroic-head-pierre-de-wissant_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-heroic-head-pierre-de-wissant_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-heroic-head-pierre-de-wissant_timings.json",
+        "report": "benchmarks/golden/reports/statue-heroic-head-pierre-de-wissant_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-hizen-komainu",
+      "status": "PASS",
+      "timing_class": "Extreme",
+      "mesh_classifications": [
+        "Photogrammetry",
+        "High-detail sculpture",
+        "Guardian",
+        "Animal"
+      ],
+      "triangle_count": 1998496,
+      "severity_before": "WARNING",
+      "severity_after": "WARNING",
+      "selected_operations": [
+        "MERGE_DUPLICATE_VERTICES"
+      ],
+      "operation_record_count": 2,
+      "warning_count": 8,
+      "total_wall_seconds": 1589.033629,
+      "total_cpu_seconds": 1545.90625,
+      "peak_working_set_bytes": 3767922688,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-hizen-komainu_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-hizen-komainu_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-hizen-komainu_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-hizen-komainu_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-hizen-komainu_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-hizen-komainu_timings.json",
+        "report": "benchmarks/golden/reports/statue-hizen-komainu_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-hotei-water-basin",
+      "status": "PASS",
+      "timing_class": "Large",
+      "mesh_classifications": [
+        "Architectural carving"
+      ],
+      "triangle_count": 280209,
+      "severity_before": "WARNING",
+      "severity_after": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 4,
+      "total_wall_seconds": 142.712234,
+      "total_cpu_seconds": 138.328125,
+      "peak_working_set_bytes": 814772224,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-hotei-water-basin_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-hotei-water-basin_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-hotei-water-basin_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-hotei-water-basin_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-hotei-water-basin_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-hotei-water-basin_timings.json",
+        "report": "benchmarks/golden/reports/statue-hotei-water-basin_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-icarus-ioannidou",
+      "status": "PASS",
+      "timing_class": "Medium",
+      "mesh_classifications": [
+        "Photogrammetry",
+        "Full statue",
+        "Human"
+      ],
+      "triangle_count": 146505,
+      "severity_before": "WARNING",
+      "severity_after": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 4,
+      "total_wall_seconds": 77.069503,
+      "total_cpu_seconds": 74.234375,
+      "peak_working_set_bytes": 521969664,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-icarus-ioannidou_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-icarus-ioannidou_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-icarus-ioannidou_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-icarus-ioannidou_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-icarus-ioannidou_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-icarus-ioannidou_timings.json",
+        "report": "benchmarks/golden/reports/statue-icarus-ioannidou_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-juno-ludovisi",
+      "status": "PASS",
+      "timing_class": "Huge",
+      "mesh_classifications": [
+        "Museum Scan",
+        "High-detail sculpture",
+        "Bust",
+        "Human"
+      ],
+      "triangle_count": 642984,
+      "severity_before": "PASS",
+      "severity_after": "PASS",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 0,
+      "total_wall_seconds": 353.196358,
+      "total_cpu_seconds": 340.921875,
+      "peak_working_set_bytes": 1583861760,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-juno-ludovisi_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-juno-ludovisi_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-juno-ludovisi_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-juno-ludovisi_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-juno-ludovisi_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-juno-ludovisi_timings.json",
+        "report": "benchmarks/golden/reports/statue-juno-ludovisi_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-laocoon-group",
+      "status": "PASS",
+      "timing_class": "Huge",
+      "mesh_classifications": [
+        "Museum Scan",
+        "High-detail sculpture",
+        "Full statue",
+        "Human"
+      ],
+      "triangle_count": 600000,
+      "severity_before": "PASS",
+      "severity_after": "PASS",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 0,
+      "total_wall_seconds": 331.385435,
+      "total_cpu_seconds": 320.90625,
+      "peak_working_set_bytes": 1484697600,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-laocoon-group_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-laocoon-group_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-laocoon-group_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-laocoon-group_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-laocoon-group_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-laocoon-group_timings.json",
+        "report": "benchmarks/golden/reports/statue-laocoon-group_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-laurana-woman-bust",
+      "status": "PASS",
+      "timing_class": "Small",
+      "mesh_classifications": [
+        "Museum Scan",
+        "Photogrammetry",
+        "Bust",
+        "Human"
+      ],
+      "triangle_count": 99868,
+      "severity_before": "WARNING",
+      "severity_after": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 2,
+      "total_wall_seconds": 50.569829,
+      "total_cpu_seconds": 48.90625,
+      "peak_working_set_bytes": 412397568,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-laurana-woman-bust_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-laurana-woman-bust_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-laurana-woman-bust_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-laurana-woman-bust_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-laurana-woman-bust_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-laurana-woman-bust_timings.json",
+        "report": "benchmarks/golden/reports/statue-laurana-woman-bust_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-mick-odwyer",
+      "status": "PASS",
+      "timing_class": "Large",
+      "mesh_classifications": [
+        "Full statue",
+        "Human"
+      ],
+      "triangle_count": 400000,
+      "severity_before": "WARNING",
+      "severity_after": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 6,
+      "total_wall_seconds": 208.140197,
+      "total_cpu_seconds": 200.890625,
+      "peak_working_set_bytes": 1067970560,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-mick-odwyer_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-mick-odwyer_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-mick-odwyer_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-mick-odwyer_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-mick-odwyer_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-mick-odwyer_timings.json",
+        "report": "benchmarks/golden/reports/statue-mick-odwyer_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-pieta-michelangelo",
+      "status": "PASS",
+      "timing_class": "Huge",
+      "mesh_classifications": [
+        "Museum Scan",
+        "High-detail sculpture",
+        "Full statue",
+        "Human"
+      ],
+      "triangle_count": 815738,
+      "severity_before": "WARNING",
+      "severity_after": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 3,
+      "total_wall_seconds": 447.854499,
+      "total_cpu_seconds": 434.453125,
+      "peak_working_set_bytes": 1888931840,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-pieta-michelangelo_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-pieta-michelangelo_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-pieta-michelangelo_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-pieta-michelangelo_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-pieta-michelangelo_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-pieta-michelangelo_timings.json",
+        "report": "benchmarks/golden/reports/statue-pieta-michelangelo_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-thinker-rodin",
+      "status": "PASS",
+      "timing_class": "Huge",
+      "mesh_classifications": [
+        "Museum Scan",
+        "High-detail sculpture",
+        "Full statue",
+        "Human"
+      ],
+      "triangle_count": 837482,
+      "severity_before": "WARNING",
+      "severity_after": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 2,
+      "total_wall_seconds": 462.01145,
+      "total_cpu_seconds": 448.203125,
+      "peak_working_set_bytes": 1714573312,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-thinker-rodin_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-thinker-rodin_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-thinker-rodin_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-thinker-rodin_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-thinker-rodin_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-thinker-rodin_timings.json",
+        "report": "benchmarks/golden/reports/statue-thinker-rodin_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-uma-maheshvara-java-10c",
+      "status": "PASS",
+      "timing_class": "Small",
+      "mesh_classifications": [
+        "Museum Scan",
+        "Full statue",
+        "Human"
+      ],
+      "triangle_count": 99994,
+      "severity_before": "WARNING",
+      "severity_after": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 5,
+      "total_wall_seconds": 51.103992,
+      "total_cpu_seconds": 48.875,
+      "peak_working_set_bytes": 412626944,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-uma-maheshvara-java-10c_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-uma-maheshvara-java-10c_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-uma-maheshvara-java-10c_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-uma-maheshvara-java-10c_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-uma-maheshvara-java-10c_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-uma-maheshvara-java-10c_timings.json",
+        "report": "benchmarks/golden/reports/statue-uma-maheshvara-java-10c_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-venus-de-milo",
+      "status": "PASS",
+      "timing_class": "Huge",
+      "mesh_classifications": [
+        "Museum Scan",
+        "High-detail sculpture",
+        "Full statue",
+        "Human"
+      ],
+      "triangle_count": 607274,
+      "severity_before": "WARNING",
+      "severity_after": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 2,
+      "total_wall_seconds": 330.892195,
+      "total_cpu_seconds": 319.28125,
+      "peak_working_set_bytes": 1498824704,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-venus-de-milo_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-venus-de-milo_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-venus-de-milo_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-venus-de-milo_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-venus-de-milo_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-venus-de-milo_timings.json",
+        "report": "benchmarks/golden/reports/statue-venus-de-milo_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-venus-willendorf",
+      "status": "PASS",
+      "timing_class": "Huge",
+      "mesh_classifications": [
+        "Museum Scan",
+        "High-detail sculpture",
+        "Human"
+      ],
+      "triangle_count": 699996,
+      "severity_before": "PASS",
+      "severity_after": "PASS",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 0,
+      "total_wall_seconds": 385.561613,
+      "total_cpu_seconds": 373.96875,
+      "peak_working_set_bytes": 1525374976,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-venus-willendorf_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-venus-willendorf_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-venus-willendorf_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-venus-willendorf_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-venus-willendorf_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-venus-willendorf_timings.json",
+        "report": "benchmarks/golden/reports/statue-venus-willendorf_benchmark_report.json"
+      }
+    },
+    {
+      "mesh_id": "statue-water-buffalo-boy",
+      "status": "PASS",
+      "timing_class": "Huge",
+      "mesh_classifications": [
+        "Photogrammetry",
+        "High-detail sculpture",
+        "Full statue",
+        "Animal",
+        "Human"
+      ],
+      "triangle_count": 661492,
+      "severity_before": "WARNING",
+      "severity_after": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 2,
+      "total_wall_seconds": 343.679147,
+      "total_cpu_seconds": 333.125,
+      "peak_working_set_bytes": 1622953984,
+      "artifacts": {
+        "analysis": "benchmarks/golden/raw/statue-water-buffalo-boy_analysis.json",
+        "repair_audit": "benchmarks/golden/raw/statue-water-buffalo-boy_repair_audit.json",
+        "rollback_audit": "benchmarks/golden/raw/statue-water-buffalo-boy_rollback_audit.json",
+        "golden": "benchmarks/golden/raw/statue-water-buffalo-boy_golden.json",
+        "comparison": "benchmarks/golden/comparisons/statue-water-buffalo-boy_comparison.json",
+        "timings": "benchmarks/golden/timings/statue-water-buffalo-boy_timings.json",
+        "report": "benchmarks/golden/reports/statue-water-buffalo-boy_benchmark_report.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "unique_id": "statue-hizen-komainu",
+  "title": "Hizen Komainu at Hachiryū Shrine",
+  "subject": "Stone guardian lion-dog",
+  "category": "temple_guardian",
+  "religious_cultural_classification": "Shinto; Japanese",
+  "source_url": "https://commons.wikimedia.org/wiki/File:%E8%82%A5%E5%89%8D%E7%8B%9B%E7%8A%AC1%EF%BC%88%E5%85%AB%E9%BE%8D%E7%A4%BE%EF%BC%89.stl",
+  "source_revision_url": "https://commons.wikimedia.org/wiki/File:%E8%82%A5%E5%89%8D%E7%8B%9B%E7%8A%AC1%EF%BC%88%E5%85%AB%E9%BE%8D%E7%A4%BE%EF%BC%89.stl?oldid=1014662153",
+  "source_page_revision_id": 1014662153,
+  "source_page_revision_timestamp": "2025-03-28T23:14:57Z",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/%E8%82%A5%E5%89%8D%E7%8B%9B%E7%8A%AC1%EF%BC%88%E5%85%AB%E9%BE%8D%E7%A4%BE%EF%BC%89.stl",
+  "download_date": "2026-07-26",
+  "download_timestamp_utc": "2026-07-26T06:35:39.842785+00:00",
+  "author": "Kosuke Shinoda",
+  "credit": "Own work",
+  "original_repository": "Independent photogrammetry via Wikimedia Commons",
+  "upstream_source_urls": [],
+  "license": "CC-BY-SA-4.0",
+  "license_source_label": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "license_document": "datasets/statues/licenses/CC-BY-SA-4.0.txt",
+  "file_format": "STL",
+  "mime_type": "application/sla",
+  "vertex_count": 1000884,
+  "triangle_count": 1998496,
+  "bounding_box": {
+    "coordinate_space": "Blender world space after default STL import",
+    "source_units": "unspecified",
+    "minimum": [
+      -0.608311534,
+      0.190407917,
+      13.886002541
+    ],
+    "maximum": [
+      -0.164413378,
+      0.71832931,
+      14.945278168
+    ],
+    "dimensions": [
+      0.443898141,
+      0.527921379,
+      1.059275627
+    ],
+    "diagonal": 1.264045636
+  },
+  "checksum_sha256": "127e2da11069dbdc17166588cffae0e4f8eaca3128fbe6c8d78c8eb4808bcec8",
+  "source_checksum_sha1": "296932fc46b0a1727d9983eb93df7ac67214f37d",
+  "original_filename": "肥前狛犬1（八龍社）.stl",
+  "stored_filename": "statue-hizen-komainu.stl",
+  "stored_path": "datasets/statues/raw/statue-hizen-komainu.stl",
+  "file_size_bytes": 99924934,
+  "thumbnail_path": "datasets/statues/thumbnails/statue-hizen-komainu.png",
+  "thumbnail_checksum_sha256": "e395689f654d1df071db91fbd3807ab51e49718c43ddb7fce1bcde4106c79f6f",
+  "source_description": "フォトグラメトリ（SfM/MVS）で作成した、八龍社（佐賀県佐賀市西与賀町大字厘外）にある肥前狛犬の3Dモデル",
+  "notes": [
+    "Large weathered photogrammetry mesh selected as a stress case."
+  ],
+  "validation": {
+    "status": "validated",
+    "validated_at_utc": "2026-07-26T06:36:10.325373+00:00",
+    "validator": "Blender 4.4.3 native STL importer",
+    "readable": true,
+    "non_empty": true,
+    "reasonable_mesh": true,
+    "obvious_corruption": false,
+    "stl_encoding": "binary",
+    "binary_size_consistent": true,
+    "declared_triangle_count": 1998497,
+    "triangle_count_matches_header": false,
+    "triangle_count_delta_from_header": 1,
+    "imported_object_count": 1,
+    "edge_count": 2999385,
+    "polygon_count": 1998496,
+    "non_finite_vertex_count": 0,
+    "import_seconds": 1.607442,
+    "validation_seconds": 4.824324,
+    "checks": [
+      "File exists and is non-empty.",
+      "Current SHA-256 matches acquisition metadata.",
+      "STL container structure is recognized.",
+      "Blender native importer completed and produced mesh data.",
+      "Vertex and triangle counts exceed bounded minimums.",
+      "All imported vertex coordinates and bounds are finite.",
+      "Bounding-box diagonal is non-zero.",
+      "Binary STL header/import triangle delta is recorded; Blender may omit duplicate or degenerate facets during import."
+    ],
+    "warnings": [
+      "Blender imported 1 fewer triangles than the binary STL header declared, consistent with importer cleanup of duplicate or degenerate facets."
+    ]
+  }
+}

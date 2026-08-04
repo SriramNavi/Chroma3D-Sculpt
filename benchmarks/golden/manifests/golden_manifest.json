@@ -1,0 +1,2102 @@
+{
+  "golden_manifest_schema_version": "1.0",
+  "benchmark_version": "1.0.0",
+  "dataset_version": "1.0.0",
+  "dataset_manifest_sha256": "3e763782e6271eff153c8c4097a8b841423b31962d1222e2baf208178559df9a",
+  "software_version": "0.3.0-alpha.1",
+  "analysis_schema_version": "2.0",
+  "repair_audit_schema_version": "1.0",
+  "mesh_count": 27,
+  "benchmark_date_utc": "2026-07-26T11:22:22.046119+00:00",
+  "source_git_commit": "5cd22cf36226fef360e0ea3adfd73069799543be",
+  "source_git_tag": "v0.3.0-alpha.1",
+  "machine_information": {
+    "operating_system": "Windows-10-10.0.26200-SP0",
+    "system": "Windows",
+    "release": "10",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "hostname": "LAPTOP-AEORIDUB",
+    "python_version": "3.11.11",
+    "blender_version": "4.4.3",
+    "logical_cpu_count": 16,
+    "total_physical_memory_bytes": 33963319296,
+    "available_physical_memory_bytes": 15331274752,
+    "power_line_status": "ONLINE",
+    "battery_percent": 100,
+    "machine_fingerprint": "efa1889db7bb8c811dbd2ec657b9e85062b77a5889354b3362f021f3bcdabeed"
+  },
+  "power_state_distribution": {
+    "ONLINE": 27
+  },
+  "execution_model": "One fresh Blender --background --factory-startup process per mesh; production operators and default production settings only.",
+  "timing_class_thresholds": {
+    "Tiny": {
+      "triangle_count_less_than": 25000
+    },
+    "Small": {
+      "triangle_count_less_than": 100000
+    },
+    "Medium": {
+      "triangle_count_less_than": 250000
+    },
+    "Large": {
+      "triangle_count_less_than": 500000
+    },
+    "Huge": {
+      "triangle_count_less_than": 1000000
+    },
+    "Extreme": {
+      "triangle_count_at_least": 1000000
+    }
+  },
+  "regression_thresholds": {
+    "timing_warning_ratio": 1.5,
+    "timing_warning_absolute_seconds": 1.0,
+    "timing_fail_ratio": 2.0,
+    "timing_fail_absolute_seconds": 5.0
+  },
+  "statistics": {
+    "path": "benchmarks/golden/statistics/golden_statistics.json",
+    "sha256": "bd4dd0cb09b834dc330ff45e578014a119b707b6e180a107b9639fa2ab5ab20c"
+  },
+  "summary_report": {
+    "path": "benchmarks/golden/BENCHMARK_SUMMARY.md",
+    "sha256": "82b69632b3d2f874e1bb4280968ab9981e1388663dd631dbe4c63c1e7d477361"
+  },
+  "benchmark_entries": [
+    {
+      "mesh_id": "statue-asad-al-lat",
+      "title": "Asad Al-Lat",
+      "source_path": "datasets/statues/raw/statue-asad-al-lat.stl",
+      "source_sha256": "5748e4d150a370f34328ea768ced85ccafcaae6dd3c3891f2c0e80fb0a7a4ac8",
+      "metadata_sha256": "e2de53cbb163bac4dbbfba525ccee16c06a4084395ec67beed56879a3c84104c",
+      "thumbnail_sha256": "ea529dbac1835d91fbec1fb5e0d318be9eb7e378e3a1868e9b81ae8c6f35bdc6",
+      "triangle_count": 29402,
+      "vertex_count": 15071,
+      "timing_class": "Small",
+      "mesh_classifications": [
+        "Architectural carving",
+        "Animal"
+      ],
+      "analysis_severity": "WARNING",
+      "after_repair_severity": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 5,
+      "total_wall_seconds": 17.222326,
+      "total_cpu_seconds": 16.8125,
+      "peak_working_set_bytes": 234430464,
+      "schema_fingerprints": {
+        "analysis_report": "0ed59c2a3e0777062d8a434427c60404db6c3ab625ab54f96e596fb0651e0ab2",
+        "after_analysis": "0ed59c2a3e0777062d8a434427c60404db6c3ab625ab54f96e596fb0651e0ab2",
+        "repair_audit": "bf9e12e1486545a8885ebcd8e5711e924e548468fc774f26ab91eacd9138f63c",
+        "rollback_audit": "bb2176c84464674f044ad2e497ee0bee25b991f299cf64a3cce2787e15a68c8c",
+        "comparison": "8d748b3baed6c5710b760a853ff34e8ecf6f5078d69e60962c94939eaf53ae93",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-asad-al-lat_analysis.json",
+          "sha256": "98bd34553a90a44b57fd47b3dcad561f423b6fd4cfa13f7935ee9bafebb3484d",
+          "size_bytes": 58335
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-asad-al-lat_repair_audit.json",
+          "sha256": "5dfe6066f18fafa01fde47f81091ae7e46a3fabb0835a5c5903f4651e092ee68",
+          "size_bytes": 24243
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-asad-al-lat_rollback_audit.json",
+          "sha256": "c4f13bbf83bdbd601eca883c5ce37aac36325a44573b98956b50a3fe4cc01b26",
+          "size_bytes": 16363
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-asad-al-lat_golden.json",
+          "sha256": "d35b9ba343281a72bd565b98d7f0136172d9910635653b0387b4a8c5714b662d",
+          "size_bytes": 198908
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-asad-al-lat_comparison.json",
+          "sha256": "5fbb5f355e56a9810a0dcb6b45f6af1d051b1b79ca6d76aff89aadc0c19d63d6",
+          "size_bytes": 2344
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-asad-al-lat_timings.json",
+          "sha256": "ac79aee390446174ba8b44b5cc44a0b1496d6382cf54c1d500a4cb7fef9e2552",
+          "size_bytes": 6457
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-asad-al-lat_benchmark_report.json",
+          "sha256": "7e5a679dd31fc95b7f6a192b8b00c9951f0eb43e930c7d6a672373f3b6fa64f5",
+          "size_bytes": 1017
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-asad-al-lat.png",
+          "sha256": "ea529dbac1835d91fbec1fb5e0d318be9eb7e378e3a1868e9b81ae8c6f35bdc6",
+          "size_bytes": 106580
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-bastet",
+      "title": "Bastet",
+      "source_path": "datasets/statues/raw/statue-bastet.stl",
+      "source_sha256": "5fe8b7d22c7831f9e53dbd2ab70691945583be5fb3bcd681df16df7d5d683d22",
+      "metadata_sha256": "fa5c0ac9f80ec371792feb38efbe92b8eea63364f6498914ce6115258d1d2864",
+      "thumbnail_sha256": "8b7ea3cde6ad92b9289cd700f90abe95994ac23cd05f9ee80888987dd9b371a0",
+      "triangle_count": 16520,
+      "vertex_count": 8274,
+      "timing_class": "Tiny",
+      "mesh_classifications": [
+        "Printable STL",
+        "Animal"
+      ],
+      "analysis_severity": "WARNING",
+      "after_repair_severity": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 5,
+      "total_wall_seconds": 10.955022,
+      "total_cpu_seconds": 10.6875,
+      "peak_working_set_bytes": 202715136,
+      "schema_fingerprints": {
+        "analysis_report": "a38418e2dbb1aecf60c54f97cf76946943095a87dc2c287785aaecaf2dd25b7c",
+        "after_analysis": "a38418e2dbb1aecf60c54f97cf76946943095a87dc2c287785aaecaf2dd25b7c",
+        "repair_audit": "9e04c70a6bb63f6fbaf58c2acb5894402b3177fe82737099d9e8153f49d9e8eb",
+        "rollback_audit": "0c7b7827029db639d4b3342a535a5e8bd5c7ae8d7f2904b49d32090c8f472ff5",
+        "comparison": "d711cf224d24932ab6e4d9df96ad0a9351f02001c9f123e89961840551539a45",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-bastet_analysis.json",
+          "sha256": "2babf781a680612f8d77bbf389723c7ea67db292481753cbf393d7e9a9b4568c",
+          "size_bytes": 20250
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-bastet_repair_audit.json",
+          "sha256": "b3b1b3bce66d17c354eb64437af158a6d73befd37a91652ceebbe2a08d366d25",
+          "size_bytes": 24164
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-bastet_rollback_audit.json",
+          "sha256": "2814ad702461223c5260871523db0c51bee3ea9abf89270aa077d79e21778f38",
+          "size_bytes": 16303
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-bastet_golden.json",
+          "sha256": "9513342b6ad391c1f98f10cf04a82dab3f4511d03426db1cc9e3e78bd987004f",
+          "size_bytes": 115684
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-bastet_comparison.json",
+          "sha256": "31dac5bc9032784c6742f07cb1187ab1bad85db0ca340ebb6295006083dd616d",
+          "size_bytes": 2303
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-bastet_timings.json",
+          "sha256": "37df82b41fa6777434bb2943586b6930a993b6510e265ca5513c03221e78efd0",
+          "size_bytes": 6455
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-bastet_benchmark_report.json",
+          "sha256": "55b6d69cb41754e210f45b398b86dbfc0f9331ade2608cb23f0cbd768a72ff89",
+          "size_bytes": 968
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-bastet.png",
+          "sha256": "8b7ea3cde6ad92b9289cd700f90abe95994ac23cd05f9ee80888987dd9b371a0",
+          "size_bytes": 96065
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-bato-kannon-shirane",
+      "title": "Batō Kannon at Shirane",
+      "source_path": "datasets/statues/raw/statue-bato-kannon-shirane.stl",
+      "source_sha256": "e3695cb8fee26543780b9ab135a933d881c598a6247fde6fb2e265a73d4d5659",
+      "metadata_sha256": "50232148687370adc08101f52adb42c3981dcc7be199be63930d3138c2137492",
+      "thumbnail_sha256": "62c762a5a7f9f0cdfd029eeabc2e54399772708316b7b0b4161f32c22da4a4cb",
+      "triangle_count": 995673,
+      "vertex_count": 497859,
+      "timing_class": "Huge",
+      "mesh_classifications": [
+        "Photogrammetry",
+        "High-detail sculpture",
+        "Architectural carving"
+      ],
+      "analysis_severity": "WARNING",
+      "after_repair_severity": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 7,
+      "total_wall_seconds": 552.095393,
+      "total_cpu_seconds": 537.921875,
+      "peak_working_set_bytes": 2000130048,
+      "schema_fingerprints": {
+        "analysis_report": "ca0e70c059a873305ddd89b1c4c9a1cc514973297749ffa09e339459bed1b940",
+        "after_analysis": "ca0e70c059a873305ddd89b1c4c9a1cc514973297749ffa09e339459bed1b940",
+        "repair_audit": "1bedaf6b12b40a75f3429c03fc95c6775c5b411265aac3162ff1fe981a046a9d",
+        "rollback_audit": "d13666d7ab46ef89014181248c0dca838f1be625ef1727a773676bba63867d95",
+        "comparison": "8d748b3baed6c5710b760a853ff34e8ecf6f5078d69e60962c94939eaf53ae93",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-bato-kannon-shirane_analysis.json",
+          "sha256": "c05d785faf37834e8ab797a48d45c5c281ae4282d4596a77a935f053b3764af1",
+          "size_bytes": 56765
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-bato-kannon-shirane_repair_audit.json",
+          "sha256": "8f56127f3359a69c4ae1d4113be90e9f31963709e96c2b06ee9f17810fc4585a",
+          "size_bytes": 30409
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-bato-kannon-shirane_rollback_audit.json",
+          "sha256": "93666d245ef27eac6f29ccfeb349ca8a2d5255303cf45b0dd11a41fba44f0b4b",
+          "size_bytes": 22356
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-bato-kannon-shirane_golden.json",
+          "sha256": "3ebf7eae966e4f770c3685a5e9bb44286d77b4e02773dd140245503c10dfc5f0",
+          "size_bytes": 224891
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-bato-kannon-shirane_comparison.json",
+          "sha256": "9957d320fd89755f6744191d29f06a22a7fded8e3d5aa0f986497ab391069f06",
+          "size_bytes": 2353
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-bato-kannon-shirane_timings.json",
+          "sha256": "13ca1b4ceb0493d089b5b523ff6fb0144becc17a96b943375ac3e0b765bc778b",
+          "size_bytes": 6512
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-bato-kannon-shirane_benchmark_report.json",
+          "sha256": "749f75224b0626f047640a05008e21b805932ae0b6cf6e68fb7253b6956d18b6",
+          "size_bytes": 1123
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-bato-kannon-shirane.png",
+          "sha256": "62c762a5a7f9f0cdfd029eeabc2e54399772708316b7b0b4161f32c22da4a4cb",
+          "size_bytes": 278013
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-belvedere-torso",
+      "title": "Belvedere Torso",
+      "source_path": "datasets/statues/raw/statue-belvedere-torso.stl",
+      "source_sha256": "fb1499ce2052f47d693365d04b5e92e7eb0eee88051646a82b01e1bd3450e254",
+      "metadata_sha256": "2733a0dc5f0ae215123b0b6239d5e8901725bcf5d896c8653551691950db5dcb",
+      "thumbnail_sha256": "ba4af964ea83b2748c9b80dcbfae3b525fd0db180eb085322a4281982aff7184",
+      "triangle_count": 97796,
+      "vertex_count": 48900,
+      "timing_class": "Small",
+      "mesh_classifications": [
+        "Museum Scan",
+        "Human"
+      ],
+      "analysis_severity": "PASS",
+      "after_repair_severity": "PASS",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 0,
+      "total_wall_seconds": 49.944533,
+      "total_cpu_seconds": 48.609375,
+      "peak_working_set_bytes": 411099136,
+      "schema_fingerprints": {
+        "analysis_report": "df5fa813fb47f2d4063ad109e71d0b7bf7efcbbb05b2c965ee8661dac8694ae0",
+        "after_analysis": "df5fa813fb47f2d4063ad109e71d0b7bf7efcbbb05b2c965ee8661dac8694ae0",
+        "repair_audit": "aae4f83028292080565c6a0ff7222fbf946bdae55b5f4289002e322afed88a6e",
+        "rollback_audit": "8d2b0607be9ceda4840da26bada4987c52e64a9160b27d691820274592659df2",
+        "comparison": "8d748b3baed6c5710b760a853ff34e8ecf6f5078d69e60962c94939eaf53ae93",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-belvedere-torso_analysis.json",
+          "sha256": "37f64740dd8bdd730f6643c9f553ea6cd9683f0e686cb624d7bbfd44f3f68004",
+          "size_bytes": 17365
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-belvedere-torso_repair_audit.json",
+          "sha256": "0dde18a46c37124d8bf022ba6a81a4b01601f038da904d61efe27bf87d526d1d",
+          "size_bytes": 23736
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-belvedere-torso_rollback_audit.json",
+          "sha256": "876f2b8ad81665247ea2a3a880f787699e82e790f5cd7e14b7c1e60517f083fb",
+          "size_bytes": 16125
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-belvedere-torso_golden.json",
+          "sha256": "9889fe4c606bfb5c39fa41ebc875b45e5cb8bf2ec8f53195634a210a918ff05e",
+          "size_bytes": 108690
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-belvedere-torso_comparison.json",
+          "sha256": "2467af82c53314d6a25ae721980956aa629299ac5d4dab5c546c52860f983092",
+          "size_bytes": 2326
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-belvedere-torso_timings.json",
+          "sha256": "1f7682f0949bad5a31b0453bb08c2d802733ada09be856d617694b35e95453c3",
+          "size_bytes": 6456
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-belvedere-torso_benchmark_report.json",
+          "sha256": "5e5c7d852361cd4b548dcf3a1eacb605c15c02cff2a0ef9f70e3dcd913237400",
+          "size_bytes": 1034
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-belvedere-torso.png",
+          "sha256": "ba4af964ea83b2748c9b80dcbfae3b525fd0db180eb085322a4281982aff7184",
+          "size_bytes": 131141
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-caracalla-bust",
+      "title": "Bust of Emperor Caracalla",
+      "source_path": "datasets/statues/raw/statue-caracalla-bust.stl",
+      "source_sha256": "a1a44d0b2ed7c64ebd4439ab4f8aaa8798ac8f8e77e449bdd01dbc58ee97b2a5",
+      "metadata_sha256": "39531089872e28098d65a7188b533e6f54d5900cedfdf4d9bdc5733ee242c0a0",
+      "thumbnail_sha256": "668cf0f7a77d88a37282046e01e7bd06428c4f46460273178734ce0dfc100d2e",
+      "triangle_count": 181169,
+      "vertex_count": 90821,
+      "timing_class": "Medium",
+      "mesh_classifications": [
+        "Bust",
+        "Human"
+      ],
+      "analysis_severity": "WARNING",
+      "after_repair_severity": "WARNING",
+      "selected_operations": [
+        "MERGE_DUPLICATE_VERTICES"
+      ],
+      "operation_record_count": 2,
+      "warning_count": 7,
+      "total_wall_seconds": 153.150218,
+      "total_cpu_seconds": 147.75,
+      "peak_working_set_bytes": 623300608,
+      "schema_fingerprints": {
+        "analysis_report": "e7eaa6a991ffaebbf4f3ecb4892a24296e029aff2206323f9eae325e7df44e27",
+        "after_analysis": "c4085356b2e7275de38c92bc07a66ebadf7c62105f314915e893d06e1d5a62c3",
+        "repair_audit": "5bbe8684ce16b41174339c3f634de332b0922d24b44ec121efb4e4f9197d278a",
+        "rollback_audit": "0c7b7827029db639d4b3342a535a5e8bd5c7ae8d7f2904b49d32090c8f472ff5",
+        "comparison": "42e4af6941d68d6c9d6180e011e78497e95cd5a750c37ddb4050b1145bdc8468",
+        "timings": "01cb8bbad88f6baf437ffabdc21a8513d67145554679a0ecf77f62416c452b33"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-caracalla-bust_analysis.json",
+          "sha256": "2836ffa2307e0455163e1d118c9fca1eb3425d29666db910a7f42dce61fdfaee",
+          "size_bytes": 27785
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-caracalla-bust_repair_audit.json",
+          "sha256": "22dfe0ae49a491e50466403e234f9415ec5fc1b2b82eab0a1bd1bc0bfb5d9922",
+          "size_bytes": 46972
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-caracalla-bust_rollback_audit.json",
+          "sha256": "95de67ae449f01ca3010bf51c3ebbce90e8ee795e192f8232c0d5b0b797289e3",
+          "size_bytes": 16368
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-caracalla-bust_golden.json",
+          "sha256": "e93485ccea46d4f75213556a26515ec1cd09122cfcc00f1b2c7970e49cab8c83",
+          "size_bytes": 171884
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-caracalla-bust_comparison.json",
+          "sha256": "5dc8ca9440d07ff127ef27b8edfc01a6318d0e8b79bef01b7d6f5ede926900eb",
+          "size_bytes": 18534
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-caracalla-bust_timings.json",
+          "sha256": "a2e44ac0d38ec8e36b491364fe3b9546109989374bfad02c0b1aa5137e1f31da",
+          "size_bytes": 7738
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-caracalla-bust_benchmark_report.json",
+          "sha256": "d44257d5afc60f80be015c1cc5635e2b40696a807810f5c5210b553625d2d0f6",
+          "size_bytes": 1059
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-caracalla-bust.png",
+          "sha256": "668cf0f7a77d88a37282046e01e7bd06428c4f46460273178734ce0dfc100d2e",
+          "size_bytes": 125821
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-castlestrange-stone",
+      "title": "Castlestrange Stone",
+      "source_path": "datasets/statues/raw/statue-castlestrange-stone.stl",
+      "source_sha256": "c49ddccd090fe0ff9657bfa653823dfd13e4112b08c0afbe35790a4cae1ee4e1",
+      "metadata_sha256": "d34761ab7fa7b7165f62cf2cce3c3acb0f6d686341487ddca8d2b92eedb5faf7",
+      "thumbnail_sha256": "4c3e85c8b4c29e3b259de0b65beac36ec0fbc754f7ffa418db996e433f2eca18",
+      "triangle_count": 67652,
+      "vertex_count": 33933,
+      "timing_class": "Small",
+      "mesh_classifications": [
+        "Architectural carving"
+      ],
+      "analysis_severity": "WARNING",
+      "after_repair_severity": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 5,
+      "total_wall_seconds": 34.800258,
+      "total_cpu_seconds": 32.953125,
+      "peak_working_set_bytes": 326066176,
+      "schema_fingerprints": {
+        "analysis_report": "a9ac9f6ab6eb302c96ea6f44e7f8c1f7d737b86654605325ee05d84495f799dc",
+        "after_analysis": "a9ac9f6ab6eb302c96ea6f44e7f8c1f7d737b86654605325ee05d84495f799dc",
+        "repair_audit": "bf9e12e1486545a8885ebcd8e5711e924e548468fc774f26ab91eacd9138f63c",
+        "rollback_audit": "bb2176c84464674f044ad2e497ee0bee25b991f299cf64a3cce2787e15a68c8c",
+        "comparison": "8d748b3baed6c5710b760a853ff34e8ecf6f5078d69e60962c94939eaf53ae93",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-castlestrange-stone_analysis.json",
+          "sha256": "fca543b3942ddf148767c9ec07cb4fb2fcd78019359d28ddf31011a733aa9ea7",
+          "size_bytes": 23436
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-castlestrange-stone_repair_audit.json",
+          "sha256": "362481f05f184caa53acdb423a49eebb92a3ae64188138f4adb3e93f794a6edf",
+          "size_bytes": 24262
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-castlestrange-stone_rollback_audit.json",
+          "sha256": "aa8e3ea31e8b9e00800a32e2123b770c8ad6489ce1707272fd3de43ec7913ec7",
+          "size_bytes": 16398
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-castlestrange-stone_golden.json",
+          "sha256": "878c537cf50536ee626b3668e863426aa0fb0f23221d3bace8dec0bf4237ceba",
+          "size_bytes": 123157
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-castlestrange-stone_comparison.json",
+          "sha256": "1b0de30369c0b9f5d180aef97d402cf878b21d77f07a38b891b648c03d9ce4f1",
+          "size_bytes": 2344
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-castlestrange-stone_timings.json",
+          "sha256": "e582d853ecae1766d363289d75e42e9af64aeb707952a6d3661f0cacf8426ce3",
+          "size_bytes": 6468
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-castlestrange-stone_benchmark_report.json",
+          "sha256": "dbebe8764792354a82c9cfce47ca7f24bb7646a2856b4225146789bb9b4a7974",
+          "size_bytes": 1069
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-castlestrange-stone.png",
+          "sha256": "4c3e85c8b4c29e3b259de0b65beac36ec0fbc754f7ffa418db996e433f2eca18",
+          "size_bytes": 185488
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-cosmic-buddha-smithsonian-150k",
+      "title": "Cosmic Buddha, 150k laser scan",
+      "source_path": "datasets/statues/raw/statue-cosmic-buddha-smithsonian-150k.stl",
+      "source_sha256": "de75f3aa58ed3da3e27884cd96671ef172c98ce26f1b78510c4f3dda88e91e72",
+      "metadata_sha256": "67bf080a2f1ad6a22475388ad2b6c90874a0fb5e46794782e556a88d1a3a1695",
+      "thumbnail_sha256": "b60c081b97a7c6cb1d89635c32db6c767401db008d58308a44a40c0c4a85339a",
+      "triangle_count": 150000,
+      "vertex_count": 75002,
+      "timing_class": "Medium",
+      "mesh_classifications": [
+        "Museum Scan",
+        "Photogrammetry",
+        "Full statue",
+        "Human"
+      ],
+      "analysis_severity": "PASS",
+      "after_repair_severity": "PASS",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 0,
+      "total_wall_seconds": 76.144892,
+      "total_cpu_seconds": 73.796875,
+      "peak_working_set_bytes": 527568896,
+      "schema_fingerprints": {
+        "analysis_report": "df5fa813fb47f2d4063ad109e71d0b7bf7efcbbb05b2c965ee8661dac8694ae0",
+        "after_analysis": "df5fa813fb47f2d4063ad109e71d0b7bf7efcbbb05b2c965ee8661dac8694ae0",
+        "repair_audit": "aae4f83028292080565c6a0ff7222fbf946bdae55b5f4289002e322afed88a6e",
+        "rollback_audit": "8d2b0607be9ceda4840da26bada4987c52e64a9160b27d691820274592659df2",
+        "comparison": "8d748b3baed6c5710b760a853ff34e8ecf6f5078d69e60962c94939eaf53ae93",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-cosmic-buddha-smithsonian-150k_analysis.json",
+          "sha256": "55cf956c9fdb99889c3cec6d0abd99678ad5bb3c0a1c75a948e7c2961291c11d",
+          "size_bytes": 17481
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-cosmic-buddha-smithsonian-150k_repair_audit.json",
+          "sha256": "437d9467910e86d47f83eece89e8e0ce037611b0269f1aa4613b30c8f977b15c",
+          "size_bytes": 23872
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-cosmic-buddha-smithsonian-150k_rollback_audit.json",
+          "sha256": "da8afd45ec4592085ef3199dd21b746e7bcce31773130f6771d38ada3c37e98c",
+          "size_bytes": 16238
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-cosmic-buddha-smithsonian-150k_golden.json",
+          "sha256": "88002a248d377b16a16adc889dadffe896f58c76288ed67ce2f6f6e69e817a17",
+          "size_bytes": 109794
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-cosmic-buddha-smithsonian-150k_comparison.json",
+          "sha256": "b10c03150f196fcb3c05bafa685931cbffcfb9301a57c4ce14a63ae0c4252a8a",
+          "size_bytes": 2369
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-cosmic-buddha-smithsonian-150k_timings.json",
+          "sha256": "b2719cd8589db10506b149230655fac0f856d8e17d0593ab350be120bc0fbe15",
+          "size_bytes": 6478
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-cosmic-buddha-smithsonian-150k_benchmark_report.json",
+          "sha256": "16958ad850d87f6e788b8c49e5e8ccf51bc74badbdecd476818083565abdac78",
+          "size_bytes": 1197
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-cosmic-buddha-smithsonian-150k.png",
+          "sha256": "b60c081b97a7c6cb1d89635c32db6c767401db008d58308a44a40c0c4a85339a",
+          "size_bytes": 185557
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-dainichi-nyorai-tower",
+      "title": "Dainichi Nyorai Tower at Jūni Shrine",
+      "source_path": "datasets/statues/raw/statue-dainichi-nyorai-tower.stl",
+      "source_sha256": "4df74fc23c926db090022b1f4104102322c94b95713d25a7f6a835ed79d5d9d8",
+      "metadata_sha256": "91ff7b353214c6d7b528d2b1c3376a710cca574c8b24de594a92254e5e5c074c",
+      "thumbnail_sha256": "3fe155a618e65430d6d015d27cf79f859cd9ba67b7389cdf31d0db6ff7648aeb",
+      "triangle_count": 1249711,
+      "vertex_count": 624826,
+      "timing_class": "Extreme",
+      "mesh_classifications": [
+        "Photogrammetry",
+        "High-detail sculpture",
+        "Architectural carving",
+        "Animal"
+      ],
+      "analysis_severity": "WARNING",
+      "after_repair_severity": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 6,
+      "total_wall_seconds": 601.49954,
+      "total_cpu_seconds": 583.984375,
+      "peak_working_set_bytes": 2836389888,
+      "schema_fingerprints": {
+        "analysis_report": "9cb296114158843d65835aea56174132e0c7ab1ca562a437a456f6291f73e75b",
+        "after_analysis": "9cb296114158843d65835aea56174132e0c7ab1ca562a437a456f6291f73e75b",
+        "repair_audit": "9e04c70a6bb63f6fbaf58c2acb5894402b3177fe82737099d9e8153f49d9e8eb",
+        "rollback_audit": "0c7b7827029db639d4b3342a535a5e8bd5c7ae8d7f2904b49d32090c8f472ff5",
+        "comparison": "d711cf224d24932ab6e4d9df96ad0a9351f02001c9f123e89961840551539a45",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-dainichi-nyorai-tower_analysis.json",
+          "sha256": "d4e64760cc19ad7c1de10400ee584e9feb89a37898ac9fb1c79dbf78af8c2fa8",
+          "size_bytes": 19995
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-dainichi-nyorai-tower_repair_audit.json",
+          "sha256": "6e48a66bf3056146ccdf02c710f983836d2caad59b144038dea8460f996cc59d",
+          "size_bytes": 24441
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-dainichi-nyorai-tower_rollback_audit.json",
+          "sha256": "67ae3da37acd3b05ab3c570ac508bcf2c188b73e8ba2297548e64db5a0a1f18c",
+          "size_bytes": 16511
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-dainichi-nyorai-tower_golden.json",
+          "sha256": "4ed6f3534de86858288ecf2c7cad8020f3e05267ed64c1a67c9d6d5fdec9c685",
+          "size_bytes": 116601
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-dainichi-nyorai-tower_comparison.json",
+          "sha256": "4805d96bc91fb60c83df99aca7d82cfd03039ffa8c2a38fb8ae2f1dfd07d8e95",
+          "size_bytes": 2328
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-dainichi-nyorai-tower_timings.json",
+          "sha256": "ecbfe9110c444b6906cff72a038e05fdb6eb5f15f77fd5302efc00875cce0251",
+          "size_bytes": 6554
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-dainichi-nyorai-tower_benchmark_report.json",
+          "sha256": "1ee18d623e5c6db4bc4eabc40bacf5df9d66a18d21e5f2d7642b7c806437c5a3",
+          "size_bytes": 1156
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-dainichi-nyorai-tower.png",
+          "sha256": "3fe155a618e65430d6d015d27cf79f859cd9ba67b7389cdf31d0db6ff7648aeb",
+          "size_bytes": 335511
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-danaid-rodin",
+      "title": "Danaid",
+      "source_path": "datasets/statues/raw/statue-danaid-rodin.stl",
+      "source_sha256": "e369027a93ac6ad5b5765999f6c74fcc2fef1f9beceef244d02b9158d012c8e8",
+      "metadata_sha256": "62eb17080da06d60058a53a5bced40c5dd3d7ed93c7c73ff40550e1fd7fd3092",
+      "thumbnail_sha256": "b48a8b1b1e095d6c1b61069c2c1579091ba5f1cf1abe760cf1de8836dc9d20d8",
+      "triangle_count": 110538,
+      "vertex_count": 55271,
+      "timing_class": "Medium",
+      "mesh_classifications": [
+        "Museum Scan",
+        "Full statue",
+        "Human"
+      ],
+      "analysis_severity": "PASS",
+      "after_repair_severity": "PASS",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 0,
+      "total_wall_seconds": 57.30907,
+      "total_cpu_seconds": 55.78125,
+      "peak_working_set_bytes": 430292992,
+      "schema_fingerprints": {
+        "analysis_report": "df5fa813fb47f2d4063ad109e71d0b7bf7efcbbb05b2c965ee8661dac8694ae0",
+        "after_analysis": "df5fa813fb47f2d4063ad109e71d0b7bf7efcbbb05b2c965ee8661dac8694ae0",
+        "repair_audit": "aae4f83028292080565c6a0ff7222fbf946bdae55b5f4289002e322afed88a6e",
+        "rollback_audit": "8d2b0607be9ceda4840da26bada4987c52e64a9160b27d691820274592659df2",
+        "comparison": "8d748b3baed6c5710b760a853ff34e8ecf6f5078d69e60962c94939eaf53ae93",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-danaid-rodin_analysis.json",
+          "sha256": "0bc348bedb51e8b6876a59e9542bc03f872e5e057adaf7490847a8cc6adc5cc7",
+          "size_bytes": 17411
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-danaid-rodin_repair_audit.json",
+          "sha256": "20bfdf195c75f229b99d266914c5305634ca2a528e49b215d8ac510b364e0795",
+          "size_bytes": 23771
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-danaid-rodin_rollback_audit.json",
+          "sha256": "154106df1615084dcea0500da00775f40f691e2ac523861861a0776a7d0ab830",
+          "size_bytes": 16132
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-danaid-rodin_golden.json",
+          "sha256": "77e026af6febc67cfeff3a7d143bfaa182bcfd05bd0a372bb57a7717d5323ddd",
+          "size_bytes": 109435
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-danaid-rodin_comparison.json",
+          "sha256": "cbb7b9f806334d9ca43b596f0da05be0a839a3e87f5af4ad995f06be70f3ea24",
+          "size_bytes": 2349
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-danaid-rodin_timings.json",
+          "sha256": "611bf2bc7d08465d78c665a8ebe0b562c368c8af6bde8ca8f896e130a90f7c07",
+          "size_bytes": 6452
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-danaid-rodin_benchmark_report.json",
+          "sha256": "e4a7ea50e1894162b3b4776a208bf44048ef92de074d4cc64f45a7f08731cbde",
+          "size_bytes": 1029
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-danaid-rodin.png",
+          "sha256": "b48a8b1b1e095d6c1b61069c2c1579091ba5f1cf1abe760cf1de8836dc9d20d8",
+          "size_bytes": 57271
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-david-michelangelo",
+      "title": "David",
+      "source_path": "datasets/statues/raw/statue-david-michelangelo.stl",
+      "source_sha256": "b41ad68e2b7a7377251f11201b6f9ba9569fa16422bec3719223f205d001c6f9",
+      "metadata_sha256": "f529be3ff979ff958eaf9a377d48f24b33353eb2b18b1fd4198df1ee515e03f0",
+      "thumbnail_sha256": "ef42212608e8f9a34893331841c14de453cf85d49ed5a1274d3dac68cbc4e05f",
+      "triangle_count": 1199948,
+      "vertex_count": 599842,
+      "timing_class": "Extreme",
+      "mesh_classifications": [
+        "Museum Scan",
+        "Photogrammetry",
+        "High-detail sculpture",
+        "Full statue",
+        "Human"
+      ],
+      "analysis_severity": "WARNING",
+      "after_repair_severity": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 3,
+      "total_wall_seconds": 618.216727,
+      "total_cpu_seconds": 599.65625,
+      "peak_working_set_bytes": 2723590144,
+      "schema_fingerprints": {
+        "analysis_report": "9cb296114158843d65835aea56174132e0c7ab1ca562a437a456f6291f73e75b",
+        "after_analysis": "9cb296114158843d65835aea56174132e0c7ab1ca562a437a456f6291f73e75b",
+        "repair_audit": "9e04c70a6bb63f6fbaf58c2acb5894402b3177fe82737099d9e8153f49d9e8eb",
+        "rollback_audit": "0c7b7827029db639d4b3342a535a5e8bd5c7ae8d7f2904b49d32090c8f472ff5",
+        "comparison": "d711cf224d24932ab6e4d9df96ad0a9351f02001c9f123e89961840551539a45",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-david-michelangelo_analysis.json",
+          "sha256": "c25e0965962766f20fe4870b8dd47d4f046108a62daad594f2601f1b36e2a32a",
+          "size_bytes": 19016
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-david-michelangelo_repair_audit.json",
+          "sha256": "85f25838566fcc120fb9d08f7a037743ab753a733b7390a4b447cf45419cca97",
+          "size_bytes": 24124
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-david-michelangelo_rollback_audit.json",
+          "sha256": "4f0a9dc968f27fe64b23a331f34935d15e47d8bbb14cc85599a1674c0aa64f7f",
+          "size_bytes": 16327
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-david-michelangelo_golden.json",
+          "sha256": "f348da2da4842c1253a31090f53c7cdb381c4f787688b4bbc3b84623665e7adc",
+          "size_bytes": 113162
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-david-michelangelo_comparison.json",
+          "sha256": "c2582d7946572dbe69fb57bf9c15a146767e365c57692b932023fa91516904a7",
+          "size_bytes": 2318
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-david-michelangelo_timings.json",
+          "sha256": "ad643a72c526ac380522f1391ba7d742ce648b0ac65781deb8b9ded5bd759809",
+          "size_bytes": 6532
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-david-michelangelo_benchmark_report.json",
+          "sha256": "6af4e153f45df844fea477e077d8d50cdf3c6f3677e8d9b9d2de1b1e69132019",
+          "size_bytes": 1140
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-david-michelangelo.png",
+          "sha256": "ef42212608e8f9a34893331841c14de453cf85d49ed5a1274d3dac68cbc4e05f",
+          "size_bytes": 125013
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-ganesha-java-10c",
+      "title": "Ganesha, 10th–11th century CE",
+      "source_path": "datasets/statues/raw/statue-ganesha-java-10c.stl",
+      "source_sha256": "5758dab5acda32bd928b0920c4fdb79ffc6c2211a141760a7ea6f15c261412b4",
+      "metadata_sha256": "4bed4e20f3648d2d81b394ba721bcec8f8c6d7769844f5ee104c1ad7072e8534",
+      "thumbnail_sha256": "71c9e48f93cbaaa92922e9dd799cfbbbe69102f4b226e292b2bf320c9e3bb1cc",
+      "triangle_count": 63950,
+      "vertex_count": 31771,
+      "timing_class": "Small",
+      "mesh_classifications": [
+        "Museum Scan",
+        "Full statue",
+        "Human"
+      ],
+      "analysis_severity": "PASS",
+      "after_repair_severity": "PASS",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 0,
+      "total_wall_seconds": 32.572592,
+      "total_cpu_seconds": 31.203125,
+      "peak_working_set_bytes": 317214720,
+      "schema_fingerprints": {
+        "analysis_report": "df5fa813fb47f2d4063ad109e71d0b7bf7efcbbb05b2c965ee8661dac8694ae0",
+        "after_analysis": "df5fa813fb47f2d4063ad109e71d0b7bf7efcbbb05b2c965ee8661dac8694ae0",
+        "repair_audit": "aae4f83028292080565c6a0ff7222fbf946bdae55b5f4289002e322afed88a6e",
+        "rollback_audit": "8d2b0607be9ceda4840da26bada4987c52e64a9160b27d691820274592659df2",
+        "comparison": "8d748b3baed6c5710b760a853ff34e8ecf6f5078d69e60962c94939eaf53ae93",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-ganesha-java-10c_analysis.json",
+          "sha256": "01835bee6e3bc123f6a65276dc67fee7eddb14c4d807185cd27ad08e2883be52",
+          "size_bytes": 17400
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-ganesha-java-10c_repair_audit.json",
+          "sha256": "2494f9fa55bd7c2fce0d29f80e15462adb34b78951a5609df8767f322458d6bd",
+          "size_bytes": 23768
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-ganesha-java-10c_rollback_audit.json",
+          "sha256": "f30c5b3fdaa7cb22f5278eb92d1ec520704a8a0386a39c410d9a2c85e55de7bd",
+          "size_bytes": 16140
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-ganesha-java-10c_golden.json",
+          "sha256": "3a550a8aa25743b8874773643b9513b749cf9fe24e32ec3ab5d01ea7c697076e",
+          "size_bytes": 109692
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-ganesha-java-10c_comparison.json",
+          "sha256": "d9e9509444a38c7bfd8f3dd7958c57defdd13841744224e6b3bfb977add12e56",
+          "size_bytes": 2339
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-ganesha-java-10c_timings.json",
+          "sha256": "4e4e97bb4fec4561f1873d9506251b8aadb07e81093c2e721ffff1b396479c5b",
+          "size_bytes": 6463
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-ganesha-java-10c_benchmark_report.json",
+          "sha256": "111278479528ebc109ab4bba0a96f28111079defa40b80a4052c241e8f7f113f",
+          "size_bytes": 1061
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-ganesha-java-10c.png",
+          "sha256": "71c9e48f93cbaaa92922e9dd799cfbbbe69102f4b226e292b2bf320c9e3bb1cc",
+          "size_bytes": 158683
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-greek-slave-smithsonian-150k",
+      "title": "The Greek Slave, 150k plaster cast",
+      "source_path": "datasets/statues/raw/statue-greek-slave-smithsonian-150k.stl",
+      "source_sha256": "6057e7ac013894f5cff80f6faf4290c8356e6de0b1d6f227f0c38f3e74989f90",
+      "metadata_sha256": "931ab6a1bd7ad5d9da65a7b5dbab6c6d8e145f9c0957a7f49708f7f32ea3d6bc",
+      "thumbnail_sha256": "f65d71b6e676dc3751d7c9ebbfed77458eef112b5d0361c52fb6889fd5147169",
+      "triangle_count": 149965,
+      "vertex_count": 74939,
+      "timing_class": "Medium",
+      "mesh_classifications": [
+        "Museum Scan",
+        "Full statue",
+        "Human"
+      ],
+      "analysis_severity": "WARNING",
+      "after_repair_severity": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 6,
+      "total_wall_seconds": 75.170498,
+      "total_cpu_seconds": 72.109375,
+      "peak_working_set_bytes": 529358848,
+      "schema_fingerprints": {
+        "analysis_report": "e7eaa6a991ffaebbf4f3ecb4892a24296e029aff2206323f9eae325e7df44e27",
+        "after_analysis": "e7eaa6a991ffaebbf4f3ecb4892a24296e029aff2206323f9eae325e7df44e27",
+        "repair_audit": "9e04c70a6bb63f6fbaf58c2acb5894402b3177fe82737099d9e8153f49d9e8eb",
+        "rollback_audit": "0c7b7827029db639d4b3342a535a5e8bd5c7ae8d7f2904b49d32090c8f472ff5",
+        "comparison": "d711cf224d24932ab6e4d9df96ad0a9351f02001c9f123e89961840551539a45",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-greek-slave-smithsonian-150k_analysis.json",
+          "sha256": "1be05685ae6a20bbd70f5fd9753351b26052c3f1d4a26a4750c3fe709c3d6ce2",
+          "size_bytes": 58492
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-greek-slave-smithsonian-150k_repair_audit.json",
+          "sha256": "b96c31ba35d7a84e14c16810330b0528f060741d86bfddc26033829e8f1a0dff",
+          "size_bytes": 24411
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-greek-slave-smithsonian-150k_rollback_audit.json",
+          "sha256": "35b17ee367dfedbc55aaf9a6e2b804833776c6149586f1605ec6311118a0bcf8",
+          "size_bytes": 16519
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-greek-slave-smithsonian-150k_golden.json",
+          "sha256": "133187aa7564d1d8727809b4ccb802e01359ca9101d92770e2d78dcd8ffb3c5a",
+          "size_bytes": 200144
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-greek-slave-smithsonian-150k_comparison.json",
+          "sha256": "7be7c2f12164bff207fd7b819d8806d5cd40b37619fcbf7fddebcabd30115be8",
+          "size_bytes": 2334
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-greek-slave-smithsonian-150k_timings.json",
+          "sha256": "a3293e661fe55d8ad6ea1e44a45208b074e717458e8f0bb3330bd06b8fb53b73",
+          "size_bytes": 6484
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-greek-slave-smithsonian-150k_benchmark_report.json",
+          "sha256": "f5f1481976b08e04f94cf40bc438966c895ee305ec5b0f1612acde558a4d7011",
+          "size_bytes": 1165
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-greek-slave-smithsonian-150k.png",
+          "sha256": "f65d71b6e676dc3751d7c9ebbfed77458eef112b5d0361c52fb6889fd5147169",
+          "size_bytes": 121381
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-hercules-archer-mia",
+      "title": "Hercules as Archer",
+      "source_path": "datasets/statues/raw/statue-hercules-archer-mia.stl",
+      "source_sha256": "30d178b8e2e8c769883409a1c85e28a429ce022385fa0a918e16eda41b223017",
+      "metadata_sha256": "a7e7d1eecfe88e5019f7546cb94806c96052f6b6f8e49e04e3a6ed61f7550ca7",
+      "thumbnail_sha256": "00adefa4874f9be94462aef82b1ea61bc6d3656e379a13884d8ee54ff68336eb",
+      "triangle_count": 99983,
+      "vertex_count": 49882,
+      "timing_class": "Small",
+      "mesh_classifications": [
+        "Museum Scan",
+        "Full statue",
+        "Human"
+      ],
+      "analysis_severity": "WARNING",
+      "after_repair_severity": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 5,
+      "total_wall_seconds": 50.829024,
+      "total_cpu_seconds": 49.6875,
+      "peak_working_set_bytes": 410914816,
+      "schema_fingerprints": {
+        "analysis_report": "ca0e70c059a873305ddd89b1c4c9a1cc514973297749ffa09e339459bed1b940",
+        "after_analysis": "ca0e70c059a873305ddd89b1c4c9a1cc514973297749ffa09e339459bed1b940",
+        "repair_audit": "1bedaf6b12b40a75f3429c03fc95c6775c5b411265aac3162ff1fe981a046a9d",
+        "rollback_audit": "d13666d7ab46ef89014181248c0dca838f1be625ef1727a773676bba63867d95",
+        "comparison": "8d748b3baed6c5710b760a853ff34e8ecf6f5078d69e60962c94939eaf53ae93",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-hercules-archer-mia_analysis.json",
+          "sha256": "47193d2177c8de26cd60d0ff504474d4179ec55a73def5c660907c93c3f32f0a",
+          "size_bytes": 150046
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-hercules-archer-mia_repair_audit.json",
+          "sha256": "5d311b6ba199fec2833ce9870dda5a1568ad9795fa8b9d8c44d91a02dcd3281b",
+          "size_bytes": 90777
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-hercules-archer-mia_rollback_audit.json",
+          "sha256": "dbfda27214a6b3c0c15116310f8aa61d1078ca15d518d6cf5ba2f147d742cba9",
+          "size_bytes": 82257
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-hercules-archer-mia_golden.json",
+          "sha256": "f6351da417c2a499601cafc7117b758bbaf7be37aa8fe593e95e6f8d775a2776",
+          "size_bytes": 732879
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-hercules-archer-mia_comparison.json",
+          "sha256": "5816aaee43ee7e77a8ece9fc8a40e2c447e8ea6ce985cc74c75d3b26997d2381",
+          "size_bytes": 2328
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-hercules-archer-mia_timings.json",
+          "sha256": "b153d457c36d19c93cf924f357ce5b01d490331b1ae771bda3bc2e6a69b700a7",
+          "size_bytes": 6463
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-hercules-archer-mia_benchmark_report.json",
+          "sha256": "e8087051cd82f9d068981823dcbb6c4bc815401e95382956239cfd7e71fcf51c",
+          "size_bytes": 1089
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-hercules-archer-mia.png",
+          "sha256": "00adefa4874f9be94462aef82b1ea61bc6d3656e379a13884d8ee54ff68336eb",
+          "size_bytes": 113367
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-heroic-head-pierre-de-wissant",
+      "title": "Heroic Head of Pierre de Wissant",
+      "source_path": "datasets/statues/raw/statue-heroic-head-pierre-de-wissant.stl",
+      "source_sha256": "e3fdcd7ff67f0400bb0517619998a0272e1b100858e1e4f8ad9ea88c622a571c",
+      "metadata_sha256": "7c9f533a667e5693e0e0c9667f4109579ed58a28ac531cc3710a04599e0702a6",
+      "thumbnail_sha256": "3a5f3818fd954f1be995cb9647aa5016e52d39d2f1d56ffb9764c193e6519b10",
+      "triangle_count": 623366,
+      "vertex_count": 311687,
+      "timing_class": "Huge",
+      "mesh_classifications": [
+        "High-detail sculpture",
+        "Bust",
+        "Human"
+      ],
+      "analysis_severity": "WARNING",
+      "after_repair_severity": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 2,
+      "total_wall_seconds": 329.10334,
+      "total_cpu_seconds": 319.375,
+      "peak_working_set_bytes": 1535692800,
+      "schema_fingerprints": {
+        "analysis_report": "c6d4a9bfa3b5fae4d9c8dd4b7bce8b7e30d5c4d918f126c2c7cf5191c05f47e9",
+        "after_analysis": "c6d4a9bfa3b5fae4d9c8dd4b7bce8b7e30d5c4d918f126c2c7cf5191c05f47e9",
+        "repair_audit": "87eaba12c9b6c81efeecc5323a2b9c1d232caa36e3401f1cf16466fd7189e1c7",
+        "rollback_audit": "d63723831e37b9da0f9e9e60de4093ff01202f58615a59b05df6cdd2ce93c946",
+        "comparison": "8d748b3baed6c5710b760a853ff34e8ecf6f5078d69e60962c94939eaf53ae93",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-heroic-head-pierre-de-wissant_analysis.json",
+          "sha256": "6cc69f2e3bdf9611201791745cf126971d056bf26a91ea337ff761099b3a7820",
+          "size_bytes": 19973
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-heroic-head-pierre-de-wissant_repair_audit.json",
+          "sha256": "a03966092ed8ff432a325c19c8c8ad352b168f09bb16a10fb29a021f0d2f8ba4",
+          "size_bytes": 24149
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-heroic-head-pierre-de-wissant_rollback_audit.json",
+          "sha256": "a758e7a66e97d34d2187319a2842208fdfd127b712e653e4bb95f24c974880c9",
+          "size_bytes": 16372
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-heroic-head-pierre-de-wissant_golden.json",
+          "sha256": "ae2cca406a4e461ce3665aab44564124296caab50f319631fd220fb3cc3a8194",
+          "size_bytes": 115080
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-heroic-head-pierre-de-wissant_comparison.json",
+          "sha256": "8ff3f6484c4f094cc49a9972eaf8443cfaa35e011456e55ef744e4d74e01b0f8",
+          "size_bytes": 2374
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-heroic-head-pierre-de-wissant_timings.json",
+          "sha256": "1ba6c0f52da46b3f32dcd0dbc25840f7264b1f6b8805cda960722394d5f54f64",
+          "size_bytes": 6512
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-heroic-head-pierre-de-wissant_benchmark_report.json",
+          "sha256": "c2f3fafc7fec664e94bc44248b1d50bf3f602574e61a652461fcdb4bfdc3db75",
+          "size_bytes": 1173
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-heroic-head-pierre-de-wissant.png",
+          "sha256": "3a5f3818fd954f1be995cb9647aa5016e52d39d2f1d56ffb9764c193e6519b10",
+          "size_bytes": 175922
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-hizen-komainu",
+      "title": "Hizen Komainu at Hachiryū Shrine",
+      "source_path": "datasets/statues/raw/statue-hizen-komainu.stl",
+      "source_sha256": "127e2da11069dbdc17166588cffae0e4f8eaca3128fbe6c8d78c8eb4808bcec8",
+      "metadata_sha256": "ea6b5465d8ffb7c86ef5eb031fe55e6d47009940d355bf31e0ac6db6cbcfc81f",
+      "thumbnail_sha256": "e395689f654d1df071db91fbd3807ab51e49718c43ddb7fce1bcde4106c79f6f",
+      "triangle_count": 1998496,
+      "vertex_count": 1000884,
+      "timing_class": "Extreme",
+      "mesh_classifications": [
+        "Photogrammetry",
+        "High-detail sculpture",
+        "Guardian",
+        "Animal"
+      ],
+      "analysis_severity": "WARNING",
+      "after_repair_severity": "WARNING",
+      "selected_operations": [
+        "MERGE_DUPLICATE_VERTICES"
+      ],
+      "operation_record_count": 2,
+      "warning_count": 8,
+      "total_wall_seconds": 1589.033629,
+      "total_cpu_seconds": 1545.90625,
+      "peak_working_set_bytes": 3767922688,
+      "schema_fingerprints": {
+        "analysis_report": "9cb296114158843d65835aea56174132e0c7ab1ca562a437a456f6291f73e75b",
+        "after_analysis": "9cb296114158843d65835aea56174132e0c7ab1ca562a437a456f6291f73e75b",
+        "repair_audit": "ee079047f3867911d2c4b2851bcdabf6ec2e4ba1080cbd95cdb430f53a6a4633",
+        "rollback_audit": "10f2a534a82ba6b851cb0ad340bea67f49ce36535d61f79ee60049b324262e8a",
+        "comparison": "5ca36f605b8ef212a341ee66cfc42c1273a83a7f21f3b4e4eed89b0e56136133",
+        "timings": "01cb8bbad88f6baf437ffabdc21a8513d67145554679a0ecf77f62416c452b33"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-hizen-komainu_analysis.json",
+          "sha256": "5a1f233c90a76608a675c463b67fb84530115446a41f1d60be330fc0f4e2bc51",
+          "size_bytes": 72309
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-hizen-komainu_repair_audit.json",
+          "sha256": "5d6b75e997ed5c9af27e7c65d3af2def8a315b21b2a9914351de59707df24e75",
+          "size_bytes": 51899
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-hizen-komainu_rollback_audit.json",
+          "sha256": "d10c862547625d5481127f695d0d148c9ca05642528f4ae10df1a345a69493b3",
+          "size_bytes": 20821
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-hizen-komainu_golden.json",
+          "sha256": "5efa722825468238ebafb48be9b50ba5679b35aa4a06a6aaeaff54d07b9666ab",
+          "size_bytes": 299180
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-hizen-komainu_comparison.json",
+          "sha256": "d58ba71e42e748d93ba03ec7a10d995a1f6b121984911bdad5dcab05df777356",
+          "size_bytes": 18845
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-hizen-komainu_timings.json",
+          "sha256": "0b7d5ac890b9834d5a25695af8501c6ff21eb0ba6c1dcb4eb7533abcbdb28943",
+          "size_bytes": 7840
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-hizen-komainu_benchmark_report.json",
+          "sha256": "43a586652e9e1dec6f1b1996e3c9c738e6d6ec27cb2a7f162bd1015aac1ce5ff",
+          "size_bytes": 1115
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-hizen-komainu.png",
+          "sha256": "e395689f654d1df071db91fbd3807ab51e49718c43ddb7fce1bcde4106c79f6f",
+          "size_bytes": 215024
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-hotei-water-basin",
+      "title": "Ana-Hachimangu Hotei water basin",
+      "source_path": "datasets/statues/raw/statue-hotei-water-basin.stl",
+      "source_sha256": "202b94e4eb8bb5d4c00cd1204aae620016dd1b2af114a89e6ab7295b5cc873da",
+      "metadata_sha256": "264d0c30ccfffc74044abf318c83602335b6a3ed6692e9cfc9f5c9b75f7fba9e",
+      "thumbnail_sha256": "aaf0373b5833e86d89e7146fc7db0aa288dd8cbe0f82989105e4ae246551ac30",
+      "triangle_count": 280209,
+      "vertex_count": 140330,
+      "timing_class": "Large",
+      "mesh_classifications": [
+        "Architectural carving"
+      ],
+      "analysis_severity": "WARNING",
+      "after_repair_severity": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 4,
+      "total_wall_seconds": 142.712234,
+      "total_cpu_seconds": 138.328125,
+      "peak_working_set_bytes": 814772224,
+      "schema_fingerprints": {
+        "analysis_report": "c4085356b2e7275de38c92bc07a66ebadf7c62105f314915e893d06e1d5a62c3",
+        "after_analysis": "c4085356b2e7275de38c92bc07a66ebadf7c62105f314915e893d06e1d5a62c3",
+        "repair_audit": "9e04c70a6bb63f6fbaf58c2acb5894402b3177fe82737099d9e8153f49d9e8eb",
+        "rollback_audit": "0c7b7827029db639d4b3342a535a5e8bd5c7ae8d7f2904b49d32090c8f472ff5",
+        "comparison": "d711cf224d24932ab6e4d9df96ad0a9351f02001c9f123e89961840551539a45",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-hotei-water-basin_analysis.json",
+          "sha256": "05730f8563147e4aa536ffc4f49416aad21845fcb18b617b64ebecea235f9077",
+          "size_bytes": 24754
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-hotei-water-basin_repair_audit.json",
+          "sha256": "b9aab93d241363b806bfc97e50cda10f9f981b8ae23a7afc7f927778314ec7ef",
+          "size_bytes": 24146
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-hotei-water-basin_rollback_audit.json",
+          "sha256": "abae099616657cd9a52bedd79d7d9644e15cecb8e21fe4ca91a68b67364ffb9f",
+          "size_bytes": 16336
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-hotei-water-basin_golden.json",
+          "sha256": "f94f98316b1ab942a393aae7b56e7d3dd5dcb1bb0b009a5747c2bd69072179c0",
+          "size_bytes": 126191
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-hotei-water-basin_comparison.json",
+          "sha256": "948943ffd415023758a54ab3b2fcb14265c1a17c89879b1361863929f208ba85",
+          "size_bytes": 2325
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-hotei-water-basin_timings.json",
+          "sha256": "ec0334609a876548f68b70a1dc6c9cc7cbfb02ad79ec392f230582a8b52bfb5e",
+          "size_bytes": 6478
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-hotei-water-basin_benchmark_report.json",
+          "sha256": "b38fb07eae02289c76965d734f91aa980df5c7973eceae3cfa6c9561bd9263f4",
+          "size_bytes": 1056
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-hotei-water-basin.png",
+          "sha256": "aaf0373b5833e86d89e7146fc7db0aa288dd8cbe0f82989105e4ae246551ac30",
+          "size_bytes": 168117
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-icarus-ioannidou",
+      "title": "Icarus",
+      "source_path": "datasets/statues/raw/statue-icarus-ioannidou.stl",
+      "source_sha256": "00372f3bcd77cdcd7084b72bb16c8463f27c51e6a4b67dcbb43813023f94308e",
+      "metadata_sha256": "a74af930a7bdea50782fe3f4649d1fd48954f454078d2b7d037d83c5179dc6a4",
+      "thumbnail_sha256": "1a84713d6cf1d0901bd10fc9105eeb83fb05cde654cdd7854497682617e9035c",
+      "triangle_count": 146505,
+      "vertex_count": 73556,
+      "timing_class": "Medium",
+      "mesh_classifications": [
+        "Photogrammetry",
+        "Full statue",
+        "Human"
+      ],
+      "analysis_severity": "WARNING",
+      "after_repair_severity": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 4,
+      "total_wall_seconds": 77.069503,
+      "total_cpu_seconds": 74.234375,
+      "peak_working_set_bytes": 521969664,
+      "schema_fingerprints": {
+        "analysis_report": "c4085356b2e7275de38c92bc07a66ebadf7c62105f314915e893d06e1d5a62c3",
+        "after_analysis": "c4085356b2e7275de38c92bc07a66ebadf7c62105f314915e893d06e1d5a62c3",
+        "repair_audit": "9e04c70a6bb63f6fbaf58c2acb5894402b3177fe82737099d9e8153f49d9e8eb",
+        "rollback_audit": "0c7b7827029db639d4b3342a535a5e8bd5c7ae8d7f2904b49d32090c8f472ff5",
+        "comparison": "d711cf224d24932ab6e4d9df96ad0a9351f02001c9f123e89961840551539a45",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-icarus-ioannidou_analysis.json",
+          "sha256": "f063e901e0bdfb1d18e3f9f9ed33f2c244147811e19b2bd9f7d3ecb81b16a825",
+          "size_bytes": 65223
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-icarus-ioannidou_repair_audit.json",
+          "sha256": "0829945ca2640234b6c398eb6ca5a391466e8fd6a2a185ac3f1e09b40c24f6c7",
+          "size_bytes": 24147
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-icarus-ioannidou_rollback_audit.json",
+          "sha256": "13568c7515852aae5e7b9172213ebb543f4196e7040d8bde5c4c45150c814488",
+          "size_bytes": 16337
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-icarus-ioannidou_golden.json",
+          "sha256": "1260ea7d2be824dd7189772572cf093a8272f7da6b3659086ad751f53a82267a",
+          "size_bytes": 218360
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-icarus-ioannidou_comparison.json",
+          "sha256": "7a11509302b4ff142ad1a50cd456abcf4a2a78457be837dcb8bab44a104736b2",
+          "size_bytes": 2325
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-icarus-ioannidou_timings.json",
+          "sha256": "2e2147d97189f8e3a00da5f2779309a9d2bab412087e0f94f0466b76489d9f9b",
+          "size_bytes": 6472
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-icarus-ioannidou_benchmark_report.json",
+          "sha256": "b5a2924bf7096ad2851815d44f9b058021659e057feb4c74946b1ad160fe9bfd",
+          "size_bytes": 1072
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-icarus-ioannidou.png",
+          "sha256": "1a84713d6cf1d0901bd10fc9105eeb83fb05cde654cdd7854497682617e9035c",
+          "size_bytes": 90545
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-juno-ludovisi",
+      "title": "Juno Ludovisi",
+      "source_path": "datasets/statues/raw/statue-juno-ludovisi.stl",
+      "source_sha256": "972537da65064893f30d0859d2cb5801fb01aeb9c4de314959ddf58bce43b347",
+      "metadata_sha256": "3251561e00fb3b00328f999d8a4cc6225b4c832b5a6ef396ce16d1f3be692521",
+      "thumbnail_sha256": "23f397a92f3ac0a3d3d9832bf7ab23d0b7f916b12ebfe7c1b00b1bb345c281ab",
+      "triangle_count": 642984,
+      "vertex_count": 321494,
+      "timing_class": "Huge",
+      "mesh_classifications": [
+        "Museum Scan",
+        "High-detail sculpture",
+        "Bust",
+        "Human"
+      ],
+      "analysis_severity": "PASS",
+      "after_repair_severity": "PASS",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 0,
+      "total_wall_seconds": 353.196358,
+      "total_cpu_seconds": 340.921875,
+      "peak_working_set_bytes": 1583861760,
+      "schema_fingerprints": {
+        "analysis_report": "df5fa813fb47f2d4063ad109e71d0b7bf7efcbbb05b2c965ee8661dac8694ae0",
+        "after_analysis": "df5fa813fb47f2d4063ad109e71d0b7bf7efcbbb05b2c965ee8661dac8694ae0",
+        "repair_audit": "aae4f83028292080565c6a0ff7222fbf946bdae55b5f4289002e322afed88a6e",
+        "rollback_audit": "8d2b0607be9ceda4840da26bada4987c52e64a9160b27d691820274592659df2",
+        "comparison": "8d748b3baed6c5710b760a853ff34e8ecf6f5078d69e60962c94939eaf53ae93",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-juno-ludovisi_analysis.json",
+          "sha256": "747214d8577391238e018de4e23947c5f7cd3d050bce63297a22556b99052931",
+          "size_bytes": 17398
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-juno-ludovisi_repair_audit.json",
+          "sha256": "889f68eb5a029e5c0df646250ddaf592ea9805bed29148b25e36ce5746a195d8",
+          "size_bytes": 23778
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-juno-ludovisi_rollback_audit.json",
+          "sha256": "a681a4357ea56f19c2c5e885088f62b852b06687fb2a93abd5c1bf8b5b0c5f0b",
+          "size_bytes": 16138
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-juno-ludovisi_golden.json",
+          "sha256": "c5c9f31956b54a11e8aa4df12b6680ca01801da68460c7052e829f8d286374f2",
+          "size_bytes": 108876
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-juno-ludovisi_comparison.json",
+          "sha256": "4090374606085f567f54f50fb2e6e7e914c76299980e61d9221eb43f34e826ca",
+          "size_bytes": 2347
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-juno-ludovisi_timings.json",
+          "sha256": "12534ab3fe3fc7b729b2507a6f41df7665f924ebb65b3929357069643859efea",
+          "size_bytes": 6501
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-juno-ludovisi_benchmark_report.json",
+          "sha256": "6ab8a908bda916c5a0887c65f8509f3d6fc6cb017124da32e3aef04ea2b89ceb",
+          "size_bytes": 1062
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-juno-ludovisi.png",
+          "sha256": "23f397a92f3ac0a3d3d9832bf7ab23d0b7f916b12ebfe7c1b00b1bb345c281ab",
+          "size_bytes": 230350
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-laocoon-group",
+      "title": "Laocoön Group",
+      "source_path": "datasets/statues/raw/statue-laocoon-group.stl",
+      "source_sha256": "8f962593056edf56ce0272b7c2c0c4d4fef0324a2fe90130ed6fc80fcb936700",
+      "metadata_sha256": "891b0e8e2771e1b456c7684760d5359086bce402a6a9d99bc0b9c12b1ed96c05",
+      "thumbnail_sha256": "fe36f0c065767c293cefd886eb3c05d297e1ccadc0ff271f61c9555a1f990093",
+      "triangle_count": 600000,
+      "vertex_count": 299980,
+      "timing_class": "Huge",
+      "mesh_classifications": [
+        "Museum Scan",
+        "High-detail sculpture",
+        "Full statue",
+        "Human"
+      ],
+      "analysis_severity": "PASS",
+      "after_repair_severity": "PASS",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 0,
+      "total_wall_seconds": 331.385435,
+      "total_cpu_seconds": 320.90625,
+      "peak_working_set_bytes": 1484697600,
+      "schema_fingerprints": {
+        "analysis_report": "df5fa813fb47f2d4063ad109e71d0b7bf7efcbbb05b2c965ee8661dac8694ae0",
+        "after_analysis": "df5fa813fb47f2d4063ad109e71d0b7bf7efcbbb05b2c965ee8661dac8694ae0",
+        "repair_audit": "aae4f83028292080565c6a0ff7222fbf946bdae55b5f4289002e322afed88a6e",
+        "rollback_audit": "8d2b0607be9ceda4840da26bada4987c52e64a9160b27d691820274592659df2",
+        "comparison": "8d748b3baed6c5710b760a853ff34e8ecf6f5078d69e60962c94939eaf53ae93",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-laocoon-group_analysis.json",
+          "sha256": "d217693a63d048a81f570393d52bb8f6107d8f7f6bb8c75e1881c643d251c174",
+          "size_bytes": 17409
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-laocoon-group_repair_audit.json",
+          "sha256": "81e92ad242673a00bbf553bbb90a22c4a65e1397ed32a4851a5c0cabf22b1324",
+          "size_bytes": 23779
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-laocoon-group_rollback_audit.json",
+          "sha256": "850771b22c11c187dc98ab36a8b3da98daab892e0c33501c1e6248bea047ab16",
+          "size_bytes": 16133
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-laocoon-group_golden.json",
+          "sha256": "45efb6185980705a806479f414f9a8bfde6b3f8382b884047f58242f30b8a879",
+          "size_bytes": 108927
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-laocoon-group_comparison.json",
+          "sha256": "43a63b46d3e243a269097bfa75f8ce7638e1e22435fce8fe4fe8a4d54fcd7c69",
+          "size_bytes": 2349
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-laocoon-group_timings.json",
+          "sha256": "7a6c967ac4ede61a1f997c5e9f95ac38008e5211a394d14e2bd2d2c9341f0119",
+          "size_bytes": 6495
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-laocoon-group_benchmark_report.json",
+          "sha256": "3ff922193e8a214d8f0e4022383c30bd9dccdbcb2a629b5ca80374e1dd00b909",
+          "size_bytes": 1068
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-laocoon-group.png",
+          "sha256": "fe36f0c065767c293cefd886eb3c05d297e1ccadc0ff271f61c9555a1f990093",
+          "size_bytes": 157742
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-laurana-woman-bust",
+      "title": "Woman by Francesco Laurana",
+      "source_path": "datasets/statues/raw/statue-laurana-woman-bust.stl",
+      "source_sha256": "607d09913adf730fc59c815ad4b38047a87b81148a8c16da8a5fec82a8485bce",
+      "metadata_sha256": "bdcc7a62c97f35a120f618d2bb84eb05b496aa500e0bd425f276d9e71309e4d8",
+      "thumbnail_sha256": "a7654fac1cee8d7fcc9315b5d1ecb14196bd7d250a17ed8fe616de61ba968331",
+      "triangle_count": 99868,
+      "vertex_count": 50192,
+      "timing_class": "Small",
+      "mesh_classifications": [
+        "Museum Scan",
+        "Photogrammetry",
+        "Bust",
+        "Human"
+      ],
+      "analysis_severity": "WARNING",
+      "after_repair_severity": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 2,
+      "total_wall_seconds": 50.569829,
+      "total_cpu_seconds": 48.90625,
+      "peak_working_set_bytes": 412397568,
+      "schema_fingerprints": {
+        "analysis_report": "c4085356b2e7275de38c92bc07a66ebadf7c62105f314915e893d06e1d5a62c3",
+        "after_analysis": "c4085356b2e7275de38c92bc07a66ebadf7c62105f314915e893d06e1d5a62c3",
+        "repair_audit": "9e04c70a6bb63f6fbaf58c2acb5894402b3177fe82737099d9e8153f49d9e8eb",
+        "rollback_audit": "0c7b7827029db639d4b3342a535a5e8bd5c7ae8d7f2904b49d32090c8f472ff5",
+        "comparison": "d711cf224d24932ab6e4d9df96ad0a9351f02001c9f123e89961840551539a45",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-laurana-woman-bust_analysis.json",
+          "sha256": "17088f32a01de00f3810cb4b1a30e99208a6f8cd928fa86b36340d7125349dae",
+          "size_bytes": 25317
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-laurana-woman-bust_repair_audit.json",
+          "sha256": "b613d9f684310fd23902775ee48eab61662f908330ed7e0e750cd7ef5844b8a6",
+          "size_bytes": 23926
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-laurana-woman-bust_rollback_audit.json",
+          "sha256": "d145d2bc88030d92b4816d5e59118392c077ea557f40c0c00597c6cc823cde71",
+          "size_bytes": 16226
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-laurana-woman-bust_golden.json",
+          "sha256": "f6960b881466e00bfcd9beecf6dcf75fb56b94ccc4f536207df77783c5697e21",
+          "size_bytes": 127174
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-laurana-woman-bust_comparison.json",
+          "sha256": "5f620c6dd69f4789d2da3af8a9b6250b22d244f7b3b1e63418d195e1a92306bf",
+          "size_bytes": 2293
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-laurana-woman-bust_timings.json",
+          "sha256": "10eefc70243b5b4d71d7d72eaf0bd53a20b52007f5e0a05734c3e825d9dd3d8c",
+          "size_bytes": 6463
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-laurana-woman-bust_benchmark_report.json",
+          "sha256": "9201c4241a28a342256a2c2d77d268b56a7561e1cc52015e63b43b59f97590fa",
+          "size_bytes": 1097
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-laurana-woman-bust.png",
+          "sha256": "a7654fac1cee8d7fcc9315b5d1ecb14196bd7d250a17ed8fe616de61ba968331",
+          "size_bytes": 148966
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-mick-odwyer",
+      "title": "Mick O'Dwyer",
+      "source_path": "datasets/statues/raw/statue-mick-odwyer.stl",
+      "source_sha256": "3b72aa06f2458a69c232eaa8883bbff0aa7bbb089b82bb9f7986b2e0bb006c8a",
+      "metadata_sha256": "c8def3dd4b9c4822b0f9083ace6638312ab396b7846c9b1d54e7025701e9dc55",
+      "thumbnail_sha256": "b431de167171dddd6866513932294003dee608454892b0ca813427f9638a2b5b",
+      "triangle_count": 400000,
+      "vertex_count": 201308,
+      "timing_class": "Large",
+      "mesh_classifications": [
+        "Full statue",
+        "Human"
+      ],
+      "analysis_severity": "WARNING",
+      "after_repair_severity": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 6,
+      "total_wall_seconds": 208.140197,
+      "total_cpu_seconds": 200.890625,
+      "peak_working_set_bytes": 1067970560,
+      "schema_fingerprints": {
+        "analysis_report": "ca0e70c059a873305ddd89b1c4c9a1cc514973297749ffa09e339459bed1b940",
+        "after_analysis": "ca0e70c059a873305ddd89b1c4c9a1cc514973297749ffa09e339459bed1b940",
+        "repair_audit": "1bedaf6b12b40a75f3429c03fc95c6775c5b411265aac3162ff1fe981a046a9d",
+        "rollback_audit": "d13666d7ab46ef89014181248c0dca838f1be625ef1727a773676bba63867d95",
+        "comparison": "8d748b3baed6c5710b760a853ff34e8ecf6f5078d69e60962c94939eaf53ae93",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-mick-odwyer_analysis.json",
+          "sha256": "330543bde84962c5fe86a719116ac58ccf8d87f625757441af705da0518e4c95",
+          "size_bytes": 128504
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-mick-odwyer_repair_audit.json",
+          "sha256": "76246801b47fe35d38868b971b63ae2d773d9f3441ac9fb22f1389e89efbeebe",
+          "size_bytes": 51766
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-mick-odwyer_rollback_audit.json",
+          "sha256": "053791c421991eba86d35274e5d2f432fd4bcb4043dcbf0d524c83627f1c7421",
+          "size_bytes": 43550
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-mick-odwyer_golden.json",
+          "sha256": "1218bc10e448d17db2a9363298f4995f736eb1c83637510aca0e4f61d61a15fe",
+          "size_bytes": 491843
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-mick-odwyer_comparison.json",
+          "sha256": "e0d7bbd717d87d28692960faad6cfb307b5fb83cf8ee6ba2afd379795fe7d65c",
+          "size_bytes": 2329
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-mick-odwyer_timings.json",
+          "sha256": "4014cf029189d77ae0f44195d0d79379b6f2b664591497605c8ad77be9f65882",
+          "size_bytes": 6494
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-mick-odwyer_benchmark_report.json",
+          "sha256": "6a0c7505dc38379e54b36c666183ff50d961325aa8de7d2a5464e8d8b0ad3356",
+          "size_bytes": 1012
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-mick-odwyer.png",
+          "sha256": "b431de167171dddd6866513932294003dee608454892b0ca813427f9638a2b5b",
+          "size_bytes": 73341
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-pieta-michelangelo",
+      "title": "Pietà",
+      "source_path": "datasets/statues/raw/statue-pieta-michelangelo.stl",
+      "source_sha256": "f77f638262a0e0fc7f3dc763bfeee228faad21057659de75c6c6697f420f60b4",
+      "metadata_sha256": "a59095707ebdef8ad5cc17e3ae960bd40d84f1f9e39e31d1e2c44d415d0d692e",
+      "thumbnail_sha256": "cfcc9515d3528365dd006d2777bd9a53e3ae5cb3749876eb9954c918f2655720",
+      "triangle_count": 815738,
+      "vertex_count": 407674,
+      "timing_class": "Huge",
+      "mesh_classifications": [
+        "Museum Scan",
+        "High-detail sculpture",
+        "Full statue",
+        "Human"
+      ],
+      "analysis_severity": "WARNING",
+      "after_repair_severity": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 3,
+      "total_wall_seconds": 447.854499,
+      "total_cpu_seconds": 434.453125,
+      "peak_working_set_bytes": 1888931840,
+      "schema_fingerprints": {
+        "analysis_report": "a9ac9f6ab6eb302c96ea6f44e7f8c1f7d737b86654605325ee05d84495f799dc",
+        "after_analysis": "a9ac9f6ab6eb302c96ea6f44e7f8c1f7d737b86654605325ee05d84495f799dc",
+        "repair_audit": "bf9e12e1486545a8885ebcd8e5711e924e548468fc774f26ab91eacd9138f63c",
+        "rollback_audit": "bb2176c84464674f044ad2e497ee0bee25b991f299cf64a3cce2787e15a68c8c",
+        "comparison": "8d748b3baed6c5710b760a853ff34e8ecf6f5078d69e60962c94939eaf53ae93",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-pieta-michelangelo_analysis.json",
+          "sha256": "c86ef72dbfe56dfdd23e35c177d9bb0cb7e13603da63579ddc2b31395de7b02b",
+          "size_bytes": 24601
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-pieta-michelangelo_repair_audit.json",
+          "sha256": "363e5a36e3e91d65d4f61a394a32999e0dcfc49145b5dc7b5493760b5654dd60",
+          "size_bytes": 24073
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-pieta-michelangelo_rollback_audit.json",
+          "sha256": "e5b354a73a5c4ab0f44f4c7f149e8510c8e0672c0c5b1fd3a2e436e7837d23b0",
+          "size_bytes": 16303
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-pieta-michelangelo_golden.json",
+          "sha256": "be2a4b68357a29c4d7e601bfbce17b4d338d44059125e6b502386dae79d01885",
+          "size_bytes": 125262
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-pieta-michelangelo_comparison.json",
+          "sha256": "527af4bfefd1f53f8446018937af807c3012a517a0c911717cf677f7afbb0725",
+          "size_bytes": 2339
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-pieta-michelangelo_timings.json",
+          "sha256": "eff85222d22e79ae65958e71957f48ba18fa6f03004bba72e3c56485e98551c3",
+          "size_bytes": 6503
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-pieta-michelangelo_benchmark_report.json",
+          "sha256": "7e99d450c8003af0deb7d2ba8ee26f7050a6e2ad150cff3571dbd8af753dd4f4",
+          "size_bytes": 1115
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-pieta-michelangelo.png",
+          "sha256": "cfcc9515d3528365dd006d2777bd9a53e3ae5cb3749876eb9954c918f2655720",
+          "size_bytes": 234664
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-thinker-rodin",
+      "title": "The Thinker",
+      "source_path": "datasets/statues/raw/statue-thinker-rodin.stl",
+      "source_sha256": "ae9427b19c0b5cc0c680a01793b361766cc6175be8ba6f1c9a0f0b30e2b3c5e7",
+      "metadata_sha256": "261b263555e11d9808bde4e55e35c6277c3e8cee620ab25e1b9f1a31881ad77a",
+      "thumbnail_sha256": "bfc3b657484f801977a6ac3f54b756b5518ac50e6536aaff8ec115d635508dcb",
+      "triangle_count": 837482,
+      "vertex_count": 418714,
+      "timing_class": "Huge",
+      "mesh_classifications": [
+        "Museum Scan",
+        "High-detail sculpture",
+        "Full statue",
+        "Human"
+      ],
+      "analysis_severity": "WARNING",
+      "after_repair_severity": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 2,
+      "total_wall_seconds": 462.01145,
+      "total_cpu_seconds": 448.203125,
+      "peak_working_set_bytes": 1714573312,
+      "schema_fingerprints": {
+        "analysis_report": "c4085356b2e7275de38c92bc07a66ebadf7c62105f314915e893d06e1d5a62c3",
+        "after_analysis": "c4085356b2e7275de38c92bc07a66ebadf7c62105f314915e893d06e1d5a62c3",
+        "repair_audit": "9e04c70a6bb63f6fbaf58c2acb5894402b3177fe82737099d9e8153f49d9e8eb",
+        "rollback_audit": "0c7b7827029db639d4b3342a535a5e8bd5c7ae8d7f2904b49d32090c8f472ff5",
+        "comparison": "d711cf224d24932ab6e4d9df96ad0a9351f02001c9f123e89961840551539a45",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-thinker-rodin_analysis.json",
+          "sha256": "a355532555a85da36f12448bb9c0be8fc7bd7e8feaffd25d65993e409ef6f986",
+          "size_bytes": 17461
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-thinker-rodin_repair_audit.json",
+          "sha256": "d54ccc0afe62d27c4389228f1e99ba0ee21268e655dbff438e2b87b0729ef045",
+          "size_bytes": 23862
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-thinker-rodin_rollback_audit.json",
+          "sha256": "12ea94c344385b915b8616b9ae920bb83180b027b1ca9c6bca1d4d58aa7633ea",
+          "size_bytes": 16181
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-thinker-rodin_golden.json",
+          "sha256": "772b9b157da9bd9fb2fab2de05d2d28bfabd92b4600355c5c891caccba1429be",
+          "size_bytes": 109274
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-thinker-rodin_comparison.json",
+          "sha256": "998ab62933ff75d43323be5d4c62c1bd6a2b34111338d1203981eab19329b8ac",
+          "size_bytes": 2292
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-thinker-rodin_timings.json",
+          "sha256": "fc0425096ef742d7cf90c85026383bef62b9eb389736a8e28b8e0c50e62eeaf8",
+          "size_bytes": 6499
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-thinker-rodin_benchmark_report.json",
+          "sha256": "abf3593f538e3b47afc610b638228b7f98da8b4c6170fbcca8ebf570cf82241d",
+          "size_bytes": 1074
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-thinker-rodin.png",
+          "sha256": "bfc3b657484f801977a6ac3f54b756b5518ac50e6536aaff8ec115d635508dcb",
+          "size_bytes": 168090
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-uma-maheshvara-java-10c",
+      "title": "Uma-Maheshvara, 10th–11th century CE",
+      "source_path": "datasets/statues/raw/statue-uma-maheshvara-java-10c.stl",
+      "source_sha256": "db055654560c508fd97249b0c88c33663aceebd9d293091136e99fd259b86702",
+      "metadata_sha256": "d09efe72ed44e5117ea4874b063426d421f015f0d083cebd852f25fba11b8b3e",
+      "thumbnail_sha256": "ea1c9b050486f68a8295c0519ae71492b2a135c75eb4838b1dafd6dafacd3ef7",
+      "triangle_count": 99994,
+      "vertex_count": 50467,
+      "timing_class": "Small",
+      "mesh_classifications": [
+        "Museum Scan",
+        "Full statue",
+        "Human"
+      ],
+      "analysis_severity": "WARNING",
+      "after_repair_severity": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 5,
+      "total_wall_seconds": 51.103992,
+      "total_cpu_seconds": 48.875,
+      "peak_working_set_bytes": 412626944,
+      "schema_fingerprints": {
+        "analysis_report": "ca0e70c059a873305ddd89b1c4c9a1cc514973297749ffa09e339459bed1b940",
+        "after_analysis": "ca0e70c059a873305ddd89b1c4c9a1cc514973297749ffa09e339459bed1b940",
+        "repair_audit": "1bedaf6b12b40a75f3429c03fc95c6775c5b411265aac3162ff1fe981a046a9d",
+        "rollback_audit": "d13666d7ab46ef89014181248c0dca838f1be625ef1727a773676bba63867d95",
+        "comparison": "8d748b3baed6c5710b760a853ff34e8ecf6f5078d69e60962c94939eaf53ae93",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-uma-maheshvara-java-10c_analysis.json",
+          "sha256": "aa81bb67ff91e6333207c82197f6d82a481cc813179388e873a3564b173923eb",
+          "size_bytes": 80047
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-uma-maheshvara-java-10c_repair_audit.json",
+          "sha256": "df3f0c82d69b245a36cd052942191ecfa51ce47b066b3826726d02771e43c582",
+          "size_bytes": 36640
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-uma-maheshvara-java-10c_rollback_audit.json",
+          "sha256": "8bdbd03cc33c8f7c180624c0063bf099b35f0d00e84f9b8de9c9e4db0f14a237",
+          "size_bytes": 28610
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-uma-maheshvara-java-10c_golden.json",
+          "sha256": "6a7043f489529f481a765cb8e3aa430681393ad51f367a38105e448a694a363a",
+          "size_bytes": 311482
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-uma-maheshvara-java-10c_comparison.json",
+          "sha256": "61b1af892312e2a116ce1755d39669b2639fb70e7e5c53434de51972f452548e",
+          "size_bytes": 2334
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-uma-maheshvara-java-10c_timings.json",
+          "sha256": "0ba5ff1db74769bbee9e3f4596976e8114ebecaf1c8b38ae4fdea29f6dbc7748",
+          "size_bytes": 6469
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-uma-maheshvara-java-10c_benchmark_report.json",
+          "sha256": "2793e11ab1da0a191e24d3c36356645ce454fac652571a9f53a863c7caa83e5d",
+          "size_bytes": 1120
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-uma-maheshvara-java-10c.png",
+          "sha256": "ea1c9b050486f68a8295c0519ae71492b2a135c75eb4838b1dafd6dafacd3ef7",
+          "size_bytes": 162954
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-venus-de-milo",
+      "title": "Venus de Milo",
+      "source_path": "datasets/statues/raw/statue-venus-de-milo.stl",
+      "source_sha256": "4d00074ced679caf85e7539687626afa0410e17a9995188239ca820041fa13e8",
+      "metadata_sha256": "a12ced530f2cac7735b46898e976eecbcee6b6f1415ad4b1be9d7692f82014f9",
+      "thumbnail_sha256": "1c2bc03925cf400ae08d7aa35d831e9458b7f7fec9d866210f503820c68e46a8",
+      "triangle_count": 607274,
+      "vertex_count": 303512,
+      "timing_class": "Huge",
+      "mesh_classifications": [
+        "Museum Scan",
+        "High-detail sculpture",
+        "Full statue",
+        "Human"
+      ],
+      "analysis_severity": "WARNING",
+      "after_repair_severity": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 2,
+      "total_wall_seconds": 330.892195,
+      "total_cpu_seconds": 319.28125,
+      "peak_working_set_bytes": 1498824704,
+      "schema_fingerprints": {
+        "analysis_report": "c4085356b2e7275de38c92bc07a66ebadf7c62105f314915e893d06e1d5a62c3",
+        "after_analysis": "c4085356b2e7275de38c92bc07a66ebadf7c62105f314915e893d06e1d5a62c3",
+        "repair_audit": "9e04c70a6bb63f6fbaf58c2acb5894402b3177fe82737099d9e8153f49d9e8eb",
+        "rollback_audit": "0c7b7827029db639d4b3342a535a5e8bd5c7ae8d7f2904b49d32090c8f472ff5",
+        "comparison": "d711cf224d24932ab6e4d9df96ad0a9351f02001c9f123e89961840551539a45",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-venus-de-milo_analysis.json",
+          "sha256": "f343138b6dd4ef7474301f28a04d95c54287b3d8c1ec8192b6402917f89bc6ed",
+          "size_bytes": 19175
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-venus-de-milo_repair_audit.json",
+          "sha256": "770032efa503aa0078b8f400e9b56f8565174de10504e40106bb6ff8a6c5558f",
+          "size_bytes": 23901
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-venus-de-milo_rollback_audit.json",
+          "sha256": "53bb03bf263ee509daeee58a495b4b4bc95cefae5e68a10f64c376d56970c718",
+          "size_bytes": 16201
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-venus-de-milo_golden.json",
+          "sha256": "4c5f21e92bd48142f5e070e846bef7a25c454a423e5569539dece317a3967146",
+          "size_bytes": 113283
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-venus-de-milo_comparison.json",
+          "sha256": "143350337d15102086b9e933ef0d7e8c1c45d2c5fc10f48e2fa851888f45061f",
+          "size_bytes": 2308
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-venus-de-milo_timings.json",
+          "sha256": "2d25e72e200928810da2d6219e8cd172987e74bc3975c1c47d6f7249472668eb",
+          "size_bytes": 6500
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-venus-de-milo_benchmark_report.json",
+          "sha256": "b42ff4d021bca1913c4d88f433082f3addf0f8b0b45cb349d49224d3e4678f9e",
+          "size_bytes": 1074
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-venus-de-milo.png",
+          "sha256": "1c2bc03925cf400ae08d7aa35d831e9458b7f7fec9d866210f503820c68e46a8",
+          "size_bytes": 128530
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-venus-willendorf",
+      "title": "Venus of Willendorf",
+      "source_path": "datasets/statues/raw/statue-venus-willendorf.stl",
+      "source_sha256": "cafeab179c536661df227a1828f011080ae6c9704fd6021764e9fb53268a3029",
+      "metadata_sha256": "b704506238288ae68e79d2c1c1e13fd69afaa7c0592e8d45c94bc7a2c9959e47",
+      "thumbnail_sha256": "2900f47b9a50d5c80549bf8d01692a7a4d26a0702ccb4d95a5641335976ac527",
+      "triangle_count": 699996,
+      "vertex_count": 350000,
+      "timing_class": "Huge",
+      "mesh_classifications": [
+        "Museum Scan",
+        "High-detail sculpture",
+        "Human"
+      ],
+      "analysis_severity": "PASS",
+      "after_repair_severity": "PASS",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 0,
+      "total_wall_seconds": 385.561613,
+      "total_cpu_seconds": 373.96875,
+      "peak_working_set_bytes": 1525374976,
+      "schema_fingerprints": {
+        "analysis_report": "df5fa813fb47f2d4063ad109e71d0b7bf7efcbbb05b2c965ee8661dac8694ae0",
+        "after_analysis": "df5fa813fb47f2d4063ad109e71d0b7bf7efcbbb05b2c965ee8661dac8694ae0",
+        "repair_audit": "aae4f83028292080565c6a0ff7222fbf946bdae55b5f4289002e322afed88a6e",
+        "rollback_audit": "8d2b0607be9ceda4840da26bada4987c52e64a9160b27d691820274592659df2",
+        "comparison": "8d748b3baed6c5710b760a853ff34e8ecf6f5078d69e60962c94939eaf53ae93",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-venus-willendorf_analysis.json",
+          "sha256": "34114b5fc30baa3279fc6601268baeb250ff426b8a80b7cb6a2ccb11c6b74258",
+          "size_bytes": 17426
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-venus-willendorf_repair_audit.json",
+          "sha256": "746abfa1e10eb7bd2a9f54b6bc31cede77ca5c6541abb569c5364e4f708fb2d3",
+          "size_bytes": 23806
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-venus-willendorf_rollback_audit.json",
+          "sha256": "74310479e346d78c40172e29dc84cb62147951a0279d4d8e9915fb5006eb053f",
+          "size_bytes": 16165
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-venus-willendorf_golden.json",
+          "sha256": "ceafb459aa84aa5dad91f75e610cea0b0d71e22ed3608cb342c86dc1450093a8",
+          "size_bytes": 108839
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-venus-willendorf_comparison.json",
+          "sha256": "4b6b62f29db1e7f7ae0a5e9228ed20fa24514592bcd57fb99384cd3f28a302aa",
+          "size_bytes": 2357
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-venus-willendorf_timings.json",
+          "sha256": "085bcff81cd4515569cb01ca785d815929093496e777f9cb8037580806228acb",
+          "size_bytes": 6508
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-venus-willendorf_benchmark_report.json",
+          "sha256": "650edb880d91a5c014d92467714d951f3fdcdaab1883f50ca83d935bb97ee36d",
+          "size_bytes": 1073
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-venus-willendorf.png",
+          "sha256": "2900f47b9a50d5c80549bf8d01692a7a4d26a0702ccb4d95a5641335976ac527",
+          "size_bytes": 171128
+        }
+      }
+    },
+    {
+      "mesh_id": "statue-water-buffalo-boy",
+      "title": "Water Buffalo and Boy",
+      "source_path": "datasets/statues/raw/statue-water-buffalo-boy.stl",
+      "source_sha256": "6c08876527bf8d725224a85fce42048671e8ab67d9e5ca42cbd92a77b250951f",
+      "metadata_sha256": "67fa546738f6729c2b363c4f7acd3cb056f5991ae92bfd20dac0dbf0d0bac21c",
+      "thumbnail_sha256": "a7907bbe200c429d29955486e913c2aa95deb7cdd5efcbb716e613b65f868a0f",
+      "triangle_count": 661492,
+      "vertex_count": 330733,
+      "timing_class": "Huge",
+      "mesh_classifications": [
+        "Photogrammetry",
+        "High-detail sculpture",
+        "Full statue",
+        "Animal",
+        "Human"
+      ],
+      "analysis_severity": "WARNING",
+      "after_repair_severity": "WARNING",
+      "selected_operations": [],
+      "operation_record_count": 0,
+      "warning_count": 2,
+      "total_wall_seconds": 343.679147,
+      "total_cpu_seconds": 333.125,
+      "peak_working_set_bytes": 1622953984,
+      "schema_fingerprints": {
+        "analysis_report": "c4085356b2e7275de38c92bc07a66ebadf7c62105f314915e893d06e1d5a62c3",
+        "after_analysis": "c4085356b2e7275de38c92bc07a66ebadf7c62105f314915e893d06e1d5a62c3",
+        "repair_audit": "9e04c70a6bb63f6fbaf58c2acb5894402b3177fe82737099d9e8153f49d9e8eb",
+        "rollback_audit": "0c7b7827029db639d4b3342a535a5e8bd5c7ae8d7f2904b49d32090c8f472ff5",
+        "comparison": "d711cf224d24932ab6e4d9df96ad0a9351f02001c9f123e89961840551539a45",
+        "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+      },
+      "validation_status": "PASS",
+      "artifacts": {
+        "analysis": {
+          "path": "benchmarks/golden/raw/statue-water-buffalo-boy_analysis.json",
+          "sha256": "0100a3332bc87a7596bf885b4b901b2b9fa038b58fa63ebb22a15eb7b3fa3209",
+          "size_bytes": 17581
+        },
+        "repair_audit": {
+          "path": "benchmarks/golden/raw/statue-water-buffalo-boy_repair_audit.json",
+          "sha256": "fba80240343e9817964a288dc9e76dc0ebbde59afa0019b527df505dc236227c",
+          "size_bytes": 23939
+        },
+        "rollback_audit": {
+          "path": "benchmarks/golden/raw/statue-water-buffalo-boy_rollback_audit.json",
+          "sha256": "6dabdfb2cd3fa3d6c7bb37186acaf905f56def806578e353172c552db655c599",
+          "size_bytes": 16230
+        },
+        "golden": {
+          "path": "benchmarks/golden/raw/statue-water-buffalo-boy_golden.json",
+          "sha256": "e99fbe8fb6363e8daeaee227872a7e7572bbc8ad4903fdfc9fb4b751f4fc8021",
+          "size_bytes": 109567
+        },
+        "comparison": {
+          "path": "benchmarks/golden/comparisons/statue-water-buffalo-boy_comparison.json",
+          "sha256": "7e08ef12d6368b0a444973a8f54185aa0ee96f6f0a73a1dcc4eedf4f47f6a03d",
+          "size_bytes": 2301
+        },
+        "timings": {
+          "path": "benchmarks/golden/timings/statue-water-buffalo-boy_timings.json",
+          "sha256": "e321aaae21d66918a4cef7f027be875f9ec80c4ee239a4432c535a90cbe6739c",
+          "size_bytes": 6495
+        },
+        "report": {
+          "path": "benchmarks/golden/reports/statue-water-buffalo-boy_benchmark_report.json",
+          "sha256": "180be42d12e94aee0b7039d586396af235d73257e61bad365240dc8b70bf7481",
+          "size_bytes": 1121
+        },
+        "thumbnail": {
+          "path": "benchmarks/golden/thumbnails/statue-water-buffalo-boy.png",
+          "sha256": "a7907bbe200c429d29955486e913c2aa95deb7cdd5efcbb716e613b65f868a0f",
+          "size_bytes": 197229
+        }
+      }
+    }
+  ]
+}

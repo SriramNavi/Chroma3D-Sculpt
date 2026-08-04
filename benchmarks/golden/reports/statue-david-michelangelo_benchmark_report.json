@@ -1,0 +1,30 @@
+{
+  "mesh_id": "statue-david-michelangelo",
+  "status": "PASS",
+  "timing_class": "Extreme",
+  "mesh_classifications": [
+    "Museum Scan",
+    "Photogrammetry",
+    "High-detail sculpture",
+    "Full statue",
+    "Human"
+  ],
+  "triangle_count": 1199948,
+  "severity_before": "WARNING",
+  "severity_after": "WARNING",
+  "selected_operations": [],
+  "operation_record_count": 0,
+  "warning_count": 3,
+  "total_wall_seconds": 618.216727,
+  "total_cpu_seconds": 599.65625,
+  "peak_working_set_bytes": 2723590144,
+  "artifacts": {
+    "analysis": "benchmarks/golden/raw/statue-david-michelangelo_analysis.json",
+    "repair_audit": "benchmarks/golden/raw/statue-david-michelangelo_repair_audit.json",
+    "rollback_audit": "benchmarks/golden/raw/statue-david-michelangelo_rollback_audit.json",
+    "golden": "benchmarks/golden/raw/statue-david-michelangelo_golden.json",
+    "comparison": "benchmarks/golden/comparisons/statue-david-michelangelo_comparison.json",
+    "timings": "benchmarks/golden/timings/statue-david-michelangelo_timings.json",
+    "report": "benchmarks/golden/reports/statue-david-michelangelo_benchmark_report.json"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "mesh_id": "statue-ganesha-java-10c",
+  "status": "PASS",
+  "timing_class": "Small",
+  "mesh_classifications": [
+    "Museum Scan",
+    "Full statue",
+    "Human"
+  ],
+  "triangle_count": 63950,
+  "severity_before": "PASS",
+  "severity_after": "PASS",
+  "selected_operations": [],
+  "operation_record_count": 0,
+  "warning_count": 0,
+  "total_wall_seconds": 32.572592,
+  "total_cpu_seconds": 31.203125,
+  "peak_working_set_bytes": 317214720,
+  "artifacts": {
+    "analysis": "benchmarks/golden/raw/statue-ganesha-java-10c_analysis.json",
+    "repair_audit": "benchmarks/golden/raw/statue-ganesha-java-10c_repair_audit.json",
+    "rollback_audit": "benchmarks/golden/raw/statue-ganesha-java-10c_rollback_audit.json",
+    "golden": "benchmarks/golden/raw/statue-ganesha-java-10c_golden.json",
+    "comparison": "benchmarks/golden/comparisons/statue-ganesha-java-10c_comparison.json",
+    "timings": "benchmarks/golden/timings/statue-ganesha-java-10c_timings.json",
+    "report": "benchmarks/golden/reports/statue-ganesha-java-10c_benchmark_report.json"
+  }
+}

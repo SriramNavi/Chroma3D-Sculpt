@@ -1,0 +1,89 @@
+{
+  "unique_id": "statue-danaid-rodin",
+  "title": "Danaid",
+  "subject": "Crouching Danaid by Auguste Rodin",
+  "category": "full_statue",
+  "religious_cultural_classification": "Greek mythology; European modern sculpture",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Danaid_NMSk_1854_(Auguste_Rodin)_-_Nationalmuseum_-_76c5c234c6074b13a94bf793c276a509.stl",
+  "source_revision_url": "https://commons.wikimedia.org/wiki/File:Danaid_NMSk_1854_(Auguste_Rodin)_-_Nationalmuseum_-_76c5c234c6074b13a94bf793c276a509.stl?oldid=1127022594",
+  "source_page_revision_id": 1127022594,
+  "source_page_revision_timestamp": "2025-12-07T07:15:22Z",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Danaid_NMSk_1854_%28Auguste_Rodin%29_-_Nationalmuseum_-_76c5c234c6074b13a94bf793c276a509.stl",
+  "download_date": "2026-07-26",
+  "download_timestamp_utc": "2026-07-26T06:35:39.842785+00:00",
+  "author": "Nationalmuseum",
+  "credit": "This file was made available from Sketchfab",
+  "original_repository": "Nationalmuseum via Wikimedia Commons",
+  "upstream_source_urls": [],
+  "license": "CC-BY-4.0",
+  "license_source_label": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_document": "datasets/statues/licenses/CC-BY-4.0.txt",
+  "file_format": "STL",
+  "mime_type": "application/sla",
+  "vertex_count": 55271,
+  "triangle_count": 110538,
+  "bounding_box": {
+    "coordinate_space": "Blender world space after default STL import",
+    "source_units": "unspecified",
+    "minimum": [
+      -9.913399696,
+      -4.369780064,
+      -7.941760063
+    ],
+    "maximum": [
+      12.859600067,
+      7.899990082,
+      8.922860146
+    ],
+    "dimensions": [
+      22.77299881,
+      12.269769669,
+      16.864620209
+    ],
+    "diagonal": 30.879963464
+  },
+  "checksum_sha256": "e369027a93ac6ad5b5765999f6c74fcc2fef1f9beceef244d02b9158d012c8e8",
+  "source_checksum_sha1": "aa31ef0da4e5f76a9b1ed4bc6e8f2861dc324a15",
+  "original_filename": "Danaid NMSk 1854 (Auguste Rodin) - Nationalmuseum - 76c5c234c6074b13a94bf793c276a509.stl",
+  "stored_filename": "statue-danaid-rodin.stl",
+  "stored_path": "datasets/statues/raw/statue-danaid-rodin.stl",
+  "file_size_bytes": 19895954,
+  "thumbnail_path": "datasets/statues/thumbnails/statue-danaid-rodin.png",
+  "thumbnail_checksum_sha256": "b48a8b1b1e095d6c1b61069c2c1579091ba5f1cf1abe760cf1de8836dc9d20d8",
+  "source_description": "Sculpture by Auguste Rodin, made in 1889, terracotta, 20,2 x 36,5 x 27,5 cm depicting a female mythological figure, a Danaïd. According to Greek mythology, the Danaïds were banished to the underworld and the eternal task of filling a leaky vessel with water. The female figure is crouched in a pose that expresses despair in the face of this hopeless chore. The Danaïd was originally designated to be part of The Gates of Hell. The work was enlarged and cut in marble for the buyer Herman Frithiof Antell. Encouraged by the success, Rodin had further copies made in marble, bronze and other materials.",
+  "notes": [
+    "Terracotta sculpture scan with a low, wide pose."
+  ],
+  "validation": {
+    "status": "validated",
+    "validated_at_utc": "2026-07-26T06:35:59.394171+00:00",
+    "validator": "Blender 4.4.3 native STL importer",
+    "readable": true,
+    "non_empty": true,
+    "reasonable_mesh": true,
+    "obvious_corruption": false,
+    "stl_encoding": "ascii",
+    "binary_size_consistent": null,
+    "declared_triangle_count": null,
+    "triangle_count_matches_header": true,
+    "triangle_count_delta_from_header": null,
+    "imported_object_count": 1,
+    "edge_count": 165807,
+    "polygon_count": 110538,
+    "non_finite_vertex_count": 0,
+    "import_seconds": 0.192451,
+    "validation_seconds": 0.604065,
+    "checks": [
+      "File exists and is non-empty.",
+      "Current SHA-256 matches acquisition metadata.",
+      "STL container structure is recognized.",
+      "Blender native importer completed and produced mesh data.",
+      "Vertex and triangle counts exceed bounded minimums.",
+      "All imported vertex coordinates and bounds are finite.",
+      "Bounding-box diagonal is non-zero.",
+      "Binary STL header/import triangle delta is recorded; Blender may omit duplicate or degenerate facets during import."
+    ],
+    "warnings": []
+  }
+}

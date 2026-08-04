@@ -1,0 +1,89 @@
+{
+  "unique_id": "statue-uma-maheshvara-java-10c",
+  "title": "Uma-Maheshvara, 10th–11th century CE",
+  "subject": "Shiva and Uma with Ganesha, Skanda, and Nandi",
+  "category": "deity_group",
+  "religious_cultural_classification": "Hindu; South Asian/Javanese",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Uma-Maheshvara,_10th_-_11th_C_CE_-_3D_model_by_Minneapolis_Institute_of_Art_-_Sketchfab.stl",
+  "source_revision_url": "https://commons.wikimedia.org/wiki/File:Uma-Maheshvara,_10th_-_11th_C_CE_-_3D_model_by_Minneapolis_Institute_of_Art_-_Sketchfab.stl?oldid=726063249",
+  "source_page_revision_id": 726063249,
+  "source_page_revision_timestamp": "2023-01-19T07:10:23Z",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Uma-Maheshvara%2C_10th_-_11th_C_CE_-_3D_model_by_Minneapolis_Institute_of_Art_-_Sketchfab.stl",
+  "download_date": "2026-07-26",
+  "download_timestamp_utc": "2026-07-26T06:35:39.842785+00:00",
+  "author": "Minneapolis Institute of Art",
+  "credit": "Sketchfab - Minneapolis Institute of Art",
+  "original_repository": "Minneapolis Institute of Art via Sketchfab and Wikimedia Commons",
+  "upstream_source_urls": [],
+  "license": "CC0-1.0",
+  "license_source_label": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_document": "datasets/statues/licenses/CC0-1.0.txt",
+  "file_format": "STL",
+  "mime_type": "application/sla",
+  "vertex_count": 50467,
+  "triangle_count": 99994,
+  "bounding_box": {
+    "coordinate_space": "Blender world space after default STL import",
+    "source_units": "unspecified",
+    "minimum": [
+      -9.320004463,
+      5.203174114,
+      0.341971874
+    ],
+    "maximum": [
+      -8.481040955,
+      5.581968784,
+      1.860485792
+    ],
+    "dimensions": [
+      0.838963509,
+      0.37879467,
+      1.518513918
+    ],
+    "diagonal": 1.775733579
+  },
+  "checksum_sha256": "db055654560c508fd97249b0c88c33663aceebd9d293091136e99fd259b86702",
+  "source_checksum_sha1": "af683f958db0d404287e791dbb237121661d9fef",
+  "original_filename": "Uma-Maheshvara, 10th - 11th C CE - 3D model by Minneapolis Institute of Art - Sketchfab.stl",
+  "stored_filename": "statue-uma-maheshvara-java-10c.stl",
+  "stored_path": "datasets/statues/raw/statue-uma-maheshvara-java-10c.stl",
+  "file_size_bytes": 4999784,
+  "thumbnail_path": "datasets/statues/thumbnails/statue-uma-maheshvara-java-10c.png",
+  "thumbnail_checksum_sha256": "ea1c9b050486f68a8295c0519ae71492b2a135c75eb4838b1dafd6dafacd3ef7",
+  "source_description": "Sandstone Uma-Maheshvara, 10th - 11th C CE, now in the collection of the Minneapolis Institute of Art. From the sculpture’s description on artsmia.org: ‘The gods Shiva and Pārvatī appear in South Asian sculpture in several iconographic forms and incarnations. In this form, Shiva appears as Maheshvara, or the Great God, and Pārvatī as Uma, the daughter of Himavan, the King of Mountains. In her incarnation as Uma, the goddess performed many meritorious deeds in order to marry Shiva. Together, Uma and Maheshvara represent an ideal married couple with arms draped around each other. Their two sons, Ganesha and Skanda, stand beneath them on either side. Shiva’s bull vehicle, Nandi, sits obediently at their feet. Shiva holds his trident in his upper right hand, and his other two hands likely would have held a lotus and pot. Pārvatī holds a moonlike mirror in her left hand, which illuminates the two divine beings in their celestial beauty.’ More: https://collections.artsmia.org/art/5369/uma-maheshvara-india",
+  "notes": [
+    "Sandstone museum object scan with multiple figures and attributes."
+  ],
+  "validation": {
+    "status": "validated",
+    "validated_at_utc": "2026-07-26T06:36:20.619750+00:00",
+    "validator": "Blender 4.4.3 native STL importer",
+    "readable": true,
+    "non_empty": true,
+    "reasonable_mesh": true,
+    "obvious_corruption": false,
+    "stl_encoding": "binary",
+    "binary_size_consistent": true,
+    "declared_triangle_count": 99994,
+    "triangle_count_matches_header": true,
+    "triangle_count_delta_from_header": 0,
+    "imported_object_count": 1,
+    "edge_count": 151001,
+    "polygon_count": 99994,
+    "non_finite_vertex_count": 0,
+    "import_seconds": 0.074499,
+    "validation_seconds": 0.260677,
+    "checks": [
+      "File exists and is non-empty.",
+      "Current SHA-256 matches acquisition metadata.",
+      "STL container structure is recognized.",
+      "Blender native importer completed and produced mesh data.",
+      "Vertex and triangle counts exceed bounded minimums.",
+      "All imported vertex coordinates and bounds are finite.",
+      "Bounding-box diagonal is non-zero.",
+      "Binary STL header/import triangle delta is recorded; Blender may omit duplicate or degenerate facets during import."
+    ],
+    "warnings": []
+  }
+}

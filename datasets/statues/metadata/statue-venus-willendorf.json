@@ -1,0 +1,89 @@
+{
+  "unique_id": "statue-venus-willendorf",
+  "title": "Venus of Willendorf",
+  "subject": "Upper Paleolithic female figurine",
+  "category": "figurine",
+  "religious_cultural_classification": "Upper Paleolithic European",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Scan_the_World_-_Venus_of_Willendorf.stl",
+  "source_revision_url": "https://commons.wikimedia.org/wiki/File:Scan_the_World_-_Venus_of_Willendorf.stl?oldid=972874782",
+  "source_page_revision_id": 972874782,
+  "source_page_revision_timestamp": "2024-12-20T06:37:06Z",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Scan_the_World_-_Venus_of_Willendorf.stl",
+  "download_date": "2026-07-26",
+  "download_timestamp_utc": "2026-07-26T06:35:39.842785+00:00",
+  "author": "Scan the World",
+  "credit": "MyMiniFactory",
+  "original_repository": "Scan the World via Wikimedia Commons",
+  "upstream_source_urls": [],
+  "license": "CC-BY-SA-4.0",
+  "license_source_label": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "license_document": "datasets/statues/licenses/CC-BY-SA-4.0.txt",
+  "file_format": "STL",
+  "mime_type": "application/sla",
+  "vertex_count": 350000,
+  "triangle_count": 699996,
+  "bounding_box": {
+    "coordinate_space": "Blender world space after default STL import",
+    "source_units": "unspecified",
+    "minimum": [
+      0.241580486,
+      2.778971434,
+      4.34e-07
+    ],
+    "maximum": [
+      70.124809265,
+      130.0,
+      58.056121826
+    ],
+    "dimensions": [
+      69.883232117,
+      127.221031189,
+      58.056121826
+    ],
+    "diagonal": 156.330961837
+  },
+  "checksum_sha256": "cafeab179c536661df227a1828f011080ae6c9704fd6021764e9fb53268a3029",
+  "source_checksum_sha1": "1aab079c218d4b2852e962d00928db8292fb9989",
+  "original_filename": "Scan the World - Venus of Willendorf.stl",
+  "stored_filename": "statue-venus-willendorf.stl",
+  "stored_path": "datasets/statues/raw/statue-venus-willendorf.stl",
+  "file_size_bytes": 34999884,
+  "thumbnail_path": "datasets/statues/thumbnails/statue-venus-willendorf.png",
+  "thumbnail_checksum_sha256": "2900f47b9a50d5c80549bf8d01692a7a4d26a0702ccb4d95a5641335976ac527",
+  "source_description": "3D model of the Venus of Willendorf",
+  "notes": [
+    "Small artifact captured at comparatively high mesh density."
+  ],
+  "validation": {
+    "status": "validated",
+    "validated_at_utc": "2026-07-26T06:36:24.276214+00:00",
+    "validator": "Blender 4.4.3 native STL importer",
+    "readable": true,
+    "non_empty": true,
+    "reasonable_mesh": true,
+    "obvious_corruption": false,
+    "stl_encoding": "binary",
+    "binary_size_consistent": true,
+    "declared_triangle_count": 699996,
+    "triangle_count_matches_header": true,
+    "triangle_count_delta_from_header": 0,
+    "imported_object_count": 1,
+    "edge_count": 1049994,
+    "polygon_count": 699996,
+    "non_finite_vertex_count": 0,
+    "import_seconds": 0.642007,
+    "validation_seconds": 1.959544,
+    "checks": [
+      "File exists and is non-empty.",
+      "Current SHA-256 matches acquisition metadata.",
+      "STL container structure is recognized.",
+      "Blender native importer completed and produced mesh data.",
+      "Vertex and triangle counts exceed bounded minimums.",
+      "All imported vertex coordinates and bounds are finite.",
+      "Bounding-box diagonal is non-zero.",
+      "Binary STL header/import triangle delta is recorded; Blender may omit duplicate or degenerate facets during import."
+    ],
+    "warnings": []
+  }
+}

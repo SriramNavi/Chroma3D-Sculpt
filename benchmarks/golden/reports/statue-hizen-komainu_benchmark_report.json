@@ -1,0 +1,31 @@
+{
+  "mesh_id": "statue-hizen-komainu",
+  "status": "PASS",
+  "timing_class": "Extreme",
+  "mesh_classifications": [
+    "Photogrammetry",
+    "High-detail sculpture",
+    "Guardian",
+    "Animal"
+  ],
+  "triangle_count": 1998496,
+  "severity_before": "WARNING",
+  "severity_after": "WARNING",
+  "selected_operations": [
+    "MERGE_DUPLICATE_VERTICES"
+  ],
+  "operation_record_count": 2,
+  "warning_count": 8,
+  "total_wall_seconds": 1589.033629,
+  "total_cpu_seconds": 1545.90625,
+  "peak_working_set_bytes": 3767922688,
+  "artifacts": {
+    "analysis": "benchmarks/golden/raw/statue-hizen-komainu_analysis.json",
+    "repair_audit": "benchmarks/golden/raw/statue-hizen-komainu_repair_audit.json",
+    "rollback_audit": "benchmarks/golden/raw/statue-hizen-komainu_rollback_audit.json",
+    "golden": "benchmarks/golden/raw/statue-hizen-komainu_golden.json",
+    "comparison": "benchmarks/golden/comparisons/statue-hizen-komainu_comparison.json",
+    "timings": "benchmarks/golden/timings/statue-hizen-komainu_timings.json",
+    "report": "benchmarks/golden/reports/statue-hizen-komainu_benchmark_report.json"
+  }
+}

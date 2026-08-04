@@ -1,0 +1,3111 @@
+{
+  "golden_schema_version": "1.0",
+  "benchmark_version": "1.0.0",
+  "benchmark_date_utc": "2026-07-26T09:43:57.535223+00:00",
+  "dataset_version": "1.0.0",
+  "software_version": "0.3.0-alpha.1",
+  "analysis_schema_version": "2.0",
+  "repair_audit_schema_version": "1.0",
+  "mesh_id": "statue-danaid-rodin",
+  "timing_class": "Medium",
+  "mesh_classifications": [
+    "Museum Scan",
+    "Full statue",
+    "Human"
+  ],
+  "mesh_metadata": {
+    "unique_id": "statue-danaid-rodin",
+    "title": "Danaid",
+    "subject": "Crouching Danaid by Auguste Rodin",
+    "category": "full_statue",
+    "religious_cultural_classification": "Greek mythology; European modern sculpture",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Danaid_NMSk_1854_(Auguste_Rodin)_-_Nationalmuseum_-_76c5c234c6074b13a94bf793c276a509.stl",
+    "source_revision_url": "https://commons.wikimedia.org/wiki/File:Danaid_NMSk_1854_(Auguste_Rodin)_-_Nationalmuseum_-_76c5c234c6074b13a94bf793c276a509.stl?oldid=1127022594",
+    "source_page_revision_id": 1127022594,
+    "source_page_revision_timestamp": "2025-12-07T07:15:22Z",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Danaid_NMSk_1854_%28Auguste_Rodin%29_-_Nationalmuseum_-_76c5c234c6074b13a94bf793c276a509.stl",
+    "download_date": "2026-07-26",
+    "download_timestamp_utc": "2026-07-26T06:35:39.842785+00:00",
+    "author": "Nationalmuseum",
+    "credit": "This file was made available from Sketchfab",
+    "original_repository": "Nationalmuseum via Wikimedia Commons",
+    "upstream_source_urls": [],
+    "license": "CC-BY-4.0",
+    "license_source_label": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_document": "datasets/statues/licenses/CC-BY-4.0.txt",
+    "file_format": "STL",
+    "mime_type": "application/sla",
+    "vertex_count": 55271,
+    "triangle_count": 110538,
+    "bounding_box": {
+      "coordinate_space": "Blender world space after default STL import",
+      "source_units": "unspecified",
+      "minimum": [
+        -9.913399696,
+        -4.369780064,
+        -7.941760063
+      ],
+      "maximum": [
+        12.859600067,
+        7.899990082,
+        8.922860146
+      ],
+      "dimensions": [
+        22.77299881,
+        12.269769669,
+        16.864620209
+      ],
+      "diagonal": 30.879963464
+    },
+    "checksum_sha256": "e369027a93ac6ad5b5765999f6c74fcc2fef1f9beceef244d02b9158d012c8e8",
+    "source_checksum_sha1": "aa31ef0da4e5f76a9b1ed4bc6e8f2861dc324a15",
+    "original_filename": "Danaid NMSk 1854 (Auguste Rodin) - Nationalmuseum - 76c5c234c6074b13a94bf793c276a509.stl",
+    "stored_filename": "statue-danaid-rodin.stl",
+    "stored_path": "datasets/statues/raw/statue-danaid-rodin.stl",
+    "file_size_bytes": 19895954,
+    "thumbnail_path": "datasets/statues/thumbnails/statue-danaid-rodin.png",
+    "thumbnail_checksum_sha256": "b48a8b1b1e095d6c1b61069c2c1579091ba5f1cf1abe760cf1de8836dc9d20d8",
+    "source_description": "Sculpture by Auguste Rodin, made in 1889, terracotta, 20,2 x 36,5 x 27,5 cm depicting a female mythological figure, a Danaïd. According to Greek mythology, the Danaïds were banished to the underworld and the eternal task of filling a leaky vessel with water. The female figure is crouched in a pose that expresses despair in the face of this hopeless chore. The Danaïd was originally designated to be part of The Gates of Hell. The work was enlarged and cut in marble for the buyer Herman Frithiof Antell. Encouraged by the success, Rodin had further copies made in marble, bronze and other materials.",
+    "notes": [
+      "Terracotta sculpture scan with a low, wide pose."
+    ],
+    "validation": {
+      "status": "validated",
+      "validated_at_utc": "2026-07-26T06:35:59.394171+00:00",
+      "validator": "Blender 4.4.3 native STL importer",
+      "readable": true,
+      "non_empty": true,
+      "reasonable_mesh": true,
+      "obvious_corruption": false,
+      "stl_encoding": "ascii",
+      "binary_size_consistent": null,
+      "declared_triangle_count": null,
+      "triangle_count_matches_header": true,
+      "triangle_count_delta_from_header": null,
+      "imported_object_count": 1,
+      "edge_count": 165807,
+      "polygon_count": 110538,
+      "non_finite_vertex_count": 0,
+      "import_seconds": 0.192451,
+      "validation_seconds": 0.604065,
+      "checks": [
+        "File exists and is non-empty.",
+        "Current SHA-256 matches acquisition metadata.",
+        "STL container structure is recognized.",
+        "Blender native importer completed and produced mesh data.",
+        "Vertex and triangle counts exceed bounded minimums.",
+        "All imported vertex coordinates and bounds are finite.",
+        "Bounding-box diagonal is non-zero.",
+        "Binary STL header/import triangle delta is recorded; Blender may omit duplicate or degenerate facets during import."
+      ],
+      "warnings": []
+    }
+  },
+  "machine_information": {
+    "operating_system": "Windows-10-10.0.26200-SP0",
+    "system": "Windows",
+    "release": "10",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "hostname": "LAPTOP-AEORIDUB",
+    "python_version": "3.11.11",
+    "blender_version": "4.4.3",
+    "logical_cpu_count": 16,
+    "total_physical_memory_bytes": 33963319296,
+    "available_physical_memory_bytes": 17502908416,
+    "power_line_status": "ONLINE",
+    "battery_percent": 100,
+    "machine_fingerprint": "efa1889db7bb8c811dbd2ec657b9e85062b77a5889354b3362f021f3bcdabeed"
+  },
+  "analysis_report": {
+    "schema_version": "2.0",
+    "extension_version": "0.3.0-alpha.1",
+    "blender_version": "4.4.3",
+    "operating_system": "Windows 10",
+    "analyzed_at": "2026-07-26T09:43:00.368743+00:00",
+    "duration_ms": 6724.801100004697,
+    "severity": "PASS",
+    "summary": "Completed production mesh diagnostics with no review warnings.",
+    "analysis_id": "efc42480-066b-44a3-9483-c9961af5fd4d",
+    "analysis_profile": "STANDARD",
+    "settings_snapshot": {
+      "analysis_profile": "STANDARD",
+      "duplicate_position_tolerance": 9.999999974752427e-07,
+      "duplicate_vertex_limit": 500000,
+      "degenerate_edge_tolerance": 9.999999717180685e-10,
+      "degenerate_face_tolerance": 1.000000045813705e-18,
+      "tiny_shell_max_face_count": 12,
+      "tiny_shell_max_volume_mm3": 1000.0,
+      "tiny_shell_max_relative_volume_percent": 0.5,
+      "tiny_shell_max_diagonal_mm": 10.0,
+      "maximum_stored_issue_indices": 10000,
+      "self_intersection_triangle_limit": 50000,
+      "maximum_stored_self_intersection_pairs": 10000,
+      "containment_shell_limit": 64,
+      "containment_triangle_limit": 100000,
+      "printer_profile": "NONE",
+      "build_volume_mm": null,
+      "extension_version": "0.3.0-alpha.1",
+      "blender_version": "4.4.3"
+    },
+    "topology_signature": {
+      "analysis_id": "efc42480-066b-44a3-9483-c9961af5fd4d",
+      "object_name": "statue-danaid-rodin",
+      "mesh_data_name": "statue-danaid-rodin_mesh",
+      "vertex_count": 55271,
+      "edge_count": 165807,
+      "polygon_count": 110538,
+      "topology_sha256": "2333d489bbac6d0aaadcc73a5a61674d3c97839b1b6bee6063d16063e0b36ce1"
+    },
+    "object_metadata": {
+      "object_name": "statue-danaid-rodin",
+      "mesh_data_name": "statue-danaid-rodin_mesh",
+      "object_mode": "OBJECT",
+      "object_type": "MESH",
+      "material_slot_count": 0,
+      "modifier_count": 0,
+      "collection_names": [
+        "Collection"
+      ],
+      "blend_file_path": null,
+      "blend_file_unsaved": true,
+      "analysis_source": "ORIGINAL_MESH_DATABLOCK",
+      "modifiers_evaluated": false
+    },
+    "geometry": {
+      "vertex_count": 55271,
+      "edge_count": 165807,
+      "polygon_count": 110538,
+      "triangle_count": 110538,
+      "loop_count": 331614,
+      "material_slot_count": 0,
+      "modifier_count": 0,
+      "metric_source": "ORIGINAL_MESH_DATABLOCK",
+      "triangle_source": "ORIGINAL_MESH_LOOP_TRIANGLES"
+    },
+    "dimensions": {
+      "width_mm": 22772.998809814453,
+      "depth_mm": 12269.769668579102,
+      "height_mm": 16864.620208740234,
+      "unit_system": "METRIC",
+      "scene_scale_length": 1.0,
+      "millimetres_per_blender_unit": 1000.0,
+      "source": "WORLD_SPACE_AXIS_ALIGNED_BOUNDING_BOX"
+    },
+    "transforms": {
+      "location_applied": true,
+      "rotation_applied": true,
+      "scale_applied": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "tolerance": 1e-06
+    },
+    "topology": {
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "manifold_edges": 165807,
+      "high_incidence_non_manifold_edges": 0,
+      "loose_vertices": 0,
+      "loose_edges": 0,
+      "zero_length_edges": 0,
+      "degenerate_faces": 0,
+      "connected_components": 1,
+      "disconnected_shells": 0,
+      "face_shell_count": 1,
+      "potential_duplicate_vertices": 0,
+      "duplicate_evaluation_status": "COMPLETED",
+      "edge_manifold_state": "MANIFOLD",
+      "vertex_manifold_state": "MANIFOLD",
+      "vertex_manifold_anomalies": 0,
+      "watertight_state": "TOPOLOGICALLY_WATERTIGHT",
+      "watertight_detail": "Topologically watertight. This is not a printability guarantee.",
+      "normal_consistency": "CONSISTENT",
+      "normal_consistency_detail": "All evaluated two-face adjacencies use opposite shared-edge winding."
+    },
+    "surface_volume": {
+      "surface_area_status": "COMPLETED",
+      "total_surface_area_mm2": 1108446430.2469337,
+      "volume_status": "COMPLETED",
+      "reliable_closed_shell_volume_mm3": 1580864147447.184,
+      "reliable_volume_shell_count": 1,
+      "unavailable_volume_shell_count": 0,
+      "detail": "Reliable total includes only closed, orientation-consistent shells."
+    },
+    "shells": [
+      {
+        "shell_id": 0,
+        "face_count": 110538,
+        "triangle_count": 110538,
+        "vertex_count": 55271,
+        "edge_count": 165807,
+        "boundary_edge_count": 0,
+        "non_manifold_edge_count": 0,
+        "bbox_min_mm": [
+          -9913.399696350098,
+          -4369.78006362915,
+          -7941.760063171387
+        ],
+        "bbox_max_mm": [
+          12859.600067138672,
+          7899.990081787109,
+          8922.860145568848
+        ],
+        "dimensions_mm": [
+          22772.998809814453,
+          12269.769668579102,
+          16864.620208740234
+        ],
+        "surface_area_mm2": 1108446430.2469337,
+        "signed_volume_mm3": 1580864147447.184,
+        "absolute_volume_mm3": 1580864147447.184,
+        "volume_status": "COMPLETED",
+        "centroid_mm": [
+          -0.029185754101490602,
+          0.38503616815432906,
+          0.0026401307877677027
+        ],
+        "watertight_state": "TOPOLOGICALLY_WATERTIGHT",
+        "orientation_consistency": "CONSISTENT",
+        "orientation_state": "OUTWARD",
+        "relative_volume_percent": 100.0,
+        "relative_surface_area_percent": 100.0,
+        "classification": "MAIN_SHELL",
+        "tiny_shell_candidate": false,
+        "tiny_criteria_evaluated": [],
+        "tiny_criteria_matched": [],
+        "classification_confidence": "NONE",
+        "containing_shell_id": null,
+        "diagnostic_notes": [
+          "Positive signed volume is OUTWARD; negative signed volume is INWARD."
+        ],
+        "check_statuses": [
+          {
+            "name": "watertightness",
+            "status": "COMPLETED",
+            "message": "TOPOLOGICALLY_WATERTIGHT",
+            "duration_ms": 0.0,
+            "actual_size": null,
+            "configured_limit": null
+          },
+          {
+            "name": "orientation",
+            "status": "COMPLETED",
+            "message": "OUTWARD",
+            "duration_ms": 0.0,
+            "actual_size": null,
+            "configured_limit": null
+          },
+          {
+            "name": "volume",
+            "status": "COMPLETED",
+            "message": "Positive signed volume is OUTWARD; negative signed volume is INWARD.",
+            "duration_ms": 0.0,
+            "actual_size": null,
+            "configured_limit": null
+          }
+        ]
+      }
+    ],
+    "main_shell_id": 0,
+    "tiny_shell_candidate_ids": [],
+    "disconnected_external_shell_ids": [],
+    "possible_internal_shell_ids": [],
+    "build_volume": {
+      "status": "NOT_APPLICABLE",
+      "fit_state": "NO_PROFILE",
+      "printer_profile": "NONE",
+      "model_dimensions_mm": [
+        22772.998809814453,
+        12269.769668579102,
+        16864.620208740234
+      ],
+      "build_dimensions_mm": null,
+      "fits_x": null,
+      "fits_y": null,
+      "fits_z": null,
+      "overall_fit": null,
+      "excess_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "maximum_uniform_scale_percent": null,
+      "current_orientation_only": true,
+      "message": "No printer build-volume profile is selected."
+    },
+    "deep_diagnostics": {
+      "self_intersection_status": "NOT_APPLICABLE",
+      "self_intersection_state": "NOT_EVALUATED",
+      "self_intersection_candidate_count": null,
+      "self_intersection_pairs": [],
+      "self_intersection_evidence_truncated": false,
+      "containment_status": "NOT_APPLICABLE",
+      "possible_internal_shell_ids": [],
+      "containment_evidence": [],
+      "notes": [
+        "Deep diagnostics were not requested by the Standard profile."
+      ]
+    },
+    "issue_evidence": [
+      {
+        "category": "BOUNDARY_EDGES",
+        "domain": "EDGE",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": ""
+      },
+      {
+        "category": "LOOSE_EDGES",
+        "domain": "EDGE",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": ""
+      },
+      {
+        "category": "LOOSE_VERTICES",
+        "domain": "VERTEX",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": ""
+      },
+      {
+        "category": "HIGH_INCIDENCE_EDGES",
+        "domain": "EDGE",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": ""
+      },
+      {
+        "category": "VERTEX_MANIFOLD_ANOMALIES",
+        "domain": "VERTEX",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": ""
+      },
+      {
+        "category": "ZERO_LENGTH_EDGES",
+        "domain": "EDGE",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": ""
+      },
+      {
+        "category": "DEGENERATE_FACES",
+        "domain": "FACE",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": ""
+      },
+      {
+        "category": "INCONSISTENT_FACES",
+        "domain": "FACE",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": ""
+      },
+      {
+        "category": "INCONSISTENT_SHARED_EDGES",
+        "domain": "EDGE",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": ""
+      },
+      {
+        "category": "TINY_SHELL_FACES",
+        "domain": "FACE",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": "Candidate classification requires at least two configured criteria; separate ornaments may be intentional."
+      },
+      {
+        "category": "POSSIBLE_INTERNAL_SHELL_FACES",
+        "domain": "FACE",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": "Deep diagnostics were not requested by the Standard profile."
+      },
+      {
+        "category": "SELF_INTERSECTION_FACES",
+        "domain": "FACE",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": "Deep diagnostics were not requested by the Standard profile."
+      }
+    ],
+    "checks": [
+      {
+        "name": "mesh_input",
+        "status": "COMPLETED",
+        "message": "Active original mesh datablock is valid.",
+        "duration_ms": 0.0,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "object_metadata",
+        "status": "COMPLETED",
+        "message": "Object metadata and topology signature collected.",
+        "duration_ms": 634.3169000028865,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "geometry_metrics",
+        "status": "COMPLETED",
+        "message": "World-space geometry and original-mesh triangle metrics collected.",
+        "duration_ms": 837.7290999997058,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "base_topology",
+        "status": "COMPLETED",
+        "message": "Face-edge incidence collected from the original mesh.",
+        "duration_ms": 1612.2452999989036,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "edge_manifold_classification",
+        "status": "COMPLETED",
+        "message": "Every edge was classified by linked-face count.",
+        "duration_ms": 157.29680000367807,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "vertex_manifold_classification",
+        "status": "COMPLETED",
+        "message": "Local face-fan connectivity evaluated at every incident vertex.",
+        "duration_ms": 1101.9530999983544,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "shell_decomposition",
+        "status": "COMPLETED",
+        "message": "Found 1 face-connected shell(s).",
+        "duration_ms": 145.7663999972283,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "orientation_consistency",
+        "status": "COMPLETED",
+        "message": "All evaluated two-face adjacencies use opposite shared-edge winding.",
+        "duration_ms": 157.29680000367807,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "potential_duplicates",
+        "status": "COMPLETED",
+        "message": "Spatial-hash duplicate-position check completed in object-local coordinates.",
+        "duration_ms": 746.2917000011657,
+        "actual_size": 55271,
+        "configured_limit": 500000
+      },
+      {
+        "name": "surface_area",
+        "status": "COMPLETED",
+        "message": "World-space triangle surface area calculated in mm^2.",
+        "duration_ms": 41.79650000151014,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "volume",
+        "status": "COMPLETED",
+        "message": "Signed volume evaluated only for closed orientation-consistent shells.",
+        "duration_ms": 134.49000000400702,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "tiny_shell_classification",
+        "status": "COMPLETED",
+        "message": "0 tiny-shell candidate(s) found using combined criteria.",
+        "duration_ms": 0.057999997807201,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "build_volume",
+        "status": "NOT_APPLICABLE",
+        "message": "No printer build-volume profile is selected.",
+        "duration_ms": 0.02510000194888562,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "self_intersection_candidates",
+        "status": "NOT_APPLICABLE",
+        "message": "Deep diagnostics were not requested by the Standard profile.",
+        "duration_ms": 0.0,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "containment_analysis",
+        "status": "NOT_APPLICABLE",
+        "message": "Deep diagnostics were not requested by the Standard profile.",
+        "duration_ms": 0.0,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "read_only_state",
+        "status": "COMPLETED",
+        "message": "Relevant object, mesh, transform, mode, and selection state remained unchanged.",
+        "duration_ms": 0.0,
+        "actual_size": null,
+        "configured_limit": null
+      }
+    ],
+    "timings": [
+      {
+        "name": "object_metadata",
+        "status": "COMPLETED",
+        "duration_ms": 634.3169000028865,
+        "detail": ""
+      },
+      {
+        "name": "geometry_metrics",
+        "status": "COMPLETED",
+        "duration_ms": 837.7290999997058,
+        "detail": ""
+      },
+      {
+        "name": "base_topology",
+        "status": "COMPLETED",
+        "duration_ms": 1612.2452999989036,
+        "detail": "Face-edge incidence collected."
+      },
+      {
+        "name": "edge_manifold_classification",
+        "status": "COMPLETED",
+        "duration_ms": 157.29680000367807,
+        "detail": ""
+      },
+      {
+        "name": "topology_defects",
+        "status": "COMPLETED",
+        "duration_ms": 1002.0973999999114,
+        "detail": ""
+      },
+      {
+        "name": "vertex_manifold_classification",
+        "status": "COMPLETED",
+        "duration_ms": 1101.9530999983544,
+        "detail": ""
+      },
+      {
+        "name": "shell_decomposition",
+        "status": "COMPLETED",
+        "duration_ms": 145.7663999972283,
+        "detail": ""
+      },
+      {
+        "name": "orientation_consistency",
+        "status": "COMPLETED",
+        "duration_ms": 157.29680000367807,
+        "detail": "All evaluated two-face adjacencies use opposite shared-edge winding."
+      },
+      {
+        "name": "duplicate_position_detection",
+        "status": "COMPLETED",
+        "duration_ms": 746.2917000011657,
+        "detail": "Spatial-hash duplicate-position check completed in object-local coordinates."
+      },
+      {
+        "name": "surface_area",
+        "status": "COMPLETED",
+        "duration_ms": 41.79650000151014,
+        "detail": ""
+      },
+      {
+        "name": "volume",
+        "status": "COMPLETED",
+        "duration_ms": 134.49000000400702,
+        "detail": ""
+      },
+      {
+        "name": "shell_metrics",
+        "status": "COMPLETED",
+        "duration_ms": 255.92409999808297,
+        "detail": ""
+      },
+      {
+        "name": "tiny_shell_classification",
+        "status": "COMPLETED",
+        "duration_ms": 0.057999997807201,
+        "detail": ""
+      },
+      {
+        "name": "build_volume_evaluation",
+        "status": "NOT_APPLICABLE",
+        "duration_ms": 0.02510000194888562,
+        "detail": "No printer build-volume profile is selected."
+      },
+      {
+        "name": "self_intersection_candidate_detection",
+        "status": "NOT_APPLICABLE",
+        "duration_ms": 0.0,
+        "detail": "Deep diagnostics were not requested by the Standard profile."
+      },
+      {
+        "name": "containment_analysis",
+        "status": "NOT_APPLICABLE",
+        "duration_ms": 0.0,
+        "detail": "Deep diagnostics were not requested by the Standard profile."
+      },
+      {
+        "name": "total_analysis",
+        "status": "COMPLETED",
+        "duration_ms": 6724.801100004697,
+        "detail": ""
+      }
+    ],
+    "skipped_check_reasons": [],
+    "warnings": [],
+    "errors": []
+  },
+  "after_repair_analysis": {
+    "schema_version": "2.0",
+    "extension_version": "0.3.0-alpha.1",
+    "blender_version": "4.4.3",
+    "operating_system": "Windows 10",
+    "analyzed_at": "2026-07-26T09:43:23.056969+00:00",
+    "duration_ms": 6500.210799997149,
+    "severity": "PASS",
+    "summary": "Completed production mesh diagnostics with no review warnings.",
+    "analysis_id": "d9fed3fd-67da-4e4a-9523-8893f05b42d0",
+    "analysis_profile": "STANDARD",
+    "settings_snapshot": {
+      "analysis_profile": "STANDARD",
+      "duplicate_position_tolerance": 9.999999974752427e-07,
+      "duplicate_vertex_limit": 500000,
+      "degenerate_edge_tolerance": 9.999999717180685e-10,
+      "degenerate_face_tolerance": 1.000000045813705e-18,
+      "tiny_shell_max_face_count": 12,
+      "tiny_shell_max_volume_mm3": 1000.0,
+      "tiny_shell_max_relative_volume_percent": 0.5,
+      "tiny_shell_max_diagonal_mm": 10.0,
+      "maximum_stored_issue_indices": 10000,
+      "self_intersection_triangle_limit": 50000,
+      "maximum_stored_self_intersection_pairs": 10000,
+      "containment_shell_limit": 64,
+      "containment_triangle_limit": 100000,
+      "printer_profile": "NONE",
+      "build_volume_mm": null,
+      "extension_version": "0.3.0-alpha.1",
+      "blender_version": "4.4.3"
+    },
+    "topology_signature": {
+      "analysis_id": "d9fed3fd-67da-4e4a-9523-8893f05b42d0",
+      "object_name": "statue-danaid-rodin_Chroma3D_Repair",
+      "mesh_data_name": "statue-danaid-rodin_mesh_Chroma3D_Repair",
+      "vertex_count": 55271,
+      "edge_count": 165807,
+      "polygon_count": 110538,
+      "topology_sha256": "2333d489bbac6d0aaadcc73a5a61674d3c97839b1b6bee6063d16063e0b36ce1"
+    },
+    "object_metadata": {
+      "object_name": "statue-danaid-rodin_Chroma3D_Repair",
+      "mesh_data_name": "statue-danaid-rodin_mesh_Chroma3D_Repair",
+      "object_mode": "OBJECT",
+      "object_type": "MESH",
+      "material_slot_count": 0,
+      "modifier_count": 0,
+      "collection_names": [
+        "Collection"
+      ],
+      "blend_file_path": null,
+      "blend_file_unsaved": true,
+      "analysis_source": "ORIGINAL_MESH_DATABLOCK",
+      "modifiers_evaluated": false
+    },
+    "geometry": {
+      "vertex_count": 55271,
+      "edge_count": 165807,
+      "polygon_count": 110538,
+      "triangle_count": 110538,
+      "loop_count": 331614,
+      "material_slot_count": 0,
+      "modifier_count": 0,
+      "metric_source": "ORIGINAL_MESH_DATABLOCK",
+      "triangle_source": "ORIGINAL_MESH_LOOP_TRIANGLES"
+    },
+    "dimensions": {
+      "width_mm": 22772.998809814453,
+      "depth_mm": 12269.769668579102,
+      "height_mm": 16864.620208740234,
+      "unit_system": "METRIC",
+      "scene_scale_length": 1.0,
+      "millimetres_per_blender_unit": 1000.0,
+      "source": "WORLD_SPACE_AXIS_ALIGNED_BOUNDING_BOX"
+    },
+    "transforms": {
+      "location_applied": true,
+      "rotation_applied": true,
+      "scale_applied": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "tolerance": 1e-06
+    },
+    "topology": {
+      "non_manifold_edges": 0,
+      "boundary_edges": 0,
+      "manifold_edges": 165807,
+      "high_incidence_non_manifold_edges": 0,
+      "loose_vertices": 0,
+      "loose_edges": 0,
+      "zero_length_edges": 0,
+      "degenerate_faces": 0,
+      "connected_components": 1,
+      "disconnected_shells": 0,
+      "face_shell_count": 1,
+      "potential_duplicate_vertices": 0,
+      "duplicate_evaluation_status": "COMPLETED",
+      "edge_manifold_state": "MANIFOLD",
+      "vertex_manifold_state": "MANIFOLD",
+      "vertex_manifold_anomalies": 0,
+      "watertight_state": "TOPOLOGICALLY_WATERTIGHT",
+      "watertight_detail": "Topologically watertight. This is not a printability guarantee.",
+      "normal_consistency": "CONSISTENT",
+      "normal_consistency_detail": "All evaluated two-face adjacencies use opposite shared-edge winding."
+    },
+    "surface_volume": {
+      "surface_area_status": "COMPLETED",
+      "total_surface_area_mm2": 1108446430.2469337,
+      "volume_status": "COMPLETED",
+      "reliable_closed_shell_volume_mm3": 1580864147447.184,
+      "reliable_volume_shell_count": 1,
+      "unavailable_volume_shell_count": 0,
+      "detail": "Reliable total includes only closed, orientation-consistent shells."
+    },
+    "shells": [
+      {
+        "shell_id": 0,
+        "face_count": 110538,
+        "triangle_count": 110538,
+        "vertex_count": 55271,
+        "edge_count": 165807,
+        "boundary_edge_count": 0,
+        "non_manifold_edge_count": 0,
+        "bbox_min_mm": [
+          -9913.399696350098,
+          -4369.78006362915,
+          -7941.760063171387
+        ],
+        "bbox_max_mm": [
+          12859.600067138672,
+          7899.990081787109,
+          8922.860145568848
+        ],
+        "dimensions_mm": [
+          22772.998809814453,
+          12269.769668579102,
+          16864.620208740234
+        ],
+        "surface_area_mm2": 1108446430.2469337,
+        "signed_volume_mm3": 1580864147447.184,
+        "absolute_volume_mm3": 1580864147447.184,
+        "volume_status": "COMPLETED",
+        "centroid_mm": [
+          -0.029185754101490602,
+          0.38503616815432906,
+          0.0026401307877677027
+        ],
+        "watertight_state": "TOPOLOGICALLY_WATERTIGHT",
+        "orientation_consistency": "CONSISTENT",
+        "orientation_state": "OUTWARD",
+        "relative_volume_percent": 100.0,
+        "relative_surface_area_percent": 100.0,
+        "classification": "MAIN_SHELL",
+        "tiny_shell_candidate": false,
+        "tiny_criteria_evaluated": [],
+        "tiny_criteria_matched": [],
+        "classification_confidence": "NONE",
+        "containing_shell_id": null,
+        "diagnostic_notes": [
+          "Positive signed volume is OUTWARD; negative signed volume is INWARD."
+        ],
+        "check_statuses": [
+          {
+            "name": "watertightness",
+            "status": "COMPLETED",
+            "message": "TOPOLOGICALLY_WATERTIGHT",
+            "duration_ms": 0.0,
+            "actual_size": null,
+            "configured_limit": null
+          },
+          {
+            "name": "orientation",
+            "status": "COMPLETED",
+            "message": "OUTWARD",
+            "duration_ms": 0.0,
+            "actual_size": null,
+            "configured_limit": null
+          },
+          {
+            "name": "volume",
+            "status": "COMPLETED",
+            "message": "Positive signed volume is OUTWARD; negative signed volume is INWARD.",
+            "duration_ms": 0.0,
+            "actual_size": null,
+            "configured_limit": null
+          }
+        ]
+      }
+    ],
+    "main_shell_id": 0,
+    "tiny_shell_candidate_ids": [],
+    "disconnected_external_shell_ids": [],
+    "possible_internal_shell_ids": [],
+    "build_volume": {
+      "status": "NOT_APPLICABLE",
+      "fit_state": "NO_PROFILE",
+      "printer_profile": "NONE",
+      "model_dimensions_mm": [
+        22772.998809814453,
+        12269.769668579102,
+        16864.620208740234
+      ],
+      "build_dimensions_mm": null,
+      "fits_x": null,
+      "fits_y": null,
+      "fits_z": null,
+      "overall_fit": null,
+      "excess_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "maximum_uniform_scale_percent": null,
+      "current_orientation_only": true,
+      "message": "No printer build-volume profile is selected."
+    },
+    "deep_diagnostics": {
+      "self_intersection_status": "NOT_APPLICABLE",
+      "self_intersection_state": "NOT_EVALUATED",
+      "self_intersection_candidate_count": null,
+      "self_intersection_pairs": [],
+      "self_intersection_evidence_truncated": false,
+      "containment_status": "NOT_APPLICABLE",
+      "possible_internal_shell_ids": [],
+      "containment_evidence": [],
+      "notes": [
+        "Deep diagnostics were not requested by the Standard profile."
+      ]
+    },
+    "issue_evidence": [
+      {
+        "category": "BOUNDARY_EDGES",
+        "domain": "EDGE",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": ""
+      },
+      {
+        "category": "LOOSE_EDGES",
+        "domain": "EDGE",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": ""
+      },
+      {
+        "category": "LOOSE_VERTICES",
+        "domain": "VERTEX",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": ""
+      },
+      {
+        "category": "HIGH_INCIDENCE_EDGES",
+        "domain": "EDGE",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": ""
+      },
+      {
+        "category": "VERTEX_MANIFOLD_ANOMALIES",
+        "domain": "VERTEX",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": ""
+      },
+      {
+        "category": "ZERO_LENGTH_EDGES",
+        "domain": "EDGE",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": ""
+      },
+      {
+        "category": "DEGENERATE_FACES",
+        "domain": "FACE",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": ""
+      },
+      {
+        "category": "INCONSISTENT_FACES",
+        "domain": "FACE",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": ""
+      },
+      {
+        "category": "INCONSISTENT_SHARED_EDGES",
+        "domain": "EDGE",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": ""
+      },
+      {
+        "category": "TINY_SHELL_FACES",
+        "domain": "FACE",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": "Candidate classification requires at least two configured criteria; separate ornaments may be intentional."
+      },
+      {
+        "category": "POSSIBLE_INTERNAL_SHELL_FACES",
+        "domain": "FACE",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": "Deep diagnostics were not requested by the Standard profile."
+      },
+      {
+        "category": "SELF_INTERSECTION_FACES",
+        "domain": "FACE",
+        "total_count": 0,
+        "indices": [],
+        "pairs": [],
+        "truncated": false,
+        "evidence_cap": 10000,
+        "shell_id": null,
+        "note": "Deep diagnostics were not requested by the Standard profile."
+      }
+    ],
+    "checks": [
+      {
+        "name": "mesh_input",
+        "status": "COMPLETED",
+        "message": "Active original mesh datablock is valid.",
+        "duration_ms": 0.0,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "object_metadata",
+        "status": "COMPLETED",
+        "message": "Object metadata and topology signature collected.",
+        "duration_ms": 582.828900005552,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "geometry_metrics",
+        "status": "COMPLETED",
+        "message": "World-space geometry and original-mesh triangle metrics collected.",
+        "duration_ms": 707.5427999952808,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "base_topology",
+        "status": "COMPLETED",
+        "message": "Face-edge incidence collected from the original mesh.",
+        "duration_ms": 1634.9201999983052,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "edge_manifold_classification",
+        "status": "COMPLETED",
+        "message": "Every edge was classified by linked-face count.",
+        "duration_ms": 163.34379999898374,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "vertex_manifold_classification",
+        "status": "COMPLETED",
+        "message": "Local face-fan connectivity evaluated at every incident vertex.",
+        "duration_ms": 1130.103000003146,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "shell_decomposition",
+        "status": "COMPLETED",
+        "message": "Found 1 face-connected shell(s).",
+        "duration_ms": 149.5701999956509,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "orientation_consistency",
+        "status": "COMPLETED",
+        "message": "All evaluated two-face adjacencies use opposite shared-edge winding.",
+        "duration_ms": 163.34379999898374,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "potential_duplicates",
+        "status": "COMPLETED",
+        "message": "Spatial-hash duplicate-position check completed in object-local coordinates.",
+        "duration_ms": 698.9972000010312,
+        "actual_size": 55271,
+        "configured_limit": 500000
+      },
+      {
+        "name": "surface_area",
+        "status": "COMPLETED",
+        "message": "World-space triangle surface area calculated in mm^2.",
+        "duration_ms": 42.811899998923764,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "volume",
+        "status": "COMPLETED",
+        "message": "Signed volume evaluated only for closed orientation-consistent shells.",
+        "duration_ms": 133.4881000002497,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "tiny_shell_classification",
+        "status": "COMPLETED",
+        "message": "0 tiny-shell candidate(s) found using combined criteria.",
+        "duration_ms": 0.057900004321709275,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "build_volume",
+        "status": "NOT_APPLICABLE",
+        "message": "No printer build-volume profile is selected.",
+        "duration_ms": 0.029599999834317714,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "self_intersection_candidates",
+        "status": "NOT_APPLICABLE",
+        "message": "Deep diagnostics were not requested by the Standard profile.",
+        "duration_ms": 0.0,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "containment_analysis",
+        "status": "NOT_APPLICABLE",
+        "message": "Deep diagnostics were not requested by the Standard profile.",
+        "duration_ms": 0.0,
+        "actual_size": null,
+        "configured_limit": null
+      },
+      {
+        "name": "read_only_state",
+        "status": "COMPLETED",
+        "message": "Relevant object, mesh, transform, mode, and selection state remained unchanged.",
+        "duration_ms": 0.0,
+        "actual_size": null,
+        "configured_limit": null
+      }
+    ],
+    "timings": [
+      {
+        "name": "object_metadata",
+        "status": "COMPLETED",
+        "duration_ms": 582.828900005552,
+        "detail": ""
+      },
+      {
+        "name": "geometry_metrics",
+        "status": "COMPLETED",
+        "duration_ms": 707.5427999952808,
+        "detail": ""
+      },
+      {
+        "name": "base_topology",
+        "status": "COMPLETED",
+        "duration_ms": 1634.9201999983052,
+        "detail": "Face-edge incidence collected."
+      },
+      {
+        "name": "edge_manifold_classification",
+        "status": "COMPLETED",
+        "duration_ms": 163.34379999898374,
+        "detail": ""
+      },
+      {
+        "name": "topology_defects",
+        "status": "COMPLETED",
+        "duration_ms": 977.6773999983561,
+        "detail": ""
+      },
+      {
+        "name": "vertex_manifold_classification",
+        "status": "COMPLETED",
+        "duration_ms": 1130.103000003146,
+        "detail": ""
+      },
+      {
+        "name": "shell_decomposition",
+        "status": "COMPLETED",
+        "duration_ms": 149.5701999956509,
+        "detail": ""
+      },
+      {
+        "name": "orientation_consistency",
+        "status": "COMPLETED",
+        "duration_ms": 163.34379999898374,
+        "detail": "All evaluated two-face adjacencies use opposite shared-edge winding."
+      },
+      {
+        "name": "duplicate_position_detection",
+        "status": "COMPLETED",
+        "duration_ms": 698.9972000010312,
+        "detail": "Spatial-hash duplicate-position check completed in object-local coordinates."
+      },
+      {
+        "name": "surface_area",
+        "status": "COMPLETED",
+        "duration_ms": 42.811899998923764,
+        "detail": ""
+      },
+      {
+        "name": "volume",
+        "status": "COMPLETED",
+        "duration_ms": 133.4881000002497,
+        "detail": ""
+      },
+      {
+        "name": "shell_metrics",
+        "status": "COMPLETED",
+        "duration_ms": 224.44090000499273,
+        "detail": ""
+      },
+      {
+        "name": "tiny_shell_classification",
+        "status": "COMPLETED",
+        "duration_ms": 0.057900004321709275,
+        "detail": ""
+      },
+      {
+        "name": "build_volume_evaluation",
+        "status": "NOT_APPLICABLE",
+        "duration_ms": 0.029599999834317714,
+        "detail": "No printer build-volume profile is selected."
+      },
+      {
+        "name": "self_intersection_candidate_detection",
+        "status": "NOT_APPLICABLE",
+        "duration_ms": 0.0,
+        "detail": "Deep diagnostics were not requested by the Standard profile."
+      },
+      {
+        "name": "containment_analysis",
+        "status": "NOT_APPLICABLE",
+        "duration_ms": 0.0,
+        "detail": "Deep diagnostics were not requested by the Standard profile."
+      },
+      {
+        "name": "total_analysis",
+        "status": "COMPLETED",
+        "duration_ms": 6500.210799997149,
+        "detail": ""
+      }
+    ],
+    "skipped_check_reasons": [],
+    "warnings": [],
+    "errors": []
+  },
+  "repair_plan": {
+    "initial": {
+      "plan_id": "f5173661-8f6b-425d-a971-894b463b62cd",
+      "session_id": "07f34605-a03c-43b0-9fd1-5aed77db887a",
+      "created_at": "2026-07-26T09:43:20.282492+00:00",
+      "status": "READY",
+      "workspace_signature": "1b2486a8c9cf1eea232a8b4960ba3488297f84745c77226355214aed2c644454",
+      "source_signature": "917e154072607b33392a6d597ed8b4f289147db71b11dc90b4c15e69d3a99dc6",
+      "analysis_id": "760ecbf6-ecb9-4209-871a-d923d3415c2a",
+      "selected_profile": "STANDARD",
+      "settings_snapshot": {
+        "merge_distance_mm": 0.0010000000474974513,
+        "zero_length_edge_tolerance_mm": 9.999999974752427e-07,
+        "degenerate_face_area_tolerance_mm2": 9.99999993922529e-09,
+        "maximum_stored_candidate_indices": 10000,
+        "maximum_repair_checkpoints": 3,
+        "small_hole_maximum_edge_count": 12,
+        "small_hole_maximum_perimeter_mm": 2.0,
+        "small_hole_maximum_diagonal_mm": 1.0,
+        "tiny_shell_requires_selection": true,
+        "hole_fill_requires_selection": true,
+        "normal_repair_requires_selection": true
+      },
+      "items": [
+        {
+          "operation_type": "MERGE_DUPLICATE_VERTICES",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No nearby duplicate vertices detected.",
+          "estimated_target_count": 0,
+          "warnings": []
+        },
+        {
+          "operation_type": "COLLAPSE_ZERO_LENGTH_EDGES",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No zero-length edges detected.",
+          "estimated_target_count": 0,
+          "warnings": []
+        },
+        {
+          "operation_type": "REMOVE_DEGENERATE_FACES",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No degenerate faces detected.",
+          "estimated_target_count": 0,
+          "warnings": [
+            "Loose geometry created by face removal is retained unless loose cleanup is selected."
+          ]
+        },
+        {
+          "operation_type": "REMOVE_LOOSE_GEOMETRY",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No loose geometry detected.",
+          "estimated_target_count": 0,
+          "warnings": []
+        },
+        {
+          "operation_type": "REMOVE_SELECTED_TINY_SHELLS",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No tiny-shell candidates detected.",
+          "estimated_target_count": 0,
+          "warnings": []
+        },
+        {
+          "operation_type": "FILL_SELECTED_SMALL_HOLES",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No eligible bounded small holes detected.",
+          "estimated_target_count": 0,
+          "warnings": []
+        },
+        {
+          "operation_type": "REPAIR_NORMAL_CONSISTENCY",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No inconsistent face orientation detected.",
+          "estimated_target_count": 0,
+          "warnings": []
+        },
+        {
+          "operation_type": "ORIENT_CLOSED_SHELLS_OUTWARD",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No inward valid closed shell detected.",
+          "estimated_target_count": 0,
+          "warnings": []
+        }
+      ],
+      "candidates": [],
+      "warnings": [
+        "Candidate removal and filling are never preselected.",
+        "Normal repair and shell orientation require explicit selection."
+      ],
+      "limitations": [
+        "Repair candidates are evidence-based and require human review.",
+        "The plan is session-only and becomes stale after geometry changes."
+      ]
+    },
+    "canonical": {
+      "plan_id": "6b62bf27-5a9c-4668-b0b5-2cb7ef147f87",
+      "session_id": "07f34605-a03c-43b0-9fd1-5aed77db887a",
+      "created_at": "2026-07-26T09:43:34.024160+00:00",
+      "status": "READY",
+      "workspace_signature": "8e1c4c6b4bc27b260ca225a47a23e6de18370244b74abe375c23b4cbc32ae907",
+      "source_signature": "917e154072607b33392a6d597ed8b4f289147db71b11dc90b4c15e69d3a99dc6",
+      "analysis_id": "d9fed3fd-67da-4e4a-9523-8893f05b42d0",
+      "selected_profile": "STANDARD",
+      "settings_snapshot": {
+        "merge_distance_mm": 0.0010000000474974513,
+        "zero_length_edge_tolerance_mm": 9.999999974752427e-07,
+        "degenerate_face_area_tolerance_mm2": 9.99999993922529e-09,
+        "maximum_stored_candidate_indices": 10000,
+        "maximum_repair_checkpoints": 3,
+        "small_hole_maximum_edge_count": 12,
+        "small_hole_maximum_perimeter_mm": 2.0,
+        "small_hole_maximum_diagonal_mm": 1.0,
+        "tiny_shell_requires_selection": true,
+        "hole_fill_requires_selection": true,
+        "normal_repair_requires_selection": true
+      },
+      "items": [
+        {
+          "operation_type": "MERGE_DUPLICATE_VERTICES",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No nearby duplicate vertices detected.",
+          "estimated_target_count": 0,
+          "warnings": []
+        },
+        {
+          "operation_type": "COLLAPSE_ZERO_LENGTH_EDGES",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No zero-length edges detected.",
+          "estimated_target_count": 0,
+          "warnings": []
+        },
+        {
+          "operation_type": "REMOVE_DEGENERATE_FACES",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No degenerate faces detected.",
+          "estimated_target_count": 0,
+          "warnings": [
+            "Loose geometry created by face removal is retained unless loose cleanup is selected."
+          ]
+        },
+        {
+          "operation_type": "REMOVE_LOOSE_GEOMETRY",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No loose geometry detected.",
+          "estimated_target_count": 0,
+          "warnings": []
+        },
+        {
+          "operation_type": "REMOVE_SELECTED_TINY_SHELLS",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No tiny-shell candidates detected.",
+          "estimated_target_count": 0,
+          "warnings": []
+        },
+        {
+          "operation_type": "FILL_SELECTED_SMALL_HOLES",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No eligible bounded small holes detected.",
+          "estimated_target_count": 0,
+          "warnings": []
+        },
+        {
+          "operation_type": "REPAIR_NORMAL_CONSISTENCY",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No inconsistent face orientation detected.",
+          "estimated_target_count": 0,
+          "warnings": []
+        },
+        {
+          "operation_type": "ORIENT_CLOSED_SHELLS_OUTWARD",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No inward valid closed shell detected.",
+          "estimated_target_count": 0,
+          "warnings": []
+        }
+      ],
+      "candidates": [],
+      "warnings": [
+        "Candidate removal and filling are never preselected.",
+        "Normal repair and shell orientation require explicit selection."
+      ],
+      "limitations": [
+        "Repair candidates are evidence-based and require human review.",
+        "The plan is session-only and becomes stale after geometry changes."
+      ]
+    },
+    "rollback_probe": {
+      "plan_id": "d2dee548-24c3-43fc-8d60-d4d5474807fe",
+      "session_id": "6ccd107c-7cff-442e-9cd9-da967ae96905",
+      "created_at": "2026-07-26T09:43:56.499566+00:00",
+      "status": "READY",
+      "workspace_signature": "b5bacc0274534bab3b307f28b143f2907f65a4d193935867377f60dce50ddb1f",
+      "source_signature": "917e154072607b33392a6d597ed8b4f289147db71b11dc90b4c15e69d3a99dc6",
+      "analysis_id": "e05e48b3-8a1e-469f-86c0-af9d00463575",
+      "selected_profile": "STANDARD",
+      "settings_snapshot": {
+        "merge_distance_mm": 0.0010000000474974513,
+        "zero_length_edge_tolerance_mm": 9.999999974752427e-07,
+        "degenerate_face_area_tolerance_mm2": 9.99999993922529e-09,
+        "maximum_stored_candidate_indices": 10000,
+        "maximum_repair_checkpoints": 3,
+        "small_hole_maximum_edge_count": 12,
+        "small_hole_maximum_perimeter_mm": 2.0,
+        "small_hole_maximum_diagonal_mm": 1.0,
+        "tiny_shell_requires_selection": true,
+        "hole_fill_requires_selection": true,
+        "normal_repair_requires_selection": true
+      },
+      "items": [
+        {
+          "operation_type": "MERGE_DUPLICATE_VERTICES",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No nearby duplicate vertices detected.",
+          "estimated_target_count": 0,
+          "warnings": []
+        },
+        {
+          "operation_type": "COLLAPSE_ZERO_LENGTH_EDGES",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No zero-length edges detected.",
+          "estimated_target_count": 0,
+          "warnings": []
+        },
+        {
+          "operation_type": "REMOVE_DEGENERATE_FACES",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No degenerate faces detected.",
+          "estimated_target_count": 0,
+          "warnings": [
+            "Loose geometry created by face removal is retained unless loose cleanup is selected."
+          ]
+        },
+        {
+          "operation_type": "REMOVE_LOOSE_GEOMETRY",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No loose geometry detected.",
+          "estimated_target_count": 0,
+          "warnings": []
+        },
+        {
+          "operation_type": "REMOVE_SELECTED_TINY_SHELLS",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No tiny-shell candidates detected.",
+          "estimated_target_count": 0,
+          "warnings": []
+        },
+        {
+          "operation_type": "FILL_SELECTED_SMALL_HOLES",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No eligible bounded small holes detected.",
+          "estimated_target_count": 0,
+          "warnings": []
+        },
+        {
+          "operation_type": "REPAIR_NORMAL_CONSISTENCY",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No inconsistent face orientation detected.",
+          "estimated_target_count": 0,
+          "warnings": []
+        },
+        {
+          "operation_type": "ORIENT_CLOSED_SHELLS_OUTWARD",
+          "recommended": false,
+          "selected": false,
+          "recommendation_reason": "No inward valid closed shell detected.",
+          "estimated_target_count": 0,
+          "warnings": []
+        }
+      ],
+      "candidates": [],
+      "warnings": [
+        "Candidate removal and filling are never preselected.",
+        "Normal repair and shell orientation require explicit selection."
+      ],
+      "limitations": [
+        "Repair candidates are evidence-based and require human review.",
+        "The plan is session-only and becomes stale after geometry changes."
+      ]
+    }
+  },
+  "repair_report": {
+    "schema_version": "1.0",
+    "extension_version": "0.3.0-alpha.1",
+    "analysis_schema_version": "2.0",
+    "blender_version": "4.4.3",
+    "operating_system": "Windows 10",
+    "exported_at": "2026-07-26T09:43:43.466573+00:00",
+    "session": {
+      "before_analysis": {
+        "analysis_id": "760ecbf6-ecb9-4209-871a-d923d3415c2a",
+        "analyzed_at": "2026-07-26T09:43:09.250864+00:00",
+        "build_volume": {
+          "build_dimensions_mm": null,
+          "current_orientation_only": true,
+          "excess_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fit_state": "NO_PROFILE",
+          "fits_x": null,
+          "fits_y": null,
+          "fits_z": null,
+          "maximum_uniform_scale_percent": null,
+          "message": "No printer build-volume profile is selected.",
+          "model_dimensions_mm": [
+            22772.998809814453,
+            12269.769668579102,
+            16864.620208740234
+          ],
+          "overall_fit": null,
+          "printer_profile": "NONE",
+          "status": "NOT_APPLICABLE"
+        },
+        "checks": [
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 0.0,
+            "message": "Active original mesh datablock is valid.",
+            "name": "mesh_input",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 574.4879999983823,
+            "message": "Object metadata and topology signature collected.",
+            "name": "object_metadata",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 690.1489999945625,
+            "message": "World-space geometry and original-mesh triangle metrics collected.",
+            "name": "geometry_metrics",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 1702.8776000006474,
+            "message": "Face-edge incidence collected from the original mesh.",
+            "name": "base_topology",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 170.6551000024774,
+            "message": "Every edge was classified by linked-face count.",
+            "name": "edge_manifold_classification",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 1110.2853999982472,
+            "message": "Local face-fan connectivity evaluated at every incident vertex.",
+            "name": "vertex_manifold_classification",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 148.36749999813037,
+            "message": "Found 1 face-connected shell(s).",
+            "name": "shell_decomposition",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 170.6551000024774,
+            "message": "All evaluated two-face adjacencies use opposite shared-edge winding.",
+            "name": "orientation_consistency",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": 55271,
+            "configured_limit": 500000,
+            "duration_ms": 711.3262999992003,
+            "message": "Spatial-hash duplicate-position check completed in object-local coordinates.",
+            "name": "potential_duplicates",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 40.745300000708085,
+            "message": "World-space triangle surface area calculated in mm^2.",
+            "name": "surface_area",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 134.21809999999823,
+            "message": "Signed volume evaluated only for closed orientation-consistent shells.",
+            "name": "volume",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 0.055000004067551345,
+            "message": "0 tiny-shell candidate(s) found using combined criteria.",
+            "name": "tiny_shell_classification",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 0.02099999983329326,
+            "message": "No printer build-volume profile is selected.",
+            "name": "build_volume",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 0.0,
+            "message": "Deep diagnostics were not requested by the Standard profile.",
+            "name": "self_intersection_candidates",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 0.0,
+            "message": "Deep diagnostics were not requested by the Standard profile.",
+            "name": "containment_analysis",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 0.0,
+            "message": "Relevant object, mesh, transform, mode, and selection state remained unchanged.",
+            "name": "read_only_state",
+            "status": "COMPLETED"
+          }
+        ],
+        "dimensions": {
+          "depth_mm": 12269.769668579102,
+          "height_mm": 16864.620208740234,
+          "millimetres_per_blender_unit": 1000.0,
+          "scene_scale_length": 1.0,
+          "source": "WORLD_SPACE_AXIS_ALIGNED_BOUNDING_BOX",
+          "unit_system": "METRIC",
+          "width_mm": 22772.998809814453
+        },
+        "duration_ms": 6535.052400002314,
+        "errors": [],
+        "geometry": {
+          "edge_count": 165807,
+          "loop_count": 331614,
+          "material_slot_count": 0,
+          "metric_source": "ORIGINAL_MESH_DATABLOCK",
+          "modifier_count": 0,
+          "polygon_count": 110538,
+          "triangle_count": 110538,
+          "triangle_source": "ORIGINAL_MESH_LOOP_TRIANGLES",
+          "vertex_count": 55271
+        },
+        "severity": "PASS",
+        "shell_count": 1,
+        "surface_volume": {
+          "detail": "Reliable total includes only closed, orientation-consistent shells.",
+          "reliable_closed_shell_volume_mm3": 1580864147447.184,
+          "reliable_volume_shell_count": 1,
+          "surface_area_status": "COMPLETED",
+          "total_surface_area_mm2": 1108446430.2469337,
+          "unavailable_volume_shell_count": 0,
+          "volume_status": "COMPLETED"
+        },
+        "tiny_shell_candidate_ids": [],
+        "topology": {
+          "boundary_edges": 0,
+          "connected_components": 1,
+          "degenerate_faces": 0,
+          "disconnected_shells": 0,
+          "duplicate_evaluation_status": "COMPLETED",
+          "edge_manifold_state": "MANIFOLD",
+          "face_shell_count": 1,
+          "high_incidence_non_manifold_edges": 0,
+          "loose_edges": 0,
+          "loose_vertices": 0,
+          "manifold_edges": 165807,
+          "non_manifold_edges": 0,
+          "normal_consistency": "CONSISTENT",
+          "normal_consistency_detail": "All evaluated two-face adjacencies use opposite shared-edge winding.",
+          "potential_duplicate_vertices": 0,
+          "vertex_manifold_anomalies": 0,
+          "vertex_manifold_state": "MANIFOLD",
+          "watertight_detail": "Topologically watertight. This is not a printability guarantee.",
+          "watertight_state": "TOPOLOGICALLY_WATERTIGHT",
+          "zero_length_edges": 0
+        },
+        "warnings": []
+      },
+      "captured_active_identity": 1645778707464,
+      "captured_selected_identities": [
+        1645778707464
+      ],
+      "checkpoint_records": [
+        {
+          "checkpoint_id": "82c14252-e825-432b-8e64-54ba7aeff8d4",
+          "created_at": "2026-07-26T09:43:08.560712+00:00",
+          "edge_count": 165807,
+          "face_count": 110538,
+          "initial": true,
+          "mesh_datablock_identity": 1645735328008,
+          "operation_id": "INITIAL",
+          "retained": false,
+          "vertex_count": 55271,
+          "workspace_signature": "1b2486a8c9cf1eea232a8b4960ba3488297f84745c77226355214aed2c644454"
+        }
+      ],
+      "comparison": null,
+      "current_analysis_id": "574bd10f-893b-4027-9d2d-2b7d2f236d30",
+      "current_workspace_signature": "7305aa4d6370a0c24e6a8b98eb2d3c8cd809f7e60c53484edcf8dad8ca905e8a",
+      "decision": "ACCEPTED",
+      "ended_at": "2026-07-26T09:43:43.466573+00:00",
+      "errors": [],
+      "final_analysis": {
+        "analysis_id": "574bd10f-893b-4027-9d2d-2b7d2f236d30",
+        "analyzed_at": "2026-07-26T09:43:35.535330+00:00",
+        "build_volume": {
+          "build_dimensions_mm": null,
+          "current_orientation_only": true,
+          "excess_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fit_state": "NO_PROFILE",
+          "fits_x": null,
+          "fits_y": null,
+          "fits_z": null,
+          "maximum_uniform_scale_percent": null,
+          "message": "No printer build-volume profile is selected.",
+          "model_dimensions_mm": [
+            22772.998809814453,
+            12269.769668579102,
+            16864.620208740234
+          ],
+          "overall_fit": null,
+          "printer_profile": "NONE",
+          "status": "NOT_APPLICABLE"
+        },
+        "checks": [
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 0.0,
+            "message": "Active original mesh datablock is valid.",
+            "name": "mesh_input",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 574.8787999982596,
+            "message": "Object metadata and topology signature collected.",
+            "name": "object_metadata",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 732.7479000014137,
+            "message": "World-space geometry and original-mesh triangle metrics collected.",
+            "name": "geometry_metrics",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 1644.9806000018725,
+            "message": "Face-edge incidence collected from the original mesh.",
+            "name": "base_topology",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 165.38860000582645,
+            "message": "Every edge was classified by linked-face count.",
+            "name": "edge_manifold_classification",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 1112.0230000015,
+            "message": "Local face-fan connectivity evaluated at every incident vertex.",
+            "name": "vertex_manifold_classification",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 151.8357999957516,
+            "message": "Found 1 face-connected shell(s).",
+            "name": "shell_decomposition",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 165.38860000582645,
+            "message": "All evaluated two-face adjacencies use opposite shared-edge winding.",
+            "name": "orientation_consistency",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": 55271,
+            "configured_limit": 500000,
+            "duration_ms": 677.7566000018851,
+            "message": "Spatial-hash duplicate-position check completed in object-local coordinates.",
+            "name": "potential_duplicates",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 40.73190000053728,
+            "message": "World-space triangle surface area calculated in mm^2.",
+            "name": "surface_area",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 133.5648999956902,
+            "message": "Signed volume evaluated only for closed orientation-consistent shells.",
+            "name": "volume",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 0.05609999789157882,
+            "message": "0 tiny-shell candidate(s) found using combined criteria.",
+            "name": "tiny_shell_classification",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 0.02149999636458233,
+            "message": "No printer build-volume profile is selected.",
+            "name": "build_volume",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 0.0,
+            "message": "Deep diagnostics were not requested by the Standard profile.",
+            "name": "self_intersection_candidates",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 0.0,
+            "message": "Deep diagnostics were not requested by the Standard profile.",
+            "name": "containment_analysis",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 0.0,
+            "message": "Relevant object, mesh, transform, mode, and selection state remained unchanged.",
+            "name": "read_only_state",
+            "status": "COMPLETED"
+          }
+        ],
+        "dimensions": {
+          "depth_mm": 12269.769668579102,
+          "height_mm": 16864.620208740234,
+          "millimetres_per_blender_unit": 1000.0,
+          "scene_scale_length": 1.0,
+          "source": "WORLD_SPACE_AXIS_ALIGNED_BOUNDING_BOX",
+          "unit_system": "METRIC",
+          "width_mm": 22772.998809814453
+        },
+        "duration_ms": 6477.400900002976,
+        "errors": [],
+        "geometry": {
+          "edge_count": 165807,
+          "loop_count": 331614,
+          "material_slot_count": 0,
+          "metric_source": "ORIGINAL_MESH_DATABLOCK",
+          "modifier_count": 0,
+          "polygon_count": 110538,
+          "triangle_count": 110538,
+          "triangle_source": "ORIGINAL_MESH_LOOP_TRIANGLES",
+          "vertex_count": 55271
+        },
+        "severity": "PASS",
+        "shell_count": 1,
+        "surface_volume": {
+          "detail": "Reliable total includes only closed, orientation-consistent shells.",
+          "reliable_closed_shell_volume_mm3": 1580864147447.184,
+          "reliable_volume_shell_count": 1,
+          "surface_area_status": "COMPLETED",
+          "total_surface_area_mm2": 1108446430.2469337,
+          "unavailable_volume_shell_count": 0,
+          "volume_status": "COMPLETED"
+        },
+        "tiny_shell_candidate_ids": [],
+        "topology": {
+          "boundary_edges": 0,
+          "connected_components": 1,
+          "degenerate_faces": 0,
+          "disconnected_shells": 0,
+          "duplicate_evaluation_status": "COMPLETED",
+          "edge_manifold_state": "MANIFOLD",
+          "face_shell_count": 1,
+          "high_incidence_non_manifold_edges": 0,
+          "loose_edges": 0,
+          "loose_vertices": 0,
+          "manifold_edges": 165807,
+          "non_manifold_edges": 0,
+          "normal_consistency": "CONSISTENT",
+          "normal_consistency_detail": "All evaluated two-face adjacencies use opposite shared-edge winding.",
+          "potential_duplicate_vertices": 0,
+          "vertex_manifold_anomalies": 0,
+          "vertex_manifold_state": "MANIFOLD",
+          "watertight_detail": "Topologically watertight. This is not a printability guarantee.",
+          "watertight_state": "TOPOLOGICALLY_WATERTIGHT",
+          "zero_length_edges": 0
+        },
+        "warnings": []
+      },
+      "initial_checkpoint_id": "82c14252-e825-432b-8e64-54ba7aeff8d4",
+      "initial_workspace_signature": "1b2486a8c9cf1eea232a8b4960ba3488297f84745c77226355214aed2c644454",
+      "limitations": [
+        "Original source preserved; workspace repair still requires human review.",
+        "An unfinished repair session is not guaranteed to survive Blender restart.",
+        "No remeshing, large-hole reconstruction, boolean repair, wall-thickness repair, AI, or printability guarantee.",
+        "Manual real-statue repair UAT is deferred."
+      ],
+      "operation_records": [],
+      "plan": {
+        "analysis_id": "d9fed3fd-67da-4e4a-9523-8893f05b42d0",
+        "candidates": [],
+        "created_at": "2026-07-26T09:43:34.024160+00:00",
+        "items": [
+          {
+            "estimated_target_count": 0,
+            "operation_type": "MERGE_DUPLICATE_VERTICES",
+            "recommendation_reason": "No nearby duplicate vertices detected.",
+            "recommended": false,
+            "selected": false,
+            "warnings": []
+          },
+          {
+            "estimated_target_count": 0,
+            "operation_type": "COLLAPSE_ZERO_LENGTH_EDGES",
+            "recommendation_reason": "No zero-length edges detected.",
+            "recommended": false,
+            "selected": false,
+            "warnings": []
+          },
+          {
+            "estimated_target_count": 0,
+            "operation_type": "REMOVE_DEGENERATE_FACES",
+            "recommendation_reason": "No degenerate faces detected.",
+            "recommended": false,
+            "selected": false,
+            "warnings": [
+              "Loose geometry created by face removal is retained unless loose cleanup is selected."
+            ]
+          },
+          {
+            "estimated_target_count": 0,
+            "operation_type": "REMOVE_LOOSE_GEOMETRY",
+            "recommendation_reason": "No loose geometry detected.",
+            "recommended": false,
+            "selected": false,
+            "warnings": []
+          },
+          {
+            "estimated_target_count": 0,
+            "operation_type": "REMOVE_SELECTED_TINY_SHELLS",
+            "recommendation_reason": "No tiny-shell candidates detected.",
+            "recommended": false,
+            "selected": false,
+            "warnings": []
+          },
+          {
+            "estimated_target_count": 0,
+            "operation_type": "FILL_SELECTED_SMALL_HOLES",
+            "recommendation_reason": "No eligible bounded small holes detected.",
+            "recommended": false,
+            "selected": false,
+            "warnings": []
+          },
+          {
+            "estimated_target_count": 0,
+            "operation_type": "REPAIR_NORMAL_CONSISTENCY",
+            "recommendation_reason": "No inconsistent face orientation detected.",
+            "recommended": false,
+            "selected": false,
+            "warnings": []
+          },
+          {
+            "estimated_target_count": 0,
+            "operation_type": "ORIENT_CLOSED_SHELLS_OUTWARD",
+            "recommendation_reason": "No inward valid closed shell detected.",
+            "recommended": false,
+            "selected": false,
+            "warnings": []
+          }
+        ],
+        "limitations": [
+          "Repair candidates are evidence-based and require human review.",
+          "The plan is session-only and becomes stale after geometry changes."
+        ],
+        "plan_id": "6b62bf27-5a9c-4668-b0b5-2cb7ef147f87",
+        "selected_profile": "STANDARD",
+        "session_id": "07f34605-a03c-43b0-9fd1-5aed77db887a",
+        "settings_snapshot": {
+          "degenerate_face_area_tolerance_mm2": 9.99999993922529e-09,
+          "hole_fill_requires_selection": true,
+          "maximum_repair_checkpoints": 3,
+          "maximum_stored_candidate_indices": 10000,
+          "merge_distance_mm": 0.0010000000474974513,
+          "normal_repair_requires_selection": true,
+          "small_hole_maximum_diagonal_mm": 1.0,
+          "small_hole_maximum_edge_count": 12,
+          "small_hole_maximum_perimeter_mm": 2.0,
+          "tiny_shell_requires_selection": true,
+          "zero_length_edge_tolerance_mm": 9.999999974752427e-07
+        },
+        "source_signature": "917e154072607b33392a6d597ed8b4f289147db71b11dc90b4c15e69d3a99dc6",
+        "status": "APPLIED",
+        "warnings": [
+          "Candidate removal and filling are never preselected.",
+          "Normal repair and shell orientation require explicit selection."
+        ],
+        "workspace_signature": "8e1c4c6b4bc27b260ca225a47a23e6de18370244b74abe375c23b4cbc32ae907"
+      },
+      "session_id": "07f34605-a03c-43b0-9fd1-5aed77db887a",
+      "settings_snapshot": {
+        "degenerate_face_area_tolerance_mm2": 9.99999993922529e-09,
+        "hole_fill_requires_selection": true,
+        "maximum_repair_checkpoints": 3,
+        "maximum_stored_candidate_indices": 10000,
+        "merge_distance_mm": 0.0010000000474974513,
+        "normal_repair_requires_selection": true,
+        "small_hole_maximum_diagonal_mm": 1.0,
+        "small_hole_maximum_edge_count": 12,
+        "small_hole_maximum_perimeter_mm": 2.0,
+        "tiny_shell_requires_selection": true,
+        "zero_length_edge_tolerance_mm": 9.999999974752427e-07
+      },
+      "source_mesh_identity": 1645778705672,
+      "source_mesh_name": "statue-danaid-rodin_mesh",
+      "source_object_identity": 1645778707464,
+      "source_object_name": "statue-danaid-rodin",
+      "source_signature": "917e154072607b33392a6d597ed8b4f289147db71b11dc90b4c15e69d3a99dc6",
+      "source_snapshot": {
+        "blend_file_path": "",
+        "collections": [
+          "Collection"
+        ],
+        "counts": [
+          55271,
+          165807,
+          110538,
+          331614
+        ],
+        "custom_properties": {},
+        "display_type": "TEXTURED",
+        "geometry_sha256": "6447fdba2043794bd61c3f28e9d60f2365c8b35a433fa7f6c77bb8fcf7ba3a4c",
+        "hide_get": false,
+        "hide_render": false,
+        "hide_viewport": false,
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "materials": [],
+        "mesh_custom_properties": {},
+        "mesh_identity": 1645778705672,
+        "mesh_name": "statue-danaid-rodin_mesh",
+        "modifiers": [],
+        "object_identity": 1645778707464,
+        "object_name": "statue-danaid-rodin",
+        "protected_sha256": "917e154072607b33392a6d597ed8b4f289147db71b11dc90b4c15e69d3a99dc6",
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "selected": true
+      },
+      "started_at": "2026-07-26T09:43:08.560712+00:00",
+      "status": "ACCEPTED",
+      "undo_records": [
+        {
+          "action": "RESTORE_INITIAL",
+          "restored_at": "2026-07-26T09:43:29.609371+00:00"
+        }
+      ],
+      "warnings": [],
+      "workspace_mesh_identity": 1645777313032,
+      "workspace_mesh_name": "statue-danaid-rodin_mesh_Chroma3D_Repaired",
+      "workspace_object_identity": 1645735027720,
+      "workspace_object_name": "statue-danaid-rodin_Chroma3D_Repaired"
+    },
+    "source_protection_signature": "917e154072607b33392a6d597ed8b4f289147db71b11dc90b4c15e69d3a99dc6",
+    "initial_workspace_signature": "1b2486a8c9cf1eea232a8b4960ba3488297f84745c77226355214aed2c644454",
+    "final_workspace_signature": "7305aa4d6370a0c24e6a8b98eb2d3c8cd809f7e60c53484edcf8dad8ca905e8a",
+    "final_decision": "ACCEPTED",
+    "failure_records": [],
+    "known_limitations": [
+      "Original source preserved; workspace repair still requires human review.",
+      "An unfinished repair session is not guaranteed to survive Blender restart.",
+      "No remeshing, large-hole reconstruction, boolean repair, wall-thickness repair, AI, or printability guarantee.",
+      "Manual real-statue repair UAT is deferred."
+    ]
+  },
+  "rollback_report": {
+    "schema_version": "1.0",
+    "extension_version": "0.3.0-alpha.1",
+    "analysis_schema_version": "2.0",
+    "blender_version": "4.4.3",
+    "operating_system": "Windows 10",
+    "exported_at": "2026-07-26T09:43:57.201349+00:00",
+    "session": {
+      "before_analysis": {
+        "analysis_id": "e05e48b3-8a1e-469f-86c0-af9d00463575",
+        "analyzed_at": "2026-07-26T09:43:45.642400+00:00",
+        "build_volume": {
+          "build_dimensions_mm": null,
+          "current_orientation_only": true,
+          "excess_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "fit_state": "NO_PROFILE",
+          "fits_x": null,
+          "fits_y": null,
+          "fits_z": null,
+          "maximum_uniform_scale_percent": null,
+          "message": "No printer build-volume profile is selected.",
+          "model_dimensions_mm": [
+            22772.998809814453,
+            12269.769668579102,
+            16864.620208740234
+          ],
+          "overall_fit": null,
+          "printer_profile": "NONE",
+          "status": "NOT_APPLICABLE"
+        },
+        "checks": [
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 0.0,
+            "message": "Active original mesh datablock is valid.",
+            "name": "mesh_input",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 592.910599996685,
+            "message": "Object metadata and topology signature collected.",
+            "name": "object_metadata",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 655.2273999986937,
+            "message": "World-space geometry and original-mesh triangle metrics collected.",
+            "name": "geometry_metrics",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 1593.2137999989209,
+            "message": "Face-edge incidence collected from the original mesh.",
+            "name": "base_topology",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 164.90640000120038,
+            "message": "Every edge was classified by linked-face count.",
+            "name": "edge_manifold_classification",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 1098.0574999994133,
+            "message": "Local face-fan connectivity evaluated at every incident vertex.",
+            "name": "vertex_manifold_classification",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 146.14520000031916,
+            "message": "Found 1 face-connected shell(s).",
+            "name": "shell_decomposition",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 164.90640000120038,
+            "message": "All evaluated two-face adjacencies use opposite shared-edge winding.",
+            "name": "orientation_consistency",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": 55271,
+            "configured_limit": 500000,
+            "duration_ms": 727.6561999969999,
+            "message": "Spatial-hash duplicate-position check completed in object-local coordinates.",
+            "name": "potential_duplicates",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 41.45530000096187,
+            "message": "World-space triangle surface area calculated in mm^2.",
+            "name": "surface_area",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 132.7709999968647,
+            "message": "Signed volume evaluated only for closed orientation-consistent shells.",
+            "name": "volume",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 0.05190000229049474,
+            "message": "0 tiny-shell candidate(s) found using combined criteria.",
+            "name": "tiny_shell_classification",
+            "status": "COMPLETED"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 0.02729999687289819,
+            "message": "No printer build-volume profile is selected.",
+            "name": "build_volume",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 0.0,
+            "message": "Deep diagnostics were not requested by the Standard profile.",
+            "name": "self_intersection_candidates",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 0.0,
+            "message": "Deep diagnostics were not requested by the Standard profile.",
+            "name": "containment_analysis",
+            "status": "NOT_APPLICABLE"
+          },
+          {
+            "actual_size": null,
+            "configured_limit": null,
+            "duration_ms": 0.0,
+            "message": "Relevant object, mesh, transform, mode, and selection state remained unchanged.",
+            "name": "read_only_state",
+            "status": "COMPLETED"
+          }
+        ],
+        "dimensions": {
+          "depth_mm": 12269.769668579102,
+          "height_mm": 16864.620208740234,
+          "millimetres_per_blender_unit": 1000.0,
+          "scene_scale_length": 1.0,
+          "source": "WORLD_SPACE_AXIS_ALIGNED_BOUNDING_BOX",
+          "unit_system": "METRIC",
+          "width_mm": 22772.998809814453
+        },
+        "duration_ms": 6395.4197999992175,
+        "errors": [],
+        "geometry": {
+          "edge_count": 165807,
+          "loop_count": 331614,
+          "material_slot_count": 0,
+          "metric_source": "ORIGINAL_MESH_DATABLOCK",
+          "modifier_count": 0,
+          "polygon_count": 110538,
+          "triangle_count": 110538,
+          "triangle_source": "ORIGINAL_MESH_LOOP_TRIANGLES",
+          "vertex_count": 55271
+        },
+        "severity": "PASS",
+        "shell_count": 1,
+        "surface_volume": {
+          "detail": "Reliable total includes only closed, orientation-consistent shells.",
+          "reliable_closed_shell_volume_mm3": 1580864147447.184,
+          "reliable_volume_shell_count": 1,
+          "surface_area_status": "COMPLETED",
+          "total_surface_area_mm2": 1108446430.2469337,
+          "unavailable_volume_shell_count": 0,
+          "volume_status": "COMPLETED"
+        },
+        "tiny_shell_candidate_ids": [],
+        "topology": {
+          "boundary_edges": 0,
+          "connected_components": 1,
+          "degenerate_faces": 0,
+          "disconnected_shells": 0,
+          "duplicate_evaluation_status": "COMPLETED",
+          "edge_manifold_state": "MANIFOLD",
+          "face_shell_count": 1,
+          "high_incidence_non_manifold_edges": 0,
+          "loose_edges": 0,
+          "loose_vertices": 0,
+          "manifold_edges": 165807,
+          "non_manifold_edges": 0,
+          "normal_consistency": "CONSISTENT",
+          "normal_consistency_detail": "All evaluated two-face adjacencies use opposite shared-edge winding.",
+          "potential_duplicate_vertices": 0,
+          "vertex_manifold_anomalies": 0,
+          "vertex_manifold_state": "MANIFOLD",
+          "watertight_detail": "Topologically watertight. This is not a printability guarantee.",
+          "watertight_state": "TOPOLOGICALLY_WATERTIGHT",
+          "zero_length_edges": 0
+        },
+        "warnings": []
+      },
+      "captured_active_identity": 1645778707464,
+      "captured_selected_identities": [
+        1645778707464
+      ],
+      "checkpoint_records": [
+        {
+          "checkpoint_id": "8ef46a30-78be-48cc-ac5e-1128db4eb36e",
+          "created_at": "2026-07-26T09:43:44.907824+00:00",
+          "edge_count": 165807,
+          "face_count": 110538,
+          "initial": true,
+          "mesh_datablock_identity": 1645735319048,
+          "operation_id": "INITIAL",
+          "retained": false,
+          "vertex_count": 55271,
+          "workspace_signature": "b5bacc0274534bab3b307f28b143f2907f65a4d193935867377f60dce50ddb1f"
+        }
+      ],
+      "comparison": null,
+      "current_analysis_id": "e05e48b3-8a1e-469f-86c0-af9d00463575",
+      "current_workspace_signature": "b5bacc0274534bab3b307f28b143f2907f65a4d193935867377f60dce50ddb1f",
+      "decision": "ROLLED_BACK",
+      "ended_at": "2026-07-26T09:43:57.201349+00:00",
+      "errors": [],
+      "final_analysis": {},
+      "initial_checkpoint_id": "8ef46a30-78be-48cc-ac5e-1128db4eb36e",
+      "initial_workspace_signature": "b5bacc0274534bab3b307f28b143f2907f65a4d193935867377f60dce50ddb1f",
+      "limitations": [
+        "Original source preserved; workspace repair still requires human review.",
+        "An unfinished repair session is not guaranteed to survive Blender restart.",
+        "No remeshing, large-hole reconstruction, boolean repair, wall-thickness repair, AI, or printability guarantee.",
+        "Manual real-statue repair UAT is deferred."
+      ],
+      "operation_records": [],
+      "plan": {
+        "analysis_id": "e05e48b3-8a1e-469f-86c0-af9d00463575",
+        "candidates": [],
+        "created_at": "2026-07-26T09:43:56.499566+00:00",
+        "items": [
+          {
+            "estimated_target_count": 0,
+            "operation_type": "MERGE_DUPLICATE_VERTICES",
+            "recommendation_reason": "No nearby duplicate vertices detected.",
+            "recommended": false,
+            "selected": false,
+            "warnings": []
+          },
+          {
+            "estimated_target_count": 0,
+            "operation_type": "COLLAPSE_ZERO_LENGTH_EDGES",
+            "recommendation_reason": "No zero-length edges detected.",
+            "recommended": false,
+            "selected": false,
+            "warnings": []
+          },
+          {
+            "estimated_target_count": 0,
+            "operation_type": "REMOVE_DEGENERATE_FACES",
+            "recommendation_reason": "No degenerate faces detected.",
+            "recommended": false,
+            "selected": false,
+            "warnings": [
+              "Loose geometry created by face removal is retained unless loose cleanup is selected."
+            ]
+          },
+          {
+            "estimated_target_count": 0,
+            "operation_type": "REMOVE_LOOSE_GEOMETRY",
+            "recommendation_reason": "No loose geometry detected.",
+            "recommended": false,
+            "selected": false,
+            "warnings": []
+          },
+          {
+            "estimated_target_count": 0,
+            "operation_type": "REMOVE_SELECTED_TINY_SHELLS",
+            "recommendation_reason": "No tiny-shell candidates detected.",
+            "recommended": false,
+            "selected": false,
+            "warnings": []
+          },
+          {
+            "estimated_target_count": 0,
+            "operation_type": "FILL_SELECTED_SMALL_HOLES",
+            "recommendation_reason": "No eligible bounded small holes detected.",
+            "recommended": false,
+            "selected": false,
+            "warnings": []
+          },
+          {
+            "estimated_target_count": 0,
+            "operation_type": "REPAIR_NORMAL_CONSISTENCY",
+            "recommendation_reason": "No inconsistent face orientation detected.",
+            "recommended": false,
+            "selected": false,
+            "warnings": []
+          },
+          {
+            "estimated_target_count": 0,
+            "operation_type": "ORIENT_CLOSED_SHELLS_OUTWARD",
+            "recommendation_reason": "No inward valid closed shell detected.",
+            "recommended": false,
+            "selected": false,
+            "warnings": []
+          }
+        ],
+        "limitations": [
+          "Repair candidates are evidence-based and require human review.",
+          "The plan is session-only and becomes stale after geometry changes."
+        ],
+        "plan_id": "d2dee548-24c3-43fc-8d60-d4d5474807fe",
+        "selected_profile": "STANDARD",
+        "session_id": "6ccd107c-7cff-442e-9cd9-da967ae96905",
+        "settings_snapshot": {
+          "degenerate_face_area_tolerance_mm2": 9.99999993922529e-09,
+          "hole_fill_requires_selection": true,
+          "maximum_repair_checkpoints": 3,
+          "maximum_stored_candidate_indices": 10000,
+          "merge_distance_mm": 0.0010000000474974513,
+          "normal_repair_requires_selection": true,
+          "small_hole_maximum_diagonal_mm": 1.0,
+          "small_hole_maximum_edge_count": 12,
+          "small_hole_maximum_perimeter_mm": 2.0,
+          "tiny_shell_requires_selection": true,
+          "zero_length_edge_tolerance_mm": 9.999999974752427e-07
+        },
+        "source_signature": "917e154072607b33392a6d597ed8b4f289147db71b11dc90b4c15e69d3a99dc6",
+        "status": "READY",
+        "warnings": [
+          "Candidate removal and filling are never preselected.",
+          "Normal repair and shell orientation require explicit selection."
+        ],
+        "workspace_signature": "b5bacc0274534bab3b307f28b143f2907f65a4d193935867377f60dce50ddb1f"
+      },
+      "session_id": "6ccd107c-7cff-442e-9cd9-da967ae96905",
+      "settings_snapshot": {
+        "degenerate_face_area_tolerance_mm2": 9.99999993922529e-09,
+        "hole_fill_requires_selection": true,
+        "maximum_repair_checkpoints": 3,
+        "maximum_stored_candidate_indices": 10000,
+        "merge_distance_mm": 0.0010000000474974513,
+        "normal_repair_requires_selection": true,
+        "small_hole_maximum_diagonal_mm": 1.0,
+        "small_hole_maximum_edge_count": 12,
+        "small_hole_maximum_perimeter_mm": 2.0,
+        "tiny_shell_requires_selection": true,
+        "zero_length_edge_tolerance_mm": 9.999999974752427e-07
+      },
+      "source_mesh_identity": 1645778705672,
+      "source_mesh_name": "statue-danaid-rodin_mesh",
+      "source_object_identity": 1645778707464,
+      "source_object_name": "statue-danaid-rodin",
+      "source_signature": "917e154072607b33392a6d597ed8b4f289147db71b11dc90b4c15e69d3a99dc6",
+      "source_snapshot": {
+        "blend_file_path": "",
+        "collections": [
+          "Collection"
+        ],
+        "counts": [
+          55271,
+          165807,
+          110538,
+          331614
+        ],
+        "custom_properties": {},
+        "display_type": "TEXTURED",
+        "geometry_sha256": "6447fdba2043794bd61c3f28e9d60f2365c8b35a433fa7f6c77bb8fcf7ba3a4c",
+        "hide_get": false,
+        "hide_render": false,
+        "hide_viewport": false,
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "materials": [],
+        "mesh_custom_properties": {},
+        "mesh_identity": 1645778705672,
+        "mesh_name": "statue-danaid-rodin_mesh",
+        "modifiers": [],
+        "object_identity": 1645778707464,
+        "object_name": "statue-danaid-rodin",
+        "protected_sha256": "917e154072607b33392a6d597ed8b4f289147db71b11dc90b4c15e69d3a99dc6",
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "selected": true
+      },
+      "started_at": "2026-07-26T09:43:44.907824+00:00",
+      "status": "ROLLED_BACK",
+      "undo_records": [],
+      "warnings": [],
+      "workspace_mesh_identity": 1645735315464,
+      "workspace_mesh_name": "statue-danaid-rodin_mesh_Chroma3D_Repair",
+      "workspace_object_identity": 1645777305864,
+      "workspace_object_name": "statue-danaid-rodin_Chroma3D_Repair"
+    },
+    "source_protection_signature": "917e154072607b33392a6d597ed8b4f289147db71b11dc90b4c15e69d3a99dc6",
+    "initial_workspace_signature": "b5bacc0274534bab3b307f28b143f2907f65a4d193935867377f60dce50ddb1f",
+    "final_workspace_signature": "b5bacc0274534bab3b307f28b143f2907f65a4d193935867377f60dce50ddb1f",
+    "final_decision": "ROLLED_BACK",
+    "failure_records": [],
+    "known_limitations": [
+      "Original source preserved; workspace repair still requires human review.",
+      "An unfinished repair session is not guaranteed to survive Blender restart.",
+      "No remeshing, large-hole reconstruction, boolean repair, wall-thickness repair, AI, or printability guarantee.",
+      "Manual real-statue repair UAT is deferred."
+    ]
+  },
+  "comparison": {
+    "schema_version": "1.0",
+    "mesh_id": "statue-danaid-rodin",
+    "production_comparison": {
+      "status": "NOT_APPLICABLE",
+      "reason": "No production repair operation was selected."
+    },
+    "before_metrics": {
+      "vertex_count": 55271,
+      "edge_count": 165807,
+      "face_count": 110538,
+      "triangle_count": 110538,
+      "bounding_box_dimensions_mm": [
+        22772.998809814453,
+        12269.769668579102,
+        16864.620208740234
+      ],
+      "shell_count": 1,
+      "connected_components": 1,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "potential_duplicate_vertices": 0,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "loose_edges": 0,
+      "zero_length_edges": 0,
+      "surface_area_mm2": 1108446430.2469337,
+      "reliable_volume_mm3": 1580864147447.184,
+      "orientation": "CONSISTENT",
+      "watertightness": "TOPOLOGICALLY_WATERTIGHT",
+      "build_volume_result": "NO_PROFILE",
+      "severity": "PASS",
+      "analysis_duration_ms": 6724.801100004697,
+      "warning_count": 0,
+      "error_count": 0
+    },
+    "after_metrics": {
+      "vertex_count": 55271,
+      "edge_count": 165807,
+      "face_count": 110538,
+      "triangle_count": 110538,
+      "bounding_box_dimensions_mm": [
+        22772.998809814453,
+        12269.769668579102,
+        16864.620208740234
+      ],
+      "shell_count": 1,
+      "connected_components": 1,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "potential_duplicate_vertices": 0,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "loose_edges": 0,
+      "zero_length_edges": 0,
+      "surface_area_mm2": 1108446430.2469337,
+      "reliable_volume_mm3": 1580864147447.184,
+      "orientation": "CONSISTENT",
+      "watertightness": "TOPOLOGICALLY_WATERTIGHT",
+      "build_volume_result": "NO_PROFILE",
+      "severity": "PASS",
+      "analysis_duration_ms": 6500.210799997149,
+      "warning_count": 0,
+      "error_count": 0
+    },
+    "metric_deltas": {
+      "vertex_count": 0,
+      "edge_count": 0,
+      "face_count": 0,
+      "triangle_count": 0,
+      "shell_count": 0,
+      "connected_components": 0,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "potential_duplicate_vertices": 0,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "loose_edges": 0,
+      "zero_length_edges": 0,
+      "surface_area_mm2": 0.0,
+      "reliable_volume_mm3": 0.0,
+      "orientation_changed": false,
+      "severity_changed": false
+    }
+  },
+  "timings": {
+    "schema_version": "1.0",
+    "mesh_id": "statue-danaid-rodin",
+    "timing_class": "Medium",
+    "triangle_count": 110538,
+    "phases": {
+      "import": {
+        "wall_seconds": 0.168057,
+        "cpu_seconds": 0.34375,
+        "memory_before": {
+          "working_set_bytes": 164036608,
+          "peak_working_set_bytes": 164036608,
+          "private_usage_bytes": 186757120
+        },
+        "memory_after": {
+          "working_set_bytes": 179355648,
+          "peak_working_set_bytes": 196464640,
+          "private_usage_bytes": 190976000
+        }
+      },
+      "analysis": {
+        "wall_seconds": 6.775239,
+        "cpu_seconds": 6.546875,
+        "memory_before": {
+          "working_set_bytes": 179372032,
+          "peak_working_set_bytes": 196464640,
+          "private_usage_bytes": 190976000
+        },
+        "memory_after": {
+          "working_set_bytes": 206118912,
+          "peak_working_set_bytes": 344674304,
+          "private_usage_bytes": 216522752
+        }
+      },
+      "analysis_export": {
+        "wall_seconds": 0.002795,
+        "cpu_seconds": 0.0,
+        "memory_before": {
+          "working_set_bytes": 206123008,
+          "peak_working_set_bytes": 344674304,
+          "private_usage_bytes": 216522752
+        },
+        "memory_after": {
+          "working_set_bytes": 206135296,
+          "peak_working_set_bytes": 344674304,
+          "private_usage_bytes": 216522752
+        }
+      },
+      "repair_session_start": {
+        "wall_seconds": 8.665538,
+        "cpu_seconds": 8.28125,
+        "memory_before": {
+          "working_set_bytes": 206151680,
+          "peak_working_set_bytes": 344674304,
+          "private_usage_bytes": 216522752
+        },
+        "memory_after": {
+          "working_set_bytes": 236867584,
+          "peak_working_set_bytes": 355311616,
+          "private_usage_bytes": 247812096
+        }
+      },
+      "repair_plan_initial": {
+        "wall_seconds": 4.441075,
+        "cpu_seconds": 4.34375,
+        "memory_before": {
+          "working_set_bytes": 236871680,
+          "peak_working_set_bytes": 355311616,
+          "private_usage_bytes": 247812096
+        },
+        "memory_after": {
+          "working_set_bytes": 278245376,
+          "peak_working_set_bytes": 355311616,
+          "private_usage_bytes": 288792576
+        }
+      },
+      "repair_restore": {
+        "wall_seconds": 9.323727,
+        "cpu_seconds": 9.203125,
+        "memory_before": {
+          "working_set_bytes": 278245376,
+          "peak_working_set_bytes": 355311616,
+          "private_usage_bytes": 288792576
+        },
+        "memory_after": {
+          "working_set_bytes": 308834304,
+          "peak_working_set_bytes": 414167040,
+          "private_usage_bytes": 319922176
+        }
+      },
+      "repair_plan_canonical": {
+        "wall_seconds": 4.413909,
+        "cpu_seconds": 4.265625,
+        "memory_before": {
+          "working_set_bytes": 308846592,
+          "peak_working_set_bytes": 414167040,
+          "private_usage_bytes": 319922176
+        },
+        "memory_after": {
+          "working_set_bytes": 310439936,
+          "peak_working_set_bytes": 414167040,
+          "private_usage_bytes": 323932160
+        }
+      },
+      "repair_accept": {
+        "wall_seconds": 9.441363,
+        "cpu_seconds": 9.0625,
+        "memory_before": {
+          "working_set_bytes": 310452224,
+          "peak_working_set_bytes": 414167040,
+          "private_usage_bytes": 323932160
+        },
+        "memory_after": {
+          "working_set_bytes": 324108288,
+          "peak_working_set_bytes": 421441536,
+          "private_usage_bytes": 334979072
+        }
+      },
+      "repair_audit_export": {
+        "wall_seconds": 0.005059,
+        "cpu_seconds": 0.0,
+        "memory_before": {
+          "working_set_bytes": 324108288,
+          "peak_working_set_bytes": 421441536,
+          "private_usage_bytes": 334979072
+        },
+        "memory_after": {
+          "working_set_bytes": 324124672,
+          "peak_working_set_bytes": 421441536,
+          "private_usage_bytes": 334979072
+        }
+      },
+      "rollback_probe_start": {
+        "wall_seconds": 8.600808,
+        "cpu_seconds": 8.40625,
+        "memory_before": {
+          "working_set_bytes": 324128768,
+          "peak_working_set_bytes": 421441536,
+          "private_usage_bytes": 334979072
+        },
+        "memory_after": {
+          "working_set_bytes": 303337472,
+          "peak_working_set_bytes": 430292992,
+          "private_usage_bytes": 313516032
+        }
+      },
+      "rollback_probe_plan": {
+        "wall_seconds": 4.411694,
+        "cpu_seconds": 4.328125,
+        "memory_before": {
+          "working_set_bytes": 303345664,
+          "peak_working_set_bytes": 430292992,
+          "private_usage_bytes": 313516032
+        },
+        "memory_after": {
+          "working_set_bytes": 324071424,
+          "peak_working_set_bytes": 430292992,
+          "private_usage_bytes": 347320320
+        }
+      },
+      "repair_rollback": {
+        "wall_seconds": 0.702075,
+        "cpu_seconds": 0.6875,
+        "memory_before": {
+          "working_set_bytes": 324079616,
+          "peak_working_set_bytes": 430292992,
+          "private_usage_bytes": 347320320
+        },
+        "memory_after": {
+          "working_set_bytes": 324091904,
+          "peak_working_set_bytes": 430292992,
+          "private_usage_bytes": 347320320
+        }
+      },
+      "rollback_audit_export": {
+        "wall_seconds": 0.0035,
+        "cpu_seconds": 0.0,
+        "memory_before": {
+          "working_set_bytes": 324091904,
+          "peak_working_set_bytes": 430292992,
+          "private_usage_bytes": 347320320
+        },
+        "memory_after": {
+          "working_set_bytes": 324112384,
+          "peak_working_set_bytes": 430292992,
+          "private_usage_bytes": 347320320
+        }
+      }
+    },
+    "production_analysis_duration_ms": 6724.801100004697,
+    "production_after_repair_analysis_duration_ms": 6500.210799997149,
+    "canonical_repair_wall_seconds": 0.0,
+    "canonical_repair_cpu_seconds": 0.0,
+    "total_wall_seconds": 57.30907,
+    "total_cpu_seconds": 55.78125,
+    "initial_process_memory": {
+      "working_set_bytes": 161476608,
+      "peak_working_set_bytes": 161476608,
+      "private_usage_bytes": 184000512
+    },
+    "final_process_memory": {
+      "working_set_bytes": 328323072,
+      "peak_working_set_bytes": 430292992,
+      "private_usage_bytes": 351588352
+    },
+    "peak_working_set_bytes": 430292992,
+    "measurement_notes": [
+      "Wall time uses time.perf_counter().",
+      "CPU time uses time.process_time() for the Blender process.",
+      "Memory uses Windows process working-set counters sampled at phase boundaries; peak working set is the OS process high-water mark.",
+      "Each mesh executes in a fresh Blender --factory-startup process."
+    ]
+  },
+  "lifecycle_actions": {
+    "initial_selected_operations": [],
+    "undo": {
+      "executed": false,
+      "status": "NOT_APPLICABLE",
+      "reason": "The production repair plan selected no operations."
+    },
+    "restore": {
+      "executed": true,
+      "status": "FINISHED"
+    },
+    "canonical_selected_operations": [],
+    "canonical_apply": {
+      "executed": false,
+      "status": "NOT_APPLICABLE",
+      "reason": "The production repair plan selected no operations."
+    },
+    "accept": {
+      "executed": true,
+      "status": "FINISHED"
+    },
+    "rollback": {
+      "executed": true,
+      "status": "FINISHED",
+      "scope": "Separate no-mutation production session on the protected source."
+    }
+  },
+  "operation_count": 0,
+  "warnings": [],
+  "limitations": [
+    "Original source preserved; workspace repair still requires human review.",
+    "An unfinished repair session is not guaranteed to survive Blender restart.",
+    "No remeshing, large-hole reconstruction, boolean repair, wall-thickness repair, AI, or printability guarantee.",
+    "Manual real-statue repair UAT is deferred.",
+    "Golden timing values are machine- and power-state-specific.",
+    "The baseline uses the production Standard analysis profile and default production repair settings.",
+    "Candidate-based destructive repair, normal consistency repair, and outward orientation remain unselected unless the production plan selects them by default.",
+    "The accepted audit is the canonical repair outcome; rollback is recorded in a separate production no-mutation session because accept and rollback are mutually exclusive decisions."
+  ],
+  "hashes": {
+    "source_mesh_sha256": "e369027a93ac6ad5b5765999f6c74fcc2fef1f9beceef244d02b9158d012c8e8",
+    "dataset_manifest_sha256": "3e763782e6271eff153c8c4097a8b841423b31962d1222e2baf208178559df9a",
+    "metadata_sha256": "62eb17080da06d60058a53a5bced40c5dd3d7ed93c7c73ff40550e1fd7fd3092",
+    "thumbnail_sha256": "b48a8b1b1e095d6c1b61069c2c1579091ba5f1cf1abe760cf1de8836dc9d20d8",
+    "analysis_report_sha256": "0bc348bedb51e8b6876a59e9542bc03f872e5e057adaf7490847a8cc6adc5cc7",
+    "repair_audit_sha256": "20bfdf195c75f229b99d266914c5305634ca2a528e49b215d8ac510b364e0795",
+    "rollback_audit_sha256": "154106df1615084dcea0500da00775f40f691e2ac523861861a0776a7d0ab830",
+    "comparison_sha256": "cbb7b9f806334d9ca43b596f0da05be0a839a3e87f5af4ad995f06be70f3ea24",
+    "timings_sha256": "611bf2bc7d08465d78c665a8ebe0b562c368c8af6bde8ca8f896e130a90f7c07"
+  },
+  "schema_fingerprints": {
+    "analysis_report": "df5fa813fb47f2d4063ad109e71d0b7bf7efcbbb05b2c965ee8661dac8694ae0",
+    "after_analysis": "df5fa813fb47f2d4063ad109e71d0b7bf7efcbbb05b2c965ee8661dac8694ae0",
+    "repair_audit": "aae4f83028292080565c6a0ff7222fbf946bdae55b5f4289002e322afed88a6e",
+    "rollback_audit": "8d2b0607be9ceda4840da26bada4987c52e64a9160b27d691820274592659df2",
+    "comparison": "8d748b3baed6c5710b760a853ff34e8ecf6f5078d69e60962c94939eaf53ae93",
+    "timings": "ecf85b4d1e5193c55ccbe3edaabffb99737cfe4d164ec2c306e47d2303bdb5a9"
+  },
+  "validation": {
+    "status": "PASS",
+    "source_hash_matches_metadata": true,
+    "source_hash_unchanged": true,
+    "analysis_exported_by_production_operator": true,
+    "repair_audit_exported_by_production_operator": true,
+    "rollback_audit_exported_by_production_operator": true,
+    "all_lifecycle_operator_results_finished": true,
+    "errors": []
+  }
+}

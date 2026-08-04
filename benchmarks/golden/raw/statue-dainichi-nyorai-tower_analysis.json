@@ -1,0 +1,767 @@
+{
+  "schema_version": "2.0",
+  "extension_version": "0.3.0-alpha.1",
+  "blender_version": "4.4.3",
+  "operating_system": "Windows 10",
+  "analyzed_at": "2026-07-26T09:32:58.217777+00:00",
+  "duration_ms": 65283.27170000557,
+  "severity": "WARNING",
+  "summary": "Diagnostics completed; one or more findings require review.",
+  "analysis_id": "c58e9a6d-0a44-4eae-ac1d-d0492a7b251b",
+  "analysis_profile": "STANDARD",
+  "settings_snapshot": {
+    "analysis_profile": "STANDARD",
+    "duplicate_position_tolerance": 9.999999974752427e-07,
+    "duplicate_vertex_limit": 500000,
+    "degenerate_edge_tolerance": 9.999999717180685e-10,
+    "degenerate_face_tolerance": 1.000000045813705e-18,
+    "tiny_shell_max_face_count": 12,
+    "tiny_shell_max_volume_mm3": 1000.0,
+    "tiny_shell_max_relative_volume_percent": 0.5,
+    "tiny_shell_max_diagonal_mm": 10.0,
+    "maximum_stored_issue_indices": 10000,
+    "self_intersection_triangle_limit": 50000,
+    "maximum_stored_self_intersection_pairs": 10000,
+    "containment_shell_limit": 64,
+    "containment_triangle_limit": 100000,
+    "printer_profile": "NONE",
+    "build_volume_mm": null,
+    "extension_version": "0.3.0-alpha.1",
+    "blender_version": "4.4.3"
+  },
+  "topology_signature": {
+    "analysis_id": "c58e9a6d-0a44-4eae-ac1d-d0492a7b251b",
+    "object_name": "statue-dainichi-nyorai-tower",
+    "mesh_data_name": "statue-dainichi-nyorai-tower_mesh",
+    "vertex_count": 624826,
+    "edge_count": 1874562,
+    "polygon_count": 1249711,
+    "topology_sha256": "9f375e30d48e85f8481d0cd446e232395e863f91d61edf7f1149e96f2e44be44"
+  },
+  "object_metadata": {
+    "object_name": "statue-dainichi-nyorai-tower",
+    "mesh_data_name": "statue-dainichi-nyorai-tower_mesh",
+    "object_mode": "OBJECT",
+    "object_type": "MESH",
+    "material_slot_count": 0,
+    "modifier_count": 0,
+    "collection_names": [
+      "Collection"
+    ],
+    "blend_file_path": null,
+    "blend_file_unsaved": true,
+    "analysis_source": "ORIGINAL_MESH_DATABLOCK",
+    "modifiers_evaluated": false
+  },
+  "geometry": {
+    "vertex_count": 624826,
+    "edge_count": 1874562,
+    "polygon_count": 1249711,
+    "triangle_count": 1249711,
+    "loop_count": 3749133,
+    "material_slot_count": 0,
+    "modifier_count": 0,
+    "metric_source": "ORIGINAL_MESH_DATABLOCK",
+    "triangle_source": "ORIGINAL_MESH_LOOP_TRIANGLES"
+  },
+  "dimensions": {
+    "width_mm": 2922.7609634399414,
+    "depth_mm": 3591.210126876831,
+    "height_mm": 4439.566612243652,
+    "unit_system": "METRIC",
+    "scene_scale_length": 1.0,
+    "millimetres_per_blender_unit": 1000.0,
+    "source": "WORLD_SPACE_AXIS_ALIGNED_BOUNDING_BOX"
+  },
+  "transforms": {
+    "location_applied": true,
+    "rotation_applied": true,
+    "scale_applied": true,
+    "location": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "rotation_euler": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "tolerance": 1e-06
+  },
+  "topology": {
+    "non_manifold_edges": 34,
+    "boundary_edges": 32,
+    "manifold_edges": 1874496,
+    "high_incidence_non_manifold_edges": 34,
+    "loose_vertices": 0,
+    "loose_edges": 0,
+    "zero_length_edges": 0,
+    "degenerate_faces": 0,
+    "connected_components": 1,
+    "disconnected_shells": 0,
+    "face_shell_count": 1,
+    "potential_duplicate_vertices": 0,
+    "duplicate_evaluation_status": "SKIPPED",
+    "edge_manifold_state": "NON_MANIFOLD",
+    "vertex_manifold_state": "ANOMALIES_DETECTED",
+    "vertex_manifold_anomalies": 70,
+    "watertight_state": "NOT_WATERTIGHT",
+    "watertight_detail": "Not topologically watertight.",
+    "normal_consistency": "INCONSISTENT",
+    "normal_consistency_detail": "1 shared edge(s) have equal adjacent-face winding."
+  },
+  "surface_volume": {
+    "surface_area_status": "COMPLETED",
+    "total_surface_area_mm2": 41143206.08160757,
+    "volume_status": "NOT_APPLICABLE",
+    "reliable_closed_shell_volume_mm3": null,
+    "reliable_volume_shell_count": 0,
+    "unavailable_volume_shell_count": 1,
+    "detail": "No closed, orientation-consistent shell volume was available."
+  },
+  "shells": [
+    {
+      "shell_id": 0,
+      "face_count": 1249711,
+      "triangle_count": 1249711,
+      "vertex_count": 624826,
+      "edge_count": 1874562,
+      "boundary_edge_count": 32,
+      "non_manifold_edge_count": 34,
+      "bbox_min_mm": [
+        -2482.9928874969482,
+        511.66749000549316,
+        -7315.853595733643
+      ],
+      "bbox_max_mm": [
+        439.76813554763794,
+        4102.877616882324,
+        -2876.286745071411
+      ],
+      "dimensions_mm": [
+        2922.7609634399414,
+        3591.210126876831,
+        4439.566612243652
+      ],
+      "surface_area_mm2": 41143206.08160757,
+      "signed_volume_mm3": null,
+      "absolute_volume_mm3": null,
+      "volume_status": "NOT_APPLICABLE",
+      "centroid_mm": [
+        -1003.2285451889038,
+        2242.727279663086,
+        -4934.540271759033
+      ],
+      "watertight_state": "NOT_WATERTIGHT",
+      "orientation_consistency": "INCONSISTENT",
+      "orientation_state": "INCONSISTENT",
+      "relative_volume_percent": null,
+      "relative_surface_area_percent": 100.0,
+      "classification": "MAIN_SHELL",
+      "tiny_shell_candidate": false,
+      "tiny_criteria_evaluated": [],
+      "tiny_criteria_matched": [],
+      "classification_confidence": "NONE",
+      "containing_shell_id": null,
+      "diagnostic_notes": [
+        "Volume unavailable because face orientation is inconsistent."
+      ],
+      "check_statuses": [
+        {
+          "name": "watertightness",
+          "status": "COMPLETED",
+          "message": "NOT_WATERTIGHT",
+          "duration_ms": 0.0,
+          "actual_size": null,
+          "configured_limit": null
+        },
+        {
+          "name": "orientation",
+          "status": "COMPLETED",
+          "message": "INCONSISTENT",
+          "duration_ms": 0.0,
+          "actual_size": null,
+          "configured_limit": null
+        },
+        {
+          "name": "volume",
+          "status": "NOT_APPLICABLE",
+          "message": "Volume unavailable because face orientation is inconsistent.",
+          "duration_ms": 0.0,
+          "actual_size": null,
+          "configured_limit": null
+        }
+      ]
+    }
+  ],
+  "main_shell_id": 0,
+  "tiny_shell_candidate_ids": [],
+  "disconnected_external_shell_ids": [],
+  "possible_internal_shell_ids": [],
+  "build_volume": {
+    "status": "NOT_APPLICABLE",
+    "fit_state": "NO_PROFILE",
+    "printer_profile": "NONE",
+    "model_dimensions_mm": [
+      2922.7609634399414,
+      3591.210126876831,
+      4439.566612243652
+    ],
+    "build_dimensions_mm": null,
+    "fits_x": null,
+    "fits_y": null,
+    "fits_z": null,
+    "overall_fit": null,
+    "excess_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "maximum_uniform_scale_percent": null,
+    "current_orientation_only": true,
+    "message": "No printer build-volume profile is selected."
+  },
+  "deep_diagnostics": {
+    "self_intersection_status": "NOT_APPLICABLE",
+    "self_intersection_state": "NOT_EVALUATED",
+    "self_intersection_candidate_count": null,
+    "self_intersection_pairs": [],
+    "self_intersection_evidence_truncated": false,
+    "containment_status": "NOT_APPLICABLE",
+    "possible_internal_shell_ids": [],
+    "containment_evidence": [],
+    "notes": [
+      "Deep diagnostics were not requested by the Standard profile."
+    ]
+  },
+  "issue_evidence": [
+    {
+      "category": "BOUNDARY_EDGES",
+      "domain": "EDGE",
+      "total_count": 32,
+      "indices": [
+        43936,
+        45486,
+        87463,
+        173547,
+        281780,
+        297691,
+        408071,
+        439253,
+        513195,
+        513772,
+        514978,
+        518719,
+        620519,
+        645218,
+        688028,
+        688030,
+        745429,
+        748364,
+        803353,
+        895456,
+        1019909,
+        1037456,
+        1088559,
+        1216638,
+        1345154,
+        1361851,
+        1450202,
+        1598754,
+        1689997,
+        1830318,
+        1844900,
+        1844901
+      ],
+      "pairs": [],
+      "truncated": false,
+      "evidence_cap": 10000,
+      "shell_id": null,
+      "note": ""
+    },
+    {
+      "category": "LOOSE_EDGES",
+      "domain": "EDGE",
+      "total_count": 0,
+      "indices": [],
+      "pairs": [],
+      "truncated": false,
+      "evidence_cap": 10000,
+      "shell_id": null,
+      "note": ""
+    },
+    {
+      "category": "LOOSE_VERTICES",
+      "domain": "VERTEX",
+      "total_count": 0,
+      "indices": [],
+      "pairs": [],
+      "truncated": false,
+      "evidence_cap": 10000,
+      "shell_id": null,
+      "note": ""
+    },
+    {
+      "category": "HIGH_INCIDENCE_EDGES",
+      "domain": "EDGE",
+      "total_count": 34,
+      "indices": [
+        42538,
+        43915,
+        43935,
+        46341,
+        46344,
+        83421,
+        87223,
+        279077,
+        297692,
+        407843,
+        513194,
+        513771,
+        514631,
+        518718,
+        620343,
+        688029,
+        745428,
+        748363,
+        803140,
+        895455,
+        1019910,
+        1023698,
+        1131714,
+        1234685,
+        1348425,
+        1348426,
+        1361617,
+        1390301,
+        1452299,
+        1685506,
+        1687222,
+        1687223,
+        1771441,
+        1844533
+      ],
+      "pairs": [],
+      "truncated": false,
+      "evidence_cap": 10000,
+      "shell_id": null,
+      "note": ""
+    },
+    {
+      "category": "VERTEX_MANIFOLD_ANOMALIES",
+      "domain": "VERTEX",
+      "total_count": 70,
+      "indices": [
+        113299,
+        114176,
+        114177,
+        116416,
+        117208,
+        117834,
+        117842,
+        117886,
+        118817,
+        118818,
+        119394,
+        120365,
+        120395,
+        120399,
+        121106,
+        122024,
+        122674,
+        122678,
+        122680,
+        123600,
+        123601,
+        124266,
+        125839,
+        125841,
+        125842,
+        132770,
+        133367,
+        137834,
+        167601,
+        168421,
+        168422,
+        203094,
+        221068,
+        222344,
+        222345,
+        231608,
+        232112,
+        232404,
+        232406,
+        255089,
+        268395,
+        268396,
+        348967,
+        349772,
+        404650,
+        404948,
+        405403,
+        434536,
+        461121,
+        461997,
+        470333,
+        470338,
+        471378,
+        506333,
+        506335,
+        514019,
+        514622,
+        520356,
+        520359,
+        544831,
+        544833,
+        581845,
+        582614,
+        583762,
+        583763,
+        585154,
+        585155,
+        597064,
+        597430,
+        603598
+      ],
+      "pairs": [],
+      "truncated": false,
+      "evidence_cap": 10000,
+      "shell_id": null,
+      "note": ""
+    },
+    {
+      "category": "ZERO_LENGTH_EDGES",
+      "domain": "EDGE",
+      "total_count": 0,
+      "indices": [],
+      "pairs": [],
+      "truncated": false,
+      "evidence_cap": 10000,
+      "shell_id": null,
+      "note": ""
+    },
+    {
+      "category": "DEGENERATE_FACES",
+      "domain": "FACE",
+      "total_count": 0,
+      "indices": [],
+      "pairs": [],
+      "truncated": false,
+      "evidence_cap": 10000,
+      "shell_id": null,
+      "note": ""
+    },
+    {
+      "category": "INCONSISTENT_FACES",
+      "domain": "FACE",
+      "total_count": 2,
+      "indices": [
+        923728,
+        923730
+      ],
+      "pairs": [],
+      "truncated": false,
+      "evidence_cap": 10000,
+      "shell_id": null,
+      "note": ""
+    },
+    {
+      "category": "INCONSISTENT_SHARED_EDGES",
+      "domain": "EDGE",
+      "total_count": 1,
+      "indices": [
+        1345153
+      ],
+      "pairs": [],
+      "truncated": false,
+      "evidence_cap": 10000,
+      "shell_id": null,
+      "note": ""
+    },
+    {
+      "category": "TINY_SHELL_FACES",
+      "domain": "FACE",
+      "total_count": 0,
+      "indices": [],
+      "pairs": [],
+      "truncated": false,
+      "evidence_cap": 10000,
+      "shell_id": null,
+      "note": "Candidate classification requires at least two configured criteria; separate ornaments may be intentional."
+    },
+    {
+      "category": "POSSIBLE_INTERNAL_SHELL_FACES",
+      "domain": "FACE",
+      "total_count": 0,
+      "indices": [],
+      "pairs": [],
+      "truncated": false,
+      "evidence_cap": 10000,
+      "shell_id": null,
+      "note": "Deep diagnostics were not requested by the Standard profile."
+    },
+    {
+      "category": "SELF_INTERSECTION_FACES",
+      "domain": "FACE",
+      "total_count": 0,
+      "indices": [],
+      "pairs": [],
+      "truncated": false,
+      "evidence_cap": 10000,
+      "shell_id": null,
+      "note": "Deep diagnostics were not requested by the Standard profile."
+    }
+  ],
+  "checks": [
+    {
+      "name": "mesh_input",
+      "status": "COMPLETED",
+      "message": "Active original mesh datablock is valid.",
+      "duration_ms": 0.0,
+      "actual_size": null,
+      "configured_limit": null
+    },
+    {
+      "name": "object_metadata",
+      "status": "COMPLETED",
+      "message": "Object metadata and topology signature collected.",
+      "duration_ms": 6687.8785000008065,
+      "actual_size": null,
+      "configured_limit": null
+    },
+    {
+      "name": "geometry_metrics",
+      "status": "COMPLETED",
+      "message": "World-space geometry and original-mesh triangle metrics collected.",
+      "duration_ms": 8568.515200000547,
+      "actual_size": null,
+      "configured_limit": null
+    },
+    {
+      "name": "base_topology",
+      "status": "COMPLETED",
+      "message": "Face-edge incidence collected from the original mesh.",
+      "duration_ms": 18756.611999997403,
+      "actual_size": null,
+      "configured_limit": null
+    },
+    {
+      "name": "edge_manifold_classification",
+      "status": "COMPLETED",
+      "message": "Every edge was classified by linked-face count.",
+      "duration_ms": 1504.7994000051403,
+      "actual_size": null,
+      "configured_limit": null
+    },
+    {
+      "name": "vertex_manifold_classification",
+      "status": "COMPLETED",
+      "message": "Local face-fan connectivity evaluated at every incident vertex.",
+      "duration_ms": 12462.088500004029,
+      "actual_size": null,
+      "configured_limit": null
+    },
+    {
+      "name": "shell_decomposition",
+      "status": "COMPLETED",
+      "message": "Found 1 face-connected shell(s).",
+      "duration_ms": 2038.2962999938172,
+      "actual_size": null,
+      "configured_limit": null
+    },
+    {
+      "name": "orientation_consistency",
+      "status": "COMPLETED",
+      "message": "1 shared edge(s) have equal adjacent-face winding.",
+      "duration_ms": 1504.7994000051403,
+      "actual_size": null,
+      "configured_limit": null
+    },
+    {
+      "name": "potential_duplicates",
+      "status": "SKIPPED",
+      "message": "Skipped: 624,826 vertices exceed the configured limit of 500,000.",
+      "duration_ms": 0.03670000296551734,
+      "actual_size": 624826,
+      "configured_limit": 500000
+    },
+    {
+      "name": "surface_area",
+      "status": "COMPLETED",
+      "message": "World-space triangle surface area calculated in mm^2.",
+      "duration_ms": 461.6043999994872,
+      "actual_size": null,
+      "configured_limit": null
+    },
+    {
+      "name": "volume",
+      "status": "COMPLETED",
+      "message": "Signed volume evaluated only for closed orientation-consistent shells.",
+      "duration_ms": 675.2805000069202,
+      "actual_size": null,
+      "configured_limit": null
+    },
+    {
+      "name": "tiny_shell_classification",
+      "status": "COMPLETED",
+      "message": "0 tiny-shell candidate(s) found using combined criteria.",
+      "duration_ms": 0.05650000093737617,
+      "actual_size": null,
+      "configured_limit": null
+    },
+    {
+      "name": "build_volume",
+      "status": "NOT_APPLICABLE",
+      "message": "No printer build-volume profile is selected.",
+      "duration_ms": 0.032800002372823656,
+      "actual_size": null,
+      "configured_limit": null
+    },
+    {
+      "name": "self_intersection_candidates",
+      "status": "NOT_APPLICABLE",
+      "message": "Deep diagnostics were not requested by the Standard profile.",
+      "duration_ms": 0.0,
+      "actual_size": null,
+      "configured_limit": null
+    },
+    {
+      "name": "containment_analysis",
+      "status": "NOT_APPLICABLE",
+      "message": "Deep diagnostics were not requested by the Standard profile.",
+      "duration_ms": 0.0,
+      "actual_size": null,
+      "configured_limit": null
+    },
+    {
+      "name": "read_only_state",
+      "status": "COMPLETED",
+      "message": "Relevant object, mesh, transform, mode, and selection state remained unchanged.",
+      "duration_ms": 0.0,
+      "actual_size": null,
+      "configured_limit": null
+    }
+  ],
+  "timings": [
+    {
+      "name": "object_metadata",
+      "status": "COMPLETED",
+      "duration_ms": 6687.8785000008065,
+      "detail": ""
+    },
+    {
+      "name": "geometry_metrics",
+      "status": "COMPLETED",
+      "duration_ms": 8568.515200000547,
+      "detail": ""
+    },
+    {
+      "name": "base_topology",
+      "status": "COMPLETED",
+      "duration_ms": 18756.611999997403,
+      "detail": "Face-edge incidence collected."
+    },
+    {
+      "name": "edge_manifold_classification",
+      "status": "COMPLETED",
+      "duration_ms": 1504.7994000051403,
+      "detail": ""
+    },
+    {
+      "name": "topology_defects",
+      "status": "COMPLETED",
+      "duration_ms": 10956.774099999166,
+      "detail": ""
+    },
+    {
+      "name": "vertex_manifold_classification",
+      "status": "COMPLETED",
+      "duration_ms": 12462.088500004029,
+      "detail": ""
+    },
+    {
+      "name": "shell_decomposition",
+      "status": "COMPLETED",
+      "duration_ms": 2038.2962999938172,
+      "detail": ""
+    },
+    {
+      "name": "orientation_consistency",
+      "status": "COMPLETED",
+      "duration_ms": 1504.7994000051403,
+      "detail": "1 shared edge(s) have equal adjacent-face winding."
+    },
+    {
+      "name": "duplicate_position_detection",
+      "status": "SKIPPED",
+      "duration_ms": 0.03670000296551734,
+      "detail": "Skipped: 624,826 vertices exceed the configured limit of 500,000."
+    },
+    {
+      "name": "surface_area",
+      "status": "COMPLETED",
+      "duration_ms": 461.6043999994872,
+      "detail": ""
+    },
+    {
+      "name": "volume",
+      "status": "COMPLETED",
+      "duration_ms": 675.2805000069202,
+      "detail": ""
+    },
+    {
+      "name": "shell_metrics",
+      "status": "COMPLETED",
+      "duration_ms": 2551.9917999990867,
+      "detail": ""
+    },
+    {
+      "name": "tiny_shell_classification",
+      "status": "COMPLETED",
+      "duration_ms": 0.05650000093737617,
+      "detail": ""
+    },
+    {
+      "name": "build_volume_evaluation",
+      "status": "NOT_APPLICABLE",
+      "duration_ms": 0.032800002372823656,
+      "detail": "No printer build-volume profile is selected."
+    },
+    {
+      "name": "self_intersection_candidate_detection",
+      "status": "NOT_APPLICABLE",
+      "duration_ms": 0.0,
+      "detail": "Deep diagnostics were not requested by the Standard profile."
+    },
+    {
+      "name": "containment_analysis",
+      "status": "NOT_APPLICABLE",
+      "duration_ms": 0.0,
+      "detail": "Deep diagnostics were not requested by the Standard profile."
+    },
+    {
+      "name": "total_analysis",
+      "status": "COMPLETED",
+      "duration_ms": 65283.27170000557,
+      "detail": ""
+    }
+  ],
+  "skipped_check_reasons": [
+    "Skipped: 624,826 vertices exceed the configured limit of 500,000."
+  ],
+  "warnings": [
+    "32 boundary edge(s) detected.",
+    "34 high-incidence non-manifold edge(s) detected.",
+    "70 vertex-manifold anomaly/anomalies detected.",
+    "Not topologically watertight.",
+    "1 shared edge(s) have equal adjacent-face winding.",
+    "Potential duplicate check: Skipped: 624,826 vertices exceed the configured limit of 500,000."
+  ],
+  "errors": []
+}

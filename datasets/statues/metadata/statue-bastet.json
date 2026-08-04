@@ -1,0 +1,91 @@
+{
+  "unique_id": "statue-bastet",
+  "title": "Bastet",
+  "subject": "Egyptian goddess Bastet",
+  "category": "figurine",
+  "religious_cultural_classification": "Ancient Egyptian religion",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Thingiverse_-_Bastet.stl",
+  "source_revision_url": "https://commons.wikimedia.org/wiki/File:Thingiverse_-_Bastet.stl?oldid=722199083",
+  "source_page_revision_id": 722199083,
+  "source_page_revision_timestamp": "2023-01-02T16:52:14Z",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Thingiverse_-_Bastet.stl",
+  "download_date": "2026-07-26",
+  "download_timestamp_utc": "2026-07-26T06:35:39.842785+00:00",
+  "author": "Gargi ( https://www.thingiverse.com/Gargi ) / Christian Kuhn",
+  "credit": "https://www.thingiverse.com/thing:1548367",
+  "original_repository": "Thingiverse via Wikimedia Commons",
+  "upstream_source_urls": [],
+  "license": "CC-BY-4.0",
+  "license_source_label": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_document": "datasets/statues/licenses/CC-BY-4.0.txt",
+  "file_format": "STL",
+  "mime_type": "application/sla",
+  "vertex_count": 8274,
+  "triangle_count": 16520,
+  "bounding_box": {
+    "coordinate_space": "Blender world space after default STL import",
+    "source_units": "unspecified",
+    "minimum": [
+      -908.930236816,
+      -160.944946289,
+      -1.753964543
+    ],
+    "maximum": [
+      -807.352294922,
+      -6.209091187,
+      206.932617188
+    ],
+    "dimensions": [
+      101.577941895,
+      154.735855103,
+      208.686584473
+    ],
+    "diagonal": 278.94686504
+  },
+  "checksum_sha256": "5fe8b7d22c7831f9e53dbd2ab70691945583be5fb3bcd681df16df7d5d683d22",
+  "source_checksum_sha1": "be269ea9583b564905e2ce4ac2a8373c1fae1aae",
+  "original_filename": "Thingiverse - Bastet.stl",
+  "stored_filename": "statue-bastet.stl",
+  "stored_path": "datasets/statues/raw/statue-bastet.stl",
+  "file_size_bytes": 826284,
+  "thumbnail_path": "datasets/statues/thumbnails/statue-bastet.png",
+  "thumbnail_checksum_sha256": "8b7ea3cde6ad92b9289cd700f90abe95994ac23cd05f9ee80888987dd9b371a0",
+  "source_description": "A statue of the Egyptian goddess Bastet.",
+  "notes": [
+    "Small stylized statue representing a low-complexity regression case."
+  ],
+  "validation": {
+    "status": "validated",
+    "validated_at_utc": "2026-07-26T06:35:51.373303+00:00",
+    "validator": "Blender 4.4.3 native STL importer",
+    "readable": true,
+    "non_empty": true,
+    "reasonable_mesh": true,
+    "obvious_corruption": false,
+    "stl_encoding": "binary",
+    "binary_size_consistent": true,
+    "declared_triangle_count": 16524,
+    "triangle_count_matches_header": false,
+    "triangle_count_delta_from_header": 4,
+    "imported_object_count": 1,
+    "edge_count": 24791,
+    "polygon_count": 16520,
+    "non_finite_vertex_count": 0,
+    "import_seconds": 0.01076,
+    "validation_seconds": 0.040983,
+    "checks": [
+      "File exists and is non-empty.",
+      "Current SHA-256 matches acquisition metadata.",
+      "STL container structure is recognized.",
+      "Blender native importer completed and produced mesh data.",
+      "Vertex and triangle counts exceed bounded minimums.",
+      "All imported vertex coordinates and bounds are finite.",
+      "Bounding-box diagonal is non-zero.",
+      "Binary STL header/import triangle delta is recorded; Blender may omit duplicate or degenerate facets during import."
+    ],
+    "warnings": [
+      "Blender imported 4 fewer triangles than the binary STL header declared, consistent with importer cleanup of duplicate or degenerate facets."
+    ]
+  }
+}

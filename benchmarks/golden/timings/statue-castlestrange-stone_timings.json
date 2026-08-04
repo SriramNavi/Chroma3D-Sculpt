@@ -1,0 +1,213 @@
+{
+  "schema_version": "1.0",
+  "mesh_id": "statue-castlestrange-stone",
+  "timing_class": "Small",
+  "triangle_count": 67652,
+  "phases": {
+    "import": {
+      "wall_seconds": 0.043188,
+      "cpu_seconds": 0.046875,
+      "memory_before": {
+        "working_set_bytes": 158638080,
+        "peak_working_set_bytes": 160931840,
+        "private_usage_bytes": 181641216
+      },
+      "memory_after": {
+        "working_set_bytes": 176910336,
+        "peak_working_set_bytes": 176910336,
+        "private_usage_bytes": 196960256
+      }
+    },
+    "analysis": {
+      "wall_seconds": 4.054288,
+      "cpu_seconds": 3.859375,
+      "memory_before": {
+        "working_set_bytes": 176926720,
+        "peak_working_set_bytes": 176926720,
+        "private_usage_bytes": 196960256
+      },
+      "memory_after": {
+        "working_set_bytes": 201519104,
+        "peak_working_set_bytes": 274894848,
+        "private_usage_bytes": 211709952
+      }
+    },
+    "analysis_export": {
+      "wall_seconds": 0.003335,
+      "cpu_seconds": 0.015625,
+      "memory_before": {
+        "working_set_bytes": 201523200,
+        "peak_working_set_bytes": 274894848,
+        "private_usage_bytes": 211709952
+      },
+      "memory_after": {
+        "working_set_bytes": 201551872,
+        "peak_working_set_bytes": 274894848,
+        "private_usage_bytes": 211709952
+      }
+    },
+    "repair_session_start": {
+      "wall_seconds": 5.417757,
+      "cpu_seconds": 5.125,
+      "memory_before": {
+        "working_set_bytes": 201572352,
+        "peak_working_set_bytes": 274894848,
+        "private_usage_bytes": 211709952
+      },
+      "memory_after": {
+        "working_set_bytes": 221069312,
+        "peak_working_set_bytes": 282181632,
+        "private_usage_bytes": 234508288
+      }
+    },
+    "repair_plan_initial": {
+      "wall_seconds": 2.752398,
+      "cpu_seconds": 2.53125,
+      "memory_before": {
+        "working_set_bytes": 221073408,
+        "peak_working_set_bytes": 282181632,
+        "private_usage_bytes": 234508288
+      },
+      "memory_after": {
+        "working_set_bytes": 247910400,
+        "peak_working_set_bytes": 282181632,
+        "private_usage_bytes": 257429504
+      }
+    },
+    "repair_restore": {
+      "wall_seconds": 5.692207,
+      "cpu_seconds": 5.46875,
+      "memory_before": {
+        "working_set_bytes": 247910400,
+        "peak_working_set_bytes": 282181632,
+        "private_usage_bytes": 257429504
+      },
+      "memory_after": {
+        "working_set_bytes": 268009472,
+        "peak_working_set_bytes": 318332928,
+        "private_usage_bytes": 278130688
+      }
+    },
+    "repair_plan_canonical": {
+      "wall_seconds": 2.700044,
+      "cpu_seconds": 2.53125,
+      "memory_before": {
+        "working_set_bytes": 268029952,
+        "peak_working_set_bytes": 318332928,
+        "private_usage_bytes": 278130688
+      },
+      "memory_after": {
+        "working_set_bytes": 268636160,
+        "peak_working_set_bytes": 318332928,
+        "private_usage_bytes": 278458368
+      }
+    },
+    "repair_accept": {
+      "wall_seconds": 5.681205,
+      "cpu_seconds": 5.484375,
+      "memory_before": {
+        "working_set_bytes": 268648448,
+        "peak_working_set_bytes": 318332928,
+        "private_usage_bytes": 278458368
+      },
+      "memory_after": {
+        "working_set_bytes": 276279296,
+        "peak_working_set_bytes": 322469888,
+        "private_usage_bytes": 286011392
+      }
+    },
+    "repair_audit_export": {
+      "wall_seconds": 0.004168,
+      "cpu_seconds": 0.0,
+      "memory_before": {
+        "working_set_bytes": 276279296,
+        "peak_working_set_bytes": 322469888,
+        "private_usage_bytes": 286011392
+      },
+      "memory_after": {
+        "working_set_bytes": 276295680,
+        "peak_working_set_bytes": 322469888,
+        "private_usage_bytes": 286011392
+      }
+    },
+    "rollback_probe_start": {
+      "wall_seconds": 5.188825,
+      "cpu_seconds": 4.890625,
+      "memory_before": {
+        "working_set_bytes": 276303872,
+        "peak_working_set_bytes": 322469888,
+        "private_usage_bytes": 286011392
+      },
+      "memory_after": {
+        "working_set_bytes": 272187392,
+        "peak_working_set_bytes": 326066176,
+        "private_usage_bytes": 281681920
+      }
+    },
+    "rollback_probe_plan": {
+      "wall_seconds": 2.703355,
+      "cpu_seconds": 2.5625,
+      "memory_before": {
+        "working_set_bytes": 272191488,
+        "peak_working_set_bytes": 326066176,
+        "private_usage_bytes": 281681920
+      },
+      "memory_after": {
+        "working_set_bytes": 276168704,
+        "peak_working_set_bytes": 326066176,
+        "private_usage_bytes": 294477824
+      }
+    },
+    "repair_rollback": {
+      "wall_seconds": 0.426247,
+      "cpu_seconds": 0.390625,
+      "memory_before": {
+        "working_set_bytes": 276168704,
+        "peak_working_set_bytes": 326066176,
+        "private_usage_bytes": 294477824
+      },
+      "memory_after": {
+        "working_set_bytes": 276176896,
+        "peak_working_set_bytes": 326066176,
+        "private_usage_bytes": 294477824
+      }
+    },
+    "rollback_audit_export": {
+      "wall_seconds": 0.003147,
+      "cpu_seconds": 0.0,
+      "memory_before": {
+        "working_set_bytes": 276176896,
+        "peak_working_set_bytes": 326066176,
+        "private_usage_bytes": 294477824
+      },
+      "memory_after": {
+        "working_set_bytes": 276180992,
+        "peak_working_set_bytes": 326066176,
+        "private_usage_bytes": 294477824
+      }
+    }
+  },
+  "production_analysis_duration_ms": 4022.2151999987545,
+  "production_after_repair_analysis_duration_ms": 3942.7811999994447,
+  "canonical_repair_wall_seconds": 0.0,
+  "canonical_repair_cpu_seconds": 0.0,
+  "total_wall_seconds": 34.800258,
+  "total_cpu_seconds": 32.953125,
+  "initial_process_memory": {
+    "working_set_bytes": 157290496,
+    "peak_working_set_bytes": 160931840,
+    "private_usage_bytes": 179843072
+  },
+  "final_process_memory": {
+    "working_set_bytes": 280391680,
+    "peak_working_set_bytes": 326066176,
+    "private_usage_bytes": 298745856
+  },
+  "peak_working_set_bytes": 326066176,
+  "measurement_notes": [
+    "Wall time uses time.perf_counter().",
+    "CPU time uses time.process_time() for the Blender process.",
+    "Memory uses Windows process working-set counters sampled at phase boundaries; peak working set is the OS process high-water mark.",
+    "Each mesh executes in a fresh Blender --factory-startup process."
+  ]
+}

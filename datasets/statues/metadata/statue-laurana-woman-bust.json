@@ -1,0 +1,89 @@
+{
+  "unique_id": "statue-laurana-woman-bust",
+  "title": "Woman by Francesco Laurana",
+  "subject": "Bust of a woman after a marble original",
+  "category": "bust",
+  "religious_cultural_classification": "Italian Renaissance",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Laurana.stl",
+  "source_revision_url": "https://commons.wikimedia.org/wiki/File:Laurana.stl?oldid=1069945616",
+  "source_page_revision_id": 1069945616,
+  "source_page_revision_timestamp": "2025-08-11T04:19:19Z",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Laurana.stl",
+  "download_date": "2026-07-26",
+  "download_timestamp_utc": "2026-07-26T06:35:39.842785+00:00",
+  "author": "ALoopingIcon",
+  "credit": "Own work",
+  "original_repository": "CNR cast digitization via Wikimedia Commons",
+  "upstream_source_urls": [],
+  "license": "CC-BY-SA-4.0",
+  "license_source_label": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "license_document": "datasets/statues/licenses/CC-BY-SA-4.0.txt",
+  "file_format": "STL",
+  "mime_type": "application/sla",
+  "vertex_count": 50192,
+  "triangle_count": 99868,
+  "bounding_box": {
+    "coordinate_space": "Blender world space after default STL import",
+    "source_units": "unspecified",
+    "minimum": [
+      -233.650497437,
+      -250.766494751,
+      -129.724975586
+    ],
+    "maximum": [
+      233.650497437,
+      250.766494751,
+      129.724975586
+    ],
+    "dimensions": [
+      467.300994873,
+      501.532989502,
+      259.449951172
+    ],
+    "diagonal": 732.952819721
+  },
+  "checksum_sha256": "607d09913adf730fc59c815ad4b38047a87b81148a8c16da8a5fec82a8485bce",
+  "source_checksum_sha1": "22d0c3c9cd15d4535ebccd84568ea632e6afa14b",
+  "original_filename": "Laurana.stl",
+  "stored_filename": "statue-laurana-woman-bust.stl",
+  "stored_path": "datasets/statues/raw/statue-laurana-woman-bust.stl",
+  "file_size_bytes": 4993484,
+  "thumbnail_path": "datasets/statues/thumbnails/statue-laurana-woman-bust.png",
+  "thumbnail_checksum_sha256": "a7654fac1cee8d7fcc9315b5d1ecb14196bd7d250a17ed8fe616de61ba968331",
+  "source_description": "Woman by Francesco Laurana (ca. 1472). 3D scan of a cast from original in Berliner museum. It is a 3D scan of a cast, it portraits the bust of a woman after marble original by Francesco Laurana. The sitter has been tentatively identified as Ippolita Maria Sforza, the wife of King Alfonso II of Naples, but this theory is not based on any secure evidence. The 3D digitization was performed in 2001, at CNR in Italy using a Minolta scanner.",
+  "notes": [
+    "Early structured-light digitization of a museum cast."
+  ],
+  "validation": {
+    "status": "validated",
+    "validated_at_utc": "2026-07-26T06:36:14.747412+00:00",
+    "validator": "Blender 4.4.3 native STL importer",
+    "readable": true,
+    "non_empty": true,
+    "reasonable_mesh": true,
+    "obvious_corruption": false,
+    "stl_encoding": "binary",
+    "binary_size_consistent": true,
+    "declared_triangle_count": 99868,
+    "triangle_count_matches_header": true,
+    "triangle_count_delta_from_header": 0,
+    "imported_object_count": 1,
+    "edge_count": 150059,
+    "polygon_count": 99868,
+    "non_finite_vertex_count": 0,
+    "import_seconds": 0.062579,
+    "validation_seconds": 0.23177,
+    "checks": [
+      "File exists and is non-empty.",
+      "Current SHA-256 matches acquisition metadata.",
+      "STL container structure is recognized.",
+      "Blender native importer completed and produced mesh data.",
+      "Vertex and triangle counts exceed bounded minimums.",
+      "All imported vertex coordinates and bounds are finite.",
+      "Bounding-box diagonal is non-zero.",
+      "Binary STL header/import triangle delta is recorded; Blender may omit duplicate or degenerate facets during import."
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "unique_id": "statue-hercules-archer-mia",
+  "title": "Hercules as Archer",
+  "subject": "Pierre Puget's Hercules as Archer",
+  "category": "full_statue",
+  "religious_cultural_classification": "Greco-Roman mythology; French Baroque",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Pierre_Puget%27s_Hercules_as_Archer_-_3D_model_by_Minneapolis_Institute_of_Art_-_Sketchfab.stl",
+  "source_revision_url": "https://commons.wikimedia.org/wiki/File:Pierre_Puget%27s_Hercules_as_Archer_-_3D_model_by_Minneapolis_Institute_of_Art_-_Sketchfab.stl?oldid=934019595",
+  "source_page_revision_id": 934019595,
+  "source_page_revision_timestamp": "2024-10-06T12:23:29Z",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Pierre_Puget%27s_Hercules_as_Archer_-_3D_model_by_Minneapolis_Institute_of_Art_-_Sketchfab.stl",
+  "download_date": "2026-07-26",
+  "download_timestamp_utc": "2026-07-26T06:35:39.842785+00:00",
+  "author": "Minneapolis Institute of Art",
+  "credit": "Sketchfab - Minneapolis Institute of Art",
+  "original_repository": "Minneapolis Institute of Art via Sketchfab and Wikimedia Commons",
+  "upstream_source_urls": [],
+  "license": "CC0-1.0",
+  "license_source_label": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_document": "datasets/statues/licenses/CC0-1.0.txt",
+  "file_format": "STL",
+  "mime_type": "application/sla",
+  "vertex_count": 49882,
+  "triangle_count": 99983,
+  "bounding_box": {
+    "coordinate_space": "Blender world space after default STL import",
+    "source_units": "unspecified",
+    "minimum": [
+      18.916561127,
+      25.399120331,
+      5.265385151
+    ],
+    "maximum": [
+      19.321144104,
+      25.765432358,
+      5.859752178
+    ],
+    "dimensions": [
+      0.404582977,
+      0.366312027,
+      0.594367027
+    ],
+    "diagonal": 0.806934968
+  },
+  "checksum_sha256": "30d178b8e2e8c769883409a1c85e28a429ce022385fa0a918e16eda41b223017",
+  "source_checksum_sha1": "f2f8d5dad62fe6c7faa01ab395d03be9949490ba",
+  "original_filename": "Pierre Puget's Hercules as Archer - 3D model by Minneapolis Institute of Art - Sketchfab.stl",
+  "stored_filename": "statue-hercules-archer-mia.stl",
+  "stored_path": "datasets/statues/raw/statue-hercules-archer-mia.stl",
+  "file_size_bytes": 4999234,
+  "thumbnail_path": "datasets/statues/thumbnails/statue-hercules-archer-mia.png",
+  "thumbnail_checksum_sha256": "00adefa4874f9be94462aef82b1ea61bc6d3656e379a13884d8ee54ff68336eb",
+  "source_description": "Pierre Puget’s Hercules as Archer, 17th C CE, now in the collection of the Minneapolis Institute of Art. More information about the sculpture here: https://collections.artsmia.org/art/20591/hercules-as-archer-pierre-puget",
+  "notes": [
+    "Museum object scan with extended limbs and weapon detail."
+  ],
+  "validation": {
+    "status": "validated",
+    "validated_at_utc": "2026-07-26T06:36:03.633247+00:00",
+    "validator": "Blender 4.4.3 native STL importer",
+    "readable": true,
+    "non_empty": true,
+    "reasonable_mesh": true,
+    "obvious_corruption": false,
+    "stl_encoding": "binary",
+    "binary_size_consistent": true,
+    "declared_triangle_count": 99983,
+    "triangle_count_matches_header": true,
+    "triangle_count_delta_from_header": 0,
+    "imported_object_count": 1,
+    "edge_count": 150000,
+    "polygon_count": 99983,
+    "non_finite_vertex_count": 0,
+    "import_seconds": 0.053411,
+    "validation_seconds": 0.226889,
+    "checks": [
+      "File exists and is non-empty.",
+      "Current SHA-256 matches acquisition metadata.",
+      "STL container structure is recognized.",
+      "Blender native importer completed and produced mesh data.",
+      "Vertex and triangle counts exceed bounded minimums.",
+      "All imported vertex coordinates and bounds are finite.",
+      "Bounding-box diagonal is non-zero.",
+      "Binary STL header/import triangle delta is recorded; Blender may omit duplicate or degenerate facets during import."
+    ],
+    "warnings": []
+  }
+}

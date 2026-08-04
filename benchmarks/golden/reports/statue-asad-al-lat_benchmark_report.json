@@ -1,0 +1,27 @@
+{
+  "mesh_id": "statue-asad-al-lat",
+  "status": "PASS",
+  "timing_class": "Small",
+  "mesh_classifications": [
+    "Architectural carving",
+    "Animal"
+  ],
+  "triangle_count": 29402,
+  "severity_before": "WARNING",
+  "severity_after": "WARNING",
+  "selected_operations": [],
+  "operation_record_count": 0,
+  "warning_count": 5,
+  "total_wall_seconds": 17.222326,
+  "total_cpu_seconds": 16.8125,
+  "peak_working_set_bytes": 234430464,
+  "artifacts": {
+    "analysis": "benchmarks/golden/raw/statue-asad-al-lat_analysis.json",
+    "repair_audit": "benchmarks/golden/raw/statue-asad-al-lat_repair_audit.json",
+    "rollback_audit": "benchmarks/golden/raw/statue-asad-al-lat_rollback_audit.json",
+    "golden": "benchmarks/golden/raw/statue-asad-al-lat_golden.json",
+    "comparison": "benchmarks/golden/comparisons/statue-asad-al-lat_comparison.json",
+    "timings": "benchmarks/golden/timings/statue-asad-al-lat_timings.json",
+    "report": "benchmarks/golden/reports/statue-asad-al-lat_benchmark_report.json"
+  }
+}

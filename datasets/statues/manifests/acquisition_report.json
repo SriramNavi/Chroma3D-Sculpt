@@ -1,0 +1,147 @@
+{
+  "dataset_version": "1.0.0",
+  "generated_at_utc": "2026-07-26T06:35:39.842785+00:00",
+  "requested_asset_count": 27,
+  "downloaded_asset_count": 27,
+  "acquisition_failure_count": 0,
+  "policy_rejection_count": 6,
+  "downloaded_bytes": 660692638,
+  "assets": [
+    {
+      "unique_id": "statue-ganesha-java-10c",
+      "stored_path": "datasets/statues/raw/statue-ganesha-java-10c.stl",
+      "checksum_sha256": "5758dab5acda32bd928b0920c4fdb79ffc6c2211a141760a7ea6f15c261412b4"
+    },
+    {
+      "unique_id": "statue-uma-maheshvara-java-10c",
+      "stored_path": "datasets/statues/raw/statue-uma-maheshvara-java-10c.stl",
+      "checksum_sha256": "db055654560c508fd97249b0c88c33663aceebd9d293091136e99fd259b86702"
+    },
+    {
+      "unique_id": "statue-cosmic-buddha-smithsonian-150k",
+      "stored_path": "datasets/statues/raw/statue-cosmic-buddha-smithsonian-150k.stl",
+      "checksum_sha256": "de75f3aa58ed3da3e27884cd96671ef172c98ce26f1b78510c4f3dda88e91e72"
+    },
+    {
+      "unique_id": "statue-hotei-water-basin",
+      "stored_path": "datasets/statues/raw/statue-hotei-water-basin.stl",
+      "checksum_sha256": "202b94e4eb8bb5d4c00cd1204aae620016dd1b2af114a89e6ab7295b5cc873da"
+    },
+    {
+      "unique_id": "statue-asad-al-lat",
+      "stored_path": "datasets/statues/raw/statue-asad-al-lat.stl",
+      "checksum_sha256": "5748e4d150a370f34328ea768ced85ccafcaae6dd3c3891f2c0e80fb0a7a4ac8"
+    },
+    {
+      "unique_id": "statue-bastet",
+      "stored_path": "datasets/statues/raw/statue-bastet.stl",
+      "checksum_sha256": "5fe8b7d22c7831f9e53dbd2ab70691945583be5fb3bcd681df16df7d5d683d22"
+    },
+    {
+      "unique_id": "statue-castlestrange-stone",
+      "stored_path": "datasets/statues/raw/statue-castlestrange-stone.stl",
+      "checksum_sha256": "c49ddccd090fe0ff9657bfa653823dfd13e4112b08c0afbe35790a4cae1ee4e1"
+    },
+    {
+      "unique_id": "statue-caracalla-bust",
+      "stored_path": "datasets/statues/raw/statue-caracalla-bust.stl",
+      "checksum_sha256": "a1a44d0b2ed7c64ebd4439ab4f8aaa8798ac8f8e77e449bdd01dbc58ee97b2a5"
+    },
+    {
+      "unique_id": "statue-greek-slave-smithsonian-150k",
+      "stored_path": "datasets/statues/raw/statue-greek-slave-smithsonian-150k.stl",
+      "checksum_sha256": "6057e7ac013894f5cff80f6faf4290c8356e6de0b1d6f227f0c38f3e74989f90"
+    },
+    {
+      "unique_id": "statue-danaid-rodin",
+      "stored_path": "datasets/statues/raw/statue-danaid-rodin.stl",
+      "checksum_sha256": "e369027a93ac6ad5b5765999f6c74fcc2fef1f9beceef244d02b9158d012c8e8"
+    },
+    {
+      "unique_id": "statue-david-michelangelo",
+      "stored_path": "datasets/statues/raw/statue-david-michelangelo.stl",
+      "checksum_sha256": "b41ad68e2b7a7377251f11201b6f9ba9569fa16422bec3719223f205d001c6f9"
+    },
+    {
+      "unique_id": "statue-icarus-ioannidou",
+      "stored_path": "datasets/statues/raw/statue-icarus-ioannidou.stl",
+      "checksum_sha256": "00372f3bcd77cdcd7084b72bb16c8463f27c51e6a4b67dcbb43813023f94308e"
+    },
+    {
+      "unique_id": "statue-laurana-woman-bust",
+      "stored_path": "datasets/statues/raw/statue-laurana-woman-bust.stl",
+      "checksum_sha256": "607d09913adf730fc59c815ad4b38047a87b81148a8c16da8a5fec82a8485bce"
+    },
+    {
+      "unique_id": "statue-hercules-archer-mia",
+      "stored_path": "datasets/statues/raw/statue-hercules-archer-mia.stl",
+      "checksum_sha256": "30d178b8e2e8c769883409a1c85e28a429ce022385fa0a918e16eda41b223017"
+    },
+    {
+      "unique_id": "statue-belvedere-torso",
+      "stored_path": "datasets/statues/raw/statue-belvedere-torso.stl",
+      "checksum_sha256": "fb1499ce2052f47d693365d04b5e92e7eb0eee88051646a82b01e1bd3450e254"
+    },
+    {
+      "unique_id": "statue-juno-ludovisi",
+      "stored_path": "datasets/statues/raw/statue-juno-ludovisi.stl",
+      "checksum_sha256": "972537da65064893f30d0859d2cb5801fb01aeb9c4de314959ddf58bce43b347"
+    },
+    {
+      "unique_id": "statue-laocoon-group",
+      "stored_path": "datasets/statues/raw/statue-laocoon-group.stl",
+      "checksum_sha256": "8f962593056edf56ce0272b7c2c0c4d4fef0324a2fe90130ed6fc80fcb936700"
+    },
+    {
+      "unique_id": "statue-pieta-michelangelo",
+      "stored_path": "datasets/statues/raw/statue-pieta-michelangelo.stl",
+      "checksum_sha256": "f77f638262a0e0fc7f3dc763bfeee228faad21057659de75c6c6697f420f60b4"
+    },
+    {
+      "unique_id": "statue-thinker-rodin",
+      "stored_path": "datasets/statues/raw/statue-thinker-rodin.stl",
+      "checksum_sha256": "ae9427b19c0b5cc0c680a01793b361766cc6175be8ba6f1c9a0f0b30e2b3c5e7"
+    },
+    {
+      "unique_id": "statue-venus-de-milo",
+      "stored_path": "datasets/statues/raw/statue-venus-de-milo.stl",
+      "checksum_sha256": "4d00074ced679caf85e7539687626afa0410e17a9995188239ca820041fa13e8"
+    },
+    {
+      "unique_id": "statue-venus-willendorf",
+      "stored_path": "datasets/statues/raw/statue-venus-willendorf.stl",
+      "checksum_sha256": "cafeab179c536661df227a1828f011080ae6c9704fd6021764e9fb53268a3029"
+    },
+    {
+      "unique_id": "statue-water-buffalo-boy",
+      "stored_path": "datasets/statues/raw/statue-water-buffalo-boy.stl",
+      "checksum_sha256": "6c08876527bf8d725224a85fce42048671e8ab67d9e5ca42cbd92a77b250951f"
+    },
+    {
+      "unique_id": "statue-hizen-komainu",
+      "stored_path": "datasets/statues/raw/statue-hizen-komainu.stl",
+      "checksum_sha256": "127e2da11069dbdc17166588cffae0e4f8eaca3128fbe6c8d78c8eb4808bcec8"
+    },
+    {
+      "unique_id": "statue-dainichi-nyorai-tower",
+      "stored_path": "datasets/statues/raw/statue-dainichi-nyorai-tower.stl",
+      "checksum_sha256": "4df74fc23c926db090022b1f4104102322c94b95713d25a7f6a835ed79d5d9d8"
+    },
+    {
+      "unique_id": "statue-bato-kannon-shirane",
+      "stored_path": "datasets/statues/raw/statue-bato-kannon-shirane.stl",
+      "checksum_sha256": "e3695cb8fee26543780b9ab135a933d881c598a6247fde6fb2e265a73d4d5659"
+    },
+    {
+      "unique_id": "statue-mick-odwyer",
+      "stored_path": "datasets/statues/raw/statue-mick-odwyer.stl",
+      "checksum_sha256": "3b72aa06f2458a69c232eaa8883bbff0aa7bbb089b82bb9f7986b2e0bb006c8a"
+    },
+    {
+      "unique_id": "statue-heroic-head-pierre-de-wissant",
+      "stored_path": "datasets/statues/raw/statue-heroic-head-pierre-de-wissant.stl",
+      "checksum_sha256": "e3fdcd7ff67f0400bb0517619998a0272e1b100858e1e4f8ad9ea88c622a571c"
+    }
+  ],
+  "failures": []
+}

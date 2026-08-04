@@ -1,0 +1,2891 @@
+{
+  "schema_version": "1.0",
+  "extension_version": "0.3.0-alpha.1",
+  "analysis_schema_version": "2.0",
+  "blender_version": "4.4.3",
+  "operating_system": "Windows 10",
+  "exported_at": "2026-07-26T09:56:59.040770+00:00",
+  "session": {
+    "before_analysis": {
+      "analysis_id": "67cd5064-dfbb-4c78-a87a-1e553330254a",
+      "analyzed_at": "2026-07-26T09:56:48.620296+00:00",
+      "build_volume": {
+        "build_dimensions_mm": null,
+        "current_orientation_only": true,
+        "excess_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "fit_state": "NO_PROFILE",
+        "fits_x": null,
+        "fits_y": null,
+        "fits_z": null,
+        "maximum_uniform_scale_percent": null,
+        "message": "No printer build-volume profile is selected.",
+        "model_dimensions_mm": [
+          404.5829772949219,
+          366.31202697753906,
+          594.3670272827148
+        ],
+        "overall_fit": null,
+        "printer_profile": "NONE",
+        "status": "NOT_APPLICABLE"
+      },
+      "checks": [
+        {
+          "actual_size": null,
+          "configured_limit": null,
+          "duration_ms": 0.0,
+          "message": "Active original mesh datablock is valid.",
+          "name": "mesh_input",
+          "status": "COMPLETED"
+        },
+        {
+          "actual_size": null,
+          "configured_limit": null,
+          "duration_ms": 525.5278000040562,
+          "message": "Object metadata and topology signature collected.",
+          "name": "object_metadata",
+          "status": "COMPLETED"
+        },
+        {
+          "actual_size": null,
+          "configured_limit": null,
+          "duration_ms": 627.1552999969572,
+          "message": "World-space geometry and original-mesh triangle metrics collected.",
+          "name": "geometry_metrics",
+          "status": "COMPLETED"
+        },
+        {
+          "actual_size": null,
+          "configured_limit": null,
+          "duration_ms": 1478.8571999961277,
+          "message": "Face-edge incidence collected from the original mesh.",
+          "name": "base_topology",
+          "status": "COMPLETED"
+        },
+        {
+          "actual_size": null,
+          "configured_limit": null,
+          "duration_ms": 129.9589000045671,
+          "message": "Every edge was classified by linked-face count.",
+          "name": "edge_manifold_classification",
+          "status": "COMPLETED"
+        },
+        {
+          "actual_size": null,
+          "configured_limit": null,
+          "duration_ms": 984.7845999975107,
+          "message": "Local face-fan connectivity evaluated at every incident vertex.",
+          "name": "vertex_manifold_classification",
+          "status": "COMPLETED"
+        },
+        {
+          "actual_size": null,
+          "configured_limit": null,
+          "duration_ms": 137.21000000077765,
+          "message": "Found 53 face-connected shell(s).",
+          "name": "shell_decomposition",
+          "status": "COMPLETED"
+        },
+        {
+          "actual_size": null,
+          "configured_limit": null,
+          "duration_ms": 129.9589000045671,
+          "message": "Evaluated face winding is consistent, but boundary edges leave at least one shell open.",
+          "name": "orientation_consistency",
+          "status": "COMPLETED"
+        },
+        {
+          "actual_size": 49882,
+          "configured_limit": 500000,
+          "duration_ms": 610.6529000026057,
+          "message": "Spatial-hash duplicate-position check completed in object-local coordinates.",
+          "name": "potential_duplicates",
+          "status": "COMPLETED"
+        },
+        {
+          "actual_size": null,
+          "configured_limit": null,
+          "duration_ms": 37.253700000292156,
+          "message": "World-space triangle surface area calculated in mm^2.",
+          "name": "surface_area",
+          "status": "COMPLETED"
+        },
+        {
+          "actual_size": null,
+          "configured_limit": null,
+          "duration_ms": 109.45160000119358,
+          "message": "Signed volume evaluated only for closed orientation-consistent shells.",
+          "name": "volume",
+          "status": "COMPLETED"
+        },
+        {
+          "actual_size": null,
+          "configured_limit": null,
+          "duration_ms": 1.6476000018883497,
+          "message": "52 tiny-shell candidate(s) found using combined criteria.",
+          "name": "tiny_shell_classification",
+          "status": "COMPLETED"
+        },
+        {
+          "actual_size": null,
+          "configured_limit": null,
+          "duration_ms": 0.02040000254055485,
+          "message": "No printer build-volume profile is selected.",
+          "name": "build_volume",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "actual_size": null,
+          "configured_limit": null,
+          "duration_ms": 0.0,
+          "message": "Deep diagnostics were not requested by the Standard profile.",
+          "name": "self_intersection_candidates",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "actual_size": null,
+          "configured_limit": null,
+          "duration_ms": 0.0,
+          "message": "Deep diagnostics were not requested by the Standard profile.",
+          "name": "containment_analysis",
+          "status": "NOT_APPLICABLE"
+        },
+        {
+          "actual_size": null,
+          "configured_limit": null,
+          "duration_ms": 0.0,
+          "message": "Relevant object, mesh, transform, mode, and selection state remained unchanged.",
+          "name": "read_only_state",
+          "status": "COMPLETED"
+        }
+      ],
+      "dimensions": {
+        "depth_mm": 366.31202697753906,
+        "height_mm": 594.3670272827148,
+        "millimetres_per_blender_unit": 1000.0,
+        "scene_scale_length": 1.0,
+        "source": "WORLD_SPACE_AXIS_ALIGNED_BOUNDING_BOX",
+        "unit_system": "METRIC",
+        "width_mm": 404.5829772949219
+      },
+      "duration_ms": 5752.7646999951685,
+      "errors": [],
+      "geometry": {
+        "edge_count": 150000,
+        "loop_count": 299949,
+        "material_slot_count": 0,
+        "metric_source": "ORIGINAL_MESH_DATABLOCK",
+        "modifier_count": 0,
+        "polygon_count": 99983,
+        "triangle_count": 99983,
+        "triangle_source": "ORIGINAL_MESH_LOOP_TRIANGLES",
+        "vertex_count": 49882
+      },
+      "severity": "WARNING",
+      "shell_count": 53,
+      "surface_volume": {
+        "detail": "Reliable total includes only closed, orientation-consistent shells.",
+        "reliable_closed_shell_volume_mm3": 5014433.088651492,
+        "reliable_volume_shell_count": 36,
+        "surface_area_status": "COMPLETED",
+        "total_surface_area_mm2": 407138.55345360807,
+        "unavailable_volume_shell_count": 17,
+        "volume_status": "COMPLETED"
+      },
+      "tiny_shell_candidate_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52
+      ],
+      "topology": {
+        "boundary_edges": 51,
+        "connected_components": 53,
+        "degenerate_faces": 0,
+        "disconnected_shells": 52,
+        "duplicate_evaluation_status": "COMPLETED",
+        "edge_manifold_state": "NON_MANIFOLD",
+        "face_shell_count": 53,
+        "high_incidence_non_manifold_edges": 0,
+        "loose_edges": 0,
+        "loose_vertices": 0,
+        "manifold_edges": 149949,
+        "non_manifold_edges": 0,
+        "normal_consistency": "OPEN",
+        "normal_consistency_detail": "Evaluated face winding is consistent, but boundary edges leave at least one shell open.",
+        "potential_duplicate_vertices": 0,
+        "vertex_manifold_anomalies": 0,
+        "vertex_manifold_state": "MANIFOLD",
+        "watertight_detail": "Not topologically watertight.",
+        "watertight_state": "NOT_WATERTIGHT",
+        "zero_length_edges": 0
+      },
+      "warnings": [
+        "51 boundary edge(s) detected.",
+        "Not topologically watertight.",
+        "53 disconnected face shells require review.",
+        "52 tiny-shell candidate(s) require review.",
+        "At least one closed shell is consistently oriented inward."
+      ]
+    },
+    "captured_active_identity": 1564561777672,
+    "captured_selected_identities": [
+      1564561777672
+    ],
+    "checkpoint_records": [
+      {
+        "checkpoint_id": "a3c276ce-a4b0-415c-ac00-94f72de22621",
+        "created_at": "2026-07-26T09:56:47.984966+00:00",
+        "edge_count": 150000,
+        "face_count": 99983,
+        "initial": true,
+        "mesh_datablock_identity": 1564517837576,
+        "operation_id": "INITIAL",
+        "retained": false,
+        "vertex_count": 49882,
+        "workspace_signature": "8dd6067cf78af47d6efb5f4a178150c520d4d62584f362fd02a21cfaa2c11206"
+      }
+    ],
+    "comparison": null,
+    "current_analysis_id": "67cd5064-dfbb-4c78-a87a-1e553330254a",
+    "current_workspace_signature": "8dd6067cf78af47d6efb5f4a178150c520d4d62584f362fd02a21cfaa2c11206",
+    "decision": "ROLLED_BACK",
+    "ended_at": "2026-07-26T09:56:59.037875+00:00",
+    "errors": [],
+    "final_analysis": {},
+    "initial_checkpoint_id": "a3c276ce-a4b0-415c-ac00-94f72de22621",
+    "initial_workspace_signature": "8dd6067cf78af47d6efb5f4a178150c520d4d62584f362fd02a21cfaa2c11206",
+    "limitations": [
+      "Original source preserved; workspace repair still requires human review.",
+      "An unfinished repair session is not guaranteed to survive Blender restart.",
+      "No remeshing, large-hole reconstruction, boolean repair, wall-thickness repair, AI, or printability guarantee.",
+      "Manual real-statue repair UAT is deferred."
+    ],
+    "operation_records": [],
+    "plan": {
+      "analysis_id": "67cd5064-dfbb-4c78-a87a-1e553330254a",
+      "candidates": [
+        {
+          "candidate_id": "tiny-shell-0003-f9c5fa892ade",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 4.054451666216066,
+          "edge_indices": [
+            46,
+            47,
+            48,
+            49,
+            18864,
+            18865,
+            18866,
+            37585,
+            37586,
+            56290,
+            56291,
+            74971
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            182,
+            183,
+            184,
+            185,
+            186,
+            187,
+            188,
+            189
+          ],
+          "mapping_sha256": "f9c5fa892ade84c58b8c009b8563aadb69cb5c70e016a5da144637ba2ee65ad8",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0030933825027325244,
+          "selected": false,
+          "shell_id": 3,
+          "surface_area_mm2": 12.594352774412219,
+          "total_edge_count": 12,
+          "total_face_count": 8,
+          "total_vertex_count": 6,
+          "vertex_indices": [
+            112,
+            113,
+            114,
+            115,
+            116,
+            117
+          ],
+          "volume_mm3": 2.803059372576596
+        },
+        {
+          "candidate_id": "tiny-shell-0004-53c42a830c73",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "MEDIUM",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm"
+          ],
+          "diagonal_mm": 2.234503950722804,
+          "edge_indices": [
+            112488,
+            112489,
+            131427
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            190
+          ],
+          "mapping_sha256": "53c42a830c734aea4350135e50381fbac023e1a85c21608e87d78a0237643f9b",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.00024077877701474086,
+          "selected": false,
+          "shell_id": 4,
+          "surface_area_mm2": 0.9803032297611045,
+          "total_edge_count": 3,
+          "total_face_count": 1,
+          "total_vertex_count": 3,
+          "vertex_indices": [
+            118,
+            119,
+            120
+          ],
+          "volume_mm3": null
+        },
+        {
+          "candidate_id": "tiny-shell-0005-da5bdf6b03e1",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 5.46016302427438,
+          "edge_indices": [
+            18867,
+            18868,
+            18869,
+            18870,
+            37587,
+            37588,
+            37589,
+            37590,
+            56292,
+            56293,
+            74972,
+            74973,
+            93643,
+            93644,
+            112490
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            191,
+            192,
+            193,
+            194,
+            195,
+            196,
+            197,
+            198,
+            199,
+            200
+          ],
+          "mapping_sha256": "da5bdf6b03e18c9035a0a14aa98a7e3f4ca63d7c876d9c1d1d5ca30be5aea3dd",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.003937415237980482,
+          "selected": false,
+          "shell_id": 5,
+          "surface_area_mm2": 16.030735443375676,
+          "total_edge_count": 15,
+          "total_face_count": 10,
+          "total_vertex_count": 7,
+          "vertex_indices": [
+            121,
+            122,
+            123,
+            124,
+            125,
+            126,
+            127
+          ],
+          "volume_mm3": 3.4990885744434763
+        },
+        {
+          "candidate_id": "tiny-shell-0006-16089aa39d29",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "MEDIUM",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm"
+          ],
+          "diagonal_mm": 3.6578282525316306,
+          "edge_indices": [
+            50,
+            51,
+            18871
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            201
+          ],
+          "mapping_sha256": "16089aa39d293c966475310d9c51dfca8785ef29ebdf53101ce247a619eccd1c",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0003118907265135705,
+          "selected": false,
+          "shell_id": 6,
+          "surface_area_mm2": 1.2698273922832997,
+          "total_edge_count": 3,
+          "total_face_count": 1,
+          "total_vertex_count": 3,
+          "vertex_indices": [
+            128,
+            129,
+            130
+          ],
+          "volume_mm3": null
+        },
+        {
+          "candidate_id": "tiny-shell-0007-eee5f60f6ef1",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 2.749920015383037,
+          "edge_indices": [
+            56294,
+            56295,
+            56296,
+            74974,
+            74975,
+            93645
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            202,
+            203,
+            204,
+            205
+          ],
+          "mapping_sha256": "eee5f60f6ef156251d82a270c6aee4e30fc821f2c2c642f67f1c05c9f5bfcab2",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0010016868708834891,
+          "selected": false,
+          "shell_id": 7,
+          "surface_area_mm2": 4.0782534362497485,
+          "total_edge_count": 6,
+          "total_face_count": 4,
+          "total_vertex_count": 4,
+          "vertex_indices": [
+            131,
+            132,
+            133,
+            134
+          ],
+          "volume_mm3": 0.363115586210494
+        },
+        {
+          "candidate_id": "tiny-shell-0008-7b01ee48b5a8",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 5.22561890860165,
+          "edge_indices": [
+            52,
+            53,
+            54,
+            55,
+            18872,
+            18873,
+            37591,
+            56297,
+            56298,
+            74976,
+            131428,
+            131429,
+            131430,
+            131431,
+            131432
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            206,
+            207,
+            208,
+            209,
+            210,
+            211,
+            212,
+            213,
+            214,
+            215
+          ],
+          "mapping_sha256": "7b01ee48b5a86b714f1ed4d802b0544fef69b16cece80767d1ada8a6cb9882b8",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.005161244632028989,
+          "selected": false,
+          "shell_id": 8,
+          "surface_area_mm2": 21.01341673504482,
+          "total_edge_count": 15,
+          "total_face_count": 10,
+          "total_vertex_count": 7,
+          "vertex_indices": [
+            135,
+            136,
+            137,
+            138,
+            139,
+            140,
+            141
+          ],
+          "volume_mm3": 5.355588937605571
+        },
+        {
+          "candidate_id": "tiny-shell-0009-ad1ad8e13669",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "MEDIUM",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm"
+          ],
+          "diagonal_mm": 1.638469720024719,
+          "edge_indices": [
+            112491,
+            112492,
+            131433
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            216
+          ],
+          "mapping_sha256": "ad1ad8e13669162eb667dbb051fdab4af8652ec877d46c8041b5cbcc33279709",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.00015469348285049206,
+          "selected": false,
+          "shell_id": 9,
+          "surface_area_mm2": 0.6298168083644986,
+          "total_edge_count": 3,
+          "total_face_count": 1,
+          "total_vertex_count": 3,
+          "vertex_indices": [
+            142,
+            143,
+            144
+          ],
+          "volume_mm3": null
+        },
+        {
+          "candidate_id": "tiny-shell-0010-b5c0477309c8",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "MEDIUM",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm"
+          ],
+          "diagonal_mm": 2.5752209117455025,
+          "edge_indices": [
+            18874,
+            18875,
+            37592
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            217
+          ],
+          "mapping_sha256": "b5c0477309c87f08e3e85e1684b963d6bbc0dd4cdaf6530d49cf49ec38323c4f",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0003773306549322578,
+          "selected": false,
+          "shell_id": 10,
+          "surface_area_mm2": 1.5362585702282197,
+          "total_edge_count": 3,
+          "total_face_count": 1,
+          "total_vertex_count": 3,
+          "vertex_indices": [
+            145,
+            146,
+            147
+          ],
+          "volume_mm3": null
+        },
+        {
+          "candidate_id": "tiny-shell-0011-a45ca5b18ee6",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "MEDIUM",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm"
+          ],
+          "diagonal_mm": 2.6728298232697694,
+          "edge_indices": [
+            74977,
+            74978,
+            93646
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            218
+          ],
+          "mapping_sha256": "a45ca5b18ee678bbf61e048e82cee7e06c5d7c60a861d98393c9d5b2d4822ca9",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.00023101549007875286,
+          "selected": false,
+          "shell_id": 11,
+          "surface_area_mm2": 0.9405531245603979,
+          "total_edge_count": 3,
+          "total_face_count": 1,
+          "total_vertex_count": 3,
+          "vertex_indices": [
+            148,
+            149,
+            150
+          ],
+          "volume_mm3": null
+        },
+        {
+          "candidate_id": "tiny-shell-0012-4e4f3154dbdf",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "MEDIUM",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm"
+          ],
+          "diagonal_mm": 2.170226721825006,
+          "edge_indices": [
+            56,
+            131434,
+            131435
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            219
+          ],
+          "mapping_sha256": "4e4f3154dbdfff70ddb65e93eac13126320f7a62a25eed2551cb492537882a07",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0002682415427027139,
+          "selected": false,
+          "shell_id": 12,
+          "surface_area_mm2": 1.0921147367214716,
+          "total_edge_count": 3,
+          "total_face_count": 1,
+          "total_vertex_count": 3,
+          "vertex_indices": [
+            151,
+            152,
+            153
+          ],
+          "volume_mm3": null
+        },
+        {
+          "candidate_id": "tiny-shell-0013-15f698b33268",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 7.2858314199896625,
+          "edge_indices": [
+            57,
+            58,
+            59,
+            18876,
+            18877,
+            37593,
+            37594,
+            37595,
+            37596,
+            37597,
+            37598,
+            56299,
+            56300,
+            56301,
+            56302,
+            56303,
+            74979,
+            74980,
+            93647,
+            93648,
+            93649,
+            112493,
+            112494,
+            112495,
+            131436,
+            131437,
+            131438
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            220,
+            221,
+            222,
+            223,
+            224,
+            225,
+            226,
+            227,
+            228,
+            229,
+            230,
+            231,
+            232,
+            233,
+            234,
+            235,
+            236,
+            237
+          ],
+          "mapping_sha256": "15f698b33268f1879c93f4d60f936adda13664a79e07d92bdd4825d77b55186f",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.009583522578998069,
+          "selected": false,
+          "shell_id": 13,
+          "surface_area_mm2": 39.01821519803265,
+          "total_edge_count": 27,
+          "total_face_count": 18,
+          "total_vertex_count": 11,
+          "vertex_indices": [
+            154,
+            155,
+            156,
+            157,
+            158,
+            159,
+            160,
+            161,
+            162,
+            163,
+            164
+          ],
+          "volume_mm3": 12.347720920966957
+        },
+        {
+          "candidate_id": "tiny-shell-0014-8854a10b46bb",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 4.002526029424314,
+          "edge_indices": [
+            60,
+            93650,
+            93651,
+            93652,
+            93653,
+            112496,
+            112497,
+            131439,
+            131440
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            238,
+            239,
+            240,
+            241,
+            242,
+            243
+          ],
+          "mapping_sha256": "8854a10b46bb62e09a026462400773dbce589abe0bb99384e36cfb90ab5e2fa5",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0018491526994774154,
+          "selected": false,
+          "shell_id": 14,
+          "surface_area_mm2": 7.528613551800693,
+          "total_edge_count": 9,
+          "total_face_count": 6,
+          "total_vertex_count": 5,
+          "vertex_indices": [
+            165,
+            166,
+            167,
+            168,
+            169
+          ],
+          "volume_mm3": 0.7532877238647373
+        },
+        {
+          "candidate_id": "tiny-shell-0015-8c6ac9fff579",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 7.4754643208442495,
+          "edge_indices": [
+            61,
+            62,
+            18878,
+            18879,
+            18880,
+            37599,
+            37600,
+            37601,
+            37602,
+            37603,
+            37604,
+            37605,
+            37606,
+            56304,
+            56305,
+            56306,
+            56307,
+            56308,
+            56309,
+            56310,
+            56311,
+            56312,
+            74981,
+            74982,
+            74983,
+            74984,
+            74985,
+            74986,
+            93654,
+            93655,
+            93656,
+            93657,
+            93658,
+            93659,
+            93660,
+            112498,
+            112499,
+            112500,
+            131441,
+            131442,
+            131443,
+            131444
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            244,
+            245,
+            246,
+            247,
+            248,
+            249,
+            250,
+            251,
+            252,
+            253,
+            254,
+            255,
+            256,
+            257,
+            258,
+            259,
+            260,
+            261,
+            262,
+            263,
+            264,
+            265,
+            266,
+            267,
+            268,
+            269,
+            270,
+            271
+          ],
+          "mapping_sha256": "8c6ac9fff579ddcfda02f118f6f3da72ccc4d09d210d3eeb99083e061ba531de",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.011704216992964157,
+          "selected": false,
+          "shell_id": 15,
+          "surface_area_mm2": 47.652379758225656,
+          "total_edge_count": 42,
+          "total_face_count": 28,
+          "total_vertex_count": 16,
+          "vertex_indices": [
+            170,
+            171,
+            172,
+            173,
+            174,
+            175,
+            176,
+            177,
+            178,
+            179,
+            180,
+            181,
+            182,
+            183,
+            184,
+            185
+          ],
+          "volume_mm3": 17.299299906054408
+        },
+        {
+          "candidate_id": "tiny-shell-0016-8b5db4108b39",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 3.32690060983557,
+          "edge_indices": [
+            37607,
+            37608,
+            37609,
+            56313,
+            56314,
+            74987
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            272,
+            273,
+            274,
+            275
+          ],
+          "mapping_sha256": "8b5db4108b39ac1df464a3b4ef54f2a237b550a293eb50c4b65976cedd778e3c",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0017746400827690317,
+          "selected": false,
+          "shell_id": 16,
+          "surface_area_mm2": 7.2252439619937485,
+          "total_edge_count": 6,
+          "total_face_count": 4,
+          "total_vertex_count": 4,
+          "vertex_indices": [
+            186,
+            187,
+            188,
+            189
+          ],
+          "volume_mm3": 0.7868514173559049
+        },
+        {
+          "candidate_id": "tiny-shell-0017-e5ab91538f4e",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 2.528506985514358,
+          "edge_indices": [
+            63,
+            112501,
+            112502,
+            112503,
+            131445,
+            131446
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            276,
+            277,
+            278,
+            279
+          ],
+          "mapping_sha256": "e5ab91538f4e837a0d7afae63a8653121b2ab605dd66e1cf82c9d3e63a2d39fb",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0011429385386711058,
+          "selected": false,
+          "shell_id": 17,
+          "surface_area_mm2": 4.653343433209347,
+          "total_edge_count": 6,
+          "total_face_count": 4,
+          "total_vertex_count": 4,
+          "vertex_indices": [
+            190,
+            191,
+            192,
+            193
+          ],
+          "volume_mm3": 0.4682675855867866
+        },
+        {
+          "candidate_id": "tiny-shell-0018-32a5fd2e8e95",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 3.0584221210153837,
+          "edge_indices": [
+            64,
+            18881,
+            37610,
+            37611,
+            37612,
+            37613,
+            37614,
+            56315,
+            56316,
+            56317,
+            56318,
+            56319,
+            74988,
+            74989,
+            74990,
+            74991,
+            93661,
+            93662,
+            93663,
+            93664,
+            112504,
+            112505,
+            112506,
+            112507,
+            131447,
+            131448,
+            131449
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            280,
+            281,
+            282,
+            283,
+            284,
+            285,
+            286,
+            287,
+            288,
+            289,
+            290,
+            291,
+            292,
+            293,
+            294,
+            295,
+            296,
+            297
+          ],
+          "mapping_sha256": "32a5fd2e8e95b7095f0a7803b03648c5af4261b7742284981ecc5a43a54d77cb",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0021985860256424792,
+          "selected": false,
+          "shell_id": 18,
+          "surface_area_mm2": 8.951291341233961,
+          "total_edge_count": 27,
+          "total_face_count": 18,
+          "total_vertex_count": 9,
+          "vertex_indices": [
+            194,
+            195,
+            196,
+            197,
+            198,
+            199,
+            200,
+            201,
+            202
+          ],
+          "volume_mm3": 0.7992493510194005
+        },
+        {
+          "candidate_id": "tiny-shell-0019-a4d32e9ebcac",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 4.684950292194265,
+          "edge_indices": [
+            65,
+            56320,
+            56321,
+            56322,
+            56323,
+            74992,
+            74993,
+            93665,
+            93666,
+            93667,
+            93668,
+            112508,
+            112509,
+            112510,
+            131450
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            298,
+            299,
+            300,
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307
+          ],
+          "mapping_sha256": "a4d32e9ebcac5e39bcda9e7fb8606a575f4a31dbd9b684aa9fe0085485b96df6",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0024412259345545574,
+          "selected": false,
+          "shell_id": 19,
+          "surface_area_mm2": 9.93917195647975,
+          "total_edge_count": 15,
+          "total_face_count": 10,
+          "total_vertex_count": 7,
+          "vertex_indices": [
+            203,
+            204,
+            205,
+            206,
+            207,
+            208,
+            209
+          ],
+          "volume_mm3": 1.1192150053962457
+        },
+        {
+          "candidate_id": "tiny-shell-0020-a4ebba1774ce",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 3.380376102174438,
+          "edge_indices": [
+            37615,
+            37616,
+            37617,
+            56324,
+            56325,
+            74994
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            308,
+            309,
+            310,
+            311
+          ],
+          "mapping_sha256": "a4ebba1774ce8647b2a29e5d20acb8272e658827409417722a3d5026c6f500c3",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0016138258597982573,
+          "selected": false,
+          "shell_id": 20,
+          "surface_area_mm2": 6.570507260842878,
+          "total_edge_count": 6,
+          "total_face_count": 4,
+          "total_vertex_count": 4,
+          "vertex_indices": [
+            210,
+            211,
+            212,
+            213
+          ],
+          "volume_mm3": 0.6327777792488238
+        },
+        {
+          "candidate_id": "tiny-shell-0021-4fd09f634ac1",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 3.200153179623627,
+          "edge_indices": [
+            66,
+            18882,
+            112511,
+            112512,
+            112513,
+            112514,
+            131451,
+            131452,
+            131453
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            312,
+            313,
+            314,
+            315,
+            316,
+            317
+          ],
+          "mapping_sha256": "4fd09f634ac147369d1f251e39cbcc216c513376bdc4eb5cf881f1a00e940415",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0016871304364379804,
+          "selected": false,
+          "shell_id": 21,
+          "surface_area_mm2": 6.868958453789138,
+          "total_edge_count": 9,
+          "total_face_count": 6,
+          "total_vertex_count": 5,
+          "vertex_indices": [
+            214,
+            215,
+            216,
+            217,
+            218
+          ],
+          "volume_mm3": 0.9371659874639797
+        },
+        {
+          "candidate_id": "tiny-shell-0022-73e05803de1c",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "MEDIUM",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm"
+          ],
+          "diagonal_mm": 2.2613041871933817,
+          "edge_indices": [
+            56326,
+            56327,
+            74995
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            318
+          ],
+          "mapping_sha256": "73e05803de1ce432d9349d4e96c49e9f4082a3147eb6f133863dc14a78b36012",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.00022147238371755058,
+          "selected": false,
+          "shell_id": 22,
+          "surface_area_mm2": 0.9016994593668597,
+          "total_edge_count": 3,
+          "total_face_count": 1,
+          "total_vertex_count": 3,
+          "vertex_indices": [
+            219,
+            220,
+            221
+          ],
+          "volume_mm3": null
+        },
+        {
+          "candidate_id": "tiny-shell-0023-84725f139f57",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "MEDIUM",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm"
+          ],
+          "diagonal_mm": 1.8416348030019265,
+          "edge_indices": [
+            112515,
+            112516,
+            131454
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            319
+          ],
+          "mapping_sha256": "84725f139f5799754609bcfdd23c3dd4aac14856cadeba33246c33061ab5aa5a",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0002100475073251675,
+          "selected": false,
+          "shell_id": 23,
+          "surface_area_mm2": 0.8551843828890484,
+          "total_edge_count": 3,
+          "total_face_count": 1,
+          "total_vertex_count": 3,
+          "vertex_indices": [
+            222,
+            223,
+            224
+          ],
+          "volume_mm3": null
+        },
+        {
+          "candidate_id": "tiny-shell-0024-3c0eceb5c176",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "MEDIUM",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm"
+          ],
+          "diagonal_mm": 2.658528977331389,
+          "edge_indices": [
+            18883,
+            18884,
+            37618
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            320
+          ],
+          "mapping_sha256": "3c0eceb5c17618955f35340ca0d2a1d79428289702dfbea4a61cb4da80c67589",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0003916116877025397,
+          "selected": false,
+          "shell_id": 24,
+          "surface_area_mm2": 1.5944021604673813,
+          "total_edge_count": 3,
+          "total_face_count": 1,
+          "total_vertex_count": 3,
+          "vertex_indices": [
+            225,
+            226,
+            227
+          ],
+          "volume_mm3": null
+        },
+        {
+          "candidate_id": "tiny-shell-0025-864671723608",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 2.7234868096486733,
+          "edge_indices": [
+            74996,
+            74997,
+            74998,
+            93669,
+            93670,
+            112517
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            321,
+            322,
+            323,
+            324
+          ],
+          "mapping_sha256": "864671723608f2f73208b054a68c5ee410a52c108740eadff6ea1dae1e15f98f",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0010516696203965055,
+          "selected": false,
+          "shell_id": 25,
+          "surface_area_mm2": 4.281752479593384,
+          "total_edge_count": 6,
+          "total_face_count": 4,
+          "total_vertex_count": 4,
+          "vertex_indices": [
+            228,
+            229,
+            230,
+            231
+          ],
+          "volume_mm3": 0.34290918253058555
+        },
+        {
+          "candidate_id": "tiny-shell-0026-4bc1bca79810",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 4.037726525857924,
+          "edge_indices": [
+            67,
+            68,
+            69,
+            70,
+            71,
+            18885,
+            18886,
+            18887,
+            37619,
+            56328,
+            56329,
+            74999
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            325,
+            326,
+            327,
+            328,
+            329,
+            330,
+            331,
+            332
+          ],
+          "mapping_sha256": "4bc1bca79810016c4c334b1e87f1efb673638b5b49b730562df8e51a7482babf",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0025852002818894,
+          "selected": false,
+          "shell_id": 26,
+          "surface_area_mm2": 10.5253470315631,
+          "total_edge_count": 12,
+          "total_face_count": 8,
+          "total_vertex_count": 6,
+          "vertex_indices": [
+            232,
+            233,
+            234,
+            235,
+            236,
+            237
+          ],
+          "volume_mm3": 1.8513061130394823
+        },
+        {
+          "candidate_id": "tiny-shell-0028-98c657c37ba4",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 4.1939504415331035,
+          "edge_indices": [
+            77,
+            78,
+            79,
+            80,
+            18895,
+            18896,
+            18897,
+            37628,
+            56334
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            365,
+            366,
+            367,
+            368,
+            369,
+            370
+          ],
+          "mapping_sha256": "98c657c37ba4f840595d23345399531de9b9ef65365af96ec38b612215b9fcc2",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.002428734308538075,
+          "selected": false,
+          "shell_id": 28,
+          "surface_area_mm2": 9.888313731013408,
+          "total_edge_count": 9,
+          "total_face_count": 6,
+          "total_vertex_count": 5,
+          "vertex_indices": [
+            256,
+            257,
+            258,
+            259,
+            260
+          ],
+          "volume_mm3": 1.654440575279044
+        },
+        {
+          "candidate_id": "tiny-shell-0029-b38e3063c7cf",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "MEDIUM",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm"
+          ],
+          "diagonal_mm": 2.0284704271976453,
+          "edge_indices": [
+            93677,
+            93678,
+            112524
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            371
+          ],
+          "mapping_sha256": "b38e3063c7cf4366a97298b9b8cf7ffd4ab5d161d2e704be0b7070fc09500936",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.00022922842326483407,
+          "selected": false,
+          "shell_id": 29,
+          "surface_area_mm2": 0.9332772865849595,
+          "total_edge_count": 3,
+          "total_face_count": 1,
+          "total_vertex_count": 3,
+          "vertex_indices": [
+            261,
+            262,
+            263
+          ],
+          "volume_mm3": null
+        },
+        {
+          "candidate_id": "tiny-shell-0030-d5e204282d2c",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "MEDIUM",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm"
+          ],
+          "diagonal_mm": 1.5887962238563842,
+          "edge_indices": [
+            81,
+            82,
+            18898
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            372
+          ],
+          "mapping_sha256": "d5e204282d2cdfba4fe130ec42f0cd88cf3102c69ebade2e76220b895ecc9da7",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.00013091313914819822,
+          "selected": false,
+          "shell_id": 30,
+          "surface_area_mm2": 0.5329978610086833,
+          "total_edge_count": 3,
+          "total_face_count": 1,
+          "total_vertex_count": 3,
+          "vertex_indices": [
+            264,
+            265,
+            266
+          ],
+          "volume_mm3": null
+        },
+        {
+          "candidate_id": "tiny-shell-0031-8d4df993f797",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "MEDIUM",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm"
+          ],
+          "diagonal_mm": 2.238754520270386,
+          "edge_indices": [
+            56335,
+            56336,
+            75005
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            373
+          ],
+          "mapping_sha256": "8d4df993f7979f001a1c3cf76af3387974269c3f9c26198e702d75f2ac61c02f",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.00023015706027585726,
+          "selected": false,
+          "shell_id": 31,
+          "surface_area_mm2": 0.937058125878474,
+          "total_edge_count": 3,
+          "total_face_count": 1,
+          "total_vertex_count": 3,
+          "vertex_indices": [
+            267,
+            268,
+            269
+          ],
+          "volume_mm3": null
+        },
+        {
+          "candidate_id": "tiny-shell-0032-591ac4efa4a2",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 2.9863510261184625,
+          "edge_indices": [
+            83,
+            112525,
+            112526,
+            112527,
+            131462,
+            131463
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            374,
+            375,
+            376,
+            377
+          ],
+          "mapping_sha256": "591ac4efa4a225274f5971d140ea94019d1e98e4fc7f5c8e979cb491e5f8a755",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0010654368624860634,
+          "selected": false,
+          "shell_id": 32,
+          "surface_area_mm2": 4.337804229887266,
+          "total_edge_count": 6,
+          "total_face_count": 4,
+          "total_vertex_count": 4,
+          "vertex_indices": [
+            270,
+            271,
+            272,
+            273
+          ],
+          "volume_mm3": 0.24630262297301958
+        },
+        {
+          "candidate_id": "tiny-shell-0033-f6aa42da646d",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 6.182710605381832,
+          "edge_indices": [
+            84,
+            85,
+            86,
+            18899,
+            18900,
+            37629,
+            37630,
+            37631,
+            37632,
+            37633,
+            37634,
+            37635,
+            56337,
+            56338,
+            56339,
+            56340,
+            75006,
+            75007,
+            75008,
+            93679,
+            93680,
+            93681,
+            112528,
+            112529,
+            112530,
+            131464,
+            131465
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            378,
+            379,
+            380,
+            381,
+            382,
+            383,
+            384,
+            385,
+            386,
+            387,
+            388,
+            389,
+            390,
+            391,
+            392,
+            393,
+            394,
+            395
+          ],
+          "mapping_sha256": "f6aa42da646d3a26790ebfeed115d9f2fc4d98fe9d848364f4c45a13e0851612",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.008348800141882601,
+          "selected": false,
+          "shell_id": 33,
+          "surface_area_mm2": 33.991184128393606,
+          "total_edge_count": 27,
+          "total_face_count": 18,
+          "total_vertex_count": 11,
+          "vertex_indices": [
+            274,
+            275,
+            276,
+            277,
+            278,
+            279,
+            280,
+            281,
+            282,
+            283,
+            284
+          ],
+          "volume_mm3": 14.865738612312994
+        },
+        {
+          "candidate_id": "tiny-shell-0034-95bb51a1c938",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 4.597573204269978,
+          "edge_indices": [
+            93682,
+            93683,
+            93684,
+            112531,
+            112532,
+            131466
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            396,
+            397,
+            398,
+            399
+          ],
+          "mapping_sha256": "95bb51a1c93888b84577fea14821c21e3183f4ce981dd9e72aa12dd12ea33173",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.001740888430480585,
+          "selected": false,
+          "shell_id": 34,
+          "surface_area_mm2": 7.087827973099875,
+          "total_edge_count": 6,
+          "total_face_count": 4,
+          "total_vertex_count": 4,
+          "vertex_indices": [
+            285,
+            286,
+            287,
+            288
+          ],
+          "volume_mm3": 0.4359993477365265
+        },
+        {
+          "candidate_id": "tiny-shell-0035-4944273aeb13",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 5.4892234443181795,
+          "edge_indices": [
+            87,
+            18901,
+            18902,
+            18903,
+            37636,
+            37637,
+            37638,
+            37639,
+            37640,
+            37641,
+            56341,
+            56342,
+            75009,
+            75010,
+            75011,
+            75012,
+            93685,
+            112533,
+            112534,
+            131467,
+            131468
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            400,
+            401,
+            402,
+            403,
+            404,
+            405,
+            406,
+            407,
+            408,
+            409,
+            410,
+            411,
+            412,
+            413
+          ],
+          "mapping_sha256": "4944273aeb1369a307ccf83fef580da5b28259a9bfe08769b9c626ac098e0c03",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.00463994519473042,
+          "selected": false,
+          "shell_id": 35,
+          "surface_area_mm2": 18.891005746865627,
+          "total_edge_count": 21,
+          "total_face_count": 14,
+          "total_vertex_count": 9,
+          "vertex_indices": [
+            289,
+            290,
+            291,
+            292,
+            293,
+            294,
+            295,
+            296,
+            297
+          ],
+          "volume_mm3": 3.3273071745748553
+        },
+        {
+          "candidate_id": "tiny-shell-0036-02b94550d2f4",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 4.102154552248344,
+          "edge_indices": [
+            37642,
+            37643,
+            37644,
+            37645,
+            56343,
+            56344,
+            75013,
+            75014,
+            75015,
+            93686,
+            93687,
+            112535
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            414,
+            415,
+            416,
+            417,
+            418,
+            419,
+            420,
+            421
+          ],
+          "mapping_sha256": "02b94550d2f47ffcd60bb763ec66a79e60c4039cc63a0486d60eacfafa413b87",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0017265448134167552,
+          "selected": false,
+          "shell_id": 36,
+          "surface_area_mm2": 7.029429578073274,
+          "total_edge_count": 12,
+          "total_face_count": 8,
+          "total_vertex_count": 6,
+          "vertex_indices": [
+            298,
+            299,
+            300,
+            301,
+            302,
+            303
+          ],
+          "volume_mm3": 0.6461307044958177
+        },
+        {
+          "candidate_id": "tiny-shell-0037-1f87253459e0",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "MEDIUM",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm"
+          ],
+          "diagonal_mm": 2.056332864440855,
+          "edge_indices": [
+            88,
+            89,
+            18904
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            422
+          ],
+          "mapping_sha256": "1f87253459e0734b3bdfcdb1c8652e916f884c0e28d8e8942817762e6cf089fd",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0001731930318533967,
+          "selected": false,
+          "shell_id": 37,
+          "surface_area_mm2": 0.705135604570366,
+          "total_edge_count": 3,
+          "total_face_count": 1,
+          "total_vertex_count": 3,
+          "vertex_indices": [
+            304,
+            305,
+            306
+          ],
+          "volume_mm3": null
+        },
+        {
+          "candidate_id": "tiny-shell-0038-0978467b6225",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 3.5374857076284174,
+          "edge_indices": [
+            56345,
+            56346,
+            56347,
+            56348,
+            75016,
+            75017,
+            75018,
+            93688,
+            112536
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            423,
+            424,
+            425,
+            426,
+            427,
+            428
+          ],
+          "mapping_sha256": "0978467b6225ccbf08b253e4f1456ab1e594490561a065f1147c332c1c6119f7",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0018969046210806778,
+          "selected": false,
+          "shell_id": 38,
+          "surface_area_mm2": 7.723030034662517,
+          "total_edge_count": 9,
+          "total_face_count": 6,
+          "total_vertex_count": 5,
+          "vertex_indices": [
+            307,
+            308,
+            309,
+            310,
+            311
+          ],
+          "volume_mm3": 1.1305061536788046
+        },
+        {
+          "candidate_id": "tiny-shell-0039-b9486b93746c",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 2.6382182634579525,
+          "edge_indices": [
+            90,
+            91,
+            92,
+            18905,
+            18906,
+            37646
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            429,
+            430,
+            431,
+            432
+          ],
+          "mapping_sha256": "b9486b93746c0ac0e6a5dbf5e37aff15585e72b1ceca0bb1dcf750e37c49fd80",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0010641772604157362,
+          "selected": false,
+          "shell_id": 39,
+          "surface_area_mm2": 4.332675904238864,
+          "total_edge_count": 6,
+          "total_face_count": 4,
+          "total_vertex_count": 4,
+          "vertex_indices": [
+            312,
+            313,
+            314,
+            315
+          ],
+          "volume_mm3": 0.4117174072735633
+        },
+        {
+          "candidate_id": "tiny-shell-0040-2086e58d6c0c",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 2.9050040912216937,
+          "edge_indices": [
+            75019,
+            75020,
+            75021,
+            93689,
+            93690,
+            112537
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            433,
+            434,
+            435,
+            436
+          ],
+          "mapping_sha256": "2086e58d6c0cee1f89137a7ed038900b96e767105bb84afbc4fa8feac8a9e590",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0014203711384547719,
+          "selected": false,
+          "shell_id": 40,
+          "surface_area_mm2": 5.782878506777303,
+          "total_edge_count": 6,
+          "total_face_count": 4,
+          "total_vertex_count": 4,
+          "vertex_indices": [
+            316,
+            317,
+            318,
+            319
+          ],
+          "volume_mm3": 0.6266567906948461
+        },
+        {
+          "candidate_id": "tiny-shell-0041-001c54d9dd2d",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "MEDIUM",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm"
+          ],
+          "diagonal_mm": 3.2237050321910825,
+          "edge_indices": [
+            93,
+            94,
+            18907
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            437
+          ],
+          "mapping_sha256": "001c54d9dd2dc8f71aa0f1532a9f6126a1e3fdec4421b07172231fb328c4a6c2",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0005579695673641144,
+          "selected": false,
+          "shell_id": 41,
+          "surface_area_mm2": 2.2717092252776103,
+          "total_edge_count": 3,
+          "total_face_count": 1,
+          "total_vertex_count": 3,
+          "vertex_indices": [
+            320,
+            321,
+            322
+          ],
+          "volume_mm3": null
+        },
+        {
+          "candidate_id": "tiny-shell-0042-3d5c6183613a",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 2.98352143929436,
+          "edge_indices": [
+            56349,
+            56350,
+            56351,
+            75022,
+            75023,
+            93691
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            438,
+            439,
+            440,
+            441
+          ],
+          "mapping_sha256": "3d5c6183613af14b021072c9340fedafde7e28c5a55496435a17fe3b809053f0",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.001173249429975373,
+          "selected": false,
+          "shell_id": 42,
+          "surface_area_mm2": 4.776750757604435,
+          "total_edge_count": 6,
+          "total_face_count": 4,
+          "total_vertex_count": 4,
+          "vertex_indices": [
+            323,
+            324,
+            325,
+            326
+          ],
+          "volume_mm3": 0.4591011517710944
+        },
+        {
+          "candidate_id": "tiny-shell-0043-80ebfd3ee10b",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "MEDIUM",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm"
+          ],
+          "diagonal_mm": 1.9783628331551368,
+          "edge_indices": [
+            95,
+            131469,
+            131470
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            442
+          ],
+          "mapping_sha256": "80ebfd3ee10b87b32a391ea8beae59c49b9108ffdaf8b1cc3349510cc9f64508",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.00023066283285430562,
+          "selected": false,
+          "shell_id": 43,
+          "surface_area_mm2": 0.9391173210381337,
+          "total_edge_count": 3,
+          "total_face_count": 1,
+          "total_vertex_count": 3,
+          "vertex_indices": [
+            327,
+            328,
+            329
+          ],
+          "volume_mm3": null
+        },
+        {
+          "candidate_id": "tiny-shell-0044-fc9f34b70806",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "MEDIUM",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm"
+          ],
+          "diagonal_mm": 2.0607480905268827,
+          "edge_indices": [
+            37647,
+            37648,
+            56352
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            443
+          ],
+          "mapping_sha256": "fc9f34b7080652535bbf8258e54298bbaa511dea08f6add9354f3b0485b6bf9b",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0002549377263651177,
+          "selected": false,
+          "shell_id": 44,
+          "surface_area_mm2": 1.0379497713304577,
+          "total_edge_count": 3,
+          "total_face_count": 1,
+          "total_vertex_count": 3,
+          "vertex_indices": [
+            330,
+            331,
+            332
+          ],
+          "volume_mm3": null
+        },
+        {
+          "candidate_id": "tiny-shell-0045-f651f2cbc1b9",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "MEDIUM",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm"
+          ],
+          "diagonal_mm": 2.4208524265688207,
+          "edge_indices": [
+            93692,
+            93693,
+            112538
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            444
+          ],
+          "mapping_sha256": "f651f2cbc1b9cd32b90def3fef0bc5610bad4b46fd3796d14088941e446ea9a0",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.00033042096030708786,
+          "selected": false,
+          "shell_id": 45,
+          "surface_area_mm2": 1.345271118101798,
+          "total_edge_count": 3,
+          "total_face_count": 1,
+          "total_vertex_count": 3,
+          "vertex_indices": [
+            333,
+            334,
+            335
+          ],
+          "volume_mm3": null
+        },
+        {
+          "candidate_id": "tiny-shell-0046-49ef78a5e1b2",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 4.39973446979044,
+          "edge_indices": [
+            96,
+            97,
+            98,
+            18908,
+            18909,
+            18910,
+            18911,
+            37649,
+            37650,
+            56353,
+            56354,
+            75024
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            445,
+            446,
+            447,
+            448,
+            449,
+            450,
+            451,
+            452
+          ],
+          "mapping_sha256": "49ef78a5e1b2c98bb24868297e67686970906215836b7a1331a22113fc8b0622",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0025555978708652317,
+          "selected": false,
+          "shell_id": 46,
+          "surface_area_mm2": 10.404824203531911,
+          "total_edge_count": 12,
+          "total_face_count": 8,
+          "total_vertex_count": 6,
+          "vertex_indices": [
+            336,
+            337,
+            338,
+            339,
+            340,
+            341
+          ],
+          "volume_mm3": 1.3048652534643674
+        },
+        {
+          "candidate_id": "tiny-shell-0047-13ff225e9c8b",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 2.407767026791126,
+          "edge_indices": [
+            99,
+            112539,
+            112540,
+            112541,
+            131471,
+            131472
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            453,
+            454,
+            455,
+            456
+          ],
+          "mapping_sha256": "13ff225e9c8bd4aa04c5fadaa54b006bec041137b5648f52bbd21be1f46318d2",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0008607106576894704,
+          "selected": false,
+          "shell_id": 47,
+          "surface_area_mm2": 3.5042849211379457,
+          "total_edge_count": 6,
+          "total_face_count": 4,
+          "total_vertex_count": 4,
+          "vertex_indices": [
+            342,
+            343,
+            344,
+            345
+          ],
+          "volume_mm3": 0.30112769453897553
+        },
+        {
+          "candidate_id": "tiny-shell-0049-73f3b8e06b8e",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 2.506127092881836,
+          "edge_indices": [
+            108,
+            112552,
+            112553,
+            112554,
+            131481,
+            131482
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            513,
+            514,
+            515,
+            516
+          ],
+          "mapping_sha256": "73f3b8e06b8ec1c1ccba4eede797d015ba88fa4194476133143751eeafe0f35f",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0010905586877448007,
+          "selected": false,
+          "shell_id": 49,
+          "surface_area_mm2": 4.440084865846832,
+          "total_edge_count": 6,
+          "total_face_count": 4,
+          "total_vertex_count": 4,
+          "vertex_indices": [
+            374,
+            375,
+            376,
+            377
+          ],
+          "volume_mm3": 0.4175691962343686
+        },
+        {
+          "candidate_id": "tiny-shell-0050-a778281d0124",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 1.5709648218655783,
+          "edge_indices": [
+            109,
+            110,
+            37667,
+            37668,
+            37669,
+            37670,
+            37671,
+            37672,
+            37673,
+            37674,
+            56370,
+            56371,
+            56372,
+            56373,
+            75034,
+            75035,
+            75036,
+            75037,
+            93706,
+            93707,
+            93708,
+            112555,
+            112556,
+            112557,
+            112558,
+            131483,
+            131484
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            517,
+            518,
+            519,
+            520,
+            521,
+            522,
+            523,
+            524,
+            525,
+            526,
+            527,
+            528,
+            529,
+            530,
+            531,
+            532,
+            533,
+            534
+          ],
+          "mapping_sha256": "a778281d01248d8ccaa95880fc3028395e8647eee42b579f1ab5e17910e57fc6",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.000474782071205613,
+          "selected": false,
+          "shell_id": 50,
+          "surface_area_mm2": 1.9330208567636122,
+          "total_edge_count": 27,
+          "total_face_count": 18,
+          "total_vertex_count": 9,
+          "vertex_indices": [
+            378,
+            379,
+            380,
+            381,
+            382,
+            383,
+            384,
+            385,
+            386
+          ],
+          "volume_mm3": 0.04856364673825703
+        },
+        {
+          "candidate_id": "tiny-shell-0051-b752af0dd5aa",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 2.0945200135388893,
+          "edge_indices": [
+            56374,
+            56375,
+            56376,
+            75038,
+            75039,
+            93709
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            535,
+            536,
+            537,
+            538
+          ],
+          "mapping_sha256": "b752af0dd5aafa3847d74dfd47c625edee3aa8976bd8416581791cb769908e83",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0007485368139931708,
+          "selected": false,
+          "shell_id": 51,
+          "surface_area_mm2": 3.04758195655952,
+          "total_edge_count": 6,
+          "total_face_count": 4,
+          "total_vertex_count": 4,
+          "vertex_indices": [
+            387,
+            388,
+            389,
+            390
+          ],
+          "volume_mm3": 0.24915864973070379
+        },
+        {
+          "candidate_id": "tiny-shell-0052-ae60a5bc6362",
+          "candidate_type": "TINY_SHELL",
+          "confidence": "HIGH",
+          "criteria_matched": [
+            "face_count",
+            "bounding_box_diagonal_mm",
+            "absolute_volume_mm3",
+            "relative_volume_percent"
+          ],
+          "diagonal_mm": 3.3323654521375654,
+          "edge_indices": [
+            111,
+            112,
+            18918,
+            131485,
+            131486,
+            131487
+          ],
+          "eligible": true,
+          "evidence_truncated": false,
+          "face_indices": [
+            539,
+            540,
+            541,
+            542
+          ],
+          "mapping_sha256": "ae60a5bc6362bd648f36f6fe5030e04784e7dd42efac0f66cf4778af5d4f00de",
+          "perimeter_mm": null,
+          "rejection_reason": "",
+          "relative_size_percent": 0.0015618045153654554,
+          "selected": false,
+          "shell_id": 52,
+          "surface_area_mm2": 6.358708311632049,
+          "total_edge_count": 6,
+          "total_face_count": 4,
+          "total_vertex_count": 4,
+          "vertex_indices": [
+            391,
+            392,
+            393,
+            394
+          ],
+          "volume_mm3": 0.6297918390500237
+        }
+      ],
+      "created_at": "2026-07-26T09:56:58.393381+00:00",
+      "items": [
+        {
+          "estimated_target_count": 0,
+          "operation_type": "MERGE_DUPLICATE_VERTICES",
+          "recommendation_reason": "No nearby duplicate vertices detected.",
+          "recommended": false,
+          "selected": false,
+          "warnings": []
+        },
+        {
+          "estimated_target_count": 0,
+          "operation_type": "COLLAPSE_ZERO_LENGTH_EDGES",
+          "recommendation_reason": "No zero-length edges detected.",
+          "recommended": false,
+          "selected": false,
+          "warnings": []
+        },
+        {
+          "estimated_target_count": 0,
+          "operation_type": "REMOVE_DEGENERATE_FACES",
+          "recommendation_reason": "No degenerate faces detected.",
+          "recommended": false,
+          "selected": false,
+          "warnings": [
+            "Loose geometry created by face removal is retained unless loose cleanup is selected."
+          ]
+        },
+        {
+          "estimated_target_count": 0,
+          "operation_type": "REMOVE_LOOSE_GEOMETRY",
+          "recommendation_reason": "No loose geometry detected.",
+          "recommended": false,
+          "selected": false,
+          "warnings": []
+        },
+        {
+          "estimated_target_count": 48,
+          "operation_type": "REMOVE_SELECTED_TINY_SHELLS",
+          "recommendation_reason": "Tiny-shell candidates require explicit review and selection.",
+          "recommended": true,
+          "selected": false,
+          "warnings": []
+        },
+        {
+          "estimated_target_count": 0,
+          "operation_type": "FILL_SELECTED_SMALL_HOLES",
+          "recommendation_reason": "No eligible bounded small holes detected.",
+          "recommended": false,
+          "selected": false,
+          "warnings": []
+        },
+        {
+          "estimated_target_count": 0,
+          "operation_type": "REPAIR_NORMAL_CONSISTENCY",
+          "recommendation_reason": "No inconsistent face orientation detected.",
+          "recommended": false,
+          "selected": false,
+          "warnings": []
+        },
+        {
+          "estimated_target_count": 12,
+          "operation_type": "ORIENT_CLOSED_SHELLS_OUTWARD",
+          "recommendation_reason": "Inward valid closed shell detected; explicit selection is required.",
+          "recommended": true,
+          "selected": false,
+          "warnings": []
+        }
+      ],
+      "limitations": [
+        "Repair candidates are evidence-based and require human review.",
+        "The plan is session-only and becomes stale after geometry changes."
+      ],
+      "plan_id": "4e63f6fd-cb92-40bc-a8de-d1269e75be7d",
+      "selected_profile": "STANDARD",
+      "session_id": "84b50e26-cd81-4e35-b478-c9dadb6849f5",
+      "settings_snapshot": {
+        "degenerate_face_area_tolerance_mm2": 9.99999993922529e-09,
+        "hole_fill_requires_selection": true,
+        "maximum_repair_checkpoints": 3,
+        "maximum_stored_candidate_indices": 10000,
+        "merge_distance_mm": 0.0010000000474974513,
+        "normal_repair_requires_selection": true,
+        "small_hole_maximum_diagonal_mm": 1.0,
+        "small_hole_maximum_edge_count": 12,
+        "small_hole_maximum_perimeter_mm": 2.0,
+        "tiny_shell_requires_selection": true,
+        "zero_length_edge_tolerance_mm": 9.999999974752427e-07
+      },
+      "source_signature": "faf2702588f0f65010c40b41e0f91726e8bbe17a536e9f615f6649334fe20e17",
+      "status": "READY",
+      "warnings": [
+        "Candidate removal and filling are never preselected.",
+        "Normal repair and shell orientation require explicit selection."
+      ],
+      "workspace_signature": "8dd6067cf78af47d6efb5f4a178150c520d4d62584f362fd02a21cfaa2c11206"
+    },
+    "session_id": "84b50e26-cd81-4e35-b478-c9dadb6849f5",
+    "settings_snapshot": {
+      "degenerate_face_area_tolerance_mm2": 9.99999993922529e-09,
+      "hole_fill_requires_selection": true,
+      "maximum_repair_checkpoints": 3,
+      "maximum_stored_candidate_indices": 10000,
+      "merge_distance_mm": 0.0010000000474974513,
+      "normal_repair_requires_selection": true,
+      "small_hole_maximum_diagonal_mm": 1.0,
+      "small_hole_maximum_edge_count": 12,
+      "small_hole_maximum_perimeter_mm": 2.0,
+      "tiny_shell_requires_selection": true,
+      "zero_length_edge_tolerance_mm": 9.999999974752427e-07
+    },
+    "source_mesh_identity": 1564561775880,
+    "source_mesh_name": "statue-hercules-archer-mia_mesh",
+    "source_object_identity": 1564561777672,
+    "source_object_name": "statue-hercules-archer-mia",
+    "source_signature": "faf2702588f0f65010c40b41e0f91726e8bbe17a536e9f615f6649334fe20e17",
+    "source_snapshot": {
+      "blend_file_path": "",
+      "collections": [
+        "Collection"
+      ],
+      "counts": [
+        49882,
+        150000,
+        99983,
+        299949
+      ],
+      "custom_properties": {},
+      "display_type": "TEXTURED",
+      "geometry_sha256": "9f8a4c833411fe397746e2cf31a1c24570a0e9203a267e6a2e935e63f530fb5b",
+      "hide_get": false,
+      "hide_render": false,
+      "hide_viewport": false,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "materials": [],
+      "mesh_custom_properties": {},
+      "mesh_identity": 1564561775880,
+      "mesh_name": "statue-hercules-archer-mia_mesh",
+      "modifiers": [],
+      "object_identity": 1564561777672,
+      "object_name": "statue-hercules-archer-mia",
+      "protected_sha256": "faf2702588f0f65010c40b41e0f91726e8bbe17a536e9f615f6649334fe20e17",
+      "rotation_euler": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected": true
+    },
+    "started_at": "2026-07-26T09:56:47.984966+00:00",
+    "status": "ROLLED_BACK",
+    "undo_records": [],
+    "warnings": [],
+    "workspace_mesh_identity": 1564517832200,
+    "workspace_mesh_name": "statue-hercules-archer-mia_mesh_Chroma3D_Repair",
+    "workspace_object_identity": 1564560128264,
+    "workspace_object_name": "statue-hercules-archer-mia_Chroma3D_Repair"
+  },
+  "source_protection_signature": "faf2702588f0f65010c40b41e0f91726e8bbe17a536e9f615f6649334fe20e17",
+  "initial_workspace_signature": "8dd6067cf78af47d6efb5f4a178150c520d4d62584f362fd02a21cfaa2c11206",
+  "final_workspace_signature": "8dd6067cf78af47d6efb5f4a178150c520d4d62584f362fd02a21cfaa2c11206",
+  "final_decision": "ROLLED_BACK",
+  "failure_records": [],
+  "known_limitations": [
+    "Original source preserved; workspace repair still requires human review.",
+    "An unfinished repair session is not guaranteed to survive Blender restart.",
+    "No remeshing, large-hole reconstruction, boolean repair, wall-thickness repair, AI, or printability guarantee.",
+    "Manual real-statue repair UAT is deferred."
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "unique_id": "statue-bato-kannon-shirane",
+  "title": "Batō Kannon at Shirane",
+  "subject": "Stone monument to horse-headed Kannon",
+  "category": "temple_monument",
+  "religious_cultural_classification": "Buddhist; Japanese",
+  "source_url": "https://commons.wikimedia.org/wiki/File:%E9%A6%AC%E9%A0%AD%E8%A6%B3%E9%9F%B3%EF%BC%88%E6%A8%AA%E6%B5%9C%E5%B8%82%E6%97%AD%E5%8C%BA%E7%99%BD%E6%A0%B9%E7%94%BA%EF%BC%89.stl",
+  "source_revision_url": "https://commons.wikimedia.org/wiki/File:%E9%A6%AC%E9%A0%AD%E8%A6%B3%E9%9F%B3%EF%BC%88%E6%A8%AA%E6%B5%9C%E5%B8%82%E6%97%AD%E5%8C%BA%E7%99%BD%E6%A0%B9%E7%94%BA%EF%BC%89.stl?oldid=1209099341",
+  "source_page_revision_id": 1209099341,
+  "source_page_revision_timestamp": "2026-05-05T21:49:42Z",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/%E9%A6%AC%E9%A0%AD%E8%A6%B3%E9%9F%B3%EF%BC%88%E6%A8%AA%E6%B5%9C%E5%B8%82%E6%97%AD%E5%8C%BA%E7%99%BD%E6%A0%B9%E7%94%BA%EF%BC%89.stl",
+  "download_date": "2026-07-26",
+  "download_timestamp_utc": "2026-07-26T06:35:39.842785+00:00",
+  "author": "小池 隆",
+  "credit": "Own work",
+  "original_repository": "Independent photogrammetry via Wikimedia Commons",
+  "upstream_source_urls": [],
+  "license": "CC-BY-4.0",
+  "license_source_label": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_document": "datasets/statues/licenses/CC-BY-4.0.txt",
+  "file_format": "STL",
+  "mime_type": "application/sla",
+  "vertex_count": 497859,
+  "triangle_count": 995673,
+  "bounding_box": {
+    "coordinate_space": "Blender world space after default STL import",
+    "source_units": "unspecified",
+    "minimum": [
+      -1.906787276,
+      -1.53706336,
+      -2.81064415
+    ],
+    "maximum": [
+      1.833462715,
+      3.111647606,
+      3.851971388
+    ],
+    "dimensions": [
+      3.740250111,
+      4.648711205,
+      6.662615776
+    ],
+    "diagonal": 8.943737228
+  },
+  "checksum_sha256": "e3695cb8fee26543780b9ab135a933d881c598a6247fde6fb2e265a73d4d5659",
+  "source_checksum_sha1": "6873dca7a5d7a12af7d2fa71710bce2e8472d017",
+  "original_filename": "馬頭観音（横浜市旭区白根町）.stl",
+  "stored_filename": "statue-bato-kannon-shirane.stl",
+  "stored_path": "datasets/statues/raw/statue-bato-kannon-shirane.stl",
+  "file_size_bytes": 49783734,
+  "thumbnail_path": "datasets/statues/thumbnails/statue-bato-kannon-shirane.png",
+  "thumbnail_checksum_sha256": "62c762a5a7f9f0cdfd029eeabc2e54399772708316b7b0b4161f32c22da4a4cb",
+  "source_description": "フォトグラメトリ（SfM/MVS）で作成した、横浜市旭区白根町にある馬頭観音（明治十三年(1880年)造立）の3Dモデル",
+  "notes": [
+    "Weathered religious stone scan with inscriptions."
+  ],
+  "validation": {
+    "status": "validated",
+    "validated_at_utc": "2026-07-26T06:35:53.997712+00:00",
+    "validator": "Blender 4.4.3 native STL importer",
+    "readable": true,
+    "non_empty": true,
+    "reasonable_mesh": true,
+    "obvious_corruption": false,
+    "stl_encoding": "binary",
+    "binary_size_consistent": true,
+    "declared_triangle_count": 995673,
+    "triangle_count_matches_header": true,
+    "triangle_count_delta_from_header": 0,
+    "imported_object_count": 1,
+    "edge_count": 1493518,
+    "polygon_count": 995673,
+    "non_finite_vertex_count": 0,
+    "import_seconds": 0.860072,
+    "validation_seconds": 2.577237,
+    "checks": [
+      "File exists and is non-empty.",
+      "Current SHA-256 matches acquisition metadata.",
+      "STL container structure is recognized.",
+      "Blender native importer completed and produced mesh data.",
+      "Vertex and triangle counts exceed bounded minimums.",
+      "All imported vertex coordinates and bounds are finite.",
+      "Bounding-box diagonal is non-zero.",
+      "Binary STL header/import triangle delta is recorded; Blender may omit duplicate or degenerate facets during import."
+    ],
+    "warnings": []
+  }
+}

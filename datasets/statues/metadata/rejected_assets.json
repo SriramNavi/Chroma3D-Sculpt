@@ -1,0 +1,43 @@
+{
+  "dataset_version": "1.0.0",
+  "generated_at_utc": "2026-07-26T06:35:39.842785+00:00",
+  "policy_rejections": [
+    {
+      "title": "Cosmic Buddha full-resolution no-texture",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cosmic_buddha-full_resolution-no_texture_(Smithsonian_Institution).stl",
+      "license": "CC0-1.0",
+      "reason": "Rejected before download: 2.88 GiB and roughly 62 million faces exceed this baseline corpus budget; the Smithsonian 150k derivative is retained."
+    },
+    {
+      "title": "Gisant test",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Gisant_test.stl",
+      "license": "CC-BY-SA-4.0",
+      "reason": "Rejected before download: source labels the asset only as a test and does not provide sufficient object provenance for the curated corpus."
+    },
+    {
+      "title": "Generic Moai rendering",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Moai.stl",
+      "license": "CC-BY-4.0",
+      "reason": "Rejected before download: generic rendering rather than a documented scan or identified heritage object."
+    },
+    {
+      "title": "Open Heritage 3D general project downloads",
+      "source_url": "https://openheritage3d.org/faq",
+      "license": "Varies by project",
+      "reason": "Rejected as an acquisition route for this sprint: downloads require user identity fields and many projects prohibit commercial use."
+    },
+    {
+      "title": "Sketchfab models without anonymous downloads",
+      "source_url": "https://sketchfab.com/3d-models/categories/cultural-heritage-history",
+      "license": "Varies by model",
+      "reason": "Rejected as an acquisition route unless mirrored by a public repository with model-level license evidence; direct downloads can require login."
+    },
+    {
+      "title": "Paid marketplace statue meshes",
+      "source_url": null,
+      "license": "Paid or unclear redistribution terms",
+      "reason": "Rejected by policy: paid, private, or redistribution-restricted assets are outside this dataset."
+    }
+  ],
+  "acquisition_failures": []
+}

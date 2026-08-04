@@ -26,13 +26,13 @@ Sprint 0 established the Windows-first modern Blender extension, registration li
 
 Sprint 1 added Standard and Deep profiles; explicit evaluation states; exact edge incidence and vertex face-fan diagnostics; topological watertightness; stable shell decomposition; main, tiny-candidate, disconnected-external, and possibly-internal classifications; world-space dimensions, area, reliable volume, and orientation; bounded self-intersection candidates and containment heuristics; current-orientation build-volume checks; bounded issue evidence; stale-analysis protection; issue selection; timings; and JSON schema 2.0.
 
-Repository evidence records 48 passing Blender background tests, 12 Sprint 1 acceptance gates, preserved Sprint 0 regression, package/security validation, and independent final validation on Blender 4.4.3/Windows. Across those Windows and Blender 4.4.3 runs, Standard analysis of the current approximately 147,000-vertex synthetic fixture has ranged from about 12 to 29 seconds against the repository's 20-second performance warning threshold. Dense-mesh performance remains active technical debt. The synthetic range is not a hard guarantee for real production models, and benchmarking on real Chroma3D statues is still required.
+Repository evidence records 48 passing Blender background tests, 12 Sprint 1 acceptance gates, preserved Sprint 0 regression, package/security validation, and independent final validation on Blender 4.4.3/Windows. Across those Windows and Blender 4.4.3 runs, Standard analysis of the current approximately 147,000-vertex synthetic fixture has ranged from about 12 to 29 seconds against the repository's 20-second performance warning threshold. Dense-mesh performance remains active technical debt. Sprint 2.6 now supplements the synthetic evidence with a permanent 27-mesh real-statue baseline; its timings are machine- and execution-model-specific rather than universal guarantees.
 
 Interactive installed-panel and permissioned real Chroma3D statue analysis remain useful deferred evidence; Sprint 1 merge and tag checkpoints are complete.
 
 ## Sprint 2 — Safe Mesh Repair
 
-**Status:** Implemented and accepted by automated Blender 4.4.3 gates on `feature/sprint-2-safe-mesh-repair` as `0.3.0-alpha.1`. Installed-panel smoke testing, Blender 4.5 LTS compatibility, and real-statue repair UAT remain deferred. Sprint 3 has not started.
+**Status:** Implemented, accepted by automated Blender 4.4.3 gates, merged to `main`, and tagged `v0.3.0-alpha.1`. Installed-panel interaction, Blender 4.5 LTS compatibility, and operator-reviewed real-statue repair UAT remain deferred. Sprint 3 has not started.
 
 **Objective:** Introduce controlled, reversible mesh-repair operations without weakening the read-only diagnostic path or original-asset safety.
 
@@ -89,6 +89,62 @@ Interactive installed-panel and permissioned real Chroma3D statue analysis remai
 - Hole boundaries may be mathematically small but artistically significant.
 - Dense-mesh copies, comparisons, and retained evidence can increase memory use.
 - Operator cancellation can leave an ambiguous partial state unless operations are carefully bounded.
+
+## Sprint 2.5 — Validated Real Statue Dataset
+
+**Status:** Complete. Dataset `1.0.0` contains 27 rights-cleared STL statue
+meshes with per-asset metadata, attribution/license evidence, immutable raw
+SHA-256 values, thumbnails, native Blender readability evidence, and zero
+validation failures. Dataset acceptance does not claim printability or a clean
+diagnostic state.
+
+## Sprint 2.6 — Golden Benchmark Baseline
+
+**Status:** Complete on Blender 4.4.3/Windows 11 for Chroma3D
+`0.3.0-alpha.1`. Sprint 3 has not started.
+
+The authoritative baseline is indexed by
+`benchmarks/golden/manifests/golden_manifest.json`. Each validated mesh ran in
+a fresh Blender factory-startup process through the existing production
+operators for analysis, repair planning, default selected repair, comparison,
+undo/restore where applicable, accept/audit, and a separate rollback/audit
+decision. No diagnostic, repair, operator, runtime, schema, package-version, or
+release-tag behavior was changed for the benchmark.
+
+The complete run:
+
+- processed 27/27 meshes and 12,925,711 triangles with zero worker failures;
+- retained one self-contained golden truth record per mesh plus production
+  analysis, accepted/rollback repair audits, comparisons, timings, logs, and
+  thumbnails;
+- recorded 7,432.224 seconds total wall time, 7,208.328 seconds total Blender
+  CPU time, and a 3.509 GiB maximum process working set;
+- classified the corpus as 1 Tiny, 7 Small, 5 Medium, 2 Large, 9 Huge, and 3
+  Extreme meshes by triangle count;
+- retained 89 per-mesh deduplicated production warning messages as evidence;
+- observed 7 PASS and 20 WARNING analysis severities both before and after the
+  default repair workflow;
+- selected production duplicate-merge repair on two meshes, with 2 canonical
+  APPLIED records and 2 earlier UNDONE lifecycle records; and
+- passed the independent verifier for all 27 meshes and 193 JSON artifacts,
+  including source/artifact hashes, schema fingerprints, lifecycle evidence,
+  counts, statistics, and no-corruption checks.
+
+Future releases run
+`manual-tests/benchmarks/run_golden_benchmark.py --compare` and use the stored
+PASS/WARNING/FAIL rules. Deterministic topology, diagnostics, repair/audit
+outcomes, schemas, versions, or hashes must match unless an intentional reviewed
+change creates a new versioned baseline. Same-machine timing degradation is
+classified by bounded ratio-plus-absolute thresholds; a different machine
+produces a timing-comparability warning. The stored baseline is not silently
+overwritten.
+
+Known limits remain explicit: the baseline uses Standard diagnostics and
+production defaults; timings are machine/power/execution-model-specific;
+working-set memory is a Windows process high-water mark rather than allocator
+tracing; candidate-based destructive and orientation repairs remain unselected
+unless production defaults select them; and automated real-statue execution
+does not replace operator-reviewed visual UAT or guarantee printability.
 
 ## Sprint 3 — Printability Engine
 
@@ -319,8 +375,8 @@ Sprints 6 and 7 can begin as separate workstreams after Sprint 5 evidence. Sprin
 | UI scalability for many findings/shells/plans | Dense cases can become hard to review | High | Sprints 2–3 UI architecture and manual UAT |
 | Long-running progress reporting | Users may interpret a synchronous operation as frozen | High | Sprint 2 foundation, extended through Sprint 4 |
 | Cancellation boundaries | Unsafe interruption can leave ambiguous state | High | Sprint 2 operation contract |
-| Memory instrumentation | Current evidence proves completion, not peak memory | High | Sprint 2 tooling; baselines in Sprint 5 |
-| Real statue fixture coverage | Procedural fixtures may miss production failure modes | High | Immediate prerequisite and Sprint 5 corpus |
+| Memory instrumentation | Sprint 2.6 records per-mesh working set, private usage, and process high-water marks; allocator-level attribution is still absent | Medium | Preserve the golden baseline; add deeper profiling only when a measured bottleneck requires it |
+| Real statue fixture coverage | The 27-mesh automated corpus is established, but operator-reviewed visual/detail-loss UAT remains incomplete | High | Use the golden corpus for every release and complete permissioned manual repair UAT before external alpha |
 | JSON compatibility policy | Future reports/repairs/assets could break consumers | High | Define in Sprint 2 before repair schema |
 | Test and acceptance runtime | Broader gates may slow iteration and discourage full runs | Medium | Tier suites in Sprints 2–5 without weakening release gates |
 | Service modularity under repair/print/optimization growth | Coordinator or models could become tightly coupled | Medium | Enforce boundaries each sprint; architecture review in Sprint 4 |
@@ -381,9 +437,9 @@ Each decision must be reevaluated against differentiation, total cost, privacy, 
 
 ## Immediate Next Milestone
 
-Sprint 2 implementation is complete. Before committing or beginning Sprint 3:
+Sprint 2.6 benchmark engineering is complete. Sprint 3 remains unstarted. Before beginning Sprint 3:
 
-- Review the Sprint 2 machine and Markdown evidence.
+- Review the Sprint 2 and Golden Benchmark machine/Markdown evidence.
 - Perform an installed-package interactive Blender panel smoke test.
 - Repair at least one permissioned real Chroma3D statue under operator review and retain evidence.
 - Validate Blender 4.5 LTS when that runtime is available.

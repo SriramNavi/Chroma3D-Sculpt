@@ -2,7 +2,7 @@
 
 Chroma3D Sculpt is a local Blender extension for production mesh diagnostics and controlled, reversible repair of complex statue meshes. Sprint 2 preserves the original source and performs every approved geometry change on an independent repair workspace copy.
 
-**Current status:** Sprint 2 accepted by automated Blender gates; installed-panel and real-statue UAT remain deferred
+**Current status:** Sprint 2.6 Golden Benchmark Baseline complete for all 27 validated statue meshes; installed-panel and operator-reviewed real-statue repair UAT remain deferred; Sprint 3 has not started
 
 **Version:** 0.3.0-alpha.1
 
@@ -79,6 +79,8 @@ py manual-tests\run_acceptance_gates.py --blender "D:\Softwares\Design\Blender\b
 py manual-tests\sprint1\run_sprint1_acceptance.py --blender "D:\Softwares\Design\Blender\blender.exe"
 py manual-tests\sprint1-final\run_final_validation.py --blender "D:\Softwares\Design\Blender\blender.exe"
 py manual-tests\sprint2\run_sprint2_acceptance.py --blender "D:\Softwares\Design\Blender\blender.exe"
+py manual-tests\benchmarks\verify_golden_baseline.py
+py manual-tests\benchmarks\run_golden_benchmark.py --self-check
 py scripts\package_extension.py
 py scripts\validate_package.py
 & "D:\Softwares\Design\Blender\blender.exe" --background --command extension validate "E:\VPRS\Sriram\Projects\Chroma3D Sculpt\dist\chroma3d_sculpt-0.3.0-alpha.1.zip"
@@ -87,6 +89,44 @@ py scripts\validate_package.py
 The installable archive is `dist\chroma3d_sculpt-0.3.0-alpha.1.zip`. Install it through Blender's **Edit > Preferences > Extensions > Install from Disk**, then enable the extension if prompted.
 
 The background suite preserves all Sprint 0 and Sprint 1 tests and adds 56 focused Sprint 2 tests. Sprint 2 evidence is generated under `manual-tests\sprint2`; generated JSON/log folders and ZIP files remain ignored.
+
+## Golden Benchmark Baseline
+
+Sprint 2.6 establishes `benchmarks\golden` as the permanent regression
+reference for dataset `1.0.0` and Chroma3D `0.3.0-alpha.1`. Every one of the 27
+validated statues was processed in a fresh Blender 4.4.3 factory-startup
+process through the existing production operators:
+
+`Analysis -> Repair Plan -> Repair -> Comparison -> Accept/Audit`
+
+Undo and restore were exercised before the canonical apply where applicable.
+Accept and rollback were captured as separate normal production decisions.
+The run completed 27/27 meshes with no worker or integrity failures, covered
+12,925,711 triangles, recorded 7,432.224 seconds of wall time and 7,208.328
+seconds of Blender CPU time, and observed a 3.509 GiB maximum process working
+set. Stored production diagnostic warnings remain golden evidence, not
+benchmark execution failures.
+
+The authoritative index is
+`benchmarks\golden\manifests\golden_manifest.json`. It links one self-contained
+golden truth record per mesh to the production analysis reports, accepted and
+rollback repair audits, comparisons, timings, statistics, thumbnails, source
+hashes, artifact hashes, schema fingerprints, software versions, and machine
+information.
+
+Future releases rerun and compare without overwriting the baseline:
+
+```powershell
+py manual-tests\benchmarks\run_golden_benchmark.py --compare `
+  --blender "D:\Softwares\Design\Blender\blender.exe"
+```
+
+The regression rules in `benchmarks\golden\README.md` fail deterministic
+topology, diagnostic, repair, audit, schema, version, and hash changes; classify
+bounded same-machine timing degradation as WARNING or FAIL; and warn when a
+machine mismatch makes timing non-comparable. An intentional product, schema,
+dataset, or benchmark-policy change requires explicit review and a new
+versioned baseline.
 
 ## Known limitations and safety
 

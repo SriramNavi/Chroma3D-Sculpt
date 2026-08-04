@@ -1,0 +1,29 @@
+{
+  "mesh_id": "statue-laurana-woman-bust",
+  "status": "PASS",
+  "timing_class": "Small",
+  "mesh_classifications": [
+    "Museum Scan",
+    "Photogrammetry",
+    "Bust",
+    "Human"
+  ],
+  "triangle_count": 99868,
+  "severity_before": "WARNING",
+  "severity_after": "WARNING",
+  "selected_operations": [],
+  "operation_record_count": 0,
+  "warning_count": 2,
+  "total_wall_seconds": 50.569829,
+  "total_cpu_seconds": 48.90625,
+  "peak_working_set_bytes": 412397568,
+  "artifacts": {
+    "analysis": "benchmarks/golden/raw/statue-laurana-woman-bust_analysis.json",
+    "repair_audit": "benchmarks/golden/raw/statue-laurana-woman-bust_repair_audit.json",
+    "rollback_audit": "benchmarks/golden/raw/statue-laurana-woman-bust_rollback_audit.json",
+    "golden": "benchmarks/golden/raw/statue-laurana-woman-bust_golden.json",
+    "comparison": "benchmarks/golden/comparisons/statue-laurana-woman-bust_comparison.json",
+    "timings": "benchmarks/golden/timings/statue-laurana-woman-bust_timings.json",
+    "report": "benchmarks/golden/reports/statue-laurana-woman-bust_benchmark_report.json"
+  }
+}

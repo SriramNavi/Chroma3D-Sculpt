@@ -1,0 +1,89 @@
+{
+  "unique_id": "statue-hotei-water-basin",
+  "title": "Ana-Hachimangu Hotei water basin",
+  "subject": "Hotei figure incorporated into a water basin",
+  "category": "functional_sculpture",
+  "religious_cultural_classification": "Buddhist folklore; Japanese",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Ana-Hachimangu_water_basin_of_Hotei_2024-04-25.stl",
+  "source_revision_url": "https://commons.wikimedia.org/wiki/File:Ana-Hachimangu_water_basin_of_Hotei_2024-04-25.stl?oldid=1053387911",
+  "source_page_revision_id": 1053387911,
+  "source_page_revision_timestamp": "2025-07-07T02:34:52Z",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Ana-Hachimangu_water_basin_of_Hotei_2024-04-25.stl",
+  "download_date": "2026-07-26",
+  "download_timestamp_utc": "2026-07-26T06:35:39.842785+00:00",
+  "author": "Asanagi",
+  "credit": "Own work",
+  "original_repository": "Independent photogrammetry via Wikimedia Commons",
+  "upstream_source_urls": [],
+  "license": "CC0-1.0",
+  "license_source_label": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_document": "datasets/statues/licenses/CC0-1.0.txt",
+  "file_format": "STL",
+  "mime_type": "application/sla",
+  "vertex_count": 140330,
+  "triangle_count": 280209,
+  "bounding_box": {
+    "coordinate_space": "Blender world space after default STL import",
+    "source_units": "unspecified",
+    "minimum": [
+      -1.022772312,
+      -0.913925886,
+      -0.885663867
+    ],
+    "maximum": [
+      0.993038833,
+      0.91441983,
+      0.917098999
+    ],
+    "dimensions": [
+      2.015811205,
+      1.828345776,
+      1.802762866
+    ],
+    "diagonal": 3.264398408
+  },
+  "checksum_sha256": "202b94e4eb8bb5d4c00cd1204aae620016dd1b2af114a89e6ab7295b5cc873da",
+  "source_checksum_sha1": "0ef94c7c0c518a2afb9d9712f546d5a2a63361df",
+  "original_filename": "Ana-Hachimangu water basin of Hotei 2024-04-25.stl",
+  "stored_filename": "statue-hotei-water-basin.stl",
+  "stored_path": "datasets/statues/raw/statue-hotei-water-basin.stl",
+  "file_size_bytes": 14010534,
+  "thumbnail_path": "datasets/statues/thumbnails/statue-hotei-water-basin.png",
+  "thumbnail_checksum_sha256": "aaf0373b5833e86d89e7146fc7db0aa288dd8cbe0f82989105e4ae246551ac30",
+  "source_description": "穴八幡宮 布袋の水鉢（東京都新宿区西早稲田2-1-11） 手水鉢の左隣に置かれている。現在は水は張られていない。像高150センチほどか。",
+  "notes": [
+    "Outdoor weathered sculpture scan."
+  ],
+  "validation": {
+    "status": "validated",
+    "validated_at_utc": "2026-07-26T06:36:10.928623+00:00",
+    "validator": "Blender 4.4.3 native STL importer",
+    "readable": true,
+    "non_empty": true,
+    "reasonable_mesh": true,
+    "obvious_corruption": false,
+    "stl_encoding": "binary",
+    "binary_size_consistent": true,
+    "declared_triangle_count": 280209,
+    "triangle_count_matches_header": true,
+    "triangle_count_delta_from_header": 0,
+    "imported_object_count": 1,
+    "edge_count": 420541,
+    "polygon_count": 280209,
+    "non_finite_vertex_count": 0,
+    "import_seconds": 0.184715,
+    "validation_seconds": 0.580903,
+    "checks": [
+      "File exists and is non-empty.",
+      "Current SHA-256 matches acquisition metadata.",
+      "STL container structure is recognized.",
+      "Blender native importer completed and produced mesh data.",
+      "Vertex and triangle counts exceed bounded minimums.",
+      "All imported vertex coordinates and bounds are finite.",
+      "Bounding-box diagonal is non-zero.",
+      "Binary STL header/import triangle delta is recorded; Blender may omit duplicate or degenerate facets during import."
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "unique_id": "statue-david-michelangelo",
+  "title": "David",
+  "subject": "Michelangelo's David",
+  "category": "full_statue",
+  "religious_cultural_classification": "Biblical; Italian Renaissance",
+  "source_url": "https://commons.wikimedia.org/wiki/File:David_(Michelangelo).stl",
+  "source_revision_url": "https://commons.wikimedia.org/wiki/File:David_(Michelangelo).stl?oldid=1086853306",
+  "source_page_revision_id": 1086853306,
+  "source_page_revision_timestamp": "2025-09-17T09:37:29Z",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/David_%28Michelangelo%29.stl",
+  "download_date": "2026-07-26",
+  "download_timestamp_utc": "2026-07-26T06:35:39.842785+00:00",
+  "author": "Scan the World",
+  "credit": "Scan the World : Scan the World Homepage Information about artwork",
+  "original_repository": "Scan the World via Wikimedia Commons",
+  "upstream_source_urls": [],
+  "license": "CC-BY-SA-4.0",
+  "license_source_label": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "license_document": "datasets/statues/licenses/CC-BY-SA-4.0.txt",
+  "file_format": "STL",
+  "mime_type": "application/sla",
+  "vertex_count": 599842,
+  "triangle_count": 1199948,
+  "bounding_box": {
+    "coordinate_space": "Blender world space after default STL import",
+    "source_units": "unspecified",
+    "minimum": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "maximum": [
+      164.882003784,
+      113.752006531,
+      395.030029297
+    ],
+    "dimensions": [
+      164.882003784,
+      113.752006531,
+      395.030029297
+    ],
+    "diagonal": 442.915693472
+  },
+  "checksum_sha256": "b41ad68e2b7a7377251f11201b6f9ba9569fa16422bec3719223f205d001c6f9",
+  "source_checksum_sha1": "4d9648fad3882ea2fcb5c17232ef4826b23c045c",
+  "original_filename": "David (Michelangelo).stl",
+  "stored_filename": "statue-david-michelangelo.stl",
+  "stored_path": "datasets/statues/raw/statue-david-michelangelo.stl",
+  "file_size_bytes": 59997484,
+  "thumbnail_path": "datasets/statues/thumbnails/statue-david-michelangelo.png",
+  "thumbnail_checksum_sha256": "ef42212608e8f9a34893331841c14de453cf85d49ed5a1274d3dac68cbc4e05f",
+  "source_description": "3D printable model of David (Michelangelo), compiled of photogrammetric and structured light scanning",
+  "notes": [
+    "High-detail full-body photogrammetry/structured-light model."
+  ],
+  "validation": {
+    "status": "validated",
+    "validated_at_utc": "2026-07-26T06:36:02.836214+00:00",
+    "validator": "Blender 4.4.3 native STL importer",
+    "readable": true,
+    "non_empty": true,
+    "reasonable_mesh": true,
+    "obvious_corruption": false,
+    "stl_encoding": "binary",
+    "binary_size_consistent": true,
+    "declared_triangle_count": 1199948,
+    "triangle_count_matches_header": true,
+    "triangle_count_delta_from_header": 0,
+    "imported_object_count": 1,
+    "edge_count": 1799922,
+    "polygon_count": 1199948,
+    "non_finite_vertex_count": 0,
+    "import_seconds": 1.256946,
+    "validation_seconds": 3.42159,
+    "checks": [
+      "File exists and is non-empty.",
+      "Current SHA-256 matches acquisition metadata.",
+      "STL container structure is recognized.",
+      "Blender native importer completed and produced mesh data.",
+      "Vertex and triangle counts exceed bounded minimums.",
+      "All imported vertex coordinates and bounds are finite.",
+      "Bounding-box diagonal is non-zero.",
+      "Binary STL header/import triangle delta is recorded; Blender may omit duplicate or degenerate facets during import."
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "unique_id": "statue-venus-de-milo",
+  "title": "Venus de Milo",
+  "subject": "Marble statue of Aphrodite",
+  "category": "full_statue",
+  "religious_cultural_classification": "Ancient Greek religion",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Scan_the_World_-_Venus_de_Milo.stl",
+  "source_revision_url": "https://commons.wikimedia.org/wiki/File:Scan_the_World_-_Venus_de_Milo.stl?oldid=967245707",
+  "source_page_revision_id": 967245707,
+  "source_page_revision_timestamp": "2024-12-07T17:13:20Z",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Scan_the_World_-_Venus_de_Milo.stl",
+  "download_date": "2026-07-26",
+  "download_timestamp_utc": "2026-07-26T06:35:39.842785+00:00",
+  "author": "Scan the World",
+  "credit": "Scan the World : Scan the World Homepage",
+  "original_repository": "Scan the World via Wikimedia Commons",
+  "upstream_source_urls": [],
+  "license": "CC-BY-SA-4.0",
+  "license_source_label": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "license_document": "datasets/statues/licenses/CC-BY-SA-4.0.txt",
+  "file_format": "STL",
+  "mime_type": "application/sla",
+  "vertex_count": 303512,
+  "triangle_count": 607274,
+  "bounding_box": {
+    "coordinate_space": "Blender world space after default STL import",
+    "source_units": "unspecified",
+    "minimum": [
+      0.004,
+      -0.002,
+      0.008
+    ],
+    "maximum": [
+      71.152000427,
+      64.976005554,
+      215.634002686
+    ],
+    "dimensions": [
+      71.148002625,
+      64.978004456,
+      215.62600708
+    ],
+    "diagonal": 236.175259962
+  },
+  "checksum_sha256": "4d00074ced679caf85e7539687626afa0410e17a9995188239ca820041fa13e8",
+  "source_checksum_sha1": "409a6b45172c27f6809d3d6e75a0cf2198b826b6",
+  "original_filename": "Scan the World - Venus de Milo.stl",
+  "stored_filename": "statue-venus-de-milo.stl",
+  "stored_path": "datasets/statues/raw/statue-venus-de-milo.stl",
+  "file_size_bytes": 30363784,
+  "thumbnail_path": "datasets/statues/thumbnails/statue-venus-de-milo.png",
+  "thumbnail_checksum_sha256": "1c2bc03925cf400ae08d7aa35d831e9458b7f7fec9d866210f503820c68e46a8",
+  "source_description": "3D scan of the Venus de Milo in the Louvre, Paris, France. Full archival information can be found on Scan the World.This object is part of \"Scan The World\". Scan the World is a non-profit initiative introduced by MyMiniFactory, through which we are creating a digital archive of fully 3D printable sculptures, artworks and landmarks from across the globe for the public to access for free.",
+  "notes": [
+    "Fragmentary full-body classical statue."
+  ],
+  "validation": {
+    "status": "validated",
+    "validated_at_utc": "2026-07-26T06:36:22.289963+00:00",
+    "validator": "Blender 4.4.3 native STL importer",
+    "readable": true,
+    "non_empty": true,
+    "reasonable_mesh": true,
+    "obvious_corruption": false,
+    "stl_encoding": "binary",
+    "binary_size_consistent": true,
+    "declared_triangle_count": 607274,
+    "triangle_count_matches_header": true,
+    "triangle_count_delta_from_header": 0,
+    "imported_object_count": 1,
+    "edge_count": 910911,
+    "polygon_count": 607274,
+    "non_finite_vertex_count": 0,
+    "import_seconds": 0.578619,
+    "validation_seconds": 1.652437,
+    "checks": [
+      "File exists and is non-empty.",
+      "Current SHA-256 matches acquisition metadata.",
+      "STL container structure is recognized.",
+      "Blender native importer completed and produced mesh data.",
+      "Vertex and triangle counts exceed bounded minimums.",
+      "All imported vertex coordinates and bounds are finite.",
+      "Bounding-box diagonal is non-zero.",
+      "Binary STL header/import triangle delta is recorded; Blender may omit duplicate or degenerate facets during import."
+    ],
+    "warnings": []
+  }
+}

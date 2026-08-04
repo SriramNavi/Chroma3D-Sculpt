@@ -1,0 +1,28 @@
+{
+  "mesh_id": "statue-greek-slave-smithsonian-150k",
+  "status": "PASS",
+  "timing_class": "Medium",
+  "mesh_classifications": [
+    "Museum Scan",
+    "Full statue",
+    "Human"
+  ],
+  "triangle_count": 149965,
+  "severity_before": "WARNING",
+  "severity_after": "WARNING",
+  "selected_operations": [],
+  "operation_record_count": 0,
+  "warning_count": 6,
+  "total_wall_seconds": 75.170498,
+  "total_cpu_seconds": 72.109375,
+  "peak_working_set_bytes": 529358848,
+  "artifacts": {
+    "analysis": "benchmarks/golden/raw/statue-greek-slave-smithsonian-150k_analysis.json",
+    "repair_audit": "benchmarks/golden/raw/statue-greek-slave-smithsonian-150k_repair_audit.json",
+    "rollback_audit": "benchmarks/golden/raw/statue-greek-slave-smithsonian-150k_rollback_audit.json",
+    "golden": "benchmarks/golden/raw/statue-greek-slave-smithsonian-150k_golden.json",
+    "comparison": "benchmarks/golden/comparisons/statue-greek-slave-smithsonian-150k_comparison.json",
+    "timings": "benchmarks/golden/timings/statue-greek-slave-smithsonian-150k_timings.json",
+    "report": "benchmarks/golden/reports/statue-greek-slave-smithsonian-150k_benchmark_report.json"
+  }
+}

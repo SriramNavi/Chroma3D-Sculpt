@@ -1,0 +1,89 @@
+{
+  "unique_id": "statue-cosmic-buddha-smithsonian-150k",
+  "title": "Cosmic Buddha, 150k laser scan",
+  "subject": "Buddha draped in robes portraying the Realms of Existence",
+  "category": "full_statue",
+  "religious_cultural_classification": "Buddhist; Chinese; Northern Qi dynasty",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Cosmic-buddha-laser-scan-150k_(Smithsonian_Institution).stl",
+  "source_revision_url": "https://commons.wikimedia.org/wiki/File:Cosmic-buddha-laser-scan-150k_(Smithsonian_Institution).stl?oldid=1152115014",
+  "source_page_revision_id": 1152115014,
+  "source_page_revision_timestamp": "2026-01-23T23:58:23Z",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Cosmic-buddha-laser-scan-150k_%28Smithsonian_Institution%29.stl",
+  "download_date": "2026-07-26",
+  "download_timestamp_utc": "2026-07-26T06:35:39.842785+00:00",
+  "author": "Smithsonian Institution",
+  "credit": "https://3d.si.edu/object/3d/buddha-draped-robes-portraying-realms-existence:d8c62be8-4ebc-11ea-b77f-2e728ce88125 https://web.archive.org/web/20230817191455/https://3d.si.edu/object/3d/buddha-draped-robes-portraying-realms-existence:d8c62be8-4ebc-11ea-b77f-2e728ce88125",
+  "original_repository": "Smithsonian Institution via Wikimedia Commons",
+  "upstream_source_urls": [],
+  "license": "CC0-1.0",
+  "license_source_label": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_document": "datasets/statues/licenses/CC0-1.0.txt",
+  "file_format": "STL",
+  "mime_type": "application/sla",
+  "vertex_count": 75002,
+  "triangle_count": 150000,
+  "bounding_box": {
+    "coordinate_space": "Blender world space after default STL import",
+    "source_units": "unspecified",
+    "minimum": [
+      -317.815124512,
+      -158.550048828,
+      -757.354370117
+    ],
+    "maximum": [
+      317.821502686,
+      158.598754883,
+      757.354309082
+    ],
+    "dimensions": [
+      635.63659668,
+      317.148803711,
+      1514.708740234
+    ],
+    "diagonal": 1673.009187718
+  },
+  "checksum_sha256": "de75f3aa58ed3da3e27884cd96671ef172c98ce26f1b78510c4f3dda88e91e72",
+  "source_checksum_sha1": "0fe6ca26e9212eafd4d47884af9ca671ef354a2d",
+  "original_filename": "Cosmic-buddha-laser-scan-150k (Smithsonian Institution).stl",
+  "stored_filename": "statue-cosmic-buddha-smithsonian-150k.stl",
+  "stored_path": "datasets/statues/raw/statue-cosmic-buddha-smithsonian-150k.stl",
+  "file_size_bytes": 7500084,
+  "thumbnail_path": "datasets/statues/thumbnails/statue-cosmic-buddha-smithsonian-150k.png",
+  "thumbnail_checksum_sha256": "b60c081b97a7c6cb1d89635c32db6c767401db008d58308a44a40c0c4a85339a",
+  "source_description": "Smithsonian Institution media collection of the \"Buddha draped in robes portraying the Realms of Existence\". Included are high resolution photographs and 2 3D models, one of which is very huge with about 31 million vertices and about 62 million faces.",
+  "notes": [
+    "Decimated 150k-mesh derivative selected instead of the 2.88 GiB source."
+  ],
+  "validation": {
+    "status": "validated",
+    "validated_at_utc": "2026-07-26T06:35:55.272143+00:00",
+    "validator": "Blender 4.4.3 native STL importer",
+    "readable": true,
+    "non_empty": true,
+    "reasonable_mesh": true,
+    "obvious_corruption": false,
+    "stl_encoding": "binary",
+    "binary_size_consistent": true,
+    "declared_triangle_count": 150000,
+    "triangle_count_matches_header": true,
+    "triangle_count_delta_from_header": 0,
+    "imported_object_count": 1,
+    "edge_count": 225000,
+    "polygon_count": 150000,
+    "non_finite_vertex_count": 0,
+    "import_seconds": 0.091741,
+    "validation_seconds": 0.366382,
+    "checks": [
+      "File exists and is non-empty.",
+      "Current SHA-256 matches acquisition metadata.",
+      "STL container structure is recognized.",
+      "Blender native importer completed and produced mesh data.",
+      "Vertex and triangle counts exceed bounded minimums.",
+      "All imported vertex coordinates and bounds are finite.",
+      "Bounding-box diagonal is non-zero.",
+      "Binary STL header/import triangle delta is recorded; Blender may omit duplicate or degenerate facets during import."
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "unique_id": "statue-asad-al-lat",
+  "title": "Asad Al-Lat",
+  "subject": "Lion of Al-Lat digital reconstruction",
+  "category": "monument_reconstruction",
+  "religious_cultural_classification": "Ancient Syrian/Palmyrene religious heritage",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Asad_Al-Lat.stl",
+  "source_revision_url": "https://commons.wikimedia.org/wiki/File:Asad_Al-Lat.stl?oldid=1066647155",
+  "source_page_revision_id": 1066647155,
+  "source_page_revision_timestamp": "2025-08-05T06:53:50Z",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Asad_Al-Lat.stl",
+  "download_date": "2026-07-26",
+  "download_timestamp_utc": "2026-07-26T06:35:39.842785+00:00",
+  "author": "Georges Dahdouh",
+  "credit": "http://www.newpalmyra.org/models/asad-al-lat/",
+  "original_repository": "NEWPALMYRA / Re-Sculpting Syrian Statues Digitally via Wikimedia Commons",
+  "upstream_source_urls": [],
+  "license": "CC0-1.0",
+  "license_source_label": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_document": "datasets/statues/licenses/CC0-1.0.txt",
+  "file_format": "STL",
+  "mime_type": "application/sla",
+  "vertex_count": 15071,
+  "triangle_count": 29402,
+  "bounding_box": {
+    "coordinate_space": "Blender world space after default STL import",
+    "source_units": "unspecified",
+    "minimum": [
+      -55.22334671,
+      -30.716510773,
+      8.168848038
+    ],
+    "maximum": [
+      44.925060272,
+      21.081533432,
+      136.481781006
+    ],
+    "dimensions": [
+      100.148406982,
+      51.798042297,
+      128.312927246
+    ],
+    "diagonal": 170.812608626
+  },
+  "checksum_sha256": "5748e4d150a370f34328ea768ced85ccafcaae6dd3c3891f2c0e80fb0a7a4ac8",
+  "source_checksum_sha1": "5a034f5345037dc5dd06f4010ac524451fcfeb8b",
+  "original_filename": "Asad Al-Lat.stl",
+  "stored_filename": "statue-asad-al-lat.stl",
+  "stored_path": "datasets/statues/raw/statue-asad-al-lat.stl",
+  "file_size_bytes": 1470284,
+  "thumbnail_path": "datasets/statues/thumbnails/statue-asad-al-lat.png",
+  "thumbnail_checksum_sha256": "ea529dbac1835d91fbec1fb5e0d318be9eb7e378e3a1868e9b81ae8c6f35bdc6",
+  "source_description": "This is the first statue made by #rsssd Re-Sculpting Syrian Statues Digitally, Asad Al-Lat statue were destroyed by ISIL in the ancient city of Palmyra, Syria along with most of the main world heritage ruins in the city. Model created for #NEWPALMYRA by Georges Dahdouh with optimization by Jim Ellis.",
+  "notes": [
+    "Digitally reconstructed heritage statue; useful low-size topology case."
+  ],
+  "validation": {
+    "status": "validated",
+    "validated_at_utc": "2026-07-26T06:35:51.307970+00:00",
+    "validator": "Blender 4.4.3 native STL importer",
+    "readable": true,
+    "non_empty": true,
+    "reasonable_mesh": true,
+    "obvious_corruption": false,
+    "stl_encoding": "binary",
+    "binary_size_consistent": true,
+    "declared_triangle_count": 29404,
+    "triangle_count_matches_header": false,
+    "triangle_count_delta_from_header": 2,
+    "imported_object_count": 1,
+    "edge_count": 44451,
+    "polygon_count": 29402,
+    "non_finite_vertex_count": 0,
+    "import_seconds": 0.016796,
+    "validation_seconds": 0.079839,
+    "checks": [
+      "File exists and is non-empty.",
+      "Current SHA-256 matches acquisition metadata.",
+      "STL container structure is recognized.",
+      "Blender native importer completed and produced mesh data.",
+      "Vertex and triangle counts exceed bounded minimums.",
+      "All imported vertex coordinates and bounds are finite.",
+      "Bounding-box diagonal is non-zero.",
+      "Binary STL header/import triangle delta is recorded; Blender may omit duplicate or degenerate facets during import."
+    ],
+    "warnings": [
+      "Blender imported 2 fewer triangles than the binary STL header declared, consistent with importer cleanup of duplicate or degenerate facets."
+    ]
+  }
+}

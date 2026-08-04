@@ -1,0 +1,27 @@
+{
+  "mesh_id": "statue-mick-odwyer",
+  "status": "PASS",
+  "timing_class": "Large",
+  "mesh_classifications": [
+    "Full statue",
+    "Human"
+  ],
+  "triangle_count": 400000,
+  "severity_before": "WARNING",
+  "severity_after": "WARNING",
+  "selected_operations": [],
+  "operation_record_count": 0,
+  "warning_count": 6,
+  "total_wall_seconds": 208.140197,
+  "total_cpu_seconds": 200.890625,
+  "peak_working_set_bytes": 1067970560,
+  "artifacts": {
+    "analysis": "benchmarks/golden/raw/statue-mick-odwyer_analysis.json",
+    "repair_audit": "benchmarks/golden/raw/statue-mick-odwyer_repair_audit.json",
+    "rollback_audit": "benchmarks/golden/raw/statue-mick-odwyer_rollback_audit.json",
+    "golden": "benchmarks/golden/raw/statue-mick-odwyer_golden.json",
+    "comparison": "benchmarks/golden/comparisons/statue-mick-odwyer_comparison.json",
+    "timings": "benchmarks/golden/timings/statue-mick-odwyer_timings.json",
+    "report": "benchmarks/golden/reports/statue-mick-odwyer_benchmark_report.json"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "mesh_id": "statue-belvedere-torso",
+  "status": "PASS",
+  "timing_class": "Small",
+  "mesh_classifications": [
+    "Museum Scan",
+    "Human"
+  ],
+  "triangle_count": 97796,
+  "severity_before": "PASS",
+  "severity_after": "PASS",
+  "selected_operations": [],
+  "operation_record_count": 0,
+  "warning_count": 0,
+  "total_wall_seconds": 49.944533,
+  "total_cpu_seconds": 48.609375,
+  "peak_working_set_bytes": 411099136,
+  "artifacts": {
+    "analysis": "benchmarks/golden/raw/statue-belvedere-torso_analysis.json",
+    "repair_audit": "benchmarks/golden/raw/statue-belvedere-torso_repair_audit.json",
+    "rollback_audit": "benchmarks/golden/raw/statue-belvedere-torso_rollback_audit.json",
+    "golden": "benchmarks/golden/raw/statue-belvedere-torso_golden.json",
+    "comparison": "benchmarks/golden/comparisons/statue-belvedere-torso_comparison.json",
+    "timings": "benchmarks/golden/timings/statue-belvedere-torso_timings.json",
+    "report": "benchmarks/golden/reports/statue-belvedere-torso_benchmark_report.json"
+  }
+}
