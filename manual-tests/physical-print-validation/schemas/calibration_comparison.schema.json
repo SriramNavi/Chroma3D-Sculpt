@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SriramNavi/Chroma3D-Sculpt/schemas/calibration-comparison-1.0.0.json",
+  "title": "Chroma3D calibration comparison",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "generated_at", "status", "completed_runs", "excluded_runs", "categories", "confidence_calibration", "threshold_sensitivity", "proposed_calibration_observations", "limitations"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"}, "generated_at": {"type": "string", "format": "date-time"},
+    "status": {"enum": ["NO_PHYSICAL_OBSERVATIONS", "PARTIAL", "COMPLETE"]}, "completed_runs": {"type": "integer", "minimum": 0}, "excluded_runs": {"type": "integer", "minimum": 0},
+    "categories": {"type": "object", "additionalProperties": {"type": "object", "required": ["true_positive", "false_positive", "false_negative", "true_negative", "precision", "recall", "severity_agreement"], "properties": {"true_positive": {"type": "integer", "minimum": 0}, "false_positive": {"type": "integer", "minimum": 0}, "false_negative": {"type": "integer", "minimum": 0}, "true_negative": {"type": "integer", "minimum": 0}, "precision": {"type": ["number", "null"], "minimum": 0, "maximum": 1}, "recall": {"type": ["number", "null"], "minimum": 0, "maximum": 1}, "severity_agreement": {"type": ["number", "null"], "minimum": 0, "maximum": 1}}}},
+    "confidence_calibration": {"type": "object"}, "threshold_sensitivity": {"type": "object"},
+    "proposed_calibration_observations": {"type": "array", "items": {"type": "object"}},
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  }
+}

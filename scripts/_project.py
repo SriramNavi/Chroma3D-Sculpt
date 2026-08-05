@@ -23,6 +23,7 @@ PACKAGE_PATH = DIST_DIRECTORY / PACKAGE_FILENAME
 REQUIRED_SOURCE_FILES = (
     "__init__.py",
     "analysis_settings.py",
+    "printability_settings.py",
     "repair_settings.py",
     "blender_manifest.toml",
     "metadata.py",
@@ -30,11 +31,13 @@ REQUIRED_SOURCE_FILES = (
     "models/__init__.py",
     "models/analysis_result.py",
     "models/repair_models.py",
+    "models/printability_models.py",
     "operators/__init__.py",
     "operators/analyze_mesh.py",
     "operators/export_report.py",
     "operators/select_issue.py",
     "operators/repair.py",
+    "operators/printability.py",
     "services/__init__.py",
     "services/mesh_analyzer.py",
     "services/topology_analyzer.py",
@@ -47,10 +50,24 @@ REQUIRED_SOURCE_FILES = (
     "services/repair_operations.py",
     "services/repair_plan.py",
     "services/repair_session.py",
+    "services/printer_profile_loader.py",
+    "services/geometry_facts.py",
+    "services/wall_thickness.py",
+    "services/thin_features.py",
+    "services/overhang_analysis.py",
+    "services/floating_components.py",
+    "services/build_plate_contact.py",
+    "services/scale_evaluation.py",
+    "services/orientation_analysis.py",
+    "services/printability_scoring.py",
+    "services/printability_session.py",
+    "services/printability_report.py",
+    "services/printability_coordinator.py",
     "ui/__init__.py",
     "ui/panels.py",
     "ui/properties.py",
     "ui/repair_panel.py",
+    "ui/printability_panel.py",
     "utilities/__init__.py",
     "utilities/blender_paths.py",
     "utilities/context.py",
@@ -60,6 +77,16 @@ REQUIRED_SOURCE_FILES = (
     "utilities/signatures.py",
     "utilities/boundary_loops.py",
     "utilities/repair_signatures.py",
+    "utilities/printability_signatures.py",
+)
+
+PACKAGE_ASSET_FILES = tuple(
+    [f"profiles/printability/{name}" for name in (
+        "generic_fdm.json", "generic_resin.json", "bambu_x1_carbon.json", "bambu_p1s.json", "prusa_mk4.json", "custom_profile.template.json",
+    )]
+    + [f"schemas/{name}" for name in (
+        "printer_profile.schema.json", "printability_settings.schema.json", "printability_report.schema.json", "printability_risk_item.schema.json", "orientation_candidate.schema.json",
+    )]
 )
 
 
@@ -81,6 +108,9 @@ def validate_source_layout() -> None:
         missing.append("LICENSE")
     if missing:
         raise FileNotFoundError("Required file(s) missing: " + ", ".join(missing))
+    missing_assets = [relative for relative in PACKAGE_ASSET_FILES if not (REPOSITORY_ROOT / relative).is_file()]
+    if missing_assets:
+        raise FileNotFoundError("Required package asset(s) missing: " + ", ".join(missing_assets))
     manifest = read_source_manifest()
     expected = {
         "schema_version": "1.0.0",

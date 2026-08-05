@@ -375,7 +375,9 @@ def _gate_static_audit() -> dict[str, Any]:
     _require(not ui_mutation_hits, f"UI contains geometry mutation: {ui_mutation_hits}")
     manifest = (runtime / "blender_manifest.toml").read_text(encoding="utf-8")
     _require('blender_version_min = "4.4.0"' in manifest, "Minimum Blender version changed.")
-    _require(DISPLAY_VERSION == "0.3.0-alpha.1" and SCHEMA_VERSION == "2.0" and REPAIR_AUDIT_SCHEMA_VERSION == "1.0", "Version/schema mismatch.")
+    manifest_version = DISPLAY_VERSION.removesuffix("-alpha.1")
+    _require(f'version = "{manifest_version}"' in manifest, "Manifest and imported extension versions differ.")
+    _require(SCHEMA_VERSION == "2.0" and REPAIR_AUDIT_SCHEMA_VERSION == "1.0", "Analysis or repair schema changed.")
     return {
         "status": "PASS", "runtime_python_files": len(files), "prohibited_findings": findings,
         "misleading_wording": wording_hits, "diagnostic_repair_imports": diagnostic_repair_imports,
@@ -777,7 +779,7 @@ def _gate_audit_truthfulness() -> dict[str, Any]:
     raw = output.read_bytes()
     payload = json.loads(raw.decode("utf-8"))
     records = payload["session"]["operation_records"]
-    _require(payload["schema_version"] == "1.0" and payload["extension_version"] == "0.3.0-alpha.1" and payload["analysis_schema_version"] == "2.0", "Repair audit versions mismatch.")
+    _require(payload["schema_version"] == "1.0" and payload["extension_version"] == DISPLAY_VERSION and payload["analysis_schema_version"] == "2.0", "Repair audit versions mismatch.")
     _require(raw.endswith(b"\n"), "Repair audit lacks a trailing newline.")
     _require(payload["final_decision"] == "ACCEPTED" and payload["session"]["status"] == "ACCEPTED", "Audit final decision mismatch.")
     _require(any(item["status"] == "APPLIED" for item in records) and any(item["status"] == "NO_CHANGE" for item in records), "Audit omitted applied or no-change truth.")

@@ -1,23 +1,24 @@
 # Chroma3D Sculpt - Sprint 2.8 Printability Engineering Specification
 
-**Status:** Sprint 2.8 specification milestone complete for review; Sprint 3 remains unstarted.
+**Status:** Sprint 2.8 contract retained; Sprint 3 runtime implemented on the feature branch as `0.4.0-alpha.1` with explicit automated and manual limitations.
 
 | Contract item | Value |
 |---|---|
 | Repository release at this milestone | `v0.3.1-alpha.1` |
-| Blender extension version | `0.3.0-alpha.1` (unchanged) |
+| Blender extension version | `0.4.0-alpha.1` Sprint 3 implementation candidate |
 | Dataset dependency | Dataset `1.0.0` (unchanged) |
 | Golden Benchmark dependency | Golden Benchmark `1.0.0` (unchanged) |
 | Proposed printability benchmark | Printability Benchmark `1.0.0` (not generated in Sprint 2.8) |
-| Runtime implementation | None; Sprint 3 implementation is not authorized by this document |
+| Runtime implementation | Local advisory engine; no automatic geometry or transform changes |
 
 ## Purpose
 
-This document is the implementation contract for a future advisory Printability
+This document is the preserved implementation contract for the advisory Printability
 Engine. It defines measurements, profile-dependent evaluations, risk states,
 evidence, scoring, reports, performance limits, fixtures, and acceptance gates.
-It does not add runtime functionality, Blender operators, geometry mutation,
-automatic transforms, slicing, support generation, or a manufacturing claim.
+The Sprint 3 runtime adds Blender operators and local analysis while retaining the
+contract's prohibition on geometry mutation, automatic transforms, slicing,
+support generation, or a manufacturing claim.
 
 The product question is:
 

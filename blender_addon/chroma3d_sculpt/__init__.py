@@ -6,10 +6,11 @@ import bpy
 from bpy.props import PointerProperty
 
 from .metadata import DISPLAY_VERSION, EXTENSION_NAME, EXTENSION_VERSION
-from .operators import ANALYZE_CLASSES, EXPORT_CLASSES, REPAIR_CLASSES, SELECTION_CLASSES
+from .operators import ANALYZE_CLASSES, EXPORT_CLASSES, PRINTABILITY_CLASSES, REPAIR_CLASSES, SELECTION_CLASSES
 from .session import clear as clear_session
 from .services.repair_session import clear_runtime as clear_repair_runtime
-from .ui import PANEL_CLASSES, PROPERTY_CLASSES, REPAIR_PANEL_CLASSES, SESSION_STATE_CLASS
+from .services.printability_session import clear_runtime as clear_printability_runtime
+from .ui import PANEL_CLASSES, PRINTABILITY_PANEL_CLASSES, PROPERTY_CLASSES, REPAIR_PANEL_CLASSES, SESSION_STATE_CLASS
 from .utilities.logging import get_logger
 
 bl_info = {
@@ -18,12 +19,12 @@ bl_info = {
     "version": tuple(int(part) for part in EXTENSION_VERSION.split(".")),
     "blender": (4, 4, 0),
     "location": "3D Viewport > Sidebar > Chroma3D",
-    "description": f"Mesh diagnostics and controlled workspace-only repair ({DISPLAY_VERSION})",
+    "description": f"Mesh diagnostics, controlled repair, and advisory printability analysis ({DISPLAY_VERSION})",
     "category": "Mesh",
 }
 
 logger = get_logger()
-_RUNTIME_CLASSES = ANALYZE_CLASSES + EXPORT_CLASSES + SELECTION_CLASSES + REPAIR_CLASSES + PANEL_CLASSES + REPAIR_PANEL_CLASSES
+_RUNTIME_CLASSES = ANALYZE_CLASSES + EXPORT_CLASSES + SELECTION_CLASSES + REPAIR_CLASSES + PRINTABILITY_CLASSES + PANEL_CLASSES + REPAIR_PANEL_CLASSES + PRINTABILITY_PANEL_CLASSES
 
 
 def register() -> None:
@@ -54,4 +55,5 @@ def unregister() -> None:
             logger.debug("Property class was not registered during unload: %s", cls.__name__)
     clear_session()
     clear_repair_runtime()
+    clear_printability_runtime()
     logger.info("Chroma3D Sculpt unregistered")

@@ -3,10 +3,10 @@
 | Metadata | Value |
 |---|---|
 | Document status | Living product specification; planning baseline for review |
-| Current product version | `0.3.0-alpha.1` |
+| Current product version | `0.4.0-alpha.1` implementation candidate |
 | Repository release at Sprint 2.8 | `v0.3.1-alpha.1` |
-| Current completed sprint | Sprint 2 — Safe Mesh Repair; automated acceptance complete |
-| Next planned sprint | Sprint 3 — Printability Engine; not started |
+| Current completed sprint | Sprint 3 — advisory Printability Engine implemented with automated evidence |
+| Next planned sprint | Sprint 3 review, installed-panel smoke, and real-print calibration before Sprint 4 |
 | Primary platform | Windows 11, local Blender extension |
 | Primary validated Blender version | Blender 4.4.3; minimum supported version 4.4.0 |
 | Owner | Chroma3D Product and Engineering |
@@ -15,15 +15,14 @@
 
 ## Product Summary
 
-Chroma3D Sculpt is a Blender-native engineering and creation workflow for high-detail statue meshes. The current internal alpha provides local read-only diagnostics plus controlled repair on an independent workspace copy. Standard and Deep profiles report topology, shells, world-space physical metrics, orientation, bounded issue evidence, build-volume fit, and candidate-based spatial findings. Sprint 2 can apply explicitly selected bounded repairs without replacing the source; it does not guarantee printability.
+Chroma3D Sculpt is a Blender-native engineering and creation workflow for high-detail statue meshes. The current internal alpha provides local read-only diagnostics, controlled repair on an independent workspace copy, and separate advisory printability risk analysis. Sprint 2 can apply explicitly selected bounded repairs without replacing the source. Sprint 3 reports bounded profile-dependent evidence without changing geometry or transforms; neither path guarantees printability.
 
-Sprint 0 and Sprint 1 are accepted and tagged. Sprint 2 automated background, regression, stress, package, and security evidence is implemented on `feature/sprint-2-safe-mesh-repair`; interactive installed-panel and real Chroma3D statue repair UAT remain deferred. Sprint 3 has not started.
+Sprint 0 and Sprint 1 are accepted and tagged. Sprint 2 automated evidence is complete. Sprint 3 is implemented on `feature/sprint-3-printability-engine`; interactive installed-panel, Blender 4.5 LTS, and real FDM/resin calibration remain deferred.
 
-Sprint 2.8 is a documentation, research, schema, and validation-contract
-milestone. The [Printability Engineering Specification](PRINTABILITY_SPECIFICATION.md)
-defines the future advisory engine without changing runtime behavior, the
-extension version, Dataset `1.0.0`, or Golden Benchmark `1.0.0`. Sprint 3 remains
-unstarted until the specification is reviewed and approved.
+Sprint 2.8 is the retained documentation, research, schema, and validation
+contract. The [Printability Engineering Specification](PRINTABILITY_SPECIFICATION.md)
+defines the implemented advisory engine without changing Dataset `1.0.0` or
+Golden Benchmark `1.0.0`.
 
 ## User Personas
 
@@ -137,14 +136,14 @@ Status values are **Implemented**, **Partial**, **Planned**, and **Deferred**. F
 | ID | Requirement | User value | Status | Target milestone | Acceptance evidence |
 |---|---|---|---|---|---|
 | FR-PRINT-001 | Report world-space scale and dimensions with explicit scene-unit context. | Establishes manufacturing size. | Implemented | Sprint 1 | Sprint 1 physical-metric evidence |
-| FR-PRINT-002 | Maintain a versioned printer profile system that distinguishes FDM and resin constraints. | Makes checks relevant to the selected process. | Partial | Sprint 3 | Current X1 Carbon/custom build volumes; profile-schema and printer-fixture tests required |
-| FR-PRINT-003 | Analyze wall thickness with threshold evidence and bounded samples. | Finds fragile or unmanufacturable regions earlier. | Planned | Sprint 3 | Calibrated thickness fixtures and slicer/measurement comparisons |
-| FR-PRINT-004 | Analyze overhangs relative to approved orientation and process settings. | Identifies support-sensitive regions. | Planned | Sprint 3 | Known-angle fixtures and FDM/resin policy tests |
-| FR-PRINT-005 | Evaluate build-plate contact and stability indicators. | Reduces poorly grounded exports. | Planned | Sprint 3 | Contact fixtures and operator-reviewed cases |
-| FR-PRINT-006 | Detect disconnected floating parts or features relevant to manufacture. | Prevents unnoticed unprintable components. | Planned | Sprint 3 | Multi-component fixtures and real-model review |
-| FR-PRINT-007 | Provide controlled scale tools with preview and original protection. | Fits target output without hidden transform changes. | Planned | Sprint 3 | Transform, unit, undo, and before/after tests |
-| FR-PRINT-008 | Produce orientation recommendations with scored evidence; apply only after user approval. | Improves preparation while preserving artist control. | Planned | Sprint 3 | Reference fixtures, printer-specific review, and rollback tests |
-| FR-PRINT-009 | Gate export on required completed checks and preserve warnings, skips, failures, and overrides in evidence. | Prevents silent omission of risk. | Planned | Sprint 3 | Export-state matrix and override audit tests |
+| FR-PRINT-002 | Maintain a versioned printer profile system that distinguishes FDM and resin constraints. | Makes checks relevant to the selected process. | Implemented | Sprint 3 | Five schema-validated packaged profiles, Custom validation, and classification tests |
+| FR-PRINT-003 | Analyze wall thickness with threshold evidence and bounded samples. | Finds fragile or unmanufacturable regions earlier. | Implemented | Sprint 3 | 2.0 mm/0.4 mm/open-surface fixtures and explicit sampling limits; physical calibration pending |
+| FR-PRINT-004 | Analyze overhangs relative to approved orientation and process settings. | Identifies support-sensitive regions. | Implemented | Sprint 3 | Exact 0/30/45/60/90 degree fixtures, regions, and direction tests |
+| FR-PRINT-005 | Evaluate build-plate contact and stability indicators. | Reduces poorly grounded exports. | Implemented | Sprint 3 | Broad/multi/partial/edge/point/no-contact fixtures; stability remains heuristic |
+| FR-PRINT-006 | Detect disconnected floating parts or features relevant to manufacture. | Prevents unnoticed unprintable components. | Implemented | Sprint 3 | Contacting and suspended multi-shell fixtures plus neutral wording checks |
+| FR-PRINT-007 | Provide controlled scale tools with preview and original protection. | Fits target output without hidden transform changes. | Partial | Sprint 3 | Evaluation and uniform-scale advice implemented read-only; no apply operation in Sprint 3 |
+| FR-PRINT-008 | Produce orientation recommendations with scored evidence; apply only after user approval. | Improves preparation while preserving artist control. | Partial | Sprint 3 | Bounded deterministic virtual candidates implemented; no apply operation in Sprint 3 |
+| FR-PRINT-009 | Gate export on required completed checks and preserve warnings, skips, failures, and overrides in evidence. | Prevents silent omission of risk. | Partial | Sprint 3 | JSON/Markdown preserve all states and reject stale evidence; audited override workflow deferred |
 | FR-PRINT-010 | State that analysis reduces risk but does not guarantee printability or manufacturing success. | Maintains user trust and accurate expectations. | Implemented | All milestones | README and report wording; release-content review |
 
 ### Optimization
@@ -276,7 +275,7 @@ Performance expectations below are planning targets unless backed by named evide
 | Bounded evidence, stale protection, and issue selection | Implemented | 0.2.0-alpha.1 | S1-09 and final validation | Selection changes mode/selection but not geometry |
 | Schema 2.0 reports and performance timings | Implemented | 0.2.0-alpha.1 | S1-10/S1-12 | Current schema compatibility policy needs formalization |
 | Safe mesh repair | Implemented | 0.3.0-alpha.1 | 56 focused tests and S2-02 through S2-14 | Workspace copies require human review; session restart persistence and real-statue UAT deferred |
-| Printability engine | Planned | Sprint 3 target | No implementation evidence | No thickness, overhang, contact, support, or orientation analysis |
+| Printability engine | Implemented with limitations | 0.4.0-alpha.1 | 117 focused tests, all-prior-sprint regression, Dataset 1.0.0 acceptance, schemas, package/security gates | Advisory sampled/heuristic evidence; installed UI, Blender 4.5, and physical-print calibration pending |
 | Controlled optimization | Planned | Sprint 4 target | No implementation evidence | No decimation or remeshing |
 | Asset workflows, AI assistance, and commercial platform | Planned/Deferred | Sprints 6–10/post-v1 | No implementation evidence | No asset library, AI, cloud, licensing, billing, or marketplace |
 

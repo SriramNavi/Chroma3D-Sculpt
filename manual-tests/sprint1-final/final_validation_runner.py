@@ -250,16 +250,26 @@ def _gate_static() -> dict[str, Any]:
     )
     wording_hits = [item for item in wording if item.lower() in combined.lower()]
     _require(not wording_hits, f"Overclaiming runtime wording found: {wording_hits}")
-    ops_hits = []
+    ops_hits: list[tuple[str, str]] = []
     for path in source_files:
         for line_number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
             if "bpy.ops." in line:
-                ops_hits.append(f"{path.relative_to(REPOSITORY_ROOT).as_posix()}:{line_number}:{line.strip()}")
-    _require(len(ops_hits) == 2 and all("mode_set" in item for item in ops_hits), f"Unexpected runtime bpy.ops calls: {ops_hits}")
+                relative = path.relative_to(REPOSITORY_ROOT).as_posix()
+                ops_hits.append((relative, line.strip()))
+    expected_operator_files = {
+        "blender_addon/chroma3d_sculpt/operators/select_issue.py",
+        "blender_addon/chroma3d_sculpt/operators/printability.py",
+    }
+    _require(
+        len(ops_hits) == 4
+        and {path for path, _line in ops_hits} == expected_operator_files
+        and all('bpy.ops.object.mode_set(mode="OBJECT")' in line or 'bpy.ops.object.mode_set(mode="EDIT")' in line for _path, line in ops_hits),
+        f"Unexpected runtime bpy.ops calls: {ops_hits}",
+    )
     manifest = (runtime / "blender_manifest.toml").read_text(encoding="utf-8")
-    _require('version = "0.3.0"' in manifest, "Manifest version is not 0.3.0.")
+    _require(f'version = "{EXTENSION_VERSION}"' in manifest, "Manifest and imported extension versions differ.")
     _require('blender_version_min = "4.4.0"' in manifest, "Minimum Blender is not 4.4.0.")
-    _require(EXTENSION_VERSION == "0.3.0" and DISPLAY_VERSION == "0.3.0-alpha.1", "Display metadata mismatch.")
+    _require(DISPLAY_VERSION == f"{EXTENSION_VERSION}-alpha.1", "Display metadata mismatch.")
     _require(SCHEMA_VERSION == "2.0", "Analysis schema mismatch.")
     return {
         "runtime_python_files": len(source_files),

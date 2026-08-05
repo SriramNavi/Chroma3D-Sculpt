@@ -1,16 +1,22 @@
-# Sprint 2 Architecture
+# Chroma3D Sculpt Architecture
 
-Chroma3D Sculpt 0.3.0-alpha.1 is a synchronous, local Blender extension with independent diagnostic and controlled-repair paths. Dependency direction is `UI -> operators -> coordinator -> focused services -> typed models/utilities`. Diagnostic services do not import repair services or UI modules; repair services may reuse diagnostics.
+Chroma3D Sculpt 0.4.0-alpha.1 is a synchronous, local Blender extension with independent diagnostic, controlled-repair, and advisory-printability paths. Dependency direction is `UI -> operators -> coordinator -> focused services -> typed models/utilities`. Diagnostic services do not import repair or printability UI modules; repair and printability services reuse established diagnostics only through explicit data boundaries.
 
-## Sprint 2.8 specification boundary
+## Printability architecture
 
-Sprint 2.8 is documentation and validation only. The future Printability Engine
-is specified as a separate advisory path: geometry facts -> profile evaluation
--> risk items -> score/status/confidence -> bounded report evidence. It must not
-change diagnostics, repair algorithms, mesh geometry, transforms, dataset or
-benchmark behavior, or the extension version. Printer profiles carry source
-classification per threshold; manufacturer facts do not become universal
-process limits. Sprint 3 remains unstarted until the specification is approved.
+Sprint 3 implements a separate advisory path: immutable source/profile/settings
+snapshots -> world-space geometry facts -> focused checks -> risk items ->
+score/status/confidence -> bounded report evidence. `printability_coordinator.py`
+orchestrates the path; focused services own wall thickness, thin features,
+overhangs, floating components, plate contact, build-volume/scale evaluation,
+orientation candidates, scoring, session state, and report generation.
+
+Printer profiles are local schema-validated JSON. Manufacturer facts remain
+separate from project defaults, heuristics, experimental rules, and user
+configuration. Results are tied to geometry, transform, profile, build direction,
+settings, and Blender file state. Stale evidence cannot drive selection or export.
+All candidates are virtual: the engine does not mutate geometry, apply transforms,
+rotate, scale, slice, generate supports, or save files.
 
 ## Authoritative repair contract
 

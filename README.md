@@ -1,18 +1,20 @@
 # Chroma3D Sculpt
 
-Chroma3D Sculpt is a local Blender extension for production mesh diagnostics and controlled, reversible repair of complex statue meshes. Sprint 2 preserves the original source and performs every approved geometry change on an independent repair workspace copy.
+Chroma3D Sculpt is a local Blender extension for production mesh diagnostics, controlled reversible repair, and advisory printability risk analysis of complex statue meshes. Repair preserves the original source; Printability never changes geometry, transforms, orientation, or scale.
 
-**Current status:** Sprint 2.6 Golden Benchmark Baseline complete for all 27 validated statue meshes; Sprint 2.8 Printability Engineering Specification complete for review; installed-panel and operator-reviewed real-statue repair UAT remain deferred; Sprint 3 has not started
+**Current status:** Sprint 3 Printability Engine implemented on `feature/sprint-3-printability-engine` with bounded Blender-native fixtures and Dataset `1.0.0` regression evidence. Installed-panel interaction, Blender 4.5 LTS compatibility, and physical FDM/resin calibration remain deferred.
 
-Sprint 2.7 adds the dataset storage architecture on the review branch: Dataset `1.0.0` and Golden Benchmark `1.0.0` are packaged as verified release assets, while manifests, provenance, licenses, schemas, locks, and tooling remain in this product repository. The existing `v0.3.1-alpha.1` history is immutable; the extension version remains unchanged.
+Sprint 2.7 added the dataset storage architecture: Dataset `1.0.0` and Golden Benchmark `1.0.0` are packaged as verified release assets, while manifests, provenance, licenses, schemas, locks, and tooling remain in this product repository. The existing `v0.3.1-alpha.1` history is immutable; Sprint 3 advances the extension separately to `0.4.0-alpha.1`.
 
-Sprint 2.8 adds the reviewable [Printability Engineering Specification](PRINTABILITY_SPECIFICATION.md), its source ledger, measurement contracts, printer-profile schemas/examples, scoring/report contracts, validation fixtures, and Sprint 3 acceptance gates. It is advisory by design; no Printability Engine runtime has been implemented, and Sprint 3 has not started.
+Sprint 3 implements the approved [Printability Engineering Specification](PRINTABILITY_SPECIFICATION.md) as a separate advisory path. It adds local versioned printer profiles, geometry facts, wall/feature/overhang/floating/contact/scale checks, bounded virtual orientation candidates, conservative scoring, stale-state protection, issue selection, and JSON/Markdown reports. It does not slice, generate supports, rotate, scale, or guarantee manufacturing success.
 
-**Version:** 0.3.0-alpha.1
+**Version:** 0.4.0-alpha.1
 
 **JSON schema:** 2.0
 
 **Repair audit schema:** 1.0
+
+**Printability report / profile / settings schemas:** 1.0.0
 
 **Minimum Blender:** 4.4.0
 
@@ -68,6 +70,9 @@ Open **3D Viewport > Sidebar > Chroma3D > Chroma3D Sculpt**.
 5. Use an issue-selection button to inspect stored vertex, edge, or face evidence in Edit Mode.
 6. Choose **Export JSON Report** for a UTF-8 schema 2.0 report.
 7. Expand **Safe Repair** to create, plan, apply, recover, compare, finalize, and export a repair audit.
+8. Expand **Printability**, select a packaged or Custom profile and performance mode, then choose **Analyze Printability**.
+9. Review status, confidence, score reasons, skipped/failed checks, risk evidence, and virtual orientation candidates; use explicit issue-selection controls where evidence exists.
+10. Export the current non-stale result as schema 1.0.0 JSON or a human-readable Markdown report.
 
 Issue selection is the only intentional state-changing Sprint 1 action. It changes selection/mode for inspection but never changes geometry. If topology changed after analysis it refuses with `Analysis is stale. Run Analyze Mesh again.`
 
@@ -83,16 +88,18 @@ py manual-tests\run_acceptance_gates.py --blender "D:\Softwares\Design\Blender\b
 py manual-tests\sprint1\run_sprint1_acceptance.py --blender "D:\Softwares\Design\Blender\blender.exe"
 py manual-tests\sprint1-final\run_final_validation.py --blender "D:\Softwares\Design\Blender\blender.exe"
 py manual-tests\sprint2\run_sprint2_acceptance.py --blender "D:\Softwares\Design\Blender\blender.exe"
+py manual-tests\sprint2-final\run_final_validation.py --blender "D:\Softwares\Design\Blender\blender.exe"
+py manual-tests\sprint3\run_sprint3_acceptance.py --blender "D:\Softwares\Design\Blender\blender.exe"
 py manual-tests\benchmarks\verify_golden_baseline.py
 py manual-tests\benchmarks\run_golden_benchmark.py --self-check
 py scripts\package_extension.py
 py scripts\validate_package.py
-& "D:\Softwares\Design\Blender\blender.exe" --background --command extension validate "E:\VPRS\Sriram\Projects\Chroma3D Sculpt\dist\chroma3d_sculpt-0.3.0-alpha.1.zip"
+& "D:\Softwares\Design\Blender\blender.exe" --background --command extension validate "E:\VPRS\Sriram\Projects\Chroma3D Sculpt\dist\chroma3d_sculpt-0.4.0-alpha.1.zip"
 ```
 
-The installable archive is `dist\chroma3d_sculpt-0.3.0-alpha.1.zip`. Install it through Blender's **Edit > Preferences > Extensions > Install from Disk**, then enable the extension if prompted.
+The installable archive is `dist\chroma3d_sculpt-0.4.0-alpha.1.zip`. Install it through Blender's **Edit > Preferences > Extensions > Install from Disk**, then enable the extension if prompted.
 
-The background suite preserves all Sprint 0 and Sprint 1 tests and adds 56 focused Sprint 2 tests. Sprint 2 evidence is generated under `manual-tests\sprint2`; generated JSON/log folders and ZIP files remain ignored.
+The background suite preserves Sprint 0–2 regressions and adds 117 focused Sprint 3 tests. Sprint 3 evidence is generated under `manual-tests\sprint3`; generated JSON/log folders and ZIP files remain ignored. See the [Printability user guide](docs/printability/USER_GUIDE.md).
 
 ## Golden Benchmark Baseline
 
@@ -143,13 +150,15 @@ py scripts\fetch_validation_assets.py benchmark
 py scripts\fetch_validation_assets.py verify --json
 ```
 
-Use `--offline` after acquisition. See [DATASET_STORAGE_POLICY.md](DATASET_STORAGE_POLICY.md), [VERSIONING_DATASETS_AND_BENCHMARKS.md](VERSIONING_DATASETS_AND_BENCHMARKS.md), and [docs/DATASET_CI_GUIDE.md](docs/DATASET_CI_GUIDE.md). The separate dataset repository and its releases are staged locally but are not published by Sprint 2.7. Historical Git size remains a known limitation, and Sprint 3 remains unstarted.
+Use `--offline` after acquisition. See [DATASET_STORAGE_POLICY.md](DATASET_STORAGE_POLICY.md), [VERSIONING_DATASETS_AND_BENCHMARKS.md](VERSIONING_DATASETS_AND_BENCHMARKS.md), and [docs/DATASET_CI_GUIDE.md](docs/DATASET_CI_GUIDE.md). Sprint 3's resumable dataset runner uses one bounded factory-startup Blender process per STL and retains explicit failures or timeouts.
 
 ## Known limitations and safety
 
-- Modifier output, wall thickness, support clearances, purge zones, and optimal print orientation are not evaluated.
+- Modifier output, slicer support clearances, purge zones, resin hollowing/drain/suction behavior, and optimal print orientation are not evaluated.
+- Wall thickness is sampled and estimated; connected thin-feature detection is an experimental conservative diameter proxy.
+- Contact/stability and orientation ranking are heuristics. Candidates are virtual, bounded, and not guaranteed optimal.
 - Self-intersection results are candidates; containment is a bounded heuristic with confidence evidence.
-- Build-volume evaluation is rectangular, current-orientation only, and performs no rotation or scaling.
+- Build-volume and scale evaluation is rectangular and advisory; it performs no rotation or scaling.
 - The original source is preserved, but repaired workspace copies still require human review.
 - An unfinished repair session is session-only and is not guaranteed to survive Blender restart or extension reload.
 - There is no remeshing, large-hole reconstruction, Boolean repair, wall-thickness repair, decimation, object joining, modifier application, automatic scaling, or print support generation.

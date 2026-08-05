@@ -32,7 +32,7 @@ Interactive installed-panel and permissioned real Chroma3D statue analysis remai
 
 ## Sprint 2 — Safe Mesh Repair
 
-**Status:** Implemented, accepted by automated Blender 4.4.3 gates, merged to `main`, and tagged `v0.3.0-alpha.1`. Installed-panel interaction, Blender 4.5 LTS compatibility, and operator-reviewed real-statue repair UAT remain deferred. Sprint 3 has not started.
+**Status:** Implemented, accepted by automated Blender 4.4.3 gates, merged to `main`, and tagged `v0.3.0-alpha.1`. Installed-panel interaction, Blender 4.5 LTS compatibility, and operator-reviewed real-statue repair UAT remain deferred.
 
 **Objective:** Introduce controlled, reversible mesh-repair operations without weakening the read-only diagnostic path or original-asset safety.
 
@@ -101,7 +101,7 @@ diagnostic state.
 ## Sprint 2.6 — Golden Benchmark Baseline
 
 **Status:** Complete on Blender 4.4.3/Windows 11 for Chroma3D
-`0.3.0-alpha.1`. Sprint 3 has not started.
+`0.3.0-alpha.1`. The immutable baseline is reused for Sprint 3 regression.
 
 The authoritative baseline is indexed by
 `benchmarks/golden/manifests/golden_manifest.json`. Each validated mesh ran in
@@ -148,9 +148,8 @@ does not replace operator-reviewed visual UAT or guarantee printability.
 
 ## Sprint 2.8 — Printability Engineering Specification
 
-**Status:** Specification complete on the review branch; Sprint 3 remains
-unstarted. This milestone adds no runtime engine, Blender operator, diagnostic,
-repair, dataset, benchmark, package, version, or release-tag behavior.
+**Status:** Specification complete and retained as the Sprint 3 implementation
+contract. Sprint 2.8 itself added no runtime behavior.
 
 The authoritative contract is [PRINTABILITY_SPECIFICATION.md](PRINTABILITY_SPECIFICATION.md)
 with detailed measurement methods, profile classifications, JSON schemas,
@@ -158,9 +157,16 @@ validation fixtures, source ledger, performance modes, report/stale-state rules,
 and Sprint 3 gates under [docs/printability](docs/printability/README.md).
 Generic profile thresholds are project defaults or user-configurable; cited
 manufacturer values are limited to documented hardware/build-volume facts.
-Review and approval are required before Sprint 3 runtime implementation.
+Sprint 3 implements this contract without turning project defaults or heuristics
+into universal manufacturer claims.
 
 ## Sprint 3 — Printability Engine
+
+**Status:** Implemented on `feature/sprint-3-printability-engine` as
+`0.4.0-alpha.1`. Automated Blender 4.4.3 fixtures, all-prior-sprint regression,
+Dataset `1.0.0`, schema, package, and security evidence are retained under
+`manual-tests/sprint3`. Installed-panel interaction, Blender 4.5 LTS, and
+physical FDM/resin calibration remain deferred.
 
 **Objective:** Add process-aware risk analysis and controlled preparation after safe repair is proven.
 
@@ -170,10 +176,10 @@ Review and approval are required before Sprint 3 runtime implementation.
 - Overhang analysis relative to current or proposed orientation.
 - Build-plate contact and stability indicators.
 - Floating-part and disconnected-feature review.
-- Previewed, reversible scale tools.
+- Read-only scale/build-volume evaluation with uniform-scale advice.
 - Versioned printer profiles with explicit FDM/resin distinctions.
-- Evidence-scored orientation recommendations and user-approved application.
-- Export validation that preserves passes, warnings, skips, failures, and overrides.
+- Evidence-scored bounded virtual orientation recommendations without application.
+- JSON/Markdown export that preserves passes, warnings, skips, and failures and rejects stale evidence.
 - Continued current-orientation build-volume evaluation without claiming manufacturing success.
 
 ### Dependencies
@@ -185,10 +191,10 @@ Sprint 2's protected workspace, operation preview, approval, undo, audit, and co
 - Thickness and overhang results match calibrated fixtures within documented tolerance.
 - Contact and floating-feature policies pass positive, negative, boundary, and ambiguous cases.
 - Printer-profile versions, upgrades, and FDM/resin distinctions are explicit.
-- Scale/orientation application preserves the original and passes undo/comparison evidence.
-- Export refuses missing required evaluations unless the user makes an auditable override.
-- Real FDM and resin cases compare analysis with slicer review and physical outcomes where practical.
-- Performance, memory, cancellation, security, package, regression, and manual UI gates pass.
+- Scale/orientation evaluation preserves geometry and transforms; no apply operation is exposed.
+- Reports preserve missing, skipped, indeterminate, and failed evaluations and reject stale state.
+- Real FDM and resin comparison remains a documented calibration limitation.
+- Performance bounds, explicit limit states, security, package, regression, and background UI registration gates pass; manual installed-panel review remains separate.
 - All product language continues to state that risk analysis is not a printability guarantee.
 
 ## Sprint 4 — Controlled Optimization
@@ -451,16 +457,16 @@ Each decision must be reevaluated against differentiation, total cost, privacy, 
 
 ## Immediate Next Milestone
 
-Sprint 2.6 benchmark engineering is complete. Sprint 3 remains unstarted. Before beginning Sprint 3:
+Sprint 3 implementation and automated evidence are complete on the feature branch. Before promotion:
 
 - Review the Sprint 2 and Golden Benchmark machine/Markdown evidence.
 - Perform an installed-package interactive Blender panel smoke test.
 - Repair at least one permissioned real Chroma3D statue under operator review and retain evidence.
 - Validate Blender 4.5 LTS when that runtime is available.
-- Decide whether mid-operation cancellation or restart-persistent sessions are required before external alpha.
+- Review Sprint 3's sampled/heuristic method limitations against slicer and physical-print outcomes.
 
-Sprint 3 remains unstarted until the Sprint 2 review checkpoint is approved.
+Do not begin Sprint 4 or promote `0.4.0-alpha.1` until the Sprint 3 evidence and deferred manual gates are reviewed.
 
 ## Sprint 2.7 — Dataset Storage Architecture
 
-**Status:** Implemented on the review branch. Product code and published history remain unchanged. Dataset `1.0.0` and Golden Benchmark `1.0.0` are independently locked and packaged as deterministic, SHA-256-verified GitHub Release assets for the staged external repository. Current HEAD retains metadata, provenance, licenses, manifests, schemas, summaries, and tooling while externalizing raw meshes, generated thumbnails, and regenerable benchmark payloads. The separate repository is staged but not initialized or published. Historical Git size remains unchanged; Sprint 3 has not started.
+**Status:** Implemented on the review branch. Product code and published history remain unchanged. Dataset `1.0.0` and Golden Benchmark `1.0.0` are independently locked and packaged as deterministic, SHA-256-verified GitHub Release assets for the staged external repository. Current HEAD retains metadata, provenance, licenses, manifests, schemas, summaries, and tooling while externalizing raw meshes, generated thumbnails, and regenerable benchmark payloads. The separate repository is staged but not initialized or published. Historical Git size remains unchanged.
