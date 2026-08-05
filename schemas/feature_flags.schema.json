@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SriramNavi/Chroma3D-Sculpt/schemas/feature-flags-1.0.json",
+  "title": "Chroma3D feature flags",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "wall_thickness", "thin_features", "overhangs", "floating_components", "build_contact", "scale_evaluation", "orientation_recommendations", "bridge_risk", "support_risk", "resin_advisory", "batch_analysis", "baseline_generation", "dashboard_generation", "experimental_material_modifiers", "experimental_flags", "flag_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "wall_thickness": {"type": "boolean", "default": true},
+    "thin_features": {"type": "boolean", "default": true},
+    "overhangs": {"type": "boolean", "default": true},
+    "floating_components": {"type": "boolean", "default": true},
+    "build_contact": {"type": "boolean", "default": true},
+    "scale_evaluation": {"type": "boolean", "default": true},
+    "orientation_recommendations": {"type": "boolean", "default": true},
+    "bridge_risk": {"type": "boolean", "default": true},
+    "support_risk": {"type": "boolean", "default": true},
+    "resin_advisory": {"type": "boolean", "default": false},
+    "batch_analysis": {"type": "boolean", "default": true},
+    "baseline_generation": {"type": "boolean", "default": true},
+    "dashboard_generation": {"type": "boolean", "default": true},
+    "experimental_material_modifiers": {"type": "boolean", "default": false},
+    "experimental_flags": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "flag_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SriramNavi/Chroma3D-Sculpt/schemas/batch-preparation-1.0.json",
+  "title": "Chroma3D batch preparation",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "batch_id", "state", "started_at", "completed_at", "object_count", "completed_count", "failed_count", "skipped_count", "total_time_seconds", "process_context_hash", "feature_flag_hash", "process_context_snapshot", "feature_flags", "source_signatures", "object_results", "critical_risks", "limitations"],
+  "properties": {
+    "schema_version": {"const": "1.0"}, "batch_id": {"type": "string"},
+    "state": {"enum": ["COMPLETED", "COMPLETED_WITH_WARNINGS", "PARTIAL", "CANCELLED", "FAILED"]},
+    "started_at": {"type": "string", "format": "date-time"}, "completed_at": {"type": "string", "format": "date-time"},
+    "object_count": {"type": "integer", "minimum": 0}, "completed_count": {"type": "integer", "minimum": 0},
+    "failed_count": {"type": "integer", "minimum": 0}, "skipped_count": {"type": "integer", "minimum": 0},
+    "total_time_seconds": {"type": "number", "minimum": 0}, "process_context_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "feature_flag_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "process_context_snapshot": {"type": "object"}, "feature_flags": {"type": "object"}, "source_signatures": {"type": "object"},
+    "object_results": {"type": "array", "items": {"type": "object"}}, "critical_risks": {"type": "array", "items": {"type": "object"}},
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SriramNavi/Chroma3D-Sculpt/schemas/composed-process-context-1.0.json",
+  "title": "Chroma3D composed process context",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "hardware_profile", "material_profile", "nozzle_mm", "layer_height_mm", "support_policy", "build_plate_type", "user_overrides", "effective_thresholds", "threshold_provenance", "compatibility_warnings", "limitations", "context_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0"}, "hardware_profile": {"type": "object"}, "material_profile": {"type": "object"},
+    "nozzle_mm": {"type": "number", "exclusiveMinimum": 0}, "layer_height_mm": {"type": "number", "exclusiveMinimum": 0},
+    "support_policy": {"enum": ["REVIEW_REQUIRED", "ASSUME_UNSUPPORTED", "ASSUME_SUPPORTED"]}, "build_plate_type": {"type": "string", "minLength": 1},
+    "user_overrides": {"type": "object"}, "effective_thresholds": {"type": "object"}, "threshold_provenance": {"type": "object"},
+    "compatibility_warnings": {"type": "array", "items": {"type": "string"}}, "limitations": {"type": "array", "items": {"type": "string"}},
+    "context_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

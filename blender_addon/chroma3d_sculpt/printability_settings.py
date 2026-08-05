@@ -10,12 +10,11 @@ from typing import Any
 
 from .metadata import PRINTABILITY_SETTINGS_SCHEMA_VERSION, SCORING_POLICY_VERSION
 from .models.printability_models import PrintabilityMode, PrintabilitySettingsSnapshot, PrinterProfile
+from .performance_registry import legacy_mode_limits
 
 
 MODE_LIMITS: dict[PrintabilityMode, tuple[int, int, int, int]] = {
-    PrintabilityMode.FAST: (256, 100_000, 4, 256),
-    PrintabilityMode.STANDARD: (2_048, 500_000, 8, 2_048),
-    PrintabilityMode.DEEP: (16_384, 1_000_000, 12, 10_000),
+    mode: legacy_mode_limits(mode) for mode in PrintabilityMode
 }
 
 DEFAULT_ORIENTATION_WEIGHTS = {

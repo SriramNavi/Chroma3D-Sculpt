@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0", "profile_id": "generic_abs", "display_name": "Generic ABS", "material_family": "ABS", "manufacturer": null,
+  "compatible_process_types": ["FDM", "CUSTOM"], "source_classification": "CONSERVATIVE_HEURISTIC", "source_references": [], "confidence": "LOW",
+  "nozzle_range_mm": [0.2, 1.0], "layer_height_range_mm": [0.05, 0.4], "wall_thickness_multiplier": 1.1, "thin_feature_multiplier": 1.05,
+  "bridge_risk_modifier": 1.15, "overhang_risk_modifier": 1.1, "support_removal_risk": "MEDIUM", "warping_risk": "HIGH",
+  "brittleness_risk": "MEDIUM", "adhesion_risk": "HIGH", "dimensional_change_guidance": "Review enclosure, shrinkage, warping, and measured compensation for the actual formulation.",
+  "temperature_information": null, "user_editable_fields": ["nozzle_range_mm", "layer_height_range_mm", "wall_thickness_multiplier", "thin_feature_multiplier", "bridge_risk_modifier", "overhang_risk_modifier"],
+  "notes": ["Conservative generic heuristic; not manufacturer-specific."], "limitations": ["No thermal, enclosure, warping, or layer-adhesion simulation is performed."],
+  "created_at": "2026-08-05T00:00:00Z", "updated_at": "2026-08-05T00:00:00Z"
+}

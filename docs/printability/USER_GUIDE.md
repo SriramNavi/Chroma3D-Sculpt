@@ -54,6 +54,15 @@ Windows-safe names.
 
 ## Current limitations
 
+Sprint 4 adds a separate **Advanced Preparation** panel above this workflow. It
+composes hardware and material profiles, compares bridge/support/resin/scale/
+orientation evidence, supports bounded selected-object batches, and produces a
+versioned software regression baseline/dashboard. See
+[Advanced Preparation User Guide](../advanced-preparation/USER_GUIDE.md).
+
+The Sprint 3 Printability report schema remains `1.0.0`; Sprint 4 does not
+rewrite it or change the read-only Printability workflow.
+
 - No slicing, G-code, support generation, resin hollowing/drain/suction checks,
   print-time estimate, automatic rotation, automatic scaling, or mesh repair.
 - Modifier output is not evaluated.

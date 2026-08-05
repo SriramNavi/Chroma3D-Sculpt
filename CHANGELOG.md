@@ -1,13 +1,63 @@
 # Changelog
 
+## 0.5.0-alpha.1 - 2026-08-05 (feature branch)
+
+### Added
+
+- Separate hardware and generic material profiles with schema 1.0 validation, provenance, compatibility checks, deterministic composition, and stale-result hashes.
+- Explicit feature flags and a central FAST/STANDARD/DEEP performance registry by mesh-size class and check type.
+- Advisory bridge-risk, support-risk, bounded resin geometry checks, material-aware scale intervals, improved orientation comparison with non-dominated candidates, and safe selected-object batch analysis.
+- Advanced Preparation JSON/Markdown reports, Printability Baseline 1.0.0, regression comparator modes, and a dependency-free offline HTML dashboard.
+- A 132-case Sprint 4 Blender matrix, resumable 27-model workers, acceptance tooling, package integration, and Advanced Preparation panel.
+
+### Safety
+
+- No Sprint 4 operation changes geometry, transforms, modifiers, materials, collections, visibility, properties, or file save state.
+- No support generation, slicing, G-code, network runtime, upload, automatic orientation/scale, or printer command exists.
+- Material, bridge, support, resin, scale, and orientation output remains advisory and is not physically calibrated.
+
+### Validation
+
+- Passed 363/363 combined Blender tests, including the 132-case Sprint 4 matrix.
+- Passed all 16 Sprint 4 acceptance gates and the fingerprint-bound Dataset 1.0.0 run for 27/27 immutable models.
+- Generated and self-compared 27 Printability Baseline 1.0.0 records plus the self-contained offline dashboard.
+- Passed package, repository, Blender-native, registration, security, and whitespace gates.
+- Sprint 0, Sprint 1, Sprint 1-final, Sprint 2, Sprint 3, and Sprint 3-final runners passed. Sprint 2-final retained one environment-sensitive performance warning: its realistic repair batch took 115.83s, and an isolated recheck took 106.69s, above the unchanged 60s gate; all other Sprint 2-final gates passed.
+
+### Known limitations
+
+- Generic material profiles are uncalibrated project defaults; bridge/support/resin output is bounded advisory evidence.
+- The dense Hizen Komainu Sprint 4 worker required 659.3s, so the resumable per-mesh evidence envelope is 900s and remains active performance debt.
+- Installed Advanced Preparation panel UAT, Blender 4.5 LTS, slicer comparison, material calibration, and physical printing remain deferred.
+
 ## 0.4.0-alpha.1 - 2026-08-04
 
-- Added immutable world-space printability geometry facts and local schema-validated Generic FDM, Generic Resin, Bambu Lab X1 Carbon, Bambu Lab P1S, Prusa MK4, and Custom profiles.
-- Added bounded sampled wall-thickness estimates, conservative experimental thin-feature evidence, documented overhang analysis, floating-shell review, plate-contact/stability heuristics, and rectangular build-volume/scale advice.
-- Added deterministic virtual orientation candidates, conservative weighted scoring with critical caps, explicit confidence/evidence states, and bounded risk items.
-- Added stale-safe Printability panel analysis, evidence selection, and UTF-8 schema 1.0.0 JSON/Markdown reports without geometry, transform, orientation, or scale mutation.
-- Added 117 focused Blender tests, all-prior-sprint regression coverage, resumable per-mesh Dataset 1.0.0 acceptance, package assets/validation, and security checks.
-- Retained the advisory boundary: no slicing, supports, G-code, automatic transforms, manufacturing guarantee, runtime network, or external dependency.
+### Added
+
+- Added the profile-driven Printability Engine with schema-validated Generic FDM, Generic Resin, Bambu Lab X1 Carbon, Bambu Lab P1S, Prusa MK4, and validated Custom printer/process profiles.
+- Added immutable world-space geometry facts, bounded sampled wall-thickness estimates, a conservative thin-feature risk proxy, overhang analysis, floating-component analysis, build-plate contact classification, and build-volume/scale evaluation.
+- Added deterministic virtual orientation recommendations and conservative weighted risk scoring with critical caps and explicit confidence/evidence states.
+- Added stale-result protection, bounded evidence selection, UTF-8 schema 1.0.0 JSON/Markdown reports, and the native Blender Printability panel.
+- Added the Sprint 3.5 physical validation framework with print job cards, calibration coupons, observation schemas, calibration comparison tooling, and a governed printability baseline policy.
+
+### Safety
+
+- Printability analysis is read-only and does not mutate geometry or transforms.
+- No automatic scaling or orientation application, support generation, slicing, G-code generation, runtime network access, or print-success guarantee is provided.
+
+### Validation
+
+- Passed 231/231 combined Blender tests, including 121/121 focused Sprint 3 tests and the historical Sprint 0/1/2 regressions.
+- Passed 15/15 Sprint 3 acceptance gates and 13/13 independent Sprint 3 final-validation gates.
+- Passed Dataset 1.0.0 validation for 27/27 models while preserving source hashes, geometry signatures, and source immutability.
+- Passed the isolated installed-package smoke, package validators, and package security checks.
+
+### Known limitations
+
+- Wall thickness is sampled and estimated; the thin-feature check is a conservative connected-shell proxy that does not recognize local merged features.
+- Contact stability remains heuristic, and bounded orientation recommendations are not globally optimal.
+- Physical validation and resin calibration are pending; real slicer comparison has not been run.
+- Blender 4.5 LTS validation and manual installed-panel interaction remain pending.
 
 ## 0.3.0-alpha.1 - 2026-07-18
 

@@ -1,0 +1,77 @@
+{
+  "bridge_risks": {
+    "candidate_count": 0,
+    "spans_mm": [],
+    "state": "SKIPPED_LIMIT"
+  },
+  "confidence": "LOW",
+  "feature_flags": {
+    "baseline_generation": true,
+    "batch_analysis": true,
+    "bridge_risk": true,
+    "build_contact": true,
+    "dashboard_generation": true,
+    "experimental_flags": [
+      "resin_advisory",
+      "experimental_material_modifiers"
+    ],
+    "experimental_material_modifiers": false,
+    "flag_hash": "c7286e5a27f243f6e85fdda44022d51079045bdec0395ad3fcf24df400576bab",
+    "floating_components": true,
+    "orientation_recommendations": true,
+    "overhangs": true,
+    "resin_advisory": false,
+    "scale_evaluation": true,
+    "schema_version": "1.0",
+    "support_risk": true,
+    "thin_features": true,
+    "wall_thickness": true
+  },
+  "limitations": [
+    "Software-only advisory preparation; no print-success, support-free, bridge, adhesion, strength, time, usage, or physical calibration guarantee is made.",
+    "No geometry, transform, modifier, material, collection, visibility, object property, file-save state, support, slice, G-code, upload, or printer state is changed.",
+    "Orientation and scale comparisons are bounded mathematical previews and are never applied automatically."
+  ],
+  "model_id": "statue-cosmic-buddha-smithsonian-150k",
+  "orientation_candidates": [],
+  "per_check_states": {
+    "advanced_scale": "WARNING",
+    "bridge_risk": "SKIPPED_LIMIT",
+    "build_plate_contact": "WARNING",
+    "build_volume_and_scale": "WARNING",
+    "floating_components": "PASS",
+    "orientation": "SKIPPED_LIMIT",
+    "orientation_comparison": "SKIPPED_LIMIT",
+    "overhangs": "SKIPPED_LIMIT",
+    "resin_advisory": "NOT_EVALUATED",
+    "support_risk": "SKIPPED_LIMIT",
+    "thin_features": "SKIPPED_LIMIT",
+    "topology_readiness": "PASS",
+    "wall_thickness": "SKIPPED_LIMIT"
+  },
+  "process_context_hash": "be49dc53d0d974ef316caabcc6ef5984a46ecf89a669cf0a4ce1edeba697b8a1",
+  "resin_advisory_states": {},
+  "scale_interval": {
+    "maximum_percent": 0.0167689002918878,
+    "minimum_percent": 0.0,
+    "state": "FEASIBLE"
+  },
+  "score": 65,
+  "source_sha256": "de75f3aa58ed3da3e27884cd96671ef172c98ce26f1b78510c4f3dda88e91e72",
+  "status": "INDETERMINATE",
+  "support_risk_areas": {
+    "area_mm2": 0.0,
+    "area_percent": 0.0,
+    "region_count": 0,
+    "state": "SKIPPED_LIMIT"
+  },
+  "timings": {
+    "base_printability": 11.563746300002094,
+    "bridge_risk": 2.2400003217626363e-05,
+    "geometry_context": 8.29901229999814,
+    "orientation_comparison": 4.1000021155923605e-06,
+    "resin_advisory": 0.0,
+    "support_risk": 5.800000508315861e-06,
+    "total": 21.80219510000461
+  }
+}

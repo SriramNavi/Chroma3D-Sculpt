@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SriramNavi/Chroma3D-Sculpt/schemas/performance-registry-1.0.json",
+  "title": "Chroma3D performance registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "registry_version", "limits"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "registry_version": {"const": "1.0.0"},
+    "limits": {"type": "array", "items": {"$ref": "#/$defs/limit"}}
+  },
+  "$defs": {
+    "limit": {
+      "type": "object", "additionalProperties": false,
+      "required": ["mode", "size_class", "check_type", "maximum_triangles", "maximum_samples", "maximum_candidate_count", "maximum_region_evidence", "maximum_batch_size", "recommended_warning_time_seconds", "hard_skip_limit", "expected_memory_class"],
+      "properties": {
+        "mode": {"enum": ["FAST", "STANDARD", "DEEP"]},
+        "size_class": {"enum": ["Tiny", "Small", "Medium", "Large", "Huge", "Extreme"]},
+        "check_type": {"type": "string", "minLength": 1},
+        "maximum_triangles": {"type": "integer", "minimum": 1}, "maximum_samples": {"type": "integer", "minimum": 1},
+        "maximum_candidate_count": {"type": "integer", "minimum": 1}, "maximum_region_evidence": {"type": "integer", "minimum": 1},
+        "maximum_batch_size": {"type": "integer", "minimum": 1}, "recommended_warning_time_seconds": {"type": "number", "exclusiveMinimum": 0},
+        "hard_skip_limit": {"type": "integer", "minimum": 1}, "expected_memory_class": {"enum": ["LOW", "MEDIUM", "HIGH"]}
+      }
+    }
+  }
+}

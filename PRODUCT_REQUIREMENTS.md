@@ -3,10 +3,10 @@
 | Metadata | Value |
 |---|---|
 | Document status | Living product specification; planning baseline for review |
-| Current product version | `0.4.0-alpha.1` implementation candidate |
+| Current product version | `0.5.0-alpha.1` Sprint 4 feature-branch candidate; merged release remains `v0.4.0-alpha.1` |
 | Repository release at Sprint 2.8 | `v0.3.1-alpha.1` |
-| Current completed sprint | Sprint 3 — advisory Printability Engine implemented with automated evidence |
-| Next planned sprint | Sprint 3 review, installed-panel smoke, and real-print calibration before Sprint 4 |
+| Current completed sprint | Sprint 4 — software-only Advanced Print Preparation implemented with automated evidence |
+| Next planned sprint | Sprint 4 evidence review and installed-panel smoke; physical validation remains a separate deferred activity |
 | Primary platform | Windows 11, local Blender extension |
 | Primary validated Blender version | Blender 4.4.3; minimum supported version 4.4.0 |
 | Owner | Chroma3D Product and Engineering |
@@ -15,9 +15,9 @@
 
 ## Product Summary
 
-Chroma3D Sculpt is a Blender-native engineering and creation workflow for high-detail statue meshes. The current internal alpha provides local read-only diagnostics, controlled repair on an independent workspace copy, and separate advisory printability risk analysis. Sprint 2 can apply explicitly selected bounded repairs without replacing the source. Sprint 3 reports bounded profile-dependent evidence without changing geometry or transforms; neither path guarantees printability.
+Chroma3D Sculpt is a Blender-native engineering and creation workflow for high-detail statue meshes. The current internal alpha provides local read-only diagnostics, controlled repair on an independent workspace copy, advisory printability risk analysis, and a software-only advanced preparation layer. Sprint 2 can apply explicitly selected bounded repairs without replacing the source. Sprint 3 and Sprint 4 report bounded profile/process evidence without changing geometry or transforms; neither path guarantees printability.
 
-Sprint 0 and Sprint 1 are accepted and tagged. Sprint 2 automated evidence is complete. Sprint 3 is implemented on `feature/sprint-3-printability-engine`; interactive installed-panel, Blender 4.5 LTS, and real FDM/resin calibration remain deferred.
+Sprint 0 through Sprint 3 are merged in `v0.4.0-alpha.1`. Sprint 4 is implemented on `feature/sprint-4-advanced-print-preparation` as `0.5.0-alpha.1`; interactive installed-panel UAT, Blender 4.5 LTS, slicer comparison, and real FDM/resin calibration remain deferred.
 
 Sprint 2.8 is the retained documentation, research, schema, and validation
 contract. The [Printability Engineering Specification](PRINTABILITY_SPECIFICATION.md)
@@ -144,18 +144,24 @@ Status values are **Implemented**, **Partial**, **Planned**, and **Deferred**. F
 | FR-PRINT-007 | Provide controlled scale tools with preview and original protection. | Fits target output without hidden transform changes. | Partial | Sprint 3 | Evaluation and uniform-scale advice implemented read-only; no apply operation in Sprint 3 |
 | FR-PRINT-008 | Produce orientation recommendations with scored evidence; apply only after user approval. | Improves preparation while preserving artist control. | Partial | Sprint 3 | Bounded deterministic virtual candidates implemented; no apply operation in Sprint 3 |
 | FR-PRINT-009 | Gate export on required completed checks and preserve warnings, skips, failures, and overrides in evidence. | Prevents silent omission of risk. | Partial | Sprint 3 | JSON/Markdown preserve all states and reject stale evidence; audited override workflow deferred |
+| FR-PREP-001 | Compose hardware facts, generic material behavior, nozzle, layer, plate, support policy, and user overrides with provenance. | Makes preparation context explicit and repeatable. | Implemented | Sprint 4 | Schema validation, compatibility checks, effective thresholds, deterministic hashes |
+| FR-PREP-002 | Identify advisory bridge and support-risk regions without generating supports. | Guides orientation/support review while preserving user control. | Implemented | Sprint 4 | Bounded evidence, neutral wording, material/profile effects, no generation path |
+| FR-PREP-003 | Provide bounded resin geometry advisories without hollowing, drainage, suction, or force claims. | Exposes review candidates honestly. | Implemented with limitations | Sprint 4 | Experimental states and `NOT_EVALUATED` on insufficient evidence |
+| FR-PREP-004 | Compute feasible scale intervals and compare material-aware virtual orientations without applying transforms. | Supports strategy comparison without source mutation. | Implemented | Sprint 4 | No-feasible state, sampled score projections, deterministic ranks, non-dominated set |
+| FR-PREP-005 | Analyze selected mesh batches with isolation, partial failure, resume, progress, and cooperative cancellation. | Supports professional multi-model preparation. | Implemented | Sprint 4 | Central batch limits and aggregate JSON/Markdown evidence |
+| FR-PREP-006 | Maintain Printability Baseline 1.0.0, comparator policy, and offline regression dashboard. | Detects software regressions without physical-calibration claims. | Implemented | Sprint 4 | 27 per-model records, identity hashes, local HTML, no CDN/telemetry |
 | FR-PRINT-010 | State that analysis reduces risk but does not guarantee printability or manufacturing success. | Maintains user trust and accurate expectations. | Implemented | All milestones | README and report wording; release-content review |
 
 ### Optimization
 
 | ID | Requirement | User value | Status | Target milestone | Acceptance evidence |
 |---|---|---|---|---|---|
-| FR-OPT-001 | Preview controlled decimation against a polygon target. | Reduces computational and file cost predictably. | Planned | Sprint 4 | Target-count fixtures and rollback tests |
-| FR-OPT-002 | Preserve user-selected detail regions and critical features during reduction. | Protects faces, fingers, jewelry, inscriptions, and edges. | Planned | Sprint 4 | Region masks and feature-fixture comparisons |
-| FR-OPT-003 | Support detail-preserving reduction with measurable visual or geometric deviation. | Makes quality tradeoffs inspectable. | Planned | Sprint 4 | Deviation metrics and approved reference renders |
-| FR-OPT-004 | Simplify approved hidden regions separately from visible surfaces. | Saves polygons where visual risk is low. | Planned | Sprint 4 | Visibility-policy fixtures and manual review |
-| FR-OPT-005 | Provide bounded remeshing with preview, feature controls, and rollback. | Resolves unsuitable topology without uncontrolled loss. | Planned | Sprint 4 | Topology/quality comparison, stress, and undo tests |
-| FR-OPT-006 | Compare topology, physical metrics, issue counts, and deviation before acceptance. | Prevents optimization from becoming an unmeasured destructive step. | Planned | Sprint 4 | Versioned comparison report and regression gates |
+| FR-OPT-001 | Preview controlled decimation against a polygon target. | Reduces computational and file cost predictably. | Future / not started | Sprint 5 or later | Requires separate approved scope |
+| FR-OPT-002 | Preserve user-selected detail regions and critical features during reduction. | Protects faces, fingers, jewelry, inscriptions, and edges. | Future / not started | Sprint 5 or later | Requires separate approved scope |
+| FR-OPT-003 | Support detail-preserving reduction with measurable visual or geometric deviation. | Makes quality tradeoffs inspectable. | Future / not started | Sprint 5 or later | Requires separate approved scope |
+| FR-OPT-004 | Simplify approved hidden regions separately from visible surfaces. | Saves polygons where visual risk is low. | Future / not started | Sprint 5 or later | Requires separate approved scope |
+| FR-OPT-005 | Provide bounded remeshing with preview, feature controls, and rollback. | Resolves unsuitable topology without uncontrolled loss. | Future / not started | Sprint 5 or later | Requires separate approved scope |
+| FR-OPT-006 | Compare topology, physical metrics, issue counts, and deviation before acceptance. | Prevents optimization from becoming an unmeasured destructive step. | Future / not started | Sprint 5 or later | Requires separate approved scope |
 
 ### Asset and Creation Workflows
 
@@ -276,7 +282,8 @@ Performance expectations below are planning targets unless backed by named evide
 | Schema 2.0 reports and performance timings | Implemented | 0.2.0-alpha.1 | S1-10/S1-12 | Current schema compatibility policy needs formalization |
 | Safe mesh repair | Implemented | 0.3.0-alpha.1 | 56 focused tests and S2-02 through S2-14 | Workspace copies require human review; session restart persistence and real-statue UAT deferred |
 | Printability engine | Implemented with limitations | 0.4.0-alpha.1 | 117 focused tests, all-prior-sprint regression, Dataset 1.0.0 acceptance, schemas, package/security gates | Advisory sampled/heuristic evidence; installed UI, Blender 4.5, and physical-print calibration pending |
-| Controlled optimization | Planned | Sprint 4 target | No implementation evidence | No decimation or remeshing |
+| Advanced Print Preparation | Implemented with limitations | 0.5.0-alpha.1 | 132 focused tests, 27-model baseline pipeline, batch/baseline/dashboard/package gates | Generic material defaults, bounded advisory geometry, no physical calibration |
+| Controlled optimization | Future / not started | Sprint 5 or later | No implementation evidence | No decimation or remeshing |
 | Asset workflows, AI assistance, and commercial platform | Planned/Deferred | Sprints 6–10/post-v1 | No implementation evidence | No asset library, AI, cloud, licensing, billing, or marketplace |
 
 ## MVP Definition

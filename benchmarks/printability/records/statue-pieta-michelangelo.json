@@ -1,0 +1,77 @@
+{
+  "bridge_risks": {
+    "candidate_count": 0,
+    "spans_mm": [],
+    "state": "SKIPPED_LIMIT"
+  },
+  "confidence": "LOW",
+  "feature_flags": {
+    "baseline_generation": true,
+    "batch_analysis": true,
+    "bridge_risk": true,
+    "build_contact": true,
+    "dashboard_generation": true,
+    "experimental_flags": [
+      "resin_advisory",
+      "experimental_material_modifiers"
+    ],
+    "experimental_material_modifiers": false,
+    "flag_hash": "c7286e5a27f243f6e85fdda44022d51079045bdec0395ad3fcf24df400576bab",
+    "floating_components": true,
+    "orientation_recommendations": true,
+    "overhangs": true,
+    "resin_advisory": false,
+    "scale_evaluation": true,
+    "schema_version": "1.0",
+    "support_risk": true,
+    "thin_features": true,
+    "wall_thickness": true
+  },
+  "limitations": [
+    "Software-only advisory preparation; no print-success, support-free, bridge, adhesion, strength, time, usage, or physical calibration guarantee is made.",
+    "No geometry, transform, modifier, material, collection, visibility, object property, file-save state, support, slice, G-code, upload, or printer state is changed.",
+    "Orientation and scale comparisons are bounded mathematical previews and are never applied automatically."
+  ],
+  "model_id": "statue-pieta-michelangelo",
+  "orientation_candidates": [],
+  "per_check_states": {
+    "advanced_scale": "WARNING",
+    "bridge_risk": "SKIPPED_LIMIT",
+    "build_plate_contact": "WARNING",
+    "build_volume_and_scale": "WARNING",
+    "floating_components": "WARNING",
+    "orientation": "SKIPPED_LIMIT",
+    "orientation_comparison": "SKIPPED_LIMIT",
+    "overhangs": "SKIPPED_LIMIT",
+    "resin_advisory": "NOT_EVALUATED",
+    "support_risk": "SKIPPED_LIMIT",
+    "thin_features": "SKIPPED_LIMIT",
+    "topology_readiness": "WARNING",
+    "wall_thickness": "SKIPPED_LIMIT"
+  },
+  "process_context_hash": "be49dc53d0d974ef316caabcc6ef5984a46ecf89a669cf0a4ce1edeba697b8a1",
+  "resin_advisory_states": {},
+  "scale_interval": {
+    "maximum_percent": 0.1953845919008904,
+    "minimum_percent": 0.0,
+    "state": "FEASIBLE"
+  },
+  "score": 50,
+  "source_sha256": "f77f638262a0e0fc7f3dc763bfeee228faad21057659de75c6c6697f420f60b4",
+  "status": "INDETERMINATE",
+  "support_risk_areas": {
+    "area_mm2": 0.0,
+    "area_percent": 0.0,
+    "region_count": 0,
+    "state": "SKIPPED_LIMIT"
+  },
+  "timings": {
+    "base_printability": 138.10875889999443,
+    "bridge_risk": 3.300000389572233e-05,
+    "geometry_context": 95.63000699999975,
+    "orientation_comparison": 8.90000956133008e-06,
+    "resin_advisory": 0.0,
+    "support_risk": 9.499999578110874e-06,
+    "total": 257.22548170000664
+  }
+}

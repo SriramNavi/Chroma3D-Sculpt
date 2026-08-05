@@ -197,7 +197,52 @@ Sprint 2's protected workspace, operation preview, approval, undo, audit, and co
 - Performance bounds, explicit limit states, security, package, regression, and background UI registration gates pass; manual installed-panel review remains separate.
 - All product language continues to state that risk analysis is not a printability guarantee.
 
-## Sprint 4 — Controlled Optimization
+## Sprint 4 — Advanced Print Preparation
+
+**Status:** Implemented on `feature/sprint-4-advanced-print-preparation` as the
+uncommitted `0.5.0-alpha.1` candidate. Automated Blender 4.4.3 fixtures,
+all-prior-sprint regression, Dataset `1.0.0`, Printability Baseline `1.0.0`,
+schema, package, security, and offline-dashboard evidence are retained under
+`manual-tests/sprint4` and `benchmarks/printability`. Installed-panel UAT,
+Blender 4.5 LTS, slicer comparison, and physical material calibration remain
+deferred.
+
+**Objective:** Add deterministic, software-only preparation advice above the
+Sprint 3 engine without changing source geometry or object transforms.
+
+### Scope
+
+- Compose separate immutable hardware and schema-validated generic material
+  profiles with nozzle, layer, plate, support policy, and bounded overrides.
+- Explicit feature flags and one centralized performance-limit registry.
+- Advisory bridge, support-risk, and bounded experimental resin checks.
+- Read-only feasible-scale intervals and material-aware bounded virtual
+  orientation comparison with deterministic ranking and a non-dominated set.
+- Bounded, resumable selected-object batch analysis with per-object isolation,
+  partial failure, progress, and cooperative cancellation.
+- Printability Baseline `1.0.0`, policy-aware comparison, and a self-contained
+  offline HTML regression dashboard.
+- Deterministic stale-state checks covering source, process, feature,
+  performance-registry, and build-direction identity.
+
+### Acceptance gates
+
+- Disabled checks remain `NOT_EVALUATED`; skipped, indeterminate, limited, and
+  failed checks never serialize as passing zero findings.
+- Bridge and support-risk fixtures demonstrate bounded advisory evidence; no
+  support geometry is generated.
+- Resin checks remain experimental geometry advisories and make no suction,
+  drainage, hollowing, force, or print-success claim.
+- Scale and orientation recommendations never apply transforms.
+- The immutable 27-mesh Dataset regression, baseline, comparator, dashboard,
+  package, security, native-registration, and all-prior-sprint gates pass.
+- Reports preserve separate hardware/material snapshots, threshold provenance,
+  deterministic hashes, limitations, and source-immutability evidence.
+- Physical calibration and installed-panel review remain explicitly deferred.
+
+## Sprint 5 — Controlled Optimization
+
+**Status:** Future / not started.
 
 **Objective:** Reduce or restructure mesh complexity while measuring and limiting visible and engineering impact.
 
@@ -224,7 +269,7 @@ Stable Sprint 2 repair workspace and audit model; Sprint 3 printability rechecks
 - Representative dense models demonstrate a measurable workflow or performance benefit without unacceptable approved-detail loss.
 - Undo, recovery, comparison, package, security, regression, and manual viewport checks pass.
 
-## Sprint 5 — Chroma3D Production UAT
+## Post-Sprint 5 — Chroma3D Production UAT
 
 **Objective:** Establish product value and engineering baselines on real, permissioned production models before expanding into platform or AI work.
 
@@ -363,8 +408,9 @@ Sprint 0 Foundation
     → Sprint 1 integration gate (UI smoke + real statue + merge + tag)
       → Sprint 2 Safe Repair
         → Sprint 3 Printability
-          → Sprint 4 Optimization
-            → Sprint 5 Production UAT
+          → Sprint 4 Advanced Preparation
+            → Sprint 5 Controlled Optimization (not started)
+              → Production UAT
               ├─→ Sprint 6 Workflow/Assets ───────────────┐
               ├─→ Sprint 7 AI Foundation → Sprint 8/9 ───┤
               └─→ Commercial readiness work ──────────────┤
@@ -457,15 +503,20 @@ Each decision must be reevaluated against differentiation, total cost, privacy, 
 
 ## Immediate Next Milestone
 
-Sprint 3 implementation and automated evidence are complete on the feature branch. Before promotion:
+Sprint 4 implementation and automated evidence are complete on the feature branch. Before promotion:
 
 - Review the Sprint 2 and Golden Benchmark machine/Markdown evidence.
 - Perform an installed-package interactive Blender panel smoke test.
 - Repair at least one permissioned real Chroma3D statue under operator review and retain evidence.
 - Validate Blender 4.5 LTS when that runtime is available.
-- Review Sprint 3's sampled/heuristic method limitations against slicer and physical-print outcomes.
+- Review Sprint 4's bounded advisory limitations and generated evidence.
+- Manually smoke-test the installed `0.5.0-alpha.1` Advanced Preparation panel.
+- Review Sprint 3 and Sprint 4 sampled/heuristic methods against future slicer
+  and physical-print outcomes without treating those deferred activities as
+  current acceptance evidence.
 
-Do not begin Sprint 4 or promote `0.4.0-alpha.1` until the Sprint 3 evidence and deferred manual gates are reviewed.
+Do not begin Sprint 5 or promote `0.5.0-alpha.1` until the Sprint 4 evidence and
+deferred manual gates are reviewed.
 
 ## Sprint 2.7 — Dataset Storage Architecture
 

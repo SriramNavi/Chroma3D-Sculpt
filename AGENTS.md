@@ -31,6 +31,9 @@ The repository root is `E:\VPRS\Sriram\Projects\Chroma3D Sculpt`.
 - Tiny-shell removal and hole filling require explicit candidate selection; never perform silent cleanup or auto-delete the main shell.
 - Preserve safe operation ordering, bounded evidence, session cleanup, and schema 1.0 repair audit history.
 - Run Sprint 0, Sprint 1, and Sprint 2 regressions before Sprint 2 completion.
+- For Sprint 4, keep hardware and material profiles separate, preserve composed-threshold provenance, and include process/feature/performance hashes in stale-state checks.
+- Advanced preparation is software-only advisory analysis: never apply orientation or scale, generate supports, hollow resin, add drain holes, slice, generate G-code, use network runtime, or send printer commands.
+- Centralize Sprint 4 limits in `performance_registry.py`; disabled checks remain `NOT_EVALUATED`, and skipped/indeterminate/failed checks never pass silently.
 
 ## Token and context management
 

@@ -15,10 +15,10 @@
 ## 4. Environment
 
 - Repository: `E:\VPRS\Sriram\Projects\Chroma3D Sculpt`
-- Branch: `feature/sprint-3-printability-engine`
-- Baseline/HEAD: `c4bccfe4970f08171c7cb767d70c30c524600adf` / `c4bccfe4970f08171c7cb767d70c30c524600adf`
+- Branch: `feature/sprint-4-advanced-print-preparation`
+- Baseline/HEAD: `c4bccfe4970f08171c7cb767d70c30c524600adf` / `88cc0328519747103efcfd2146b2cba54b09293b`
 - Blender: `4.4.3` at `D:\Softwares\Design\Blender\blender.exe`
-- Python: `3.12.0`; extension `0.4.0-alpha.1`.
+- Python: `3.12.0`; extension `0.5.0-alpha.1`.
 
 ## 5. Independent software gates
 
@@ -89,7 +89,7 @@
 
 ## 17. Package
 
-- `dist/chroma3d_sculpt-0.4.0-alpha.1.zip` — 69 files, 136392 bytes, SHA-256 `9d2923e98b2d26829fe1f461b74c776a5e8073c9eb004ce202d201a1fe6a8b39`.
+- `dist/chroma3d_sculpt-0.5.0-alpha.1.zip` — 104 files, 197280 bytes, SHA-256 `7b43fb2fdb5c4a0adf565ecfc40911e816dcc43e2feafd02de8e3cbe91f11cae`.
 
 ## 18. Evidence paths
 
