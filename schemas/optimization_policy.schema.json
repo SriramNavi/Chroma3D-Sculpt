@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "optimization_policy.schema.json",
+  "title": "Chroma3D Sprint 5 Optimization Policy",
+  "type": "object",
+  "required": ["policy_id", "policy_version", "enabled_operation_families", "maximum_uniform_scale_change", "maximum_rotation_candidates", "maximum_translation_distance", "maximum_base_modification_height", "maximum_base_added_volume_ratio", "maximum_decimation_ratio", "maximum_geometric_deviation", "maximum_remesh_voxel_size", "maximum_operation_count", "maximum_checkpoint_count", "experimental_remesh_enabled", "experimental_decimation_enabled", "provenance"],
+  "properties": {
+    "policy_id": {"type": "string", "minLength": 1},
+    "policy_version": {"const": "1.0"},
+    "enabled_operation_families": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "maximum_uniform_scale_change": {"type": "number", "minimum": 0, "maximum": 1},
+    "maximum_rotation_candidates": {"type": "integer", "minimum": 1},
+    "maximum_translation_distance": {"type": "number", "minimum": 0},
+    "maximum_base_modification_height": {"type": "number", "minimum": 0},
+    "maximum_base_added_volume_ratio": {"type": "number", "minimum": 0, "maximum": 1},
+    "maximum_decimation_ratio": {"type": "number", "minimum": 0, "maximum": 1},
+    "maximum_geometric_deviation": {"type": "number", "minimum": 0, "maximum": 1},
+    "maximum_remesh_voxel_size": {"type": "number", "minimum": 0},
+    "maximum_operation_count": {"type": "integer", "minimum": 1},
+    "maximum_checkpoint_count": {"type": "integer", "minimum": 1},
+    "objective_weights": {"type": "array"},
+    "approval_requirements": {"type": "array", "items": {"type": "string"}},
+    "experimental_remesh_enabled": {"type": "boolean"},
+    "experimental_decimation_enabled": {"type": "boolean"},
+    "performance_limits": {"type": "object", "additionalProperties": {"type": "number", "minimum": 0}},
+    "provenance": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": true
+}

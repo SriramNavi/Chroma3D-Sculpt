@@ -8,7 +8,7 @@
 - Sprint 2.8: Complete — research-backed Printability Engineering Specification, profile/report schemas, validation fixtures, source ledger, and Sprint 3 acceptance gates.
 - Sprint 3: Implemented on the feature branch — advisory printability geometry facts, five packaged profiles plus Custom, bounded checks and virtual orientations, scoring, stale protection, issue selection, JSON/Markdown export, and resumable Dataset `1.0.0` regression (`0.4.0-alpha.1`). Installed-panel, Blender 4.5 LTS, and physical-print calibration remain deferred.
 - Sprint 4: Implemented on the feature branch — Advanced Print Preparation with hardware/material composition, bridge/support/resin advisories, advanced scale/orientation comparison, batch analysis, Printability Baseline 1.0.0, comparator, and offline dashboard (`0.5.0-alpha.1`). Physical calibration and installed-panel UAT remain deferred.
-- Sprint 5: Future controlled optimization/remeshing; not started.
+- Sprint 5: Implemented on `feature/sprint-5-controlled-optimization` as a bounded controlled-optimization layer (`0.6.0-alpha.1`): protected-source signatures, deterministic objectives/policies/candidates/plans, isolated workspace operations, checkpoints, undo/restore, comparison/fidelity evidence, accept-copy/discard, audit export, and a Controlled Optimization panel. Dataset regression, historical final chain, installed-panel UAT, and physical/slicer validation remain separate evidence gates.
 - Post-Sprint 5: Chroma3D internal UAT.
 - Sprint 6: Reference and asset workflows.
 - Later phases: bounded AI-assisted planning and authoring workflows.

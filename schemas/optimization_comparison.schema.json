@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "optimization_comparison.schema.json",
+  "title": "Chroma3D Sprint 5 Optimization Comparison",
+  "type": "object",
+  "required": ["comparison_id", "before", "after", "overall_classification", "fidelity"],
+  "properties": {
+    "comparison_id": {"type": "string"},
+    "before": {"type": "object"},
+    "after": {"type": "object"},
+    "objective_deltas": {"type": "array"},
+    "risk_deltas": {"type": "array"},
+    "fidelity": {"type": "object"},
+    "overall_classification": {"enum": ["IMPROVEMENT", "REGRESSION", "NEUTRAL", "INDETERMINATE", "SKIPPED_LIMIT"]},
+    "critical_regressions": {"type": "array", "items": {"type": "string"}},
+    "skipped_checks": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

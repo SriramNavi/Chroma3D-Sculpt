@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "optimization_plan.schema.json",
+  "title": "Chroma3D Sprint 5 Optimization Plan",
+  "type": "object",
+  "required": ["plan_id", "session_id", "created_at", "source_signature", "workspace_signature", "policy_hash", "objective_hash", "steps"],
+  "properties": {
+    "plan_id": {"type": "string"},
+    "session_id": {"type": "string"},
+    "created_at": {"type": "string"},
+    "source_signature": {"type": "string"},
+    "workspace_signature": {"type": "string"},
+    "policy_hash": {"type": "string"},
+    "objective_hash": {"type": "string"},
+    "implementation_fingerprint": {"type": "string"},
+    "process_context_hash": {"type": "string"},
+    "feature_flag_hash": {"type": "string"},
+    "performance_registry_version": {"type": "string"},
+    "candidate_set_hash": {"type": "string"},
+    "steps": {"type": "array"},
+    "status": {"type": "string"},
+    "plan_hash": {"type": "string"}
+  },
+  "additionalProperties": true
+}

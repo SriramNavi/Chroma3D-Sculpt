@@ -35,6 +35,11 @@ def _mark_preparation_flags_stale(self: bpy.types.PropertyGroup, _context: bpy.t
         self.preparation_state = "STALE_FEATURE_FLAGS"
 
 
+def _mark_optimization_stale(self: bpy.types.PropertyGroup, _context: bpy.types.Context) -> None:
+    if bool(getattr(self, "optimization_has_session", False)):
+        self.optimization_state = "STALE_SETTINGS"
+
+
 class CHROMA3D_PG_tiny_shell_candidate(bpy.types.PropertyGroup):
     selected: BoolProperty(name="Remove", default=False)
     candidate_id: StringProperty(name="Candidate ID", default="")
@@ -211,6 +216,48 @@ class CHROMA3D_PG_session_state(bpy.types.PropertyGroup):
     repair_tiny_shell_index: IntProperty(default=0)
     repair_small_hole_candidates: CollectionProperty(type=CHROMA3D_PG_small_hole_candidate)
     repair_small_hole_index: IntProperty(default=0)
+
+    optimization_has_session: BoolProperty(name="Has optimization session", default=False, options={"HIDDEN"})
+    optimization_state: StringProperty(name="Optimization State", default="NOT_STARTED", options={"HIDDEN"})
+    optimization_source_name: StringProperty(name="Optimization Source", default="", options={"HIDDEN"})
+    optimization_workspace_name: StringProperty(name="Optimization Workspace", default="", options={"HIDDEN"})
+    optimization_plan_status: StringProperty(name="Optimization Plan", default="NOT_GENERATED", options={"HIDDEN"})
+    optimization_last_result: StringProperty(name="Optimization Result", default="", options={"HIDDEN"})
+    optimization_selected_candidate_id: StringProperty(name="Selected Candidate", default="")
+    optimization_candidate_count: IntProperty(name="Candidate Count", default=0, options={"HIDDEN"})
+    optimization_objective_preset: EnumProperty(
+        name="Objective Preset",
+        items=(
+            ("Balanced FDM", "Balanced FDM", "Balanced geometry and print-risk objectives"),
+            ("Minimum Supports", "Minimum Supports", "Reduce bounded support-risk proxies"),
+            ("Maximum Fidelity", "Maximum Fidelity", "Preserve geometry and sculpt detail"),
+            ("Fit to Printer", "Fit to Printer", "Prioritize bounded build-volume fit"),
+            ("Stable Base", "Stable Base", "Prioritize build contact"),
+            ("Lightweight Preview", "Lightweight Preview", "Prioritize a bounded triangle reduction preview"),
+            ("Resin Advisory", "Resin Advisory", "Prioritize resin advisory risk evidence"),
+            ("Custom", "Custom", "Use the visible objective weights"),
+        ),
+        default="Balanced FDM", update=_mark_optimization_stale,
+    )
+    optimization_base_stabilization: BoolProperty(name="Enable Base Stabilization", default=False, update=_mark_optimization_stale)
+    optimization_decimation: BoolProperty(name="Enable Experimental Decimation", default=False, update=_mark_optimization_stale)
+    optimization_experimental_remesh: BoolProperty(name="Enable Experimental Remesh", default=False, update=_mark_optimization_stale)
+    optimization_max_scale_change: FloatProperty(name="Maximum Scale Change", default=0.20, min=0.0, max=1.0, update=_mark_optimization_stale)
+    optimization_max_rotation_candidates: IntProperty(name="Rotation Candidates", default=8, min=1, max=64, update=_mark_optimization_stale)
+    optimization_max_translation_distance: FloatProperty(name="Translation Limit (mm)", default=1000.0, min=0.0, update=_mark_optimization_stale)
+    optimization_max_base_height: FloatProperty(name="Base Height (mm)", default=2.0, min=0.0, update=_mark_optimization_stale)
+    optimization_max_base_volume_ratio: FloatProperty(name="Base Volume Ratio", default=0.10, min=0.0, max=1.0, update=_mark_optimization_stale)
+    optimization_max_decimation_ratio: FloatProperty(name="Decimation Ratio", default=0.50, min=0.0, max=1.0, update=_mark_optimization_stale)
+    optimization_max_deviation: FloatProperty(name="Maximum Fidelity Deviation", default=0.25, min=0.0, max=1.0, update=_mark_optimization_stale)
+    optimization_checkpoint_limit: IntProperty(name="Checkpoint Limit", default=4, min=2, max=20, update=_mark_optimization_stale)
+    optimization_weight_build_volume_fit: FloatProperty(name="Build Volume Fit Weight", default=1.0, min=0.0, update=_mark_optimization_stale)
+    optimization_weight_wall_thickness: FloatProperty(name="Wall Preservation Weight", default=1.0, min=0.0, update=_mark_optimization_stale)
+    optimization_weight_thin_features: FloatProperty(name="Thin Feature Weight", default=1.0, min=0.0, update=_mark_optimization_stale)
+    optimization_weight_overhang: FloatProperty(name="Overhang Weight", default=1.0, min=0.0, update=_mark_optimization_stale)
+    optimization_weight_support: FloatProperty(name="Support Risk Weight", default=1.0, min=0.0, update=_mark_optimization_stale)
+    optimization_weight_contact: FloatProperty(name="Contact Weight", default=1.0, min=0.0, update=_mark_optimization_stale)
+    optimization_weight_height: FloatProperty(name="Height Weight", default=0.5, min=0.0, update=_mark_optimization_stale)
+    optimization_weight_fidelity: FloatProperty(name="Geometry Fidelity Weight", default=1.0, min=0.0, update=_mark_optimization_stale)
 
 
 SESSION_STATE_CLASS = CHROMA3D_PG_session_state

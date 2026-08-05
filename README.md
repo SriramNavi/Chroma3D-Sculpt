@@ -2,15 +2,17 @@
 
 Chroma3D Sculpt is a local Blender extension for production mesh diagnostics, controlled reversible repair, and advisory printability risk analysis of complex statue meshes. Repair preserves the original source; Printability never changes geometry, transforms, orientation, or scale.
 
-**Current merged software release:** `v0.4.0-alpha.1`. Sprint 4 advances the feature branch to the uncommitted `0.5.0-alpha.1` Advanced Print Preparation candidate. See the [release milestone summary](docs/releases/v0.4.0-alpha.1-milestone.md). Physical validation status is **READY FOR PHYSICAL EXECUTION**; no printability or print-success guarantee is provided.
+**Current development release:** `v0.6.0-alpha.1` on `feature/sprint-5-controlled-optimization`. Sprint 5 adds bounded controlled optimization above the frozen Sprint 4 advisory layer. Physical validation status is **READY FOR PHYSICAL EXECUTION**; no printability or print-success guarantee is provided.
 
 Sprint 2.7 added the dataset storage architecture: Dataset `1.0.0` and Golden Benchmark `1.0.0` are packaged as verified release assets, while manifests, provenance, licenses, schemas, locks, and tooling remain in this product repository. The existing `v0.3.1-alpha.1` history is immutable; Sprint 3 advances the extension separately to `0.4.0-alpha.1`.
 
 Sprint 3 implements the approved [Printability Engineering Specification](PRINTABILITY_SPECIFICATION.md) as a separate advisory path. It adds local versioned printer profiles, geometry facts, wall/feature/overhang/floating/contact/scale checks, bounded virtual orientation candidates, conservative scoring, stale-state protection, issue selection, and JSON/Markdown reports. It does not slice, generate supports, rotate, scale, or guarantee manufacturing success.
 
-Sprint 4 adds a software-only layer above Sprint 3: separate hardware and generic material profiles, deterministic process composition, explicit feature flags, centralized limits, bridge/support/resin advisories, scale intervals, improved orientation comparison, bounded batch analysis, Printability Baseline `1.0.0`, regression comparison, and an offline HTML dashboard. See the [Advanced Preparation guide](docs/advanced-preparation/README.md). Sprint 5 has not started.
+Sprint 4 adds a software-only layer above Sprint 3: separate hardware and generic material profiles, deterministic process composition, explicit feature flags, centralized limits, bridge/support/resin advisories, scale intervals, improved orientation comparison, bounded batch analysis, Printability Baseline `1.0.0`, regression comparison, and an offline HTML dashboard. See the [Advanced Preparation guide](docs/advanced-preparation/README.md).
 
-**Feature-branch version:** 0.5.0-alpha.1
+Sprint 5 adds a workspace-only Controlled Optimization workflow. It generates deterministic candidates and plans, applies only explicit bounded steps to an independently owned copy, checkpoints every mutation, compares before/after evidence, supports undo/restore, accepts a separate optimized copy, discards session-owned resources, and exports an audit. Experimental decimation/remesh remain opt-in and advisory; automatic supports, slicing, G-code, printer control, and source replacement do not exist. See the [Controlled Optimization guide](docs/controlled-optimization/README.md).
+
+**Feature-branch version:** 0.6.0-alpha.1
 
 **JSON schema:** 2.0
 
@@ -19,6 +21,8 @@ Sprint 4 adds a software-only layer above Sprint 3: separate hardware and generi
 **Printability report / profile / settings schemas:** 1.0.0
 
 **Advanced preparation / material / process / batch / dashboard schemas:** 1.0
+
+**Controlled Optimization schemas:** 1.0
 
 **Minimum Blender:** 4.4.0
 
@@ -76,8 +80,9 @@ Open **3D Viewport > Sidebar > Chroma3D > Chroma3D Sculpt**.
 7. Expand **Safe Repair** to create, plan, apply, recover, compare, finalize, and export a repair audit.
 8. Expand **Printability**, select a packaged or Custom profile and performance mode, then choose **Analyze Printability**.
 9. Expand **Advanced Preparation**, compose Hardware + Material + nozzle/layer/plate/support policy, review feature flags, then analyze the active object or selected mesh batch.
-9. Review status, confidence, score reasons, skipped/failed checks, risk evidence, and virtual orientation candidates; use explicit issue-selection controls where evidence exists.
-10. Export the current non-stale result as schema 1.0.0 JSON or a human-readable Markdown report.
+10. Review status, confidence, score reasons, skipped/failed checks, risk evidence, and virtual orientation candidates; use explicit issue-selection controls where evidence exists.
+11. Open **Controlled Optimization**, create a session, generate candidates and a plan, apply only selected workspace steps, review comparisons, then accept a separate copy or discard the workspace.
+12. Export the current non-stale result as schema 1.0.0 JSON or a human-readable Markdown report.
 
 Issue selection is the only intentional state-changing Sprint 1 action. It changes selection/mode for inspection but never changes geometry. If topology changed after analysis it refuses with `Analysis is stale. Run Analyze Mesh again.`
 
@@ -95,16 +100,17 @@ py manual-tests\sprint1-final\run_final_validation.py --blender "D:\Softwares\De
 py manual-tests\sprint2\run_sprint2_acceptance.py --blender "D:\Softwares\Design\Blender\blender.exe"
 py manual-tests\sprint2-final\run_final_validation.py --blender "D:\Softwares\Design\Blender\blender.exe"
 py manual-tests\sprint3\run_sprint3_acceptance.py --blender "D:\Softwares\Design\Blender\blender.exe"
+py manual-tests\sprint5\run_sprint5_acceptance.py --blender "D:\Softwares\Design\Blender\blender.exe"
 py manual-tests\benchmarks\verify_golden_baseline.py
 py manual-tests\benchmarks\run_golden_benchmark.py --self-check
 py scripts\package_extension.py
 py scripts\validate_package.py
-& "D:\Softwares\Design\Blender\blender.exe" --background --command extension validate "E:\VPRS\Sriram\Projects\Chroma3D Sculpt\dist\chroma3d_sculpt-0.5.0-alpha.1.zip"
+& "D:\Softwares\Design\Blender\blender.exe" --background --command extension validate "E:\VPRS\Sriram\Projects\Chroma3D Sculpt\dist\chroma3d_sculpt-0.6.0-alpha.1.zip"
 ```
 
-The Sprint 4 candidate archive is `dist\chroma3d_sculpt-0.5.0-alpha.1.zip`. Install it through Blender's **Edit > Preferences > Extensions > Install from Disk**, then enable the extension if prompted.
+The Sprint 5 candidate archive is `dist\chroma3d_sculpt-0.6.0-alpha.1.zip`. Install it through Blender's **Edit > Preferences > Extensions > Install from Disk**, then enable the extension if prompted.
 
-The background suite preserves Sprint 0–3 regressions and adds 132 focused Sprint 4 tests. Sprint 4 evidence is generated under `manual-tests\sprint4`; generated JSON/log/dashboard folders and ZIP files remain ignored. See the [Printability user guide](docs/printability/USER_GUIDE.md) and [Advanced Preparation user guide](docs/advanced-preparation/USER_GUIDE.md).
+The background suite preserves the prior sprint regressions and adds 161 focused Sprint 5 tests. Sprint 5 evidence is generated under `manual-tests\sprint5`; generated JSON/log/dashboard folders and ZIP files remain ignored. See the [Printability user guide](docs/printability/USER_GUIDE.md), [Advanced Preparation user guide](docs/advanced-preparation/USER_GUIDE.md), and [Controlled Optimization user guide](docs/controlled-optimization/USER_GUIDE.md).
 
 ## Golden Benchmark Baseline
 

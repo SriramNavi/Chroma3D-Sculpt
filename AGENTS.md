@@ -34,6 +34,7 @@ The repository root is `E:\VPRS\Sriram\Projects\Chroma3D Sculpt`.
 - For Sprint 4, keep hardware and material profiles separate, preserve composed-threshold provenance, and include process/feature/performance hashes in stale-state checks.
 - Advanced preparation is software-only advisory analysis: never apply orientation or scale, generate supports, hollow resin, add drain holes, slice, generate G-code, use network runtime, or send printer commands.
 - Centralize Sprint 4 limits in `performance_registry.py`; disabled checks remain `NOT_EVALUATED`, and skipped/indeterminate/failed checks never pass silently.
+- Sprint 5 controlled optimization is workspace-only and explicit: protect source object/mesh identity and state, bind candidates/plans to deterministic stale-state hashes, checkpoint before mutation, restore on failure, retain honest comparison/fidelity states, accept only as a separate copy, discard only session-owned resources, and export complete audit evidence. Experimental remesh is deferred and decimation is opt-in; never add automatic optimization, supports, slicing, G-code, printer control, or source replacement.
 
 ## Token and context management
 

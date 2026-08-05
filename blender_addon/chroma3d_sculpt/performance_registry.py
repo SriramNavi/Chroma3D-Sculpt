@@ -27,7 +27,19 @@ CHECK_TYPES = (
     "support_risk",
     "resin_advisory",
     "batch_analysis",
+    "optimization_candidate_generation",
+    "optimization_comparison",
+    "optimization_checkpoint",
+    "optimization_operation",
 )
+
+OPTIMIZATION_PERFORMANCE_LIMITS = {
+    "candidate_generation_seconds": 30.0,
+    "comparison_seconds": 120.0,
+    "checkpoint_count": 4,
+    "operation_count": 8,
+    "evidence_items": 256,
+}
 
 _MODE_BASE = {
     PrintabilityMode.FAST: dict(triangles=100_000, samples=256, candidates=4, evidence=256, batch=16, warning=15.0, memory="LOW"),
@@ -46,6 +58,10 @@ _CHECK_FACTORS = {
     "support_risk": 1.0,
     "resin_advisory": 1.0,
     "batch_analysis": 1.0,
+    "optimization_candidate_generation": 1.0,
+    "optimization_comparison": 1.0,
+    "optimization_checkpoint": 1.0,
+    "optimization_operation": 1.0,
 }
 _SIZE_FACTORS = {"Tiny": 1.0, "Small": 1.0, "Medium": 1.0, "Large": 0.75, "Huge": 0.5, "Extreme": 0.25}
 
@@ -129,6 +145,7 @@ validate_registry()
 
 __all__ = (
     "CHECK_TYPES",
+    "OPTIMIZATION_PERFORMANCE_LIMITS",
     "PERFORMANCE_REGISTRY_VERSION",
     "REGISTRY",
     "SIZE_CLASS_LIMITS",

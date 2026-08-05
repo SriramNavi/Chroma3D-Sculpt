@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "optimization_audit.schema.json",
+  "title": "Chroma3D Sprint 5 Optimization Audit",
+  "type": "object",
+  "required": ["schema_version", "extension_version", "source_identity", "source_signature", "workspace_identity", "optimization_policy", "objectives", "generated_candidates", "selected_plan", "operation_history", "comparisons", "advisory_disclaimer"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "extension_version": {"type": "string"},
+    "source_identity": {"type": "object"},
+    "source_signature": {"type": "string"},
+    "workspace_identity": {"type": "object"},
+    "optimization_policy": {"type": "object"},
+    "objectives": {"type": "object"},
+    "generated_candidates": {"type": "array"},
+    "selected_plan": {"type": "object"},
+    "operation_history": {"type": "array"},
+    "checkpoints": {"type": "array"},
+    "comparisons": {"type": "array"},
+    "fidelity_evidence": {"type": "array"},
+    "warnings": {"type": "array"},
+    "failures": {"type": "array"},
+    "skipped_checks": {"type": "array"},
+    "stale_events": {"type": "array"},
+    "advisory_disclaimer": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": true
+}

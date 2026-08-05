@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "optimization_session.schema.json",
+  "title": "Chroma3D Sprint 5 Optimization Session",
+  "type": "object",
+  "required": ["session_id", "started_at", "state", "source_signature", "initial_workspace_signature", "current_workspace_signature"],
+  "properties": {
+    "session_id": {"type": "string"},
+    "started_at": {"type": "string"},
+    "state": {"enum": ["NOT_STARTED", "WORKSPACE_READY", "PLAN_READY", "OPERATION_IN_PROGRESS", "REVIEW_REQUIRED", "ACCEPTED", "DISCARDED", "FAILED", "STALE"]},
+    "source_signature": {"type": "string"},
+    "initial_workspace_signature": {"type": "string"},
+    "current_workspace_signature": {"type": "string"},
+    "candidates": {"type": "array"},
+    "checkpoints": {"type": "array"},
+    "operation_records": {"type": "array"},
+    "stale_events": {"type": "array"}
+  },
+  "additionalProperties": true
+}

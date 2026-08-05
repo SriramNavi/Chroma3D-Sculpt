@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "optimization_candidate.schema.json",
+  "title": "Chroma3D Sprint 5 Optimization Candidate",
+  "type": "object",
+  "required": ["candidate_id", "fingerprint", "category", "source_signature", "optimization_policy_hash", "implementation_fingerprint"],
+  "properties": {
+    "candidate_id": {"type": "string", "minLength": 1},
+    "fingerprint": {"type": "string", "minLength": 1},
+    "category": {"type": "string"},
+    "transform": {"type": "object"},
+    "geometry_operation": {"type": ["object", "null"]},
+    "source_evidence": {"type": "array", "maxItems": 256},
+    "source_signature": {"type": "string"},
+    "process_context_hash": {"type": "string"},
+    "optimization_policy_hash": {"type": "string"},
+    "implementation_fingerprint": {"type": "string"}
+  },
+  "additionalProperties": true
+}

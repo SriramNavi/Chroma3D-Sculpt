@@ -5,7 +5,7 @@
 - Repository root: `E:\VPRS\Sriram\Projects\Chroma3D Sculpt`.
 - Primary platform: Windows 11 without administrator privileges.
 - Minimum runtime: Blender 4.4.0 and bundled Python; current validation is Blender 4.4.3.
-- Package: modern Blender Extension; manifest `0.5.0`, display `0.5.0-alpha.1`, analysis JSON schema `2.0`, repair audit schema `1.0`, printability report schema `1.0.0`, and Advanced Preparation schema `1.0`.
+- Package: modern Blender Extension; manifest `0.6.0`, display `0.6.0-alpha.1`, analysis JSON schema `2.0`, repair audit schema `1.0`, printability report schema `1.0.0`, Advanced Preparation schema `1.0`, and Controlled Optimization schemas `1.0`.
 - Dependencies: public Blender APIs and Python standard library only.
 - Runtime paths must be dynamic; repository tooling must support quoted Windows paths containing spaces.
 
@@ -48,6 +48,15 @@
 - Bridge/support/resin/scale/orientation results are advisory. Never generate supports, hollowing, drain holes, slices, G-code, uploads, printer commands, or automatic transforms.
 - Batch analysis is bounded, deterministic, source-isolated, resumable, and preserves partial failure evidence.
 - Printability Baseline 1.0.0 binds Dataset/Golden 1.0.0 plus source, implementation, process, material, flags, settings, and schema identities; it is not physically calibrated.
+
+## Sprint 5 controlled-optimization policy
+
+- Optimization never mutates the protected source. Every workspace has an independent object, mesh datablock, session-owned collection, ownership metadata, and retained initial checkpoint.
+- Candidate and plan generation are read-only, deterministic, bounded, and stale when source, workspace, process, material, feature, performance, policy, objective, or implementation identity changes.
+- Every geometry-affecting workspace operation requires a valid checkpoint; failures restore automatically. Ordinary plan selection is explicit user approval; base stabilization, decimation, and remesh require the additional explicit approval flag.
+- Accept retains the source and a separate optimized object. Discard removes only session-owned workspace/checkpoints. Neither path saves automatically.
+- Comparison must preserve critical regressions, missing evidence, `INDETERMINATE`, and `SKIPPED_LIMIT`; heuristic objective scores never claim global optimality or print success.
+- Experimental remesh is deferred in the safe runtime. No automatic supports, hollowing, drain holes, slicing, G-code, printer control, network runtime, or source replacement exists.
 
 ## Regression and release
 
