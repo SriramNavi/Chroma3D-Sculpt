@@ -29,6 +29,7 @@ if str(ADDON_ROOT) not in sys.path:
 import chroma3d_sculpt  # noqa: E402
 from chroma3d_sculpt.metadata import (  # noqa: E402
     DISPLAY_VERSION,
+    EXTENSION_VERSION,
     PRINTABILITY_REPORT_SCHEMA_VERSION,
     REPAIR_AUDIT_SCHEMA_VERSION,
     SCHEMA_VERSION,
@@ -296,7 +297,7 @@ def static_audit() -> dict[str, Any]:
                     wording.append({"phrase": phrase, "path": path.relative_to(REPOSITORY_ROOT).as_posix(), "line": line_number})
     assert not findings, findings
     assert not wording, wording
-    assert DISPLAY_VERSION.startswith("0.5.0-")
+    assert DISPLAY_VERSION == f"{EXTENSION_VERSION}-alpha.1"
     assert SCHEMA_VERSION == "2.0" and REPAIR_AUDIT_SCHEMA_VERSION == "1.0" and PRINTABILITY_REPORT_SCHEMA_VERSION == "1.0.0"
     return {"python_files": len(text_by_path), "forbidden_findings": findings, "wording_findings": wording}
 

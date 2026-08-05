@@ -55,6 +55,14 @@ manual-tests/sprint4-final/reports/
 manual-tests/sprint4-final/logs/
 manual-tests/sprint4-final/artifacts/
 manual-tests/sprint4-final/screenshots/
+manual-tests/sprint5/reports/
+manual-tests/sprint5/logs/
+manual-tests/sprint5/artifacts/
+manual-tests/sprint5/screenshots/
+manual-tests/sprint5-final/reports/
+manual-tests/sprint5-final/logs/
+manual-tests/sprint5-final/artifacts/
+manual-tests/sprint5-final/screenshots/
 manual-tests/physical-print-validation/runs/
 manual-tests/physical-print-validation/photos/
 manual-tests/physical-print-validation/slicer-exports/
