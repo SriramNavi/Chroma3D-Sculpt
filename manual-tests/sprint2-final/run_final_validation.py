@@ -9,6 +9,7 @@ import json
 import os
 from pathlib import Path
 import re
+import runpy
 import shutil
 import subprocess
 import sys
@@ -25,7 +26,9 @@ ARTIFACTS_DIRECTORY = FINAL_DIRECTORY / "artifacts"
 RESULTS_PATH = REPORTS_DIRECTORY / "final_validation_results.json"
 MARKDOWN_PATH = FINAL_DIRECTORY / "FINAL_VALIDATION_RESULTS.md"
 LOG_PATH = LOGS_DIRECTORY / "blender_final_validation.log"
-PACKAGE_PATH = REPOSITORY_ROOT / "dist" / "chroma3d_sculpt-0.3.0-alpha.1.zip"
+_METADATA = runpy.run_path(str(REPOSITORY_ROOT / "blender_addon" / "chroma3d_sculpt" / "metadata.py"))
+DISPLAY_VERSION = str(_METADATA["DISPLAY_VERSION"])
+PACKAGE_PATH = REPOSITORY_ROOT / "dist" / f"chroma3d_sculpt-{DISPLAY_VERSION}.zip"
 DEFAULT_BLENDER = Path(r"D:\Softwares\Design\Blender\blender.exe")
 
 
@@ -245,7 +248,7 @@ def _render_markdown(report: dict[str, Any]) -> str:
         f"- `{json.dumps(report.get('safety_confirmation', {}), ensure_ascii=False)}`", "",
         "## 20. Final Decision", "", f"**{report['final_decision']}**", "",
         "## 21. One Immediate Next Action", "",
-        "Review the final Sprint 2 evidence and manually smoke-test the installed 0.3.0-alpha.1 repair panel before committing.", "",
+        f"Review the final Sprint 2 evidence and manually smoke-test the installed {report['extension_version']} repair panel before committing.", "",
     ])
     return "\n".join(sections)
 
@@ -314,7 +317,7 @@ def main() -> int:
     report.update({
         "schema_version": "1.0",
         "project": "Chroma3D Sculpt",
-        "extension_version": "0.3.0-alpha.1",
+        "extension_version": DISPLAY_VERSION,
         "analysis_schema_version": "2.0",
         "repair_audit_schema_version": "1.0",
         "repository_root": str(REPOSITORY_ROOT),

@@ -6,7 +6,7 @@ from pathlib import Path, PurePosixPath
 import sys
 import zipfile
 
-from _project import DIST_DIRECTORY, LICENSE_PATH, PACKAGE_PATH, SOURCE_ROOT, validate_source_layout
+from _project import DIST_DIRECTORY, LICENSE_PATH, PACKAGE_ASSET_FILES, PACKAGE_PATH, REPOSITORY_ROOT, SOURCE_ROOT, validate_source_layout
 
 _EXCLUDED_PARTS = {"__pycache__", ".git", "tests", "dist", ".vscode", ".idea"}
 _EXCLUDED_SUFFIXES = {".pyc", ".pyo", ".tmp", ".blend1", ".blend2", ".blend@"}
@@ -42,6 +42,9 @@ def build_package() -> tuple[Path, int, int]:
                 included += 1
             archive.write(LICENSE_PATH, "LICENSE")
             included += 1
+            for relative in PACKAGE_ASSET_FILES:
+                archive.write(REPOSITORY_ROOT / relative, PurePosixPath(relative).as_posix())
+                included += 1
         temporary.replace(PACKAGE_PATH)
     except Exception:
         if temporary.exists():
@@ -65,4 +68,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

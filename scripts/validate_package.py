@@ -11,6 +11,7 @@ from _project import (
     DISPLAY_VERSION,
     EXTENSION_ID,
     MANIFEST_VERSION,
+    PACKAGE_ASSET_FILES,
     PACKAGE_PATH,
     REQUIRED_SOURCE_FILES,
     read_manifest_bytes,
@@ -38,7 +39,7 @@ def validate_archive(package: Path) -> list[str]:
                 errors.append("Archive is empty.")
 
             files = {name for name in names if not name.endswith("/")}
-            required = set(REQUIRED_SOURCE_FILES) | {"LICENSE"}
+            required = set(REQUIRED_SOURCE_FILES) | set(PACKAGE_ASSET_FILES) | {"LICENSE"}
             errors.extend(f"Missing required archive entry: {item}" for item in sorted(required - files))
 
             for name in names:
@@ -96,4 +97,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

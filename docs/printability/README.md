@@ -1,8 +1,9 @@
 # Printability Specification Documents
 
-This directory is the reviewable implementation contract for Sprint 3. It is
-documentation only: Sprint 2.8 does not add a runtime engine, operator, repair,
-diagnostic, slicer, or package change.
+This directory contains the preserved Sprint 2.8 implementation contract and the
+Sprint 3 operator [user guide](USER_GUIDE.md). The 0.4.0-alpha.1 runtime implements
+the advisory engine while retaining the documented uncertainty, safety, and
+non-mutation boundaries.
 
 ## Reading order
 
@@ -16,6 +17,7 @@ diagnostic, slicer, or package change.
 5. [Scoring](PRINTABILITY_SCORING.md) and [performance](PERFORMANCE_MODES.md)
 6. [Fixtures](VALIDATION_FIXTURES.md) and [acceptance gates](ACCEPTANCE_GATES.md)
 7. [Sources](SOURCES.md) and [open questions](OPEN_QUESTIONS.md)
+8. [Sprint 3 user guide](USER_GUIDE.md)
 
 ## Contract invariants
 

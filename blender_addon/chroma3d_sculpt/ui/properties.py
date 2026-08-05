@@ -6,6 +6,16 @@ from bpy.props import BoolProperty, CollectionProperty, EnumProperty, FloatPrope
 from ..models.analysis_result import AnalysisResult
 
 
+def _mark_printability_profile_stale(self: bpy.types.PropertyGroup, _context: bpy.types.Context) -> None:
+    if bool(getattr(self, "printability_has_result", False)):
+        self.printability_state = "STALE_PROFILE"
+
+
+def _mark_printability_settings_stale(self: bpy.types.PropertyGroup, _context: bpy.types.Context) -> None:
+    if bool(getattr(self, "printability_has_result", False)):
+        self.printability_state = "STALE_SETTINGS"
+
+
 class CHROMA3D_PG_tiny_shell_candidate(bpy.types.PropertyGroup):
     selected: BoolProperty(name="Remove", default=False)
     candidate_id: StringProperty(name="Candidate ID", default="")
@@ -61,6 +71,56 @@ class CHROMA3D_PG_session_state(bpy.types.PropertyGroup):
     maximum_stored_self_intersection_pairs: IntProperty(name="Intersection Pair Cap", default=10_000, min=1, max=100_000)
     containment_shell_limit: IntProperty(name="Containment Shell Limit", default=64, min=1)
     containment_triangle_limit: IntProperty(name="Containment Triangle Limit", default=100_000, min=1)
+
+    printability_has_result: BoolProperty(name="Has printability result", default=False, options={"HIDDEN"})
+    printability_object_name: StringProperty(name="Printability object", default="", options={"HIDDEN"})
+    printability_status: StringProperty(name="Printability status", default="", options={"HIDDEN"})
+    printability_confidence: StringProperty(name="Printability confidence", default="", options={"HIDDEN"})
+    printability_last_result: StringProperty(name="Printability duration", default="", options={"HIDDEN"})
+    printability_state: StringProperty(name="Printability state", default="NOT_RUN", options={"HIDDEN"})
+    printability_profile: EnumProperty(
+        name="Printer / Process Profile",
+        items=(
+            ("generic_fdm", "Generic FDM", "Project-default editable FDM example"),
+            ("generic_resin", "Generic Resin", "Project-default editable resin example"),
+            ("bambu_x1_carbon", "Bambu Lab X1 Carbon", "Manufacturer build-volume facts plus labeled project defaults"),
+            ("bambu_p1s", "Bambu Lab P1S", "Manufacturer build-volume facts plus labeled project defaults"),
+            ("prusa_mk4", "Original Prusa MK4", "Manufacturer build-volume fact plus labeled project defaults"),
+            ("custom", "Custom", "User-supplied profile values"),
+        ),
+        default="generic_fdm",
+        update=_mark_printability_profile_stale,
+    )
+    printability_mode: EnumProperty(
+        name="Mode",
+        items=(("FAST", "Fast", "256 wall samples / 100k expensive-triangle limit"), ("STANDARD", "Standard", "2048 samples / 500k limit"), ("DEEP", "Deep", "16384 samples / 1M limit")),
+        default="STANDARD",
+        update=_mark_printability_settings_stale,
+    )
+    printability_build_direction_x: FloatProperty(name="Build X", default=0.0, update=_mark_printability_settings_stale)
+    printability_build_direction_y: FloatProperty(name="Build Y", default=0.0, update=_mark_printability_settings_stale)
+    printability_build_direction_z: FloatProperty(name="Build Z", default=1.0, update=_mark_printability_settings_stale)
+    printability_principal_candidates: BoolProperty(name="Principal-axis candidates", default=True, update=_mark_printability_settings_stale)
+    printability_planar_candidates: BoolProperty(name="Planar-face candidates", default=True, update=_mark_printability_settings_stale)
+    printability_sampled_candidates: BoolProperty(name="Sampled candidates", default=False, update=_mark_printability_settings_stale)
+    printability_show_advanced: BoolProperty(name="Advanced Printability Settings", default=False)
+    printability_custom_manufacturer: StringProperty(name="Manufacturer", default="User supplied", update=_mark_printability_profile_stale)
+    printability_custom_model: StringProperty(name="Printer Model", default="User supplied", update=_mark_printability_profile_stale)
+    printability_custom_process: EnumProperty(name="Process", items=(("FDM", "FDM", "Fused deposition process"), ("RESIN", "Resin", "Resin process"), ("CUSTOM", "Custom", "Other user-defined process")), default="CUSTOM", update=_mark_printability_profile_stale)
+    printability_custom_material: StringProperty(name="Material", default="User supplied", update=_mark_printability_profile_stale)
+    printability_custom_build_x_mm: FloatProperty(name="Build X (mm)", default=200.0, min=0.001, update=_mark_printability_profile_stale)
+    printability_custom_build_y_mm: FloatProperty(name="Build Y (mm)", default=200.0, min=0.001, update=_mark_printability_profile_stale)
+    printability_custom_build_z_mm: FloatProperty(name="Build Z (mm)", default=200.0, min=0.001, update=_mark_printability_profile_stale)
+    printability_custom_margin_mm: FloatProperty(name="Safety Margin (mm)", default=2.0, min=0.001, update=_mark_printability_profile_stale)
+    printability_custom_nozzle_mm: FloatProperty(name="Nozzle (mm)", default=0.4, min=0.001, update=_mark_printability_profile_stale)
+    printability_custom_layer_mm: FloatProperty(name="Layer Height (mm)", default=0.2, min=0.001, update=_mark_printability_profile_stale)
+    printability_custom_wall_warning_mm: FloatProperty(name="Wall Warning (mm)", default=1.2, min=0.001, update=_mark_printability_profile_stale)
+    printability_custom_wall_critical_mm: FloatProperty(name="Wall Critical (mm)", default=0.8, min=0.001, update=_mark_printability_profile_stale)
+    printability_custom_feature_warning_mm: FloatProperty(name="Feature Warning (mm)", default=0.8, min=0.001, update=_mark_printability_profile_stale)
+    printability_custom_feature_critical_mm: FloatProperty(name="Feature Critical (mm)", default=0.45, min=0.001, update=_mark_printability_profile_stale)
+    printability_custom_overhang_warning_deg: FloatProperty(name="Overhang Warning (deg)", default=45.0, min=0.001, max=90.0, update=_mark_printability_profile_stale)
+    printability_custom_overhang_critical_deg: FloatProperty(name="Overhang Critical (deg)", default=30.0, min=0.001, max=90.0, update=_mark_printability_profile_stale)
+    printability_custom_contact_tolerance_mm: FloatProperty(name="Contact Tolerance (mm)", default=0.05, min=0.000001, update=_mark_printability_profile_stale)
 
     repair_show_advanced: BoolProperty(name="Advanced Repair Settings", default=False)
     repair_merge_distance_mm: FloatProperty(name="Merge Distance (mm)", default=0.001, min=1e-9, max=1000.0, precision=6)

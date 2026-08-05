@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.4.0-alpha.1 - 2026-08-04
+
+- Added immutable world-space printability geometry facts and local schema-validated Generic FDM, Generic Resin, Bambu Lab X1 Carbon, Bambu Lab P1S, Prusa MK4, and Custom profiles.
+- Added bounded sampled wall-thickness estimates, conservative experimental thin-feature evidence, documented overhang analysis, floating-shell review, plate-contact/stability heuristics, and rectangular build-volume/scale advice.
+- Added deterministic virtual orientation candidates, conservative weighted scoring with critical caps, explicit confidence/evidence states, and bounded risk items.
+- Added stale-safe Printability panel analysis, evidence selection, and UTF-8 schema 1.0.0 JSON/Markdown reports without geometry, transform, orientation, or scale mutation.
+- Added 117 focused Blender tests, all-prior-sprint regression coverage, resumable per-mesh Dataset 1.0.0 acceptance, package assets/validation, and security checks.
+- Retained the advisory boundary: no slicing, supports, G-code, automatic transforms, manufacturing guarantee, runtime network, or external dependency.
+
 ## 0.3.0-alpha.1 - 2026-07-18
 
 - Added protected, independent repair workspaces with full source-state signatures and source checks before and after every operation.

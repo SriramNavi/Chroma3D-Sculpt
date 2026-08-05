@@ -1,12 +1,13 @@
-# Open Questions Before Sprint 3 Runtime Work
+# Open Calibration and Post-Sprint 3 Questions
 
-These questions are intentionally unresolved. They must not be silently turned
-into universal thresholds or product promises.
+These questions remain intentionally unresolved after the bounded Sprint 3
+implementation. They must not be silently turned into universal thresholds or
+product promises.
 
 1. What wall-thickness sampling density and ray offset remain stable across the
    Tiny through Extreme benchmark classes?
-2. Should local feature radius ship in the first Sprint 3 implementation, or
-   should only a conservative diameter proxy be exposed initially?
+2. What validated method should eventually replace or supplement Sprint 3's
+   conservative experimental connected-shell diameter proxy?
 3. How should generic resin thresholds be calibrated across printer, resin,
    layer height, orientation, wash, and cure settings?
 4. How should the support assumption be represented when a user intends to use

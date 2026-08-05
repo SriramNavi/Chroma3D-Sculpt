@@ -8,8 +8,11 @@
     "settings_schema_version", "performance_mode", "build_direction",
     "wall_sample_limit", "triangle_limit", "orientation_candidate_limit",
     "evidence_cap", "ray_origin_offset_mm", "maximum_wall_search_distance_mm",
-    "contact_tolerance_mm", "small_face_area_mm2", "support_assumption",
-    "weights_version", "cancellation_enabled"
+    "contact_tolerance_mm", "contact_region_tolerance_mm", "small_face_area_mm2",
+    "overhang_region_area_threshold_mm2", "opposing_normal_dot_max",
+    "exact_boundary_tolerance_mm", "principal_axis_candidates_enabled",
+    "planar_face_candidates_enabled", "sampled_candidates_enabled", "orientation_weights",
+    "support_assumption", "weights_version", "cancellation_enabled", "settings_hash"
   ],
   "properties": {
     "settings_schema_version": { "const": "1.0.0" },
@@ -26,9 +29,30 @@
     "ray_origin_offset_mm": { "type": "number", "exclusiveMinimum": 0 },
     "maximum_wall_search_distance_mm": { "type": "number", "exclusiveMinimum": 0 },
     "contact_tolerance_mm": { "type": "number", "exclusiveMinimum": 0 },
+    "contact_region_tolerance_mm": { "type": "number", "exclusiveMinimum": 0 },
     "small_face_area_mm2": { "type": "number", "minimum": 0 },
+    "overhang_region_area_threshold_mm2": { "type": "number", "minimum": 0 },
+    "opposing_normal_dot_max": { "type": "number", "minimum": -1, "exclusiveMaximum": 0 },
+    "exact_boundary_tolerance_mm": { "type": "number", "exclusiveMinimum": 0 },
+    "principal_axis_candidates_enabled": { "type": "boolean" },
+    "planar_face_candidates_enabled": { "type": "boolean" },
+    "sampled_candidates_enabled": { "type": "boolean" },
+    "orientation_weights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fit", "contact", "overhang", "floating", "height", "stability"],
+      "properties": {
+        "fit": { "type": "number", "minimum": 0 },
+        "contact": { "type": "number", "minimum": 0 },
+        "overhang": { "type": "number", "minimum": 0 },
+        "floating": { "type": "number", "minimum": 0 },
+        "height": { "type": "number", "minimum": 0 },
+        "stability": { "type": "number", "minimum": 0 }
+      }
+    },
     "support_assumption": { "enum": ["REVIEW_REQUIRED", "ASSUME_UNSUPPORTED", "ASSUME_SUPPORTED"] },
     "weights_version": { "const": "1.0.0" },
-    "cancellation_enabled": { "type": "boolean" }
+    "cancellation_enabled": { "type": "boolean" },
+    "settings_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
   }
 }
