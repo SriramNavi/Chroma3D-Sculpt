@@ -7,12 +7,12 @@
 ## 2. Environment and baseline
 
 - Repository: `E:\VPRS\Sriram\Projects\Chroma3D Sculpt`
-- Branch: `feature/sprint-3-printability-engine`
+- Branch: `feature/sprint-4-advanced-print-preparation`
 - Baseline: `c4bccfe4970f08171c7cb767d70c30c524600adf`
 - Blender path: `D:\Softwares\Design\Blender\blender.exe`
 - Blender: 4.4.3
 - Python: 3.11.11
-- Extension: 0.4.0-alpha.1
+- Extension: 0.5.0-alpha.1
 - Analysis / repair / printability schemas: 2.0 / 1.0 / 1.0.0
 - Dataset / Golden Benchmark: 1.0.0 / 1.0.0
 
@@ -24,7 +24,7 @@ Profile-driven geometry facts, bounded wall/feature/overhang/floating/contact/sc
 
 | Gate | Result | Evidence |
 |---|---|---|
-| S3-01 | PASS | Combined Sprint 0/1/2/3 suite passed 231 tests; analysis remains read-only. |
+| S3-01 | PASS | Combined Sprint 0/1/2/3 suite passed 368 tests; analysis remains read-only. |
 | S3-02 | PASS | 5 packaged profiles and custom validation passed. |
 | S3-03 | PASS | Known wall thickness, open-surface honesty, bounds, and immutability passed. |
 | S3-04 | PASS | Experimental connected-shell feature proxy boundaries and evidence caps passed. |
@@ -42,7 +42,7 @@ Profile-driven geometry facts, bounded wall/feature/overhang/floating/contact/sc
 
 ## 5. Regression and fixture evidence
 
-- Combined Sprint 0/1/2/3 tests: 231 run; 0 failures; 0 errors; per-file counts `{'test_mesh_analysis.py': 12, 'test_sprint1_diagnostics.py': 39, 'test_sprint2_repair.py': 59, 'test_sprint3_printability.py': 121}`.
+- Combined Sprint 0/1/2/3 tests: 368 run; 0 failures; 0 errors; per-file counts `{'test_mesh_analysis.py': 12, 'test_sprint1_diagnostics.py': 39, 'test_sprint2_repair.py': 59, 'test_sprint3_printability.py': 121, 'test_sprint4_advanced_preparation.py': 137}`.
 - Known 2.0 mm hollow-wall, 0.4 mm thin-wall/stem, open-surface, exact overhang-angle, suspended-shell, broad/multi/edge/point/no-contact, overflow/scale, deterministic orientation, scoring, stale-state, and report fixtures are covered by the production-path Blender suite.
 - Existing analysis schema 2.0 and repair audit schema 1.0 remain unchanged.
 
@@ -103,15 +103,15 @@ Profile-driven geometry facts, bounded wall/feature/overhang/floating/contact/sc
 ## 17. Performance
 
 - Dataset timings retained: 27
-- Dataset FAST minimum / median / p95 / maximum seconds: `1.6788304000001517` / `21.689461000001756` / `101.6128946999961` / `159.699950000002`.
-- Synthetic fixture timings: `{'cube': 0.002711600005568471, 'hollow_2mm': 0.003271499997936189, 'thin_0_4mm': 0.0026405000025988556, 'floating': 0.0031600000002072193, 'oversize': 0.0027377000005799346}`.
+- Dataset FAST minimum / median / p95 / maximum seconds: `1.482427100003406` / `42.820314399999916` / `244.0866862000039` / `359.93002340000385`.
+- Synthetic fixture timings: `{'cube': 0.002736399997957051, 'hollow_2mm': 0.003570200002286583, 'thin_0_4mm': 0.0022861999896122143, 'floating': 0.0036306999973021448, 'oversize': 0.00239280000096187}`.
 - FAST/STANDARD/DEEP sample, triangle, candidate, and evidence caps are enforced; skipped limits remain explicit.
 - Memory: Maximum external Get-Process checkpoint observed during the first isolated Dataset 1.0.0 FAST pass. This is a point observation, not a continuously sampled peak.
 
 ## 18. Package and security
 
-- Package: PASS — `E:\VPRS\Sriram\Projects\Chroma3D Sculpt\dist\chroma3d_sculpt-0.4.0-alpha.1.zip`
-- Files / size / SHA-256: 69 / 136392 / `9d2923e98b2d26829fe1f461b74c776a5e8073c9eb004ce202d201a1fe6a8b39`
+- Package: PASS — `E:\VPRS\Sriram\Projects\Chroma3D Sculpt\dist\chroma3d_sculpt-0.5.0-alpha.1.zip`
+- Files / size / SHA-256: 104 / 197280 / `7b43fb2fdb5c4a0adf565ecfc40911e816dcc43e2feafd02de8e3cbe91f11cae`
 - Compile / whitespace / Blender-native validator: `True` / `0` / `0`.
 - Security: PASS
 
@@ -148,7 +148,7 @@ No geometry or transform mutation, runtime network, external dependency, credent
 
 ## 24. Final decision and Git state
 
-**SPRINT 3 ACCEPTED** on branch `feature/sprint-3-printability-engine`; implementation changes remain intentionally uncommitted for review.
+**SPRINT 3 ACCEPTED** on branch `feature/sprint-4-advanced-print-preparation`; implementation changes remain intentionally uncommitted for review.
 
 ## Immediate next action
 

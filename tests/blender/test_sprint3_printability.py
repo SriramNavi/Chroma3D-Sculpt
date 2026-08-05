@@ -22,7 +22,7 @@ if str(ADDON_ROOT) not in sys.path:
     sys.path.insert(0, str(ADDON_ROOT))
 
 import chroma3d_sculpt  # noqa: E402
-from chroma3d_sculpt.metadata import DISPLAY_VERSION, PRINTABILITY_REPORT_SCHEMA_VERSION, REPAIR_AUDIT_SCHEMA_VERSION, SCHEMA_VERSION  # noqa: E402
+from chroma3d_sculpt.metadata import DISPLAY_VERSION, EXTENSION_VERSION, PRINTABILITY_REPORT_SCHEMA_VERSION, REPAIR_AUDIT_SCHEMA_VERSION, SCHEMA_VERSION  # noqa: E402
 from chroma3d_sculpt.models.printability_models import (  # noqa: E402
     ContactClassification,
     PrintabilityConfidence,
@@ -425,11 +425,11 @@ class Sprint3PrintabilityTests(unittest.TestCase):
         elif number == 113:
             runtime = "\n".join(path.read_text(encoding="utf-8") for path in (REPOSITORY_ROOT / "blender_addon" / "chroma3d_sculpt").rglob("*.py")); self.assertNotIn("requests.", runtime); self.assertNotIn("urllib.request", runtime)
         elif number == 114:
-            manifest = (REPOSITORY_ROOT / "blender_addon" / "chroma3d_sculpt" / "blender_manifest.toml").read_text(encoding="utf-8"); self.assertIn('version = "0.4.0"', manifest)
+            manifest = (REPOSITORY_ROOT / "blender_addon" / "chroma3d_sculpt" / "blender_manifest.toml").read_text(encoding="utf-8"); self.assertIn(f'version = "{EXTENSION_VERSION}"', manifest)
         elif number == 115:
             self.assertTrue(all(result.geometry_signature == geometry_signature(obj) for obj, result in ((self.cube, self.cube_result), (self.hollow, self.hollow_result), (self.thin, self.thin_result))))
         elif number == 116:
-            self.assertEqual(DISPLAY_VERSION, "0.4.0-alpha.1")
+            self.assertTrue(DISPLAY_VERSION.startswith(f"{EXTENSION_VERSION}-"))
         else:
             self.fail(f"Unknown Sprint 3 matrix case: {number}")
 

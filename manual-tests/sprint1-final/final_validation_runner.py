@@ -259,11 +259,23 @@ def _gate_static() -> dict[str, Any]:
     expected_operator_files = {
         "blender_addon/chroma3d_sculpt/operators/select_issue.py",
         "blender_addon/chroma3d_sculpt/operators/printability.py",
+        "blender_addon/chroma3d_sculpt/operators/advanced_preparation.py",
     }
+    mode_operator_files = expected_operator_files - {"blender_addon/chroma3d_sculpt/operators/advanced_preparation.py"}
     _require(
-        len(ops_hits) == 4
+        len(ops_hits) == 5
         and {path for path, _line in ops_hits} == expected_operator_files
-        and all('bpy.ops.object.mode_set(mode="OBJECT")' in line or 'bpy.ops.object.mode_set(mode="EDIT")' in line for _path, line in ops_hits),
+        and all(
+            (
+                path in mode_operator_files
+                and ('bpy.ops.object.mode_set(mode="OBJECT")' in line or 'bpy.ops.object.mode_set(mode="EDIT")' in line)
+            )
+            or (
+                path == "blender_addon/chroma3d_sculpt/operators/advanced_preparation.py"
+                and "bpy.ops.wm.path_open(filepath=str(path.parent))" in line
+            )
+            for path, line in ops_hits
+        ),
         f"Unexpected runtime bpy.ops calls: {ops_hits}",
     )
     manifest = (runtime / "blender_manifest.toml").read_text(encoding="utf-8")

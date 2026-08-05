@@ -1,0 +1,103 @@
+{
+  "bridge_risks": {
+    "candidate_count": 4,
+    "spans_mm": [
+      26573.2080078125,
+      19895.28875732422,
+      19895.288024902344,
+      19895.287658691406
+    ],
+    "state": "CRITICAL"
+  },
+  "confidence": "LOW",
+  "feature_flags": {
+    "baseline_generation": true,
+    "batch_analysis": true,
+    "bridge_risk": true,
+    "build_contact": true,
+    "dashboard_generation": true,
+    "experimental_flags": [
+      "resin_advisory",
+      "experimental_material_modifiers"
+    ],
+    "experimental_material_modifiers": false,
+    "flag_hash": "c7286e5a27f243f6e85fdda44022d51079045bdec0395ad3fcf24df400576bab",
+    "floating_components": true,
+    "orientation_recommendations": true,
+    "overhangs": true,
+    "resin_advisory": false,
+    "scale_evaluation": true,
+    "schema_version": "1.0",
+    "support_risk": true,
+    "thin_features": true,
+    "wall_thickness": true
+  },
+  "limitations": [
+    "Software-only advisory preparation; no print-success, support-free, bridge, adhesion, strength, time, usage, or physical calibration guarantee is made.",
+    "No geometry, transform, modifier, material, collection, visibility, object property, file-save state, support, slice, G-code, upload, or printer state is changed.",
+    "Orientation and scale comparisons are bounded mathematical previews and are never applied automatically."
+  ],
+  "model_id": "statue-asad-al-lat",
+  "orientation_candidates": [
+    {
+      "candidate_id": "orientation-81bb5e08a5d1",
+      "rank": 1,
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "candidate_id": "orientation-bd53834a22d4",
+      "rank": 2,
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "candidate_id": "orientation-8fc33ca31f44",
+      "rank": 3,
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "candidate_id": "orientation-67acfeb7a564",
+      "rank": 4,
+      "status": "NOT_APPLICABLE"
+    }
+  ],
+  "per_check_states": {
+    "advanced_scale": "WARNING",
+    "bridge_risk": "CRITICAL",
+    "build_plate_contact": "WARNING",
+    "build_volume_and_scale": "WARNING",
+    "floating_components": "WARNING",
+    "orientation": "PASS",
+    "orientation_comparison": "PASS",
+    "overhangs": "CRITICAL",
+    "resin_advisory": "NOT_EVALUATED",
+    "support_risk": "CRITICAL",
+    "thin_features": "PASS",
+    "topology_readiness": "WARNING",
+    "wall_thickness": "INDETERMINATE"
+  },
+  "process_context_hash": "be49dc53d0d974ef316caabcc6ef5984a46ecf89a669cf0a4ce1edeba697b8a1",
+  "resin_advisory_states": {},
+  "scale_interval": {
+    "maximum_percent": 0.19795355044780355,
+    "minimum_percent": 0.002508697911674357,
+    "state": "FEASIBLE"
+  },
+  "score": 49,
+  "source_sha256": "5748e4d150a370f34328ea768ced85ccafcaae6dd3c3891f2c0e80fb0a7a4ac8",
+  "status": "CRITICAL",
+  "support_risk_areas": {
+    "area_mm2": 8974751462.389532,
+    "area_percent": 20.49249853536567,
+    "region_count": 4,
+    "state": "CRITICAL"
+  },
+  "timings": {
+    "base_printability": 2.7043360999959987,
+    "bridge_risk": 0.43570130000443896,
+    "geometry_context": 1.5960144999990007,
+    "orientation_comparison": 0.00014289999671746045,
+    "resin_advisory": 0.0,
+    "support_risk": 0.0062356999987969175,
+    "total": 5.130333999994036
+  }
+}

@@ -7,11 +7,11 @@
 ## 2. Environment
 
 - Repository: `E:\VPRS\Sriram\Projects\Chroma3D Sculpt`
-- Branch: `feature/sprint-3-printability-engine`
+- Branch: `feature/sprint-4-advanced-print-preparation`
 - Baseline tag: `v0.1.0-alpha.1`
 - Blender: `4.4.3` at `D:\Softwares\Design\Blender\blender.exe`
 - Python launcher: `C:\Users\sriram\AppData\Local\Programs\Python\Python312\python.exe`
-- Version: `0.4.0-alpha.1`
+- Version: `0.5.0-alpha.1`
 
 ## 3. Git Baseline
 
@@ -20,25 +20,25 @@
 
 ## 4. Version
 
-- Extension: `0.4.0-alpha.1`
+- Extension: `0.5.0-alpha.1`
 - JSON schema: `2.0`
 
 ## 5. Gate Summary Table
 
 | Gate | Result | Duration |
 |---|---|---:|
-| S1-01 - Sprint 0 regression | PASS | 0.003s |
-| S1-02 - Topological watertightness | PASS | 0.014s |
-| S1-03 - Physical metrics | PASS | 0.005s |
-| S1-04 - Orientation | PASS | 0.009s |
-| S1-05 - Shell classification | PASS | 0.009s |
-| S1-06 - Internal-shell heuristic | PASS | 0.013s |
-| S1-07 - Self-intersection candidates | PASS | 0.009s |
-| S1-08 - Build-volume checks | PASS | 0.010s |
-| S1-09 - Issue selection | PASS | 0.004s |
-| S1-10 - Standard stress test | PASS | 111.719s |
-| S1-11 - Deep bounded diagnostics | PASS | 0.006s |
-| S1-12 - Report and package | PASS | 0.005s |
+| S1-01 - Sprint 0 regression | PASS | 0.002s |
+| S1-02 - Topological watertightness | PASS | 0.012s |
+| S1-03 - Physical metrics | PASS | 0.004s |
+| S1-04 - Orientation | PASS | 0.008s |
+| S1-05 - Shell classification | PASS | 0.006s |
+| S1-06 - Internal-shell heuristic | PASS | 0.012s |
+| S1-07 - Self-intersection candidates | PASS | 0.008s |
+| S1-08 - Build-volume checks | PASS | 0.009s |
+| S1-09 - Issue selection | PASS | 0.005s |
+| S1-10 - Standard stress test | PASS | 110.499s |
+| S1-11 - Deep bounded diagnostics | PASS | 0.009s |
+| S1-12 - Report and package | PASS | 0.007s |
 
 ## 6. Topology Results
 
@@ -73,8 +73,8 @@
 ## 13. Stress-Test Performance
 
 - V/E/F/T: `146968/293888/146950/293876`; shells: `15`.
-- Standard duration: `12902.206899998419` ms versus Sprint 0 evidence `5377.0` ms.
-- Timings: `{"object_metadata": 1029.298800000106, "geometry_metrics": 2111.6806999998516, "base_topology": 2865.6483000013395, "edge_manifold_classification": 151.68629999971017, "topology_defects": 1726.4790999979596, "vertex_manifold_classification": 1891.797200005385, "shell_decomposition": 195.02070000453386, "orientation_consistency": 151.68629999971017, "duplicate_position_detection": 2139.222300000256, "surface_area": 112.40230000112206, "volume": 221.6896000027191, "shell_metrics": 368.2563000038499, "tiny_shell_classification": 0.7340000011026859, "build_volume_evaluation": 0.02359999780310318, "self_intersection_candidate_detection": 0.0, "containment_analysis": 0.0, "total_analysis": 12902.206899998419}`
+- Standard duration: `13420.552200012025` ms versus Sprint 0 evidence `5377.0` ms.
+- Timings: `{"object_metadata": 1042.4339000019245, "geometry_metrics": 2120.5782999895746, "base_topology": 3198.78360000439, "edge_manifold_classification": 161.37849999358878, "topology_defects": 1750.924899999518, "vertex_manifold_classification": 1848.0009999912, "shell_decomposition": 200.10239999101032, "orientation_consistency": 161.37849999358878, "duplicate_position_detection": 2157.264800000121, "surface_area": 126.61540000408422, "volume": 255.87620001169853, "shell_metrics": 446.62240000616293, "tiny_shell_classification": 0.97490000189282, "build_volume_evaluation": 0.039699996705166996, "self_intersection_candidate_detection": 0.0, "containment_analysis": 0.0, "total_analysis": 13420.552200012025}`
 
 ## 14. Immutability Evidence
 
