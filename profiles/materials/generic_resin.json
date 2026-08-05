@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0", "profile_id": "generic_resin_material", "display_name": "Generic Resin", "material_family": "RESIN", "manufacturer": null,
+  "compatible_process_types": ["RESIN", "CUSTOM"], "source_classification": "CONSERVATIVE_HEURISTIC", "source_references": [], "confidence": "LOW",
+  "nozzle_range_mm": [0.01, 0.2], "layer_height_range_mm": [0.01, 0.2], "wall_thickness_multiplier": 1.0, "thin_feature_multiplier": 1.0,
+  "bridge_risk_modifier": 1.25, "overhang_risk_modifier": 1.2, "support_removal_risk": "HIGH", "warping_risk": "UNKNOWN",
+  "brittleness_risk": "HIGH", "adhesion_risk": "UNKNOWN", "dimensional_change_guidance": "Review resin-specific shrinkage, exposure, orientation, drainage, washing, and curing guidance from the actual manufacturer.",
+  "temperature_information": null, "user_editable_fields": ["nozzle_range_mm", "layer_height_range_mm", "wall_thickness_multiplier", "thin_feature_multiplier", "bridge_risk_modifier", "overhang_risk_modifier"],
+  "notes": ["The composed nozzle field acts only as a resolution-control placeholder for resin contexts; resin printers do not use an extrusion nozzle."],
+  "limitations": ["No exposure, suction, peel force, drainage, curing, or resin-flow simulation is performed."],
+  "created_at": "2026-08-05T00:00:00Z", "updated_at": "2026-08-05T00:00:00Z"
+}

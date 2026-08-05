@@ -1,6 +1,14 @@
 # Chroma3D Sculpt Architecture
 
-Chroma3D Sculpt 0.4.0-alpha.1 is a synchronous, local Blender extension with independent diagnostic, controlled-repair, and advisory-printability paths. Dependency direction is `UI -> operators -> coordinator -> focused services -> typed models/utilities`. Diagnostic services do not import repair or printability UI modules; repair and printability services reuse established diagnostics only through explicit data boundaries.
+Chroma3D Sculpt 0.5.0-alpha.1 is a synchronous, local Blender extension with independent diagnostic, controlled-repair, advisory-printability, and advanced-preparation paths. Dependency direction is `UI -> operators -> coordinator -> focused services -> typed models/utilities`. Diagnostic services do not import repair or printability UI modules; repair, printability, and advanced-preparation services reuse established facts only through explicit data boundaries.
+
+## Advanced preparation architecture
+
+Sprint 4 composes immutable hardware facts, a schema-validated generic material profile, nozzle, layer height, build plate, support policy, and user overrides into a deterministic process context. The context retains per-threshold provenance and feeds the unchanged Sprint 3 engine through a transient compatibility adapter; reports retain the original hardware and material snapshots separately.
+
+`advanced_preparation_coordinator.py` is the read-only orchestration boundary. It invokes bounded bridge, support, resin, scale, and orientation services; masks explicitly disabled checks as `NOT_EVALUATED`; verifies source/file-state immutability; and stores only JSON-safe evidence. `performance_registry.py` is the only Sprint 4 algorithm-limit registry. `feature_flags.py`, process hashes, build direction, source identity, settings, and registry version participate in stale-state rejection.
+
+Batch analysis is sequential and isolated per object, preserves partial failures, supports resume/cancellation between objects, and never shares geometry state. Baseline services bind 27 per-model records to source/process/flag/implementation hashes. The comparator preserves classification, score, timing, ranking, failure, and skip-state changes; the dashboard is static local HTML with embedded CSS/JavaScript and escaped user content.
 
 ## Printability architecture
 

@@ -5,7 +5,7 @@
 - Repository root: `E:\VPRS\Sriram\Projects\Chroma3D Sculpt`.
 - Primary platform: Windows 11 without administrator privileges.
 - Minimum runtime: Blender 4.4.0 and bundled Python; current validation is Blender 4.4.3.
-- Package: modern Blender Extension; manifest `0.3.0`, display `0.3.0-alpha.1`, analysis JSON schema `2.0`, repair audit schema `1.0`.
+- Package: modern Blender Extension; manifest `0.5.0`, display `0.5.0-alpha.1`, analysis JSON schema `2.0`, repair audit schema `1.0`, printability report schema `1.0.0`, and Advanced Preparation schema `1.0`.
 - Dependencies: public Blender APIs and Python standard library only.
 - Runtime paths must be dynamic; repository tooling must support quoted Windows paths containing spaces.
 
@@ -39,6 +39,15 @@
 - No source repair, unapproved deletion, transform application, modifier evaluation, automatic file save, network, telemetry, credentials, server, external service, AI API, downloaded code, `eval`, or `exec`.
 - Catch memory and Blender-context failures and preserve `FAILED` rather than inventing zero findings.
 - Avoid recursion, quadratic mesh passes, per-element logging, persistent handlers, and retained temporary BMesh/BVH data.
+
+## Sprint 4 advanced-preparation policy
+
+- Keep hardware facts separate from generic material/process heuristics; every effective threshold retains origin, provenance, confidence, and a deterministic context hash.
+- Disabled feature flags return `NOT_EVALUATED`; experimental flags require explicit user enablement and invalidate cached evidence.
+- All advanced limits come from the validated performance registry. `SKIPPED_LIMIT`, `INDETERMINATE`, and `FAILED` remain non-pass states.
+- Bridge/support/resin/scale/orientation results are advisory. Never generate supports, hollowing, drain holes, slices, G-code, uploads, printer commands, or automatic transforms.
+- Batch analysis is bounded, deterministic, source-isolated, resumable, and preserves partial failure evidence.
+- Printability Baseline 1.0.0 binds Dataset/Golden 1.0.0 plus source, implementation, process, material, flags, settings, and schema identities; it is not physically calibrated.
 
 ## Regression and release
 

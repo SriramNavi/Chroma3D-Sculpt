@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SriramNavi/Chroma3D-Sculpt/schemas/material-profile-1.0.json",
+  "title": "Chroma3D material profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "profile_id", "display_name", "material_family",
+    "compatible_process_types", "source_classification", "source_references",
+    "confidence", "nozzle_range_mm", "layer_height_range_mm",
+    "wall_thickness_multiplier", "thin_feature_multiplier", "bridge_risk_modifier",
+    "overhang_risk_modifier", "support_removal_risk", "warping_risk",
+    "brittleness_risk", "adhesion_risk", "dimensional_change_guidance",
+    "user_editable_fields", "notes", "created_at", "updated_at"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "profile_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]{2,63}$"},
+    "display_name": {"type": "string", "minLength": 1},
+    "material_family": {"enum": ["PLA", "PETG", "ABS", "ASA", "TPU", "RESIN", "CUSTOM"]},
+    "manufacturer": {"type": ["string", "null"]},
+    "compatible_process_types": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["FDM", "RESIN", "CUSTOM"]}},
+    "source_classification": {"enum": ["PROJECT_DEFAULT", "CONSERVATIVE_HEURISTIC", "USER_CONFIGURABLE"]},
+    "source_references": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^SRC-[0-9]{3}$"}},
+    "confidence": {"enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"]},
+    "nozzle_range_mm": {"$ref": "#/$defs/range"},
+    "layer_height_range_mm": {"$ref": "#/$defs/range"},
+    "wall_thickness_multiplier": {"$ref": "#/$defs/multiplier"},
+    "thin_feature_multiplier": {"$ref": "#/$defs/multiplier"},
+    "bridge_risk_modifier": {"$ref": "#/$defs/multiplier"},
+    "overhang_risk_modifier": {"$ref": "#/$defs/multiplier"},
+    "support_removal_risk": {"enum": ["LOW", "MEDIUM", "HIGH", "UNKNOWN"]},
+    "warping_risk": {"enum": ["LOW", "MEDIUM", "HIGH", "UNKNOWN"]},
+    "brittleness_risk": {"enum": ["LOW", "MEDIUM", "HIGH", "UNKNOWN"]},
+    "adhesion_risk": {"enum": ["LOW", "MEDIUM", "HIGH", "UNKNOWN"]},
+    "dimensional_change_guidance": {"type": "string", "minLength": 1},
+    "temperature_information": {"type": ["string", "null"]},
+    "user_editable_fields": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "notes": {"type": "array", "items": {"type": "string"}},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"}
+  },
+  "$defs": {
+    "range": {
+      "type": "array", "prefixItems": [{"type": "number", "exclusiveMinimum": 0}, {"type": "number", "exclusiveMinimum": 0}],
+      "items": false, "minItems": 2, "maxItems": 2
+    },
+    "multiplier": {"type": "number", "exclusiveMinimum": 0}
+  }
+}

@@ -9,11 +9,30 @@ from ..models.analysis_result import AnalysisResult
 def _mark_printability_profile_stale(self: bpy.types.PropertyGroup, _context: bpy.types.Context) -> None:
     if bool(getattr(self, "printability_has_result", False)):
         self.printability_state = "STALE_PROFILE"
+    if bool(getattr(self, "preparation_has_result", False)):
+        self.preparation_state = "STALE_HARDWARE_PROFILE"
 
 
 def _mark_printability_settings_stale(self: bpy.types.PropertyGroup, _context: bpy.types.Context) -> None:
     if bool(getattr(self, "printability_has_result", False)):
         self.printability_state = "STALE_SETTINGS"
+    if bool(getattr(self, "preparation_has_result", False)):
+        self.preparation_state = "STALE_PROCESS_CONTEXT"
+
+
+def _mark_preparation_material_stale(self: bpy.types.PropertyGroup, _context: bpy.types.Context) -> None:
+    if bool(getattr(self, "preparation_has_result", False)):
+        self.preparation_state = "STALE_MATERIAL_PROFILE"
+
+
+def _mark_preparation_context_stale(self: bpy.types.PropertyGroup, _context: bpy.types.Context) -> None:
+    if bool(getattr(self, "preparation_has_result", False)):
+        self.preparation_state = "STALE_PROCESS_CONTEXT"
+
+
+def _mark_preparation_flags_stale(self: bpy.types.PropertyGroup, _context: bpy.types.Context) -> None:
+    if bool(getattr(self, "preparation_has_result", False)):
+        self.preparation_state = "STALE_FEATURE_FLAGS"
 
 
 class CHROMA3D_PG_tiny_shell_candidate(bpy.types.PropertyGroup):
@@ -121,6 +140,51 @@ class CHROMA3D_PG_session_state(bpy.types.PropertyGroup):
     printability_custom_overhang_warning_deg: FloatProperty(name="Overhang Warning (deg)", default=45.0, min=0.001, max=90.0, update=_mark_printability_profile_stale)
     printability_custom_overhang_critical_deg: FloatProperty(name="Overhang Critical (deg)", default=30.0, min=0.001, max=90.0, update=_mark_printability_profile_stale)
     printability_custom_contact_tolerance_mm: FloatProperty(name="Contact Tolerance (mm)", default=0.05, min=0.000001, update=_mark_printability_profile_stale)
+
+    preparation_has_result: BoolProperty(name="Has advanced preparation result", default=False, options={"HIDDEN"})
+    preparation_state: StringProperty(name="Preparation state", default="NOT_RUN", options={"HIDDEN"})
+    preparation_status: StringProperty(name="Preparation status", default="", options={"HIDDEN"})
+    preparation_confidence: StringProperty(name="Preparation confidence", default="", options={"HIDDEN"})
+    preparation_last_result: StringProperty(name="Preparation duration", default="", options={"HIDDEN"})
+    preparation_batch_status: StringProperty(name="Batch status", default="NOT_RUN", options={"HIDDEN"})
+    preparation_batch_summary: StringProperty(name="Batch summary", default="", options={"HIDDEN"})
+    preparation_cancel_requested: BoolProperty(name="Cancel requested", default=False, options={"HIDDEN"})
+    preparation_baseline_path: StringProperty(name="Baseline path", default="", options={"HIDDEN"})
+    preparation_dashboard_path: StringProperty(name="Dashboard path", default="", options={"HIDDEN"})
+    preparation_material_profile: EnumProperty(
+        name="Material Profile",
+        items=(
+            ("generic_pla", "Generic PLA", "Project-default generic PLA; not physically calibrated"),
+            ("generic_petg", "Generic PETG", "Conservative generic PETG heuristic"),
+            ("generic_abs", "Generic ABS", "Conservative generic ABS heuristic"),
+            ("generic_asa", "Generic ASA", "Conservative generic ASA heuristic"),
+            ("generic_tpu", "Generic TPU", "Conservative generic TPU heuristic"),
+            ("generic_resin_material", "Generic Resin", "Experimental generic resin heuristic"),
+            ("custom_material", "Custom Material", "User-configured material behavior"),
+        ),
+        default="generic_pla", update=_mark_preparation_material_stale,
+    )
+    preparation_nozzle_mm: FloatProperty(name="Nozzle / Resolution (mm)", default=0.4, min=0.001, update=_mark_preparation_context_stale)
+    preparation_layer_height_mm: FloatProperty(name="Layer Height (mm)", default=0.2, min=0.001, update=_mark_preparation_context_stale)
+    preparation_build_plate_type: EnumProperty(
+        name="Build Plate", items=(("TEXTURED", "Textured", "Textured FDM plate"), ("SMOOTH", "Smooth", "Smooth FDM plate"), ("RESIN_PLATFORM", "Resin Platform", "Resin build platform"), ("OTHER", "Other", "Other profile-listed plate")),
+        default="TEXTURED", update=_mark_preparation_context_stale,
+    )
+    preparation_support_policy: EnumProperty(
+        name="Supports Policy", items=(("REVIEW_REQUIRED", "Review Required", "Do not assume support state"), ("ASSUME_UNSUPPORTED", "Assume Unsupported", "Evaluate as unsupported"), ("ASSUME_SUPPORTED", "Assume Supported", "Record an explicit supported-process assumption")),
+        default="REVIEW_REQUIRED", update=_mark_preparation_context_stale,
+    )
+    preparation_bridge_risk: BoolProperty(name="Bridge Risk", default=True, update=_mark_preparation_flags_stale)
+    preparation_support_risk: BoolProperty(name="Support Risk", default=True, update=_mark_preparation_flags_stale)
+    preparation_resin_advisory: BoolProperty(name="Resin Advisory (Experimental)", default=False, update=_mark_preparation_flags_stale)
+    preparation_baseline_enabled: BoolProperty(name="Baseline Comparison", default=True, update=_mark_preparation_flags_stale)
+    preparation_experimental_modifiers: BoolProperty(name="Experimental Material Modifiers", default=False, update=_mark_preparation_flags_stale)
+    preparation_custom_material_name: StringProperty(name="Material Name", default="Custom Material", update=_mark_preparation_material_stale)
+    preparation_custom_material_family: EnumProperty(name="Material Family", items=(("PLA", "PLA", "PLA"), ("PETG", "PETG", "PETG"), ("ABS", "ABS", "ABS"), ("ASA", "ASA", "ASA"), ("TPU", "TPU", "TPU"), ("RESIN", "Resin", "Resin"), ("CUSTOM", "Custom", "Custom")), default="CUSTOM", update=_mark_preparation_material_stale)
+    preparation_custom_wall_multiplier: FloatProperty(name="Wall Multiplier", default=1.0, min=0.001, update=_mark_preparation_material_stale)
+    preparation_custom_feature_multiplier: FloatProperty(name="Feature Multiplier", default=1.0, min=0.001, update=_mark_preparation_material_stale)
+    preparation_custom_bridge_modifier: FloatProperty(name="Bridge Modifier", default=1.0, min=0.001, update=_mark_preparation_material_stale)
+    preparation_custom_overhang_modifier: FloatProperty(name="Overhang Modifier", default=1.0, min=0.001, update=_mark_preparation_material_stale)
 
     repair_show_advanced: BoolProperty(name="Advanced Repair Settings", default=False)
     repair_merge_distance_mm: FloatProperty(name="Merge Distance (mm)", default=0.001, min=1e-9, max=1000.0, precision=6)

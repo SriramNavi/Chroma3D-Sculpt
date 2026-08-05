@@ -245,9 +245,9 @@ def build_custom_profile(overrides: dict[str, Any]) -> PrinterProfile:
     custom = deepcopy(data)
     for key, value in overrides.items():
         if key == "build_volume_mm" and isinstance(value, (tuple, list)) and len(value) == 3:
-            custom[key].update({"x": float(value[0]), "y": float(value[1]), "z": float(value[2])})
+            custom[key].update({"x": value[0], "y": value[1], "z": value[2]})
         elif key in custom and isinstance(custom[key], dict) and "value" in custom[key]:
-            custom[key]["value"] = float(value)
+            custom[key]["value"] = value
         elif key in {"manufacturer", "printer_model", "material_family", "notes", "process_type"}:
             custom[key] = value
         else:

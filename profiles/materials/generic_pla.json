@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0", "profile_id": "generic_pla", "display_name": "Generic PLA", "material_family": "PLA", "manufacturer": null,
+  "compatible_process_types": ["FDM", "CUSTOM"], "source_classification": "PROJECT_DEFAULT", "source_references": [], "confidence": "LOW",
+  "nozzle_range_mm": [0.2, 1.0], "layer_height_range_mm": [0.05, 0.4], "wall_thickness_multiplier": 1.0, "thin_feature_multiplier": 1.0,
+  "bridge_risk_modifier": 1.0, "overhang_risk_modifier": 1.0, "support_removal_risk": "LOW", "warping_risk": "LOW",
+  "brittleness_risk": "MEDIUM", "adhesion_risk": "LOW", "dimensional_change_guidance": "Review slicer compensation and measured calibration for the actual filament batch.",
+  "temperature_information": null, "user_editable_fields": ["nozzle_range_mm", "layer_height_range_mm", "wall_thickness_multiplier", "thin_feature_multiplier", "bridge_risk_modifier", "overhang_risk_modifier"],
+  "notes": ["Generic project default; not a manufacturer guarantee."], "limitations": ["Not physically calibrated for a specific printer, filament, slicer, or environment."],
+  "created_at": "2026-08-05T00:00:00Z", "updated_at": "2026-08-05T00:00:00Z"
+}

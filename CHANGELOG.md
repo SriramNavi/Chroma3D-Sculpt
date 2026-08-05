@@ -1,5 +1,35 @@
 # Changelog
 
+## 0.5.0-alpha.1 - 2026-08-05 (feature branch)
+
+### Added
+
+- Separate hardware and generic material profiles with schema 1.0 validation, provenance, compatibility checks, deterministic composition, and stale-result hashes.
+- Explicit feature flags and a central FAST/STANDARD/DEEP performance registry by mesh-size class and check type.
+- Advisory bridge-risk, support-risk, bounded resin geometry checks, material-aware scale intervals, improved orientation comparison with non-dominated candidates, and safe selected-object batch analysis.
+- Advanced Preparation JSON/Markdown reports, Printability Baseline 1.0.0, regression comparator modes, and a dependency-free offline HTML dashboard.
+- A 132-case Sprint 4 Blender matrix, resumable 27-model workers, acceptance tooling, package integration, and Advanced Preparation panel.
+
+### Safety
+
+- No Sprint 4 operation changes geometry, transforms, modifiers, materials, collections, visibility, properties, or file save state.
+- No support generation, slicing, G-code, network runtime, upload, automatic orientation/scale, or printer command exists.
+- Material, bridge, support, resin, scale, and orientation output remains advisory and is not physically calibrated.
+
+### Validation
+
+- Passed 363/363 combined Blender tests, including the 132-case Sprint 4 matrix.
+- Passed all 16 Sprint 4 acceptance gates and the fingerprint-bound Dataset 1.0.0 run for 27/27 immutable models.
+- Generated and self-compared 27 Printability Baseline 1.0.0 records plus the self-contained offline dashboard.
+- Passed package, repository, Blender-native, registration, security, and whitespace gates.
+- Sprint 0, Sprint 1, Sprint 1-final, Sprint 2, Sprint 3, and Sprint 3-final runners passed. Sprint 2-final retained one environment-sensitive performance warning: its realistic repair batch took 115.83s, and an isolated recheck took 106.69s, above the unchanged 60s gate; all other Sprint 2-final gates passed.
+
+### Known limitations
+
+- Generic material profiles are uncalibrated project defaults; bridge/support/resin output is bounded advisory evidence.
+- The dense Hizen Komainu Sprint 4 worker required 659.3s, so the resumable per-mesh evidence envelope is 900s and remains active performance debt.
+- Installed Advanced Preparation panel UAT, Blender 4.5 LTS, slicer comparison, material calibration, and physical printing remain deferred.
+
 ## 0.4.0-alpha.1 - 2026-08-04
 
 ### Added
