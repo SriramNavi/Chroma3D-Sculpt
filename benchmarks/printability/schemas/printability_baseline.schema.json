@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SriramNavi/Chroma3D-Sculpt/schemas/printability-baseline-1.0.0.json",
+  "title": "Chroma3D printability baseline",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "baseline_version", "status", "generated_at", "software", "dataset", "records", "physical_validation_status", "limitations"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "baseline_version": {"const": "1.0.0"},
+    "status": {"enum": ["PROPOSED", "FROZEN"]},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "software": {
+      "type": "object", "additionalProperties": false,
+      "required": ["extension_version", "report_schema_version", "profile_schema_version", "settings_schema_version", "scoring_policy_version", "implementation_fingerprint", "blender_version"],
+      "properties": {
+        "extension_version": {"type": "string"}, "report_schema_version": {"type": "string"}, "profile_schema_version": {"type": "string"},
+        "settings_schema_version": {"type": "string"}, "scoring_policy_version": {"type": "string"}, "implementation_fingerprint": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "blender_version": {"type": "string"}
+      }
+    },
+    "dataset": {"type": "object", "required": ["version", "manifest_sha256"], "additionalProperties": false, "properties": {"version": {"const": "1.0.0"}, "manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}},
+    "records": {"type": "array", "items": {"type": "object", "required": ["model_id", "source_sha256", "profile_id", "profile_hash", "settings_hash", "geometry_signature", "transform_signature", "check_states", "score", "status", "confidence", "timings", "limitations", "physical_run_ids"], "properties": {"model_id": {"type": "string"}, "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "profile_id": {"type": "string"}, "profile_hash": {"type": "string"}, "settings_hash": {"type": "string"}, "geometry_signature": {"type": "string"}, "transform_signature": {"type": "string"}, "check_states": {"type": "object"}, "score": {"type": ["integer", "null"]}, "status": {"type": "string"}, "confidence": {"type": "string"}, "timings": {"type": "object"}, "limitations": {"type": "array", "items": {"type": "string"}}, "physical_run_ids": {"type": "array", "items": {"type": "string"}}}}},
+    "physical_validation_status": {"enum": ["READY_FOR_PHYSICAL_EXECUTION", "PHYSICAL_EXECUTION_IN_PROGRESS", "PARTIALLY_PHYSICALLY_VALIDATED", "PHYSICAL_VALIDATION_COMPLETE", "PHYSICAL_VALIDATION_BLOCKED"]},
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  }
+}

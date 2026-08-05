@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "observation_id": "OBS-P35-00-model-id",
+  "run_id": "P35-00-model-id",
+  "operator_id": "TO_BE_RECORDED",
+  "observed_at": "2026-08-05T00:00:00Z",
+  "overall_disposition": "NOT_RUN",
+  "category_observations": {
+    "wall_thickness": {"state": "NOT_RUN", "outcomes": [], "severity": "NOT_RUN", "prediction_agreement": "NOT_RUN", "notes": ""},
+    "thin_features": {"state": "NOT_RUN", "outcomes": [], "severity": "NOT_RUN", "prediction_agreement": "NOT_RUN", "notes": ""},
+    "overhang": {"state": "NOT_RUN", "outcomes": [], "severity": "NOT_RUN", "prediction_agreement": "NOT_RUN", "notes": ""},
+    "contact_stability": {"state": "NOT_RUN", "outcomes": [], "severity": "NOT_RUN", "prediction_agreement": "NOT_RUN", "notes": ""},
+    "floating_components": {"state": "NOT_RUN", "outcomes": [], "severity": "NOT_RUN", "prediction_agreement": "NOT_RUN", "notes": ""}
+  },
+  "measurements": [],
+  "support_removal_notes": "",
+  "photos": [],
+  "cause_classification": "UNDETERMINED",
+  "notes": "No physical observation recorded."
+}

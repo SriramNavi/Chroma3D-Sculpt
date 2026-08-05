@@ -47,6 +47,12 @@ manual-tests/sprint3-final/reports/
 manual-tests/sprint3-final/logs/
 manual-tests/sprint3-final/artifacts/
 manual-tests/sprint3-final/screenshots/
+manual-tests/physical-print-validation/runs/
+manual-tests/physical-print-validation/photos/
+manual-tests/physical-print-validation/slicer-exports/
+manual-tests/physical-print-validation/reports/
+manual-tests/physical-print-validation/artifacts/
+manual-tests/physical-print-validation/print-packs/
 
 # Sprint 2.7 external validation payloads and release staging.
 datasets/statues/raw/

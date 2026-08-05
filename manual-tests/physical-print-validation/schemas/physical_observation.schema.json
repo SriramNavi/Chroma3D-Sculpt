@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SriramNavi/Chroma3D-Sculpt/schemas/physical-observation-1.0.0.json",
+  "title": "Chroma3D physical observation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "observation_id", "run_id", "operator_id", "observed_at", "overall_disposition", "category_observations", "measurements", "support_removal_notes", "photos", "cause_classification", "notes"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"}, "observation_id": {"type": "string", "minLength": 1}, "run_id": {"type": "string", "minLength": 1},
+    "operator_id": {"type": "string", "minLength": 1}, "observed_at": {"type": "string", "format": "date-time"},
+    "overall_disposition": {"enum": ["SUCCESS", "SUCCESS_WITH_MINOR_DEFECTS", "PARTIAL_FAILURE", "FAILURE", "INVALID_EXPERIMENT", "NOT_RUN"]},
+    "category_observations": {
+      "type": "object", "additionalProperties": false, "required": ["wall_thickness", "thin_features", "overhang", "contact_stability", "floating_components"],
+      "properties": {
+        "wall_thickness": {"$ref": "#/$defs/category"}, "thin_features": {"$ref": "#/$defs/category"}, "overhang": {"$ref": "#/$defs/category"},
+        "contact_stability": {"$ref": "#/$defs/category"}, "floating_components": {"$ref": "#/$defs/category"}
+      }
+    },
+    "measurements": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["feature_id", "category", "nominal_mm", "observed_mm", "tolerance_mm", "outcome"], "properties": {"feature_id": {"type": "string"}, "category": {"enum": ["wall_thickness", "thin_features", "other"]}, "nominal_mm": {"type": ["number", "null"]}, "observed_mm": {"type": ["number", "null"]}, "tolerance_mm": {"type": ["number", "null"], "minimum": 0}, "outcome": {"type": "string"}}}},
+    "support_removal_notes": {"type": "string"},
+    "photos": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["view", "path", "sha256", "caption", "captured_at"], "properties": {"view": {"enum": ["FRONT", "REAR", "SIDE", "PREDICTED_RISK_CLOSEUP", "BUILD_PLATE_BASE", "OTHER"]}, "path": {"type": "string", "minLength": 1}, "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "caption": {"type": "string", "minLength": 1}, "captured_at": {"type": "string", "format": "date-time"}}}},
+    "cause_classification": {"enum": ["ENGINE_DEFECT", "PROFILE_CALIBRATION", "SLICER_BEHAVIOR", "MATERIAL_BEHAVIOR", "PRINTER_SETUP", "OPERATOR_ERROR", "INVALID_EXPERIMENT", "UNDETERMINED"]},
+    "notes": {"type": "string"}
+  },
+  "$defs": {
+    "category": {
+      "type": "object", "additionalProperties": false,
+      "required": ["state", "outcomes", "severity", "prediction_agreement", "notes"],
+      "properties": {
+        "state": {"enum": ["OBSERVED", "INCONCLUSIVE", "NOT_RUN", "NOT_APPLICABLE"]},
+        "outcomes": {"type": "array", "items": {"type": "string"}},
+        "severity": {"enum": ["NONE", "MINOR", "MAJOR", "CRITICAL", "INCONCLUSIVE", "NOT_RUN"]},
+        "prediction_agreement": {"enum": ["AGREES", "DISAGREES", "PARTIAL", "INCONCLUSIVE", "NOT_RUN"]},
+        "notes": {"type": "string"}
+      }
+    }
+  }
+}

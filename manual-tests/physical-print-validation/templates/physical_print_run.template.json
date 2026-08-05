@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "P35-00-model-id",
+  "state": "PLANNED",
+  "created_at": "2026-08-05T00:00:00Z",
+  "model": {"dataset_version": "1.0.0", "model_id": "model-id", "title": "Model title", "license": "LICENSE", "source_url": "https://example.invalid/source", "source_path": ".validation-assets/dataset/raw/model.stl", "raw_sha256": "0000000000000000000000000000000000000000000000000000000000000000", "triangle_count": 1, "size_class": "TINY", "target_height_mm": 80.0, "unit_confirmation": "REQUIRED"},
+  "hardware": {"printer": "Bambu Lab X1 Carbon", "nozzle_mm": 0.4, "material": "TO_BE_RECORDED", "filament_batch": null, "build_plate_type": "TO_BE_RECORDED", "bed_preparation": "TO_BE_RECORDED"},
+  "print_setup": {"profile_id": "bambu_x1_carbon", "layer_height_mm": null, "scale_percent": null, "orientation": {"source": "TO_BE_RECORDED", "rotation_degrees": null}, "supports": "TO_BE_RECORDED", "support_settings_summary": "TO_BE_RECORDED", "estimated_duration_minutes": null, "estimated_material_grams": null},
+  "predictions": {"implementation_fingerprint": "0000000000000000000000000000000000000000000000000000000000000000", "profile_id": "generic_fdm", "mode": "FAST", "score": null, "status": "INDETERMINATE", "confidence": "UNKNOWN", "check_states": {"wall_thickness": "NOT_EVALUATED"}, "critical_risks": [], "warning_risks": [], "skipped_checks": ["wall_thickness"], "engine_report_json": null, "engine_report_markdown": null},
+  "slicer_evidence": {"state": "NOT_RUN", "slicer": null, "version": null, "settings_export": null, "screenshots": [], "warnings": []},
+  "evidence": {"engine_screenshots": [], "photo_manifest": null},
+  "observation_file": null,
+  "overall_disposition": "NOT_RUN"
+}
