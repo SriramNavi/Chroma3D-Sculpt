@@ -1,6 +1,10 @@
 # Chroma3D Sculpt Architecture
 
-Chroma3D Sculpt 0.5.0-alpha.1 is a synchronous, local Blender extension with independent diagnostic, controlled-repair, advisory-printability, and advanced-preparation paths. Dependency direction is `UI -> operators -> coordinator -> focused services -> typed models/utilities`. Diagnostic services do not import repair or printability UI modules; repair, printability, and advanced-preparation services reuse established facts only through explicit data boundaries.
+Chroma3D Sculpt 0.6.0-alpha.1 is a synchronous, local Blender extension with independent diagnostic, controlled-repair, advisory-printability, advanced-preparation, and controlled-optimization paths. Dependency direction is `UI -> operators -> coordinator -> focused services -> typed models/utilities`. Diagnostic services do not import repair or printability UI modules; optimization reuses stable evidence boundaries without merging into earlier coordinators.
+
+## Controlled Optimization architecture
+
+Sprint 5 is a bounded, reversible layer above the Sprint 2-4 services. `optimization_session.py` captures a protected source snapshot and owns an independent object, mesh datablock, collection, and checkpoint store. `optimization_candidates.py` and `optimization_plan.py` are read-only and bind evidence to process, feature, policy, objective, and implementation hashes. `optimization_operations.py` mutates only the owned workspace and restores the last valid checkpoint on failure. `optimization_comparison.py` retains missing/indeterminate evidence and conservative fidelity proxies; `optimization_audit.py` serializes JSON-safe identity, history, stale events, and outcomes. The panel exposes explicit session, plan, apply, undo, restore, accept-copy, discard, and export actions. No source replacement, automatic optimization, support generation, slicing, G-code, or printer command exists.
 
 ## Advanced preparation architecture
 

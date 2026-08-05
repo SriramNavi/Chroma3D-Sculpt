@@ -19,6 +19,7 @@ from time import perf_counter
 import traceback
 from unittest.mock import patch
 import zipfile
+import runpy
 
 import bpy
 
@@ -30,6 +31,8 @@ REPORT_ROOT = Path(__file__).resolve().parent / "reports"
 REPORT_PATH = REPORT_ROOT / "blender_gate_results.json"
 INITIAL_FAILURE_PATH = REPORT_ROOT / "initial_failure_results.json"
 PACKAGE_PATH = REPOSITORY_ROOT / "dist" / "chroma3d_sculpt-0.5.0-alpha.1.zip"
+_METADATA = runpy.run_path(str(ADDON_ROOT / "chroma3d_sculpt" / "metadata.py"))
+PACKAGE_PATH = REPOSITORY_ROOT / "dist" / f"chroma3d_sculpt-{_METADATA['DISPLAY_VERSION']}.zip"
 if str(ADDON_ROOT) not in sys.path:
     sys.path.insert(0, str(ADDON_ROOT))
 if str(TEST_ROOT) not in sys.path:

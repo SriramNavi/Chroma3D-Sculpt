@@ -22,7 +22,7 @@ if str(ADDON_ROOT) not in sys.path:
 import chroma3d_sculpt  # noqa: E402
 from chroma3d_sculpt.feature_flags import DEFAULT_FLAGS, build_feature_flags  # noqa: E402
 from chroma3d_sculpt.metadata import (  # noqa: E402
-    ADVANCED_PREPARATION_REPORT_SCHEMA_VERSION, DISPLAY_VERSION, FEATURE_FLAG_SCHEMA_VERSION,
+    ADVANCED_PREPARATION_REPORT_SCHEMA_VERSION, DISPLAY_VERSION, EXTENSION_VERSION, FEATURE_FLAG_SCHEMA_VERSION,
     MATERIAL_PROFILE_SCHEMA_VERSION, PERFORMANCE_REGISTRY_VERSION, PRINTABILITY_BASELINE_VERSION,
     PRINTABILITY_REPORT_SCHEMA_VERSION, REPAIR_AUDIT_SCHEMA_VERSION, SCHEMA_VERSION,
 )
@@ -410,7 +410,7 @@ class Sprint4AdvancedPreparationTests(unittest.TestCase):
         elif number == 131:
             self.assertEqual(PRINTABILITY_REPORT_SCHEMA_VERSION, "1.0.0")
         elif number == 132:
-            manifest = (ADDON_ROOT / "chroma3d_sculpt" / "blender_manifest.toml").read_text(encoding="utf-8"); self.assertIn('version = "0.5.0"', manifest); self.assertEqual(DISPLAY_VERSION, "0.5.0-alpha.1")
+            manifest = (ADDON_ROOT / "chroma3d_sculpt" / "blender_manifest.toml").read_text(encoding="utf-8"); self.assertIn(f'version = "{EXTENSION_VERSION}"', manifest); self.assertEqual(DISPLAY_VERSION, f"{EXTENSION_VERSION}-alpha.1")
         else:
             self.fail(f"Unhandled Sprint 4 test case {number}")
 

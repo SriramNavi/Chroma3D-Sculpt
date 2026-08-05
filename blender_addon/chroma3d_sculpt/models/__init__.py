@@ -203,3 +203,19 @@ __all__ = (
     "SupportRiskRegion",
     "SupportRiskResult",
 )
+
+from .optimization_models import (
+    AcceptanceRecord, CandidateEvaluation, CandidateGeometryOperation, CandidateTransform, ComparisonClassification,
+    DiscardRecord, FidelityStatus, ObjectiveDelta, ObjectiveSnapshot, ObjectiveWeight, OptimizationAudit,
+    OptimizationCandidate, OptimizationCheckpoint, OptimizationComparison, OptimizationConfidence, OptimizationOperationRecord,
+    OptimizationOperationState, OptimizationOperationType, OptimizationObjective, OptimizationPlan, OptimizationPlanStep,
+    OptimizationPolicy, OptimizationPolicySnapshot, OptimizationSession, OptimizationSessionState, RiskDelta,
+)
+
+__all__ += (
+    "AcceptanceRecord", "CandidateEvaluation", "CandidateGeometryOperation", "CandidateTransform", "ComparisonClassification",
+    "DiscardRecord", "FidelityStatus", "ObjectiveDelta", "ObjectiveSnapshot", "ObjectiveWeight", "OptimizationAudit",
+    "OptimizationCandidate", "OptimizationCheckpoint", "OptimizationComparison", "OptimizationConfidence", "OptimizationOperationRecord",
+    "OptimizationOperationState", "OptimizationOperationType", "OptimizationObjective", "OptimizationPlan", "OptimizationPlanStep",
+    "OptimizationPolicy", "OptimizationPolicySnapshot", "OptimizationSession", "OptimizationSessionState", "RiskDelta",
+)

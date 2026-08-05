@@ -14,6 +14,7 @@ import sys
 from time import perf_counter
 from typing import Any
 import zipfile
+import runpy
 
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
@@ -27,6 +28,8 @@ INITIAL_FAILURE_REPORT = REPORT_ROOT / "initial_failure_results.json"
 MARKDOWN_REPORT = FINAL_ROOT / "FINAL_VALIDATION_RESULTS.md"
 RUNNER = FINAL_ROOT / "final_validation_runner.py"
 PACKAGE_PATH = REPOSITORY_ROOT / "dist" / "chroma3d_sculpt-0.5.0-alpha.1.zip"
+_METADATA = runpy.run_path(str(REPOSITORY_ROOT / "blender_addon" / "chroma3d_sculpt" / "metadata.py"))
+PACKAGE_PATH = REPOSITORY_ROOT / "dist" / f"chroma3d_sculpt-{_METADATA['DISPLAY_VERSION']}.zip"
 
 
 def utcnow() -> str:

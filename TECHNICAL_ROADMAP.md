@@ -6,6 +6,10 @@
 - Safe, reversible repair precedes optimization or automated creation.
 - Real-model evidence precedes AI recommendations and commercial claims.
 - The deterministic geometry core remains local and offline-capable.
+
+## Sprint 5 controlled optimization
+
+Sprint 5 (`0.6.0-alpha.1`) adds a separate optimization coordinator above diagnostics, Safe Repair, and Advanced Preparation. The implementation is deterministic and bounded by `performance_registry.py` and the versioned optimization policy. It uses source/workspace/process/policy/objective/implementation fingerprints for stale rejection, independent mesh checkpoints for rollback, explicit operation approval, conservative comparison/fidelity proxies, and JSON/Markdown audit output. Experimental remesh is deferred; decimation is disabled by default. Full-corpus optimization, historical acceptance, installed-panel UAT, physical printing, slicer comparison, material calibration, and Blender 4.5 LTS remain evidence tasks rather than inferred passes.
 - A backend is introduced only when licensing, collaboration, asset delivery, AI routing, or another validated need requires it.
 - Commercial systems follow demonstrated product value and production UAT.
 - Every milestone has automated, manual, performance, safety, and evidence gates appropriate to its risk.
@@ -503,20 +507,21 @@ Each decision must be reevaluated against differentiation, total cost, privacy, 
 
 ## Immediate Next Milestone
 
-Sprint 4 implementation and automated evidence are complete on the feature branch. Before promotion:
+Sprint 5 implementation and automated evidence are complete on the feature branch. Before promotion:
 
 - Review the Sprint 2 and Golden Benchmark machine/Markdown evidence.
 - Perform an installed-package interactive Blender panel smoke test.
 - Repair at least one permissioned real Chroma3D statue under operator review and retain evidence.
 - Validate Blender 4.5 LTS when that runtime is available.
 - Review Sprint 4's bounded advisory limitations and generated evidence.
-- Manually smoke-test the installed `0.5.0-alpha.1` Advanced Preparation panel.
+- Manually smoke-test the installed `0.6.0-alpha.1` Controlled Optimization panel and retain the exportable audit.
+- Review Sprint 5's explicit-operation, stale-state, checkpoint, comparison, and acceptance/discard evidence.
 - Review Sprint 3 and Sprint 4 sampled/heuristic methods against future slicer
   and physical-print outcomes without treating those deferred activities as
   current acceptance evidence.
 
-Do not begin Sprint 5 or promote `0.5.0-alpha.1` until the Sprint 4 evidence and
-deferred manual gates are reviewed.
+Do not promote `0.6.0-alpha.1` until the Sprint 5 evidence and deferred manual
+gates are reviewed.
 
 ## Sprint 2.7 — Dataset Storage Architecture
 

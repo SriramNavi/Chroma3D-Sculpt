@@ -6,13 +6,15 @@ import bpy
 from bpy.props import PointerProperty
 
 from .metadata import DISPLAY_VERSION, EXTENSION_NAME, EXTENSION_VERSION
-from .operators import ADVANCED_PREPARATION_CLASSES, ANALYZE_CLASSES, EXPORT_CLASSES, PRINTABILITY_CLASSES, REPAIR_CLASSES, SELECTION_CLASSES
+from .operators import ADVANCED_PREPARATION_CLASSES, ANALYZE_CLASSES, EXPORT_CLASSES, OPTIMIZATION_CLASSES, PRINTABILITY_CLASSES, REPAIR_CLASSES, SELECTION_CLASSES
 from .session import clear as clear_session
 from .services.repair_session import clear_runtime as clear_repair_runtime
 from .services.printability_session import clear_runtime as clear_printability_runtime
 from .services.advanced_preparation_session import clear_runtime as clear_preparation_runtime
 from .services.batch_preparation_session import clear_runtime as clear_batch_runtime
-from .ui import ADVANCED_PREPARATION_PANEL_CLASSES, PANEL_CLASSES, PRINTABILITY_PANEL_CLASSES, PROPERTY_CLASSES, REPAIR_PANEL_CLASSES, SESSION_STATE_CLASS
+from .services.optimization_session import clear_runtime as clear_optimization_runtime
+from .services.optimization_workspace import clear_runtime as clear_optimization_workspace_runtime
+from .ui import ADVANCED_PREPARATION_PANEL_CLASSES, OPTIMIZATION_PANEL_CLASSES, PANEL_CLASSES, PRINTABILITY_PANEL_CLASSES, PROPERTY_CLASSES, REPAIR_PANEL_CLASSES, SESSION_STATE_CLASS
 from .utilities.logging import get_logger
 
 bl_info = {
@@ -26,7 +28,7 @@ bl_info = {
 }
 
 logger = get_logger()
-_RUNTIME_CLASSES = ANALYZE_CLASSES + EXPORT_CLASSES + SELECTION_CLASSES + REPAIR_CLASSES + PRINTABILITY_CLASSES + ADVANCED_PREPARATION_CLASSES + PANEL_CLASSES + REPAIR_PANEL_CLASSES + PRINTABILITY_PANEL_CLASSES + ADVANCED_PREPARATION_PANEL_CLASSES
+_RUNTIME_CLASSES = ANALYZE_CLASSES + EXPORT_CLASSES + SELECTION_CLASSES + REPAIR_CLASSES + PRINTABILITY_CLASSES + ADVANCED_PREPARATION_CLASSES + OPTIMIZATION_CLASSES + PANEL_CLASSES + REPAIR_PANEL_CLASSES + PRINTABILITY_PANEL_CLASSES + ADVANCED_PREPARATION_PANEL_CLASSES + OPTIMIZATION_PANEL_CLASSES
 
 
 def register() -> None:
@@ -60,4 +62,6 @@ def unregister() -> None:
     clear_printability_runtime()
     clear_preparation_runtime()
     clear_batch_runtime()
+    clear_optimization_runtime()
+    clear_optimization_workspace_runtime()
     logger.info("Chroma3D Sculpt unregistered")

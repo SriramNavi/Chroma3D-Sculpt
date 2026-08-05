@@ -31,7 +31,7 @@ from chroma3d_sculpt.metadata import (  # noqa: E402
     REPAIR_AUDIT_SCHEMA_VERSION, SCHEMA_VERSION,
 )
 from chroma3d_sculpt.models.advanced_preparation_models import PrintabilityBaselineRecord  # noqa: E402
-from chroma3d_sculpt.performance_registry import REGISTRY, validate_registry  # noqa: E402
+from chroma3d_sculpt.performance_registry import CHECK_TYPES, REGISTRY, validate_registry  # noqa: E402
 from chroma3d_sculpt.services.hardware_profile_loader import load_hardware_profile, validate_all_hardware_profiles  # noqa: E402
 from chroma3d_sculpt.services.material_profile_loader import build_custom_material_profile, load_material_profile, validate_all_material_profiles  # noqa: E402
 from chroma3d_sculpt.services.printability_baseline import (  # noqa: E402
@@ -202,7 +202,7 @@ def main() -> int:
         gate("S4-01", "Architecture and safety", tests["passed"] and security["status"] == "PASS", security),
         gate("S4-02", "Hardware/material profiles", profiles == {"hardware": 5, "material": 6, "custom": "custom_material"}, profiles),
         gate("S4-03", "Feature flags", advanced_test_count >= 132, {"schema": "1.0", "tests": advanced_test_count}),
-        gate("S4-04", "Performance registry", len(REGISTRY) == 3 * 6 * 11, {"version": PERFORMANCE_REGISTRY_VERSION, "entries": len(REGISTRY)}),
+        gate("S4-04", "Performance registry", len(REGISTRY) == 3 * 6 * len(CHECK_TYPES), {"version": PERFORMANCE_REGISTRY_VERSION, "entries": len(REGISTRY), "check_types": len(CHECK_TYPES)}),
         gate("S4-05", "Bridge risk", advanced_test_count >= 132 and fixture["bridge"]["region_count"] > 0 and fixture["bridge"]["two_sided_regions"] > 0, fixture["bridge"]),
         gate("S4-06", "Support risk", advanced_test_count >= 132 and fixture["support"]["region_count"] > 0, fixture["support"]),
         gate("S4-07", "Resin advisory", advanced_test_count >= 132 and fixture["resin"]["experimental"], fixture["resin"]),
