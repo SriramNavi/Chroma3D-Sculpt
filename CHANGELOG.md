@@ -2,12 +2,32 @@
 
 ## 0.4.0-alpha.1 - 2026-08-04
 
-- Added immutable world-space printability geometry facts and local schema-validated Generic FDM, Generic Resin, Bambu Lab X1 Carbon, Bambu Lab P1S, Prusa MK4, and Custom profiles.
-- Added bounded sampled wall-thickness estimates, conservative experimental thin-feature evidence, documented overhang analysis, floating-shell review, plate-contact/stability heuristics, and rectangular build-volume/scale advice.
-- Added deterministic virtual orientation candidates, conservative weighted scoring with critical caps, explicit confidence/evidence states, and bounded risk items.
-- Added stale-safe Printability panel analysis, evidence selection, and UTF-8 schema 1.0.0 JSON/Markdown reports without geometry, transform, orientation, or scale mutation.
-- Added 117 focused Blender tests, all-prior-sprint regression coverage, resumable per-mesh Dataset 1.0.0 acceptance, package assets/validation, and security checks.
-- Retained the advisory boundary: no slicing, supports, G-code, automatic transforms, manufacturing guarantee, runtime network, or external dependency.
+### Added
+
+- Added the profile-driven Printability Engine with schema-validated Generic FDM, Generic Resin, Bambu Lab X1 Carbon, Bambu Lab P1S, Prusa MK4, and validated Custom printer/process profiles.
+- Added immutable world-space geometry facts, bounded sampled wall-thickness estimates, a conservative thin-feature risk proxy, overhang analysis, floating-component analysis, build-plate contact classification, and build-volume/scale evaluation.
+- Added deterministic virtual orientation recommendations and conservative weighted risk scoring with critical caps and explicit confidence/evidence states.
+- Added stale-result protection, bounded evidence selection, UTF-8 schema 1.0.0 JSON/Markdown reports, and the native Blender Printability panel.
+- Added the Sprint 3.5 physical validation framework with print job cards, calibration coupons, observation schemas, calibration comparison tooling, and a governed printability baseline policy.
+
+### Safety
+
+- Printability analysis is read-only and does not mutate geometry or transforms.
+- No automatic scaling or orientation application, support generation, slicing, G-code generation, runtime network access, or print-success guarantee is provided.
+
+### Validation
+
+- Passed 231/231 combined Blender tests, including 121/121 focused Sprint 3 tests and the historical Sprint 0/1/2 regressions.
+- Passed 15/15 Sprint 3 acceptance gates and 13/13 independent Sprint 3 final-validation gates.
+- Passed Dataset 1.0.0 validation for 27/27 models while preserving source hashes, geometry signatures, and source immutability.
+- Passed the isolated installed-package smoke, package validators, and package security checks.
+
+### Known limitations
+
+- Wall thickness is sampled and estimated; the thin-feature check is a conservative connected-shell proxy that does not recognize local merged features.
+- Contact stability remains heuristic, and bounded orientation recommendations are not globally optimal.
+- Physical validation and resin calibration are pending; real slicer comparison has not been run.
+- Blender 4.5 LTS validation and manual installed-panel interaction remain pending.
 
 ## 0.3.0-alpha.1 - 2026-07-18
 
