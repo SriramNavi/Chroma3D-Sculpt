@@ -5,6 +5,7 @@ from __future__ import annotations
 from pathlib import Path
 import sys
 import tempfile
+import tomllib
 import unittest
 
 import bpy
@@ -15,7 +16,7 @@ if str(ADDON_ROOT) not in sys.path:
     sys.path.insert(0, str(ADDON_ROOT))
 
 import chroma3d_sculpt  # noqa: E402
-from chroma3d_sculpt.metadata import DISPLAY_VERSION  # noqa: E402
+from chroma3d_sculpt.metadata import DISPLAY_VERSION, EXTENSION_VERSION, STAGE_LABEL  # noqa: E402
 from chroma3d_sculpt.models.optimization_models import (  # noqa: E402
     ComparisonClassification, OptimizationOperationState, OptimizationOperationType, OptimizationPolicy,
     OptimizationSessionState, ObjectiveWeight, OptimizationObjective,
@@ -109,7 +110,9 @@ class Sprint5ControlledOptimizationTests(unittest.TestCase):
         bpy.context.view_layer.objects.active = self.source
 
     def test_01_version_and_schema_models(self):
-        self.assertEqual(DISPLAY_VERSION, "0.6.0-alpha.1")
+        manifest = tomllib.loads((ADDON_ROOT / "chroma3d_sculpt" / "blender_manifest.toml").read_text(encoding="utf-8"))
+        self.assertEqual(manifest["version"], EXTENSION_VERSION)
+        self.assertEqual(DISPLAY_VERSION, f"{EXTENSION_VERSION}-{STAGE_LABEL}")
         self.assertEqual(default_policy().policy_version, "1.0")
         self.assertEqual(build_objective_snapshot().objective_hash, build_objective_snapshot().objective_hash)
 
@@ -391,7 +394,6 @@ class Sprint5ControlledOptimizationTests(unittest.TestCase):
             self.assertNotIn("chroma3d.optimize_automatically", registered_names)
             self.assertNotIn("chroma3d.send_to_printer", registered_names)
             return
-        self.assertEqual(DISPLAY_VERSION, "0.6.0-alpha.1")
         self.assertEqual(default_policy().policy_version, "1.0")
         self.assertTrue((REPOSITORY_ROOT / "schemas" / "optimization_plan.schema.json").is_file())
 
