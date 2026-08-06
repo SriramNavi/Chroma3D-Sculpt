@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "chroma3d://schemas/sprint7-draft/ai-recommendation/0.1.0-draft",
+  "title": "Chroma3D Sprint 7 Draft AI Recommendation",
+  "$comment": "DRAFT ONLY. Recommendations reference existing deterministic candidates or strategies and are never executable code.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["draft", "schema_version", "response_id", "request_hash", "context_hash", "recommendations", "overall_assumptions", "overall_limitations", "advisory_disclaimer", "evidence_states", "provenance", "limitations"],
+  "properties": {
+    "draft": {"const": true},
+    "schema_version": {"const": "0.1.0-draft"},
+    "response_id": {"$ref": "#/$defs/id"},
+    "request_hash": {"$ref": "#/$defs/hash"},
+    "context_hash": {"$ref": "#/$defs/hash"},
+    "recommendations": {"type": "array", "minItems": 1, "maxItems": 32, "items": {"$ref": "#/$defs/recommendation"}},
+    "overall_assumptions": {"$ref": "#/$defs/textList"},
+    "overall_limitations": {"$ref": "#/$defs/limitations"},
+    "advisory_disclaimer": {"type": "string", "minLength": 1, "maxLength": 1024},
+    "evidence_states": {"$ref": "#/$defs/evidenceStates"},
+    "provenance": {"$ref": "#/$defs/provenance"},
+    "limitations": {"$ref": "#/$defs/limitations"}
+  },
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,31}:[0-9a-f-]{32,64}$"},
+    "hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "recommendation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["recommendation_id", "rank", "action", "target", "operation_echo", "reason", "assumptions", "confidence", "unmet_prerequisites", "evidence_links", "limitations", "approval_required"],
+      "properties": {
+        "recommendation_id": {"$ref": "#/$defs/id"},
+        "rank": {"type": "integer", "minimum": 1, "maximum": 32},
+        "action": {"enum": ["NO_ACTION", "REQUEST_FRESH_ANALYSIS", "RECOMMEND_EXISTING_CANDIDATE", "RECOMMEND_EXISTING_STRATEGY"]},
+        "target": {"type": ["object", "null"], "additionalProperties": false, "required": ["kind", "id", "fingerprint"], "properties": {"kind": {"enum": ["CANDIDATE", "STRATEGY"]}, "id": {"type": "string", "minLength": 1, "maxLength": 128}, "fingerprint": {"$ref": "#/$defs/hash"}}},
+        "operation_echo": {"type": "array", "maxItems": 8, "items": {"type": "object", "additionalProperties": false, "required": ["operation", "candidate_id", "parameter_hash"], "properties": {"operation": {"enum": ["UNIFORM_SCALE", "ORIENTATION", "BUILD_PLATE_TRANSLATION", "BASE_STABILIZATION", "REPAIR_REUSE", "DECIMATION", "COMBINED_SCALE_ORIENTATION"]}, "candidate_id": {"type": "string", "minLength": 1, "maxLength": 128}, "parameter_hash": {"$ref": "#/$defs/hash"}}},
+        "reason": {"type": "string", "minLength": 1, "maxLength": 2048},
+        "assumptions": {"$ref": "#/$defs/textList"},
+        "confidence": {"enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"]},
+        "unmet_prerequisites": {"$ref": "#/$defs/textList"},
+        "evidence_links": {"type": "array", "maxItems": 2048, "uniqueItems": true, "items": {"type": "string", "minLength": 1, "maxLength": 128}},
+        "limitations": {"$ref": "#/$defs/limitations"},
+        "approval_required": {"type": "boolean"}
+      }
+    },
+    "textList": {"type": "array", "maxItems": 128, "items": {"type": "string", "minLength": 1, "maxLength": 1024}},
+    "evidenceState": {"enum": ["PASS", "WARNING", "FAIL", "SKIPPED_LIMIT", "NOT_EVALUATED", "INDETERMINATE", "NOT_APPLICABLE", "STALE", "CANCELLED", "BUDGET_EXHAUSTED"]},
+    "evidenceStates": {"type": "array", "minItems": 1, "maxItems": 10, "uniqueItems": true, "items": {"$ref": "#/$defs/evidenceState"}},
+    "provenance": {"type": "array", "minItems": 1, "maxItems": 64, "items": {"type": "object", "additionalProperties": false, "required": ["source_id", "classification"], "properties": {"source_id": {"type": "string", "minLength": 1, "maxLength": 128}, "classification": {"enum": ["PROVIDER_OUTPUT", "LOCAL_VALIDATION", "REPOSITORY_EVIDENCE"]}}}},
+    "limitations": {"type": "array", "maxItems": 128, "items": {"type": "string", "minLength": 1, "maxLength": 1024}}
+  }
+}
+}

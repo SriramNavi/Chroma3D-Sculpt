@@ -13,7 +13,7 @@ Sprint 5 (`0.6.0-alpha.1`) adds a separate optimization coordinator above diagno
 
 ## Sprint 6 Intelligent Optimization
 
-Sprint 6 (`0.7.0-alpha.1`) adds a deterministic rule-based strategy layer above Sprint 5. Search modes are bounded by the centralized performance registry; strategy generation reuses Sprint 5 candidates; hard/soft constraints fail closed; objective vectors keep raw values, normalization, direction, and evidence state visible; Pareto construction records dominance reasons; ranking records objective contributions and tie-breaks; explanations disclose measured versus estimated versus skipped evidence; and local history supports explicit reruns without hidden learning. Only a selected strategy may reach the Sprint 5 isolated workspace, and accept/discard semantics remain unchanged. Sprint 7 is not started.
+Sprint 6 (`0.7.0-alpha.1`) adds a deterministic rule-based strategy layer above Sprint 5. Search modes are bounded by the centralized performance registry; strategy generation reuses Sprint 5 candidates; hard/soft constraints fail closed; objective vectors keep raw values, normalization, direction, and evidence state visible; Pareto construction records dominance reasons; ranking records objective contributions and tie-breaks; explanations disclose measured versus estimated versus skipped evidence; and local history supports explicit reruns without hidden learning. Only a selected strategy may reach the Sprint 5 isolated workspace, and accept/discard semantics remain unchanged. Sprint 6 is frozen; the Sprint 7 specification is prepared, but Sprint 7 runtime implementation has not started.
 - A backend is introduced only when licensing, collaboration, asset delivery, AI routing, or another validated need requires it.
 - Commercial systems follow demonstrated product value and production UAT.
 - Every milestone has automated, manual, performance, safety, and evidence gates appropriate to its risk.
@@ -325,6 +325,8 @@ Assets pass visual/domain review, metadata and rights validation, Blender compat
 
 **Objective:** Evaluate bounded AI-assisted recommendations without allowing a model to control Blender or define geometry correctness.
 
+**Specification status:** The [Sprint 7 Engineering Specification](SPRINT7_SPECIFICATION.md) is prepared with draft-only schemas, traceable requirements, safety/state/algorithm contracts, tests, dataset/performance plans, and acceptance gates. `0.8.0-alpha.1` is a proposal only. No provider, backend, network runtime, model call, Blender operator/panel, packaged schema, or metadata change is implemented. Provider/model/deployment/retention/cost decisions remain gated with live adapters disabled by default.
+
 ### Scope
 
 - A backend decision gate based on privacy, cost, latency, licensing, update, and support requirements.
@@ -340,6 +342,8 @@ Assets pass visual/domain review, metadata and rights validation, Blender compat
 ### Gates
 
 The threat model, privacy model, provider contract, structured-output evaluation set, deny-by-default operation tests, prompt-injection tests, consent UI, offline fallback, usage/cost model, and human-review rubric must pass. This sprint does not promise direct high-quality sculpt generation.
+
+Reference-image/vision assistance remains Sprint 8; procedural/text-guided creation remains Sprint 9; commercial hosting, billing and licensing remain Sprint 10 or later. Sprint 7 cannot upload raw geometry, mint operation parameters, duplicate mutation logic, bypass preview/approval, replace a source, slice, emit G-code, control a printer, or claim geometry/cultural correctness, global optimality, physical validation or print success.
 
 ## Sprint 8 — Reference-Guided Assistance
 
