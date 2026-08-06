@@ -2,7 +2,7 @@
 
 Chroma3D Sculpt is a local Blender extension for production mesh diagnostics, controlled reversible repair, and advisory printability risk analysis of complex statue meshes. Repair preserves the original source; Printability never changes geometry, transforms, orientation, or scale.
 
-**Current development release:** `v0.7.0-alpha.1` on `feature/sprint-6-intelligent-optimization`. Sprint 6 adds deterministic, explainable, bounded multi-objective strategy search above Sprint 5. Physical validation remains separate; no printability or print-success guarantee is provided.
+**Current frozen release:** `v0.7.0-alpha.1` on `main` at `63f98b8cef68dc977f6bd8c17972303fa7e3d05e`. Sprint 6 adds deterministic, explainable, bounded multi-objective strategy search above Sprint 5. Physical validation remains separate; no printability or print-success guarantee is provided.
 
 Sprint 2.7 added the dataset storage architecture: Dataset `1.0.0` and Golden Benchmark `1.0.0` are packaged as verified release assets, while manifests, provenance, licenses, schemas, locks, and tooling remain in this product repository. The existing `v0.3.1-alpha.1` history is immutable; Sprint 3 advances the extension separately to `0.4.0-alpha.1`.
 
@@ -14,7 +14,9 @@ Sprint 5 adds a workspace-only Controlled Optimization workflow. It generates de
 
 Sprint 6 adds an Intelligent Optimization workflow. It generates named strategy families from Sprint 5 candidates, evaluates visible objective vectors, applies hard/soft constraints, constructs a bounded Pareto frontier, ranks with explicit tie-breaks, explains estimated versus measured evidence, retains local history, and recommends without auto-executing. Strategy execution still delegates to Sprint 5's isolated workspace/checkpoints and requires explicit selection. See the [Intelligent Optimization guide](docs/intelligent-optimization/README.md).
 
-**Feature-branch version:** 0.7.0-alpha.1
+The [Sprint 7 Engineering Specification](SPRINT7_SPECIFICATION.md) is prepared for the roadmap's **AI Recommendation Foundation**. It defines optional provider-neutral recommendations, bounded consented context, strict structured output, exact references to existing Sprint 5/6 candidates or strategies, deny-by-default operations, preview/approval/cancellation, audit/redaction, performance, tests, and acceptance. Sprint 7 implementation has not started: no provider, network runtime, model call, operator, panel, package, or version change exists. Reference-image/vision assistance, procedural creation, commercial hosting/billing, slicing/G-code/printer control, physical claims, global-optimum claims, and automatic source replacement remain deferred or prohibited.
+
+**Current extension version:** 0.7.0-alpha.1
 
 **JSON schema:** 2.0
 

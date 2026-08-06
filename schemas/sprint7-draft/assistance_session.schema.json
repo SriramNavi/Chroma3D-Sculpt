@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "chroma3d://schemas/sprint7-draft/assistance-session/0.1.0-draft",
+  "title": "Chroma3D Sprint 7 Draft Assistance Session",
+  "$comment": "DRAFT ONLY. Session state contains identities and evidence, not live Blender references.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["draft", "schema_version", "session_id", "state", "created_at", "updated_at", "source_identity", "dependency_hashes", "context_id", "exchange_id", "recommendation_ids", "selected_recommendation_id", "resolved_plan", "approval", "stale_reasons", "cancellation", "delegated_session_id", "performance_metrics", "errors", "evidence_states", "provenance", "limitations"],
+  "properties": {
+    "draft": {"const": true},
+    "schema_version": {"const": "0.1.0-draft"},
+    "session_id": {"$ref": "#/$defs/id"},
+    "state": {"enum": ["INITIAL", "LOADING", "READY", "ANALYZING", "EVIDENCE_AVAILABLE", "STALE", "PREVIEWING", "APPROVAL_REQUIRED", "EXECUTING", "CANCELLING", "CANCELLED", "FAILED", "RESTORED", "ACCEPTED", "DISCARDED", "EXPORTED", "FINALIZED"]},
+    "created_at": {"type": "string", "format": "date-time", "maxLength": 64},
+    "updated_at": {"type": "string", "format": "date-time", "maxLength": 64},
+    "source_identity": {"type": "object", "additionalProperties": false, "required": ["object_identity", "mesh_identity", "source_signature"], "properties": {"object_identity": {"type": "string", "minLength": 1, "maxLength": 128}, "mesh_identity": {"type": "string", "minLength": 1, "maxLength": 128}, "source_signature": {"$ref": "#/$defs/hash"}}},
+    "dependency_hashes": {"type": "object", "additionalProperties": {"$ref": "#/$defs/hash"}, "propertyNames": {"pattern": "^[a-z][a-z0-9_]{0,63}$"}, "maxProperties": 32},
+    "context_id": {"type": ["string", "null"], "maxLength": 96},
+    "exchange_id": {"type": ["string", "null"], "maxLength": 96},
+    "recommendation_ids": {"type": "array", "maxItems": 32, "uniqueItems": true, "items": {"type": "string", "maxLength": 96}},
+    "selected_recommendation_id": {"type": ["string", "null"], "maxLength": 96},
+    "resolved_plan": {"type": ["object", "null"], "additionalProperties": false, "required": ["target_kind", "target_id", "target_fingerprint", "operation_count", "parameter_hash", "current"], "properties": {"target_kind": {"enum": ["CANDIDATE", "STRATEGY"]}, "target_id": {"type": "string", "minLength": 1, "maxLength": 128}, "target_fingerprint": {"$ref": "#/$defs/hash"}, "operation_count": {"type": "integer", "minimum": 0, "maximum": 8}, "parameter_hash": {"$ref": "#/$defs/hash"}, "current": {"type": "boolean"}}},
+    "approval": {"type": "object", "additionalProperties": false, "required": ["required", "approved", "approved_at", "approval_scope_hash"], "properties": {"required": {"type": "boolean"}, "approved": {"type": "boolean"}, "approved_at": {"type": ["string", "null"], "maxLength": 64}, "approval_scope_hash": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"}}},
+    "stale_reasons": {"type": "array", "maxItems": 64, "items": {"enum": ["SOURCE", "WORKSPACE", "CONTEXT", "POLICY", "PROVIDER", "PROMPT", "SCHEMA", "CANDIDATE", "STRATEGY", "PROFILE", "PERFORMANCE_REGISTRY", "IMPLEMENTATION", "BLEND_FILE", "EXTERNAL_CHANGE"]}},
+    "cancellation": {"type": "object", "additionalProperties": false, "required": ["requested", "phase", "requested_at", "safe_boundary_result"], "properties": {"requested": {"type": "boolean"}, "phase": {"type": ["string", "null"], "maxLength": 64}, "requested_at": {"type": ["string", "null"], "maxLength": 64}, "safe_boundary_result": {"enum": ["NOT_APPLICABLE", "PENDING", "CANCELLED", "RESTORED", "FAILED"]}}},
+    "delegated_session_id": {"type": ["string", "null"], "maxLength": 128},
+    "performance_metrics": {"type": "array", "maxItems": 64, "items": {"type": "object", "additionalProperties": false, "required": ["phase", "seconds", "classification"], "properties": {"phase": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]{0,63}$"}, "seconds": {"type": "number", "minimum": 0, "maximum": 86400}, "memory_mb": {"type": ["number", "null"], "minimum": 0}, "classification": {"enum": ["LOCAL_MEASURED", "PROVIDER_REPORTED", "POINT_OBSERVATION", "ESTIMATED"]}}}},
+    "errors": {"type": "array", "maxItems": 64, "items": {"$ref": "#/$defs/error"}},
+    "evidence_states": {"$ref": "#/$defs/evidenceStates"},
+    "provenance": {"$ref": "#/$defs/provenance"},
+    "limitations": {"$ref": "#/$defs/limitations"}
+  },
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,31}:[0-9a-f-]{32,64}$"},
+    "hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "error": {"type": "object", "additionalProperties": false, "required": ["code", "phase", "state", "safe_message", "recovery"], "properties": {"code": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]{0,63}$"}, "phase": {"type": "string", "maxLength": 64}, "state": {"$ref": "#/$defs/evidenceState"}, "safe_message": {"type": "string", "minLength": 1, "maxLength": 1024}, "recovery": {"type": "string", "minLength": 1, "maxLength": 1024}}},
+    "evidenceState": {"enum": ["PASS", "WARNING", "FAIL", "SKIPPED_LIMIT", "NOT_EVALUATED", "INDETERMINATE", "NOT_APPLICABLE", "STALE", "CANCELLED", "BUDGET_EXHAUSTED"]},
+    "evidenceStates": {"type": "array", "minItems": 1, "maxItems": 10, "uniqueItems": true, "items": {"$ref": "#/$defs/evidenceState"}},
+    "provenance": {"type": "array", "minItems": 1, "maxItems": 64, "items": {"type": "object", "additionalProperties": false, "required": ["source_id", "classification"], "properties": {"source_id": {"type": "string", "minLength": 1, "maxLength": 128}, "classification": {"enum": ["LOCAL_MEASURED", "PROVIDER_REPORTED", "ESTIMATED", "REPOSITORY_CONTRACT", "USER_ACTION"]}}}},
+    "limitations": {"type": "array", "maxItems": 128, "items": {"type": "string", "minLength": 1, "maxLength": 1024}}
+  }
+}

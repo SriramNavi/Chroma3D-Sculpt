@@ -11,7 +11,7 @@
 - Sprint 5: Implemented on `feature/sprint-5-controlled-optimization` as a bounded controlled-optimization layer (`0.6.0-alpha.1`): protected-source signatures, deterministic objectives/policies/candidates/plans, isolated workspace operations, checkpoints, undo/restore, comparison/fidelity evidence, accept-copy/discard, audit export, and a Controlled Optimization panel. Dataset regression, historical final chain, installed-panel UAT, and physical/slicer validation remain separate evidence gates.
 - Post-Sprint 5: Chroma3D internal UAT.
 - Sprint 6: Implemented as `0.7.0-alpha.1` — deterministic bounded Intelligent Optimization with named strategy families, explicit hard/soft constraints, visible multi-objective vectors, Pareto frontier, explainable ranking, local history, recommendation overrides, and Sprint 5 isolated execution integration. Physical printing, slicer comparison, material calibration, Blender 4.5 LTS, and installed-panel UAT remain deferred.
-- Sprint 7: Not started.
+- Sprint 7: Engineering specification prepared for **AI Recommendation Foundation**; implementation not started. The proposed `0.8.0-alpha.1` scope is optional provider-neutral structured recommendations over bounded consented evidence, strict validation, exact existing candidate/strategy references, deny-by-default operations, preview/approval/cancellation, audit/redaction, offline fallback, and provider/backend/BYOK/hosted decision gates. No runtime, provider, package, or version change exists.
 - Later phases: bounded AI-assisted planning and authoring workflows.
 - Later commercial work: packaging, licensing, support, and distribution design.
 

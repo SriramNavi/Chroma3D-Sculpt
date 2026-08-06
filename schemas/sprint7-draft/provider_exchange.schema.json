@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "chroma3d://schemas/sprint7-draft/provider-exchange/0.1.0-draft",
+  "title": "Chroma3D Sprint 7 Draft Provider Exchange",
+  "$comment": "DRAFT ONLY. Provider text is untrusted and raw bodies are not retained by default.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["draft", "schema_version", "exchange_id", "provider_contract", "request", "response", "status", "timings", "usage", "cancellation", "errors", "evidence_states", "provenance", "limitations"],
+  "properties": {
+    "draft": {"const": true},
+    "schema_version": {"const": "0.1.0-draft"},
+    "exchange_id": {"$ref": "#/$defs/id"},
+    "provider_contract": {"type": "object", "additionalProperties": false, "required": ["contract_id", "adapter_id", "adapter_version", "deployment_class", "destination", "retention_statement", "cancellation_support", "usage_reporting", "contract_hash"], "properties": {"contract_id": {"type": "string", "minLength": 1, "maxLength": 128}, "adapter_id": {"type": "string", "minLength": 1, "maxLength": 64}, "adapter_version": {"type": "string", "minLength": 1, "maxLength": 64}, "deployment_class": {"enum": ["TEST_ONLY", "LOCAL", "BYOK", "HOSTED"]}, "destination": {"type": "string", "minLength": 1, "maxLength": 256}, "retention_statement": {"type": "string", "minLength": 1, "maxLength": 1024}, "cancellation_support": {"enum": ["SUPPORTED", "BEST_EFFORT", "NOT_SUPPORTED", "UNKNOWN"]}, "usage_reporting": {"enum": ["MEASURED", "PROVIDER_REPORTED", "ESTIMATED", "UNAVAILABLE"]}, "contract_hash": {"$ref": "#/$defs/hash"}}},
+    "request": {"$ref": "#/$defs/messageRecord"},
+    "response": {"$ref": "#/$defs/messageRecord"},
+    "status": {"enum": ["READY", "DISPATCHED", "COMPLETED", "FAILED", "CANCELLING", "CANCELLED", "TIMED_OUT", "BUDGET_EXHAUSTED", "LATE_RESPONSE_QUARANTINED"]},
+    "timings": {"type": "object", "additionalProperties": false, "required": ["client_observed_seconds", "provider_reported_seconds"], "properties": {"client_observed_seconds": {"type": "number", "minimum": 0, "maximum": 86400}, "provider_reported_seconds": {"type": ["number", "null"], "minimum": 0, "maximum": 86400}}},
+    "usage": {"type": "object", "additionalProperties": false, "required": ["input_units", "output_units", "unit_name", "cost_amount", "currency", "classification"], "properties": {"input_units": {"type": ["integer", "null"], "minimum": 0}, "output_units": {"type": ["integer", "null"], "minimum": 0}, "unit_name": {"type": ["string", "null"], "maxLength": 64}, "cost_amount": {"type": ["number", "null"], "minimum": 0}, "currency": {"type": ["string", "null"], "pattern": "^[A-Z]{3}$"}, "classification": {"enum": ["MEASURED", "PROVIDER_REPORTED", "ESTIMATED", "UNAVAILABLE"]}}},
+    "cancellation": {"type": "object", "additionalProperties": false, "required": ["requested", "requested_at", "adapter_acknowledged", "late_response_disposition"], "properties": {"requested": {"type": "boolean"}, "requested_at": {"type": ["string", "null"], "maxLength": 64}, "adapter_acknowledged": {"type": ["boolean", "null"]}, "late_response_disposition": {"enum": ["NOT_APPLICABLE", "QUARANTINED", "NO_RESPONSE", "UNKNOWN"]}}},
+    "errors": {"type": "array", "maxItems": 64, "items": {"type": "object", "additionalProperties": false, "required": ["code", "phase", "safe_message", "retriable"], "properties": {"code": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]{0,63}$"}, "phase": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]{0,63}$"}, "safe_message": {"type": "string", "minLength": 1, "maxLength": 1024}, "retriable": {"type": "boolean"}}}},
+    "evidence_states": {"$ref": "#/$defs/evidenceStates"},
+    "provenance": {"$ref": "#/$defs/provenance"},
+    "limitations": {"$ref": "#/$defs/limitations"}
+  },
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,31}:[0-9a-f-]{32,64}$"},
+    "hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "messageRecord": {"type": "object", "additionalProperties": false, "required": ["content_hash", "byte_count", "redacted_summary", "schema_id"], "properties": {"content_hash": {"$ref": "#/$defs/hash"}, "byte_count": {"type": "integer", "minimum": 0, "maximum": 1048576}, "redacted_summary": {"type": "string", "maxLength": 4096}, "schema_id": {"type": "string", "minLength": 1, "maxLength": 256}}},
+    "evidenceState": {"enum": ["PASS", "WARNING", "FAIL", "SKIPPED_LIMIT", "NOT_EVALUATED", "INDETERMINATE", "NOT_APPLICABLE", "STALE", "CANCELLED", "BUDGET_EXHAUSTED"]},
+    "evidenceStates": {"type": "array", "minItems": 1, "maxItems": 10, "uniqueItems": true, "items": {"$ref": "#/$defs/evidenceState"}},
+    "provenance": {"type": "array", "minItems": 1, "maxItems": 64, "items": {"type": "object", "additionalProperties": false, "required": ["source_id", "classification"], "properties": {"source_id": {"type": "string", "minLength": 1, "maxLength": 128}, "classification": {"enum": ["LOCAL_MEASURED", "PROVIDER_REPORTED", "ESTIMATED", "REPOSITORY_CONTRACT"]}}}},
+    "limitations": {"type": "array", "maxItems": 128, "items": {"type": "string", "minLength": 1, "maxLength": 1024}}
+  }
+}
