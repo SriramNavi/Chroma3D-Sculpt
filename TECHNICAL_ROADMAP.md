@@ -10,6 +10,10 @@
 ## Sprint 5 controlled optimization
 
 Sprint 5 (`0.6.0-alpha.1`) adds a separate optimization coordinator above diagnostics, Safe Repair, and Advanced Preparation. The implementation is deterministic and bounded by `performance_registry.py` and the versioned optimization policy. It uses source/workspace/process/policy/objective/implementation fingerprints for stale rejection, independent mesh checkpoints for rollback, explicit operation approval, conservative comparison/fidelity proxies, and JSON/Markdown audit output. Experimental remesh is deferred; decimation is disabled by default. Full-corpus optimization, historical acceptance, installed-panel UAT, physical printing, slicer comparison, material calibration, and Blender 4.5 LTS remain evidence tasks rather than inferred passes.
+
+## Sprint 6 Intelligent Optimization
+
+Sprint 6 (`0.7.0-alpha.1`) adds a deterministic rule-based strategy layer above Sprint 5. Search modes are bounded by the centralized performance registry; strategy generation reuses Sprint 5 candidates; hard/soft constraints fail closed; objective vectors keep raw values, normalization, direction, and evidence state visible; Pareto construction records dominance reasons; ranking records objective contributions and tie-breaks; explanations disclose measured versus estimated versus skipped evidence; and local history supports explicit reruns without hidden learning. Only a selected strategy may reach the Sprint 5 isolated workspace, and accept/discard semantics remain unchanged. Sprint 7 is not started.
 - A backend is introduced only when licensing, collaboration, asset delivery, AI routing, or another validated need requires it.
 - Commercial systems follow demonstrated product value and production UAT.
 - Every milestone has automated, manual, performance, safety, and evidence gates appropriate to its risk.

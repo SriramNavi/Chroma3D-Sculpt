@@ -346,3 +346,8 @@ Every release stage must scale the depth of these gates to its risk; none may be
 - Which geometric-deviation metrics correlate with acceptable visible detail on real statues?
 - What telemetry, if any, offers enough support value to justify explicit opt-in collection?
 - Which capabilities belong in one product versus conditional Sculpt, Print Prep, Asset Studio, AI Assist, and Enterprise editions?
+# Sprint 6 Intelligent Optimization
+
+Sprint 6 provides deterministic local strategy search above Controlled Optimization. Users can inspect named bounded strategy families, visible raw/normalized multi-objective vectors, hard/soft constraint outcomes, Pareto trade-offs, ranking methods, explanations, local history, and recommendation overrides. A recommendation is never an automatic action: preview, stepwise execution, comparison, accept-copy, and discard remain explicit and workspace-isolated.
+
+The feature contains no generative AI, LLM, cloud optimization, telemetry, accounts, licensing, slicer, G-code, printer communication, automatic supports, source replacement, physical validation, global-optimum claim, or print-success guarantee. Unknown, skipped, estimated, indeterminate, infeasible, and budget-limited evidence must remain visible.

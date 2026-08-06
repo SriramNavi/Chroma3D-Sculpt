@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "chroma3d://schemas/strategy-ranking/1.0",
+  "title": "Chroma3D Sculpt Strategy Ranking",
+  "type": "object",
+  "required": ["schema_version", "method", "records", "ranking_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "method": {"type": "string"},
+    "records": {"type": "array"},
+    "tie_breaking_policy": {"type": "array", "items": {"type": "string"}},
+    "recommendation": {"type": ["object", "null"]},
+    "ranking_hash": {"type": "string"},
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  }
+}

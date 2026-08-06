@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "chroma3d://schemas/intelligent-strategy/1.0",
+  "title": "Chroma3D Sculpt Intelligent Strategy",
+  "type": "object",
+  "required": ["strategy_id", "fingerprint", "generation_family", "generation_reason", "steps", "policy_hash", "constraint_set_hash"],
+  "properties": {
+    "strategy_id": {"type": "string", "minLength": 1},
+    "fingerprint": {"type": "string", "minLength": 1},
+    "generation_family": {"type": "string", "minLength": 1},
+    "generation_reason": {"type": "string", "minLength": 1},
+    "steps": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/step"}},
+    "source_evidence": {"type": "array", "maxItems": 256},
+    "objective_profile": {"type": "object"},
+    "policy_hash": {"type": "string"},
+    "constraint_set_hash": {"type": "string"},
+    "process_context_hash": {"type": "string"},
+    "feature_flag_hash": {"type": "string"},
+    "implementation_fingerprint": {"type": "string"},
+    "estimated_evaluation_cost_seconds": {"type": "number", "minimum": 0},
+    "required_approval": {"type": "boolean"},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "state": {"type": "string"},
+    "rejection_reasons": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {
+    "step": {
+      "type": "object",
+      "required": ["order", "candidate_id", "operation", "parameters"],
+      "properties": {
+        "order": {"type": "integer", "minimum": 1},
+        "candidate_id": {"type": "string", "minLength": 1},
+        "operation": {"type": "string", "minLength": 1},
+        "parameters": {"type": "object"},
+        "approval_required": {"type": "boolean"},
+        "experimental": {"type": "boolean"},
+        "estimated_cost_seconds": {"type": "number", "minimum": 0},
+        "expected_objective_effects": {"type": "object"},
+        "source_evidence": {"type": "array"},
+        "limitations": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

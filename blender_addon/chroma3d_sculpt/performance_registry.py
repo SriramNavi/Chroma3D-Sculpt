@@ -31,6 +31,15 @@ CHECK_TYPES = (
     "optimization_comparison",
     "optimization_checkpoint",
     "optimization_operation",
+    "intelligent_strategy_generation",
+    "intelligent_constraint_evaluation",
+    "intelligent_virtual_evaluation",
+    "intelligent_workspace_evaluation",
+    "intelligent_pareto_construction",
+    "intelligent_ranking",
+    "intelligent_explanation",
+    "intelligent_history",
+    "intelligent_export",
 )
 
 OPTIMIZATION_PERFORMANCE_LIMITS = {
@@ -39,6 +48,26 @@ OPTIMIZATION_PERFORMANCE_LIMITS = {
     "checkpoint_count": 4,
     "operation_count": 8,
     "evidence_items": 256,
+}
+
+# Sprint 6 search limits are centralized here so no strategy service can
+# silently widen the bounded search envelope.
+INTELLIGENT_OPTIMIZATION_LIMITS = {
+    "FAST": {
+        "max_generated_strategies": 12, "max_evaluated_strategies": 8, "max_workspace_previews": 1,
+        "max_strategy_depth": 2, "max_branch_factor": 4, "max_pareto_points": 8,
+        "max_wall_time_seconds": 10.0, "max_per_strategy_seconds": 2.0, "max_memory_observation_mb": 512.0,
+    },
+    "STANDARD": {
+        "max_generated_strategies": 32, "max_evaluated_strategies": 16, "max_workspace_previews": 2,
+        "max_strategy_depth": 3, "max_branch_factor": 6, "max_pareto_points": 16,
+        "max_wall_time_seconds": 30.0, "max_per_strategy_seconds": 5.0, "max_memory_observation_mb": 512.0,
+    },
+    "DEEP": {
+        "max_generated_strategies": 96, "max_evaluated_strategies": 64, "max_workspace_previews": 4,
+        "max_strategy_depth": 5, "max_branch_factor": 10, "max_pareto_points": 32,
+        "max_wall_time_seconds": 90.0, "max_per_strategy_seconds": 8.0, "max_memory_observation_mb": 1024.0,
+    },
 }
 
 _MODE_BASE = {
@@ -62,6 +91,15 @@ _CHECK_FACTORS = {
     "optimization_comparison": 1.0,
     "optimization_checkpoint": 1.0,
     "optimization_operation": 1.0,
+    "intelligent_strategy_generation": 1.0,
+    "intelligent_constraint_evaluation": 1.0,
+    "intelligent_virtual_evaluation": 1.0,
+    "intelligent_workspace_evaluation": 2.0,
+    "intelligent_pareto_construction": 1.0,
+    "intelligent_ranking": 1.0,
+    "intelligent_explanation": 1.0,
+    "intelligent_history": 1.0,
+    "intelligent_export": 1.0,
 }
 _SIZE_FACTORS = {"Tiny": 1.0, "Small": 1.0, "Medium": 1.0, "Large": 0.75, "Huge": 0.5, "Extreme": 0.25}
 
@@ -145,6 +183,7 @@ validate_registry()
 
 __all__ = (
     "CHECK_TYPES",
+    "INTELLIGENT_OPTIMIZATION_LIMITS",
     "OPTIMIZATION_PERFORMANCE_LIMITS",
     "PERFORMANCE_REGISTRY_VERSION",
     "REGISTRY",

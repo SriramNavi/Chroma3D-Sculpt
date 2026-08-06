@@ -5,7 +5,7 @@
 - Repository root: `E:\VPRS\Sriram\Projects\Chroma3D Sculpt`.
 - Primary platform: Windows 11 without administrator privileges.
 - Minimum runtime: Blender 4.4.0 and bundled Python; current validation is Blender 4.4.3.
-- Package: modern Blender Extension; manifest `0.6.0`, display `0.6.0-alpha.1`, analysis JSON schema `2.0`, repair audit schema `1.0`, printability report schema `1.0.0`, Advanced Preparation schema `1.0`, and Controlled Optimization schemas `1.0`.
+- Package: modern Blender Extension; manifest `0.7.0`, display `0.7.0-alpha.1`, analysis JSON schema `2.0`, repair audit schema `1.0`, printability report schema `1.0.0`, Advanced Preparation schema `1.0`, Controlled Optimization schemas `1.0`, and Intelligent Optimization schemas `1.0`.
 - Dependencies: public Blender APIs and Python standard library only.
 - Runtime paths must be dynamic; repository tooling must support quoted Windows paths containing spaces.
 
@@ -57,6 +57,13 @@
 - Accept retains the source and a separate optimized object. Discard removes only session-owned workspace/checkpoints. Neither path saves automatically.
 - Comparison must preserve critical regressions, missing evidence, `INDETERMINATE`, and `SKIPPED_LIMIT`; heuristic objective scores never claim global optimality or print success.
 - Experimental remesh is deferred in the safe runtime. No automatic supports, hollowing, drain holes, slicing, G-code, printer control, network runtime, or source replacement exists.
+
+## Sprint 6 intelligent-optimization policy
+
+- Intelligent Optimization is deterministic local rule-based search, not generative AI. Search policies are mode-specific, bounded, hashable, and reject booleans-as-numbers, NaN, infinity, negative/unsafe budgets, unknown operations, duplicate IDs, conflicting constraints, and hidden experimental enablement.
+- Strategy generation, virtual evaluation, Pareto construction, ranking, explanations, recommendations, history reuse, and exports are read-only. Unknown or skipped evidence never satisfies a hard constraint or dominates known valid evidence; no global optimum or print-success claim is permitted.
+- Workspace preview/execution must delegate to Sprint 5's isolated workspace and checkpoint services. Every selected mutation remains explicit, rollback-safe, source-preserving, and followed by comparison. Accept creates a separate optimized copy; discard/cancel remove only owned resources.
+- Sprint 6 schemas are all version `1.0`: intelligent strategy, strategy set, search policy, constraint set, Pareto frontier, ranking, explanation, optimization history, and intelligent audit. Sprint 7 is not started.
 
 ## Regression and release
 

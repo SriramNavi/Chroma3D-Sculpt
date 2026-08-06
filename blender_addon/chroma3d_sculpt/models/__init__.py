@@ -219,3 +219,23 @@ __all__ += (
     "OptimizationOperationState", "OptimizationOperationType", "OptimizationObjective", "OptimizationPlan", "OptimizationPlanStep",
     "OptimizationPolicy", "OptimizationPolicySnapshot", "OptimizationSession", "OptimizationSessionState", "RiskDelta",
 )
+
+from .intelligent_optimization_models import (
+    ConstraintEvaluation, ConstraintKind, ConstraintSet, ConstraintSeverity, ConstraintState, DeterministicModel,
+    DominanceRecord, DominanceState, EvidenceState as IntelligentEvidenceState, IntelligentOptimizationAudit,
+    IntelligentOptimizationSession, IntelligentSessionState, IntelligentStrategy, ObjectiveDirection, ObjectiveMetric,
+    ObjectiveVector, OptimizationConstraint, OptimizationOperationType as IntelligentOptimizationOperationType, ParetoFrontier, ParetoPoint,
+    PruningRecord, RankingMethod, RankingRecord, RecommendationRecord, SearchBudget, SearchBudgetUsage, SearchMode,
+    SearchPolicy, StrategyEvaluation, StrategyExplanation, StrategyGenerationReason, StrategyHistory,
+    StrategyHistoryEntry, StrategySet, StrategyState, StrategyStep,
+)
+
+__all__ += (
+    "ConstraintEvaluation", "ConstraintKind", "ConstraintSet", "ConstraintSeverity", "ConstraintState", "DeterministicModel",
+    "DominanceRecord", "DominanceState", "IntelligentEvidenceState", "IntelligentOptimizationAudit", "IntelligentOptimizationSession",
+    "IntelligentSessionState", "IntelligentStrategy", "ObjectiveDirection", "ObjectiveMetric", "ObjectiveVector", "OptimizationConstraint",
+    "IntelligentOptimizationOperationType", "ParetoFrontier", "ParetoPoint", "PruningRecord", "RankingMethod", "RankingRecord",
+    "RecommendationRecord", "SearchBudget", "SearchBudgetUsage", "SearchMode", "SearchPolicy", "StrategyEvaluation",
+    "StrategyExplanation", "StrategyGenerationReason", "StrategyHistory", "StrategyHistoryEntry", "StrategySet", "StrategyState",
+    "StrategyStep",
+)

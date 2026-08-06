@@ -1,0 +1,519 @@
+{
+  "blender_version": "4.4.3",
+  "blocking_items": [],
+  "branch": "feature/sprint-6-intelligent-optimization",
+  "head": "0e9a7b73a09cecf293451aee1c4ed313b1225fae",
+  "layers": [
+    {
+      "affects_release_safety": false,
+      "classification": "PASS",
+      "command": [
+        "C:\\Users\\sriram\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "manual-tests/run_acceptance_gates.py",
+        "--blender",
+        "D:\\Softwares\\Design\\Blender\\blender.exe"
+      ],
+      "decisive_metrics": {
+        "failed_gate_count": 0,
+        "gate_count": 9
+      },
+      "elapsed_seconds": 121.065064,
+      "ended_at": "2026-08-06T14:49:13.012535+00:00",
+      "exit_code": 0,
+      "failed_gate_ids": [],
+      "frozen_output_hashes_before": {},
+      "frozen_outputs_restored": [],
+      "id": "H1",
+      "log_path": "manual-tests/sprint6/logs/historical/H1.log",
+      "name": "Sprint 0 acceptance",
+      "release_input_sha256": "3ce3cd1d8eb74fc7b3f57e446227fcf54ddb38052aca4ca983e5542c99f5cdbb",
+      "report_path": "manual-tests/reports/sprint0_regression_on_sprint1.json",
+      "report_status": "PASS",
+      "started_at": "2026-08-06T14:47:11.928048+00:00",
+      "timeout_seconds": 1800
+    },
+    {
+      "affects_release_safety": false,
+      "classification": "PASS",
+      "command": [
+        "C:\\Users\\sriram\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "manual-tests/sprint1/run_sprint1_acceptance.py",
+        "--blender",
+        "D:\\Softwares\\Design\\Blender\\blender.exe"
+      ],
+      "decisive_metrics": {
+        "failed_gate_count": 0,
+        "gate_count": 12
+      },
+      "elapsed_seconds": 236.975703,
+      "ended_at": "2026-08-06T14:53:21.311765+00:00",
+      "exit_code": 0,
+      "failed_gate_ids": [],
+      "frozen_output_hashes_before": {
+        "manual-tests/sprint1/SPRINT1_ACCEPTANCE_RESULTS.md": "48ed65fb1428650aa01ac1d0cecb243a4e2c268e9118b4d46cc4df5179a01c8a"
+      },
+      "frozen_outputs_restored": [
+        "manual-tests/sprint1/SPRINT1_ACCEPTANCE_RESULTS.md"
+      ],
+      "id": "H2",
+      "log_path": "manual-tests/sprint6/logs/historical/H2.log",
+      "name": "Sprint 1 acceptance",
+      "release_input_sha256": "3ce3cd1d8eb74fc7b3f57e446227fcf54ddb38052aca4ca983e5542c99f5cdbb",
+      "report_path": "manual-tests/sprint1/reports/sprint1_acceptance_results.json",
+      "report_status": "PASS",
+      "started_at": "2026-08-06T14:49:24.036791+00:00",
+      "timeout_seconds": 2400
+    },
+    {
+      "affects_release_safety": false,
+      "classification": "PASS",
+      "command": [
+        "C:\\Users\\sriram\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "manual-tests/sprint1-final/run_final_validation.py",
+        "--blender",
+        "D:\\Softwares\\Design\\Blender\\blender.exe"
+      ],
+      "decisive_metrics": {
+        "failed_gate_count": 0,
+        "gate_count": 11,
+        "package_status": "PENDING_EXTERNAL"
+      },
+      "elapsed_seconds": 111.245619,
+      "ended_at": "2026-08-06T14:55:22.588654+00:00",
+      "exit_code": 0,
+      "failed_gate_ids": [],
+      "frozen_output_hashes_before": {
+        "manual-tests/sprint1-final/FINAL_VALIDATION_RESULTS.md": "de30d0c1670fb21852e3e74404f07e0bca361797d9ec7b7cf761487db48854d4"
+      },
+      "frozen_outputs_restored": [
+        "manual-tests/sprint1-final/FINAL_VALIDATION_RESULTS.md"
+      ],
+      "id": "H3",
+      "log_path": "manual-tests/sprint6/logs/historical/H3.log",
+      "name": "Sprint 1 independent final",
+      "release_input_sha256": "3ce3cd1d8eb74fc7b3f57e446227fcf54ddb38052aca4ca983e5542c99f5cdbb",
+      "report_path": "manual-tests/sprint1-final/reports/final_validation_results.json",
+      "report_status": "PASS",
+      "started_at": "2026-08-06T14:53:31.092517+00:00",
+      "timeout_seconds": 1800
+    },
+    {
+      "affects_release_safety": false,
+      "classification": "PASS",
+      "command": [
+        "C:\\Users\\sriram\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "manual-tests/sprint2/run_sprint2_acceptance.py",
+        "--blender",
+        "D:\\Softwares\\Design\\Blender\\blender.exe"
+      ],
+      "decisive_metrics": {
+        "failed_gate_count": 0,
+        "gate_count": 14
+      },
+      "elapsed_seconds": 481.735125,
+      "ended_at": "2026-08-06T15:03:35.356854+00:00",
+      "exit_code": 0,
+      "failed_gate_ids": [],
+      "frozen_output_hashes_before": {
+        "manual-tests/sprint1-final/FINAL_VALIDATION_RESULTS.md": "de30d0c1670fb21852e3e74404f07e0bca361797d9ec7b7cf761487db48854d4",
+        "manual-tests/sprint1/SPRINT1_ACCEPTANCE_RESULTS.md": "48ed65fb1428650aa01ac1d0cecb243a4e2c268e9118b4d46cc4df5179a01c8a",
+        "manual-tests/sprint2/SPRINT2_ACCEPTANCE_RESULTS.md": "9f346045a3687a103ed73dda32a3c5e4e0a5082d3cb9315513d09cf84ede66af"
+      },
+      "frozen_outputs_restored": [
+        "manual-tests/sprint1/SPRINT1_ACCEPTANCE_RESULTS.md",
+        "manual-tests/sprint1-final/FINAL_VALIDATION_RESULTS.md",
+        "manual-tests/sprint2/SPRINT2_ACCEPTANCE_RESULTS.md"
+      ],
+      "id": "H4",
+      "log_path": "manual-tests/sprint6/logs/historical/H4.log",
+      "name": "Sprint 2 acceptance",
+      "release_input_sha256": "3ce3cd1d8eb74fc7b3f57e446227fcf54ddb38052aca4ca983e5542c99f5cdbb",
+      "report_path": "manual-tests/sprint2/reports/sprint2_acceptance_results.json",
+      "report_status": "PASS",
+      "started_at": "2026-08-06T14:55:33.331557+00:00",
+      "timeout_seconds": 3600
+    },
+    {
+      "affects_release_safety": false,
+      "classification": "PASS_WITH_LIMITATIONS",
+      "command": [
+        "C:\\Users\\sriram\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "manual-tests/sprint2-final/run_final_validation.py",
+        "--blender",
+        "D:\\Softwares\\Design\\Blender\\blender.exe"
+      ],
+      "decisive_metrics": {
+        "face_count": 152978,
+        "failed_gate_count": 0,
+        "gate_count": 19,
+        "installed_package_smoke": "PASS",
+        "repair_batch_seconds": 47.498363,
+        "source_unchanged": true,
+        "triangle_count": 152996,
+        "vertex_count": 76512,
+        "warning_threshold_passed": true,
+        "warning_threshold_seconds": 60.0
+      },
+      "elapsed_seconds": 1078.261326,
+      "ended_at": "2026-08-06T15:21:52.282654+00:00",
+      "exit_code": 0,
+      "failed_gate_ids": [],
+      "frozen_output_hashes_before": {
+        "manual-tests/sprint1-final/FINAL_VALIDATION_RESULTS.md": "de30d0c1670fb21852e3e74404f07e0bca361797d9ec7b7cf761487db48854d4",
+        "manual-tests/sprint1/SPRINT1_ACCEPTANCE_RESULTS.md": "48ed65fb1428650aa01ac1d0cecb243a4e2c268e9118b4d46cc4df5179a01c8a",
+        "manual-tests/sprint2-final/FINAL_VALIDATION_RESULTS.md": "57262f78d7ee4a835af594c31564cdc0925eb7d821db5dece0077b7c994d6e56",
+        "manual-tests/sprint2/SPRINT2_ACCEPTANCE_RESULTS.md": "9f346045a3687a103ed73dda32a3c5e4e0a5082d3cb9315513d09cf84ede66af"
+      },
+      "frozen_outputs_restored": [
+        "manual-tests/sprint1/SPRINT1_ACCEPTANCE_RESULTS.md",
+        "manual-tests/sprint1-final/FINAL_VALIDATION_RESULTS.md",
+        "manual-tests/sprint2/SPRINT2_ACCEPTANCE_RESULTS.md",
+        "manual-tests/sprint2-final/FINAL_VALIDATION_RESULTS.md"
+      ],
+      "id": "H5",
+      "log_path": "manual-tests/sprint6/logs/historical/H5.log",
+      "name": "Sprint 2 independent final",
+      "release_input_sha256": "3ce3cd1d8eb74fc7b3f57e446227fcf54ddb38052aca4ca983e5542c99f5cdbb",
+      "report_path": "manual-tests/sprint2-final/reports/final_validation_results.json",
+      "report_status": "PASS_WITH_LIMITATIONS",
+      "started_at": "2026-08-06T15:03:53.683751+00:00",
+      "timeout_seconds": 5400
+    },
+    {
+      "affects_release_safety": false,
+      "classification": "PASS",
+      "command": [
+        "C:\\Users\\sriram\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "manual-tests/sprint3/run_sprint3_acceptance.py",
+        "--blender",
+        "D:\\Softwares\\Design\\Blender\\blender.exe",
+        "--skip-dataset"
+      ],
+      "decisive_metrics": {
+        "errors": 0,
+        "failed_gate_count": 0,
+        "failures": 0,
+        "gate_count": 15,
+        "package_status": "PASS",
+        "skipped": 0,
+        "tests_run": 751
+      },
+      "elapsed_seconds": 6.588058,
+      "ended_at": "2026-08-06T15:22:49.461265+00:00",
+      "exit_code": 0,
+      "failed_gate_ids": [],
+      "frozen_output_hashes_before": {
+        "manual-tests/sprint3/SPRINT3_ACCEPTANCE_RESULTS.md": "c87c9c4e55513fe69379c02330258917b98aee077820ea7b69e25e24ad6b1834"
+      },
+      "frozen_outputs_restored": [
+        "manual-tests/sprint3/SPRINT3_ACCEPTANCE_RESULTS.md"
+      ],
+      "id": "H6",
+      "log_path": "manual-tests/sprint6/logs/historical/H6.log",
+      "name": "Sprint 3 acceptance",
+      "release_input_sha256": "3ce3cd1d8eb74fc7b3f57e446227fcf54ddb38052aca4ca983e5542c99f5cdbb",
+      "report_path": "manual-tests/sprint3/reports/sprint3_acceptance_results.json",
+      "report_status": "PASS",
+      "started_at": "2026-08-06T15:22:42.629565+00:00",
+      "timeout_seconds": 1800
+    },
+    {
+      "affects_release_safety": false,
+      "classification": "PASS_WITH_LIMITATIONS",
+      "command": [
+        "C:\\Users\\sriram\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "manual-tests/sprint3-final/run_final_validation.py",
+        "--blender",
+        "D:\\Softwares\\Design\\Blender\\blender.exe"
+      ],
+      "decisive_metrics": {
+        "failed_gate_count": 0,
+        "gate_count": 13,
+        "installed_package_smoke": "PASS",
+        "package_status": "PASS",
+        "passed_gates": 13,
+        "total_gates": 13
+      },
+      "elapsed_seconds": 72.062201,
+      "ended_at": "2026-08-06T15:24:17.303186+00:00",
+      "exit_code": 0,
+      "failed_gate_ids": [],
+      "frozen_output_hashes_before": {
+        "manual-tests/sprint3-final/FINAL_VALIDATION_RESULTS.md": "1a12ce792ce969b2b6e1a5a26e950050dc6fae5c929653f72bf9dc790847d86f"
+      },
+      "frozen_outputs_restored": [
+        "manual-tests/sprint3-final/FINAL_VALIDATION_RESULTS.md"
+      ],
+      "id": "H7",
+      "log_path": "manual-tests/sprint6/logs/historical/H7.log",
+      "name": "Sprint 3 independent final",
+      "release_input_sha256": "3ce3cd1d8eb74fc7b3f57e446227fcf54ddb38052aca4ca983e5542c99f5cdbb",
+      "report_path": "manual-tests/sprint3-final/reports/final_validation_results.json",
+      "report_status": "PASS_WITH_LIMITATIONS",
+      "started_at": "2026-08-06T15:23:04.975215+00:00",
+      "timeout_seconds": 3000
+    },
+    {
+      "affects_release_safety": false,
+      "classification": "PASS",
+      "command": [
+        "C:\\Users\\sriram\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "manual-tests/sprint4/run_sprint4_acceptance.py",
+        "--blender",
+        "D:\\Softwares\\Design\\Blender\\blender.exe",
+        "--skip-dataset"
+      ],
+      "decisive_metrics": {
+        "errors": 0,
+        "failed_gate_count": 0,
+        "failures": 0,
+        "gate_count": 16,
+        "package_status": "PASS",
+        "passed_gates": 16,
+        "skipped": 0,
+        "tests_run": 751,
+        "total_gates": 16
+      },
+      "elapsed_seconds": 7.09596,
+      "ended_at": "2026-08-06T15:24:37.037284+00:00",
+      "exit_code": 0,
+      "failed_gate_ids": [],
+      "frozen_output_hashes_before": {
+        "benchmarks/printability/SPRINT4_BASELINE_SUMMARY.md": "c5bc403f4f0c8fc4603ad0a762e0c216d6107fb25afd3b8abb810aef80f615b7",
+        "benchmarks/printability/baseline_manifest.json": "38307a7762c967aa645697968bd1de6f0af87ab642e93ff35a0ff4a7ca9f05e5",
+        "benchmarks/printability/records/statue-asad-al-lat.json": "357488a153167f7131ffeff4063196c5f6da823fc6246f3b23c01a1882e1794e",
+        "benchmarks/printability/records/statue-bastet.json": "d9ca9e9a3a9a081455ebdc72c7395d1c3d9cb9b3ae53974612786c5c9c643d3a",
+        "benchmarks/printability/records/statue-bato-kannon-shirane.json": "4f61631e7fc67ad92a69ae5091cb066be31ec439730bb14637f3977952b61f64",
+        "benchmarks/printability/records/statue-belvedere-torso.json": "d2c681d53d5c1db634c55c6e4639a5f68a58928e0ac068cdd666df06adcde996",
+        "benchmarks/printability/records/statue-caracalla-bust.json": "7e6aea80076fd6e6da0f1b06026b66608d30abb0769f0ce388e07d279ee65459",
+        "benchmarks/printability/records/statue-castlestrange-stone.json": "15b980fa6bce3dcb581545dff2d13d5cc7f7932f63574f19dea3c8b43642244f",
+        "benchmarks/printability/records/statue-cosmic-buddha-smithsonian-150k.json": "324f293c34972f0fefeaa494e1298ff15da56d37ffc9cb6317edf2ce3675672f",
+        "benchmarks/printability/records/statue-dainichi-nyorai-tower.json": "5f58621c6b9e6fd4099709d773adf9e584c02f0dbea09c2e382703d0b3f81438",
+        "benchmarks/printability/records/statue-danaid-rodin.json": "bcfb127981fddb2ae6767340e28ab071023e40497e3b3a683631848b76ebfde6",
+        "benchmarks/printability/records/statue-david-michelangelo.json": "a5a813e30bbe1fa2692e61fa31c1be7f2d1edec991637d70d0de5b8178abba75",
+        "benchmarks/printability/records/statue-ganesha-java-10c.json": "d8744e443ecc9479867d62bf18abfba77e25af34f288e42acc68cfcad176ff32",
+        "benchmarks/printability/records/statue-greek-slave-smithsonian-150k.json": "26e28cfc40a5e08e6a0d96431e892f0d58887719e5db072e0f718426ff86de01",
+        "benchmarks/printability/records/statue-hercules-archer-mia.json": "217ccc234c282eb97974da15e45c1cee09a4eb7d9b4302b38510e6d54295babb",
+        "benchmarks/printability/records/statue-heroic-head-pierre-de-wissant.json": "bfd7bc82ca935d78de120553d0c6571a8130c80c08a77a58fbb7e0e76c6e9429",
+        "benchmarks/printability/records/statue-hizen-komainu.json": "02633e887bf060a97fc305310651e35ce13502fd72a34aa13631d8e0f2b60425",
+        "benchmarks/printability/records/statue-hotei-water-basin.json": "7fd40458b3e881536807b466fa4dcc7fe9a5e4cb8283801ce0899762b2ab431c",
+        "benchmarks/printability/records/statue-icarus-ioannidou.json": "91d518dca3be38526684245fbab56605b8d9c2d247eaecf2f499ef66ed561ab1",
+        "benchmarks/printability/records/statue-juno-ludovisi.json": "6ea14e6eb8b358b7206ab4c27a7e97ee53278e9717ced7150c43b80c8f8365d2",
+        "benchmarks/printability/records/statue-laocoon-group.json": "ad54142d357ad89e754cf4780b5e2371a0011546d01d1259e5de4ab7d52f0bf6",
+        "benchmarks/printability/records/statue-laurana-woman-bust.json": "0390c4c0e18caa4d69cf9bd8dd6dc5af2ea8f2ea3cc15d7fc9402731ee320568",
+        "benchmarks/printability/records/statue-mick-odwyer.json": "d882cc08c785d6193570a7610cfc630c50a0ae31404fbe5cf99483138ff276a5",
+        "benchmarks/printability/records/statue-pieta-michelangelo.json": "eb0a91939b15bf061533c899163372de9004cd8af638919aeab9d2cdd5c3b061",
+        "benchmarks/printability/records/statue-thinker-rodin.json": "017c69515e5248e745f7ead4b3f99c841cb7b5ec5cb85a6e7db6682fe37bc379",
+        "benchmarks/printability/records/statue-uma-maheshvara-java-10c.json": "973c5448d3ab6ba3d5253601a67291e1bb62a4a0cd9df7d8170b9db4d321e2b1",
+        "benchmarks/printability/records/statue-venus-de-milo.json": "d91f15d1c55be30977269e2646c4dbbf74718ebd325c3176c82f5b3cdca2e410",
+        "benchmarks/printability/records/statue-venus-willendorf.json": "a005307b29cc983695a45da34a63f4e52d988f969b308b6e3752ebf652e8f8a1",
+        "benchmarks/printability/records/statue-water-buffalo-boy.json": "614c3ebeee989be5433d3685a4e5bb01ee1294ea89373f842c3348687c32db4b",
+        "manual-tests/sprint4/SPRINT4_ACCEPTANCE_RESULTS.md": "592e38aea4f7b95c0feabd62b68fd16f03761888d0dc9091e4c45fdd410b6610"
+      },
+      "frozen_outputs_restored": [
+        "manual-tests/sprint4/SPRINT4_ACCEPTANCE_RESULTS.md",
+        "benchmarks/printability/SPRINT4_BASELINE_SUMMARY.md",
+        "benchmarks/printability/baseline_manifest.json",
+        "benchmarks/printability/records/statue-asad-al-lat.json",
+        "benchmarks/printability/records/statue-bastet.json",
+        "benchmarks/printability/records/statue-bato-kannon-shirane.json",
+        "benchmarks/printability/records/statue-belvedere-torso.json",
+        "benchmarks/printability/records/statue-caracalla-bust.json",
+        "benchmarks/printability/records/statue-castlestrange-stone.json",
+        "benchmarks/printability/records/statue-cosmic-buddha-smithsonian-150k.json",
+        "benchmarks/printability/records/statue-dainichi-nyorai-tower.json",
+        "benchmarks/printability/records/statue-danaid-rodin.json",
+        "benchmarks/printability/records/statue-david-michelangelo.json",
+        "benchmarks/printability/records/statue-ganesha-java-10c.json",
+        "benchmarks/printability/records/statue-greek-slave-smithsonian-150k.json",
+        "benchmarks/printability/records/statue-hercules-archer-mia.json",
+        "benchmarks/printability/records/statue-heroic-head-pierre-de-wissant.json",
+        "benchmarks/printability/records/statue-hizen-komainu.json",
+        "benchmarks/printability/records/statue-hotei-water-basin.json",
+        "benchmarks/printability/records/statue-icarus-ioannidou.json",
+        "benchmarks/printability/records/statue-juno-ludovisi.json",
+        "benchmarks/printability/records/statue-laocoon-group.json",
+        "benchmarks/printability/records/statue-laurana-woman-bust.json",
+        "benchmarks/printability/records/statue-mick-odwyer.json",
+        "benchmarks/printability/records/statue-pieta-michelangelo.json",
+        "benchmarks/printability/records/statue-thinker-rodin.json",
+        "benchmarks/printability/records/statue-uma-maheshvara-java-10c.json",
+        "benchmarks/printability/records/statue-venus-de-milo.json",
+        "benchmarks/printability/records/statue-venus-willendorf.json",
+        "benchmarks/printability/records/statue-water-buffalo-boy.json"
+      ],
+      "id": "H8",
+      "log_path": "manual-tests/sprint6/logs/historical/H8.log",
+      "name": "Sprint 4 acceptance",
+      "release_input_sha256": "3ce3cd1d8eb74fc7b3f57e446227fcf54ddb38052aca4ca983e5542c99f5cdbb",
+      "report_path": "manual-tests/sprint4/reports/sprint4_acceptance_results.json",
+      "report_status": "PASS",
+      "started_at": "2026-08-06T15:24:29.560078+00:00",
+      "timeout_seconds": 1800
+    },
+    {
+      "affects_release_safety": false,
+      "classification": "PASS_WITH_LIMITATIONS",
+      "command": [
+        "C:\\Users\\sriram\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "manual-tests/sprint4-final/run_final_validation.py",
+        "--blender",
+        "D:\\Softwares\\Design\\Blender\\blender.exe",
+        "--timeout-seconds",
+        "2400"
+      ],
+      "compatibility_disposition": "Frozen Sprint 4 canonical implementation identity differs after later-sprint source expansion; the other 15/16 gates passed and the frozen baseline remains unchanged.",
+      "decisive_metrics": {
+        "failed_gate_count": 1,
+        "gate_count": 16,
+        "installed_package_smoke": "PASS",
+        "package_status": "PASS",
+        "passed_gates": 15,
+        "total_gates": 16
+      },
+      "elapsed_seconds": 106.01581,
+      "ended_at": "2026-08-06T15:26:36.813156+00:00",
+      "exit_code": 1,
+      "failed_gate_ids": [
+        "S4F-J"
+      ],
+      "frozen_output_hashes_before": {
+        "benchmarks/printability/SPRINT4_BASELINE_SUMMARY.md": "c5bc403f4f0c8fc4603ad0a762e0c216d6107fb25afd3b8abb810aef80f615b7",
+        "benchmarks/printability/baseline_manifest.json": "38307a7762c967aa645697968bd1de6f0af87ab642e93ff35a0ff4a7ca9f05e5",
+        "benchmarks/printability/records/statue-asad-al-lat.json": "357488a153167f7131ffeff4063196c5f6da823fc6246f3b23c01a1882e1794e",
+        "benchmarks/printability/records/statue-bastet.json": "d9ca9e9a3a9a081455ebdc72c7395d1c3d9cb9b3ae53974612786c5c9c643d3a",
+        "benchmarks/printability/records/statue-bato-kannon-shirane.json": "4f61631e7fc67ad92a69ae5091cb066be31ec439730bb14637f3977952b61f64",
+        "benchmarks/printability/records/statue-belvedere-torso.json": "d2c681d53d5c1db634c55c6e4639a5f68a58928e0ac068cdd666df06adcde996",
+        "benchmarks/printability/records/statue-caracalla-bust.json": "7e6aea80076fd6e6da0f1b06026b66608d30abb0769f0ce388e07d279ee65459",
+        "benchmarks/printability/records/statue-castlestrange-stone.json": "15b980fa6bce3dcb581545dff2d13d5cc7f7932f63574f19dea3c8b43642244f",
+        "benchmarks/printability/records/statue-cosmic-buddha-smithsonian-150k.json": "324f293c34972f0fefeaa494e1298ff15da56d37ffc9cb6317edf2ce3675672f",
+        "benchmarks/printability/records/statue-dainichi-nyorai-tower.json": "5f58621c6b9e6fd4099709d773adf9e584c02f0dbea09c2e382703d0b3f81438",
+        "benchmarks/printability/records/statue-danaid-rodin.json": "bcfb127981fddb2ae6767340e28ab071023e40497e3b3a683631848b76ebfde6",
+        "benchmarks/printability/records/statue-david-michelangelo.json": "a5a813e30bbe1fa2692e61fa31c1be7f2d1edec991637d70d0de5b8178abba75",
+        "benchmarks/printability/records/statue-ganesha-java-10c.json": "d8744e443ecc9479867d62bf18abfba77e25af34f288e42acc68cfcad176ff32",
+        "benchmarks/printability/records/statue-greek-slave-smithsonian-150k.json": "26e28cfc40a5e08e6a0d96431e892f0d58887719e5db072e0f718426ff86de01",
+        "benchmarks/printability/records/statue-hercules-archer-mia.json": "217ccc234c282eb97974da15e45c1cee09a4eb7d9b4302b38510e6d54295babb",
+        "benchmarks/printability/records/statue-heroic-head-pierre-de-wissant.json": "bfd7bc82ca935d78de120553d0c6571a8130c80c08a77a58fbb7e0e76c6e9429",
+        "benchmarks/printability/records/statue-hizen-komainu.json": "02633e887bf060a97fc305310651e35ce13502fd72a34aa13631d8e0f2b60425",
+        "benchmarks/printability/records/statue-hotei-water-basin.json": "7fd40458b3e881536807b466fa4dcc7fe9a5e4cb8283801ce0899762b2ab431c",
+        "benchmarks/printability/records/statue-icarus-ioannidou.json": "91d518dca3be38526684245fbab56605b8d9c2d247eaecf2f499ef66ed561ab1",
+        "benchmarks/printability/records/statue-juno-ludovisi.json": "6ea14e6eb8b358b7206ab4c27a7e97ee53278e9717ced7150c43b80c8f8365d2",
+        "benchmarks/printability/records/statue-laocoon-group.json": "ad54142d357ad89e754cf4780b5e2371a0011546d01d1259e5de4ab7d52f0bf6",
+        "benchmarks/printability/records/statue-laurana-woman-bust.json": "0390c4c0e18caa4d69cf9bd8dd6dc5af2ea8f2ea3cc15d7fc9402731ee320568",
+        "benchmarks/printability/records/statue-mick-odwyer.json": "d882cc08c785d6193570a7610cfc630c50a0ae31404fbe5cf99483138ff276a5",
+        "benchmarks/printability/records/statue-pieta-michelangelo.json": "eb0a91939b15bf061533c899163372de9004cd8af638919aeab9d2cdd5c3b061",
+        "benchmarks/printability/records/statue-thinker-rodin.json": "017c69515e5248e745f7ead4b3f99c841cb7b5ec5cb85a6e7db6682fe37bc379",
+        "benchmarks/printability/records/statue-uma-maheshvara-java-10c.json": "973c5448d3ab6ba3d5253601a67291e1bb62a4a0cd9df7d8170b9db4d321e2b1",
+        "benchmarks/printability/records/statue-venus-de-milo.json": "d91f15d1c55be30977269e2646c4dbbf74718ebd325c3176c82f5b3cdca2e410",
+        "benchmarks/printability/records/statue-venus-willendorf.json": "a005307b29cc983695a45da34a63f4e52d988f969b308b6e3752ebf652e8f8a1",
+        "benchmarks/printability/records/statue-water-buffalo-boy.json": "614c3ebeee989be5433d3685a4e5bb01ee1294ea89373f842c3348687c32db4b",
+        "manual-tests/sprint4-final/FINAL_VALIDATION_RESULTS.md": "f2e50811de68b497077d327c6148f6d88d284dd91977ff58ab7b79ab769cab13"
+      },
+      "frozen_outputs_restored": [
+        "manual-tests/sprint4-final/FINAL_VALIDATION_RESULTS.md"
+      ],
+      "id": "H9",
+      "log_path": "manual-tests/sprint6/logs/historical/H9.log",
+      "name": "Sprint 4 independent final",
+      "release_input_sha256": "3ce3cd1d8eb74fc7b3f57e446227fcf54ddb38052aca4ca983e5542c99f5cdbb",
+      "report_path": "manual-tests/sprint4-final/reports/final_validation_results.json",
+      "report_status": "FAIL",
+      "started_at": "2026-08-06T15:24:50.505054+00:00",
+      "timeout_seconds": 3000
+    },
+    {
+      "affects_release_safety": false,
+      "classification": "PASS_WITH_LIMITATIONS",
+      "command": [
+        "C:\\Users\\sriram\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "manual-tests/sprint5/run_sprint5_acceptance.py",
+        "--blender",
+        "D:\\Softwares\\Design\\Blender\\blender.exe"
+      ],
+      "compatibility_disposition": "",
+      "decisive_metrics": {
+        "errors": 0,
+        "failed_gate_count": 0,
+        "failures": 0,
+        "gate_count": 16,
+        "package_status": "PASS",
+        "skipped": 0,
+        "tests_run": 161
+      },
+      "elapsed_seconds": 3.011815,
+      "ended_at": "2026-08-06T15:38:24.461872+00:00",
+      "exit_code": 0,
+      "failed_gate_ids": [],
+      "frozen_output_hashes_before": {
+        "manual-tests/sprint5/SPRINT5_ACCEPTANCE_RESULTS.md": "e4a6f9dbf3c5850915656079393537186ce4a16c275b53cea39ffc7be0de2fbc"
+      },
+      "frozen_outputs_restored": [
+        "manual-tests/sprint5/SPRINT5_ACCEPTANCE_RESULTS.md"
+      ],
+      "id": "H10",
+      "log_path": "manual-tests/sprint6/logs/historical/H10.log",
+      "name": "Sprint 5 acceptance",
+      "release_input_sha256": "3ce3cd1d8eb74fc7b3f57e446227fcf54ddb38052aca4ca983e5542c99f5cdbb",
+      "report_path": "manual-tests/sprint5/reports/sprint5_acceptance_results.json",
+      "report_status": "PASS_WITH_LIMITATIONS",
+      "started_at": "2026-08-06T15:38:21.203757+00:00",
+      "timeout_seconds": 1800
+    },
+    {
+      "affects_release_safety": false,
+      "classification": "PASS_WITH_LIMITATIONS",
+      "command": [
+        "C:\\Users\\sriram\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "manual-tests/sprint5-final/run_final_validation.py",
+        "--blender",
+        "D:\\Softwares\\Design\\Blender\\blender.exe",
+        "--phase",
+        "final"
+      ],
+      "compatibility_disposition": "",
+      "decisive_metrics": {
+        "failed": 0,
+        "failed_gate_count": 0,
+        "gate_count": 17,
+        "passed": 17,
+        "source_immutability": true
+      },
+      "elapsed_seconds": 33.859667,
+      "ended_at": "2026-08-06T15:39:00.487275+00:00",
+      "exit_code": 0,
+      "failed_gate_ids": [],
+      "frozen_output_hashes_before": {
+        "manual-tests/sprint5-final/FINAL_VALIDATION_RESULTS.md": "9870900779123a35da011c371feac3ca1a6195fc394dc78d58be1523e6c9fb68"
+      },
+      "frozen_outputs_restored": [
+        "manual-tests/sprint5-final/FINAL_VALIDATION_RESULTS.md"
+      ],
+      "id": "H11",
+      "log_path": "manual-tests/sprint6/logs/historical/H11.log",
+      "name": "Sprint 5 independent final",
+      "release_input_sha256": "3ce3cd1d8eb74fc7b3f57e446227fcf54ddb38052aca4ca983e5542c99f5cdbb",
+      "report_path": "manual-tests/sprint5-final/reports/final_validation.json",
+      "report_status": "PASS_WITH_LIMITATIONS",
+      "started_at": "2026-08-06T15:38:26.380056+00:00",
+      "timeout_seconds": 3600
+    }
+  ],
+  "limitations": [
+    "Manual panel UAT, Blender 4.5 LTS, slicer comparison, material calibration, and physical printing are deferred."
+  ],
+  "recorded_at": "2026-08-06T15:41:26.122431+00:00",
+  "release_input": {
+    "dataset_asset_count": 27,
+    "dataset_asset_sha256": "c628a5fc903533c61472fb730c322a2ec1af22ce4ceb9d3cf6b782f3eedfe65e",
+    "dataset_manifest_sha256": "3e763782e6271eff153c8c4097a8b841423b31962d1222e2baf208178559df9a",
+    "dataset_mismatch_count": 0,
+    "dataset_status": "PASS",
+    "file_count": 155,
+    "implementation_fingerprint": "sprint6-intelligent-optimization-1.2-verification",
+    "sha256": "3ce3cd1d8eb74fc7b3f57e446227fcf54ddb38052aca4ca983e5542c99f5cdbb",
+    "source_mutation_count": 0,
+    "timeout_count": 0
+  },
+  "schema_version": "2.0",
+  "status": "PASS_WITH_LIMITATIONS"
+}

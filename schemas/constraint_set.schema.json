@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "chroma3d://schemas/constraint-set/1.0",
+  "title": "Chroma3D Sculpt Constraint Set",
+  "type": "object",
+  "required": ["schema_version", "set_id", "constraints", "constraint_set_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "set_id": {"type": "string", "minLength": 1},
+    "constraints": {"type": "array", "items": {"type": "object", "required": ["constraint_id", "kind", "severity"]}},
+    "provenance": {"type": "string"},
+    "constraint_set_hash": {"type": "string", "minLength": 1}
+  }
+}

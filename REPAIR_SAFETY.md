@@ -168,3 +168,5 @@ Any proposed implementation that cannot satisfy these rules must not be merged a
 ## Sprint 5 optimization boundary
 
 Controlled Optimization reuses Safe Repair only through explicit workspace-owned operation calls. It does not weaken this contract: the protected source remains immutable, candidates and plans are read-only, checkpoints precede mutation, and accept/discard retain or remove only separately owned resources. Optimization audits retain reused repair outcomes and never turn a repair failure, skip, or indeterminate state into a successful zero finding. Sprint 5 does not add automatic cleanup, large-hole reconstruction, Boolean reconstruction, supports, slicing, G-code, or printer control.
+
+Sprint 6 Intelligent Optimization may generate a `REPAIR_REUSE` strategy only from an existing explicit Sprint 5/Safe Repair candidate. Strategy search and ranking cannot invoke repair or mutate geometry. Selected execution still delegates to the Sprint 5 workspace and retains Safe Repair's source immutability, checkpoint, stale-state, rollback, failure, and audit rules.
