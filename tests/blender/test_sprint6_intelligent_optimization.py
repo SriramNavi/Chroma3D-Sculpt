@@ -104,7 +104,7 @@ class Sprint6IntelligentOptimizationTests(unittest.TestCase):
         clear_scene()
 
     def test_01_version_and_schema_lock(self) -> None:
-        self.assertEqual(DISPLAY_VERSION, "0.7.0-alpha.1")
+        self.assertEqual(DISPLAY_VERSION, "0.8.0-alpha.1")
         self.assertEqual(default_search_policy(SearchMode.FAST).policy_version, "1.0")
         self.assertEqual(default_constraint_set().schema_version, "1.0")
 

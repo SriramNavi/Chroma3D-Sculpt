@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://chroma3d.local/schemas/assistance_report.schema.json", "title": "Chroma3D Assistance Report 1.0.0",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "extension_version", "exported_at", "report_id", "session", "source_identity", "policy_hash", "context", "provider_exchange", "recommendations", "selected_recommendation_id", "preview", "approval", "stale_events", "cancellation_events", "failures", "warnings", "limitations", "disclaimers"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"}, "extension_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+-alpha\\.[0-9]+$"}, "exported_at": {"type": "string", "format": "date-time"}, "report_id": {"$ref": "#/$defs/id"},
+    "session": {"type": "object"}, "source_identity": {"type": "object"}, "policy_hash": {"$ref": "#/$defs/hash"}, "context": {"type": "object"}, "provider_exchange": {"type": ["object", "null"]}, "recommendations": {"type": "array", "maxItems": 32, "items": {"type": "object"}},
+    "selected_recommendation_id": {"type": "string", "maxLength": 128}, "preview": {"type": ["object", "null"]}, "approval": {"type": "object"}, "stale_events": {"$ref": "#/$defs/events"}, "cancellation_events": {"$ref": "#/$defs/events"}, "failures": {"$ref": "#/$defs/events"},
+    "warnings": {"$ref": "#/$defs/text"}, "limitations": {"$ref": "#/$defs/text"}, "disclaimers": {"$ref": "#/$defs/text"}
+  }, "$defs": {"hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"}, "id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,31}:[a-f0-9-]{32,64}$"}, "events": {"type": "array", "maxItems": 4096, "items": {"type": "object"}}, "text": {"type": "array", "maxItems": 256, "items": {"type": "string", "maxLength": 1024}}}
+}

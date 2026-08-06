@@ -2,6 +2,8 @@
 
 ## Decision
 
+**Implementation update:** Sprint 7 is implemented in the current `0.8.0-alpha.1` worktree under the approved scope. The specification evidence below records the original selection rationale; publication and live-provider qualification remain separate decisions.
+
 **Outcome A — Sprint 7 is explicitly defined.** `TECHNICAL_ROADMAP.md` names **Sprint 7 — AI Recommendation Foundation** and supplies an objective, scope, and gates. `PRODUCT_REQUIREMENTS.md` provides the matching user journey and `FR-AI-001` through `FR-AI-010`. The selected scope is therefore explicit; it is not inferred from Sprint numbering or from Sprint 6's name.
 
 ## Evidence table

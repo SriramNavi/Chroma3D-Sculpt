@@ -13,7 +13,11 @@ Sprint 5 (`0.6.0-alpha.1`) adds a separate optimization coordinator above diagno
 
 ## Sprint 6 Intelligent Optimization
 
-Sprint 6 (`0.7.0-alpha.1`) adds a deterministic rule-based strategy layer above Sprint 5. Search modes are bounded by the centralized performance registry; strategy generation reuses Sprint 5 candidates; hard/soft constraints fail closed; objective vectors keep raw values, normalization, direction, and evidence state visible; Pareto construction records dominance reasons; ranking records objective contributions and tie-breaks; explanations disclose measured versus estimated versus skipped evidence; and local history supports explicit reruns without hidden learning. Only a selected strategy may reach the Sprint 5 isolated workspace, and accept/discard semantics remain unchanged. Sprint 6 is frozen; the Sprint 7 specification is prepared, but Sprint 7 runtime implementation has not started.
+Sprint 6 (`0.7.0-alpha.1`) adds a deterministic rule-based strategy layer above Sprint 5. Search modes are bounded by the centralized performance registry; strategy generation reuses Sprint 5 candidates; hard/soft constraints fail closed; objective vectors keep raw values, normalization, direction, and evidence state visible; Pareto construction records dominance reasons; ranking records objective contributions and tie-breaks; explanations disclose measured versus estimated versus skipped evidence; and local history supports explicit reruns without hidden learning. Only a selected strategy may reach the Sprint 5 isolated workspace, and accept/discard semantics remain unchanged.
+
+## Sprint 7 AI Recommendation Foundation
+
+Sprint 7 (`0.8.0-alpha.1`, current worktree) adds an optional advisory layer above current Sprint 5/6 evidence. The provider-neutral boundary has one OpenAI Responses API adapter implemented with the Python standard library, direct explicit BYOK HTTPS, strict host/size/timeout/content-type rules, zero automatic retries, and no hidden calls. Context is consented, purpose-specific, allow-listed, redacted, byte-bounded, summary-only, and exports zero geometry. Structured output is decoded and validated locally, then exact current evidence, target, fingerprint, operation, and parameter hashes are resolved before any action becomes available. Preview and a fresh scope-bound approval are mandatory; execution delegates existing Sprint 5/6 workspace/checkpoint/comparison/restore/accept-copy/discard paths. Local Sprint 6 ranking remains available without network or credentials. Live-provider qualification and publication remain separate gates.
 - A backend is introduced only when licensing, collaboration, asset delivery, AI routing, or another validated need requires it.
 - Commercial systems follow demonstrated product value and production UAT.
 - Every milestone has automated, manual, performance, safety, and evidence gates appropriate to its risk.
@@ -325,7 +329,7 @@ Assets pass visual/domain review, metadata and rights validation, Blender compat
 
 **Objective:** Evaluate bounded AI-assisted recommendations without allowing a model to control Blender or define geometry correctness.
 
-**Specification status:** The [Sprint 7 Engineering Specification](SPRINT7_SPECIFICATION.md) is prepared with draft-only schemas, traceable requirements, safety/state/algorithm contracts, tests, dataset/performance plans, and acceptance gates. `0.8.0-alpha.1` is a proposal only. No provider, backend, network runtime, model call, Blender operator/panel, packaged schema, or metadata change is implemented. Provider/model/deployment/retention/cost decisions remain gated with live adapters disabled by default.
+**Status:** Implemented in the current uncommitted `0.8.0-alpha.1` worktree. Stable `1.0.0` contracts, provider-neutral/OpenAI adapters, consented bounded context, strict local grounding, preview/fresh approval, Sprint 5/6 delegation, offline fallback, panel, package, 10/27-model workers, and acceptance/final tooling are present. Live-provider qualification, manual panel UAT, publication, hosted service, billing, accounts, telemetry, and Sprint 8 remain separate.
 
 ### Scope
 

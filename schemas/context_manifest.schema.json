@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://chroma3d.local/schemas/context_manifest.schema.json", "title": "Chroma3D Context Manifest 1.0.0",
+  "type": "object", "additionalProperties": false,
+  "required": ["context_id", "created_at", "source_signature_hash", "object_safe_display_name", "profile_hashes", "settings_hashes", "evidence", "candidate_ids", "plan_ids", "strategy_ids", "ranking_information", "summaries", "unknown_states", "limitations", "included_categories", "omitted_categories", "redaction_record", "truncation_record", "byte_count", "token_estimate", "consent", "context_hash", "policy_hash", "geometry_elements_exported"],
+  "properties": {
+    "context_id": {"$ref": "#/$defs/id"}, "created_at": {"type": "string", "format": "date-time"}, "source_signature_hash": {"$ref": "#/$defs/hash"}, "object_safe_display_name": {"type": "string", "maxLength": 128},
+    "profile_hashes": {"$ref": "#/$defs/hashMap"}, "settings_hashes": {"$ref": "#/$defs/hashMap"},
+    "evidence": {"type": "array", "maxItems": 2048, "items": {"$ref": "#/$defs/evidence"}},
+    "candidate_ids": {"$ref": "#/$defs/ids256"}, "plan_ids": {"$ref": "#/$defs/ids64"}, "strategy_ids": {"type": "array", "maxItems": 32, "uniqueItems": true, "items": {"type": "string", "minLength": 1, "maxLength": 128}},
+    "ranking_information": {"type": "array", "maxItems": 32, "items": {"type": "object"}}, "summaries": {"type": "object"},
+    "unknown_states": {"$ref": "#/$defs/ids256"}, "limitations": {"type": "array", "maxItems": 128, "items": {"type": "string", "maxLength": 1024}},
+    "included_categories": {"$ref": "#/$defs/ids64"}, "omitted_categories": {"$ref": "#/$defs/ids64"}, "redaction_record": {"type": "object"}, "truncation_record": {"type": "object"},
+    "byte_count": {"type": "integer", "minimum": 0, "maximum": 1048576}, "token_estimate": {"type": "integer", "minimum": 0, "maximum": 262144}, "consent": {"type": "object"}, "context_hash": {"$ref": "#/$defs/hash"}, "policy_hash": {"$ref": "#/$defs/hash"}, "geometry_elements_exported": {"const": 0}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"}, "id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,31}:[a-f0-9-]{32,64}$"},
+    "ids256": {"type": "array", "maxItems": 256, "uniqueItems": true, "items": {"type": "string", "minLength": 1, "maxLength": 128}}, "ids64": {"type": "array", "maxItems": 64, "uniqueItems": true, "items": {"type": "string", "minLength": 1, "maxLength": 128}},
+    "hashMap": {"type": "object", "maxProperties": 32, "additionalProperties": {"$ref": "#/$defs/hash"}},
+    "evidence": {"type": "object", "additionalProperties": false, "required": ["evidence_id", "evidence_type", "state", "confidence", "source_report_hash", "provenance", "limitations", "critical"], "properties": {"evidence_id": {"type": "string", "minLength": 1, "maxLength": 128}, "evidence_type": {"type": "string", "minLength": 1, "maxLength": 64}, "state": {"enum": ["PASS", "WARNING", "FAIL", "SKIPPED_LIMIT", "NOT_EVALUATED", "INDETERMINATE", "NOT_APPLICABLE", "STALE", "CANCELLED", "BUDGET_EXHAUSTED"]}, "confidence": {"enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"]}, "source_report_hash": {"$ref": "#/$defs/hash"}, "provenance": {"type": "array", "maxItems": 64, "items": {"type": "string", "maxLength": 1024}}, "limitations": {"type": "array", "maxItems": 128, "items": {"type": "string", "maxLength": 1024}}, "critical": {"type": "boolean"}}}
+  }
+}

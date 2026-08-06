@@ -70,4 +70,4 @@ Retain context extraction/canonicalization, request construction, fake-provider,
 
 ## Dataset execution status
 
-**NOT RUN for this specification milestone.** Frozen Sprint 6 corpus evidence is not rewritten or rerun.
+Sprint 7 adds `manual-tests/sprint7/run_dataset_validation.py` and an isolated Blender worker. The worker imports one permissioned model, captures its source signature, creates bounded current Sprint 5 candidates/Sprint 6 strategies, builds the consented zero-geometry FAST context, validates an exact fake-provider strategy response, repeats the context hash, proves source immutability, and records elapsed time plus a labeled point working-set observation. Representative 10/10 and full 27/27 results pass under the current validation fingerprint with zero live-provider calls, geometry payloads, source mutations, or timeouts. Frozen Sprint 0–6 evidence was verified unchanged.

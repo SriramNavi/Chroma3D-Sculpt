@@ -2,7 +2,7 @@
 
 Chroma3D Sculpt is a local Blender extension for production mesh diagnostics, controlled reversible repair, and advisory printability risk analysis of complex statue meshes. Repair preserves the original source; Printability never changes geometry, transforms, orientation, or scale.
 
-**Current frozen release:** `v0.7.0-alpha.1` on `main` at `63f98b8cef68dc977f6bd8c17972303fa7e3d05e`. Sprint 6 adds deterministic, explainable, bounded multi-objective strategy search above Sprint 5. Physical validation remains separate; no printability or print-success guarantee is provided.
+**Current published release:** `v0.7.0-alpha.1`. The current Sprint 7 implementation worktree is `0.8.0-alpha.1`; it has not been committed, published, tagged, or released by this task. Physical validation remains separate; no printability or print-success guarantee is provided.
 
 Sprint 2.7 added the dataset storage architecture: Dataset `1.0.0` and Golden Benchmark `1.0.0` are packaged as verified release assets, while manifests, provenance, licenses, schemas, locks, and tooling remain in this product repository. The existing `v0.3.1-alpha.1` history is immutable; Sprint 3 advances the extension separately to `0.4.0-alpha.1`.
 
@@ -14,9 +14,9 @@ Sprint 5 adds a workspace-only Controlled Optimization workflow. It generates de
 
 Sprint 6 adds an Intelligent Optimization workflow. It generates named strategy families from Sprint 5 candidates, evaluates visible objective vectors, applies hard/soft constraints, constructs a bounded Pareto frontier, ranks with explicit tie-breaks, explains estimated versus measured evidence, retains local history, and recommends without auto-executing. Strategy execution still delegates to Sprint 5's isolated workspace/checkpoints and requires explicit selection. See the [Intelligent Optimization guide](docs/intelligent-optimization/README.md).
 
-The [Sprint 7 Engineering Specification](SPRINT7_SPECIFICATION.md) is prepared for the roadmap's **AI Recommendation Foundation**. It defines optional provider-neutral recommendations, bounded consented context, strict structured output, exact references to existing Sprint 5/6 candidates or strategies, deny-by-default operations, preview/approval/cancellation, audit/redaction, performance, tests, and acceptance. Sprint 7 implementation has not started: no provider, network runtime, model call, operator, panel, package, or version change exists. Reference-image/vision assistance, procedural creation, commercial hosting/billing, slicing/G-code/printer control, physical claims, global-optimum claims, and automatic source replacement remain deferred or prohibited.
+Sprint 7 implements the optional [AI Recommendation Foundation](docs/ai-recommendation/README.md). An OpenAI-first adapter sits behind a provider-neutral interface and uses one explicit user-initiated HTTPS request with BYOK from `OPENAI_API_KEY` or process-memory session entry. Context is consented, bounded, redacted, summary-only, and contains zero geometry. Provider output is untrusted strict JSON; local validation permits only exact current Sprint 5/6 IDs, fingerprints, evidence links, operation names, and parameter hashes. Preview, fresh approval, delegated checkpointed execution, accept-copy/discard, audit, and offline Sprint 6 fallback remain separate actions. No API key or network is required for installation or any Sprint 0–6 workflow.
 
-**Current extension version:** 0.7.0-alpha.1
+**Current extension version:** 0.8.0-alpha.1
 
 **JSON schema:** 2.0
 
@@ -29,6 +29,8 @@ The [Sprint 7 Engineering Specification](SPRINT7_SPECIFICATION.md) is prepared f
 **Controlled Optimization schemas:** 1.0
 
 **Intelligent Optimization schemas:** 1.0 (strategy, policy, constraints, Pareto, ranking, explanation, history, audit)
+
+**AI Recommendation schemas:** 1.0.0 (policy, context, exchange, recommendation, session, report, audit)
 
 **Minimum Blender:** 4.4.0
 
@@ -88,7 +90,8 @@ Open **3D Viewport > Sidebar > Chroma3D > Chroma3D Sculpt**.
 9. Expand **Advanced Preparation**, compose Hardware + Material + nozzle/layer/plate/support policy, review feature flags, then analyze the active object or selected mesh batch.
 10. Review status, confidence, score reasons, skipped/failed checks, risk evidence, and virtual orientation candidates; use explicit issue-selection controls where evidence exists.
 11. Open **Controlled Optimization**, create a session, generate candidates and a plan, apply only selected workspace steps, review comparisons, then accept a separate copy or discard the workspace.
-12. Export the current non-stale result as schema 1.0.0 JSON or a human-readable Markdown report.
+12. Optionally expand **AI Recommendation**, prepare and review the exact context disclosure, consent, use OpenAI BYOK or the deterministic offline Sprint 6 view, then review before preview and separately approve any delegated action.
+13. Export the current non-stale result as schema 1.0.0 JSON or a human-readable Markdown report.
 
 Issue selection is the only intentional state-changing Sprint 1 action. It changes selection/mode for inspection but never changes geometry. If topology changed after analysis it refuses with `Analysis is stale. Run Analyze Mesh again.`
 
@@ -107,14 +110,17 @@ py manual-tests\sprint2\run_sprint2_acceptance.py --blender "D:\Softwares\Design
 py manual-tests\sprint2-final\run_final_validation.py --blender "D:\Softwares\Design\Blender\blender.exe"
 py manual-tests\sprint3\run_sprint3_acceptance.py --blender "D:\Softwares\Design\Blender\blender.exe"
 py manual-tests\sprint5\run_sprint5_acceptance.py --blender "D:\Softwares\Design\Blender\blender.exe"
+& "D:\Softwares\Design\Blender\blender.exe" --background --factory-startup --python tests\blender\run_sprint7_tests.py
+py manual-tests\sprint7\run_dataset_validation.py --source-directory ".validation-assets\dataset\raw" --blender "D:\Softwares\Design\Blender\blender.exe" --scope representative
+py manual-tests\sprint7\run_dataset_validation.py --source-directory ".validation-assets\dataset\raw" --blender "D:\Softwares\Design\Blender\blender.exe" --scope full
 py manual-tests\benchmarks\verify_golden_baseline.py
 py manual-tests\benchmarks\run_golden_benchmark.py --self-check
 py scripts\package_extension.py
 py scripts\validate_package.py
-& "D:\Softwares\Design\Blender\blender.exe" --background --command extension validate "E:\VPRS\Sriram\Projects\Chroma3D Sculpt\dist\chroma3d_sculpt-0.7.0-alpha.1.zip"
+& "D:\Softwares\Design\Blender\blender.exe" --background --command extension validate "E:\VPRS\Sriram\Projects\Chroma3D Sculpt\dist\chroma3d_sculpt-0.8.0-alpha.1.zip"
 ```
 
-The Sprint 6 candidate archive is `dist\chroma3d_sculpt-0.7.0-alpha.1.zip`. Install it through Blender's **Edit > Preferences > Extensions > Install from Disk**, then enable the extension if prompted.
+The locally built Sprint 7 candidate archive is `dist\chroma3d_sculpt-0.8.0-alpha.1.zip`. It is not a published release. Install it through Blender's **Edit > Preferences > Extensions > Install from Disk**, then enable the extension if prompted.
 
 The background suite preserves the prior sprint regressions and adds 161 focused Sprint 5 tests. Sprint 5 evidence is generated under `manual-tests\sprint5`; generated JSON/log/dashboard folders and ZIP files remain ignored. See the [Printability user guide](docs/printability/USER_GUIDE.md), [Advanced Preparation user guide](docs/advanced-preparation/USER_GUIDE.md), and [Controlled Optimization user guide](docs/controlled-optimization/USER_GUIDE.md).
 

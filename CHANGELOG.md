@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.8.0-alpha.1 - Unreleased (Sprint 7)
+
+### Added
+
+- Optional AI Recommendation panel with explicit context disclosure/consent, environment or session-only BYOK, an OpenAI Responses API adapter behind a provider-neutral contract, and a deterministic Sprint 6 offline fallback.
+- Strict bounded JSON decoding, semantic validation, current evidence grounding, exact Sprint 5/6 target/fingerprint/operation/parameter-hash resolution, local confidence derivation, stale invalidation, cancellation, preview-bound approval, and redacted JSON/Markdown report/audit exports.
+- Stable schema `1.0.0` contracts, focused provider-independent tests, adversarial fixtures, isolated 10/27-model context/grounding workers, acceptance tooling, and exact package integration.
+
+### Safety and limitations
+
+- No key is persisted. No network request occurs at startup, registration, panel draw, local analysis, packaging, or tests. Automated tests use fake keys and mocked/in-process providers only.
+- Provider output cannot create code, parameters, operations, candidates, plans, URLs, files, or Blender calls. Any mutation delegates to the current Sprint 5/6 protected workspace and checkpoints after preview and fresh approval.
+- Live-provider development/production qualification, manual installed-panel UAT, Blender 4.5 LTS, slicer comparison, material calibration, and physical printing are not established by local software evidence.
+
 ## 0.7.0-alpha.1 - 2026-08-06 (Sprint 6)
 
 ### Added

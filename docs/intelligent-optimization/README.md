@@ -6,4 +6,6 @@ Workflow: protected source → Sprint 5 candidates → strategy generation → b
 
 The engine does not use AI/LLM, cloud services, telemetry, automatic execution, source replacement, supports, slicing, G-code, printer commands, physical printing, or global-optimum claims.
 
+Sprint 7's optional [AI Recommendation layer](../ai-recommendation/README.md) consumes only bounded current Sprint 6 identities, evidence summaries, and rankings. It does not change Sprint 6 search truth or execution: offline ranking remains available, provider output cannot override constraints, and all preview/execution still uses this workflow and Sprint 5's protected workspace.
+
 See [Safety Model](SAFETY_MODEL.md), [Search Policy](SEARCH_POLICY.md), [Constraints](CONSTRAINTS.md), [Strategy Generation](STRATEGY_GENERATION.md), [Pareto Frontier](PARETO_FRONTIER.md), [Ranking and Explanations](RANKING_AND_EXPLANATIONS.md), [History and Overrides](HISTORY_AND_OVERRIDES.md), and [User Guide](USER_GUIDE.md).

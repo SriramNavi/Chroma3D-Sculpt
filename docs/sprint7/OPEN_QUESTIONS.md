@@ -4,6 +4,19 @@
 
 Questions below do not authorize assumptions. The safe temporary behavior is normative until the named owner records a decision. Product questions block enabling a live provider, but they do not block provider-neutral contracts, strict local validators, fake adapters, context minimization, or deny-by-default tests.
 
+## Decisions supplied by the Sprint 7 implementation authorization
+
+- `Q-PROD-001/Q-ENG-001`: direct user-initiated HTTPS, no backend, account, billing, telemetry, or hosted credentials.
+- `Q-PROD-002`: OpenAI-first adapter behind a vendor-neutral interface; model ID is explicit and configurable.
+- `Q-PROD-003/Q-ENG-002`: BYOK from `OPENAI_API_KEY` or session-only process memory; zero persistence; bounded summary-only context and per-request hash-bound consent.
+- `Q-PROD-004/Q-ENG-003`: exact existing Sprint 5/6 target preview and execution delegation are included behind safe-default operations, mandatory preview, and fresh approval. Gated operations require a local policy; remesh is prohibited.
+- `Q-ENG-004`: requests are stateless; no provider conversation or unfinished assistance session resumes after restart.
+- `Q-UX-001`: collapsed child panel below Intelligent Optimization.
+- `Q-UX-002`: hashes and bounded redacted projections only; no raw prompt/response persistence by default.
+- `Q-UX-003`: deterministic Sprint 6 fallback remains available and is labeled non-provider-generated.
+
+Live-provider model qualification, provider SLA/cost observations, privacy/legal review for production use, Blender 4.5 LTS, and installed-panel UAT remain evidence questions rather than implementation assumptions.
+
 ## Blocking product decisions
 
 | ID | Question | Why it matters | Current evidence | Safe temporary behavior | Required owner | Decision milestone |
@@ -49,7 +62,7 @@ Questions below do not authorize assumptions. The safe temporary behavior is nor
 
 ## Deferred manual and physical validation
 
-- Manual installed-panel UAT for the future Sprint 7 package.
+- Manual installed-panel UAT for the generated Sprint 7 package.
 - Blender 4.5 LTS compatibility.
 - Live provider development/production behavior until authorized.
 - Real slicer comparison, FDM/resin material calibration, and physical printing.

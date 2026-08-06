@@ -57,6 +57,8 @@ def validate_archive(package: Path) -> list[str]:
                     errors.append(f"Environment file is not allowed: {name}")
                 if "tests" in lowered_parts or "scripts" in lowered_parts:
                     errors.append(f"Development content is not allowed: {name}")
+                if "sprint7-draft" in lowered_parts or "sprint7-specification" in lowered_parts:
+                    errors.append(f"Draft Sprint 7 content is not allowed: {name}")
                 stem = Path(lowered_name).stem
                 if stem in _SECRET_NAMES or Path(lowered_name).suffix in _SECRET_SUFFIXES:
                     errors.append(f"Secret-like file is not allowed: {name}")

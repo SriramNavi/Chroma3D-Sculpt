@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://chroma3d.local/schemas/assistance_session.schema.json", "title": "Chroma3D Assistance Session 1.0.0",
+  "type": "object", "additionalProperties": false,
+  "required": ["session_id", "created_at", "updated_at", "state", "source_identity", "source_signature_hash", "context_identity", "context_hash", "policy_hash", "profile_hashes", "settings_hashes", "provider_settings_hash", "exchange", "recommendations", "selected_recommendation_id", "preview", "approval", "cancellation_requested", "provider_attempts", "stale_reasons", "audit_history", "delegated_session_id", "failures", "limitations"],
+  "properties": {
+    "session_id": {"$ref": "#/$defs/id"}, "created_at": {"type": "string", "format": "date-time"}, "updated_at": {"type": "string", "format": "date-time"},
+    "state": {"enum": ["INITIAL", "LOADING", "READY", "ANALYZING", "EVIDENCE_AVAILABLE", "STALE", "PREVIEWING", "APPROVAL_REQUIRED", "EXECUTING", "CANCELLING", "CANCELLED", "FAILED", "RESTORED", "ACCEPTED", "DISCARDED", "EXPORTED", "FINALIZED"]},
+    "source_identity": {"type": "object"}, "source_signature_hash": {"$ref": "#/$defs/hash"}, "context_identity": {"type": "string", "maxLength": 128}, "context_hash": {"type": "string", "pattern": "^(?:|[a-f0-9]{64})$"}, "policy_hash": {"type": "string", "pattern": "^(?:|[a-f0-9]{64})$"},
+    "profile_hashes": {"type": "object", "additionalProperties": {"$ref": "#/$defs/hash"}}, "settings_hashes": {"type": "object", "additionalProperties": {"$ref": "#/$defs/hash"}}, "provider_settings_hash": {"type": "string", "pattern": "^(?:|[a-f0-9]{64})$"},
+    "exchange": {"type": ["object", "null"]}, "recommendations": {"type": "array", "maxItems": 32, "items": {"type": "object"}}, "selected_recommendation_id": {"type": "string", "maxLength": 128}, "preview": {"type": ["object", "null"]}, "approval": {"type": "object"},
+    "cancellation_requested": {"type": "boolean"}, "provider_attempts": {"type": "integer", "minimum": 0, "maximum": 2}, "stale_reasons": {"$ref": "#/$defs/text"}, "audit_history": {"type": "array", "maxItems": 4096, "items": {"type": "object"}}, "delegated_session_id": {"type": "string", "maxLength": 128}, "failures": {"type": "array", "maxItems": 256, "items": {"type": "object"}}, "limitations": {"$ref": "#/$defs/text"}
+  }, "$defs": {"hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"}, "id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,31}:[a-f0-9-]{32,64}$"}, "text": {"type": "array", "maxItems": 256, "items": {"type": "string", "maxLength": 1024}}}
+}
