@@ -1,5 +1,7 @@
 # Sprint 7 Acceptance Gates
 
+Executable gate tooling and retained current-worktree results live under `manual-tests/sprint7/` and `manual-tests/sprint7-final/`. This normative gate definition remains unchanged; provider-production and manual installed-panel evidence are reported separately rather than inferred.
+
 ## Gate semantics
 
 A gate is PASS only with direct retained evidence. `WARNING` is allowed only where the gate explicitly permits it and never for source protection, consent, schema/semantic validation, allow-list, approval, rollback, secret handling, hidden network, or prohibited execution. `SKIPPED_LIMIT`, `NOT_EVALUATED`, `INDETERMINATE`, `STALE`, `CANCELLED`, `BUDGET_EXHAUSTED`, missing credentials, and provider unavailability are not PASS for a required release gate.
@@ -103,25 +105,25 @@ These are adversarial and independent from focused unit tests.
 
 | Gate | Independent proof | Exact PASS requirement |
 |---|---|---|
-| S7F-A | Architecture/source mutation audit | No provider-to-Blender callable path; source unchanged across all final scenarios |
-| S7F-B | Context exfiltration audit | Forbidden-field canaries, geometry arrays, secrets and paths never leave allow-list; consent hash matches payload |
-| S7F-C | Prompt-injection attack set | Every policy/destination/allow-list/approval override attempt denied with zero side effect |
-| S7F-D | Structured-output parser attacks | Duplicate/non-finite/over-depth/over-size/prose/unknown-field payloads all rejected |
-| S7F-E | Evidence-grounding truth | Missing/stale/unknown/conflicting evidence never becomes actionable or raises confidence |
-| S7F-F | Candidate/strategy resolution attacks | Unknown IDs, fingerprint/operation/parameter mismatches and prohibited remesh all denied |
-| S7F-G | Preview/approval separation | No path reaches execution without current preview and fresh bound approval |
-| S7F-H | Cancellation/late response | All phases cancel safely; late output is quarantined and cannot be previewed/executed |
-| S7F-I | Checkpoint/rollback fault injection | Pre-mutation checkpoint required; injected failure restores and verifies or blocks permanently |
-| S7F-J | Accept/discard/cleanup ownership | Accept retains separate copy/source; discard/cleanup touches owned resources only |
-| S7F-K | Audit/redaction/path security | Complete truthful bounded record, no secrets/raw data/absolute developer paths/traversal |
-| S7F-L | Offline/provider outage | Sprint 0–6 local workflows and disabled assistance remain usable without network/credentials |
-| S7F-M | Bounded performance | Boundary fixtures honor count/byte/time limits; no hidden retry/fallback; no threshold weakening |
-| S7F-N | Registration/UI/package | Exact package installs under factory startup; all critical UI states work; drafts/tests absent |
-| S7F-O | Representative dataset | 10/10 exact pass with zero source mutation/geometry payload/timeout/unclassified failure |
-| S7F-P | Full dataset | 27/27 exact pass under nondestructive fake-provider path with resumable fingerprint truth |
-| S7F-Q | Historical chain | All required Sprint 0–6 gates pass and frozen evidence files remain unchanged |
-| S7F-R | First-failure/release audit | Initial failures retained, fixes regression-tested, approved provider/release decisions present, Git scope clean |
+| S7F-A | Static architecture and package audit | Runtime/package scope is clean; no provider-to-Blender callable path; source protection remains explicit |
+| S7F-B | Credential lifecycle and redaction | Credentials are memory-only, never persisted or echoed, and all status/error/report surfaces are redacted |
+| S7F-C | Context consent and exfiltration boundary | Only consented allow-listed summary fields cross the provider boundary; no geometry, paths, IDs, or secrets |
+| S7F-D | Prompt-injection and policy override attacks | Policy, destination, allow-list, approval, and execution override attempts are denied with zero side effect |
+| S7F-E | Structured-output decoding attacks | Duplicate, non-finite, over-depth, over-size, prose, markup, and unknown-field payloads are rejected |
+| S7F-F | Evidence grounding and local confidence | Missing, stale, unknown, or conflicting evidence cannot become actionable or raise confidence |
+| S7F-G | Exact candidate and strategy echo | Current IDs, fingerprints, operations, parameters, and hashes must resolve exactly; remesh remains prohibited |
+| S7F-H | Preview and fresh approval separation | No path reaches delegated execution without a current preview and fresh content-bound approval |
+| S7F-I | Staleness and replay defense | Changed source, workspace, evidence, policy, context, response, or approval state invalidates the recommendation |
+| S7F-J | Workspace, checkpoint, restore, accept, and discard | All mutation delegates to Sprint 5/6 safeguards; source stays protected and cleanup is ownership-bounded |
+| S7F-K | Cancellation, timeout, and late response | All phases cancel safely; late output is quarantined and cannot be previewed or executed |
+| S7F-L | Offline and provider-outage fallback | Sprint 0–6 local workflows and deterministic Sprint 6 recommendations remain usable without provider access |
+| S7F-M | Reports, audit trail, and path security | Records are truthful, bounded, atomic, redacted, traversal-safe, and free of absolute developer paths |
+| S7F-N | Registration and lifecycle cleanup | Registration is symmetric; session state, handlers, timers, and owned resources are cleaned without leaks |
+| S7F-O | Bounded performance and resource behavior | Count, byte, time, and memory boundaries hold with no hidden retry, provider switching, or threshold weakening |
+| S7F-P | Package, install, dataset, and historical regression | Exact package install passes; representative/full datasets and Sprint 0–6 historical gates retain source safety |
+| S7F-Q | Provider abstraction and contract fidelity | Provider-neutral interfaces remain deterministic; the OpenAI REST adapter follows the supported strict-output contract |
+| S7F-R | Manual/live-provider and release evidence | Manual installed-panel and live-provider checks remain explicit limitations; first failures and release evidence are retained |
 
-## Specification milestone status
+## Current implementation status
 
-These gates define future implementation acceptance. They are **NOT RUN** in this specification-only task.
+The retained normal result is `PASS_WITH_LIMITATIONS`: 18 gates PASS, S7-14 and S7-20 retain manual-UAT/publication limitations, and 0 gates fail. Independent final evidence is also `PASS_WITH_LIMITATIONS`: 17 gates PASS, S7F-R retains manual installed-panel and live-provider limitations, and 0 gates fail. Blender 4.5 LTS and slicer/material/physical evidence remain `NOT RUN`.

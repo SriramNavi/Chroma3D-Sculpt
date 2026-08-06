@@ -1,8 +1,10 @@
 # Sprint 7 Performance Policy
 
+FAST/STANDARD/DEEP limits are now centralized in `performance_registry.py`. Current local results are observations under these unchanged provisional bounds; live-provider latency and cost remain `NOT RUN`.
+
 ## Status and provenance
 
-This is a planning policy. Existing Sprint 4/6 registry limits are repository evidence; new assistance limits below are `PROVISIONAL_PROJECT_DEFAULT` until measured on approved fake and live-provider environments. They are safety maxima/warning envelopes, not provider latency guarantees. Release thresholds require retained baseline evidence and owner approval.
+The assistance limits below are implemented centralized project bounds and were exercised with local fake-provider/factory-Blender evidence. They remain safety maxima/warning envelopes, not provider latency guarantees. Dataset workers retain per-model elapsed time and a labeled point working-set observation; no peak-memory claim is made. Live-provider performance remains `NOT RUN`.
 
 ## Measured phases
 
@@ -77,6 +79,6 @@ Local release performance gates run on AC power with stable performance mode and
 4. Record approver, rationale, hardware/provider scope and date in the versioned policy.
 5. Never raise a threshold, reduce a fixture, remove a state, or reclassify a failure merely to obtain PASS. A legitimate policy change requires new evidence, version/hash change, rationale, and full affected rerun.
 
-## Specification milestone execution status
+## Current execution status
 
-No performance fixture, Blender suite, corpus, provider call, slicer, or physical test is run for this documentation-only milestone.
+Local compilation, focused/combined Blender suites, 10/27-model workers, bounded fake-provider gates, package/native/install smoke and independent final gates run without a live provider. AC/power-plan evidence and point-memory observations are retained separately. Live-provider latency/cost, Blender 4.5 LTS, slicer, material calibration and physical printing remain `NOT RUN`.

@@ -1,5 +1,9 @@
 # Sprint 7 Test Matrix
 
+Implementation evidence is produced by `tests/blender/run_sprint7_tests.py`, the Sprint 7 dataset workers, normal acceptance runner, and independent final runner. Automated provider cases use only mocked transports and the in-process fake provider; live provider calls remain outside this matrix.
+
+Current executable evidence is `62/62` focused Sprint 7 tests and `813/813` combined Blender tests on Blender 4.4.3. Test counts are reported as evidence, not substituted for gate-specific results.
+
 ## Strategy
 
 Tests are layered so provider-independent safety can be proven without credentials or network. Unit tests use pure Python and fake adapters; Blender background tests cover integration with current sessions and deterministic execution; live-provider checks are a separate release condition only if that provider is enabled. A failed first run is retained, fixes require a reproduced defect, and thresholds or assertions are never weakened to manufacture a pass.
