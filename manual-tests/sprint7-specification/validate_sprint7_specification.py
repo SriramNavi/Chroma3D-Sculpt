@@ -17,8 +17,10 @@ OUTPUT_ROOT = Path(__file__).parent
 RESULTS_PATH = OUTPUT_ROOT / "SPRINT7_SPECIFICATION_RESULTS.md"
 MACHINE_REPORT_PATH = OUTPUT_ROOT / "reports" / "validation_results.json"
 
-EXPECTED_BRANCH = "feature/sprint-7-specification"
+PRE_MERGE_BRANCH = "feature/sprint-7-specification"
+POST_MERGE_BRANCH = "main"
 EXPECTED_RELEASE_COMMIT = "63f98b8cef68dc977f6bd8c17972303fa7e3d05e"
+SPECIFICATION_COMMIT = "d4a125a7175c025f29339a6ea277db401cb4bfcc"
 EXPECTED_TAG = "v0.7.0-alpha.1"
 EXPECTED_SCHEMA_VERSION = "0.1.0-draft"
 EXPECTED_EVIDENCE_STATES = {
@@ -45,6 +47,7 @@ REQUIRED_FILES = (
     "docs/sprint7/IMPLEMENTATION_PLAN.md",
     "docs/sprint7/OPEN_QUESTIONS.md",
     "manual-tests/sprint7-specification/validate_sprint7_specification.py",
+    "manual-tests/sprint7-specification/POST_MERGE_VALIDATOR_FAILURE.md",
 )
 
 SCHEMA_FILES = (
@@ -155,6 +158,17 @@ def git(*args: str) -> str:
     ).stdout.strip()
 
 
+def git_is_ancestor(ancestor: str, descendant: str) -> bool:
+    return subprocess.run(
+        ["git", "merge-base", "--is-ancestor", ancestor, descendant],
+        cwd=ROOT,
+        check=False,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+    ).returncode == 0
+
+
 def strict_json(path: Path) -> Any:
     def reject_constant(value: str) -> None:
         raise ValueError(f"Non-finite JSON constant: {value}")
@@ -236,7 +250,7 @@ def validate_state_machine() -> None:
     check("All transitions not listed are illegal" in spec, "Illegal-transition rule missing")
 
 
-def validate_requirements_and_traceability() -> tuple[int, int]:
+def validate_requirements_and_traceability() -> tuple[int, int, int]:
     spec_rows = re.findall(r"^\| (S7-REQ-\d{3}) \|", read_text("SPRINT7_SPECIFICATION.md"), flags=re.MULTILINE)
     check(spec_rows, "No Sprint 7 requirements found")
     check(len(spec_rows) == len(set(spec_rows)), "Requirement IDs are duplicated in the specification")
@@ -257,7 +271,7 @@ def validate_requirements_and_traceability() -> tuple[int, int]:
     final = re.findall(r"^\| (S7F-[A-Z]+) \|", gates, flags=re.MULTILINE)
     check(normal == [f"S7-{number:02d}" for number in range(1, 21)], f"Normal gate sequence invalid: {normal}")
     check(len(final) == len(set(final)) and final == [f"S7F-{chr(code)}" for code in range(ord('A'), ord('R') + 1)], f"Independent gate sequence invalid: {final}")
-    return len(spec_rows), len(normal) + len(final)
+    return len(spec_rows), len(normal), len(final)
 
 
 def iter_object_schemas(value: Any, path: str = "root") -> Iterable[tuple[str, dict[str, Any]]]:
@@ -327,11 +341,37 @@ def changed_paths() -> list[str]:
     return sorted(set(paths))
 
 
+def validate_post_merge_failure_evidence() -> None:
+    evidence = read_text("manual-tests/sprint7-specification/POST_MERGE_VALIDATOR_FAILURE.md")
+    required_markers = (
+        "validator/harness defect",
+        "feature/sprint-7-specification` passed before publication",
+        "Post-merge branch: `main`",
+        "AssertionError: Unexpected current branch",
+        "No Sprint 7 runtime defect was involved",
+        "first failed post-merge validation",
+    )
+    for marker in required_markers:
+        check(marker in evidence, f"Post-merge failure evidence is incomplete: {marker}")
+
+
 def validate_git_scope_and_release() -> list[str]:
-    check(git("branch", "--show-current") == EXPECTED_BRANCH, "Unexpected current branch")
-    for ref in ("HEAD", "main", "origin/main", f"{EXPECTED_TAG}^{{}}"):
-        check(git("rev-parse", ref) == EXPECTED_RELEASE_COMMIT, f"Release identity mismatch for {ref}")
-    check(git("rev-list", "--count", "main..HEAD") == "0", "Specification branch contains commits")
+    branch = git("branch", "--show-current")
+    head = git("rev-parse", "HEAD")
+    main = git("rev-parse", "main")
+    origin_main = git("rev-parse", "origin/main")
+    check(git("rev-parse", f"{EXPECTED_TAG}^{{}}") == EXPECTED_RELEASE_COMMIT, "Frozen release tag moved")
+
+    if branch == PRE_MERGE_BRANCH:
+        check(head == main == origin_main == EXPECTED_RELEASE_COMMIT, "Pre-merge specification base changed")
+        check(not git_is_ancestor(SPECIFICATION_COMMIT, head), "Specification is already merged in pre-merge context")
+    elif branch == POST_MERGE_BRANCH:
+        check(head == main == origin_main, "Post-merge main is not synchronized")
+        check(git_is_ancestor(EXPECTED_RELEASE_COMMIT, head), "Frozen release is not an ancestor of main")
+        check(git_is_ancestor(SPECIFICATION_COMMIT, head), "Specification commit is not merged into main")
+    else:
+        check(False, "Unexpected current branch")
+
     metadata = read_text("blender_addon/chroma3d_sculpt/metadata.py")
     manifest = read_text("blender_addon/chroma3d_sculpt/blender_manifest.toml")
     check('EXTENSION_VERSION = "0.7.0"' in metadata and 'STAGE_LABEL = "alpha.1"' in metadata, "Runtime version metadata changed")
@@ -383,9 +423,10 @@ def run() -> dict[str, Any]:
     validate_scope_and_safety(); checks.append("scope_non_goals_and_safety")
     validate_evidence_and_states(); checks.append("evidence_semantics")
     validate_state_machine(); checks.append("state_machine")
-    requirement_count, gate_count = validate_requirements_and_traceability(); checks.append("requirements_traceability_and_gates")
+    requirement_count, normal_gate_count, independent_gate_count = validate_requirements_and_traceability(); checks.append("requirements_traceability_and_gates")
     schema_count = validate_schemas(); checks.append("draft_schemas")
     markdown_link_count = validate_internal_markdown_paths(); checks.append("markdown_paths")
+    validate_post_merge_failure_evidence(); checks.append("post_merge_failure_preserved")
     paths = validate_git_scope_and_release(); checks.append("git_scope_release_and_ignore")
     validate_no_unsupported_claims(); checks.append("unsupported_claims")
     return {
@@ -393,10 +434,13 @@ def run() -> dict[str, Any]:
         "decision": "SPRINT 7 SPECIFICATION ACCEPTED WITH OPEN QUESTIONS",
         "specification": "Sprint 7 AI Recommendation Foundation",
         "requirement_count": requirement_count,
-        "acceptance_gate_count": gate_count,
+        "acceptance_gate_count": normal_gate_count + independent_gate_count,
+        "normal_gate_count": normal_gate_count,
+        "independent_gate_count": independent_gate_count,
         "draft_schema_count": schema_count,
         "markdown_path_count": markdown_link_count,
         "changed_path_count": len(paths),
+        "validation_context": git("branch", "--show-current"),
         "checks": checks,
         "runtime_implementation_changed": False,
         "sprint_8_started": False,
@@ -423,9 +467,11 @@ def write_evidence(result: dict[str, Any]) -> None:
         "",
         f"- Requirements validated: `{result.get('requirement_count', 0)}`",
         f"- Acceptance gates validated: `{result.get('acceptance_gate_count', 0)}`",
+        f"- Normal acceptance gates validated: `{result.get('normal_gate_count', 0)}`",
+        f"- Independent-final gates validated: `{result.get('independent_gate_count', 0)}`",
         f"- Draft schemas parsed and audited: `{result.get('draft_schema_count', 0)}`",
         f"- Internal Markdown paths checked: `{result.get('markdown_path_count', 0)}`",
-        f"- Changed paths scope-checked: `{result.get('changed_path_count', 0)}`",
+        f"- Validation context: `{result.get('validation_context', 'not established')}`",
         f"- Runtime implementation changed: `{result.get('runtime_implementation_changed', False)}`",
         f"- Sprint 8 started: `{result.get('sprint_8_started', False)}`",
         f"- Extension version: `{result.get('extension_version', 'not established')}`",
@@ -435,13 +481,26 @@ def write_evidence(result: dict[str, Any]) -> None:
         "",
     ]
     lines.extend(f"- PASS: `{name}`" for name in result.get("checks", []))
+    if result.get("status") == "PASS":
+        lines.extend([
+            "",
+            "## Validator correction history",
+            "",
+            "- Pre-merge validation on `feature/sprint-7-specification`: `PASS`.",
+            "- First post-merge validation on `main`: `FAIL` with `AssertionError: Unexpected current branch`.",
+            "- Preserved failure: [POST_MERGE_VALIDATOR_FAILURE.md](POST_MERGE_VALIDATOR_FAILURE.md).",
+            "- Correction: merged `main` is accepted only when synchronized and when the frozen release and Sprint 7 specification commits are ancestors.",
+            "- Current merged-main validation: `PASS`.",
+            "- Product specification scope changed: `False`.",
+            "- Defect classification: validator/harness defect.",
+        ])
     lines.extend(["", "## Known limitations", ""])
     lines.extend(f"- {item}" for item in result.get("known_limitations", [result.get("error", "Validation failed")]))
     lines.extend([
         "",
         "## Required next action",
         "",
-        "Review and approve the Sprint 7 specification before authorizing implementation.",
+        "Run the approved Sprint 7 implementation prompt only after this validator correction is merged and verified on synchronized main.",
         "",
     ])
     RESULTS_PATH.write_text("\n".join(lines), encoding="utf-8")
