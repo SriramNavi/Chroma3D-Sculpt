@@ -40,6 +40,11 @@ def _mark_optimization_stale(self: bpy.types.PropertyGroup, _context: bpy.types.
         self.optimization_state = "STALE_SETTINGS"
 
 
+def _mark_intelligent_optimization_stale(self: bpy.types.PropertyGroup, _context: bpy.types.Context) -> None:
+    if bool(getattr(self, "intelligent_optimization_has_session", False)):
+        self.intelligent_optimization_state = "STALE_SETTINGS"
+
+
 class CHROMA3D_PG_tiny_shell_candidate(bpy.types.PropertyGroup):
     selected: BoolProperty(name="Remove", default=False)
     candidate_id: StringProperty(name="Candidate ID", default="")
@@ -258,6 +263,34 @@ class CHROMA3D_PG_session_state(bpy.types.PropertyGroup):
     optimization_weight_contact: FloatProperty(name="Contact Weight", default=1.0, min=0.0, update=_mark_optimization_stale)
     optimization_weight_height: FloatProperty(name="Height Weight", default=0.5, min=0.0, update=_mark_optimization_stale)
     optimization_weight_fidelity: FloatProperty(name="Geometry Fidelity Weight", default=1.0, min=0.0, update=_mark_optimization_stale)
+
+    intelligent_optimization_has_session: BoolProperty(name="Has intelligent optimization session", default=False, options={"HIDDEN"})
+    intelligent_optimization_state: StringProperty(name="Intelligent Optimization State", default="NOT_STARTED", options={"HIDDEN"})
+    intelligent_optimization_last_result: StringProperty(name="Intelligent Optimization Result", default="", options={"HIDDEN"})
+    intelligent_optimization_selected_strategy_id: StringProperty(name="Selected Strategy", default="")
+    intelligent_optimization_strategy_count: IntProperty(name="Generated Strategies", default=0, options={"HIDDEN"})
+    intelligent_optimization_evaluation_count: IntProperty(name="Evaluated Strategies", default=0, options={"HIDDEN"})
+    intelligent_optimization_frontier_count: IntProperty(name="Pareto Points", default=0, options={"HIDDEN"})
+    intelligent_optimization_search_mode: EnumProperty(
+        name="Search Mode",
+        items=(("FAST", "Fast", "Small interactive bounded search"), ("STANDARD", "Standard", "Moderate bounded search"), ("DEEP", "Deep", "Larger bounded search with runtime warning"), ("CUSTOM", "Custom", "Validated user budget within safety maxima")),
+        default="STANDARD", update=_mark_intelligent_optimization_stale,
+    )
+    intelligent_optimization_objective_preset: EnumProperty(
+        name="Objective Preset",
+        items=(("Balanced", "Balanced", "Visible balanced multi-objective ranking"), ("Minimum Supports", "Minimum Supports", "Prioritize support and bridge risk"), ("Maximum Fidelity", "Maximum Fidelity", "Prioritize fidelity and thin features"), ("Fit to Printer", "Fit to Printer", "Prioritize bounded build fit"), ("Stable Base", "Stable Base", "Prioritize contact and base stability"), ("Lightweight", "Lightweight", "Prioritize triangle and runtime reduction"), ("Resin Advisory", "Resin Advisory", "Prioritize resin advisory evidence"), ("Custom", "Custom", "Use explicit custom objective weights")),
+        default="Balanced", update=_mark_intelligent_optimization_stale,
+    )
+    intelligent_optimization_ranking_method: EnumProperty(
+        name="Ranking Method",
+        items=(("CONSTRAINT_FIRST", "Constraint-first", "Filter hard constraints before ranking"), ("WEIGHTED_SUM", "Weighted Sum", "Visible weighted objective contributions"), ("WEIGHTED_TCHEBYCHEFF", "Weighted Tchebycheff", "Distance to explicit ideal"), ("LEXICOGRAPHIC", "Lexicographic", "Deterministic objective priority order"), ("BALANCED_DISTANCE_TO_IDEAL", "Distance to Ideal", "Balanced distance to ideal"), ("FIDELITY_FIRST", "Fidelity-first", "Prioritize geometry fidelity"), ("MINIMUM_SUPPORTS", "Minimum Supports", "Prioritize support risk"), ("FIT_TO_PRINTER", "Fit-to-Printer", "Prioritize build fit"), ("STABLE_BASE", "Stable Base", "Prioritize contact"), ("LIGHTWEIGHT", "Lightweight", "Prioritize bounded lightweight result")),
+        default="CONSTRAINT_FIRST", update=_mark_intelligent_optimization_stale,
+    )
+    intelligent_optimization_max_generated: IntProperty(name="Strategy Budget", default=32, min=1, max=256, update=_mark_intelligent_optimization_stale)
+    intelligent_optimization_max_evaluated: IntProperty(name="Evaluation Budget", default=16, min=1, max=128, update=_mark_intelligent_optimization_stale)
+    intelligent_optimization_max_depth: IntProperty(name="Maximum Strategy Depth", default=3, min=1, max=8, update=_mark_intelligent_optimization_stale)
+    intelligent_optimization_max_frontier: IntProperty(name="Maximum Frontier Size", default=16, min=1, max=128, update=_mark_intelligent_optimization_stale)
+    intelligent_optimization_experimental: BoolProperty(name="Enable Experimental Operations", default=False, update=_mark_intelligent_optimization_stale)
 
 
 SESSION_STATE_CLASS = CHROMA3D_PG_session_state

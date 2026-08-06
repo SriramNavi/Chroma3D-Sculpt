@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "chroma3d://schemas/strategy-set/1.0",
+  "title": "Chroma3D Sculpt Strategy Set",
+  "type": "object",
+  "required": ["schema_version", "strategies", "pruned", "policy_hash", "constraint_set_hash", "budget_usage"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "strategies": {"type": "array", "items": {"$ref": "intelligent_strategy.schema.json"}},
+    "pruned": {"type": "array"},
+    "set_id": {"type": "string"},
+    "source_signature": {"type": "string"},
+    "policy_hash": {"type": "string"},
+    "constraint_set_hash": {"type": "string"},
+    "process_context_hash": {"type": "string"},
+    "feature_flag_hash": {"type": "string"},
+    "implementation_fingerprint": {"type": "string"},
+    "budget_usage": {"type": "object"},
+    "status": {"type": "string"},
+    "strategy_set_hash": {"type": "string"},
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  }
+}

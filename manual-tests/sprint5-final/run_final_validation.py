@@ -15,6 +15,7 @@ SCRIPT_ROOT = REPOSITORY_ROOT / "scripts"
 if str(SCRIPT_ROOT) not in sys.path:
     sys.path.insert(0, str(SCRIPT_ROOT))
 from find_blender import discover_blender  # noqa: E402
+from _project import DISPLAY_VERSION, PACKAGE_PATH  # noqa: E402
 
 
 FINAL_ROOT = Path(__file__).resolve().parent
@@ -37,7 +38,7 @@ def main() -> int:
         package = subprocess.run([sys.executable, str(SCRIPT_ROOT / "package_extension.py")], cwd=REPOSITORY_ROOT, check=False)
         if package.returncode:
             return package.returncode
-        package_path = REPOSITORY_ROOT / "dist" / "chroma3d_sculpt-0.6.0-alpha.1.zip"
+        package_path = PACKAGE_PATH
         package_check = subprocess.run([sys.executable, str(SCRIPT_ROOT / "validate_package.py"), str(package_path)], cwd=REPOSITORY_ROOT, check=False)
         if package_check.returncode:
             return package_check.returncode
@@ -56,8 +57,8 @@ def main() -> int:
         return completed.returncode
 
     if args.phase == "final":
-        package_path = REPOSITORY_ROOT / "dist" / "chroma3d_sculpt-0.6.0-alpha.1.zip"
-        extension_check = subprocess.run([str(discovery.executable), "--background", "--command", "extension", "validate", str(package_path)], cwd=REPOSITORY_ROOT, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, check=False)
+        package_path = PACKAGE_PATH
+        extension_check = subprocess.run([str(discovery.executable), "--background", "--factory-startup", "--command", "extension", "validate", str(package_path)], cwd=REPOSITORY_ROOT, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, check=False)
         (log_root / "package_extension_validate.log").write_text(extension_check.stdout, encoding="utf-8", newline="\n")
         print(extension_check.stdout)
         profile = FINAL_ROOT / "artifacts" / "isolated-blender-profile"
@@ -69,6 +70,7 @@ def main() -> int:
             "BLENDER_USER_CONFIG": str(profile / "config"),
             "BLENDER_USER_SCRIPTS": str(profile / "scripts"),
             "BLENDER_USER_DATAFILES": str(profile / "datafiles"),
+            "CHROMA3D_EXPECTED_VERSION": DISPLAY_VERSION,
         })
         install = subprocess.run([str(discovery.executable), "--background", "--factory-startup", "--command", "extension", "install-file", "-r", "user_default", "-e", str(package_path)], cwd=REPOSITORY_ROOT, env=environment, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, check=False)
         (log_root / "package_extension_install.log").write_text(install.stdout, encoding="utf-8", newline="\n")

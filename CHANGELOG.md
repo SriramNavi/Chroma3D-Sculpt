@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.7.0-alpha.1 - 2026-08-06 (Sprint 6)
+
+### Added
+
+- Deterministic FAST/STANDARD/DEEP/CUSTOM intelligent search policies with centralized budgets, explicit constraint sets, strategy-family generation, pruning records, objective vectors, Pareto-front construction, explainable ranking, recommendation overrides, local history, and complete JSON/Markdown audit export.
+- Native Intelligent Optimization panel and explicit start, generate, evaluate, Pareto, rank, review, preview, execute, cancel, accept-copy, discard, and export actions.
+- Sprint 6 focused Blender tests, resumable dataset identity tooling, acceptance wrapper, and independent final-validation wrapper.
+
+### Safety
+
+- Search, ranking, and recommendations are read-only. Workspace execution delegates to Sprint 5's protected isolated workspace and checkpoint model; the protected source is never replaced or automatically accepted.
+- No AI/LLM, cloud service, telemetry, automatic execution, supports, slicer, G-code, printer command, physical validation, or global-optimum claim exists.
+
+### Evidence boundary
+
+- Estimated, measured, skipped, indeterminate, infeasible, dominated, and budget-limited states remain explicit. Physical printing, slicer comparison, material calibration, Blender 4.5 LTS, and manual installed-panel UAT remain separate evidence tasks.
+
 ## 0.5.0-alpha.1 - 2026-08-05 (feature branch)
 
 ### Added

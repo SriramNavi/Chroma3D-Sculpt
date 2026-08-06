@@ -198,8 +198,6 @@ def discard_workspace(session: OptimizationSession, *, blend_file_path: str = ""
     global _active_session, _archived_session
     source = _find_object(session.source_object_identity)
     workspace = get_workspace(session)
-    if source is None:
-        raise RuntimeError("Protected source no longer exists; discard is rejected.")
     if session.state in {OptimizationSessionState.ACCEPTED, OptimizationSessionState.DISCARDED}:
         raise RuntimeError("This optimization session has already been finalized.")
     if not session.checkpoints:
@@ -209,10 +207,13 @@ def discard_workspace(session: OptimizationSession, *, blend_file_path: str = ""
         session.state = OptimizationSessionState.STALE
         session.stale_events.append({"at": _now(), "reason_code": "WORKSPACE_CHANGED_BEFORE_DISCARD"})
         raise RuntimeError("Optimization workspace changed; discard is rejected.")
-    if not source_is_current(source, session.source_snapshot, blend_file_path):
+    source_current = source is not None and source_is_current(source, session.source_snapshot, blend_file_path)
+    if not source_current:
         session.state = OptimizationSessionState.STALE
-        session.stale_events.append({"at": _now(), "reason_code": "SOURCE_CHANGED_BEFORE_DISCARD"})
-        raise RuntimeError("Protected source changed; discard is rejected.")
+        session.stale_events.append({"at": _now(), "reason_code": "SOURCE_CHANGED_BEFORE_DISCARD" if source is not None else "SOURCE_MISSING_BEFORE_DISCARD"})
+        # Discarding session-owned resources cannot mutate the protected source.
+        # Cleanup remains safe even when source evidence is stale or unavailable;
+        # retaining an orphaned workspace would leak user-visible state.
     cleanup_session_resources(session, workspace, _session_collections.get(session.session_id))
     session.discard = DiscardRecord(_now(), session.source_object_name, session.source_signature, current_workspace_signature, True)
     session.state = OptimizationSessionState.DISCARDED

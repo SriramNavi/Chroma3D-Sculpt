@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "chroma3d://schemas/strategy-explanation/1.0",
+  "title": "Chroma3D Sculpt Strategy Explanation",
+  "type": "object",
+  "required": ["strategy_id", "why_generated", "why_feasible", "improvements", "regressions", "estimated_evidence", "measured_evidence", "skipped_evidence", "indeterminate_evidence"],
+  "properties": {
+    "strategy_id": {"type": "string"},
+    "why_generated": {"type": "array", "items": {"type": "string"}},
+    "why_feasible": {"type": "array", "items": {"type": "string"}},
+    "improvements": {"type": "array", "items": {"type": "string"}},
+    "regressions": {"type": "array", "items": {"type": "string"}},
+    "hard_constraints_passed": {"type": "array", "items": {"type": "string"}},
+    "soft_constraints_violated": {"type": "array", "items": {"type": "string"}},
+    "ranking_reasons": {"type": "array", "items": {"type": "string"}},
+    "non_dominated_alternatives": {"type": "array", "items": {"type": "string"}},
+    "estimated_evidence": {"type": "array", "items": {"type": "string"}},
+    "measured_evidence": {"type": "array", "items": {"type": "string"}},
+    "skipped_evidence": {"type": "array", "items": {"type": "string"}},
+    "indeterminate_evidence": {"type": "array", "items": {"type": "string"}},
+    "required_approvals": {"type": "array", "items": {"type": "string"}},
+    "confidence": {"type": "string"},
+    "runtime_estimate_seconds": {"type": "number", "minimum": 0},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "advisory_disclaimer": {"type": "string"}
+  }
+}

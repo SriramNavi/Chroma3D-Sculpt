@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "chroma3d://schemas/pareto-frontier/1.0",
+  "title": "Chroma3D Sculpt Pareto Frontier",
+  "type": "object",
+  "required": ["schema_version", "frontier_id", "points", "dominated_strategy_ids", "tolerance", "frontier_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "frontier_id": {"type": "string"},
+    "points": {"type": "array"},
+    "dominated_strategy_ids": {"type": "array", "items": {"type": "string"}},
+    "dominance_records": {"type": "array"},
+    "tolerance": {"type": "number", "minimum": 0},
+    "max_points": {"type": "integer", "minimum": 1},
+    "strategy_set_hash": {"type": "string"},
+    "frontier_hash": {"type": "string"},
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  }
+}

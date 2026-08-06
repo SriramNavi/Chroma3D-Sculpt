@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "chroma3d://schemas/optimization-history/1.0",
+  "title": "Chroma3D Sculpt Optimization History",
+  "type": "object",
+  "required": ["schema_version", "history_id", "entries"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "history_id": {"type": "string"},
+    "entries": {"type": "array"},
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  }
+}

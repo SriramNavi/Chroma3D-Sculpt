@@ -10,6 +10,11 @@ from .optimization_coordinator import (
     accept_optimized_copy, apply_selected_step, discard_workspace, generate_session_candidates, generate_session_plan,
     rerun_comparison, restore_session_to_start, start_session as start_optimization_session, undo_last_step,
 )
+from .intelligent_optimization_coordinator import (
+    accept_selected_strategy, build_intelligent_frontier, cancel_intelligent_search, discard_intelligent_workspace,
+    evaluate_intelligent_strategies, execute_selected_strategy, generate_intelligent_strategies, preview_selected_strategy,
+    rank_intelligent_strategies, rerun_intelligent_search, select_strategy, start_intelligent_session,
+)
 
 __all__ = (
     "analyze_mesh",
@@ -30,4 +35,8 @@ __all__ = (
     "restore_session_to_start",
     "start_optimization_session",
     "undo_last_step",
+    "start_intelligent_session", "generate_intelligent_strategies", "evaluate_intelligent_strategies",
+    "build_intelligent_frontier", "rank_intelligent_strategies", "select_strategy", "preview_selected_strategy",
+    "execute_selected_strategy", "accept_selected_strategy", "discard_intelligent_workspace", "cancel_intelligent_search",
+    "rerun_intelligent_search",
 )

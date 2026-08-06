@@ -12,3 +12,5 @@ Sprint 5 is a bounded software-preview workflow above Safe Repair, Printability,
 The feature does not automatically optimize, replace the source, generate supports, hollow/resin-drain models, slice, generate G-code, control a printer, or guarantee print success. Physical printing, slicer comparison, material calibration, Blender 4.5 LTS, and installed-panel UAT are separate evidence tasks.
 
 See [Safety Model](SAFETY_MODEL.md), [Objectives and Policy](OBJECTIVES_AND_POLICY.md), [Candidates and Plans](CANDIDATES_AND_PLANS.md), [Workspace and Checkpoints](WORKSPACE_AND_CHECKPOINTS.md), [Operations](OPERATIONS.md), [Fidelity and Comparison](FIDELITY_AND_COMPARISON.md), and [User Guide](USER_GUIDE.md).
+
+Sprint 6 consumes this layer through stable candidate, plan, workspace, checkpoint, comparison, accept-copy, and discard interfaces. See the [Intelligent Optimization guide](../intelligent-optimization/README.md) for the multi-objective strategy layer.

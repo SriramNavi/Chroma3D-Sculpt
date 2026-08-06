@@ -2,9 +2,11 @@
 
 from __future__ import annotations
 
+from array import array
 from hashlib import sha256
 import json
 import struct
+import sys
 from typing import Any
 
 
@@ -32,15 +34,31 @@ def geometry_sha256(obj: Any) -> str:
     mesh = obj.data
     digest = sha256()
     digest.update(struct.pack("<QQQ", len(mesh.vertices), len(mesh.edges), len(mesh.polygons)))
-    for vertex in mesh.vertices:
-        digest.update(struct.pack("<ddd", float(vertex.co.x), float(vertex.co.y), float(vertex.co.z)))
-    for edge in mesh.edges:
-        digest.update(struct.pack("<QQ", int(edge.vertices[0]), int(edge.vertices[1])))
-    for polygon in mesh.polygons:
-        indices = tuple(int(index) for index in polygon.vertices)
-        digest.update(struct.pack("<Q", len(indices)))
-        for index in indices:
-            digest.update(struct.pack("<Q", index))
+    coordinates = array("d", [0.0]) * (len(mesh.vertices) * 3)
+    mesh.vertices.foreach_get("co", coordinates)
+    if sys.byteorder != "little":
+        coordinates.byteswap()
+    digest.update(coordinates.tobytes())
+
+    edge_vertices = array("i", [0]) * (len(mesh.edges) * 2)
+    mesh.edges.foreach_get("vertices", edge_vertices)
+    edge_values = array("Q", (int(value) for value in edge_vertices))
+    if sys.byteorder != "little":
+        edge_values.byteswap()
+    digest.update(edge_values.tobytes())
+
+    loop_vertices = array("i", [0]) * len(mesh.loops)
+    mesh.loops.foreach_get("vertex_index", loop_vertices)
+    starts = array("i", [0]) * len(mesh.polygons)
+    totals = array("i", [0]) * len(mesh.polygons)
+    mesh.polygons.foreach_get("loop_start", starts)
+    mesh.polygons.foreach_get("loop_total", totals)
+    for start, total in zip(starts, totals):
+        digest.update(struct.pack("<Q", int(total)))
+        indices = array("Q", (int(value) for value in loop_vertices[start:start + total]))
+        if sys.byteorder != "little":
+            indices.byteswap()
+        digest.update(indices.tobytes())
     return digest.hexdigest()
 
 
@@ -136,6 +154,15 @@ def _shape_key_summary(mesh: Any) -> list[dict[str, Any]]:
     ]
 
 
+def _polygon_normal_summary(mesh: Any) -> list[list[float]]:
+    values = array("d", [0.0]) * (len(mesh.polygons) * 3)
+    mesh.polygons.foreach_get("normal", values)
+    return [
+        [round(float(values[index]), 12), round(float(values[index + 1]), 12), round(float(values[index + 2]), 12)]
+        for index in range(0, len(values), 3)
+    ]
+
+
 def protected_source_snapshot(obj: Any, blend_file_path: str = "") -> dict[str, Any]:
     mesh = obj.data
     custom = {str(key): _simple(obj[key]) for key in sorted(obj.keys()) if key != "_RNA_UI"}
@@ -156,7 +183,7 @@ def protected_source_snapshot(obj: Any, blend_file_path: str = "") -> dict[str, 
         "uv_layers": _uv_summary(mesh),
         "color_attributes": _attribute_summary(mesh),
         "shape_keys": _shape_key_summary(mesh),
-        "polygon_normals": [[round(float(polygon.normal[index]), 12) for index in range(3)] for polygon in mesh.polygons],
+        "polygon_normals": _polygon_normal_summary(mesh),
         "materials": [
             {"name": str(getattr(slot.material, "name", "")), "identity": _pointer(slot.material)}
             for slot in obj.material_slots

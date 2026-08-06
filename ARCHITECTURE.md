@@ -1,6 +1,10 @@
 # Chroma3D Sculpt Architecture
 
-Chroma3D Sculpt 0.6.0-alpha.1 is a synchronous, local Blender extension with independent diagnostic, controlled-repair, advisory-printability, advanced-preparation, and controlled-optimization paths. Dependency direction is `UI -> operators -> coordinator -> focused services -> typed models/utilities`. Diagnostic services do not import repair or printability UI modules; optimization reuses stable evidence boundaries without merging into earlier coordinators.
+Chroma3D Sculpt 0.7.0-alpha.1 is a synchronous, local Blender extension with independent diagnostic, controlled-repair, advisory-printability, advanced-preparation, controlled-optimization, and intelligent-optimization paths. Dependency direction is `UI -> operators -> coordinator -> focused services -> typed models/utilities`. Diagnostic services do not import repair or printability UI modules; Sprint 6 reuses stable Sprint 5 evidence and mutation boundaries without merging intelligent search into earlier coordinators.
+
+## Intelligent Optimization architecture
+
+Sprint 6 is a pure deterministic search layer above Sprint 5. `intelligent_optimization_models.py` serializes only bounded identities, hashes, objective scalars, evidence states, constraints, rankings, and audit data. `search_policy.py`, `constraint_engine.py`, `strategy_generator.py`, `strategy_evaluator.py`, `pareto_frontier.py`, `strategy_ranker.py`, `strategy_explainer.py`, and `strategy_history.py` are Blender-reference-free. `intelligent_optimization_coordinator.py` owns lifecycle and stale-state checks; it delegates every geometry mutation to Sprint 5's workspace, checkpoint, comparison, accept-copy, and discard interfaces. Search and recommendation never mutate the protected source and never auto-execute.
 
 ## Controlled Optimization architecture
 

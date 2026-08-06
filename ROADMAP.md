@@ -10,7 +10,8 @@
 - Sprint 4: Implemented on the feature branch — Advanced Print Preparation with hardware/material composition, bridge/support/resin advisories, advanced scale/orientation comparison, batch analysis, Printability Baseline 1.0.0, comparator, and offline dashboard (`0.5.0-alpha.1`). Physical calibration and installed-panel UAT remain deferred.
 - Sprint 5: Implemented on `feature/sprint-5-controlled-optimization` as a bounded controlled-optimization layer (`0.6.0-alpha.1`): protected-source signatures, deterministic objectives/policies/candidates/plans, isolated workspace operations, checkpoints, undo/restore, comparison/fidelity evidence, accept-copy/discard, audit export, and a Controlled Optimization panel. Dataset regression, historical final chain, installed-panel UAT, and physical/slicer validation remain separate evidence gates.
 - Post-Sprint 5: Chroma3D internal UAT.
-- Sprint 6: Reference and asset workflows.
+- Sprint 6: Implemented as `0.7.0-alpha.1` — deterministic bounded Intelligent Optimization with named strategy families, explicit hard/soft constraints, visible multi-objective vectors, Pareto frontier, explainable ranking, local history, recommendation overrides, and Sprint 5 isolated execution integration. Physical printing, slicer comparison, material calibration, Blender 4.5 LTS, and installed-panel UAT remain deferred.
+- Sprint 7: Not started.
 - Later phases: bounded AI-assisted planning and authoring workflows.
 - Later commercial work: packaging, licensing, support, and distribution design.
 

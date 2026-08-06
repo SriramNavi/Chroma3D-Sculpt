@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 
 import bpy
@@ -22,6 +23,7 @@ def clear_scene() -> None:
 def main() -> int:
     evidence: dict[str, object] = {"status": "FAIL", "checks": {}}
     try:
+        expected_version = os.environ.get("CHROMA3D_EXPECTED_VERSION", "")
         import bl_ext.user_default.chroma3d_sculpt as addon
         from bl_ext.user_default.chroma3d_sculpt.metadata import DISPLAY_VERSION
         from bl_ext.user_default.chroma3d_sculpt.services.optimization_coordinator import (
@@ -41,7 +43,7 @@ def main() -> int:
         plan = generate_session_plan(session)
         discard_workspace(session)
         evidence["checks"] = {
-            "version": DISPLAY_VERSION == "0.6.0-alpha.1",
+            "version": bool(expected_version) and DISPLAY_VERSION == expected_version,
             "optimization_operator": hasattr(bpy.ops.chroma3d, "start_optimization_session"),
             "candidate_generation": len(candidates) > 0,
             "plan_generation": len(plan.steps) > 0,

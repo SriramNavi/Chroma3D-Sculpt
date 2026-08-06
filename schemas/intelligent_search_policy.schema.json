@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "chroma3d://schemas/intelligent-search-policy/1.0",
+  "title": "Chroma3D Sculpt Intelligent Search Policy",
+  "type": "object",
+  "required": ["policy_id", "policy_version", "search_mode", "enabled_strategy_families", "allowed_operation_families", "budget", "constraints", "policy_hash"],
+  "properties": {
+    "policy_id": {"type": "string", "minLength": 1},
+    "policy_version": {"const": "1.0"},
+    "search_mode": {"enum": ["FAST", "STANDARD", "DEEP", "CUSTOM"]},
+    "enabled_strategy_families": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "allowed_operation_families": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "budget": {"type": "object"},
+    "objective_profile": {"type": "object"},
+    "constraints": {"type": "object"},
+    "ranking_method": {"type": "string"},
+    "tie_breaking_policy": {"type": "array", "items": {"type": "string"}},
+    "pruning_rules": {"type": "array", "items": {"type": "string"}},
+    "duplicate_tolerance": {"type": "number", "minimum": 0},
+    "dominance_tolerance": {"type": "number", "minimum": 0},
+    "deterministic_seed": {"type": "string", "minLength": 1},
+    "experimental_operations_enabled": {"type": "boolean"},
+    "explicit_experimental_enablement": {"type": "boolean"},
+    "provenance": {"type": "string", "minLength": 1},
+    "policy_hash": {"type": "string", "minLength": 1}
+  }
+}

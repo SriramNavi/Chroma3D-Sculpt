@@ -2,7 +2,7 @@
 
 Chroma3D Sculpt is a local Blender extension for production mesh diagnostics, controlled reversible repair, and advisory printability risk analysis of complex statue meshes. Repair preserves the original source; Printability never changes geometry, transforms, orientation, or scale.
 
-**Current development release:** `v0.6.0-alpha.1` on `feature/sprint-5-controlled-optimization`. Sprint 5 adds bounded controlled optimization above the frozen Sprint 4 advisory layer. Physical validation status is **READY FOR PHYSICAL EXECUTION**; no printability or print-success guarantee is provided.
+**Current development release:** `v0.7.0-alpha.1` on `feature/sprint-6-intelligent-optimization`. Sprint 6 adds deterministic, explainable, bounded multi-objective strategy search above Sprint 5. Physical validation remains separate; no printability or print-success guarantee is provided.
 
 Sprint 2.7 added the dataset storage architecture: Dataset `1.0.0` and Golden Benchmark `1.0.0` are packaged as verified release assets, while manifests, provenance, licenses, schemas, locks, and tooling remain in this product repository. The existing `v0.3.1-alpha.1` history is immutable; Sprint 3 advances the extension separately to `0.4.0-alpha.1`.
 
@@ -12,7 +12,9 @@ Sprint 4 adds a software-only layer above Sprint 3: separate hardware and generi
 
 Sprint 5 adds a workspace-only Controlled Optimization workflow. It generates deterministic candidates and plans, applies only explicit bounded steps to an independently owned copy, checkpoints every mutation, compares before/after evidence, supports undo/restore, accepts a separate optimized copy, discards session-owned resources, and exports an audit. Experimental decimation/remesh remain opt-in and advisory; automatic supports, slicing, G-code, printer control, and source replacement do not exist. See the [Controlled Optimization guide](docs/controlled-optimization/README.md).
 
-**Feature-branch version:** 0.6.0-alpha.1
+Sprint 6 adds an Intelligent Optimization workflow. It generates named strategy families from Sprint 5 candidates, evaluates visible objective vectors, applies hard/soft constraints, constructs a bounded Pareto frontier, ranks with explicit tie-breaks, explains estimated versus measured evidence, retains local history, and recommends without auto-executing. Strategy execution still delegates to Sprint 5's isolated workspace/checkpoints and requires explicit selection. See the [Intelligent Optimization guide](docs/intelligent-optimization/README.md).
+
+**Feature-branch version:** 0.7.0-alpha.1
 
 **JSON schema:** 2.0
 
@@ -23,6 +25,8 @@ Sprint 5 adds a workspace-only Controlled Optimization workflow. It generates de
 **Advanced preparation / material / process / batch / dashboard schemas:** 1.0
 
 **Controlled Optimization schemas:** 1.0
+
+**Intelligent Optimization schemas:** 1.0 (strategy, policy, constraints, Pareto, ranking, explanation, history, audit)
 
 **Minimum Blender:** 4.4.0
 
@@ -105,10 +109,10 @@ py manual-tests\benchmarks\verify_golden_baseline.py
 py manual-tests\benchmarks\run_golden_benchmark.py --self-check
 py scripts\package_extension.py
 py scripts\validate_package.py
-& "D:\Softwares\Design\Blender\blender.exe" --background --command extension validate "E:\VPRS\Sriram\Projects\Chroma3D Sculpt\dist\chroma3d_sculpt-0.6.0-alpha.1.zip"
+& "D:\Softwares\Design\Blender\blender.exe" --background --command extension validate "E:\VPRS\Sriram\Projects\Chroma3D Sculpt\dist\chroma3d_sculpt-0.7.0-alpha.1.zip"
 ```
 
-The Sprint 5 candidate archive is `dist\chroma3d_sculpt-0.6.0-alpha.1.zip`. Install it through Blender's **Edit > Preferences > Extensions > Install from Disk**, then enable the extension if prompted.
+The Sprint 6 candidate archive is `dist\chroma3d_sculpt-0.7.0-alpha.1.zip`. Install it through Blender's **Edit > Preferences > Extensions > Install from Disk**, then enable the extension if prompted.
 
 The background suite preserves the prior sprint regressions and adds 161 focused Sprint 5 tests. Sprint 5 evidence is generated under `manual-tests\sprint5`; generated JSON/log/dashboard folders and ZIP files remain ignored. See the [Printability user guide](docs/printability/USER_GUIDE.md), [Advanced Preparation user guide](docs/advanced-preparation/USER_GUIDE.md), and [Controlled Optimization user guide](docs/controlled-optimization/USER_GUIDE.md).
 
@@ -175,6 +179,6 @@ Use `--offline` after acquisition. See [DATASET_STORAGE_POLICY.md](DATASET_STORA
 - There is no remeshing, large-hole reconstruction, Boolean repair, wall-thickness repair, decimation, object joining, modifier application, automatic scaling, or print support generation.
 - Printability and manufacturing success are not guaranteed.
 - Manual interactive installed-panel testing, Blender 4.5 LTS validation, and real Chroma3D statue repair UAT remain deferred.
-- Runtime code is offline and uses only Blender APIs plus Python's standard library. It contains no AI API, telemetry, credentials, server, downloaded code, arbitrary `eval`/`exec`, or external package.
+- Runtime code is offline and uses only Blender APIs plus Python's standard library. It contains no AI/LLM API, telemetry, credentials, server, downloaded code, arbitrary `eval`/`exec`, or external package. Intelligent Optimization is rule-based local intelligence, not generative AI.
 
 Runtime paths are derived from Blender APIs and package-relative files. Windows paths containing spaces are supported.
