@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chroma3d.local/schemas/assistance_policy.schema.json",
+  "title": "Chroma3D Assistance Policy 1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["policy_id", "policy_version", "deployment_state", "enabled", "recommendation_only", "preview_allowed", "execution_delegation_allowed", "provider_allow_list", "model_allow_list", "maximum_strategies", "maximum_evidence_items", "maximum_request_bytes", "maximum_response_bytes", "timeout_seconds", "retry_count", "redaction_mode", "prompt_template_version", "schema_version", "allowed_operations", "gated_operations", "prohibited_operations", "persistence_policy"],
+  "properties": {
+    "policy_id": {"type": "string", "minLength": 1, "maxLength": 64},
+    "policy_version": {"const": "1.0.0"},
+    "deployment_state": {"enum": ["DISABLED", "TEST_ONLY", "APPROVED_BYOK"]},
+    "enabled": {"type": "boolean"}, "recommendation_only": {"const": true},
+    "preview_allowed": {"type": "boolean"}, "execution_delegation_allowed": {"type": "boolean"},
+    "provider_allow_list": {"type": "array", "minItems": 1, "maxItems": 16, "uniqueItems": true, "items": {"type": "string", "minLength": 1, "maxLength": 64}},
+    "model_allow_list": {"type": "array", "maxItems": 64, "uniqueItems": true, "items": {"type": "string", "minLength": 1, "maxLength": 128}},
+    "maximum_strategies": {"type": "integer", "minimum": 1, "maximum": 32},
+    "maximum_evidence_items": {"type": "integer", "minimum": 1, "maximum": 2048},
+    "maximum_request_bytes": {"type": "integer", "minimum": 1, "maximum": 1048576},
+    "maximum_response_bytes": {"type": "integer", "minimum": 1, "maximum": 1048576},
+    "timeout_seconds": {"type": "number", "exclusiveMinimum": 0, "maximum": 180},
+    "retry_count": {"const": 0}, "redaction_mode": {"const": "STRICT_ALLOW_LIST"},
+    "prompt_template_version": {"type": "string", "minLength": 1, "maxLength": 128}, "schema_version": {"const": "1.0.0"},
+    "allowed_operations": {"$ref": "#/$defs/operations"}, "gated_operations": {"$ref": "#/$defs/operations"}, "prohibited_operations": {"$ref": "#/$defs/operations"},
+    "persistence_policy": {"const": "SESSION_ONLY"}
+  },
+  "$defs": {"operations": {"type": "array", "maxItems": 16, "uniqueItems": true, "items": {"type": "string", "enum": ["UNIFORM_SCALE", "ORIENTATION", "BUILD_PLATE_TRANSLATION", "BASE_STABILIZATION", "REPAIR_REUSE", "DECIMATION", "COMBINED_SCALE_ORIENTATION", "EXPERIMENTAL_REMESH"]}}}
+}

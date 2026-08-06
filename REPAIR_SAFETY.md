@@ -13,6 +13,7 @@ Sprint 2 introduces controlled geometry modification while guaranteeing protecti
 - **Honest reporting:** Results, failures, skips, undo actions, and final decisions must describe what actually happened.
 - **Deterministic behavior:** The same valid input, settings, plan, and candidate selections must produce the same ordered repair behavior.
 - **No hidden geometry mutation:** Analysis, plan generation, preview, comparison, and audit export are read-only. Geometry may change only through an explicit repair command.
+- **AI cannot authorize repair:** Sprint 7 provider output is untrusted advisory data. It cannot create or select a repair operation, candidate, parameter, Blender command, or approval. Any future `REPAIR_REUSE` reference remains policy-gated and must resolve an already eligible explicitly selected local candidate through this contract.
 
 ## Source Preservation Rules
 

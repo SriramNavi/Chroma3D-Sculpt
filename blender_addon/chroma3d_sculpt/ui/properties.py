@@ -45,6 +45,19 @@ def _mark_intelligent_optimization_stale(self: bpy.types.PropertyGroup, _context
         self.intelligent_optimization_state = "STALE_SETTINGS"
 
 
+def _mark_ai_assistance_stale(self: bpy.types.PropertyGroup, _context: bpy.types.Context) -> None:
+    if bool(getattr(self, "ai_assistance_has_session", False)):
+        self.ai_assistance_state = "STALE_SETTINGS"
+        try:
+            from ..models.ai_assistance_models import AssistanceState
+            from ..services.ai_assistance_session import get_active_session, invalidate
+            session = get_active_session()
+            if session is not None and session.state in {AssistanceState.EVIDENCE_AVAILABLE, AssistanceState.PREVIEWING, AssistanceState.APPROVAL_REQUIRED}:
+                invalidate(session, "UI_PROVIDER_MODEL_MODE_OR_POLICY_CHANGED")
+        except (ImportError, RuntimeError, ValueError):
+            pass
+
+
 class CHROMA3D_PG_tiny_shell_candidate(bpy.types.PropertyGroup):
     selected: BoolProperty(name="Remove", default=False)
     candidate_id: StringProperty(name="Candidate ID", default="")
@@ -291,6 +304,25 @@ class CHROMA3D_PG_session_state(bpy.types.PropertyGroup):
     intelligent_optimization_max_depth: IntProperty(name="Maximum Strategy Depth", default=3, min=1, max=8, update=_mark_intelligent_optimization_stale)
     intelligent_optimization_max_frontier: IntProperty(name="Maximum Frontier Size", default=16, min=1, max=128, update=_mark_intelligent_optimization_stale)
     intelligent_optimization_experimental: BoolProperty(name="Enable Experimental Operations", default=False, update=_mark_intelligent_optimization_stale)
+
+    ai_assistance_enabled: BoolProperty(name="Enable AI Assistance", default=False, update=_mark_ai_assistance_stale)
+    ai_assistance_has_session: BoolProperty(name="Has AI assistance session", default=False, options={"HIDDEN"})
+    ai_assistance_state: StringProperty(name="AI Assistance State", default="INITIAL", options={"HIDDEN"})
+    ai_assistance_last_result: StringProperty(name="AI Assistance Result", default="", options={"HIDDEN"})
+    ai_assistance_user_goal: StringProperty(name="Goal", default="Review the current bounded optimization strategies and explain the safest trade-offs.", maxlen=4096)
+    ai_assistance_mode: EnumProperty(
+        name="Assistance Mode",
+        items=(("FAST", "Fast", "Small bounded context and response"), ("STANDARD", "Standard", "Balanced bounded assistance"), ("DEEP", "Deep", "Larger bounded evidence set with a runtime warning")),
+        default="STANDARD", update=_mark_ai_assistance_stale,
+    )
+    ai_assistance_provider: EnumProperty(
+        name="Provider", items=(("openai", "OpenAI", "Direct user-initiated OpenAI Responses API request"),),
+        default="openai", update=_mark_ai_assistance_stale,
+    )
+    ai_assistance_model_id: StringProperty(name="Model ID", default="", maxlen=128, update=_mark_ai_assistance_stale)
+    ai_assistance_consent: BoolProperty(name="I approve this disclosed request", default=False)
+    ai_assistance_selected_recommendation_id: StringProperty(name="Selected Recommendation", default="")
+    ai_assistance_recommendation_count: IntProperty(name="Recommendation Count", default=0, options={"HIDDEN"})
 
 
 SESSION_STATE_CLASS = CHROMA3D_PG_session_state

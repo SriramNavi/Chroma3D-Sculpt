@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://chroma3d.local/schemas/ai_recommendation.schema.json", "title": "Chroma3D AI Recommendation 1.0.0",
+  "type": "object", "additionalProperties": false,
+  "required": ["recommendation_id", "provider_exchange_id", "recommendation_type", "target_id", "target_fingerprint", "alternative_ids", "reason_codes", "reason", "assumptions", "trade_offs", "evidence_references", "confidence", "unmet_prerequisites", "limitations", "operation_echo", "action_available", "provider_generated", "stale", "advisory_disclaimer"],
+  "properties": {
+    "recommendation_id": {"$ref": "#/$defs/id"}, "provider_exchange_id": {"oneOf": [{"$ref": "#/$defs/id"}, {"type": "null"}]}, "recommendation_type": {"enum": ["SELECT_EXISTING_STRATEGY", "SELECT_EXISTING_CANDIDATE", "SELECT_EXISTING_PLAN", "CONSIDER_ALTERNATIVE", "REQUEST_MORE_EVIDENCE", "NO_ACTION_RECOMMENDED", "CANNOT_RECOMMEND"]},
+    "target_id": {"type": ["string", "null"], "maxLength": 128}, "target_fingerprint": {"oneOf": [{"$ref": "#/$defs/hash"}, {"type": "null"}]}, "alternative_ids": {"$ref": "#/$defs/ids32"},
+    "reason_codes": {"type": "array", "minItems": 1, "maxItems": 32, "uniqueItems": true, "items": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]{0,63}$"}}, "reason": {"type": "string", "minLength": 1, "maxLength": 2048}, "assumptions": {"$ref": "#/$defs/text64"},
+    "trade_offs": {"$ref": "#/$defs/text64"}, "evidence_references": {"type": "array", "maxItems": 2048, "uniqueItems": true, "items": {"type": "string", "maxLength": 128}}, "confidence": {"enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"]},
+    "unmet_prerequisites": {"$ref": "#/$defs/text64"}, "limitations": {"type": "array", "maxItems": 128, "uniqueItems": true, "items": {"type": "string", "maxLength": 1024}},
+    "operation_echo": {"type": "array", "maxItems": 8, "items": {"type": "object", "additionalProperties": false, "required": ["operation", "candidate_id", "parameter_hash"], "properties": {"operation": {"enum": ["UNIFORM_SCALE", "ORIENTATION", "BUILD_PLATE_TRANSLATION", "BASE_STABILIZATION", "REPAIR_REUSE", "DECIMATION", "COMBINED_SCALE_ORIENTATION"]}, "candidate_id": {"type": "string", "minLength": 1, "maxLength": 128}, "parameter_hash": {"$ref": "#/$defs/hash"}}}},
+    "action_available": {"type": "boolean"}, "provider_generated": {"type": "boolean"}, "stale": {"type": "boolean"}, "advisory_disclaimer": {"type": "string", "minLength": 1, "maxLength": 1024}
+  }, "$defs": {"hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"}, "id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,31}:[a-f0-9-]{32,64}$"}, "ids32": {"type": "array", "maxItems": 32, "uniqueItems": true, "items": {"type": "string", "maxLength": 128}}, "text64": {"type": "array", "maxItems": 64, "uniqueItems": true, "items": {"type": "string", "maxLength": 1024}}}
+}

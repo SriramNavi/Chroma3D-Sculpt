@@ -70,6 +70,33 @@ INTELLIGENT_OPTIMIZATION_LIMITS = {
     },
 }
 
+# Sprint 7 consumes summaries only and exports zero geometry.  These values are
+# compiled maxima from docs/sprint7/PERFORMANCE_POLICY.md; provider and local
+# phase measurements remain separate.
+AI_ASSISTANCE_LIMITS = {
+    "FAST": {
+        "context_bytes": 32 * 1024, "intent_bytes": 2 * 1024, "response_bytes": 64 * 1024,
+        "recommendations": 4, "evidence_links": 64, "json_depth": 16,
+        "local_wall_seconds": 5.0, "provider_timeout_seconds": 15.0,
+        "automatic_retries": 0, "explicit_retries": 1, "report_bytes": 512 * 1024,
+        "geometry_elements_exported": 0,
+    },
+    "STANDARD": {
+        "context_bytes": 128 * 1024, "intent_bytes": 4 * 1024, "response_bytes": 256 * 1024,
+        "recommendations": 8, "evidence_links": 256, "json_depth": 20,
+        "local_wall_seconds": 15.0, "provider_timeout_seconds": 45.0,
+        "automatic_retries": 0, "explicit_retries": 1, "report_bytes": 1024 * 1024,
+        "geometry_elements_exported": 0,
+    },
+    "DEEP": {
+        "context_bytes": 512 * 1024, "intent_bytes": 8 * 1024, "response_bytes": 512 * 1024,
+        "recommendations": 16, "evidence_links": 1024, "json_depth": 24,
+        "local_wall_seconds": 45.0, "provider_timeout_seconds": 120.0,
+        "automatic_retries": 0, "explicit_retries": 1, "report_bytes": 2 * 1024 * 1024,
+        "geometry_elements_exported": 0,
+    },
+}
+
 _MODE_BASE = {
     PrintabilityMode.FAST: dict(triangles=100_000, samples=256, candidates=4, evidence=256, batch=16, warning=15.0, memory="LOW"),
     PrintabilityMode.STANDARD: dict(triangles=500_000, samples=2_048, candidates=8, evidence=2_048, batch=32, warning=45.0, memory="MEDIUM"),
@@ -182,6 +209,7 @@ def legacy_mode_limits(mode: PrintabilityMode) -> tuple[int, int, int, int]:
 validate_registry()
 
 __all__ = (
+    "AI_ASSISTANCE_LIMITS",
     "CHECK_TYPES",
     "INTELLIGENT_OPTIMIZATION_LIMITS",
     "OPTIMIZATION_PERFORMANCE_LIMITS",

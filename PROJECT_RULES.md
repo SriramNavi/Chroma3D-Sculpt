@@ -5,7 +5,7 @@
 - Repository root: `E:\VPRS\Sriram\Projects\Chroma3D Sculpt`.
 - Primary platform: Windows 11 without administrator privileges.
 - Minimum runtime: Blender 4.4.0 and bundled Python; current validation is Blender 4.4.3.
-- Package: modern Blender Extension; manifest `0.7.0`, display `0.7.0-alpha.1`, analysis JSON schema `2.0`, repair audit schema `1.0`, printability report schema `1.0.0`, Advanced Preparation schema `1.0`, Controlled Optimization schemas `1.0`, and Intelligent Optimization schemas `1.0`.
+- Package: modern Blender Extension; manifest `0.8.0`, display `0.8.0-alpha.1`, analysis JSON schema `2.0`, repair audit schema `1.0`, printability report schema `1.0.0`, Advanced Preparation schema `1.0`, Controlled/Intelligent Optimization schemas `1.0`, and AI Assistance schemas `1.0.0`.
 - Dependencies: public Blender APIs and Python standard library only.
 - Runtime paths must be dynamic; repository tooling must support quoted Windows paths containing spaces.
 
@@ -36,7 +36,7 @@
 
 ## Runtime safety
 
-- No source repair, unapproved deletion, transform application, modifier evaluation, automatic file save, network, telemetry, credentials, server, external service, AI API, downloaded code, `eval`, or `exec`.
+- No source repair, unapproved deletion, transform application, modifier evaluation, automatic file save, hidden network, telemetry, stored credentials, server, downloaded code, `eval`, or `exec`. Sprint 7 permits only an explicit consented user-initiated allow-listed provider request under the policy below.
 - Catch memory and Blender-context failures and preserve `FAILED` rather than inventing zero findings.
 - Avoid recursion, quadratic mesh passes, per-element logging, persistent handlers, and retained temporary BMesh/BVH data.
 
@@ -63,7 +63,16 @@
 - Intelligent Optimization is deterministic local rule-based search, not generative AI. Search policies are mode-specific, bounded, hashable, and reject booleans-as-numbers, NaN, infinity, negative/unsafe budgets, unknown operations, duplicate IDs, conflicting constraints, and hidden experimental enablement.
 - Strategy generation, virtual evaluation, Pareto construction, ranking, explanations, recommendations, history reuse, and exports are read-only. Unknown or skipped evidence never satisfies a hard constraint or dominates known valid evidence; no global optimum or print-success claim is permitted.
 - Workspace preview/execution must delegate to Sprint 5's isolated workspace and checkpoint services. Every selected mutation remains explicit, rollback-safe, source-preserving, and followed by comparison. Accept creates a separate optimized copy; discard/cancel remove only owned resources.
-- Sprint 6 schemas are all version `1.0`: intelligent strategy, strategy set, search policy, constraint set, Pareto frontier, ranking, explanation, optimization history, and intelligent audit. Sprint 7 is not started.
+- Sprint 6 schemas are all version `1.0`: intelligent strategy, strategy set, search policy, constraint set, Pareto frontier, ranking, explanation, optimization history, and intelligent audit.
+
+## Sprint 7 AI-recommendation policy
+
+- Assistance is optional and disabled by default. Installation, registration, startup, panel drawing, analysis, repair, preparation, optimization, packaging, and automated tests perform no live provider request and require no API key.
+- Direct OpenAI BYOK uses `OPENAI_API_KEY` or session-only process memory. Keys never enter Blender data, preferences, reports, audits, logs, fixtures, source, or package assets.
+- Context is explicit, consented, allow-listed, bounded, redacted, and summary-only with zero geometry. Destination, purpose, categories, retention, and cost/usage limitations are visible before request.
+- Provider JSON is untrusted. Duplicate keys, non-finite values, unknown fields/IDs/evidence/operations, arbitrary parameters, code/shell/path/URL content, policy bypass, guarantees, and stale or hard-infeasible evidence fail closed.
+- Actionable output resolves an exact current Sprint 5 candidate/plan or Sprint 6 strategy plus fingerprint, operation, candidate, and canonical parameter hash. Safe-default operations are scale, orientation, and build-plate translation; gated operations remain disabled unless an explicit local policy enables them; remesh is prohibited.
+- Recommendation, selection, preview, approval, delegated execution, comparison, accept-copy/discard, export, cancellation, and offline fallback are distinct states. Any bound change revokes preview/approval. No automatic retry, provider switch, execution, acceptance, source replacement, learning, or policy mutation exists.
 
 ## Regression and release
 

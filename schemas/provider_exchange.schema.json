@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://chroma3d.local/schemas/provider_exchange.schema.json", "title": "Chroma3D Provider Exchange 1.0.0",
+  "type": "object", "additionalProperties": false,
+  "required": ["exchange_id", "request_id", "provider_id", "model_id", "started_at", "completed_at", "request_hash", "response_hash", "request_bytes", "response_bytes", "input_units", "output_units", "usage_classification", "status", "failure_class", "safe_error", "redaction_summary", "provider_request_id"],
+  "properties": {
+    "exchange_id": {"$ref": "#/$defs/id"}, "request_id": {"type": "string", "minLength": 1, "maxLength": 512}, "provider_id": {"type": "string", "minLength": 1, "maxLength": 64}, "model_id": {"type": "string", "minLength": 1, "maxLength": 128},
+    "started_at": {"type": "string", "format": "date-time"}, "completed_at": {"type": ["string", "null"], "format": "date-time"}, "request_hash": {"$ref": "#/$defs/hash"}, "response_hash": {"oneOf": [{"$ref": "#/$defs/hash"}, {"type": "null"}]},
+    "request_bytes": {"type": "integer", "minimum": 0, "maximum": 1048576}, "response_bytes": {"type": "integer", "minimum": 0, "maximum": 1048576}, "input_units": {"type": ["integer", "null"], "minimum": 0}, "output_units": {"type": ["integer", "null"], "minimum": 0},
+    "usage_classification": {"type": "string", "maxLength": 64}, "status": {"enum": ["READY", "DISPATCHED", "COMPLETED", "FAILED", "CANCELLING", "CANCELLED", "TIMED_OUT", "BUDGET_EXHAUSTED", "LATE_RESPONSE_QUARANTINED"]},
+    "failure_class": {"type": "string", "maxLength": 64}, "safe_error": {"type": "string", "maxLength": 1024}, "redaction_summary": {"type": "object"}, "provider_request_id": {"type": "string", "maxLength": 512}
+  }, "$defs": {"hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"}, "id": {"type": "string", "pattern": "^[a-z][a-z0-9_-]{0,31}:[a-f0-9-]{32,64}$"}}
+}

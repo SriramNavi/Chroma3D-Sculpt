@@ -1,8 +1,10 @@
 # Sprint 7 Implementation Plan
 
+**Execution status:** implemented in the current `0.8.0-alpha.1` worktree; see `IMPLEMENTATION_STATUS.md` and retained acceptance results. This file preserves the planned sequence for traceability.
+
 ## Boundary
 
-This is a future plan. No stage is implemented by the specification milestone. Each stage starts only after owner approval of this specification; live-provider work additionally requires the relevant decision gate.
+This sequence is retained as the implementation trace. S7A-I and the local/package portions of S7K are implemented; S7J live-provider qualification and publication/manual-UAT portions of S7K remain separate authorization gates.
 
 ## S7A — Contracts, policy, and settings
 

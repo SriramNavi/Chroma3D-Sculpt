@@ -1,16 +1,16 @@
 # Sprint 7 Engineering Specification — AI Recommendation Foundation
 
-**Specification status:** implementation-ready draft for owner approval
+**Specification status:** approved implementation baseline; current runtime status is recorded in `docs/sprint7/IMPLEMENTATION_STATUS.md`
 
 **Scope decision:** Outcome A — explicitly defined by the approved roadmap
 
 **Current frozen release:** `v0.7.0-alpha.1` at `63f98b8cef68dc977f6bd8c17972303fa7e3d05e`
 
-**Proposed implementation release:** `0.8.0-alpha.1` (proposal only; metadata remains unchanged)
+**Implementation worktree release:** `0.8.0-alpha.1` (local candidate only; not committed, tagged, or published)
 
 **Draft contract version:** `0.1.0-draft`
 
-Sprint 7 evaluates bounded AI-assisted recommendations without allowing a model to control Blender, define geometry correctness, create executable code, or bypass the deterministic Sprint 0–6 safety boundary. This document specifies future work; Sprint 7 runtime implementation has not started.
+Sprint 7 implements bounded AI-assisted recommendations without allowing a model to control Blender, define geometry correctness, create executable code, or bypass the deterministic Sprint 0–6 safety boundary. Current implementation and evidence status is recorded in `docs/sprint7/IMPLEMENTATION_STATUS.md`.
 
 ## 1. Milestone identity
 
@@ -391,7 +391,7 @@ Historical schemas remain unchanged. Sprint 7 adds versioned additive contracts 
 
 ## 18. Release and acceptance boundary
 
-The future implementation is releasable only after [ACCEPTANCE_GATES.md](docs/sprint7/ACCEPTANCE_GATES.md) passes, owner decisions are recorded, the live provider boundary (if any) has direct development-environment evidence, and the exact package passes security/install gates. Provider-independent contracts may be implemented with adapters disabled. No current metadata, package, tag, or frozen Sprint 6 evidence changes in this specification milestone.
+The implementation is eligible for publication review only after [ACCEPTANCE_GATES.md](docs/sprint7/ACCEPTANCE_GATES.md) passes, owner decisions are recorded, any enabled live-provider boundary has direct development-environment evidence, and the exact package passes security/install gates. The current worktree updates local metadata and builds an untracked package candidate; it does not commit, tag, publish, or change frozen Sprint 6 evidence.
 
 ## 19. Research basis
 
@@ -399,6 +399,6 @@ Repository sources and confidence are recorded in [SCOPE_EVIDENCE.md](docs/sprin
 
 ## 20. Specification decision
 
-**SPRINT 7 SPECIFICATION ACCEPTED WITH OPEN QUESTIONS**
+**SPRINT 7 IMPLEMENTED LOCALLY WITH RELEASE LIMITATIONS**
 
-The core milestone is explicit and implementation can begin safely with provider-neutral contracts, strict validators, a test-only adapter, and deployment disabled. Live provider/backend/BYOK/hosted choices remain owner decisions with the safe temporary behavior documented in [OPEN_QUESTIONS.md](docs/sprint7/OPEN_QUESTIONS.md).
+The core milestone is implemented with provider-neutral contracts, strict validators, a fake test adapter, direct explicit OpenAI BYOK, and deterministic offline fallback. Live-provider qualification, manual installed-panel UAT, publication, backend/hosted credentials, billing, accounts, and telemetry remain separate decisions documented in [OPEN_QUESTIONS.md](docs/sprint7/OPEN_QUESTIONS.md).

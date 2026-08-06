@@ -6,7 +6,7 @@ import bpy
 from bpy.props import PointerProperty
 
 from .metadata import DISPLAY_VERSION, EXTENSION_NAME, EXTENSION_VERSION
-from .operators import ADVANCED_PREPARATION_CLASSES, ANALYZE_CLASSES, EXPORT_CLASSES, INTELLIGENT_OPTIMIZATION_CLASSES, OPTIMIZATION_CLASSES, PRINTABILITY_CLASSES, REPAIR_CLASSES, SELECTION_CLASSES
+from .operators import ADVANCED_PREPARATION_CLASSES, AI_ASSISTANCE_CLASSES, ANALYZE_CLASSES, EXPORT_CLASSES, INTELLIGENT_OPTIMIZATION_CLASSES, OPTIMIZATION_CLASSES, PRINTABILITY_CLASSES, REPAIR_CLASSES, SELECTION_CLASSES
 from .session import clear as clear_session
 from .services.repair_session import clear_runtime as clear_repair_runtime
 from .services.printability_session import clear_runtime as clear_printability_runtime
@@ -15,7 +15,11 @@ from .services.batch_preparation_session import clear_runtime as clear_batch_run
 from .services.optimization_session import clear_runtime as clear_optimization_runtime
 from .services.optimization_workspace import clear_runtime as clear_optimization_workspace_runtime
 from .services.intelligent_optimization_session import clear_runtime as clear_intelligent_optimization_runtime
-from .ui import ADVANCED_PREPARATION_PANEL_CLASSES, INTELLIGENT_OPTIMIZATION_PANEL_CLASSES, OPTIMIZATION_PANEL_CLASSES, PANEL_CLASSES, PRINTABILITY_PANEL_CLASSES, PROPERTY_CLASSES, REPAIR_PANEL_CLASSES, SESSION_STATE_CLASS
+from .services.ai_assistance_session import clear_runtime as clear_ai_assistance_session_runtime
+from .services.ai_assistance_coordinator import clear_runtime as clear_ai_assistance_runtime
+from .services.ai_credentials import clear_session_key
+from .services.provider_registry import reset_test_providers
+from .ui import ADVANCED_PREPARATION_PANEL_CLASSES, AI_ASSISTANCE_PANEL_CLASSES, INTELLIGENT_OPTIMIZATION_PANEL_CLASSES, OPTIMIZATION_PANEL_CLASSES, PANEL_CLASSES, PRINTABILITY_PANEL_CLASSES, PROPERTY_CLASSES, REPAIR_PANEL_CLASSES, SESSION_STATE_CLASS
 from .utilities.logging import get_logger
 
 bl_info = {
@@ -24,12 +28,12 @@ bl_info = {
     "version": tuple(int(part) for part in EXTENSION_VERSION.split(".")),
     "blender": (4, 4, 0),
     "location": "3D Viewport > Sidebar > Chroma3D",
-    "description": f"Mesh diagnostics, controlled repair, and advisory printability analysis ({DISPLAY_VERSION})",
+    "description": f"Mesh diagnostics, protected optimization, and optional advisory AI recommendations ({DISPLAY_VERSION})",
     "category": "Mesh",
 }
 
 logger = get_logger()
-_RUNTIME_CLASSES = ANALYZE_CLASSES + EXPORT_CLASSES + SELECTION_CLASSES + REPAIR_CLASSES + PRINTABILITY_CLASSES + ADVANCED_PREPARATION_CLASSES + OPTIMIZATION_CLASSES + INTELLIGENT_OPTIMIZATION_CLASSES + PANEL_CLASSES + REPAIR_PANEL_CLASSES + PRINTABILITY_PANEL_CLASSES + ADVANCED_PREPARATION_PANEL_CLASSES + OPTIMIZATION_PANEL_CLASSES + INTELLIGENT_OPTIMIZATION_PANEL_CLASSES
+_RUNTIME_CLASSES = ANALYZE_CLASSES + EXPORT_CLASSES + SELECTION_CLASSES + REPAIR_CLASSES + PRINTABILITY_CLASSES + ADVANCED_PREPARATION_CLASSES + OPTIMIZATION_CLASSES + INTELLIGENT_OPTIMIZATION_CLASSES + AI_ASSISTANCE_CLASSES + PANEL_CLASSES + REPAIR_PANEL_CLASSES + PRINTABILITY_PANEL_CLASSES + ADVANCED_PREPARATION_PANEL_CLASSES + OPTIMIZATION_PANEL_CLASSES + INTELLIGENT_OPTIMIZATION_PANEL_CLASSES + AI_ASSISTANCE_PANEL_CLASSES
 
 
 def register() -> None:
@@ -66,4 +70,8 @@ def unregister() -> None:
     clear_optimization_runtime()
     clear_optimization_workspace_runtime()
     clear_intelligent_optimization_runtime()
+    clear_ai_assistance_session_runtime()
+    clear_ai_assistance_runtime()
+    clear_session_key()
+    reset_test_providers()
     logger.info("Chroma3D Sculpt unregistered")
