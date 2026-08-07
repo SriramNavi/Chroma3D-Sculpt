@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chroma3d.local/cgb/0.1/case.schema.json",
+  "title": "CGB Ground-Truth Case",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["case_id", "source_dataset_version", "source_mesh_id", "source_sha256", "source_storage_hint", "rights_or_provenance", "category", "reference_render_hashes", "single_image_reference", "multiview_references", "canonical_dimensions", "ground_truth_geometry_available", "prompt_if_defined", "benchmark_tracks", "notes", "case_hash"],
+  "properties": {
+    "case_id": {"type": "string", "minLength": 1},
+    "source_dataset_version": {"const": "1.0.0"},
+    "source_mesh_id": {"type": "string", "minLength": 1},
+    "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_storage_hint": {"type": "string", "pattern": "^\\.validation-assets/dataset/raw/"},
+    "rights_or_provenance": {"type": "object", "required": ["title", "author", "license", "license_url", "source_revision_url", "credit"], "properties": {"title": {"type": ["string", "null"]}, "author": {"type": ["string", "null"]}, "license": {"type": ["string", "null"]}, "license_url": {"type": ["string", "null"]}, "source_revision_url": {"type": ["string", "null"]}, "credit": {"type": ["string", "null"]}}, "additionalProperties": false},
+    "category": {"type": ["string", "null"]},
+    "reference_render_hashes": {"type": "object", "additionalProperties": {"type": "string", "pattern": "^[0-9a-f]{64}$"}},
+    "single_image_reference": {"$ref": "#/$defs/reference"},
+    "multiview_references": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"$ref": "#/$defs/reference"}},
+    "canonical_dimensions": {"type": "object", "required": ["values", "source_units", "normalization"], "properties": {"values": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number"}}, "source_units": {"type": "string"}, "normalization": {"const": "evaluation_copy_only"}}, "additionalProperties": false},
+    "ground_truth_geometry_available": {"const": true},
+    "prompt_if_defined": {"type": ["string", "null"]},
+    "benchmark_tracks": {"type": "array", "uniqueItems": true, "items": {"enum": ["A", "B", "C", "D", "E", "F", "G", "H"]}},
+    "notes": {"type": "array", "items": {"type": "string"}},
+    "case_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "$defs": {
+    "reference": {
+      "type": "object", "additionalProperties": false,
+      "required": ["view", "path", "sha256", "hash_basis", "file_sha256", "state"],
+      "properties": {"view": {"enum": ["front", "front_three_quarter", "side", "back"]}, "path": {"type": "string"}, "sha256": {"type": ["string", "null"]}, "hash_basis": {"type": ["string", "null"]}, "file_sha256": {"type": ["string", "null"]}, "state": {"enum": ["READY", "NOT_RUN"]}}
+    }
+  }
+}

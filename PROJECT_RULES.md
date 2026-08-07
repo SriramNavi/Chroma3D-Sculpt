@@ -9,6 +9,14 @@
 - Dependencies: public Blender APIs and Python standard library only.
 - Runtime paths must be dynamic; repository tooling must support quoted Windows paths containing spaces.
 
+## CHROMA3D PRODUCT NORTH-STAR GATE
+
+- Chroma3D's product north star is prompt/reference-driven high-quality 3D generation, AI-guided 3D refinement, geometry conditioning, and safe export for manufacturing or general 3D use.
+- Diagnostics, repair, printability, optimization, checkpointing, rollback, validation, and AI assistance are supporting infrastructure beneath that generative product.
+- Every future sprint must materially advance generative 3D creation/refinement or infrastructure strictly necessary to choose, build, validate, or safely operate Chroma3D's generative foundation.
+- If a proposed sprint does not pass that test, stop before implementation and report `ROADMAP_DRIFT`.
+- Generic hardening, repair-only expansion, and print-preparation feature growth do not pass this gate by themselves.
+
 ## Sprint 1 diagnostic policy
 
 - Analysis is read-only and operates on the original mesh datablock; modifier output is explicitly not analyzed.

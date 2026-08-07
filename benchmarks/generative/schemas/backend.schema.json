@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chroma3d.local/cgb/0.1/backend.schema.json",
+  "title": "CGB Backend Descriptor",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "backend_id", "provider", "model_version", "backend_type", "supported_input_modes",
+    "supported_output_formats", "supports_texture", "supports_pbr", "supports_multiview",
+    "supports_seed", "supports_text", "supports_image", "supports_local", "supports_remote",
+    "license_id", "training_code_available", "weights_available", "min_vram_documented",
+    "request_cost_model", "enabled", "availability_state", "provenance", "official_sources"
+  ],
+  "properties": {
+    "backend_id": {"type": "string", "pattern": "^[a-z][a-z0-9_]{1,63}$"},
+    "provider": {"type": "string", "minLength": 1},
+    "model_version": {"type": "string", "minLength": 1},
+    "backend_type": {"enum": ["OPEN_LOCAL", "COMMERCIAL_API", "FAKE"]},
+    "supported_input_modes": {"type": "array", "uniqueItems": true, "items": {"enum": ["text", "image", "multiview"]}},
+    "supported_output_formats": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "supports_texture": {"type": "boolean"},
+    "supports_pbr": {"type": "boolean"},
+    "supports_multiview": {"type": "boolean"},
+    "supports_seed": {"type": "boolean"},
+    "supports_text": {"type": "boolean"},
+    "supports_image": {"type": "boolean"},
+    "supports_local": {"type": "boolean"},
+    "supports_remote": {"type": "boolean"},
+    "license_id": {"type": "string", "minLength": 1},
+    "training_code_available": {"type": "boolean"},
+    "weights_available": {"type": "boolean"},
+    "min_vram_documented": {"type": ["string", "null"]},
+    "request_cost_model": {"type": "object"},
+    "enabled": {"type": "boolean"},
+    "availability_state": {"enum": ["READY", "READY_LOCAL", "READY_REMOTE", "NOT_INSTALLED", "WEIGHTS_NOT_PRESENT", "INSUFFICIENT_HARDWARE", "MISSING_CREDENTIAL", "SPEND_NOT_AUTHORIZED", "LARGE_DOWNLOAD_NOT_AUTHORIZED", "VERSION_UNVERIFIED", "API_UNAVAILABLE", "UNSUPPORTED_PLATFORM", "CLOUD_RECOMMENDED", "UNKNOWN"]},
+    "provenance": {"type": "string", "minLength": 1},
+    "official_sources": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["title", "url"], "properties": {"title": {"type": "string"}, "url": {"type": "string"}}, "additionalProperties": false}}
+  }
+}
