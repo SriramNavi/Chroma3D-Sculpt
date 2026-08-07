@@ -1,0 +1,1209 @@
+{
+  "disposition_counts": {
+    "DEFER": 17,
+    "KEEP_COMPLEX": 10,
+    "PUBLIC_BOUNDARY": 5,
+    "REFACTOR_NOW": 1,
+    "STATEFUL_RISK": 3
+  },
+  "entries": [
+    {
+      "disposition": "KEEP_COMPLEX",
+      "h1_priority": "CRITICAL_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 160,
+        "class_count": 1,
+        "function_count": 10,
+        "h1_duplication_candidate_overlap": 1,
+        "import_fan_in": 1,
+        "import_fan_out": 22,
+        "maximum_function_loc": 296,
+        "nesting_depth": 120,
+        "physical_loc": 470
+      },
+      "module": "tests.blender.test_sprint4_advanced_preparation",
+      "path": "tests/blender/test_sprint4_advanced_preparation.py",
+      "rank": 1,
+      "rank_score": 505.7,
+      "reason": "The complexity represents explicit test matrices or distinct read-only geometry/evidence semantics; extraction has no independently proven maintenance benefit.",
+      "risk": {
+        "blender_coupled": true,
+        "failure_blast_radius": "HIGH",
+        "mutation_ownership": "VALIDATION_ONLY",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 4 focused 137/137 and H1 combined regression",
+        "status": "BROAD"
+      }
+    },
+    {
+      "disposition": "KEEP_COMPLEX",
+      "h1_priority": "CRITICAL_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 153,
+        "class_count": 1,
+        "function_count": 14,
+        "h1_duplication_candidate_overlap": 1,
+        "import_fan_in": 2,
+        "import_fan_out": 14,
+        "maximum_function_loc": 234,
+        "nesting_depth": 110,
+        "physical_loc": 486
+      },
+      "module": "tests.blender.test_sprint3_printability",
+      "path": "tests/blender/test_sprint3_printability.py",
+      "rank": 2,
+      "rank_score": 460.1,
+      "reason": "The complexity represents explicit test matrices or distinct read-only geometry/evidence semantics; extraction has no independently proven maintenance benefit.",
+      "risk": {
+        "blender_coupled": true,
+        "failure_blast_radius": "HIGH",
+        "mutation_ownership": "VALIDATION_ONLY",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 3 focused 121/121 and H1 combined regression",
+        "status": "BROAD"
+      }
+    },
+    {
+      "disposition": "DEFER",
+      "h1_priority": "CRITICAL_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 176,
+        "class_count": 0,
+        "function_count": 40,
+        "h1_duplication_candidate_overlap": 12,
+        "import_fan_in": 0,
+        "import_fan_out": 5,
+        "maximum_function_loc": 433,
+        "nesting_depth": 5,
+        "physical_loc": 2040
+      },
+      "module": "manual-tests.benchmarks.run_golden_benchmark",
+      "path": "manual-tests/benchmarks/run_golden_benchmark.py",
+      "rank": 3,
+      "rank_score": 379.6,
+      "reason": "Development validation orchestration is outside the runtime-risk reduction slice selected for H2.",
+      "risk": {
+        "blender_coupled": true,
+        "failure_blast_radius": "HIGH",
+        "mutation_ownership": "VALIDATION_ONLY",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Validation/benchmark code is exercised by its owning gate, not runtime product tests",
+        "status": "HARNESS"
+      }
+    },
+    {
+      "disposition": "KEEP_COMPLEX",
+      "h1_priority": "CRITICAL_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 60,
+        "class_count": 1,
+        "function_count": 22,
+        "h1_duplication_candidate_overlap": 4,
+        "import_fan_in": 1,
+        "import_fan_out": 18,
+        "maximum_function_loc": 567,
+        "nesting_depth": 7,
+        "physical_loc": 849
+      },
+      "module": "tests.blender.test_sprint6_intelligent_optimization",
+      "path": "tests/blender/test_sprint6_intelligent_optimization.py",
+      "rank": 4,
+      "rank_score": 248.85,
+      "reason": "The complexity represents explicit test matrices or distinct read-only geometry/evidence semantics; extraction has no independently proven maintenance benefit.",
+      "risk": {
+        "blender_coupled": true,
+        "failure_blast_radius": "HIGH",
+        "mutation_ownership": "VALIDATION_ONLY",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 6 focused 222/222 and H1 combined regression",
+        "status": "STRONG"
+      }
+    },
+    {
+      "disposition": "STATEFUL_RISK",
+      "h1_priority": "CRITICAL_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 141,
+        "class_count": 1,
+        "function_count": 21,
+        "h1_duplication_candidate_overlap": 0,
+        "import_fan_in": 6,
+        "import_fan_out": 4,
+        "maximum_function_loc": 62,
+        "nesting_depth": 6,
+        "physical_loc": 510
+      },
+      "module": "chroma3d_sculpt.services.repair_operations",
+      "path": "blender_addon/chroma3d_sculpt/services/repair_operations.py",
+      "rank": 5,
+      "rank_score": 225.9,
+      "reason": "Geometry mutation, provider workflow, or session state transitions make structural movement higher risk than the measured complexity.",
+      "risk": {
+        "blender_coupled": true,
+        "failure_blast_radius": "HIGH",
+        "mutation_ownership": "GEOMETRY_MUTATION",
+        "public_contract_exposure": false,
+        "state_machine_involvement": true
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 2 focused 60/60 and H1 combined regression",
+        "status": "STRONG"
+      }
+    },
+    {
+      "disposition": "DEFER",
+      "h1_priority": "CRITICAL_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 134,
+        "class_count": 0,
+        "function_count": 36,
+        "h1_duplication_candidate_overlap": 1,
+        "import_fan_in": 0,
+        "import_fan_out": 13,
+        "maximum_function_loc": 94,
+        "nesting_depth": 4,
+        "physical_loc": 725
+      },
+      "module": "manual-tests.sprint5-final.final_validation_runner",
+      "path": "manual-tests/sprint5-final/final_validation_runner.py",
+      "rank": 6,
+      "rank_score": 210.05,
+      "reason": "Development validation orchestration is outside the runtime-risk reduction slice selected for H2.",
+      "risk": {
+        "blender_coupled": true,
+        "failure_blast_radius": "HIGH",
+        "mutation_ownership": "VALIDATION_ONLY",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 5 focused 161/161 and H1 combined regression",
+        "status": "STRONG"
+      }
+    },
+    {
+      "disposition": "DEFER",
+      "h1_priority": "CRITICAL_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 112,
+        "class_count": 0,
+        "function_count": 44,
+        "h1_duplication_candidate_overlap": 3,
+        "import_fan_in": 0,
+        "import_fan_out": 11,
+        "maximum_function_loc": 81,
+        "nesting_depth": 3,
+        "physical_loc": 1088
+      },
+      "module": "manual-tests.sprint2-final.final_validation_runner",
+      "path": "manual-tests/sprint2-final/final_validation_runner.py",
+      "rank": 7,
+      "rank_score": 199.6,
+      "reason": "Development validation orchestration is outside the runtime-risk reduction slice selected for H2.",
+      "risk": {
+        "blender_coupled": true,
+        "failure_blast_radius": "HIGH",
+        "mutation_ownership": "VALIDATION_ONLY",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 2 focused 60/60 and H1 combined regression",
+        "status": "STRONG"
+      }
+    },
+    {
+      "disposition": "PUBLIC_BOUNDARY",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 83,
+        "class_count": 36,
+        "function_count": 24,
+        "h1_duplication_candidate_overlap": 1,
+        "import_fan_in": 21,
+        "import_fan_out": 0,
+        "maximum_function_loc": 37,
+        "nesting_depth": 3,
+        "physical_loc": 856
+      },
+      "module": "chroma3d_sculpt.models.intelligent_optimization_models",
+      "path": "blender_addon/chroma3d_sculpt/models/intelligent_optimization_models.py",
+      "rank": 8,
+      "rank_score": 185.2,
+      "reason": "Typed models or registered UI expose public/serialized behavior; metric-only restructuring is not justified.",
+      "risk": {
+        "blender_coupled": false,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "SERIALIZED_CONTRACT",
+        "public_contract_exposure": true,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 6 focused 222/222 and H1 combined regression",
+        "status": "STRONG"
+      }
+    },
+    {
+      "disposition": "STATEFUL_RISK",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 93,
+        "class_count": 0,
+        "function_count": 20,
+        "h1_duplication_candidate_overlap": 0,
+        "import_fan_in": 6,
+        "import_fan_out": 14,
+        "maximum_function_loc": 61,
+        "nesting_depth": 3,
+        "physical_loc": 488
+      },
+      "module": "chroma3d_sculpt.services.ai_assistance_coordinator",
+      "path": "blender_addon/chroma3d_sculpt/services/ai_assistance_coordinator.py",
+      "rank": 9,
+      "rank_score": 180.6,
+      "reason": "Geometry mutation, provider workflow, or session state transitions make structural movement higher risk than the measured complexity.",
+      "risk": {
+        "blender_coupled": true,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "SESSION_OR_WORKSPACE_STATE",
+        "public_contract_exposure": false,
+        "state_machine_involvement": true
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 7 focused 62/62 and H1 combined regression",
+        "status": "STRONG"
+      }
+    },
+    {
+      "disposition": "DEFER",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 86,
+        "class_count": 0,
+        "function_count": 32,
+        "h1_duplication_candidate_overlap": 4,
+        "import_fan_in": 0,
+        "import_fan_out": 21,
+        "maximum_function_loc": 76,
+        "nesting_depth": 4,
+        "physical_loc": 942
+      },
+      "module": "manual-tests.sprint4-final.final_validation_runner",
+      "path": "manual-tests/sprint4-final/final_validation_runner.py",
+      "rank": 10,
+      "rank_score": 177.3,
+      "reason": "Development validation orchestration is outside the runtime-risk reduction slice selected for H2.",
+      "risk": {
+        "blender_coupled": true,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "VALIDATION_ONLY",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 4 focused 137/137 and H1 combined regression",
+        "status": "BROAD"
+      }
+    },
+    {
+      "disposition": "DEFER",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 95,
+        "class_count": 0,
+        "function_count": 26,
+        "h1_duplication_candidate_overlap": 0,
+        "import_fan_in": 0,
+        "import_fan_out": 15,
+        "maximum_function_loc": 75,
+        "nesting_depth": 4,
+        "physical_loc": 847
+      },
+      "module": "manual-tests.sprint3-final.final_validation_runner",
+      "path": "manual-tests/sprint3-final/final_validation_runner.py",
+      "rank": 11,
+      "rank_score": 175.35,
+      "reason": "Development validation orchestration is outside the runtime-risk reduction slice selected for H2.",
+      "risk": {
+        "blender_coupled": true,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "VALIDATION_ONLY",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 3 focused 121/121 and H1 combined regression",
+        "status": "BROAD"
+      }
+    },
+    {
+      "disposition": "PUBLIC_BOUNDARY",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 77,
+        "class_count": 22,
+        "function_count": 24,
+        "h1_duplication_candidate_overlap": 0,
+        "import_fan_in": 24,
+        "import_fan_out": 0,
+        "maximum_function_loc": 30,
+        "nesting_depth": 3,
+        "physical_loc": 664
+      },
+      "module": "chroma3d_sculpt.models.ai_assistance_models",
+      "path": "blender_addon/chroma3d_sculpt/models/ai_assistance_models.py",
+      "rank": 12,
+      "rank_score": 171.2,
+      "reason": "Typed models or registered UI expose public/serialized behavior; metric-only restructuring is not justified.",
+      "risk": {
+        "blender_coupled": false,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "SERIALIZED_CONTRACT",
+        "public_contract_exposure": true,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 7 focused 62/62 and H1 combined regression",
+        "status": "STRONG"
+      }
+    },
+    {
+      "disposition": "DEFER",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 90,
+        "class_count": 0,
+        "function_count": 34,
+        "h1_duplication_candidate_overlap": 2,
+        "import_fan_in": 0,
+        "import_fan_out": 7,
+        "maximum_function_loc": 82,
+        "nesting_depth": 3,
+        "physical_loc": 849
+      },
+      "module": "manual-tests.sprint1-final.final_validation_runner",
+      "path": "manual-tests/sprint1-final/final_validation_runner.py",
+      "rank": 13,
+      "rank_score": 161.85,
+      "reason": "Development validation orchestration is outside the runtime-risk reduction slice selected for H2.",
+      "risk": {
+        "blender_coupled": true,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "VALIDATION_ONLY",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Validation/benchmark code is exercised by its owning gate, not runtime product tests",
+        "status": "HARNESS"
+      }
+    },
+    {
+      "disposition": "DEFER",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 95,
+        "class_count": 1,
+        "function_count": 14,
+        "h1_duplication_candidate_overlap": 1,
+        "import_fan_in": 0,
+        "import_fan_out": 0,
+        "maximum_function_loc": 112,
+        "nesting_depth": 5,
+        "physical_loc": 483
+      },
+      "module": "manual-tests.sprint6.run_historical_regression",
+      "path": "manual-tests/sprint6/run_historical_regression.py",
+      "rank": 14,
+      "rank_score": 151.55,
+      "reason": "Development validation orchestration is outside the runtime-risk reduction slice selected for H2.",
+      "risk": {
+        "blender_coupled": false,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "VALIDATION_ONLY",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Validation/benchmark code is exercised by its owning gate, not runtime product tests",
+        "status": "HARNESS"
+      }
+    },
+    {
+      "disposition": "DEFER",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 72,
+        "class_count": 0,
+        "function_count": 14,
+        "h1_duplication_candidate_overlap": 1,
+        "import_fan_in": 0,
+        "import_fan_out": 1,
+        "maximum_function_loc": 180,
+        "nesting_depth": 3,
+        "physical_loc": 600
+      },
+      "module": "manual-tests.run_acceptance_gates",
+      "path": "manual-tests/run_acceptance_gates.py",
+      "rank": 15,
+      "rank_score": 145.0,
+      "reason": "Development validation orchestration is outside the runtime-risk reduction slice selected for H2.",
+      "risk": {
+        "blender_coupled": false,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "VALIDATION_ONLY",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Validation/benchmark code is exercised by its owning gate, not runtime product tests",
+        "status": "HARNESS"
+      }
+    },
+    {
+      "disposition": "STATEFUL_RISK",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 65,
+        "class_count": 0,
+        "function_count": 19,
+        "h1_duplication_candidate_overlap": 0,
+        "import_fan_in": 10,
+        "import_fan_out": 15,
+        "maximum_function_loc": 33,
+        "nesting_depth": 3,
+        "physical_loc": 336
+      },
+      "module": "chroma3d_sculpt.services.intelligent_optimization_coordinator",
+      "path": "blender_addon/chroma3d_sculpt/services/intelligent_optimization_coordinator.py",
+      "rank": 16,
+      "rank_score": 144.4,
+      "reason": "Geometry mutation, provider workflow, or session state transitions make structural movement higher risk than the measured complexity.",
+      "risk": {
+        "blender_coupled": true,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "SESSION_OR_WORKSPACE_STATE",
+        "public_contract_exposure": false,
+        "state_machine_involvement": true
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 6 focused 222/222 and H1 combined regression",
+        "status": "STRONG"
+      }
+    },
+    {
+      "disposition": "KEEP_COMPLEX",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 71,
+        "class_count": 1,
+        "function_count": 6,
+        "h1_duplication_candidate_overlap": 0,
+        "import_fan_in": 3,
+        "import_fan_out": 2,
+        "maximum_function_loc": 151,
+        "nesting_depth": 6,
+        "physical_loc": 342
+      },
+      "module": "chroma3d_sculpt.services.topology_analyzer",
+      "path": "blender_addon/chroma3d_sculpt/services/topology_analyzer.py",
+      "rank": 17,
+      "rank_score": 135.3,
+      "reason": "The complexity represents explicit test matrices or distinct read-only geometry/evidence semantics; extraction has no independently proven maintenance benefit.",
+      "risk": {
+        "blender_coupled": false,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "READ_ONLY_GEOMETRY_EVIDENCE",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 3 focused 121/121 and H1 combined regression",
+        "status": "BROAD"
+      }
+    },
+    {
+      "disposition": "DEFER",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 64,
+        "class_count": 0,
+        "function_count": 24,
+        "h1_duplication_candidate_overlap": 5,
+        "import_fan_in": 0,
+        "import_fan_out": 0,
+        "maximum_function_loc": 114,
+        "nesting_depth": 3,
+        "physical_loc": 835
+      },
+      "module": "manual-tests.datasets.validate_statue_dataset",
+      "path": "manual-tests/datasets/validate_statue_dataset.py",
+      "rank": 18,
+      "rank_score": 134.55,
+      "reason": "Development validation orchestration is outside the runtime-risk reduction slice selected for H2.",
+      "risk": {
+        "blender_coupled": true,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "VALIDATION_ONLY",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Validation/benchmark code is exercised by its owning gate, not runtime product tests",
+        "status": "HARNESS"
+      }
+    },
+    {
+      "disposition": "KEEP_COMPLEX",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 55,
+        "class_count": 2,
+        "function_count": 4,
+        "h1_duplication_candidate_overlap": 0,
+        "import_fan_in": 3,
+        "import_fan_out": 4,
+        "maximum_function_loc": 213,
+        "nesting_depth": 4,
+        "physical_loc": 315
+      },
+      "module": "chroma3d_sculpt.services.shell_analyzer",
+      "path": "blender_addon/chroma3d_sculpt/services/shell_analyzer.py",
+      "rank": 19,
+      "rank_score": 128.35,
+      "reason": "The complexity represents explicit test matrices or distinct read-only geometry/evidence semantics; extraction has no independently proven maintenance benefit.",
+      "risk": {
+        "blender_coupled": true,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "READ_ONLY_GEOMETRY_EVIDENCE",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 3 focused 121/121 and H1 combined regression",
+        "status": "BROAD"
+      }
+    },
+    {
+      "disposition": "DEFER",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 54,
+        "class_count": 0,
+        "function_count": 31,
+        "h1_duplication_candidate_overlap": 4,
+        "import_fan_in": 0,
+        "import_fan_out": 8,
+        "maximum_function_loc": 84,
+        "nesting_depth": 3,
+        "physical_loc": 823
+      },
+      "module": "manual-tests.acceptance_gate_runner",
+      "path": "manual-tests/acceptance_gate_runner.py",
+      "rank": 20,
+      "rank_score": 125.95,
+      "reason": "Development validation orchestration is outside the runtime-risk reduction slice selected for H2.",
+      "risk": {
+        "blender_coupled": true,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "VALIDATION_ONLY",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Validation/benchmark code is exercised by its owning gate, not runtime product tests",
+        "status": "HARNESS"
+      }
+    },
+    {
+      "disposition": "PUBLIC_BOUNDARY",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 40,
+        "class_count": 27,
+        "function_count": 16,
+        "h1_duplication_candidate_overlap": 1,
+        "import_fan_in": 17,
+        "import_fan_out": 0,
+        "maximum_function_loc": 44,
+        "nesting_depth": 2,
+        "physical_loc": 525
+      },
+      "module": "chroma3d_sculpt.models.optimization_models",
+      "path": "blender_addon/chroma3d_sculpt/models/optimization_models.py",
+      "rank": 21,
+      "rank_score": 121.05,
+      "reason": "Typed models or registered UI expose public/serialized behavior; metric-only restructuring is not justified.",
+      "risk": {
+        "blender_coupled": false,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "SERIALIZED_CONTRACT",
+        "public_contract_exposure": true,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 5 focused 161/161 and H1 combined regression",
+        "status": "STRONG"
+      }
+    },
+    {
+      "disposition": "DEFER",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 47,
+        "class_count": 0,
+        "function_count": 11,
+        "h1_duplication_candidate_overlap": 2,
+        "import_fan_in": 0,
+        "import_fan_out": 6,
+        "maximum_function_loc": 154,
+        "nesting_depth": 5,
+        "physical_loc": 501
+      },
+      "module": "manual-tests.sprint3.sprint3_acceptance_runner",
+      "path": "manual-tests/sprint3/sprint3_acceptance_runner.py",
+      "rank": 22,
+      "rank_score": 118.85,
+      "reason": "Development validation orchestration is outside the runtime-risk reduction slice selected for H2.",
+      "risk": {
+        "blender_coupled": true,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "VALIDATION_ONLY",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 3 focused 121/121 and H1 combined regression",
+        "status": "BROAD"
+      }
+    },
+    {
+      "disposition": "KEEP_COMPLEX",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 20,
+        "class_count": 0,
+        "function_count": 2,
+        "h1_duplication_candidate_overlap": 0,
+        "import_fan_in": 7,
+        "import_fan_out": 14,
+        "maximum_function_loc": 180,
+        "nesting_depth": 1,
+        "physical_loc": 263
+      },
+      "module": "chroma3d_sculpt.services.printability_coordinator",
+      "path": "blender_addon/chroma3d_sculpt/services/printability_coordinator.py",
+      "rank": 23,
+      "rank_score": 117.15,
+      "reason": "The complexity represents explicit test matrices or distinct read-only geometry/evidence semantics; extraction has no independently proven maintenance benefit.",
+      "risk": {
+        "blender_coupled": true,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "SESSION_OR_WORKSPACE_STATE",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 3 focused 121/121 and H1 combined regression",
+        "status": "BROAD"
+      }
+    },
+    {
+      "disposition": "REFACTOR_NOW",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 53,
+        "class_count": 0,
+        "function_count": 17,
+        "h1_duplication_candidate_overlap": 1,
+        "import_fan_in": 4,
+        "import_fan_out": 3,
+        "maximum_function_loc": 151,
+        "nesting_depth": 5,
+        "physical_loc": 339
+      },
+      "module": "chroma3d_sculpt.services.strategy_generator",
+      "path": "blender_addon/chroma3d_sculpt/services/strategy_generator.py",
+      "rank": 24,
+      "rank_score": 117.15,
+      "reason": "Deterministic private generation logic has strong regression coverage and can separate candidate validation from bounded execution without changing state ownership or public APIs.",
+      "risk": {
+        "blender_coupled": false,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "PURE_DETERMINISTIC_GENERATION",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "generate_strategies",
+      "selected_transformation": "extract private candidate validation and cancellation predicate",
+      "test_coverage": {
+        "evidence": "Sprint 6 focused 222/222 and H1 combined regression",
+        "status": "STRONG"
+      }
+    },
+    {
+      "disposition": "KEEP_COMPLEX",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 24,
+        "class_count": 1,
+        "function_count": 10,
+        "h1_duplication_candidate_overlap": 0,
+        "import_fan_in": 10,
+        "import_fan_out": 12,
+        "maximum_function_loc": 227,
+        "nesting_depth": 1,
+        "physical_loc": 469
+      },
+      "module": "chroma3d_sculpt.services.mesh_analyzer",
+      "path": "blender_addon/chroma3d_sculpt/services/mesh_analyzer.py",
+      "rank": 25,
+      "rank_score": 116.85,
+      "reason": "The complexity represents explicit test matrices or distinct read-only geometry/evidence semantics; extraction has no independently proven maintenance benefit.",
+      "risk": {
+        "blender_coupled": false,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "READ_ONLY_GEOMETRY_EVIDENCE",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Validation/benchmark code is exercised by its owning gate, not runtime product tests",
+        "status": "HARNESS"
+      }
+    },
+    {
+      "disposition": "DEFER",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 40,
+        "class_count": 1,
+        "function_count": 12,
+        "h1_duplication_candidate_overlap": 5,
+        "import_fan_in": 0,
+        "import_fan_out": 0,
+        "maximum_function_loc": 116,
+        "nesting_depth": 6,
+        "physical_loc": 766
+      },
+      "module": "manual-tests.datasets.acquire_statue_dataset",
+      "path": "manual-tests/datasets/acquire_statue_dataset.py",
+      "rank": 26,
+      "rank_score": 113.5,
+      "reason": "Development validation orchestration is outside the runtime-risk reduction slice selected for H2.",
+      "risk": {
+        "blender_coupled": false,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "VALIDATION_ONLY",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Validation/benchmark code is exercised by its owning gate, not runtime product tests",
+        "status": "HARNESS"
+      }
+    },
+    {
+      "disposition": "PUBLIC_BOUNDARY",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 11,
+        "class_count": 33,
+        "function_count": 21,
+        "h1_duplication_candidate_overlap": 0,
+        "import_fan_in": 37,
+        "import_fan_out": 0,
+        "maximum_function_loc": 36,
+        "nesting_depth": 1,
+        "physical_loc": 609
+      },
+      "module": "chroma3d_sculpt.models.printability_models",
+      "path": "blender_addon/chroma3d_sculpt/models/printability_models.py",
+      "rank": 27,
+      "rank_score": 112.65,
+      "reason": "Typed models or registered UI expose public/serialized behavior; metric-only restructuring is not justified.",
+      "risk": {
+        "blender_coupled": false,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "SERIALIZED_CONTRACT",
+        "public_contract_exposure": true,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 3 focused 121/121 and H1 combined regression",
+        "status": "BROAD"
+      }
+    },
+    {
+      "disposition": "DEFER",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 38,
+        "class_count": 0,
+        "function_count": 26,
+        "h1_duplication_candidate_overlap": 2,
+        "import_fan_in": 0,
+        "import_fan_out": 25,
+        "maximum_function_loc": 46,
+        "nesting_depth": 4,
+        "physical_loc": 506
+      },
+      "module": "manual-tests.sprint7-final.final_validation_runner",
+      "path": "manual-tests/sprint7-final/final_validation_runner.py",
+      "rank": 28,
+      "rank_score": 105.5,
+      "reason": "Development validation orchestration is outside the runtime-risk reduction slice selected for H2.",
+      "risk": {
+        "blender_coupled": true,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "VALIDATION_ONLY",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 7 focused 62/62 and H1 combined regression",
+        "status": "STRONG"
+      }
+    },
+    {
+      "disposition": "DEFER",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 57,
+        "class_count": 0,
+        "function_count": 21,
+        "h1_duplication_candidate_overlap": 0,
+        "import_fan_in": 0,
+        "import_fan_out": 0,
+        "maximum_function_loc": 50,
+        "nesting_depth": 4,
+        "physical_loc": 530
+      },
+      "module": "manual-tests.sprint7-specification.validate_sprint7_specification",
+      "path": "manual-tests/sprint7-specification/validate_sprint7_specification.py",
+      "rank": 29,
+      "rank_score": 101.5,
+      "reason": "Development validation orchestration is outside the runtime-risk reduction slice selected for H2.",
+      "risk": {
+        "blender_coupled": false,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "VALIDATION_ONLY",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 7 focused 62/62 and H1 combined regression",
+        "status": "STRONG"
+      }
+    },
+    {
+      "disposition": "DEFER",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 29,
+        "class_count": 0,
+        "function_count": 10,
+        "h1_duplication_candidate_overlap": 3,
+        "import_fan_in": 0,
+        "import_fan_out": 0,
+        "maximum_function_loc": 182,
+        "nesting_depth": 5,
+        "physical_loc": 476
+      },
+      "module": "manual-tests.benchmarks.verify_golden_baseline",
+      "path": "manual-tests/benchmarks/verify_golden_baseline.py",
+      "rank": 30,
+      "rank_score": 99.2,
+      "reason": "Development validation orchestration is outside the runtime-risk reduction slice selected for H2.",
+      "risk": {
+        "blender_coupled": false,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "VALIDATION_ONLY",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Validation/benchmark code is exercised by its owning gate, not runtime product tests",
+        "status": "HARNESS"
+      }
+    },
+    {
+      "disposition": "PUBLIC_BOUNDARY",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 33,
+        "class_count": 1,
+        "function_count": 3,
+        "h1_duplication_candidate_overlap": 0,
+        "import_fan_in": 2,
+        "import_fan_out": 4,
+        "maximum_function_loc": 151,
+        "nesting_depth": 3,
+        "physical_loc": 197
+      },
+      "module": "chroma3d_sculpt.ui.panels",
+      "path": "blender_addon/chroma3d_sculpt/ui/panels.py",
+      "rank": 31,
+      "rank_score": 85.05,
+      "reason": "Typed models or registered UI expose public/serialized behavior; metric-only restructuring is not justified.",
+      "risk": {
+        "blender_coupled": true,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "UI_RENDERING",
+        "public_contract_exposure": true,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Validation/benchmark code is exercised by its owning gate, not runtime product tests",
+        "status": "HARNESS"
+      }
+    },
+    {
+      "disposition": "KEEP_COMPLEX",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 37,
+        "class_count": 0,
+        "function_count": 3,
+        "h1_duplication_candidate_overlap": 0,
+        "import_fan_in": 4,
+        "import_fan_out": 2,
+        "maximum_function_loc": 95,
+        "nesting_depth": 7,
+        "physical_loc": 123
+      },
+      "module": "chroma3d_sculpt.utilities.boundary_loops",
+      "path": "blender_addon/chroma3d_sculpt/utilities/boundary_loops.py",
+      "rank": 32,
+      "rank_score": 82.15,
+      "reason": "The complexity represents explicit test matrices or distinct read-only geometry/evidence semantics; extraction has no independently proven maintenance benefit.",
+      "risk": {
+        "blender_coupled": true,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "READ_ONLY_GEOMETRY_EVIDENCE",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 3 focused 121/121 and H1 combined regression",
+        "status": "BROAD"
+      }
+    },
+    {
+      "disposition": "KEEP_COMPLEX",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 29,
+        "class_count": 1,
+        "function_count": 73,
+        "h1_duplication_candidate_overlap": 0,
+        "import_fan_in": 0,
+        "import_fan_out": 11,
+        "maximum_function_loc": 22,
+        "nesting_depth": 2,
+        "physical_loc": 665
+      },
+      "module": "tests.blender.test_sprint2_repair",
+      "path": "tests/blender/test_sprint2_repair.py",
+      "rank": 33,
+      "rank_score": 81.65,
+      "reason": "The complexity represents explicit test matrices or distinct read-only geometry/evidence semantics; extraction has no independently proven maintenance benefit.",
+      "risk": {
+        "blender_coupled": true,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "VALIDATION_ONLY",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 2 focused 60/60 and H1 combined regression",
+        "status": "STRONG"
+      }
+    },
+    {
+      "disposition": "KEEP_COMPLEX",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 17,
+        "class_count": 1,
+        "function_count": 73,
+        "h1_duplication_candidate_overlap": 2,
+        "import_fan_in": 0,
+        "import_fan_out": 27,
+        "maximum_function_loc": 16,
+        "nesting_depth": 2,
+        "physical_loc": 523
+      },
+      "module": "tests.blender.test_sprint7_ai_recommendation",
+      "path": "tests/blender/test_sprint7_ai_recommendation.py",
+      "rank": 34,
+      "rank_score": 77.35,
+      "reason": "The complexity represents explicit test matrices or distinct read-only geometry/evidence semantics; extraction has no independently proven maintenance benefit.",
+      "risk": {
+        "blender_coupled": true,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "VALIDATION_ONLY",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 7 focused 62/62 and H1 combined regression",
+        "status": "STRONG"
+      }
+    },
+    {
+      "disposition": "DEFER",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 19,
+        "class_count": 0,
+        "function_count": 5,
+        "h1_duplication_candidate_overlap": 1,
+        "import_fan_in": 0,
+        "import_fan_out": 0,
+        "maximum_function_loc": 166,
+        "nesting_depth": 2,
+        "physical_loc": 230
+      },
+      "module": "manual-tests.datasets.verify_statue_dataset",
+      "path": "manual-tests/datasets/verify_statue_dataset.py",
+      "rank": 35,
+      "rank_score": 67.7,
+      "reason": "Development validation orchestration is outside the runtime-risk reduction slice selected for H2.",
+      "risk": {
+        "blender_coupled": false,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "VALIDATION_ONLY",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Validation/benchmark code is exercised by its owning gate, not runtime product tests",
+        "status": "HARNESS"
+      }
+    },
+    {
+      "disposition": "DEFER",
+      "h1_priority": "HIGH_REVIEW_PRIORITY",
+      "metrics": {
+        "branch_count_estimate": 12,
+        "class_count": 0,
+        "function_count": 3,
+        "h1_duplication_candidate_overlap": 0,
+        "import_fan_in": 0,
+        "import_fan_out": 1,
+        "maximum_function_loc": 136,
+        "nesting_depth": 7,
+        "physical_loc": 178
+      },
+      "module": "manual-tests.sprint2.7.prepare_release_staging",
+      "path": "manual-tests/sprint2.7/prepare_release_staging.py",
+      "rank": 36,
+      "rank_score": 63.1,
+      "reason": "Development validation orchestration is outside the runtime-risk reduction slice selected for H2.",
+      "risk": {
+        "blender_coupled": false,
+        "failure_blast_radius": "MODERATE",
+        "mutation_ownership": "VALIDATION_ONLY",
+        "public_contract_exposure": false,
+        "state_machine_involvement": false
+      },
+      "selected_symbol": "",
+      "selected_transformation": "",
+      "test_coverage": {
+        "evidence": "Sprint 2 focused 60/60 and H1 combined regression",
+        "status": "STRONG"
+      }
+    }
+  ],
+  "errors": [],
+  "generated_at": "2026-08-07T09:21:52.510441+00:00",
+  "h1_counts": {
+    "critical": 7,
+    "high": 29,
+    "total": 36
+  },
+  "schema_version": "1.0.0",
+  "status": "PASS",
+  "triaged_count": 36
+}

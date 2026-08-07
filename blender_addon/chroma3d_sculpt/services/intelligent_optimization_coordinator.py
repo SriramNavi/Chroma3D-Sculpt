@@ -30,7 +30,7 @@ from .optimization_policy import policy_hash as sprint5_policy_hash
 from .strategy_evaluator import evaluate_strategies
 from .strategy_explainer import explain_strategy
 from .strategy_generator import generate_strategies
-from .pareto_frontier import build_pareto_frontier, frontier_is_current
+from .pareto_frontier import build_pareto_frontier
 from .strategy_history import add_history_entry, history_entry
 from .strategy_ranker import rank_strategies, recommend_strategy
 from ..models.intelligent_optimization_models import StrategyEvaluation

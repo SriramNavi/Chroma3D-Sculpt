@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from time import perf_counter
 import math
-from typing import Any, Callable, Iterable, Mapping, Sequence
+from typing import Any, Callable, Mapping
 
 from ..intelligent_optimization_settings import ObjectiveProfile, build_objective_profile, objective_directions
 from ..models.intelligent_optimization_models import (

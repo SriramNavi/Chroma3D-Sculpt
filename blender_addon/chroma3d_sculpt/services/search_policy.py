@@ -7,15 +7,10 @@ import json
 from typing import Iterable
 
 from ..models.intelligent_optimization_models import (
-    ConstraintSet,
-    OptimizationConstraint,
-    ConstraintKind,
-    ConstraintSeverity,
     OptimizationOperationType,
     SearchBudget,
     SearchMode,
     SearchPolicy,
-    stable_hash,
 )
 from ..intelligent_optimization_settings import build_objective_profile
 from .constraint_engine import default_constraint_set, validate_constraint_set

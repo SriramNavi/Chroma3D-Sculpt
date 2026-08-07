@@ -1,0 +1,2441 @@
+{
+  "classification_counts": {
+    "EXACT_SHARED_SEMANTICS": 2,
+    "INTENTIONAL_DOMAIN_DUPLICATION": 16,
+    "SIMILAR_BUT_DIFFERENT": 10,
+    "TEST_FIXTURE_DUPLICATION": 42,
+    "TOO_RISKY": 12
+  },
+  "entries": [
+    {
+      "candidate_id": "H1-DUP-0001",
+      "classification": "SIMILAR_BUT_DIFFERENT",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/ai_assistance_audit.py",
+        "blender_addon/chroma3d_sculpt/services/ai_assistance_report.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 1.0
+      },
+      "reason": "Report type, sanitization, serialization, overwrite, and failure semantics are not proven identical.",
+      "retained_reason": "Report type, sanitization, serialization, overwrite, and failure semantics are not proven identical.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/ai_assistance_audit.py:write_json_audit | blender_addon/chroma3d_sculpt/services/ai_assistance_report.py:write_json_report",
+      "topic": "atomic_or_report_write"
+    },
+    {
+      "candidate_id": "H1-DUP-0002",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/datasets/acquire_statue_dataset.py",
+        "manual-tests/datasets/validate_statue_dataset.py"
+      ],
+      "h1_similarity": {
+        "hash": "cb1d26f4a8cb9f3a817456b9fc21ed22a0fd36b301161bd5cbb9a5ceb3553049",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/datasets/acquire_statue_dataset.py:_write_json | manual-tests/datasets/validate_statue_dataset.py:_write_json",
+      "topic": "atomic_or_report_write"
+    },
+    {
+      "candidate_id": "H1-DUP-0003",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint4-final/final_validation_runner.py",
+        "manual-tests/sprint4-final/run_final_validation.py"
+      ],
+      "h1_similarity": {
+        "hash": "9294a52b113b3eb587822238c96e060a40b742942d13ccb1a5955aa4853be986",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint4-final/final_validation_runner.py:_atomic_json | manual-tests/sprint4-final/run_final_validation.py:atomic_json",
+      "topic": "atomic_or_report_write"
+    },
+    {
+      "candidate_id": "H1-DUP-0004",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint5/dataset_worker.py",
+        "manual-tests/sprint6/dataset_worker.py"
+      ],
+      "h1_similarity": {
+        "hash": "98f413f0aab6d37df8f43758ba0051addd763568680d6a8e205b6bddccf29703",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint5/dataset_worker.py:write_atomic | manual-tests/sprint6/dataset_worker.py:atomic_write",
+      "topic": "atomic_or_report_write"
+    },
+    {
+      "candidate_id": "H1-DUP-0005",
+      "classification": "INTENTIONAL_DOMAIN_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/advanced_preparation_session.py",
+        "blender_addon/chroma3d_sculpt/services/printability_session.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 1.0
+      },
+      "reason": "Session evidence or Blender resource cleanup has distinct owner, lifetime, stale-state, and mutation semantics.",
+      "retained_reason": "Session evidence or Blender resource cleanup has distinct owner, lifetime, stale-state, and mutation semantics.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/advanced_preparation_session.py:store_preparation_result | blender_addon/chroma3d_sculpt/services/printability_session.py:store_result",
+      "topic": "evidence_state"
+    },
+    {
+      "candidate_id": "H1-DUP-0006",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/benchmarks/run_golden_benchmark.py",
+        "manual-tests/benchmarks/verify_golden_baseline.py"
+      ],
+      "h1_similarity": {
+        "hash": "89280bf42408fa4077c66792f7eda4d39f7e24c659c054a6dbbc44a97b1e7fde",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/benchmarks/run_golden_benchmark.py:_stable_hash | manual-tests/benchmarks/verify_golden_baseline.py:_stable_hash",
+      "topic": "hashing_or_signature"
+    },
+    {
+      "candidate_id": "H1-DUP-0007",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/physical-print-validation/generate_print_job_cards.py",
+        "manual-tests/sprint3/run_dataset_regression.py"
+      ],
+      "h1_similarity": {
+        "hash": "46d4d2510051aaf3036cd7ec399a1685c48a26fe3e7c88dc3c0463b66096519f",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/physical-print-validation/generate_print_job_cards.py:implementation_fingerprint | manual-tests/sprint3/run_dataset_regression.py:implementation_fingerprint",
+      "topic": "hashing_or_signature"
+    },
+    {
+      "candidate_id": "H1-DUP-0008",
+      "classification": "INTENTIONAL_DOMAIN_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/hardware_profile_loader.py",
+        "blender_addon/chroma3d_sculpt/services/material_profile_loader.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 1.0
+      },
+      "reason": "Hardware, material, and printer profile validation retain separate threshold and schema ownership.",
+      "retained_reason": "Hardware, material, and printer profile validation retain separate threshold and schema ownership.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/hardware_profile_loader.py:validate_all_hardware_profiles | blender_addon/chroma3d_sculpt/services/material_profile_loader.py:validate_all_material_profiles",
+      "topic": "json_or_profile_validation"
+    },
+    {
+      "candidate_id": "H1-DUP-0009",
+      "classification": "INTENTIONAL_DOMAIN_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/material_profile_loader.py",
+        "blender_addon/chroma3d_sculpt/services/printer_profile_loader.py"
+      ],
+      "h1_similarity": {
+        "hash": "9fc4cf2310322c920dba99cc95cdf7f6d320f4c547c40fa27d87b1c75f12e417",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "Hardware, material, and printer profile validation retain separate threshold and schema ownership.",
+      "retained_reason": "Hardware, material, and printer profile validation retain separate threshold and schema ownership.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/material_profile_loader.py:material_profile_directory | blender_addon/chroma3d_sculpt/services/printer_profile_loader.py:profile_directory",
+      "topic": "json_or_profile_validation"
+    },
+    {
+      "candidate_id": "H1-DUP-0010",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/benchmarks/run_golden_benchmark.py",
+        "manual-tests/benchmarks/verify_golden_baseline.py"
+      ],
+      "h1_similarity": {
+        "hash": "005e9960dfa4da83fb27622e5d03424be074a55f4639766e3ba4c71fb59a12e9",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/benchmarks/run_golden_benchmark.py:_schema_descriptor | manual-tests/benchmarks/verify_golden_baseline.py:_schema_descriptor",
+      "topic": "json_or_profile_validation"
+    },
+    {
+      "candidate_id": "H1-DUP-0011",
+      "classification": "SIMILAR_BUT_DIFFERENT",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/models/intelligent_optimization_models.py",
+        "blender_addon/chroma3d_sculpt/models/optimization_models.py"
+      ],
+      "h1_similarity": {
+        "hash": "0059e2c0023557761096e14afed17e1ab84d026bbd2e72a0b2a56b92b5dd699b",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "Structural or normalized similarity does not prove identical inputs, outputs, units, thresholds, state, mutation, or public visibility.",
+      "retained_reason": "Structural or normalized similarity does not prove identical inputs, outputs, units, thresholds, state, mutation, or public visibility.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/models/intelligent_optimization_models.py:_finite | blender_addon/chroma3d_sculpt/models/optimization_models.py:_finite_number",
+      "topic": "structural_pattern"
+    },
+    {
+      "candidate_id": "H1-DUP-0012",
+      "classification": "TOO_RISKY",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/optimization_session.py",
+        "blender_addon/chroma3d_sculpt/services/optimization_workspace.py",
+        "blender_addon/chroma3d_sculpt/services/repair_session.py",
+        "blender_addon/chroma3d_sculpt/utilities/optimization_signatures.py",
+        "blender_addon/chroma3d_sculpt/utilities/printability_signatures.py",
+        "blender_addon/chroma3d_sculpt/utilities/repair_signatures.py",
+        "manual-tests/sprint2-final/final_validation_runner.py"
+      ],
+      "h1_similarity": {
+        "hash": "ef7627d1708bfb27e1f86862f893e9c090a70fb860a77115d5e3dd06f25f0306",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "retained_reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/optimization_session.py:_pointer | blender_addon/chroma3d_sculpt/services/optimization_workspace.py:_pointer | blender_addon/chroma3d_sculpt/services/repair_session.py:_pointer | blender_addon/chroma3d_sculpt/utilities/optimization_signatures.py:_pointer | blender_addon/chroma3d_sculpt/utilities/printability_signatures.py:_pointer | blender_addon/chroma3d_sculpt/utilities/repair_signatures.py:_pointer | manual-tests/sprint2-final/final_validation_runner.py:_pointer",
+      "topic": "structural_pattern"
+    },
+    {
+      "candidate_id": "H1-DUP-0013",
+      "classification": "EXACT_SHARED_SEMANTICS",
+      "consolidation_owner": "chroma3d_sculpt.services.printability_statistics.percentiles",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/overhang_analysis.py",
+        "blender_addon/chroma3d_sculpt/services/thin_features.py"
+      ],
+      "h1_similarity": {
+        "hash": "fc4dc436b11defadea746d5fd2b031e39ad87810672ff410134e75256cb2c0fc",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "Both private percentile helpers have identical inputs, outputs, empty-input behavior, rounding, percentile labels, scalar units, and no mutation/stale/public-contract behavior.",
+      "retained_reason": "",
+      "selected_for_consolidation": true,
+      "semantic_equivalence": {
+        "proof": "H1 AST structural hash 1.0 plus current byte-equivalent private function bodies",
+        "same_error_semantics": true,
+        "same_inputs": true,
+        "same_mutation_semantics": true,
+        "same_outputs": true,
+        "same_public_visibility": true,
+        "same_stale_state_semantics": true,
+        "same_threshold_ownership": true,
+        "same_units": true
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/overhang_analysis.py:_percentiles | blender_addon/chroma3d_sculpt/services/thin_features.py:_percentiles",
+      "topic": "structural_pattern"
+    },
+    {
+      "candidate_id": "H1-DUP-0014",
+      "classification": "EXACT_SHARED_SEMANTICS",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/strategy_evaluator.py",
+        "blender_addon/chroma3d_sculpt/services/strategy_generator.py"
+      ],
+      "h1_similarity": {
+        "hash": "01d97dbe25d4420a10eb72a8b2687b7765f46e13343ac1fda0e89b06f0ff82e6",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "The cancellation predicates are behaviorally exact, but a new cross-owner utility would add dependency surface for six private lines and is not independently beneficial.",
+      "retained_reason": "The cancellation predicates are behaviorally exact, but a new cross-owner utility would add dependency surface for six private lines and is not independently beneficial.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "H1 AST structural hash 1.0 and exact cancellation predicate behavior",
+        "same_error_semantics": true,
+        "same_inputs": true,
+        "same_mutation_semantics": true,
+        "same_outputs": true,
+        "same_public_visibility": true,
+        "same_stale_state_semantics": true,
+        "same_threshold_ownership": true,
+        "same_units": true
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/strategy_evaluator.py:cancelled | blender_addon/chroma3d_sculpt/services/strategy_generator.py:cancelled",
+      "topic": "structural_pattern"
+    },
+    {
+      "candidate_id": "H1-DUP-0015",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/acceptance_gate_runner.py",
+        "manual-tests/run_acceptance_gates.py"
+      ],
+      "h1_similarity": {
+        "hash": "bad2597a3e9bc14d9138b1bdce29b8c1b68a3d2c60cf00bc4d3b57a9197aba52",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/acceptance_gate_runner.py:_relative | manual-tests/run_acceptance_gates.py:_relative",
+      "topic": "structural_pattern"
+    },
+    {
+      "candidate_id": "H1-DUP-0016",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/benchmarks/run_golden_benchmark.py",
+        "manual-tests/sprint2-final/run_final_validation.py",
+        "manual-tests/sprint3-final/run_final_validation.py"
+      ],
+      "h1_similarity": {
+        "hash": "ae4eb3ea6c42c1b51982cf709f30990bbb9b1aa9f45fc7538c25b470154148a3",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/benchmarks/run_golden_benchmark.py:_git_value | manual-tests/sprint2-final/run_final_validation.py:_git_value | manual-tests/sprint3-final/run_final_validation.py:git_value",
+      "topic": "structural_pattern"
+    },
+    {
+      "candidate_id": "H1-DUP-0017",
+      "classification": "TOO_RISKY",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/benchmarks/run_golden_benchmark.py",
+        "manual-tests/benchmarks/verify_golden_baseline.py",
+        "manual-tests/datasets/verify_statue_dataset.py",
+        "scripts/storage_architecture.py"
+      ],
+      "h1_similarity": {
+        "hash": "665fc98c4b9d3f323ca27808a90253cdbaaf07b48b84650211c8de941eef54e0",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "retained_reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/benchmarks/run_golden_benchmark.py:_sha256 | manual-tests/benchmarks/verify_golden_baseline.py:_sha256 | manual-tests/datasets/verify_statue_dataset.py:_sha256 | scripts/storage_architecture.py:sha256_file",
+      "topic": "structural_pattern"
+    },
+    {
+      "candidate_id": "H1-DUP-0018",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/physical-print-validation/analyze_physical_results.py",
+        "manual-tests/physical-print-validation/generate_print_job_cards.py",
+        "manual-tests/physical-print-validation/validate_physical_validation_data.py"
+      ],
+      "h1_similarity": {
+        "hash": "8a6fd32a8a7c4f7229fa24340be43f1b6720805684fd600b268624e2b9ec32a0",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/physical-print-validation/analyze_physical_results.py:load_json | manual-tests/physical-print-validation/generate_print_job_cards.py:load_json | manual-tests/physical-print-validation/validate_physical_validation_data.py:load_json",
+      "topic": "structural_pattern"
+    },
+    {
+      "candidate_id": "H1-DUP-0019",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/physical-print-validation/generate_print_job_cards.py",
+        "manual-tests/physical-print-validation/physical_prediction_worker.py",
+        "manual-tests/physical-print-validation/validate_physical_validation_data.py",
+        "manual-tests/sprint3/dataset_worker.py",
+        "manual-tests/sprint3/run_dataset_regression.py",
+        "manual-tests/sprint3/sprint3_acceptance_runner.py",
+        "manual-tests/sprint4/dataset_worker.py",
+        "manual-tests/sprint4/run_dataset_regression.py"
+      ],
+      "h1_similarity": {
+        "hash": "d0c3334c71ba92e333e9ba6786c296479d27596964c6ed669e619047bae3208c",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/physical-print-validation/generate_print_job_cards.py:file_sha256 | manual-tests/physical-print-validation/physical_prediction_worker.py:file_sha256 | manual-tests/physical-print-validation/validate_physical_validation_data.py:file_sha256 | manual-tests/sprint3/dataset_worker.py:file_sha256 | manual-tests/sprint3/run_dataset_regression.py:file_sha256 | manual-tests/sprint3/sprint3_acceptance_runner.py:file_sha256 | manual-tests/sprint4/dataset_worker.py:file_sha256 | manual-tests/sprint4/run_dataset_regression.py:file_sha256",
+      "topic": "structural_pattern"
+    },
+    {
+      "candidate_id": "H1-DUP-0020",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint3/dataset_worker.py",
+        "manual-tests/sprint4/dataset_worker.py"
+      ],
+      "h1_similarity": {
+        "hash": "d268797a9fe1992af0cf98c4e3e0f27070d8988b9849e8b1fc6ee225e0e9c37f",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint3/dataset_worker.py:parse_args | manual-tests/sprint4/dataset_worker.py:parse_args",
+      "topic": "structural_pattern"
+    },
+    {
+      "candidate_id": "H1-DUP-0021",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint3/run_dataset_regression.py",
+        "manual-tests/sprint5/run_dataset_regression.py",
+        "manual-tests/sprint5/sprint5_acceptance_runner.py"
+      ],
+      "h1_similarity": {
+        "hash": "92087f7ae030a9ac6127761f59ae9d655feec7d622d7c4173d4d30deefdb820c",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint3/run_dataset_regression.py:read_json | manual-tests/sprint5/run_dataset_regression.py:read_json | manual-tests/sprint5/sprint5_acceptance_runner.py:read_json",
+      "topic": "structural_pattern"
+    },
+    {
+      "candidate_id": "H1-DUP-0022",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint3/sprint3_acceptance_runner.py",
+        "manual-tests/sprint4/sprint4_acceptance_runner.py"
+      ],
+      "h1_similarity": {
+        "hash": "5f7bd920e6cd05db3cf23b3dc8c9b4dc0555716be593ea021cccaa84cb5bb97b",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint3/sprint3_acceptance_runner.py:run_combined_tests | manual-tests/sprint4/sprint4_acceptance_runner.py:combined_tests",
+      "topic": "structural_pattern"
+    },
+    {
+      "candidate_id": "H1-DUP-0023",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint5-final/final_validation_runner.py",
+        "manual-tests/sprint5-final/installed_package_smoke.py",
+        "manual-tests/sprint5/dataset_worker.py",
+        "manual-tests/sprint6-final/final_validation_runner.py",
+        "tests/blender/test_sprint5_controlled_optimization.py"
+      ],
+      "h1_similarity": {
+        "hash": "383d655449790b08d5e54f693dbaadf4ad90ea5b8e0aa6e8ab0e257fe3f8e227",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint5-final/final_validation_runner.py:clear_scene | manual-tests/sprint5-final/installed_package_smoke.py:clear_scene | manual-tests/sprint5/dataset_worker.py:clear_scene | manual-tests/sprint6-final/final_validation_runner.py:_clear_scene | tests/blender/test_sprint5_controlled_optimization.py:clear_scene",
+      "topic": "structural_pattern"
+    },
+    {
+      "candidate_id": "H1-DUP-0024",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint6/run_historical_regression.py",
+        "manual-tests/sprint7/run_historical_layers.py"
+      ],
+      "h1_similarity": {
+        "hash": "6d4c43e19643c70def43c469ba0d6f6997b3ff28964970cd6ffae60b55b9f8ed",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint6/run_historical_regression.py:_sha256 | manual-tests/sprint7/run_historical_layers.py:sha256",
+      "topic": "structural_pattern"
+    },
+    {
+      "candidate_id": "H1-DUP-0025",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint7-final/final_validation_runner.py",
+        "tests/blender/test_sprint7_ai_recommendation.py"
+      ],
+      "h1_similarity": {
+        "hash": "a61af36f26878300ba5e3922bbad4b187c8180d92e5d9a3b20886a74c606fe1c",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint7-final/final_validation_runner.py:document | tests/blender/test_sprint7_ai_recommendation.py:no_action_document",
+      "topic": "structural_pattern"
+    },
+    {
+      "candidate_id": "H1-DUP-0026",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint7-final/run_final_validation.py",
+        "manual-tests/sprint7/run_sprint7_acceptance.py"
+      ],
+      "h1_similarity": {
+        "hash": "621229203acf52dc5ec8eaa39db0e3d3352e0b7a286203faa70cf01596527b43",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint7-final/run_final_validation.py:read | manual-tests/sprint7/run_sprint7_acceptance.py:read",
+      "topic": "structural_pattern"
+    },
+    {
+      "candidate_id": "H1-DUP-0027",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "tests/blender/test_sprint3_printability.py",
+        "tests/blender/test_sprint4_advanced_preparation.py"
+      ],
+      "h1_similarity": {
+        "hash": "8cfdb8758eb89bb1d595c1ffc11b0d1f3259b30d7e8fdd70e48e471bca9a08c8",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "tests/blender/test_sprint3_printability.py:Sprint3PrintabilityTests.tearDownClass | tests/blender/test_sprint4_advanced_preparation.py:Sprint4AdvancedPreparationTests.tearDownClass",
+      "topic": "structural_pattern"
+    },
+    {
+      "candidate_id": "H1-DUP-0028",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "tests/blender/test_sprint5_controlled_optimization.py",
+        "tests/blender/test_sprint6_intelligent_optimization.py"
+      ],
+      "h1_similarity": {
+        "hash": "368e60977fe622c7836adc7675a369beb1212a20be75449627ff62683a9c2f81",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "tests/blender/test_sprint5_controlled_optimization.py:Sprint5ControlledOptimizationTests.setUpClass | tests/blender/test_sprint6_intelligent_optimization.py:Sprint6IntelligentOptimizationTests.setUpClass",
+      "topic": "structural_pattern"
+    },
+    {
+      "candidate_id": "H1-DUP-0029",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "tests/blender/test_sprint5_controlled_optimization.py",
+        "tests/blender/test_sprint6_intelligent_optimization.py"
+      ],
+      "h1_similarity": {
+        "hash": "303036af9aeb7fc5288eb1f41b96de2ff5490462a1c6c0257fda6b5a678a9e3e",
+        "kind": "AST_STRUCTURAL_HASH",
+        "score": 1.0
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "tests/blender/test_sprint5_controlled_optimization.py:make_cube | tests/blender/test_sprint6_intelligent_optimization.py:make_cube",
+      "topic": "structural_pattern"
+    },
+    {
+      "candidate_id": "H1-DUP-0030",
+      "classification": "INTENTIONAL_DOMAIN_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/hardware_profile_loader.py",
+        "blender_addon/chroma3d_sculpt/services/printer_profile_loader.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.9901
+      },
+      "reason": "Hardware, material, and printer profile validation retain separate threshold and schema ownership.",
+      "retained_reason": "Hardware, material, and printer profile validation retain separate threshold and schema ownership.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/hardware_profile_loader.py:validate_all_hardware_profiles | blender_addon/chroma3d_sculpt/services/printer_profile_loader.py:validate_all_packaged_profiles",
+      "topic": "json_or_profile_validation"
+    },
+    {
+      "candidate_id": "H1-DUP-0031",
+      "classification": "INTENTIONAL_DOMAIN_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/material_profile_loader.py",
+        "blender_addon/chroma3d_sculpt/services/printer_profile_loader.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.9901
+      },
+      "reason": "Hardware, material, and printer profile validation retain separate threshold and schema ownership.",
+      "retained_reason": "Hardware, material, and printer profile validation retain separate threshold and schema ownership.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/material_profile_loader.py:validate_all_material_profiles | blender_addon/chroma3d_sculpt/services/printer_profile_loader.py:validate_all_packaged_profiles",
+      "topic": "json_or_profile_validation"
+    },
+    {
+      "candidate_id": "H1-DUP-0032",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint4-final/run_final_validation.py",
+        "manual-tests/sprint5/dataset_worker.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.9746
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint4-final/run_final_validation.py:atomic_json | manual-tests/sprint5/dataset_worker.py:write_atomic",
+      "topic": "atomic_or_report_write"
+    },
+    {
+      "candidate_id": "H1-DUP-0033",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint4-final/run_final_validation.py",
+        "manual-tests/sprint6/dataset_worker.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.9746
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint4-final/run_final_validation.py:atomic_json | manual-tests/sprint6/dataset_worker.py:atomic_write",
+      "topic": "atomic_or_report_write"
+    },
+    {
+      "candidate_id": "H1-DUP-0034",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint4-final/final_validation_runner.py",
+        "manual-tests/sprint5/dataset_worker.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.9623
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint4-final/final_validation_runner.py:_atomic_json | manual-tests/sprint5/dataset_worker.py:write_atomic",
+      "topic": "atomic_or_report_write"
+    },
+    {
+      "candidate_id": "H1-DUP-0035",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint4-final/final_validation_runner.py",
+        "manual-tests/sprint6/dataset_worker.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.9623
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint4-final/final_validation_runner.py:_atomic_json | manual-tests/sprint6/dataset_worker.py:atomic_write",
+      "topic": "atomic_or_report_write"
+    },
+    {
+      "candidate_id": "H1-DUP-0036",
+      "classification": "SIMILAR_BUT_DIFFERENT",
+      "consolidation_owner": "",
+      "files": [
+        "scripts/check_repository_size_policy.py",
+        "scripts/storage_architecture.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.9527
+      },
+      "reason": "Names and control flow resemble each other, but allowed characters, reserved names, roots, schemas, or error semantics differ.",
+      "retained_reason": "Names and control flow resemble each other, but allowed characters, reserved names, roots, schemas, or error semantics differ.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "scripts/check_repository_size_policy.py:_tracked_paths | scripts/storage_architecture.py:git_tracked_paths",
+      "topic": "path_validation"
+    },
+    {
+      "candidate_id": "H1-DUP-0037",
+      "classification": "INTENTIONAL_DOMAIN_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/session.py",
+        "blender_addon/chroma3d_sculpt/services/advanced_preparation_session.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.944
+      },
+      "reason": "Session evidence or Blender resource cleanup has distinct owner, lifetime, stale-state, and mutation semantics.",
+      "retained_reason": "Session evidence or Blender resource cleanup has distinct owner, lifetime, stale-state, and mutation semantics.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/session.py:store_result | blender_addon/chroma3d_sculpt/services/advanced_preparation_session.py:store_preparation_result",
+      "topic": "evidence_state"
+    },
+    {
+      "candidate_id": "H1-DUP-0038",
+      "classification": "INTENTIONAL_DOMAIN_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/session.py",
+        "blender_addon/chroma3d_sculpt/services/printability_session.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.944
+      },
+      "reason": "Session evidence or Blender resource cleanup has distinct owner, lifetime, stale-state, and mutation semantics.",
+      "retained_reason": "Session evidence or Blender resource cleanup has distinct owner, lifetime, stale-state, and mutation semantics.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/session.py:store_result | blender_addon/chroma3d_sculpt/services/printability_session.py:store_result",
+      "topic": "evidence_state"
+    },
+    {
+      "candidate_id": "H1-DUP-0039",
+      "classification": "INTENTIONAL_DOMAIN_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "benchmarks/printability/verify_baseline.py",
+        "blender_addon/chroma3d_sculpt/services/printability_baseline.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.9357
+      },
+      "reason": "The syntax is similar while the hashed identity, input contract, and stale-state owner differ.",
+      "retained_reason": "The syntax is similar while the hashed identity, input contract, and stale-state owner differ.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "benchmarks/printability/verify_baseline.py:implementation_fingerprint | blender_addon/chroma3d_sculpt/services/printability_baseline.py:implementation_fingerprint",
+      "topic": "hashing_or_signature"
+    },
+    {
+      "candidate_id": "H1-DUP-0040",
+      "classification": "INTENTIONAL_DOMAIN_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/utilities/repair_signatures.py",
+        "blender_addon/chroma3d_sculpt/utilities/printability_signatures.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.9306
+      },
+      "reason": "The syntax is similar while the hashed identity, input contract, and stale-state owner differ.",
+      "retained_reason": "The syntax is similar while the hashed identity, input contract, and stale-state owner differ.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/utilities/repair_signatures.py:repair_workspace_signature | blender_addon/chroma3d_sculpt/utilities/printability_signatures.py:geometry_signature",
+      "topic": "hashing_or_signature"
+    },
+    {
+      "candidate_id": "H1-DUP-0041",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint5/run_dataset_regression.py",
+        "manual-tests/sprint4/run_dataset_regression.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.9303
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint5/run_dataset_regression.py:implementation_fingerprint | manual-tests/sprint4/run_dataset_regression.py:implementation_fingerprint",
+      "topic": "hashing_or_signature"
+    },
+    {
+      "candidate_id": "H1-DUP-0042",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint1-final/final_validation_runner.py",
+        "manual-tests/sprint2/sprint2_acceptance_runner.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.9111
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint1-final/final_validation_runner.py:_cleanup | manual-tests/sprint2/sprint2_acceptance_runner.py:_cleanup",
+      "topic": "blender_state_cleanup"
+    },
+    {
+      "candidate_id": "H1-DUP-0043",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint1/sprint1_acceptance_runner.py",
+        "tests/blender/test_sprint1_diagnostics.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.9101
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint1/sprint1_acceptance_runner.py:_geometry_hash | tests/blender/test_sprint1_diagnostics.py:Sprint1DiagnosticTests.geometry_hash",
+      "topic": "hashing_or_signature"
+    },
+    {
+      "candidate_id": "H1-DUP-0044",
+      "classification": "INTENTIONAL_DOMAIN_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/intelligent_optimization_session.py",
+        "blender_addon/chroma3d_sculpt/services/optimization_session.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.9032
+      },
+      "reason": "Session evidence or Blender resource cleanup has distinct owner, lifetime, stale-state, and mutation semantics.",
+      "retained_reason": "Session evidence or Blender resource cleanup has distinct owner, lifetime, stale-state, and mutation semantics.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/intelligent_optimization_session.py:clear_runtime | blender_addon/chroma3d_sculpt/services/optimization_session.py:clear_runtime",
+      "topic": "blender_state_cleanup"
+    },
+    {
+      "candidate_id": "H1-DUP-0045",
+      "classification": "SIMILAR_BUT_DIFFERENT",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/strategy_history.py",
+        "blender_addon/chroma3d_sculpt/services/intelligent_optimization_audit.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.8981
+      },
+      "reason": "Names and control flow resemble each other, but allowed characters, reserved names, roots, schemas, or error semantics differ.",
+      "retained_reason": "Names and control flow resemble each other, but allowed characters, reserved names, roots, schemas, or error semantics differ.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/strategy_history.py:sanitize_history_filename | blender_addon/chroma3d_sculpt/services/intelligent_optimization_audit.py:sanitize_intelligent_optimization_filename",
+      "topic": "filename_sanitization"
+    },
+    {
+      "candidate_id": "H1-DUP-0046",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/datasets/acquire_statue_dataset.py",
+        "manual-tests/datasets/validate_statue_dataset.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.8705
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/datasets/acquire_statue_dataset.py:_hash_file | manual-tests/datasets/validate_statue_dataset.py:_hash_file",
+      "topic": "hashing_or_signature"
+    },
+    {
+      "candidate_id": "H1-DUP-0047",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/physical-print-validation/generate_print_job_cards.py",
+        "manual-tests/sprint5/run_dataset_regression.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.8686
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/physical-print-validation/generate_print_job_cards.py:implementation_fingerprint | manual-tests/sprint5/run_dataset_regression.py:implementation_fingerprint",
+      "topic": "hashing_or_signature"
+    },
+    {
+      "candidate_id": "H1-DUP-0048",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint3/run_dataset_regression.py",
+        "manual-tests/sprint5/run_dataset_regression.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.8686
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint3/run_dataset_regression.py:implementation_fingerprint | manual-tests/sprint5/run_dataset_regression.py:implementation_fingerprint",
+      "topic": "hashing_or_signature"
+    },
+    {
+      "candidate_id": "H1-DUP-0049",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint1/sprint1_acceptance_runner.py",
+        "manual-tests/sprint2/sprint2_acceptance_runner.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.849
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint1/sprint1_acceptance_runner.py:_cleanup | manual-tests/sprint2/sprint2_acceptance_runner.py:_cleanup",
+      "topic": "blender_state_cleanup"
+    },
+    {
+      "candidate_id": "H1-DUP-0050",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint4-final/final_validation_runner.py",
+        "manual-tests/benchmarks/run_golden_benchmark.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.8431
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint4-final/final_validation_runner.py:_atomic_json | manual-tests/benchmarks/run_golden_benchmark.py:_write_json",
+      "topic": "atomic_or_report_write"
+    },
+    {
+      "candidate_id": "H1-DUP-0051",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint3-final/run_final_validation.py",
+        "manual-tests/sprint2-final/run_final_validation.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.843
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint3-final/run_final_validation.py:installed_package_smoke | manual-tests/sprint2-final/run_final_validation.py:_installed_package_smoke",
+      "topic": "package_version"
+    },
+    {
+      "candidate_id": "H1-DUP-0052",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/benchmarks/run_golden_benchmark.py",
+        "manual-tests/datasets/acquire_statue_dataset.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.8378
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/benchmarks/run_golden_benchmark.py:_write_json | manual-tests/datasets/acquire_statue_dataset.py:_write_json",
+      "topic": "atomic_or_report_write"
+    },
+    {
+      "candidate_id": "H1-DUP-0053",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/benchmarks/run_golden_benchmark.py",
+        "manual-tests/datasets/validate_statue_dataset.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.8378
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/benchmarks/run_golden_benchmark.py:_write_json | manual-tests/datasets/validate_statue_dataset.py:_write_json",
+      "topic": "atomic_or_report_write"
+    },
+    {
+      "candidate_id": "H1-DUP-0054",
+      "classification": "SIMILAR_BUT_DIFFERENT",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/strategy_history.py",
+        "blender_addon/chroma3d_sculpt/services/optimization_audit.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.8306
+      },
+      "reason": "Names and control flow resemble each other, but allowed characters, reserved names, roots, schemas, or error semantics differ.",
+      "retained_reason": "Names and control flow resemble each other, but allowed characters, reserved names, roots, schemas, or error semantics differ.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/strategy_history.py:sanitize_history_filename | blender_addon/chroma3d_sculpt/services/optimization_audit.py:sanitize_optimization_filename",
+      "topic": "filename_sanitization"
+    },
+    {
+      "candidate_id": "H1-DUP-0055",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint1-final/final_validation_runner.py",
+        "manual-tests/sprint1/sprint1_acceptance_runner.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.8276
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint1-final/final_validation_runner.py:_cleanup | manual-tests/sprint1/sprint1_acceptance_runner.py:_cleanup",
+      "topic": "blender_state_cleanup"
+    },
+    {
+      "candidate_id": "H1-DUP-0056",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/benchmarks/run_golden_benchmark.py",
+        "manual-tests/sprint4-final/run_final_validation.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.8159
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/benchmarks/run_golden_benchmark.py:_write_json | manual-tests/sprint4-final/run_final_validation.py:atomic_json",
+      "topic": "atomic_or_report_write"
+    },
+    {
+      "candidate_id": "H1-DUP-0057",
+      "classification": "SIMILAR_BUT_DIFFERENT",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/optimization_audit.py",
+        "blender_addon/chroma3d_sculpt/services/printability_report.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.8016
+      },
+      "reason": "Names and control flow resemble each other, but allowed characters, reserved names, roots, schemas, or error semantics differ.",
+      "retained_reason": "Names and control flow resemble each other, but allowed characters, reserved names, roots, schemas, or error semantics differ.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/optimization_audit.py:sanitize_optimization_filename | blender_addon/chroma3d_sculpt/services/printability_report.py:sanitize_printability_filename",
+      "topic": "filename_sanitization"
+    },
+    {
+      "candidate_id": "H1-DUP-0058",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/benchmarks/run_golden_benchmark.py",
+        "manual-tests/sprint5/dataset_worker.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.7923
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/benchmarks/run_golden_benchmark.py:_write_json | manual-tests/sprint5/dataset_worker.py:write_atomic",
+      "topic": "atomic_or_report_write"
+    },
+    {
+      "candidate_id": "H1-DUP-0059",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/benchmarks/run_golden_benchmark.py",
+        "manual-tests/sprint6/dataset_worker.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.7923
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/benchmarks/run_golden_benchmark.py:_write_json | manual-tests/sprint6/dataset_worker.py:atomic_write",
+      "topic": "atomic_or_report_write"
+    },
+    {
+      "candidate_id": "H1-DUP-0060",
+      "classification": "INTENTIONAL_DOMAIN_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/ai_assistance_session.py",
+        "blender_addon/chroma3d_sculpt/services/optimization_session.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.7835
+      },
+      "reason": "Session evidence or Blender resource cleanup has distinct owner, lifetime, stale-state, and mutation semantics.",
+      "retained_reason": "Session evidence or Blender resource cleanup has distinct owner, lifetime, stale-state, and mutation semantics.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/ai_assistance_session.py:clear_runtime | blender_addon/chroma3d_sculpt/services/optimization_session.py:clear_runtime",
+      "topic": "blender_state_cleanup"
+    },
+    {
+      "candidate_id": "H1-DUP-0061",
+      "classification": "SIMILAR_BUT_DIFFERENT",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/strategy_history.py",
+        "blender_addon/chroma3d_sculpt/services/repair_audit.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.7803
+      },
+      "reason": "Names and control flow resemble each other, but allowed characters, reserved names, roots, schemas, or error semantics differ.",
+      "retained_reason": "Names and control flow resemble each other, but allowed characters, reserved names, roots, schemas, or error semantics differ.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/strategy_history.py:sanitize_history_filename | blender_addon/chroma3d_sculpt/services/repair_audit.py:sanitize_repair_audit_filename",
+      "topic": "filename_sanitization"
+    },
+    {
+      "candidate_id": "H1-DUP-0062",
+      "classification": "SIMILAR_BUT_DIFFERENT",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/intelligent_optimization_audit.py",
+        "blender_addon/chroma3d_sculpt/services/optimization_audit.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.7799
+      },
+      "reason": "Names and control flow resemble each other, but allowed characters, reserved names, roots, schemas, or error semantics differ.",
+      "retained_reason": "Names and control flow resemble each other, but allowed characters, reserved names, roots, schemas, or error semantics differ.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/intelligent_optimization_audit.py:sanitize_intelligent_optimization_filename | blender_addon/chroma3d_sculpt/services/optimization_audit.py:sanitize_optimization_filename",
+      "topic": "filename_sanitization"
+    },
+    {
+      "candidate_id": "H1-DUP-0063",
+      "classification": "TOO_RISKY",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/benchmarks/run_golden_benchmark.py",
+        "blender_addon/chroma3d_sculpt/services/optimization_audit.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.7738
+      },
+      "reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "retained_reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/benchmarks/run_golden_benchmark.py:_write_json | blender_addon/chroma3d_sculpt/services/optimization_audit.py:write_json_audit",
+      "topic": "atomic_or_report_write"
+    },
+    {
+      "candidate_id": "H1-DUP-0064",
+      "classification": "INTENTIONAL_DOMAIN_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/optimization_session.py",
+        "blender_addon/chroma3d_sculpt/services/optimization_workspace.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.7727
+      },
+      "reason": "Session evidence or Blender resource cleanup has distinct owner, lifetime, stale-state, and mutation semantics.",
+      "retained_reason": "Session evidence or Blender resource cleanup has distinct owner, lifetime, stale-state, and mutation semantics.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/optimization_session.py:clear_runtime | blender_addon/chroma3d_sculpt/services/optimization_workspace.py:clear_runtime",
+      "topic": "blender_state_cleanup"
+    },
+    {
+      "candidate_id": "H1-DUP-0065",
+      "classification": "TOO_RISKY",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/benchmarks/run_golden_benchmark.py",
+        "blender_addon/chroma3d_sculpt/services/optimization_audit.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.7665
+      },
+      "reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "retained_reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/benchmarks/run_golden_benchmark.py:_write_json | blender_addon/chroma3d_sculpt/services/optimization_audit.py:write_markdown_audit",
+      "topic": "atomic_or_report_write"
+    },
+    {
+      "candidate_id": "H1-DUP-0066",
+      "classification": "SIMILAR_BUT_DIFFERENT",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/optimization_audit.py",
+        "blender_addon/chroma3d_sculpt/services/repair_audit.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.7558
+      },
+      "reason": "Names and control flow resemble each other, but allowed characters, reserved names, roots, schemas, or error semantics differ.",
+      "retained_reason": "Names and control flow resemble each other, but allowed characters, reserved names, roots, schemas, or error semantics differ.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/optimization_audit.py:sanitize_optimization_filename | blender_addon/chroma3d_sculpt/services/repair_audit.py:sanitize_repair_audit_filename",
+      "topic": "filename_sanitization"
+    },
+    {
+      "candidate_id": "H1-DUP-0067",
+      "classification": "INTENTIONAL_DOMAIN_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/ai_assistance_session.py",
+        "blender_addon/chroma3d_sculpt/services/optimization_workspace.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.7525
+      },
+      "reason": "Session evidence or Blender resource cleanup has distinct owner, lifetime, stale-state, and mutation semantics.",
+      "retained_reason": "Session evidence or Blender resource cleanup has distinct owner, lifetime, stale-state, and mutation semantics.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/ai_assistance_session.py:clear_runtime | blender_addon/chroma3d_sculpt/services/optimization_workspace.py:clear_runtime",
+      "topic": "blender_state_cleanup"
+    },
+    {
+      "candidate_id": "H1-DUP-0068",
+      "classification": "INTENTIONAL_DOMAIN_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/ui/advanced_preparation_panel.py",
+        "blender_addon/chroma3d_sculpt/ui/printability_panel.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.75
+      },
+      "reason": "Session evidence or Blender resource cleanup has distinct owner, lifetime, stale-state, and mutation semantics.",
+      "retained_reason": "Session evidence or Blender resource cleanup has distinct owner, lifetime, stale-state, and mutation semantics.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/ui/advanced_preparation_panel.py:display_preparation_result | blender_addon/chroma3d_sculpt/ui/printability_panel.py:display_result_for_state",
+      "topic": "evidence_state"
+    },
+    {
+      "candidate_id": "H1-DUP-0069",
+      "classification": "TOO_RISKY",
+      "consolidation_owner": "",
+      "files": [
+        "tests/blender/test_sprint1_diagnostics.py",
+        "blender_addon/chroma3d_sculpt/utilities/printability_signatures.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.7452
+      },
+      "reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "retained_reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "tests/blender/test_sprint1_diagnostics.py:Sprint1DiagnosticTests.geometry_hash | blender_addon/chroma3d_sculpt/utilities/printability_signatures.py:transform_signature",
+      "topic": "hashing_or_signature"
+    },
+    {
+      "candidate_id": "H1-DUP-0070",
+      "classification": "SIMILAR_BUT_DIFFERENT",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/intelligent_optimization_audit.py",
+        "blender_addon/chroma3d_sculpt/services/repair_audit.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.7436
+      },
+      "reason": "Names and control flow resemble each other, but allowed characters, reserved names, roots, schemas, or error semantics differ.",
+      "retained_reason": "Names and control flow resemble each other, but allowed characters, reserved names, roots, schemas, or error semantics differ.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/intelligent_optimization_audit.py:sanitize_intelligent_optimization_filename | blender_addon/chroma3d_sculpt/services/repair_audit.py:sanitize_repair_audit_filename",
+      "topic": "filename_sanitization"
+    },
+    {
+      "candidate_id": "H1-DUP-0071",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint7-final/final_validation_runner.py",
+        "tests/blender/test_sprint7_ai_recommendation.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.7429
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint7-final/final_validation_runner.py:local_manifest | tests/blender/test_sprint7_ai_recommendation.py:manifest",
+      "topic": "package_version"
+    },
+    {
+      "candidate_id": "H1-DUP-0072",
+      "classification": "TOO_RISKY",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/utilities/printability_signatures.py",
+        "manual-tests/acceptance_gate_runner.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.739
+      },
+      "reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "retained_reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/utilities/printability_signatures.py:transform_signature | manual-tests/acceptance_gate_runner.py:_hash_polygons",
+      "topic": "hashing_or_signature"
+    },
+    {
+      "candidate_id": "H1-DUP-0073",
+      "classification": "TOO_RISKY",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/utilities/printability_signatures.py",
+        "manual-tests/acceptance_gate_runner.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.7376
+      },
+      "reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "retained_reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/utilities/printability_signatures.py:transform_signature | manual-tests/acceptance_gate_runner.py:_hash_edges",
+      "topic": "hashing_or_signature"
+    },
+    {
+      "candidate_id": "H1-DUP-0074",
+      "classification": "INTENTIONAL_DOMAIN_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/ai_assistance_session.py",
+        "blender_addon/chroma3d_sculpt/services/intelligent_optimization_session.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.7358
+      },
+      "reason": "Session evidence or Blender resource cleanup has distinct owner, lifetime, stale-state, and mutation semantics.",
+      "retained_reason": "Session evidence or Blender resource cleanup has distinct owner, lifetime, stale-state, and mutation semantics.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/ai_assistance_session.py:clear_runtime | blender_addon/chroma3d_sculpt/services/intelligent_optimization_session.py:clear_runtime",
+      "topic": "blender_state_cleanup"
+    },
+    {
+      "candidate_id": "H1-DUP-0075",
+      "classification": "TOO_RISKY",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/utilities/printability_signatures.py",
+        "manual-tests/acceptance_gate_runner.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.7352
+      },
+      "reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "retained_reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/utilities/printability_signatures.py:transform_signature | manual-tests/acceptance_gate_runner.py:_hash_coordinates",
+      "topic": "hashing_or_signature"
+    },
+    {
+      "candidate_id": "H1-DUP-0076",
+      "classification": "INTENTIONAL_DOMAIN_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/utilities/printability_signatures.py",
+        "blender_addon/chroma3d_sculpt/utilities/optimization_signatures.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.7293
+      },
+      "reason": "The syntax is similar while the hashed identity, input contract, and stale-state owner differ.",
+      "retained_reason": "The syntax is similar while the hashed identity, input contract, and stale-state owner differ.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/utilities/printability_signatures.py:geometry_signature | blender_addon/chroma3d_sculpt/utilities/optimization_signatures.py:workspace_signature",
+      "topic": "hashing_or_signature"
+    },
+    {
+      "candidate_id": "H1-DUP-0077",
+      "classification": "TOO_RISKY",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/optimization_audit.py",
+        "manual-tests/datasets/acquire_statue_dataset.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.7273
+      },
+      "reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "retained_reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/optimization_audit.py:write_markdown_audit | manual-tests/datasets/acquire_statue_dataset.py:_write_json",
+      "topic": "atomic_or_report_write"
+    },
+    {
+      "candidate_id": "H1-DUP-0078",
+      "classification": "TOO_RISKY",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/optimization_audit.py",
+        "manual-tests/datasets/validate_statue_dataset.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.7273
+      },
+      "reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "retained_reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/optimization_audit.py:write_markdown_audit | manual-tests/datasets/validate_statue_dataset.py:_write_json",
+      "topic": "atomic_or_report_write"
+    },
+    {
+      "candidate_id": "H1-DUP-0079",
+      "classification": "TOO_RISKY",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/optimization_audit.py",
+        "manual-tests/datasets/acquire_statue_dataset.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.7222
+      },
+      "reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "retained_reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/optimization_audit.py:write_json_audit | manual-tests/datasets/acquire_statue_dataset.py:_write_json",
+      "topic": "atomic_or_report_write"
+    },
+    {
+      "candidate_id": "H1-DUP-0080",
+      "classification": "TOO_RISKY",
+      "consolidation_owner": "",
+      "files": [
+        "blender_addon/chroma3d_sculpt/services/optimization_audit.py",
+        "manual-tests/datasets/validate_statue_dataset.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.7222
+      },
+      "reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "retained_reason": "The candidate crosses runtime and validation ownership, so one shared implementation would couple product behavior to test/release tooling.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "blender_addon/chroma3d_sculpt/services/optimization_audit.py:write_json_audit | manual-tests/datasets/validate_statue_dataset.py:_write_json",
+      "topic": "atomic_or_report_write"
+    },
+    {
+      "candidate_id": "H1-DUP-0081",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint2-final/final_validation_runner.py",
+        "tests/blender/test_sprint6_intelligent_optimization.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.7222
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint2-final/final_validation_runner.py:_component_hash | tests/blender/test_sprint6_intelligent_optimization.py:policy_tampered_hash",
+      "topic": "hashing_or_signature"
+    },
+    {
+      "candidate_id": "H1-DUP-0082",
+      "classification": "TEST_FIXTURE_DUPLICATION",
+      "consolidation_owner": "",
+      "files": [
+        "manual-tests/sprint2-final/final_validation_runner.py",
+        "tests/blender/test_sprint6_intelligent_optimization.py"
+      ],
+      "h1_similarity": {
+        "kind": "NORMALIZED_TEXT",
+        "score": 0.7222
+      },
+      "reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "retained_reason": "The repeated code belongs to independent validation fixtures or retained release gates; product/runtime consolidation would cross the validation boundary.",
+      "selected_for_consolidation": false,
+      "semantic_equivalence": {
+        "proof": "Semantic equivalence not established; candidate remains local.",
+        "same_error_semantics": false,
+        "same_inputs": false,
+        "same_mutation_semantics": false,
+        "same_outputs": false,
+        "same_public_visibility": false,
+        "same_stale_state_semantics": false,
+        "same_threshold_ownership": false,
+        "same_units": false
+      },
+      "symbols": "manual-tests/sprint2-final/final_validation_runner.py:_component_hash | tests/blender/test_sprint6_intelligent_optimization.py:tampered_constraint_hash_case",
+      "topic": "hashing_or_signature"
+    }
+  ],
+  "errors": [],
+  "generated_at": "2026-08-07T09:21:52.638415+00:00",
+  "h1_candidate_count": 82,
+  "schema_version": "1.0.0",
+  "selected_count": 1,
+  "status": "PASS",
+  "triaged_count": 82
+}

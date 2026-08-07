@@ -5,7 +5,7 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from hashlib import sha256
 import json
-from typing import Any, Mapping, Sequence
+from typing import Any, Sequence
 from uuid import uuid4
 
 from ..models.optimization_models import (

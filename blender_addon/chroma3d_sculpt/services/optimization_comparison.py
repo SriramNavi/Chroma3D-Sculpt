@@ -6,7 +6,6 @@ from hashlib import sha256
 import json
 import math
 from typing import Any, Mapping
-from uuid import uuid4
 
 import bmesh
 from mathutils import Vector

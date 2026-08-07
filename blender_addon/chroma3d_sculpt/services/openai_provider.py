@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import json
-from typing import Any, Mapping
+from typing import Any
 from uuid import uuid4
 
 from ..models.ai_assistance_models import (

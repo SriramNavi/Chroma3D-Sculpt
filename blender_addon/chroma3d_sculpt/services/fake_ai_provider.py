@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
 from typing import Any, Mapping
 
 from ..models.ai_assistance_models import ContextManifest, ProviderSettings, canonical_json, stable_hash

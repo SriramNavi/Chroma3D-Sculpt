@@ -12,7 +12,7 @@ from ..metadata import PERFORMANCE_REGISTRY_VERSION
 from ..models.optimization_models import (
     AcceptanceRecord, DiscardRecord, OptimizationOperationState, OptimizationSession, OptimizationSessionState,
 )
-from ..optimization_settings import OptimizationSettings, build_objective_snapshot
+from ..optimization_settings import OptimizationSettings
 from ..utilities.optimization_signatures import source_is_current, source_signature, workspace_signature
 from .optimization_policy import default_policy, policy_snapshot
 from .optimization_workspace import (

@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-08-07T08:23:37.506656Z",
+  "h2_preflight": {
+    "status": "PASS",
+    "branch": "feature/v1.0-release-hardening",
+    "head": "d6cab118c44422375e69bd077cabc85a990a9a33",
+    "main": "d6cab118c44422375e69bd077cabc85a990a9a33",
+    "origin_main": "d6cab118c44422375e69bd077cabc85a990a9a33",
+    "unique_commits_beyond_main": 0,
+    "worktree_clean": true,
+    "upstream_present": false,
+    "remote_rolling_branch_present": false,
+    "owned_validation_processes": 0,
+    "git_operation_in_progress": false,
+    "h3_or_sprint8_paths": 0
+  },
+  "frozen_h1": {
+    "decision": "H1_COMPLETE_WITH_FINDINGS",
+    "gate_count": 15,
+    "passed_gate_count": 15,
+    "tag": "v0.8.0-h1-hardening-checkpoint",
+    "tag_object": "55964ca63435499da857190a90af09804e18e615",
+    "tag_target": "d6cab118c44422375e69bd077cabc85a990a9a33",
+    "primary_evidence": [
+      {
+        "path": "hardening/h1/H1_FINAL_RESULT.json",
+        "bytes": 41745,
+        "sha256": "10584f58bec65f774477dfcb4a36437778853983da649d99afe4224cdd0c3ec5",
+        "git_blob": "42b64692bacb11963b6d095b310f0ff465fc4986"
+      },
+      {
+        "path": "hardening/h1/H1_DISPOSITION_LEDGER.json",
+        "bytes": 1337067,
+        "sha256": "a005eeb9d3f46b11ef2f7813ff23b78f5215f2edb8eaf862840a68aa70ebe555",
+        "git_blob": "1681dead8ee1e49aaf63f2eb7019d5311f4bb7e2"
+      },
+      {
+        "path": "hardening/h1/H1_FINAL_REPORT.md",
+        "bytes": 6411,
+        "sha256": "d9fff7bf2e429582afb24cc73780fa2776f94913b71add1a97e8d241482a4a37",
+        "git_blob": "f7bbc0bfc30cbd93453e9c755ea0e49403c6cf82"
+      }
+    ]
+  },
+  "h1_validation": {
+    "combined_blender": {
+      "passed": 814,
+      "run": 814
+    },
+    "representative_dataset": {
+      "passed": 10,
+      "run": 10,
+      "source_mutations": 0
+    },
+    "full_dataset": {
+      "passed": 27,
+      "run": 27,
+      "source_mutations": 0
+    },
+    "package_status": "PASS",
+    "archive_file_count": 178,
+    "archive_bytes": 349410,
+    "archive_sha256": "df9e08d3e90ba697ece7adb0713e04f62b48ae28735b01048794bd58a7fb51b9",
+    "release_input_sha256": "5b699680acd7b9dc65dfeb1db7050393626c7ac1c6f855b519e80274b936ae23",
+    "source_mutations": 0
+  },
+  "h1_queues": {
+    "suspicious_references": 50,
+    "critical_complexity": 7,
+    "high_complexity": 29,
+    "duplication_candidates": 82,
+    "unresolved_dead_code": 0,
+    "confirmed_lifecycle_leaks": 0,
+    "likely_lifecycle_leaks": 0
+  },
+  "h1_structure": {
+    "python_physical_loc": 48207,
+    "module_count": 221,
+    "package_module_count": 128,
+    "dependency_edges": 856,
+    "package_dependency_edges": 467,
+    "circular_components": 0
+  },
+  "h1_public_contract": {
+    "sha256": "b331ba4f9767a356c75825f1865164245d194ea81a41b39e37fe1110b56deb03",
+    "operators": 70,
+    "panels": 7,
+    "properties": 170,
+    "schemas": 38,
+    "feature_flags": 14,
+    "enums": 66,
+    "external_contract_changed": false
+  },
+  "safety": {
+    "h1_evidence_immutable": true,
+    "public_contract_unchanged": true,
+    "product_or_package_version_unchanged": true,
+    "schema_or_profile_or_threshold_changed": false,
+    "h3_started": false,
+    "sprint8_started": false
+  }
+}

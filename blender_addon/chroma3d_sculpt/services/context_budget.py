@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import Any, Iterable, Mapping
+from typing import Any, Iterable
 
 from ..models.ai_assistance_models import EvidenceReference, EvidenceState, canonical_json
 

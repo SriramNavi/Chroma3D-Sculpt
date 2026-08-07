@@ -9,7 +9,7 @@ from ..models.optimization_models import OptimizationOperationState, Optimizatio
 from ..optimization_settings import OptimizationSettings
 from ..utilities.optimization_signatures import source_is_current, workspace_signature
 from .optimization_candidates import generate_candidates
-from .optimization_comparison import compare_objects, compare_snapshots, object_facts
+from .optimization_comparison import compare_snapshots, object_facts
 from .optimization_operations import apply_candidate
 from .optimization_plan import generate_optimization_plan, validate_plan
 from .optimization_policy import default_policy

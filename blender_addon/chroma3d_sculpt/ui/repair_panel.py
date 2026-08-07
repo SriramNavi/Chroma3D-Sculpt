@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import bpy
 
-from ..models.repair_models import RepairOperationStatus, RepairPlanStatus, RepairSessionStatus
+from ..models.repair_models import RepairOperationStatus, RepairPlanStatus
 from ..services.repair_session import get_active_session, get_audit_session
 from ..utilities.context import is_valid_mesh_object
 

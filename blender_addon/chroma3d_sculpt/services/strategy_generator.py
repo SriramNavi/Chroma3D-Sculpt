@@ -4,19 +4,17 @@ from __future__ import annotations
 
 from itertools import product
 from time import perf_counter
-from typing import Any, Callable, Iterable, Mapping, Sequence
+from typing import Any, Callable, Mapping, Sequence
 
 from ..models.intelligent_optimization_models import (
     ConstraintKind,
     ConstraintSeverity,
     IntelligentStrategy,
-    OptimizationOperationType,
     PruningRecord,
     SearchBudgetUsage,
     SearchPolicy,
     StrategyGenerationReason,
     StrategySet,
-    StrategyState,
     StrategyStep,
     stable_hash,
 )
@@ -127,6 +125,33 @@ def _candidate_map(candidates: Sequence[Any]) -> dict[str, list[Any]]:
     return result
 
 
+def _validated_candidate_map(candidates: Sequence[Any]) -> dict[str, list[Any]]:
+    candidate_ids: set[str] = set()
+    candidate_fingerprints: dict[str, str] = {}
+    for candidate in candidates:
+        candidate_id = _candidate_id(candidate)
+        candidate_fingerprint = _candidate_fingerprint(candidate)
+        if not candidate_id or not candidate_fingerprint:
+            raise ValueError("Every Sprint 5 candidate must have a non-empty ID and fingerprint.")
+        if candidate_id in candidate_ids:
+            raise ValueError(f"Duplicate Sprint 5 candidate ID: {candidate_id}")
+        candidate_ids.add(candidate_id)
+        candidate_payload = stable_hash({"operation": _operation(candidate), "parameters": _parameters(candidate)})
+        previous_payload = candidate_fingerprints.get(candidate_fingerprint)
+        if previous_payload is not None and previous_payload != candidate_payload:
+            raise ValueError("Ambiguous candidate fingerprint remapping rejected.")
+        candidate_fingerprints[candidate_fingerprint] = candidate_payload
+    return _candidate_map(candidates)
+
+
+def _cancellation_requested(cancel_requested: Callable[[], bool] | Any | None) -> bool:
+    if cancel_requested is None:
+        return False
+    if callable(cancel_requested):
+        return bool(cancel_requested())
+    return bool(getattr(cancel_requested, "is_set", lambda: False)()) or bool(getattr(cancel_requested, "cancelled", False))
+
+
 def _family_operations(family: str) -> tuple[str, ...] | None:
     operations = _FAMILY_OPERATIONS.get(family)
     if family == "Custom objective-driven":
@@ -193,22 +218,7 @@ def generate_strategies(
     active_constraints = constraint_set or active_policy.constraints or default_constraint_set(allowed_operations=active_policy.allowed_operation_families, experimental_enabled=active_policy.experimental_operations_enabled)
     validate_constraint_set(active_constraints)
     started = perf_counter()
-    candidate_ids: set[str] = set()
-    candidate_fingerprints: dict[str, str] = {}
-    for candidate in candidates:
-        candidate_id = _candidate_id(candidate)
-        candidate_fingerprint = _candidate_fingerprint(candidate)
-        if not candidate_id or not candidate_fingerprint:
-            raise ValueError("Every Sprint 5 candidate must have a non-empty ID and fingerprint.")
-        if candidate_id in candidate_ids:
-            raise ValueError(f"Duplicate Sprint 5 candidate ID: {candidate_id}")
-        candidate_ids.add(candidate_id)
-        candidate_payload = stable_hash({"operation": _operation(candidate), "parameters": _parameters(candidate)})
-        previous_payload = candidate_fingerprints.get(candidate_fingerprint)
-        if previous_payload is not None and previous_payload != candidate_payload:
-            raise ValueError("Ambiguous candidate fingerprint remapping rejected.")
-        candidate_fingerprints[candidate_fingerprint] = candidate_payload
-    by_operation = _candidate_map(candidates)
+    by_operation = _validated_candidate_map(candidates)
     usage = SearchBudgetUsage()
     strategies: list[IntelligentStrategy] = []
     pruned: list[PruningRecord] = []
@@ -217,15 +227,8 @@ def generate_strategies(
     ordinal = 0
     status = "COMPLETE"
 
-    def cancelled() -> bool:
-        if cancel_requested is None:
-            return False
-        if callable(cancel_requested):
-            return bool(cancel_requested())
-        return bool(getattr(cancel_requested, "is_set", lambda: False)()) or bool(getattr(cancel_requested, "cancelled", False))
-
     for family in active_policy.enabled_strategy_families:
-        if cancelled():
+        if _cancellation_requested(cancel_requested):
             status = "CANCELLED"
             usage.exhausted_dimensions.append("cancellation")
             break
@@ -244,7 +247,7 @@ def generate_strategies(
             pruned.append(PruningRecord(f"s6-pruned-{len(pruned) + 1:04d}", "", "UNSUPPORTED_COMBINATION", f"No candidate sequence satisfies family {family}."))
             continue
         for sequence in sequences:
-            if cancelled():
+            if _cancellation_requested(cancel_requested):
                 status = "CANCELLED"
                 usage.exhausted_dimensions.append("cancellation")
                 break
