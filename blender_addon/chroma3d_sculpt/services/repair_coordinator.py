@@ -48,6 +48,7 @@ from .repair_session import (
     clear_checkpoints,
     create_operation_checkpoint,
     discard_checkpoint,
+    discard_result,
     enforce_checkpoint_history,
     get_current_analysis,
     restore_captured_selection,
@@ -143,67 +144,6 @@ def validate_plan(session: RepairSession, settings: RepairSettings, *, blend_fil
     ):
         plan.status = RepairPlanStatus.STALE
         raise RuntimeError(STALE_PLAN_MESSAGE)
-
-
-def _metric_summary(result: AnalysisResult, signature: str) -> dict[str, Any]:
-    return {
-        "vertices": result.geometry.vertex_count,
-        "edges": result.geometry.edge_count,
-        "faces": result.geometry.polygon_count,
-        "triangles": result.geometry.triangle_count,
-        "shell_count": len(result.shells),
-        "boundary_edges": result.topology.boundary_edges,
-        "non_manifold_edges": result.topology.non_manifold_edges,
-        "vertex_manifold_anomalies": result.topology.vertex_manifold_anomalies,
-        "loose_vertices": result.topology.loose_vertices,
-        "loose_edges": result.topology.loose_edges,
-        "zero_length_edges": result.topology.zero_length_edges,
-        "degenerate_faces": result.topology.degenerate_faces,
-        "potential_duplicate_vertices": result.topology.potential_duplicate_vertices,
-        "orientation_state": result.topology.normal_consistency.value,
-        "tiny_shell_candidates": len(result.tiny_shell_candidate_ids),
-        "watertightness": result.topology.watertight_state.value,
-        "dimensions_mm": [result.dimensions.width_mm, result.dimensions.depth_mm, result.dimensions.height_mm],
-        "surface_area_mm2": result.surface_volume.total_surface_area_mm2,
-        "reliable_volume_mm3": result.surface_volume.reliable_closed_shell_volume_mm3,
-        "build_volume_result": result.build_volume.fit_state.value,
-        "severity": result.severity.value,
-        "analysis_duration_ms": result.duration_ms,
-        "world_space_bounding_box_mm": [result.dimensions.width_mm, result.dimensions.depth_mm, result.dimensions.height_mm],
-        "workspace_signature": signature,
-    }
-
-
-def compare_results(before: AnalysisResult, after: AnalysisResult, source_signature: str, workspace_signature: str) -> RepairComparison:
-    first = _metric_summary(before, before.topology_signature.topology_sha256)
-    second = _metric_summary(after, workspace_signature)
-    issue_metrics = (
-        "boundary_edges",
-        "non_manifold_edges",
-        "vertex_manifold_anomalies",
-        "loose_vertices",
-        "loose_edges",
-        "zero_length_edges",
-        "degenerate_faces",
-        "potential_duplicate_vertices",
-        "tiny_shell_candidates",
-    )
-    deltas: dict[str, Any] = {name: second[name] - first[name] for name in issue_metrics}
-    improved = tuple(name for name in issue_metrics if second[name] < first[name])
-    regressed = tuple(name for name in issue_metrics if second[name] > first[name])
-    unchanged = tuple(name for name in issue_metrics if second[name] == first[name])
-    deltas["source_signature"] = source_signature
-    deltas["workspace_signature"] = workspace_signature
-    return RepairComparison(
-        before=first,
-        after=second,
-        deltas=deltas,
-        improved=improved,
-        unchanged=unchanged,
-        regressed=regressed,
-        skipped_checks=tuple(check.message for check in after.checks if check.status == EvaluationStatus.SKIPPED),
-        failed_checks=tuple(check.message for check in after.checks if check.status == EvaluationStatus.FAILED),
-    )
 
 
 def _selected_candidates(session: RepairSession, candidate_type: RepairCandidateType) -> tuple[RepairCandidate, ...]:
@@ -510,6 +450,7 @@ def rollback_repair_session(session: RepairSession, *, blend_file_path: str) -> 
     elif not protected_source_is_current(source, session.source_snapshot, blend_file_path):
         session.warnings.append(SOURCE_CHANGED_MESSAGE)
     mesh = workspace.data
+    discard_result(workspace)
     bpy.data.objects.remove(workspace, do_unlink=True)
     if mesh.users == 0:
         bpy.data.meshes.remove(mesh)

@@ -20,12 +20,3 @@ def millimetres_per_blender_unit(scene: Any | None) -> tuple[float, str, float]:
     if unit_system == "NONE":
         scale_length = 1.0
     return scale_length * 1000.0, unit_system, scale_length
-
-
-def object_dimensions_mm(obj: Any, scene: Any | None) -> tuple[float, float, float, str, float, float]:
-    """Convert scaled object dimensions to millimetres without applying scale."""
-
-    factor, unit_system, scale_length = millimetres_per_blender_unit(scene)
-    values = tuple(abs(float(value)) * factor for value in obj.dimensions)
-    return values[0], values[1], values[2], unit_system, scale_length, factor
-

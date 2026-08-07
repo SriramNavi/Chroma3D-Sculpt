@@ -2,9 +2,7 @@
 
 from __future__ import annotations
 
-from dataclasses import asdict, is_dataclass
 from itertools import product
-import math
 from time import perf_counter
 from typing import Any, Callable, Iterable, Mapping, Sequence
 

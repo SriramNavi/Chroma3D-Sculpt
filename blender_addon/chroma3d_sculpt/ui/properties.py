@@ -335,11 +335,3 @@ def update_session_state(window_manager: bpy.types.WindowManager, result: Analys
     state.analyzed_object_name = result.object_metadata.object_name
     state.severity = result.severity.value
     state.last_analysis = result.analyzed_at.isoformat()
-
-
-def reset_session_state(window_manager: bpy.types.WindowManager) -> None:
-    state = window_manager.chroma3d_sculpt_state
-    state.has_analysis = False
-    state.analyzed_object_name = ""
-    state.severity = ""
-    state.last_analysis = ""

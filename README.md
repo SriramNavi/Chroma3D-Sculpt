@@ -2,7 +2,7 @@
 
 Chroma3D Sculpt is a local Blender extension for production mesh diagnostics, controlled reversible repair, and advisory printability risk analysis of complex statue meshes. Repair preserves the original source; Printability never changes geometry, transforms, orientation, or scale.
 
-**Current published release:** `v0.7.0-alpha.1`. The current Sprint 7 implementation worktree is `0.8.0-alpha.1`; it has not been committed, published, tagged, or released by this task. Physical validation remains separate; no printability or print-success guarantee is provided.
+**Current published release:** `v0.8.0-alpha.1`. Version 1.0 hardening proceeds from that published Sprint 7 release without changing the package version. Physical validation remains separate; no printability or print-success guarantee is provided.
 
 Sprint 2.7 added the dataset storage architecture: Dataset `1.0.0` and Golden Benchmark `1.0.0` are packaged as verified release assets, while manifests, provenance, licenses, schemas, locks, and tooling remain in this product repository. The existing `v0.3.1-alpha.1` history is immutable; Sprint 3 advances the extension separately to `0.4.0-alpha.1`.
 
