@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "allowed_classifications": [
+    "BLOCKER",
+    "HIGH",
+    "MEDIUM",
+    "LOW",
+    "HARNESS_DEFECT",
+    "ENVIRONMENT_LIMITATION",
+    "EXPECTED_BEHAVIOR",
+    "DOCUMENTATION_DRIFT",
+    "NOT_REPRODUCED"
+  ],
+  "findings": [
+    {
+      "classification": "HIGH",
+      "id": "H4-F001",
+      "resolution": "FIXED",
+      "title": "Duplicate register call was not idempotent"
+    },
+    {
+      "classification": "HIGH",
+      "id": "H4-F002",
+      "resolution": "FIXED",
+      "title": "Failed registration retained partial Blender state"
+    },
+    {
+      "classification": "HARNESS_DEFECT",
+      "id": "H4-R1",
+      "resolution": "RESOLVED",
+      "title": "Untracked directory scope was collapsed"
+    },
+    {
+      "classification": "HARNESS_DEFECT",
+      "id": "H4-R2",
+      "resolution": "RESOLVED",
+      "title": "Porcelain leading status column was trimmed"
+    },
+    {
+      "classification": "HARNESS_DEFECT",
+      "id": "H4-R3",
+      "resolution": "RESOLVED",
+      "title": "Host CLI arguments were ignored"
+    },
+    {
+      "classification": "HARNESS_DEFECT",
+      "id": "H4-R4",
+      "resolution": "RESOLVED",
+      "title": "Inherited operator poll and bounded cancellation were misclassified"
+    },
+    {
+      "classification": "DOCUMENTATION_DRIFT",
+      "id": "H4-D001",
+      "resolution": "FIXED",
+      "title": "Runtime/provider and Sprint 7 status text contradicted current behavior"
+    }
+  ],
+  "unresolved_counts": {
+    "BLOCKER": 0,
+    "HIGH": 0,
+    "LOW": 0,
+    "MEDIUM": 0
+  }
+}

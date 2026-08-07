@@ -329,7 +329,7 @@ Assets pass visual/domain review, metadata and rights validation, Blender compat
 
 **Objective:** Evaluate bounded AI-assisted recommendations without allowing a model to control Blender or define geometry correctness.
 
-**Status:** Implemented in the current uncommitted `0.8.0-alpha.1` worktree. Stable `1.0.0` contracts, provider-neutral/OpenAI adapters, consented bounded context, strict local grounding, preview/fresh approval, Sprint 5/6 delegation, offline fallback, panel, package, 10/27-model workers, and acceptance/final tooling are present. Live-provider qualification, manual panel UAT, publication, hosted service, billing, accounts, telemetry, and Sprint 8 remain separate.
+**Status:** Implemented and published as `v0.8.0-alpha.1`; Version 1.0 hardening continues without a version bump. Provider-neutral/OpenAI adapters, consented bounded context, strict local grounding, preview/fresh approval, Sprint 5/6 delegation, offline fallback, panel, package, 10/27-model workers, and acceptance/final tooling are present. Live-provider qualification, manual panel UAT, hosted service, billing, accounts, telemetry, and Sprint 8 remain separate.
 
 ### Scope
 
