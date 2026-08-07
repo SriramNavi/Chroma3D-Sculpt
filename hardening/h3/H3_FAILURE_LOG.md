@@ -1,0 +1,14 @@
+# H3 failure log
+
+| Phase | Classification | Evidence | Correction | Rerun |
+|---|---|---|---|---|
+| H3-00 | HARNESS_DEFECT | Git-directory helper returned an empty value after observing PowerShell pipeline `LASTEXITCODE=-1`; the preflight produced no invariant verdict. | Removed the unreliable helper exit-code branch; preserved all explicit checks. | PASS, 18/18 invariants |
+| H3-R1 | HARNESS_DEFECT | PowerShell promoted Blender's normal stderr unittest stream to a terminating error before the wrapper captured Blender's exit code. | Restored native exit-code handling and retained output in the ignored batch log. | PASS, Sprint 2 61/61 |
+| H3-R3 | HARNESS_DEFECT | A typo in the public-contract Python one-liner stopped the wrapper after compile, Blender tests, and dependency analysis had passed. | Corrected the one-liner and ran only the uncompleted contract/diff checks because tested inputs were unchanged. | PASS; contract unchanged and diff check clean |
+| H3-R4 | EXECUTION_INTERRUPTION | The consolidated validation host ended after H3-07 had written a complete passing lifecycle report; no product process remained and no later gate had started. | Added an explicit validated lifecycle-reuse option and resumed at the first unrecorded gate without rerunning the completed Blender lifecycle measurement. | PASS; final consolidated result 17/17 |
+| H3-R5 | HARNESS_DEFECT | The H3 security gate looked for the retained H2 filesystem report one directory above its actual `h2/static` location. H3 static and retained security scans completed before the missing-file exception. | Corrected the retained report path only; no runtime or test input changed. | PASS; security gate |
+| H3-R6 | HARNESS_DEFECT | All 17 gates executed, but final JSON serialization rejected the in-memory `WindowsPath` used to pass the package archive between validators. Fresh datasets had already completed 10/10 and 27/27 with zero source mutations. | Excluded the transient path object from serialized evidence and added artifact-validated reuse for completed expensive gates. | PASS; final result serialized |
+| H3-R7 | HARNESS_DEFECT | The first finalization-only pass treated existing focused-test logs as empty because reused run records did not expose their stdout/stderr tails to the existing count parser. | Reconstructed bounded stdout/stderr tails from each retained log; the underlying 176-test and 4-test evidence was unchanged. | PASS; focused gate 4/4 plus 176/176 |
+| H3-R8 | HARNESS_DEFECT | The final scope parser used a helper that stripped the leading porcelain status space from only the first modified path, producing the false path `lender_addon/...`. | Read porcelain output without trimming its leading status columns. | PASS; final scope gate |
+
+The first failure is preserved in `H3_FIRST_FAILURE.md`. No product defect or H3 regression has been observed.

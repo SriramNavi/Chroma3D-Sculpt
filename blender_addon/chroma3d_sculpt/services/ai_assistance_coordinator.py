@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from dataclasses import replace
+from dataclasses import dataclass, replace
 import json
 from typing import Any, Mapping
 
@@ -209,7 +209,22 @@ def _exchange(*, request: Any, settings: ProviderSettings, started: str, result:
     )
 
 
-def request_recommendations(*, session: AssistanceSession | None = None, explicit_retry: bool = False) -> tuple[Any, ...]:
+@dataclass(frozen=True)
+class _ProviderDispatch:
+    session: AssistanceSession
+    context: ContextManifest
+    settings: ProviderSettings
+    adapter: Any
+    key: str
+    token: Any
+    request: Any
+    started: str
+
+
+def _prepare_provider_dispatch(
+    session: AssistanceSession | None,
+    explicit_retry: bool,
+) -> _ProviderDispatch:
     active = session or get_active_session()
     if active is None:
         raise RuntimeError("A READY assistance session is required.")
@@ -236,39 +251,80 @@ def request_recommendations(*, session: AssistanceSession | None = None, explici
     request = adapter.prepare(context, settings)
     active.provider_attempts += 1
     transition(active, AssistanceState.ANALYZING, event="PROVIDER_DISPATCH", detail={"request_hash": request.request_hash, "provider": settings.provider_id})
-    started = now_utc()
+    return _ProviderDispatch(active, context, settings, adapter, key or "fake-session-key", token, request, now_utc())
+
+
+def _bind_validated_recommendations(
+    dispatch: _ProviderDispatch,
+    result: Any,
+    recommendations: tuple[Any, ...],
+) -> tuple[Any, ...]:
+    active = dispatch.session
+    active.exchange = _exchange(
+        request=dispatch.request,
+        settings=dispatch.settings,
+        started=dispatch.started,
+        result=result,
+    )
+    bound = tuple(replace(
+        item,
+        recommendation_id=deterministic_id("recommendation", {
+            "validated_recommendation": {
+                key: value for key, value in item.to_dict().items()
+                if key not in {"recommendation_id", "provider_exchange_id"}
+            },
+            "provider_exchange_id": active.exchange.exchange_id,
+        }),
+        provider_exchange_id=active.exchange.exchange_id,
+    ) for item in recommendations)
+    active.recommendations = list(bound)
+    transition(active, AssistanceState.EVIDENCE_AVAILABLE, event="RESPONSE_VALIDATED", detail={"recommendation_count": len(bound)})
+    return bound
+
+
+def _finalize_provider_failure(dispatch: _ProviderDispatch, exc: Exception) -> None:
+    active = dispatch.session
+    failure = exc.failure_class if isinstance(exc, TransportError) else (FailureClass.CANCELLED if dispatch.token.cancelled else FailureClass.SCHEMA)
+    active.exchange = _exchange(
+        request=dispatch.request,
+        settings=dispatch.settings,
+        started=dispatch.started,
+        failure=failure,
+        message=str(exc),
+    )
+    active.failures.append({"at": now_utc(), "failure_class": failure.value, "message": str(exc)[:1024]})
+    if dispatch.token.cancelled:
+        transition(active, AssistanceState.CANCELLING, event="PROVIDER_CANCELLED")
+        transition(active, AssistanceState.CANCELLED, event="CANCELLATION_COMPLETE")
+    else:
+        transition(active, AssistanceState.FAILED, event="PROVIDER_OR_VALIDATION_FAILED")
+
+
+def request_recommendations(*, session: AssistanceSession | None = None, explicit_retry: bool = False) -> tuple[Any, ...]:
+    dispatch = _prepare_provider_dispatch(session, explicit_retry)
+    active = dispatch.session
     try:
-        result = adapter.invoke(request, settings, key=key or "fake-session-key", cancellation=token)
-        if token.cancelled:
-            active.exchange = _exchange(request=request, settings=settings, started=started, result=None, failure=FailureClass.CANCELLED, message="Late provider response quarantined after cancellation.")
+        result = dispatch.adapter.invoke(
+            dispatch.request,
+            dispatch.settings,
+            key=dispatch.key,
+            cancellation=dispatch.token,
+        )
+        if dispatch.token.cancelled:
+            active.exchange = _exchange(request=dispatch.request, settings=dispatch.settings, started=dispatch.started, result=None, failure=FailureClass.CANCELLED, message="Late provider response quarantined after cancellation.")
             transition(active, AssistanceState.CANCELLING, event="LATE_RESPONSE_QUARANTINED")
             transition(active, AssistanceState.CANCELLED, event="CANCELLATION_COMPLETE")
             return ()
-        recommendations = validate_provider_recommendations(result.response_text, context=context, registry=_targets[active.session_id], policy=_policies[active.session_id], limits=_limits[active.session_id])
-        active.exchange = _exchange(request=request, settings=settings, started=started, result=result)
-        recommendations = tuple(replace(
-            item,
-            recommendation_id=deterministic_id("recommendation", {
-                "validated_recommendation": {
-                    key: value for key, value in item.to_dict().items()
-                    if key not in {"recommendation_id", "provider_exchange_id"}
-                },
-                "provider_exchange_id": active.exchange.exchange_id,
-            }),
-            provider_exchange_id=active.exchange.exchange_id,
-        ) for item in recommendations)
-        active.recommendations = list(recommendations)
-        transition(active, AssistanceState.EVIDENCE_AVAILABLE, event="RESPONSE_VALIDATED", detail={"recommendation_count": len(recommendations)})
-        return recommendations
+        recommendations = validate_provider_recommendations(
+            result.response_text,
+            context=dispatch.context,
+            registry=_targets[active.session_id],
+            policy=_policies[active.session_id],
+            limits=_limits[active.session_id],
+        )
+        return _bind_validated_recommendations(dispatch, result, recommendations)
     except Exception as exc:
-        failure = exc.failure_class if isinstance(exc, TransportError) else (FailureClass.CANCELLED if token.cancelled else FailureClass.SCHEMA)
-        active.exchange = _exchange(request=request, settings=settings, started=started, failure=failure, message=str(exc))
-        active.failures.append({"at": now_utc(), "failure_class": failure.value, "message": str(exc)[:1024]})
-        if token.cancelled:
-            transition(active, AssistanceState.CANCELLING, event="PROVIDER_CANCELLED")
-            transition(active, AssistanceState.CANCELLED, event="CANCELLATION_COMPLETE")
-        else:
-            transition(active, AssistanceState.FAILED, event="PROVIDER_OR_VALIDATION_FAILED")
+        _finalize_provider_failure(dispatch, exc)
         raise
 
 

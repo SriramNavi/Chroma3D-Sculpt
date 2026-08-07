@@ -518,6 +518,35 @@ class Sprint7AIRecommendationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             validate_recommendation_document(no_action_document(reason='<img src="x">'), maximum_recommendations=4, maximum_evidence=64)
 
+    def test_63_h3_provider_dispatch_observable_contract(self):
+        start_ranked_sprint6()
+        session, _context = start_assistance(user_goal="Lock the H3 dispatch contract")
+        approve_context_consent(session)
+        provider_settings(provider_id="fake", model_id="fixture-model", session=session)
+        register_provider(
+            "fake",
+            FakeAIProvider(no_action_document(evidence_references=["sprint6-ranking:current"])),
+            replace=True,
+        )
+
+        recommendations = request_recommendations(session=session)
+
+        self.assertEqual(len(recommendations), 1)
+        self.assertEqual(session.state, AssistanceState.EVIDENCE_AVAILABLE)
+        self.assertEqual(session.provider_attempts, 1)
+        self.assertEqual(
+            [item["event"] for item in session.audit_history[-2:]],
+            ["PROVIDER_DISPATCH", "RESPONSE_VALIDATED"],
+        )
+        self.assertEqual(session.exchange.status.value, "COMPLETED")
+        self.assertEqual(session.exchange.failure_class, FailureClass.NONE)
+        self.assertEqual(session.exchange.safe_error, "")
+        self.assertEqual(
+            session.exchange.redaction_summary,
+            {"raw_prompt_retained": False, "raw_response_retained": False, "credentials_retained": False},
+        )
+        self.assertEqual(recommendations[0].provider_exchange_id, session.exchange.exchange_id)
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

@@ -61,6 +61,16 @@ class _ObjectState:
     selected: bool
 
 
+@dataclass(frozen=True, slots=True)
+class _AnalysisOutcome:
+    duration_ms: float
+    severity: AnalysisSeverity
+    summary: str
+    skipped: tuple[str, ...]
+    warnings: tuple[str, ...]
+    errors: tuple[str, ...]
+
+
 def _pointer(value: Any | None) -> int | None:
     try:
         return int(value.as_pointer()) if value is not None else None
@@ -177,6 +187,189 @@ def _deep_failure(shells: tuple[Any, ...], message: str, duration_ms: float) -> 
     )
 
 
+def _read_only_result(before: _ObjectState, after: _ObjectState) -> tuple[bool, str, CheckResult]:
+    state_unchanged = before == after
+    message = (
+        "Relevant object, mesh, transform, mode, and selection state remained unchanged."
+        if state_unchanged
+        else "Object or mesh state changed during analysis; the result is not trusted."
+    )
+    check = CheckResult(
+        "read_only_state",
+        EvaluationStatus.COMPLETED if state_unchanged else EvaluationStatus.FAILED,
+        message,
+    )
+    return state_unchanged, message, check
+
+
+def _shell_result_evidence(
+    topology_analysis: Any,
+    shell_analysis: Any,
+    deep: DeepAnalysis,
+) -> tuple[tuple[Any, ...], tuple[Any, ...], tuple[Any, ...], tuple[Any, ...]]:
+    final_shells = deep.shells
+    issue_evidence = topology_analysis.issue_evidence + shell_analysis.issue_evidence + deep.issue_evidence
+    internal_ids = tuple(
+        shell.shell_id for shell in final_shells if shell.classification == ShellContainmentState.POSSIBLY_INTERNAL
+    )
+    external_ids = tuple(
+        shell.shell_id for shell in final_shells if shell.classification == ShellContainmentState.DISCONNECTED_EXTERNAL
+    )
+    return issue_evidence, final_shells, external_ids, internal_ids
+
+
+def _finalize_outcome(
+    *,
+    geometry: GeometryMetrics,
+    topology_metrics: Any,
+    transforms: TransformMetrics,
+    final_shells: tuple[Any, ...],
+    shell_analysis: Any,
+    deep: DeepAnalysis,
+    build_volume: Any,
+    dimensions_values: tuple[float, float, float],
+    duplicate_status: EvaluationStatus,
+    duplicate_detail: str,
+    settings: AnalysisSettings,
+    state_unchanged: bool,
+    read_only_message: str,
+    checks: list[CheckResult],
+    timings: list[CheckTiming],
+    started_timer: float,
+) -> _AnalysisOutcome:
+    warnings: list[str] = []
+    errors: list[str] = []
+    if geometry.vertex_count == 0:
+        errors.append("Mesh has zero vertices.")
+    if geometry.polygon_count == 0:
+        errors.append("Mesh has zero faces.")
+    if not state_unchanged:
+        errors.append(read_only_message)
+    internal_ids = tuple(
+        shell.shell_id for shell in final_shells if shell.classification == ShellContainmentState.POSSIBLY_INTERNAL
+    )
+    warning_conditions = (
+        (topology_metrics.boundary_edges > 0, f"{topology_metrics.boundary_edges} boundary edge(s) detected."),
+        (topology_metrics.loose_edges > 0, f"{topology_metrics.loose_edges} loose edge(s) detected."),
+        (topology_metrics.loose_vertices > 0, f"{topology_metrics.loose_vertices} loose vertex/vertices detected."),
+        (
+            topology_metrics.high_incidence_non_manifold_edges > 0,
+            f"{topology_metrics.high_incidence_non_manifold_edges} high-incidence non-manifold edge(s) detected.",
+        ),
+        (
+            topology_metrics.vertex_manifold_state == VertexManifoldState.ANOMALIES_DETECTED,
+            f"{topology_metrics.vertex_manifold_anomalies} vertex-manifold anomaly/anomalies detected.",
+        ),
+        (topology_metrics.zero_length_edges > 0, f"{topology_metrics.zero_length_edges} zero-length edge(s) detected."),
+        (topology_metrics.degenerate_faces > 0, f"{topology_metrics.degenerate_faces} degenerate face(s) detected."),
+        (
+            topology_metrics.watertight_state != WatertightState.TOPOLOGICALLY_WATERTIGHT,
+            topology_metrics.watertight_detail,
+        ),
+        (
+            topology_metrics.normal_consistency == NormalConsistencyState.INCONSISTENT,
+            topology_metrics.normal_consistency_detail,
+        ),
+        (len(final_shells) > 1, f"{len(final_shells)} disconnected face shells require review."),
+        (bool(shell_analysis.tiny_shell_ids), f"{len(shell_analysis.tiny_shell_ids)} tiny-shell candidate(s) require review."),
+        (bool(internal_ids), f"{len(internal_ids)} possibly internal shell(s) require review."),
+        (
+            any(shell.orientation_state == ShellOrientationState.INWARD for shell in final_shells),
+            "At least one closed shell is consistently oriented inward.",
+        ),
+        (
+            deep.metrics.self_intersection_state == SelfIntersectionState.CANDIDATES_DETECTED,
+            f"{deep.metrics.self_intersection_candidate_count} self-intersection candidate pair(s) require review.",
+        ),
+        (
+            build_volume.fit_state == BuildVolumeFitState.DOES_NOT_FIT,
+            "The model exceeds the configured rectangular build volume in its current orientation.",
+        ),
+        (not transforms.location_applied, "Object location is not approximately applied."),
+        (not transforms.rotation_applied, "Object rotation is not approximately applied."),
+        (not transforms.scale_applied, "Object scale is not approximately applied."),
+        (
+            geometry.vertex_count > 0 and min(dimensions_values) <= DIMENSION_MM_TOLERANCE,
+            "At least one physical dimension is effectively zero.",
+        ),
+        (duplicate_status != EvaluationStatus.COMPLETED, f"Potential duplicate check: {duplicate_detail}"),
+        (
+            settings.profile == AnalysisProfile.DEEP
+            and any(check.status in {EvaluationStatus.SKIPPED, EvaluationStatus.FAILED} for check in deep.checks),
+            "One or more requested Deep diagnostics were skipped or failed; review explicit check states.",
+        ),
+    )
+    warnings.extend(message for condition, message in warning_conditions if condition)
+    skipped = tuple(check.message for check in checks if check.status == EvaluationStatus.SKIPPED)
+    duration = (perf_counter() - started_timer) * 1000.0
+    timings.append(CheckTiming("total_analysis", EvaluationStatus.FAILED if errors else EvaluationStatus.COMPLETED, duration))
+    severity = AnalysisSeverity.FAIL if errors else AnalysisSeverity.WARNING if warnings else AnalysisSeverity.PASS
+    summary = {
+        AnalysisSeverity.PASS: "Completed production mesh diagnostics with no review warnings.",
+        AnalysisSeverity.WARNING: "Diagnostics completed; one or more findings require review.",
+        AnalysisSeverity.FAIL: "Analysis failed or the mesh has no analyzable surface.",
+    }[severity]
+    return _AnalysisOutcome(duration, severity, summary, skipped, tuple(warnings), tuple(errors))
+
+
+def _build_analysis_result(
+    *,
+    blender_version: str,
+    started_at: datetime,
+    settings: AnalysisSettings,
+    analysis_id: str,
+    signature: Any,
+    metadata: ObjectMetadata,
+    geometry: GeometryMetrics,
+    dimensions: DimensionMetrics,
+    transforms: TransformMetrics,
+    topology_metrics: Any,
+    shell_analysis: Any,
+    final_shells: tuple[Any, ...],
+    external_ids: tuple[str, ...],
+    internal_ids: tuple[str, ...],
+    build_volume: Any,
+    deep: DeepAnalysis,
+    issue_evidence: tuple[Any, ...],
+    checks: list[CheckResult],
+    timings: list[CheckTiming],
+    outcome: _AnalysisOutcome,
+) -> AnalysisResult:
+    return AnalysisResult(
+        schema_version=SCHEMA_VERSION,
+        extension_version=DISPLAY_VERSION,
+        blender_version=blender_version or "Unknown",
+        operating_system=f"{platform.system()} {platform.release()}".strip(),
+        analyzed_at=started_at,
+        duration_ms=outcome.duration_ms,
+        severity=outcome.severity,
+        summary=outcome.summary,
+        analysis_id=analysis_id,
+        analysis_profile=settings.profile,
+        settings_snapshot=settings.snapshot(blender_version),
+        topology_signature=signature,
+        object_metadata=metadata,
+        geometry=geometry,
+        dimensions=dimensions,
+        transforms=transforms,
+        topology=topology_metrics,
+        surface_volume=shell_analysis.surface_volume,
+        shells=final_shells,
+        main_shell_id=shell_analysis.main_shell_id,
+        tiny_shell_candidate_ids=shell_analysis.tiny_shell_ids,
+        disconnected_external_shell_ids=external_ids,
+        possible_internal_shell_ids=internal_ids,
+        build_volume=build_volume,
+        deep_diagnostics=deep.metrics,
+        issue_evidence=issue_evidence,
+        checks=tuple(checks),
+        timings=tuple(timings),
+        skipped_check_reasons=outcome.skipped,
+        warnings=outcome.warnings,
+        errors=outcome.errors,
+    )
+
+
 def _analyze(
     obj: Any,
     scene: Any | None,
@@ -271,138 +464,51 @@ def _analyze(
     checks.extend(deep.checks)
     timings.extend(deep.timings)
 
-    after = _snapshot(obj, mesh)
-    state_unchanged = before == after
-    read_only_message = (
-        "Relevant object, mesh, transform, mode, and selection state remained unchanged."
-        if state_unchanged
-        else "Object or mesh state changed during analysis; the result is not trusted."
-    )
-    checks.append(
-        CheckResult(
-            "read_only_state",
-            EvaluationStatus.COMPLETED if state_unchanged else EvaluationStatus.FAILED,
-            read_only_message,
-        )
-    )
+    state_unchanged, read_only_message, read_only_check = _read_only_result(before, _snapshot(obj, mesh))
+    checks.append(read_only_check)
 
-    issue_evidence = topology_analysis.issue_evidence + shell_analysis.issue_evidence + deep.issue_evidence
-    final_shells = deep.shells
-    internal_ids = tuple(
-        shell.shell_id for shell in final_shells if shell.classification == ShellContainmentState.POSSIBLY_INTERNAL
+    issue_evidence, final_shells, external_ids, internal_ids = _shell_result_evidence(
+        topology_analysis, shell_analysis, deep
     )
-    external_ids = tuple(
-        shell.shell_id for shell in final_shells if shell.classification == ShellContainmentState.DISCONNECTED_EXTERNAL
+    outcome = _finalize_outcome(
+        geometry=geometry,
+        topology_metrics=topology_metrics,
+        transforms=transforms,
+        final_shells=final_shells,
+        shell_analysis=shell_analysis,
+        deep=deep,
+        build_volume=build_volume,
+        dimensions_values=dimensions_values,
+        duplicate_status=duplicate_status,
+        duplicate_detail=duplicate_detail,
+        settings=settings,
+        state_unchanged=state_unchanged,
+        read_only_message=read_only_message,
+        checks=checks,
+        timings=timings,
+        started_timer=started_timer,
     )
-    warnings: list[str] = []
-    errors: list[str] = []
-    if geometry.vertex_count == 0:
-        errors.append("Mesh has zero vertices.")
-    if geometry.polygon_count == 0:
-        errors.append("Mesh has zero faces.")
-    if not state_unchanged:
-        errors.append(read_only_message)
-
-    warning_conditions = (
-        (topology_metrics.boundary_edges > 0, f"{topology_metrics.boundary_edges} boundary edge(s) detected."),
-        (topology_metrics.loose_edges > 0, f"{topology_metrics.loose_edges} loose edge(s) detected."),
-        (topology_metrics.loose_vertices > 0, f"{topology_metrics.loose_vertices} loose vertex/vertices detected."),
-        (
-            topology_metrics.high_incidence_non_manifold_edges > 0,
-            f"{topology_metrics.high_incidence_non_manifold_edges} high-incidence non-manifold edge(s) detected.",
-        ),
-        (
-            topology_metrics.vertex_manifold_state == VertexManifoldState.ANOMALIES_DETECTED,
-            f"{topology_metrics.vertex_manifold_anomalies} vertex-manifold anomaly/anomalies detected.",
-        ),
-        (topology_metrics.zero_length_edges > 0, f"{topology_metrics.zero_length_edges} zero-length edge(s) detected."),
-        (topology_metrics.degenerate_faces > 0, f"{topology_metrics.degenerate_faces} degenerate face(s) detected."),
-        (
-            topology_metrics.watertight_state != WatertightState.TOPOLOGICALLY_WATERTIGHT,
-            topology_metrics.watertight_detail,
-        ),
-        (
-            topology_metrics.normal_consistency == NormalConsistencyState.INCONSISTENT,
-            topology_metrics.normal_consistency_detail,
-        ),
-        (len(final_shells) > 1, f"{len(final_shells)} disconnected face shells require review."),
-        (bool(shell_analysis.tiny_shell_ids), f"{len(shell_analysis.tiny_shell_ids)} tiny-shell candidate(s) require review."),
-        (bool(internal_ids), f"{len(internal_ids)} possibly internal shell(s) require review."),
-        (
-            any(shell.orientation_state == ShellOrientationState.INWARD for shell in final_shells),
-            "At least one closed shell is consistently oriented inward.",
-        ),
-        (
-            deep.metrics.self_intersection_state == SelfIntersectionState.CANDIDATES_DETECTED,
-            f"{deep.metrics.self_intersection_candidate_count} self-intersection candidate pair(s) require review.",
-        ),
-        (
-            build_volume.fit_state == BuildVolumeFitState.DOES_NOT_FIT,
-            "The model exceeds the configured rectangular build volume in its current orientation.",
-        ),
-        (not transforms.location_applied, "Object location is not approximately applied."),
-        (not transforms.rotation_applied, "Object rotation is not approximately applied."),
-        (not transforms.scale_applied, "Object scale is not approximately applied."),
-        (
-            geometry.vertex_count > 0 and min(dimensions_values) <= DIMENSION_MM_TOLERANCE,
-            "At least one physical dimension is effectively zero.",
-        ),
-        (duplicate_status != EvaluationStatus.COMPLETED, f"Potential duplicate check: {duplicate_detail}"),
-        (
-            settings.profile == AnalysisProfile.DEEP
-            and any(check.status in {EvaluationStatus.SKIPPED, EvaluationStatus.FAILED} for check in deep.checks),
-            "One or more requested Deep diagnostics were skipped or failed; review explicit check states.",
-        ),
-    )
-    warnings.extend(message for condition, message in warning_conditions if condition)
-
-    skipped = tuple(check.message for check in checks if check.status == EvaluationStatus.SKIPPED)
-    duration = (perf_counter() - started_timer) * 1000.0
-    timings.append(
-        CheckTiming(
-            "total_analysis",
-            EvaluationStatus.FAILED if errors else EvaluationStatus.COMPLETED,
-            duration,
-        )
-    )
-    severity = AnalysisSeverity.FAIL if errors else AnalysisSeverity.WARNING if warnings else AnalysisSeverity.PASS
-    summary = {
-        AnalysisSeverity.PASS: "Completed production mesh diagnostics with no review warnings.",
-        AnalysisSeverity.WARNING: "Diagnostics completed; one or more findings require review.",
-        AnalysisSeverity.FAIL: "Analysis failed or the mesh has no analyzable surface.",
-    }[severity]
-    return AnalysisResult(
-        schema_version=SCHEMA_VERSION,
-        extension_version=DISPLAY_VERSION,
-        blender_version=blender_version or "Unknown",
-        operating_system=f"{platform.system()} {platform.release()}".strip(),
-        analyzed_at=started_at,
-        duration_ms=duration,
-        severity=severity,
-        summary=summary,
+    return _build_analysis_result(
+        blender_version=blender_version,
+        started_at=started_at,
+        settings=settings,
         analysis_id=analysis_id,
-        analysis_profile=settings.profile,
-        settings_snapshot=settings.snapshot(blender_version),
-        topology_signature=signature,
-        object_metadata=metadata,
+        signature=signature,
+        metadata=metadata,
         geometry=geometry,
         dimensions=dimensions,
         transforms=transforms,
-        topology=topology_metrics,
-        surface_volume=shell_analysis.surface_volume,
-        shells=final_shells,
-        main_shell_id=shell_analysis.main_shell_id,
-        tiny_shell_candidate_ids=shell_analysis.tiny_shell_ids,
-        disconnected_external_shell_ids=external_ids,
-        possible_internal_shell_ids=internal_ids,
+        topology_metrics=topology_metrics,
+        shell_analysis=shell_analysis,
+        final_shells=final_shells,
+        external_ids=external_ids,
+        internal_ids=internal_ids,
         build_volume=build_volume,
-        deep_diagnostics=deep.metrics,
+        deep=deep,
         issue_evidence=issue_evidence,
-        checks=tuple(checks),
-        timings=tuple(timings),
-        skipped_check_reasons=skipped,
-        warnings=tuple(warnings),
-        errors=tuple(errors),
+        checks=checks,
+        timings=timings,
+        outcome=outcome,
     )
 
 

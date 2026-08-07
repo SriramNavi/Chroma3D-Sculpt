@@ -226,6 +226,52 @@ def remove_loose_geometry(obj: Any, _factor: float, _settings: RepairSettings) -
     )
 
 
+def _normal_flip_assignments(component: tuple[Any, ...]) -> tuple[dict[Any, bool] | None, set[Any], str]:
+    component_edges = {edge for face in component for edge in face.edges}
+    if any(len(edge.link_faces) > 2 for edge in component_edges):
+        return None, component_edges, "Component contains a non-manifold edge."
+    assignments: dict[Any, bool] = {component[0]: False}
+    queue = deque([component[0]])
+    while queue:
+        face = queue.popleft()
+        for edge in face.edges:
+            if len(edge.link_faces) != 2:
+                continue
+            neighbor = next(item for item in edge.link_faces if item is not face)
+            face_loop = next(loop for loop in face.loops if loop.edge is edge)
+            neighbor_loop = next(loop for loop in neighbor.loops if loop.edge is edge)
+            required = assignments[face] ^ (face_loop.vert is neighbor_loop.vert)
+            if neighbor in assignments and assignments[neighbor] != required:
+                return None, component_edges, "Component winding is not consistently orientable."
+            if neighbor not in assignments:
+                assignments[neighbor] = required
+                queue.append(neighbor)
+    return assignments, component_edges, ""
+
+
+def _apply_component_winding(
+    obj: Any,
+    component: tuple[Any, ...],
+    component_edges: set[Any],
+    assignments: dict[Any, bool],
+    factor: float,
+) -> int:
+    original_signed_volume = _signed_component_volume_mm3(obj, component, factor)
+    changed = 0
+    for face, should_flip in assignments.items():
+        if should_flip:
+            face.normal_flip()
+            changed += 1
+    is_closed = component_edges and all(len(edge.link_faces) == 2 for edge in component_edges)
+    if is_closed and abs(original_signed_volume) > 1e-12:
+        repaired_signed_volume = _signed_component_volume_mm3(obj, component, factor)
+        if original_signed_volume * repaired_signed_volume < 0.0:
+            for face in component:
+                face.normal_flip()
+            changed = len(component) - changed
+    return changed
+
+
 def repair_normal_consistency(obj: Any, factor: float, _settings: RepairSettings) -> RepairOperationOutcome:
     started = perf_counter()
     before_coordinates = tuple(tuple(float(value) for value in vertex.co) for vertex in obj.data.vertices)
@@ -237,46 +283,11 @@ def repair_normal_consistency(obj: Any, factor: float, _settings: RepairSettings
         bm.faces.ensure_lookup_table()
         bm.faces.index_update()
         for component_index, component in enumerate(_face_components(bm)):
-            component_edges = {edge for face in component for edge in face.edges}
-            if any(len(edge.link_faces) > 2 for edge in component_edges):
-                skipped.append({"component_id": component_index, "reason": "Component contains a non-manifold edge."})
+            assignments, component_edges, reason = _normal_flip_assignments(component)
+            if assignments is None:
+                skipped.append({"component_id": component_index, "reason": reason})
                 continue
-            assignments: dict[Any, bool] = {component[0]: False}
-            queue = deque([component[0]])
-            conflict = False
-            while queue and not conflict:
-                face = queue.popleft()
-                for edge in face.edges:
-                    if len(edge.link_faces) != 2:
-                        continue
-                    neighbor = next(item for item in edge.link_faces if item is not face)
-                    face_loop = next(loop for loop in face.loops if loop.edge is edge)
-                    neighbor_loop = next(loop for loop in neighbor.loops if loop.edge is edge)
-                    same_original_direction = face_loop.vert is neighbor_loop.vert
-                    required = assignments[face] ^ same_original_direction
-                    if neighbor in assignments:
-                        if assignments[neighbor] != required:
-                            conflict = True
-                            break
-                    else:
-                        assignments[neighbor] = required
-                        queue.append(neighbor)
-            if conflict:
-                skipped.append({"component_id": component_index, "reason": "Component winding is not consistently orientable."})
-                continue
-            original_signed_volume = _signed_component_volume_mm3(obj, component, factor)
-            component_changed = 0
-            for face, should_flip in assignments.items():
-                if should_flip:
-                    face.normal_flip()
-                    component_changed += 1
-            if component_edges and all(len(edge.link_faces) == 2 for edge in component_edges) and abs(original_signed_volume) > 1e-12:
-                repaired_signed_volume = _signed_component_volume_mm3(obj, component, factor)
-                if original_signed_volume * repaired_signed_volume < 0.0:
-                    for face in component:
-                        face.normal_flip()
-                    component_changed = len(component) - component_changed
-            changed += component_changed
+            changed += _apply_component_winding(obj, component, component_edges, assignments, factor)
         if changed:
             bm.to_mesh(obj.data)
             obj.data.update()
