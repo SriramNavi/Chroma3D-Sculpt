@@ -188,6 +188,28 @@ class MeshAnalysisTests(unittest.TestCase):
         self.assertEqual(payload["object_metadata"]["object_name"], "CON.txt")
         self.assertTrue(sanitize_report_filename(obj.name).startswith("_CON.txt_"))
 
+    def test_h3_result_assembly_and_read_only_contract(self) -> None:
+        vertices, faces = cube_data()
+        obj = self.create_mesh("H3ResultContract", vertices, faces=faces[:-1], scale=(2.0, 1.0, 1.0))
+        before = self.signature(obj)
+
+        result = self.analyze(obj)
+
+        self.assertEqual(before, self.signature(obj))
+        self.assertEqual(result.severity, AnalysisSeverity.WARNING)
+        self.assertEqual(result.checks[-1].name, "read_only_state")
+        self.assertEqual(result.checks[-1].status.value, "COMPLETED")
+        self.assertIn(f"{result.topology.boundary_edges} boundary edge(s) detected.", result.warnings)
+        self.assertIn("Object scale is not approximately applied.", result.warnings)
+        self.assertLess(
+            result.warnings.index(f"{result.topology.boundary_edges} boundary edge(s) detected."),
+            result.warnings.index("Object scale is not approximately applied."),
+        )
+        self.assertEqual(
+            result.skipped_check_reasons,
+            tuple(check.message for check in result.checks if check.status.value == "SKIPPED"),
+        )
+
 
 if __name__ == "__main__":
     suite = unittest.defaultTestLoader.loadTestsFromTestCase(MeshAnalysisTests)

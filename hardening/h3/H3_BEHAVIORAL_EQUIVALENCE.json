@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0.0",
+  "source_checkpoint": "208016e87dbebe0580d9fa63cd1392e398fc3bf2",
+  "public_contract_sha256": "b331ba4f9767a356c75825f1865164245d194ea81a41b39e37fe1110b56deb03",
+  "before": {
+    "status": "PASS",
+    "focused_blender": {
+      "tests_run": 137,
+      "failures": 0,
+      "elapsed_seconds": 2.168,
+      "log": "manual-tests/hardening/reports/h3/logs/h3_characterization_before.log"
+    },
+    "targets": [
+      {
+        "file": "blender_addon/chroma3d_sculpt/services/repair_operations.py",
+        "file_sha256": "02d9e247e09e12cc66063323160333e9be5e4cb91e8fd2ca8e48adbbb5a9eb85",
+        "symbol": "repair_normal_consistency",
+        "metrics": {"physical_loc": 62, "branch_count": 29, "nesting_depth": 6},
+        "characterization_tests": [
+          "test_29_inconsistent_face_repaired",
+          "test_33b_non_manifold_normal_component_skipped_explicitly",
+          "test_56_normal_consistency_preserves_closed_shell_orientation_when_seed_is_reversed",
+          "test_58_h3_normal_consistency_observable_contract"
+        ],
+        "deterministic_fixture_output": {
+          "status": "APPLIED",
+          "faces_evaluated": 6,
+          "components_skipped": 0,
+          "skip_details": [],
+          "vertex_coordinates_unchanged": true,
+          "warnings": [],
+          "post_analysis_normal_consistency": "CONSISTENT"
+        },
+        "state_and_source_contract": "Vertex coordinates and vertex/edge/polygon counts unchanged; only face winding on the supplied repair object changes.",
+        "error_contract": "Non-manifold and non-orientable components remain explicit skipped warnings."
+      },
+      {
+        "file": "blender_addon/chroma3d_sculpt/services/ai_assistance_coordinator.py",
+        "file_sha256": "8755d66027b34855c1eee8e7cb52d4812863a3aa99fc9c19c7e22758d4955509",
+        "symbol": "request_recommendations",
+        "metrics": {"physical_loc": 61, "branch_count": 15, "nesting_depth": 2},
+        "characterization_tests": [
+          "test_53_fake_provider_coordinator_path",
+          "test_56_provider_recommendation_binds_exchange_assumptions_and_budget",
+          "test_57_one_explicit_retry_and_zero_automatic_retries",
+          "test_63_h3_provider_dispatch_observable_contract"
+        ],
+        "deterministic_fixture_output": {
+          "recommendation_count": 1,
+          "state": "EVIDENCE_AVAILABLE",
+          "provider_attempts": 1,
+          "tail_events": ["PROVIDER_DISPATCH", "RESPONSE_VALIDATED"],
+          "exchange_status": "COMPLETED",
+          "failure_class": "NONE",
+          "credentials_retained": false
+        },
+        "state_and_source_contract": "Provider response is validated and locally bound before evidence becomes actionable; no geometry is exported or mutated.",
+        "error_contract": "One explicit retry only; cancellation quarantines late response; transport failure class is preserved."
+      },
+      {
+        "file": "blender_addon/chroma3d_sculpt/services/mesh_analyzer.py",
+        "file_sha256": "5b4068c41e771759bebae3b78d12b63825439ffbfdf917bf863417a808266f51",
+        "symbol": "_analyze",
+        "metrics": {"physical_loc": 227, "branch_count": 16, "nesting_depth": 1},
+        "characterization_tests": [
+          "test_closed_cube_is_one_component_and_read_only",
+          "test_open_cube_reports_boundary_edges",
+          "test_unapplied_scale_creates_warning",
+          "test_h3_result_assembly_and_read_only_contract"
+        ],
+        "deterministic_fixture_output": {
+          "severity": "WARNING",
+          "last_check": "read_only_state:COMPLETED",
+          "boundary_warning_precedes_scale_warning": true,
+          "skipped_reasons_equal_skipped_check_messages": true
+        },
+        "state_and_source_contract": "Object, mesh, vertex/edge/face topology, transforms, mode, and selection remain unchanged.",
+        "error_contract": "Failed or skipped deep diagnostics remain explicit and do not serialize as successful zero findings."
+      }
+    ]
+  },
+  "after": {
+    "status": "PASS",
+    "focused_blender": {
+      "tests_run": 137,
+      "failures": 0,
+      "elapsed_seconds": 2.171,
+      "log": "manual-tests/hardening/reports/h3/logs/h3_characterization_after.log"
+    },
+    "targets": [
+      {
+        "file": "blender_addon/chroma3d_sculpt/services/repair_operations.py",
+        "file_sha256": "631f34692cf58ab4619735764c1f2f6631b94e8bfebee607c6933f2ddbe82a90",
+        "symbol": "repair_normal_consistency",
+        "metrics": {"physical_loc": 27, "branch_count": 11, "nesting_depth": 3},
+        "observable_contract": "PASS",
+        "source_protection": "PASS"
+      },
+      {
+        "file": "blender_addon/chroma3d_sculpt/services/ai_assistance_coordinator.py",
+        "file_sha256": "78489c11392fe3e00360abba53615528b8dd0f37ddb3bea8f795a31170e691ce",
+        "symbol": "request_recommendations",
+        "metrics": {"physical_loc": 26, "branch_count": 2, "nesting_depth": 2},
+        "observable_contract": "PASS",
+        "provider_security_contract": "PASS"
+      },
+      {
+        "file": "blender_addon/chroma3d_sculpt/services/mesh_analyzer.py",
+        "file_sha256": "932a8f3068871d51fa0aae23052de53b1d1c7845e1a7c1ecafd6d90773bb0041",
+        "symbol": "_analyze",
+        "metrics": {"physical_loc": 140, "branch_count": 2, "nesting_depth": 1},
+        "observable_contract": "PASS",
+        "read_only_contract": "PASS"
+      }
+    ]
+  },
+  "comparison": {
+    "status": "PASS",
+    "allowed_differences": ["internal helper names", "internal call topology", "code organization", "complexity metrics"],
+    "public_or_behavioral_differences": [],
+    "public_contract_before": "b331ba4f9767a356c75825f1865164245d194ea81a41b39e37fe1110b56deb03",
+    "public_contract_after": "b331ba4f9767a356c75825f1865164245d194ea81a41b39e37fe1110b56deb03",
+    "dependency_edges_before": 858,
+    "dependency_edges_after": 858,
+    "circular_components_before": 0,
+    "circular_components_after": 0,
+    "performance": {
+      "fixture": "same 137-test Blender characterization set under --background --factory-startup",
+      "before_seconds": 2.168,
+      "after_seconds": 2.171,
+      "delta_percent": 0.138,
+      "classification": "NO_OBVIOUS_REGRESSION_SINGLE_MEASUREMENT"
+    }
+  }
+}

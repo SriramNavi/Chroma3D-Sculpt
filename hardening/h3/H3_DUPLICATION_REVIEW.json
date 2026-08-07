@@ -1,0 +1,9 @@
+{
+  "consolidations": 0,
+  "h2_candidate_count": 80,
+  "h3_candidate_count": 80,
+  "schema_version": "1.0.0",
+  "selected_target_overlap_count": 0,
+  "selected_target_overlaps": [],
+  "status": "PASS"
+}

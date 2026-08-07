@@ -656,6 +656,26 @@ class Sprint2RepairTests(unittest.TestCase):
         self.assertEqual(session.operation_records[-1].status, RepairOperationStatus.FAILED)
         self.assertEqual(session.operation_records[-1].checkpoint_id, "")
 
+    def test_58_h3_normal_consistency_observable_contract(self):
+        vertices, faces = cube_data()
+        faces[0] = tuple(reversed(faces[0]))
+        obj = self.create("H3NormalContract", vertices, faces)
+        before_coordinates = tuple(tuple(vertex.co) for vertex in obj.data.vertices)
+        before_counts = (len(obj.data.vertices), len(obj.data.edges), len(obj.data.polygons))
+
+        outcome = repair_normal_consistency(obj, 1000.0, self.repair)
+
+        self.assertEqual(outcome.status, RepairOperationStatus.APPLIED)
+        self.assertEqual(outcome.metrics["faces_evaluated"], 6)
+        self.assertGreater(outcome.metrics["face_winding_changes"], 0)
+        self.assertEqual(outcome.metrics["components_skipped"], 0)
+        self.assertEqual(outcome.metrics["skip_details"], [])
+        self.assertTrue(outcome.metrics["vertex_coordinates_unchanged"])
+        self.assertEqual(outcome.warnings, ())
+        self.assertEqual(before_coordinates, tuple(tuple(vertex.co) for vertex in obj.data.vertices))
+        self.assertEqual(before_counts, (len(obj.data.vertices), len(obj.data.edges), len(obj.data.polygons)))
+        self.assertEqual(analyze_mesh(obj, bpy.context.scene).topology.normal_consistency.value, "CONSISTENT")
+
 
 if __name__ == "__main__":
     suite = unittest.defaultTestLoader.loadTestsFromTestCase(Sprint2RepairTests)

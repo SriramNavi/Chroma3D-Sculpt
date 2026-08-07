@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-08-07T10:41:37.9946655Z",
+  "preflight": {
+    "phase": "H3-00",
+    "status": "PASS",
+    "check_count": 18,
+    "failed_checks": 0,
+    "branch": "feature/v1.0-release-hardening",
+    "worktree_clean": true,
+    "nothing_staged": true,
+    "unique_commits_beyond_main": 0,
+    "owned_validation_processes": 0
+  },
+  "frozen_h2": {
+    "head": "208016e87dbebe0580d9fa63cd1392e398fc3bf2",
+    "main": "208016e87dbebe0580d9fa63cd1392e398fc3bf2",
+    "origin_main": "208016e87dbebe0580d9fa63cd1392e398fc3bf2",
+    "tag": "v0.8.0-h2-hardening-checkpoint",
+    "tag_type": "tag",
+    "tag_object": "b6579195f8578bc264d65444adbab06b4824fee5",
+    "tag_peeled_target": "208016e87dbebe0580d9fa63cd1392e398fc3bf2",
+    "remote_tag_object": "b6579195f8578bc264d65444adbab06b4824fee5",
+    "remote_tag_peeled_target": "208016e87dbebe0580d9fa63cd1392e398fc3bf2"
+  },
+  "h2_artifacts": {
+    "final_result": {
+      "path": "hardening/h2/H2_FINAL_RESULT.json",
+      "sha256": "f3b48abae0534ae6e803aa5d87f3f9def6ebd050f9050e2da885b20b42c17a43"
+    },
+    "final_report": {
+      "path": "hardening/h2/H2_FINAL_REPORT.md",
+      "sha256": "c9113d42b11ffefc13a15682ff4d49c930bb60a1cc88cb94e381f9ca459a1ee5"
+    },
+    "removal_log": {
+      "path": "hardening/h2/H2_REMOVAL_LOG.md",
+      "sha256": "0d6cd8dca1b9fbb67069b0ad87311ce4a605b9bbc15f5357e448099b6339cbac"
+    },
+    "decision": "H2_COMPLETE_WITH_FINDINGS",
+    "gate_count": 17,
+    "passed_gate_count": 17
+  },
+  "release_input": {
+    "retained_h2_validated_sha256": "a9ed11feeb7f40f7be1a2bd639e89ed409a605b8db01d7ea9db47d18c02135f5",
+    "current_starting_sha256": "4055f61a5a36d89fcfeb831fe113f9534ea935256da22034bb8b26db51b8d6d0",
+    "file_count": 207,
+    "retained_comparison": {
+      "byte_identical": 179,
+      "newline_only_equivalent": 1,
+      "content_different": 27,
+      "added": 0,
+      "removed": 0
+    },
+    "classification": "HISTORICAL_IDENTITY_DRIFT",
+    "dataset_decision_requirement": "FAIL_CLOSED_AFTER_H3_CHANGES"
+  },
+  "public_contract": {
+    "sha256": "b331ba4f9767a356c75825f1865164245d194ea81a41b39e37fe1110b56deb03",
+    "operators": 70,
+    "panels": 7,
+    "properties": 170,
+    "schemas": 38,
+    "feature_flags": 14,
+    "enums": 66
+  },
+  "package": {
+    "archive_sha256": "15f0cb69dc13f99ba0d22e868994ca66e262f5ea8f45d87f3a1ba2322668eb47",
+    "inventory_count": 179,
+    "status": "PASS"
+  },
+  "validation_inputs": {
+    "dataset_manifest_sha256": "3e763782e6271eff153c8c4097a8b841423b31962d1222e2baf208178559df9a",
+    "benchmark_manifest_sha256": "5bafdbfdedf72afd1098a12d895dbbb538c997e9f6f87ae7f8d33316aff7f8bc",
+    "profile_context_sha256": "83fc76f2d875fa4615a0a6c59960aaee0f6982d2ddf27795044d6a2d887b213b"
+  },
+  "validated_test_counts": {
+    "h2_unit": 12,
+    "h2_affected_sprint_blender": 763,
+    "combined_blender": 814,
+    "representative_dataset": 10,
+    "full_dataset": 27
+  },
+  "safety": {
+    "h2_artifacts_modified": false,
+    "product_or_package_version_changed": false,
+    "source_geometry_mutated": false,
+    "h4_started": false,
+    "sprint8_started": false
+  }
+}
