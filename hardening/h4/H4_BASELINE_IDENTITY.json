@@ -1,0 +1,1321 @@
+{
+  "combined_test_identity": {
+    "aggregate_sha256": "94c4b975fe32d2de30445a432d8c52a0c70ecf2a124e9378a448e7327877179a",
+    "file_count": 13,
+    "files": [
+      {
+        "path": "scripts/run_blender_tests.py",
+        "sha256": "44a36e9ad16fcaa1091c694aafb73801e4602cc81b5f02b2155f5469aadc5d41"
+      },
+      {
+        "path": "tests/blender/run_all_tests.py",
+        "sha256": "f085bafaa7b497d1fdd2502ca2e8dc2634b63a57080865e26702feabc229510e"
+      },
+      {
+        "path": "tests/blender/run_sprint5_tests.py",
+        "sha256": "3c8c78e999c58bc5c235f109313da27db106dafecc0b6a7f7f72d7cbf1636a4b"
+      },
+      {
+        "path": "tests/blender/run_sprint6_tests.py",
+        "sha256": "ccdf3f3dd81348619b9fd16c9e3ac555091c3af8d1edb48798d4f293603ce327"
+      },
+      {
+        "path": "tests/blender/run_sprint7_tests.py",
+        "sha256": "3eb69bcb85f9ade847816abe91122063ff2077d2c99f0cb468ad1f30b0ef0708"
+      },
+      {
+        "path": "tests/blender/test_mesh_analysis.py",
+        "sha256": "b437958d139eeab03c3739e9c6e8821601a59bfa1a38666395449f8a5c4bf7ab"
+      },
+      {
+        "path": "tests/blender/test_sprint1_diagnostics.py",
+        "sha256": "12836c1217a9d195ded7bc8a5647b040efcbe180bce7113b2145ea329bca8d81"
+      },
+      {
+        "path": "tests/blender/test_sprint2_repair.py",
+        "sha256": "87abc179196a124b90a1cde70eb193ffe8b821def16b0f92bdbe82b75096fa1b"
+      },
+      {
+        "path": "tests/blender/test_sprint3_printability.py",
+        "sha256": "99d93b6c738927387073978d9c3f41a781f5ee7e09ed85f323b62aabf433e6b4"
+      },
+      {
+        "path": "tests/blender/test_sprint4_advanced_preparation.py",
+        "sha256": "5f5c572aebf6088e367b2e18b7a1d960a45005d8dd2a85d5eb697005fe8e0605"
+      },
+      {
+        "path": "tests/blender/test_sprint5_controlled_optimization.py",
+        "sha256": "29d7c0cb5471396caaa109030e7d7e7754857b5af5e079bf064c1a5887278afe"
+      },
+      {
+        "path": "tests/blender/test_sprint6_intelligent_optimization.py",
+        "sha256": "2a2556413343f80358482d89735c8470cd63ba433d2863857dc32319f23de440"
+      },
+      {
+        "path": "tests/blender/test_sprint7_ai_recommendation.py",
+        "sha256": "c3bb769cb3835c948d458655b3fc8131fc71083cf7e30263af2d78a75863e640"
+      }
+    ],
+    "retained_h3_status": "PASS",
+    "retained_h3_tests_run": 817
+  },
+  "dataset_identity": {
+    "benchmark_manifest_sha256": "5bafdbfdedf72afd1098a12d895dbbb538c997e9f6f87ae7f8d33316aff7f8bc",
+    "dataset_manifest_sha256": "3e763782e6271eff153c8c4097a8b841423b31962d1222e2baf208178559df9a",
+    "profile_context_sha256": "83fc76f2d875fa4615a0a6c59960aaee0f6982d2ddf27795044d6a2d887b213b",
+    "retained_full": {
+      "elapsed_seconds": 176.651586,
+      "live_provider_calls": 0,
+      "model_count": 27,
+      "passed_count": 27,
+      "source_mutation_count": 0,
+      "status": "PASS",
+      "timeout_count": 0,
+      "unclassified_failure_count": 0
+    },
+    "retained_h3_release_input_sha256": "877ace24253c6b86327d5cb4ac047f7aca18622df320d498876307c41341eac3",
+    "retained_representative": {
+      "elapsed_seconds": 139.680075,
+      "live_provider_calls": 0,
+      "model_count": 10,
+      "passed_count": 10,
+      "source_mutation_count": 0,
+      "status": "PASS",
+      "timeout_count": 0,
+      "unclassified_failure_count": 0
+    }
+  },
+  "frozen_h0_h3_evidence": {
+    "aggregate_sha256": "939650e57e169a66043e337dd6a6069136a819ad1e6e2f2dc107462671d07c46",
+    "file_count": 68,
+    "files": [
+      {
+        "path": "hardening/baseline/ARCHITECTURE_HOTSPOTS.md",
+        "sha256": "04639d30b45f9ce96389cf83fa7c2a4ffff39648d04d9215b77f7f6689ded7a2"
+      },
+      {
+        "path": "hardening/baseline/CODEBASE_INVENTORY.md",
+        "sha256": "2690aac25f17724325720aea8b77ed8744bf36d756f88d2e38f32e0e65e7efe9"
+      },
+      {
+        "path": "hardening/baseline/DATASET_BENCHMARK_BASELINE.md",
+        "sha256": "1c1cfd9b32b1a75e6875d21316eb495499110cc4598a1460461ad78158824d6f"
+      },
+      {
+        "path": "hardening/baseline/DEAD_CODE_CANDIDATES.md",
+        "sha256": "13db95c219fe182ba21beb4573b6c317721c86bdd934149d075501440743eef2"
+      },
+      {
+        "path": "hardening/baseline/DEPENDENCY_BASELINE.md",
+        "sha256": "5f6210c8683e95992c0106c4b6c2864f5fcc8512ebca1c4b65079ec6b0aaa509"
+      },
+      {
+        "path": "hardening/baseline/DOCUMENTATION_DRIFT.md",
+        "sha256": "412324d306d68cca6eab87cb4a4367b582ff3615aa47b6fb65a92373a34c6d45"
+      },
+      {
+        "path": "hardening/baseline/DUPLICATION_BASELINE.md",
+        "sha256": "9f2112af5081b5de02f530c6612d49d2a161b6bdf3e63fb1a3179e08fee0555a"
+      },
+      {
+        "path": "hardening/baseline/FILESYSTEM_WRITE_BASELINE.md",
+        "sha256": "b14c48cb1e78feebe04039c653d6a0df8b92f6a77514f618793fc7d925e8fee6"
+      },
+      {
+        "path": "hardening/baseline/FINGERPRINT_RECONCILIATION.md",
+        "sha256": "3fa192a0412a0daa1fa63e2bcec228cf8f63dfae83b7919e5a05a44a2f7a0f78"
+      },
+      {
+        "path": "hardening/baseline/PACKAGE_BASELINE.md",
+        "sha256": "4e4c22f398448229185322dbf1a264c52e6d171471cec67cac68e68394856949"
+      },
+      {
+        "path": "hardening/baseline/PERFORMANCE_BASELINE.md",
+        "sha256": "9910a60fa9a1d047b5f934b05704c7294768377b2f1205729c7575dc46414c25"
+      },
+      {
+        "path": "hardening/baseline/PUBLIC_CONTRACT_BASELINE.md",
+        "sha256": "0a66d8531f51019b09f0e92b40074ac7c444af3f631b3e70fbaa3ae9ca512173"
+      },
+      {
+        "path": "hardening/baseline/RESOURCE_LIFECYCLE_BASELINE.md",
+        "sha256": "45103a619f86e3547c4b95033e62a39f1ba2d5855b16676e708298f1be397d50"
+      },
+      {
+        "path": "hardening/baseline/SECURITY_BASELINE.md",
+        "sha256": "3799f1823cc7e34db59ba2ab86964ed2e868df74209b1ab2c57e81a11b460b4f"
+      },
+      {
+        "path": "hardening/baseline/STARTUP_BASELINE.md",
+        "sha256": "125b170b966ce17415313518ade1d8d11aef8f08778b22f215ef9858f614c6a7"
+      },
+      {
+        "path": "hardening/baseline/TEST_BASELINE.md",
+        "sha256": "6e1e57d72052588f422185b3c1bfc515e7525a92896586c4c8c01a9c562f0f67"
+      },
+      {
+        "path": "hardening/baseline/hardening_baseline_manifest.json",
+        "sha256": "c24d4215064d46affc46d5aff834355d682ce025bcdd3029dd772e1de4ca4fec"
+      },
+      {
+        "path": "hardening/baseline/package_baseline.json",
+        "sha256": "3ee0e7280f8b0b01520f2161b9ba757eddb75bbc66950de15f4d05c94cba915e"
+      },
+      {
+        "path": "hardening/baseline/public_contract_baseline.json",
+        "sha256": "0a390285cb87c4b8289456a898d227ad30782a17862f1352dd5e5a64e8c0fb44"
+      },
+      {
+        "path": "hardening/h1/H1_DISPOSITION_LEDGER.json",
+        "sha256": "a005eeb9d3f46b11ef2f7813ff23b78f5215f2edb8eaf862840a68aa70ebe555"
+      },
+      {
+        "path": "hardening/h1/H1_DISPOSITION_SUMMARY.md",
+        "sha256": "4bbd48ec1a1df25fffa6e568c48bb5bfc6985be94acf7e8b4d93d5bd5d6a414c"
+      },
+      {
+        "path": "hardening/h1/H1_FINAL_REPORT.md",
+        "sha256": "d9fff7bf2e429582afb24cc73780fa2776f94913b71add1a97e8d241482a4a37"
+      },
+      {
+        "path": "hardening/h1/H1_FINAL_RESULT.json",
+        "sha256": "10584f58bec65f774477dfcb4a36437778853983da649d99afe4224cdd0c3ec5"
+      },
+      {
+        "path": "hardening/h1/H1_FIRST_FAILURE.md",
+        "sha256": "b5d59fac71aa6ab8b19780d948a65d766a40fccec74a45e62166f7ae151ecab6"
+      },
+      {
+        "path": "hardening/h1/H1_REMOVAL_LOG.md",
+        "sha256": "b6356e2ba6cf75d62e5dad92f458d05eafe8e6e5e2a44956b83b848fa77132d6"
+      },
+      {
+        "path": "hardening/h1/README.md",
+        "sha256": "83d080f67ee319392bc385d5ddc8787e8ae83823a89a689393fe90d06a2e727f"
+      },
+      {
+        "path": "hardening/h2/H2_BASELINE_IDENTITY.json",
+        "sha256": "aa9d973ace9dce98f230c6698a605aeb27144426c1bfb0a5868f9db5d30e588a"
+      },
+      {
+        "path": "hardening/h2/H2_COMPLEXITY_TRIAGE.json",
+        "sha256": "d8cce2a4f9817d3b9d9fab23442aca2614c88fc374f1bd2a56a30af4aae9780f"
+      },
+      {
+        "path": "hardening/h2/H2_COMPLEXITY_TRIAGE.md",
+        "sha256": "c35666bc1603c3148241bc56227ad789b7bae2604ecfaf82924e4e69dc106ff3"
+      },
+      {
+        "path": "hardening/h2/H2_DUPLICATION_TRIAGE.json",
+        "sha256": "9149e754f13ed6ec01906bf54cd2e4b803ad0b6a6d2d76cc174eb5004baff860"
+      },
+      {
+        "path": "hardening/h2/H2_DUPLICATION_TRIAGE.md",
+        "sha256": "c720b4a93d0ec910ad26eaad04a9244074734f87155fab5c38f54073aa5fa669"
+      },
+      {
+        "path": "hardening/h2/H2_FAILURE_LOG.md",
+        "sha256": "b5ff0a533bc31ce9cb7f42ec8012a078144c05383c1b748abe6f33b88ded92af"
+      },
+      {
+        "path": "hardening/h2/H2_FINAL_REPORT.md",
+        "sha256": "c9113d42b11ffefc13a15682ff4d49c930bb60a1cc88cb94e381f9ca459a1ee5"
+      },
+      {
+        "path": "hardening/h2/H2_FINAL_RESULT.json",
+        "sha256": "f3b48abae0534ae6e803aa5d87f3f9def6ebd050f9050e2da885b20b42c17a43"
+      },
+      {
+        "path": "hardening/h2/H2_FIRST_FAILURE.md",
+        "sha256": "c7b2352087ef0618ab26ce2f9c3607769ce5527e19d40e451392a2acf0aaad1d"
+      },
+      {
+        "path": "hardening/h2/H2_REFERENCE_DISPOSITIONS.json",
+        "sha256": "a0ee121fe92ef6f7082498d204488ebb5e3f11b8ff315d291e1b26f6fe127efd"
+      },
+      {
+        "path": "hardening/h2/H2_REFERENCE_SUMMARY.md",
+        "sha256": "fdcb061e2c6181c1c0651ef26a895966002cd11870c0c149e5a4f24b6b3d7818"
+      },
+      {
+        "path": "hardening/h2/H2_REMOVAL_LOG.md",
+        "sha256": "0d6cd8dca1b9fbb67069b0ad87311ce4a605b9bbc15f5357e448099b6339cbac"
+      },
+      {
+        "path": "hardening/h2/H2_SIMPLIFICATION_REPORT.md",
+        "sha256": "988c57d627ed56c3c2badb16ea2027745c3d009ef23417aa88dcd35c3c4135f0"
+      },
+      {
+        "path": "hardening/h2/README.md",
+        "sha256": "bc9d1e37d7ab9ce860656608babd8ec3a56a84bb636f97f6920f6811e2603777"
+      },
+      {
+        "path": "hardening/h3/H3_BASELINE_IDENTITY.json",
+        "sha256": "041dab4d28537c98fd3d27b534fcf7923fa0c99f0fc0879eaa66d1002c3a8180"
+      },
+      {
+        "path": "hardening/h3/H3_BEHAVIORAL_EQUIVALENCE.json",
+        "sha256": "63d821fa4b0140bb7e77dc1670b7dc42b9421ed5197736422e46e5199e80c563"
+      },
+      {
+        "path": "hardening/h3/H3_COMPLEXITY_AFTER.json",
+        "sha256": "7db0a95ab754c94e0b3aeb208a7fc7e8c052f82cbe254067e198dd5ad199c20b"
+      },
+      {
+        "path": "hardening/h3/H3_COMPLEXITY_LEDGER.json",
+        "sha256": "4f69da19bc5702f9665761b06ce2b48ec32987f3d813c77246da818570b3257d"
+      },
+      {
+        "path": "hardening/h3/H3_COMPLEXITY_LEDGER.md",
+        "sha256": "fa5616540ffd006cbaec3f3e4f7c7bb95af833cac5103036ecb0c2c46471c6ad"
+      },
+      {
+        "path": "hardening/h3/H3_DUPLICATION_REVIEW.json",
+        "sha256": "110987dc9f9f3798689e69c1e8c0f28e3972c9515522431eba6732e941cede93"
+      },
+      {
+        "path": "hardening/h3/H3_FAILURE_LOG.md",
+        "sha256": "a799c6840c51238138a20fa7cea43d0627673b9a5a658977cfea22a161dbfafd"
+      },
+      {
+        "path": "hardening/h3/H3_FINAL_REPORT.md",
+        "sha256": "306f51df4c5874a39d3fb5d82e297703ee430ab3215fba7e4c8f3e0b37380db4"
+      },
+      {
+        "path": "hardening/h3/H3_FINAL_RESULT.json",
+        "sha256": "d0f8258b5fc86a17b9485303829c035c7eab2febc5c721c140b60ee4ffd713db"
+      },
+      {
+        "path": "hardening/h3/H3_FIRST_FAILURE.md",
+        "sha256": "7e00bfc7f001d975764af90f14dda936b6b22d525646ecfb9bcce4aa97b20d62"
+      },
+      {
+        "path": "hardening/h3/H3_REFACTOR_LOG.md",
+        "sha256": "8ebcc7b365ec04f36908a0b9741b1875d8528976efde13bedc368c734b34534b"
+      },
+      {
+        "path": "manual-tests/hardening/h1/run_h1_final_validation.py",
+        "sha256": "4c939e01b418945e6821ef221c24289d8e0626d410cedd49fc800b277c85bbb4"
+      },
+      {
+        "path": "manual-tests/hardening/h1/run_h1_validation.py",
+        "sha256": "57553769ed2453eb9abe035497516c47f44da743297bbdee4df2c4a226b527f7"
+      },
+      {
+        "path": "manual-tests/hardening/h1/verify_candidate_removal.py",
+        "sha256": "8620e4a2aca5de654c269d9ce6bb39dd0746a88210c2bf08925a54f0fc8bfa6e"
+      },
+      {
+        "path": "manual-tests/hardening/h2/analyze_suspicious_references.py",
+        "sha256": "dfeba8f4c2b612756deb371aa6350e59e3fe08ce8ca079d82d16a87e325c3fc6"
+      },
+      {
+        "path": "manual-tests/hardening/h2/run_focused_blender_tests.py",
+        "sha256": "0c93472cda992b57d4e87d18cf19fee0d76fec0bbb57c414c5801864757ad7d0"
+      },
+      {
+        "path": "manual-tests/hardening/h2/run_h2_final_validation.py",
+        "sha256": "bb0515c32bc5f42f3456d90e2655e7739fd185325141a7e53de6dfe649bad6a0"
+      },
+      {
+        "path": "manual-tests/hardening/h2/run_isolated_installed_smoke.py",
+        "sha256": "811d87db930e1d4104b0952f2aa5a1ee49e8fea461d5a852d33c45aa972aca51"
+      },
+      {
+        "path": "manual-tests/hardening/h2/run_removal_batch_validation.py",
+        "sha256": "920360a73456de481ec539c60428e4d3fc434559755f3db5744ded62feef0bc1"
+      },
+      {
+        "path": "manual-tests/hardening/h2/run_structural_scans.py",
+        "sha256": "453bccd6f4cdb708a10aa7a630ee6e77ee33337f2f836d506f3f31cd79669cf4"
+      },
+      {
+        "path": "manual-tests/hardening/h2/test_structural_simplification.py",
+        "sha256": "abc2bb679129a1c5f4ff192f0a3b8c4a5ef587ef496968c1bae97fc3742bd717"
+      },
+      {
+        "path": "manual-tests/hardening/h2/test_suspicious_reference_analyzer.py",
+        "sha256": "3f88b5b7cd3bad9a5da2e8c32e077104e2b2ed47aad9cf9b670b062c4e64e533"
+      },
+      {
+        "path": "manual-tests/hardening/h2/triage_complexity.py",
+        "sha256": "6b7bed9ef679c77e2829222f1823abc85dc28d0eba98130900efc70769f6d101"
+      },
+      {
+        "path": "manual-tests/hardening/h2/triage_duplication.py",
+        "sha256": "899973a598b730924ace4847077147f2bbdf7bb2e09cf9cff7a66c95a1a93cb6"
+      },
+      {
+        "path": "manual-tests/hardening/h3/analyze_h3_targets.py",
+        "sha256": "eaa31cce8fd297feea49e66da26a664ed9f88ed11f9eda70502f95e0c1a43c73"
+      },
+      {
+        "path": "manual-tests/hardening/h3/run_h3_final_validation.py",
+        "sha256": "123dda0c5bcfe53908d48c67ddedca38604aba331e764f7a71209c8a1a77c8bc"
+      },
+      {
+        "path": "manual-tests/hardening/h3/run_isolated_installed_smoke.py",
+        "sha256": "88fcaa1bb8fed09895eb62debdc33dc9f71565d14b1cc53bfb0b152e37879db9"
+      },
+      {
+        "path": "manual-tests/hardening/h3/test_h3_evidence.py",
+        "sha256": "cd6612dcbba0ffac20361332dbfda7dbe4b126e7808f716f518b05cb3fc0b9f0"
+      }
+    ]
+  },
+  "frozen_h3": {
+    "decision": "H3_COMPLETE_WITH_FINDINGS",
+    "gate_count": 17,
+    "passed_gate_count": 17,
+    "tag": "v0.8.0-h3-hardening-checkpoint",
+    "tag_object": "e481d6530a8b502630d02f14b5f66a108815b33a",
+    "tag_peeled_target": "ba77d12e3a7e768fdc05d542c6ea12e1a3515a0b",
+    "tag_type": "tag"
+  },
+  "generated_at": "2026-08-07T12:43:07.551440+00:00",
+  "h3_artifacts": {
+    "aggregate_sha256": "f707e243409ec1a308dc3f10e2cfc9852375acb2907045c08397c3094338b3bf",
+    "file_count": 15,
+    "files": [
+      {
+        "path": "hardening/h3/H3_BASELINE_IDENTITY.json",
+        "sha256": "041dab4d28537c98fd3d27b534fcf7923fa0c99f0fc0879eaa66d1002c3a8180"
+      },
+      {
+        "path": "hardening/h3/H3_BEHAVIORAL_EQUIVALENCE.json",
+        "sha256": "63d821fa4b0140bb7e77dc1670b7dc42b9421ed5197736422e46e5199e80c563"
+      },
+      {
+        "path": "hardening/h3/H3_COMPLEXITY_AFTER.json",
+        "sha256": "7db0a95ab754c94e0b3aeb208a7fc7e8c052f82cbe254067e198dd5ad199c20b"
+      },
+      {
+        "path": "hardening/h3/H3_COMPLEXITY_LEDGER.json",
+        "sha256": "4f69da19bc5702f9665761b06ce2b48ec32987f3d813c77246da818570b3257d"
+      },
+      {
+        "path": "hardening/h3/H3_COMPLEXITY_LEDGER.md",
+        "sha256": "fa5616540ffd006cbaec3f3e4f7c7bb95af833cac5103036ecb0c2c46471c6ad"
+      },
+      {
+        "path": "hardening/h3/H3_DUPLICATION_REVIEW.json",
+        "sha256": "110987dc9f9f3798689e69c1e8c0f28e3972c9515522431eba6732e941cede93"
+      },
+      {
+        "path": "hardening/h3/H3_FAILURE_LOG.md",
+        "sha256": "a799c6840c51238138a20fa7cea43d0627673b9a5a658977cfea22a161dbfafd"
+      },
+      {
+        "path": "hardening/h3/H3_FINAL_REPORT.md",
+        "sha256": "306f51df4c5874a39d3fb5d82e297703ee430ab3215fba7e4c8f3e0b37380db4"
+      },
+      {
+        "path": "hardening/h3/H3_FINAL_RESULT.json",
+        "sha256": "d0f8258b5fc86a17b9485303829c035c7eab2febc5c721c140b60ee4ffd713db"
+      },
+      {
+        "path": "hardening/h3/H3_FIRST_FAILURE.md",
+        "sha256": "7e00bfc7f001d975764af90f14dda936b6b22d525646ecfb9bcce4aa97b20d62"
+      },
+      {
+        "path": "hardening/h3/H3_REFACTOR_LOG.md",
+        "sha256": "8ebcc7b365ec04f36908a0b9741b1875d8528976efde13bedc368c734b34534b"
+      },
+      {
+        "path": "manual-tests/hardening/h3/analyze_h3_targets.py",
+        "sha256": "eaa31cce8fd297feea49e66da26a664ed9f88ed11f9eda70502f95e0c1a43c73"
+      },
+      {
+        "path": "manual-tests/hardening/h3/run_h3_final_validation.py",
+        "sha256": "123dda0c5bcfe53908d48c67ddedca38604aba331e764f7a71209c8a1a77c8bc"
+      },
+      {
+        "path": "manual-tests/hardening/h3/run_isolated_installed_smoke.py",
+        "sha256": "88fcaa1bb8fed09895eb62debdc33dc9f71565d14b1cc53bfb0b152e37879db9"
+      },
+      {
+        "path": "manual-tests/hardening/h3/test_h3_evidence.py",
+        "sha256": "cd6612dcbba0ffac20361332dbfda7dbe4b126e7808f716f518b05cb3fc0b9f0"
+      }
+    ]
+  },
+  "package_identity": {
+    "archive_bytes": 350374,
+    "archive_file_count": 179,
+    "archive_filename": "chroma3d_sculpt-0.8.0-alpha.1.zip",
+    "archive_sha256": "53b23a332f12904fb7054ca29a1449c48006c5d10ced508f7fc41b73fda16a37",
+    "status": "PASS"
+  },
+  "preflight": {
+    "branch": "feature/v1.0-release-hardening",
+    "head": "ba77d12e3a7e768fdc05d542c6ea12e1a3515a0b",
+    "main": "ba77d12e3a7e768fdc05d542c6ea12e1a3515a0b",
+    "nothing_staged": true,
+    "origin_main": "ba77d12e3a7e768fdc05d542c6ea12e1a3515a0b",
+    "phase": "H4-00",
+    "remote_rolling_branch_present": false,
+    "status": "PASS",
+    "unique_commits_beyond_main": 0,
+    "upstream_configured": false,
+    "worktree_scope_at_capture": [
+      ".gitignore",
+      "hardening/h4/H4_FAILURE_LOG.md",
+      "hardening/h4/H4_FIRST_FAILURE.md",
+      "manual-tests/hardening/h4/capture_h4_baseline.py"
+    ]
+  },
+  "public_contract": {
+    "enums": 66,
+    "feature_flags": 14,
+    "operators": 70,
+    "panels": 7,
+    "properties": 170,
+    "schemas": 38,
+    "sha256": "b331ba4f9767a356c75825f1865164245d194ea81a41b39e37fe1110b56deb03"
+  },
+  "release_input": {
+    "aggregate_sha256": "110525d3d3d742e2eb27029bea4b690881d3458be5d9a30b5065404af6ed2c53",
+    "file_count": 207,
+    "files": [
+      {
+        "path": "blender_addon/chroma3d_sculpt/__init__.py",
+        "sha256": "7add2fb4c2609b44cb9ed9f2e8922253986935065f269d8ddf7e3d7e846bfeb8"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/ai_assistance_settings.py",
+        "sha256": "893e5a2b42d7077348e4002926f822c0c772ee70af714ed1baa6c300fedf7c12"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/analysis_settings.py",
+        "sha256": "e8ed95439c521c9c398d134f33898c1ba1b7142ba4c54780c3d3e0c62f2096e7"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/blender_manifest.toml",
+        "sha256": "4048af80432d4a4a36bb403e3c2e2a1419695e45a9d8f30af62f4348b346c4b3"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/feature_flags.py",
+        "sha256": "24a27f54449f8216a51e9467b25e1b6ab435c615efaef561c4232181f73c9084"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/intelligent_optimization_settings.py",
+        "sha256": "e7a5139472669c9205f2e619ee8702b4057d50faf55326f3448faae4ecffcc46"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/metadata.py",
+        "sha256": "bf73a83d1821765b47f9cd5182b089759545f6185c864d9117dc9cf020ca0901"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/models/__init__.py",
+        "sha256": "04795ced889ddf16c87f8d5c6085b10a49593c9bfe3ba4648b73961a1424c0c4"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/models/advanced_preparation_models.py",
+        "sha256": "2768f9dfac2ea36937a2c937cb57b41933051d1f5eed392dcd6acb0498f3dcc9"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/models/ai_assistance_models.py",
+        "sha256": "b28a45647801d0c7c60f90206bbd797242c2f5f6568e736da1bbdf9384a9874b"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/models/analysis_result.py",
+        "sha256": "f4d1d3d05fb343da5931a34affab478351a00655934b1babcfd33193b02de85d"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/models/intelligent_optimization_models.py",
+        "sha256": "0845204d2fefd862d5f902b7208dca409268e61268b06c15bb50ff35fc4b0b6a"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/models/optimization_models.py",
+        "sha256": "30037b18b1a12468d3581c7b64440cce7b9be8d24cc8a043ba62b77775634fde"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/models/printability_models.py",
+        "sha256": "b7c3720ca88d2be688a4ca7b5d453bf67145a5ffe326cf7232febe0c6a32ae7a"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/models/repair_models.py",
+        "sha256": "941ca4d8b60c18d53bbb5188e85d622b0b98cf610370fed83dc06d47a49e2e96"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/operators/__init__.py",
+        "sha256": "e06b3b51d832d339e33ceb7c1f8391ec5072996ca5bab498ebefa53f1f9d0874"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/operators/advanced_preparation.py",
+        "sha256": "d0a663aa66a260c525b90282079e4bf1711b2676fd23f92c74ccb330a4f5b418"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/operators/ai_assistance.py",
+        "sha256": "c9439c376a1eec7abc79b35921dd75acc8c7bcf5ac20d11d773d0295a2becdbb"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/operators/analyze_mesh.py",
+        "sha256": "a5b05fe82ae9ad6335fefb26e8b21894dde3398cba754a7815d1c655c0642172"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/operators/export_report.py",
+        "sha256": "7b8c12d64f5fc341004880bc7d1239736e615b37bbc0edfe9cd40b92e766e7fe"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/operators/intelligent_optimization.py",
+        "sha256": "9041974f3b01f7e9d43fdd1ca7a50f0aec6803cc2ab4f7fa20614873f5d8dd5d"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/operators/optimization.py",
+        "sha256": "384b317568530f67d90aa980b2e1bd15dd3b224a075d27822df830a830e41866"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/operators/printability.py",
+        "sha256": "6ab41148213e68804d4e460252d0ac7992e4b3a187084e67e75016a99849aea3"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/operators/repair.py",
+        "sha256": "33fec394b02dd4ff100723189ff6e7afbed79eb1011f48359dd4a9ca05c30b00"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/operators/select_issue.py",
+        "sha256": "2d07f6592f97aa4aba9ded17578d1b75359e46127dbbaf53d47ce98a743b5c1e"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/optimization_settings.py",
+        "sha256": "7de07e03cc7eaa702ad002c639cd70fb5171d6dfa1fdc1a8d9ebce2129ec6a4c"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/performance_registry.py",
+        "sha256": "6c8261d7390226ca67b417b175e391b718940362d34b4c7d7de1946b543b2f2b"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/printability_settings.py",
+        "sha256": "a494e9ec52bde5803ee6c7e09f3621a9252ddc6ab7a2b99792bd828d67b14680"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/repair_settings.py",
+        "sha256": "a8a3a4dfe710c76bcfc87bcf906bafbf205c3a8e3953b6406ac791003d59e124"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/__init__.py",
+        "sha256": "82cdab034ac32ad781e786c43239dac8e5a5653b6d7fac0f07b7523bc3160cb3"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/advanced_orientation.py",
+        "sha256": "213f2fd080cff097f1b70b87b3834a8f6e64a1f67c769406c259cc4062c7bc31"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/advanced_preparation_coordinator.py",
+        "sha256": "94eee06a9b54a79a3a2832da6aa2525212dc04a0d537ad0ae4e3ab6d95f8ec6a"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/advanced_preparation_report.py",
+        "sha256": "3a03d2712ff365688517f75eb0bfbf32febf473bcb3332f846c96b183803c09f"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/advanced_preparation_session.py",
+        "sha256": "73df6bccf5c6ddfbe2dad8bada01e516937b4417a9510a61f8531704f82d153c"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/advanced_scale.py",
+        "sha256": "bd87b3dbf8c913c17d850ea8e80a4a0cdcdfc5eb7457a8c1dfc68ed1d4fb603c"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/ai_assistance_audit.py",
+        "sha256": "380c690d3de14460eaa915b956534185a89ca9bf962c7adeee5acd63416d85c2"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/ai_assistance_coordinator.py",
+        "sha256": "4b32b4920b7b0dc836fd4f3cfe13cf1f44ceae60538ba0b686474369f4fee5a3"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/ai_assistance_report.py",
+        "sha256": "e046b928da83479b55e6d73323ef95d2fb1feb54bd33ff13a232f01ab1e1f813"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/ai_assistance_session.py",
+        "sha256": "743ee980f43f24332d97cd30b6cac9d05a462c56acde5c5cc3f7174a74a8ddab"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/ai_credentials.py",
+        "sha256": "388d6c6e9f1b18a13f4fef75b154fa40753cc2084f1eade161ca15ed3bf8047b"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/ai_provider.py",
+        "sha256": "9951b83a0eec260ae0af340de4abae1aa8365b14f873c19f352dc53154229d56"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/ai_recommendation.py",
+        "sha256": "f154e354f5d87606e745a8aa4d65fa45f83b13ad714ee5add5ff77cbc7316454"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/assistance_context.py",
+        "sha256": "a6628bbe6c9a9c498128f3ca3f2de3070048250307e40eda98e12e25bbca9eca"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/batch_preparation.py",
+        "sha256": "1343becff4c05ff381ea77e64a7a71246793654d4252087b49bdd94d21aa97ce"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/batch_preparation_session.py",
+        "sha256": "4286ff643fb22157badc11dc2abc4870ccc2cac440eb33d622bdd1cb963866d4"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/bridge_risk.py",
+        "sha256": "a25d6cc810ece481fac3f4f7a5ba036cac4a9b1ed40b24a95893e1d29f671005"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/build_plate_contact.py",
+        "sha256": "a71e11a329d083fc1e4e21dd371e2574936d62bf37fd259a9e4c86eff5eb99a4"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/build_volume_analyzer.py",
+        "sha256": "73f9fb64f380277d8f5785c5d1c50d58d8555683255f99c6c09d98b59524b611"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/constraint_engine.py",
+        "sha256": "e186a7fd9837c3c93c8506a387c3e5163d4939322b655f2eb04fde3de6fa9786"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/context_budget.py",
+        "sha256": "f1fd1412ec809e54d1ea9b43b8ebc853823084142159cb4523445ce5e75ce6d8"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/context_redaction.py",
+        "sha256": "9bcb300738fbf68dd3f3a9abdaa68b3533775fd2a67f4ff98378de1c1adf0d06"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/deep_diagnostics.py",
+        "sha256": "9019e3fcb7c6f3d9caf1622694bb088f1695304813e48cbd03719075991ec9a2"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/fake_ai_provider.py",
+        "sha256": "fa55654e996266783ae9311ea1b5023938921c6af5262a369e1460c3b16cf1ae"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/floating_components.py",
+        "sha256": "1b519e36a6480007c8d587d826e557792c72e848e6c76bc40373782feb58ca43"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/geometry_facts.py",
+        "sha256": "0427a1192994b699c047adf481c1dd2fb02da454fedcc5068aa57dc2fa903fbb"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/hardware_profile_loader.py",
+        "sha256": "23ce9cf7ee43e17c59d39f4c4622faba465cb8588e0071a8acf74a3cdf17141f"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/intelligent_optimization_audit.py",
+        "sha256": "c41b4fb5e56d8c22cf89a22a49716bc0990b3e11ac15e7166cf3b77da02e82f1"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/intelligent_optimization_coordinator.py",
+        "sha256": "404461db16b2f7109367111985dfe4f9c45e80362cb2bf8d385f35320f37e899"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/intelligent_optimization_session.py",
+        "sha256": "9eb76149fca6ee7b02c37aea6eac0bdc48914d840ae79a0d289867f25034a424"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/material_profile_loader.py",
+        "sha256": "069f777d993c4d666d5b54db2cd74be8c77aea4aec58e8af1e5796bd6bc93131"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/mesh_analyzer.py",
+        "sha256": "f63314148e9980b1743996c116a08414c1303c633d2b33b534f8e1b97a12b077"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/openai_provider.py",
+        "sha256": "a99622f1a76e1eba37ae90c6de6f347c511f92da3ac08e11cbb5ed4bbc5152b9"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/optimization_audit.py",
+        "sha256": "572d9ceedf9d9f12a1d294871863a58950f6d8702121b23cdf8f3635a28fa4e8"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/optimization_candidates.py",
+        "sha256": "eff7b12a6e328f169036f494e9a97f5c9b8449b2049dd87c496f9985529833eb"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/optimization_comparison.py",
+        "sha256": "3fb0432c42d6fab09151e04da69607fe92d3e3e69ae1c32a6eb31558e89013a5"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/optimization_coordinator.py",
+        "sha256": "44ec82d657556745c689dd737af5bac3fa281d0b40d200974bfe615fe688ebd5"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/optimization_operations.py",
+        "sha256": "c143374e5e6f004431f46a79ff8e27bd1aa3614b397a073801a5912d701e61fb"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/optimization_plan.py",
+        "sha256": "60a11e4f20891dc1c8b3646fe655b9c284de686f83b0fcf8040ab0fa4f2e6052"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/optimization_policy.py",
+        "sha256": "c5a0007322bdcdb6536d6d8ad55a714e3c5181bbe4d0ff835d92c8e37e5f6a51"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/optimization_session.py",
+        "sha256": "251aaeb78933cfb8bb3939f35594b205ac467edb0e189f9a1c3909c4a39add68"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/optimization_workspace.py",
+        "sha256": "c0a3adcc3f6c00e6499368835335de7dd7136a102897a07df52e442667fa80de"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/orientation_analysis.py",
+        "sha256": "fd71aeed27c3e902e5230e36763e4d502b45e160658f8a96a1d8a66b3c368f7e"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/overhang_analysis.py",
+        "sha256": "6cdd32e15c909530a84e69610a6d4bc4d474fedd7db6b5c93c38f60774f5802a"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/pareto_frontier.py",
+        "sha256": "8a8cba1c6e91a879d18092e5b060de52f392ac5395c518f2dd3a8591a8323345"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/printability_baseline.py",
+        "sha256": "f457ae7af9e2206f77f92a8496ed8f24b84a60d2aac19e2bc1d5f4e1e2e529b2"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/printability_coordinator.py",
+        "sha256": "819b02a248dc5611228e89818874caa7e83eeca4426e7faaf7d38ca8f3adeff4"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/printability_report.py",
+        "sha256": "f84a522d5263c983231f4562b2dc5c6a067f3e18ee3a0627bb1403a00d13be9e"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/printability_scoring.py",
+        "sha256": "4fee37a62e9d8605eb15849dd1938708132efaa805e48aef0033a8f79b6bb07e"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/printability_session.py",
+        "sha256": "edd959097dce115fbeb9c0ae9e560d3a4606a5b7bff384408c914ba6ca0a7ba1"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/printability_statistics.py",
+        "sha256": "2e296985bff4d69d684e5b3d3f582e8f54c3dc1b21afa06f358bddbe8e40ce03"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/printer_profile_loader.py",
+        "sha256": "2395db1528a0ad5e54a817a570951764dd5552730b86f3cc0ce80062558b0677"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/process_context.py",
+        "sha256": "f16dadff419eff85070430f5e5691286f1dff3aa94c553dbd6c4752d4e13493b"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/provider_registry.py",
+        "sha256": "09a15b3162580043a3dfc836633150794b091e203bbeddcbd2086cb704999405"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/provider_transport.py",
+        "sha256": "edc17f9c4f82b2de15d2f95f085a558275f0b6cb0cd90c4c0e408bd64306b88f"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/recommendation_decoder.py",
+        "sha256": "325cd19e1b435dfa6332ff59df43349f8e48086d138e2f53b858088aa3784703"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/recommendation_explainer.py",
+        "sha256": "64f9d6880147bc5455b160a05b3d03dae352f9debef0aea87e320adcbe46c158"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/recommendation_grounding.py",
+        "sha256": "07dfa76de02463ad5a32dacfb68d21d57bd86c270aec55550406d6fd1c9faf86"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/recommendation_resolver.py",
+        "sha256": "f275a337055ea5db06bef090378535ad9b981d28be466daddba411f6a299605a"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/recommendation_validator.py",
+        "sha256": "7758bdfe94767bf6a55dc725fab9522271a97c2c298a7b20c5ad50d8ecbf7ac1"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/regression_dashboard.py",
+        "sha256": "b9c43b84fc74fe033888423ec7a8da35b7d2d8e87a49deebcebcbc4ad1339e9d"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/repair_audit.py",
+        "sha256": "f036dad7e868fbd53f7680795be8f7a253b0df6d0096678c4342e33760bfa3c0"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/repair_coordinator.py",
+        "sha256": "c25297d947308580eebbfbdaa7c188a74f8d949c3700af89d56c563da376fae8"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/repair_operations.py",
+        "sha256": "3342d33a0c5693a23b937521531696a47a5fe230e86398bbf79dca1275691173"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/repair_plan.py",
+        "sha256": "fba0deb59e25da1816346efe376a2aa249883110f61f7412d4255deea13b7ab9"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/repair_session.py",
+        "sha256": "358226633a5937a8fbdc37ddfd4aaa840d94da34fac502b4b1d136adf985f9c7"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/report_generator.py",
+        "sha256": "d286559d1d9bb7f2eb48f7801bdce492d85155d644a3fea5239d5ad17698cd36"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/resin_advisory.py",
+        "sha256": "288b9144b291e5ef645c753f7b79afac6712f43958631095ea64be4f477d2123"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/scale_evaluation.py",
+        "sha256": "2674c52dfbc7227cee60e5b3e009cd983c12d5947a2e0cde474cf6c49849b93a"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/search_policy.py",
+        "sha256": "69ccdf9ca1e5aeb484ddff457cfb7c185b8c0b132def5353c50cb2e5d074410d"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/shell_analyzer.py",
+        "sha256": "3be17ac193c3cf9237d9afa2b599e859ff9c316a61af4e003a77d2c017e3805c"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/strategy_evaluator.py",
+        "sha256": "de99b561ca3f267f1e8ab5870a13d076e9383dd660a5b5c6563160319467a911"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/strategy_explainer.py",
+        "sha256": "03698d7084e5d188e3b23683bb202874b53f2db4e34197822850b1b0821548ff"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/strategy_generator.py",
+        "sha256": "5d0ec0d046c0be0a1711fa01db68b01df24437c96904aece69d66227deb4d6fd"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/strategy_history.py",
+        "sha256": "728af15784e709f1e2e1f1e474e2ce8a42467e3fd72deca946eaedbe6e388dc2"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/strategy_ranker.py",
+        "sha256": "facfeb04e9c37d2e76cfcaadf9212d5090d2acb6fcaf1ce7f4a32de253d8f5ac"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/support_risk.py",
+        "sha256": "848e481d8c376b3b1e6aa262c3a54c2b7daa9e1671a34bb66b0aa7217e60b68d"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/thin_features.py",
+        "sha256": "717adb4a9d2ef0d8dd83d9e9331e2bfd719c3cb84ef53ad426adc0ce16ce7ff6"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/topology_analyzer.py",
+        "sha256": "13c59e0bc489e1845a52a011c480764f0bc436ce489cc93369c5393d63eec0b3"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/services/wall_thickness.py",
+        "sha256": "5bd6325d81f1263eed454874c6fe9201075aa023058a9a165b54f11bee627cfc"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/session.py",
+        "sha256": "27585e043c3aa1e6f711799188792f52d3ba0533d107368ad52b6edc3c038538"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/ui/__init__.py",
+        "sha256": "7dc696d61e1e7a1082745aad3b170887d014b72fe711263b96381f2da986262d"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/ui/advanced_preparation_panel.py",
+        "sha256": "915821a42cfd5f2cfdfe07293f29af940ffea6060f17cf05a377270b2eaa358f"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/ui/ai_assistance_panel.py",
+        "sha256": "ad69b4edfd9d2cccfa3469a55fb534d2ebd2426370b73104bdf0faddbf72fd5e"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/ui/intelligent_optimization_panel.py",
+        "sha256": "38da06f24e9840a67747b87653e49df9d3e8ba2cbd51146a563e8ba913b803a3"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/ui/optimization_panel.py",
+        "sha256": "844b72a372e41f280f18c84ea0f395f2f789302e74be98f136abd6e306169c17"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/ui/panels.py",
+        "sha256": "7bca000734e8c02f8a4459e12c439b0ee2167edab60c62b267a121c330ccde7a"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/ui/printability_panel.py",
+        "sha256": "308acb41e76b9f3f1e77eb637f224c940b0a09d2acbebb45204abc6ea5469bd2"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/ui/properties.py",
+        "sha256": "26d06dfa7a1a2999fef06f27240254317f9f9b205df9680db2e02152d6a665b8"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/ui/repair_panel.py",
+        "sha256": "de9a1efa259ddf009ba0c4891ad543fef35e73c59398ccfd89785e8ec8f1c7bd"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/utilities/__init__.py",
+        "sha256": "636c7c0e55899fe7146db071f2491a0e809753d995e6408e62863cbb77427d95"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/utilities/blender_paths.py",
+        "sha256": "08b8aaceb97cf1bb8058093bb2c6e963e368f6b4a87374dd1405b7e758ef5760"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/utilities/boundary_loops.py",
+        "sha256": "eba08d39101268973b21a0c59e252385fe09f0c05b447856b9f6a94d34181757"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/utilities/context.py",
+        "sha256": "2d83658137078b69fb36eca091fbb7dcb74fb939903aed76f00a0392db1be7c3"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/utilities/geometry.py",
+        "sha256": "a61942d74dd89b196cc16a96388ffdb7404e6ce7026aece812c4bd2d80d56967"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/utilities/logging.py",
+        "sha256": "ea61555143b7f326e331f2a52100383ab334cf868228dcae94ad10f6d417cd09"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/utilities/optimization_signatures.py",
+        "sha256": "0ce4038d159c7b56cfcec1c7849638248bd33285d755b7151e28379bd441f0b1"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/utilities/printability_signatures.py",
+        "sha256": "3b02279b23f706c2d74f8d1c4a6e470002e962796922e9a6d5b0227411a7b773"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/utilities/repair_signatures.py",
+        "sha256": "9cb9d11798701076956af6d94f656049d0a5f7629b046323bb28096ae4b5e2f6"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/utilities/signatures.py",
+        "sha256": "bc35dc37d2fac01890eda32dae6e6654431efcf56b226539231e643238462785"
+      },
+      {
+        "path": "blender_addon/chroma3d_sculpt/utilities/units.py",
+        "sha256": "60fc9a1765ab42e5e4abacab2390a02c7b81446401984e61c66a4f264825f98f"
+      },
+      {
+        "path": "manual-tests/sprint7-final/final_validation_runner.py",
+        "sha256": "dc7ce6fa9766d3792203ee909179871e9c00bc3675f3f80258d14ab29d087554"
+      },
+      {
+        "path": "manual-tests/sprint7-final/installed_extension_smoke.py",
+        "sha256": "aa2f6431d2a63a2dcbce18090bb77cdb74411a23dd01fcdac8017f6fea31f688"
+      },
+      {
+        "path": "manual-tests/sprint7-final/run_final_validation.py",
+        "sha256": "bcbc2c47e40c4dbf2f377565b29cc3d6bb53b91a283758158f61f2830ef72b19"
+      },
+      {
+        "path": "manual-tests/sprint7-final/run_installed_package_smoke.py",
+        "sha256": "d75114682972365b6a520508c476d7da7b82defa2be0eaaf19c9480a0f4612a0"
+      },
+      {
+        "path": "manual-tests/sprint7-final/run_security_scan.py",
+        "sha256": "da1bfefc95633d08d67fc85d16264c6ee900fa79bd4a22261fd0f25f8c0f4529"
+      },
+      {
+        "path": "manual-tests/sprint7/dataset_blender_worker.py",
+        "sha256": "f467b0ee19063775d9ee315db4ed0218cc2d7e9bbc5e79b3ee408e0e614204b9"
+      },
+      {
+        "path": "manual-tests/sprint7/historical_layer_worker.py",
+        "sha256": "644b279e6cdf828e09f8e06514a9a62ad8c967c8c08ff5b0dd6616dd88cb35e8"
+      },
+      {
+        "path": "manual-tests/sprint7/release_input_fingerprint.py",
+        "sha256": "4784725cde4c7fbda6eeec66f1edf8695873c5e40895b6831f648d094b2487ef"
+      },
+      {
+        "path": "manual-tests/sprint7/run_dataset_validation.py",
+        "sha256": "9532ecc7044bb1d3d3c7f5ab70db56a8d86dcd2e99d8ce39724ee511636debc2"
+      },
+      {
+        "path": "manual-tests/sprint7/run_historical_layers.py",
+        "sha256": "2d14e8aaa4d4f5502593702076bc02ddf7f9cdc70ae05c461c8b18b0b3839bad"
+      },
+      {
+        "path": "manual-tests/sprint7/run_performance_environment.py",
+        "sha256": "7ddfb54d64420948ac68b1ae7be7280e4dc697ca0f76d078460e9acc3b793e90"
+      },
+      {
+        "path": "manual-tests/sprint7/run_sprint7_acceptance.py",
+        "sha256": "7e9994ff1f09ccb45ede47160b54be97d0fe302adfcc799568e9453a77b061a8"
+      },
+      {
+        "path": "manual-tests/sprint7/sprint7_synthetic_acceptance_runner.py",
+        "sha256": "cf50c534b8d741335206a851461b947cdff4e3924be34c1dbc0424dbf5a87d8b"
+      },
+      {
+        "path": "profiles/materials/custom_material.template.json",
+        "sha256": "961e2018392ac1d30528bce6750e2b103e10397a5f6e594b85d1f61d6e6d498e"
+      },
+      {
+        "path": "profiles/materials/generic_abs.json",
+        "sha256": "d6c0be9d8827c739c28d2f79c37647c4d73b36c360ba0f71fe1c1954dac0e7cf"
+      },
+      {
+        "path": "profiles/materials/generic_asa.json",
+        "sha256": "c655db60789611b5dd5904d38101da294bb9359c07fc2e37e5ec15d939ecb25f"
+      },
+      {
+        "path": "profiles/materials/generic_petg.json",
+        "sha256": "3a88172e9886aea0ffa3b8426d10e3d981fd36cbe0611b6264430406642e69fc"
+      },
+      {
+        "path": "profiles/materials/generic_pla.json",
+        "sha256": "33f577ee0879cbaa63eb187275389e05ec82b2eff2d4a4fe85a2641abc71c492"
+      },
+      {
+        "path": "profiles/materials/generic_resin.json",
+        "sha256": "e6e3e5f9b634bfad35ee8df8a48c9acbfafec35d4ad05b79e0e4d57f8ae066c5"
+      },
+      {
+        "path": "profiles/materials/generic_tpu.json",
+        "sha256": "52e07d15224103ab4233837f9bc5fdec55c36e8fa601751fae4f8af06e9fa24a"
+      },
+      {
+        "path": "profiles/printability/README.md",
+        "sha256": "a19ca292b6ffadf04a03f993be58aef18b154df5b6e2c0d0a27c5c234bc67d3b"
+      },
+      {
+        "path": "profiles/printability/bambu_p1s.json",
+        "sha256": "a5eca1ee83f549b8a3664a02c6d40da721168d8909b85e505d72449fc8594bdb"
+      },
+      {
+        "path": "profiles/printability/bambu_x1_carbon.json",
+        "sha256": "9f2ee3de247279c3df17a0b31b614920ccdc254e499e8f16ab83a982834fcf7b"
+      },
+      {
+        "path": "profiles/printability/custom_profile.template.json",
+        "sha256": "b3ab6de24e1f007548015baf57f13c3b9eac256fab636ccaa115fc588a669db0"
+      },
+      {
+        "path": "profiles/printability/generic_fdm.json",
+        "sha256": "d13b2313f48f009a309349ae2402c2da4020596a7e182d978b1c15838e6dc294"
+      },
+      {
+        "path": "profiles/printability/generic_resin.json",
+        "sha256": "b541274e8757472d0dc374c89bd4fd2f55213889ad0feaa89578308af9c350af"
+      },
+      {
+        "path": "profiles/printability/prusa_mk4.json",
+        "sha256": "261640c665240dc4645032fd80b1384e45c29acd03cc07771b1424a0fe8427f4"
+      },
+      {
+        "path": "schemas/advanced_preparation_report.schema.json",
+        "sha256": "4eae27114f180afa7c030de6a9d4f811c57ee554d04ce2554892a7593dfd2dd7"
+      },
+      {
+        "path": "schemas/ai_recommendation.schema.json",
+        "sha256": "0eb29054dbd49a573eee3f2777023cf99d2905e457f03fbb2635974a4b3cdd17"
+      },
+      {
+        "path": "schemas/archive_index.schema.json",
+        "sha256": "dad183eee77fad082b49349bfddc6d9578d2f357f612b4d2ab724e3e1f4a5b3e"
+      },
+      {
+        "path": "schemas/assistance_audit.schema.json",
+        "sha256": "627d5af197530fe5e866b177222cec47fdff189c99196e79a06e7dc2f1b132c9"
+      },
+      {
+        "path": "schemas/assistance_policy.schema.json",
+        "sha256": "660afd55494a2e31ccbea5008d5f3d9b3d6bd8fd64366c17b3db931a73f9dbfe"
+      },
+      {
+        "path": "schemas/assistance_report.schema.json",
+        "sha256": "0e8fcc23057e4965e1a01066de7a22179d2ea1e09aa58bd39d3fa8227123fbb0"
+      },
+      {
+        "path": "schemas/assistance_session.schema.json",
+        "sha256": "192fce7fd5f08499e20487cd8e21363d55c81b921a5e744244093f8c09da8428"
+      },
+      {
+        "path": "schemas/batch_preparation.schema.json",
+        "sha256": "72c0856d17190d9f9aed64f0cf1de11654417166775c9db3c64cbf87028cbd9c"
+      },
+      {
+        "path": "schemas/benchmark_lock.schema.json",
+        "sha256": "c8722a16a7df71e288ec3f34fa8bead52cde365c419ac96247d2a3535573fd60"
+      },
+      {
+        "path": "schemas/composed_process_context.schema.json",
+        "sha256": "3fb56a2b08edada542ac0e54e726b04382cd1bf1834216df25d9b749041e1eae"
+      },
+      {
+        "path": "schemas/constraint_set.schema.json",
+        "sha256": "8b609a61eda3ed8b5c96f164ccced9405a183b8fd5400600c13c026dbff601d9"
+      },
+      {
+        "path": "schemas/context_manifest.schema.json",
+        "sha256": "4e2ba6633bcd68d68ce40430fb673c119fb5d37860c1b5591c7b38f10b80c0de"
+      },
+      {
+        "path": "schemas/dataset_lock.schema.json",
+        "sha256": "259b8606ac2e1c3624854e514142d38455ed2f3d27bd87ef4c249aa7d65c9e6e"
+      },
+      {
+        "path": "schemas/feature_flags.schema.json",
+        "sha256": "e73262e7c6188604382b4261cae09aed8be5b6b466d4875360c73c2c49f90e56"
+      },
+      {
+        "path": "schemas/intelligent_optimization_audit.schema.json",
+        "sha256": "7c5d8ff6110759652de26a9a7bdb9bd361ba529cf5d26ce4a2d4228897e635b3"
+      },
+      {
+        "path": "schemas/intelligent_search_policy.schema.json",
+        "sha256": "d21e67ef31a13e6fc2382cc6404500462e8f31199f935ca3d13e6ca7d7832915"
+      },
+      {
+        "path": "schemas/intelligent_strategy.schema.json",
+        "sha256": "37e1d2f4048604e5099ea4e5c01fd245a55cfd2f857390ca342fae7e8faadfe2"
+      },
+      {
+        "path": "schemas/material_profile.schema.json",
+        "sha256": "533ecf4bc1ae85f02f7b9ad3e678262a720ed5acba49a8078dc12f0940465ecf"
+      },
+      {
+        "path": "schemas/optimization_audit.schema.json",
+        "sha256": "2e52ad7f6741c96198767e6c8852ccda5830d847c3b77970dde4c82146e71dcd"
+      },
+      {
+        "path": "schemas/optimization_candidate.schema.json",
+        "sha256": "4a310b45fed906f72a930db28142ab66b967851b2351c7017db7addcec4f8049"
+      },
+      {
+        "path": "schemas/optimization_comparison.schema.json",
+        "sha256": "0956d579742dbdaa482d924c8525abc30191f2ed159dfae3a6c7fb358c45932d"
+      },
+      {
+        "path": "schemas/optimization_history.schema.json",
+        "sha256": "6a29f7e214537cda19060eef8b03e8e454bdba48e509ad4b6f0f2f2c49fa16c6"
+      },
+      {
+        "path": "schemas/optimization_plan.schema.json",
+        "sha256": "344eb1afc349df9bf6552797306ad10da49e4ed9882e9fdf7ab2b236bdd97ab1"
+      },
+      {
+        "path": "schemas/optimization_policy.schema.json",
+        "sha256": "73983ece0a0d6cf11c8f6e81e657692533c29af7e89e6466cd40a13a9c8e8af8"
+      },
+      {
+        "path": "schemas/optimization_session.schema.json",
+        "sha256": "16c9703d9608ed89ff0322bc68554cd3e75dcb6b6a5f86bfd3b2f533c2584ccf"
+      },
+      {
+        "path": "schemas/orientation_candidate.schema.json",
+        "sha256": "87f430405be79118a4ca3e6b96446f274d193686d98019277450a9c3aa9f7aa0"
+      },
+      {
+        "path": "schemas/pareto_frontier.schema.json",
+        "sha256": "4c4b39b307e0f62e9fa5f93ae6b234d4191b84ace42ce3df935b9f89db8643af"
+      },
+      {
+        "path": "schemas/performance_registry.schema.json",
+        "sha256": "db8249e23c73667f0b3dd0c465f4264d9c3a12c1342f136f45e229429bd7ce19"
+      },
+      {
+        "path": "schemas/printability_baseline.schema.json",
+        "sha256": "3326729bffaa3edf2965b83901ada2940b2b6ca39db196c93254d8289c81378d"
+      },
+      {
+        "path": "schemas/printability_report.schema.json",
+        "sha256": "14f1a9a6204e4e13f09654b41511881aafb93016b7c839d1343b046bd7c6e161"
+      },
+      {
+        "path": "schemas/printability_risk_item.schema.json",
+        "sha256": "1b544d1451b4c12014aee25d549d23d683e4d6e2a4448d9b0698a1d445b6e422"
+      },
+      {
+        "path": "schemas/printability_settings.schema.json",
+        "sha256": "1fc278d391b02e1c0ef724ecddf75b55d6179d0d3c704f5149b18647916ee0da"
+      },
+      {
+        "path": "schemas/printer_profile.schema.json",
+        "sha256": "edb757e52e5f7588f110d7e18d05132af00357ff7531130b8459bdc52f542a63"
+      },
+      {
+        "path": "schemas/provider_exchange.schema.json",
+        "sha256": "8f9210904494cdb07c649094a0e9f49ad34c1a28be1ec15ab03ab83e601585b8"
+      },
+      {
+        "path": "schemas/regression_dashboard.schema.json",
+        "sha256": "24be3724d13c60ac9f33c38ee1f1718cd16b6a312ffe4cb587808e9df0f5b5cd"
+      },
+      {
+        "path": "schemas/sprint7-draft/ai_recommendation.schema.json",
+        "sha256": "a9ddfebbc73174a1baecb07eee29ef86122a1ce35e9b26d7c5f3deb70fe185ad"
+      },
+      {
+        "path": "schemas/sprint7-draft/assistance_audit.schema.json",
+        "sha256": "6a96405d2c2bc5fdb54b800592f45f819d46a7087ab918a0b3633c8c7ae10177"
+      },
+      {
+        "path": "schemas/sprint7-draft/assistance_policy.schema.json",
+        "sha256": "016a97e1bacfcdf09482ea93b24c298f655911227b9a5b46e6b7facdb611df05"
+      },
+      {
+        "path": "schemas/sprint7-draft/assistance_report.schema.json",
+        "sha256": "b18ee88424819edb972cf2320dc86918ceb2589ba6a95b9665687536637b596f"
+      },
+      {
+        "path": "schemas/sprint7-draft/assistance_session.schema.json",
+        "sha256": "889bb3d5dfaaa79503098afad2534c9962634eeaa3cd038972bbf3e64ed3b050"
+      },
+      {
+        "path": "schemas/sprint7-draft/context_manifest.schema.json",
+        "sha256": "f679f2ca37511b109fc1ea882221c5b06850f4bd914113cfab115130b43656a7"
+      },
+      {
+        "path": "schemas/sprint7-draft/provider_exchange.schema.json",
+        "sha256": "212e4c5eb5dab9c4c99be123147c7068d7c74e322f5d6ccc1560ade707ec50f2"
+      },
+      {
+        "path": "schemas/strategy_explanation.schema.json",
+        "sha256": "6b8604688ef03d03464aff7d83e82ec82c39b4b2529ec510129fb27403aff1d5"
+      },
+      {
+        "path": "schemas/strategy_ranking.schema.json",
+        "sha256": "0b3c87f94b18a89c64b6474ad823fcaf684fed199ef6e21104c06ea552b76e39"
+      },
+      {
+        "path": "schemas/strategy_set.schema.json",
+        "sha256": "6e8fc0f130545e5aa5d1df65012c5d091158f6612b0409652b3fa8998217c01a"
+      },
+      {
+        "path": "scripts/_project.py",
+        "sha256": "80cca2a9e2a18cb9f4eb6da761ade151ba56a8205e81bf02906c73caadc97c92"
+      },
+      {
+        "path": "scripts/package_extension.py",
+        "sha256": "d93200ac532d8ed36bc111e979e607c2746f46b3c9710303829f714ae0a46f93"
+      },
+      {
+        "path": "scripts/validate_package.py",
+        "sha256": "1b7e37d753eb6b22140680d7ba8413f2c088fc51a0713a4e9589f3fed2176f67"
+      },
+      {
+        "path": "tests/blender/run_sprint7_tests.py",
+        "sha256": "3eb69bcb85f9ade847816abe91122063ff2077d2c99f0cb468ad1f30b0ef0708"
+      },
+      {
+        "path": "tests/blender/test_sprint7_ai_recommendation.py",
+        "sha256": "c3bb769cb3835c948d458655b3fc8131fc71083cf7e30263af2d78a75863e640"
+      }
+    ]
+  },
+  "safety": {
+    "h3_artifacts_modified": false,
+    "product_or_package_version_changed": false,
+    "source_geometry_mutated": false,
+    "sprint8_started": false
+  },
+  "schema_version": "1.0.0",
+  "version": {
+    "display_version": "0.8.0-alpha.1",
+    "extension_version": "0.8.0"
+  }
+}

@@ -81,6 +81,8 @@ manual-tests/sprint7-final/logs/
 manual-tests/sprint7-final/artifacts/
 manual-tests/sprint7-final/screenshots/
 manual-tests/hardening/reports/
+manual-tests/hardening/h4/reports/
+manual-tests/hardening/h4/logs/
 manual-tests/physical-print-validation/runs/
 manual-tests/physical-print-validation/photos/
 manual-tests/physical-print-validation/slicer-exports/

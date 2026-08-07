@@ -183,10 +183,10 @@ Use `--offline` after acquisition. See [DATASET_STORAGE_POLICY.md](DATASET_STORA
 - Self-intersection results are candidates; containment is a bounded heuristic with confidence evidence.
 - Build-volume and scale evaluation is rectangular and advisory; it performs no rotation or scaling.
 - The original source is preserved, but repaired workspace copies still require human review.
-- An unfinished repair session is session-only and is not guaranteed to survive Blender restart or extension reload.
+- Unfinished diagnostic, repair, optimization, and AI-assistance sessions are session-only. Save/reload and extension reload clear their transient IDs, previews, approvals, cancellation state, and runtime object references; start a fresh session after reload.
 - There is no remeshing, large-hole reconstruction, Boolean repair, wall-thickness repair, decimation, object joining, modifier application, automatic scaling, or print support generation.
 - Printability and manufacturing success are not guaranteed.
 - Manual interactive installed-panel testing, Blender 4.5 LTS validation, and real Chroma3D statue repair UAT remain deferred.
-- Runtime code is offline and uses only Blender APIs plus Python's standard library. It contains no AI/LLM API, telemetry, credentials, server, downloaded code, arbitrary `eval`/`exec`, or external package. Intelligent Optimization is rule-based local intelligence, not generative AI.
+- Core runtime workflows are offline and use only Blender APIs plus Python's standard library. The optional Sprint 7 provider adapter can make one explicit consented BYOK HTTPS request; keys remain process-memory/environment only. There is no telemetry, bundled credential, server component, downloaded code, arbitrary `eval`/`exec`, or external Python package. Intelligent Optimization itself is rule-based local intelligence, not generative AI.
 
 Runtime paths are derived from Blender APIs and package-relative files. Windows paths containing spaces are supported.
