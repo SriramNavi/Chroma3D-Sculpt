@@ -1,0 +1,2300 @@
+{
+  "case_count": 27,
+  "cases": [
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          100.148406982,
+          51.798042297,
+          128.312927246
+        ]
+      },
+      "case_hash": "63e1683799e6c84e29f700eabc2b44fff9f8f44ab1a212cf80fea38d5405be97",
+      "case_id": "statue-asad-al-lat",
+      "category": "monument_reconstruction",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": "a2353017ff34f9c340c097f2bf21627d0b00fdabf2f02d548a8ecc5cb4cb5ec7",
+          "hash_basis": "DECODED_RGBA8_PIXELS",
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-asad-al-lat/front.png",
+          "sha256": "1acb5249630098404e45dd24bbc1146efb4f76b82b3080f6bf80a88d00f7d7fc",
+          "state": "READY",
+          "view": "front"
+        },
+        {
+          "file_sha256": "f733634429c9e6f9e10819583b99269b5bcc201446b9784eee7043954b38218a",
+          "hash_basis": "DECODED_RGBA8_PIXELS",
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-asad-al-lat/front_three_quarter.png",
+          "sha256": "8a68530f5d7cde251f2ce53106b98df17166a5e091650bc8535f55489d55d903",
+          "state": "READY",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": "a6adf6c09b6d29218f0a4b1bdf3937535a8ff2e632cd85e3ba68e115544c5af8",
+          "hash_basis": "DECODED_RGBA8_PIXELS",
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-asad-al-lat/side.png",
+          "sha256": "3e8f921a1360a0e86e5a511ec73354b27a9b790bbb6a65480f02b6ceb5ff5ef9",
+          "state": "READY",
+          "view": "side"
+        },
+        {
+          "file_sha256": "450f67255f692994138f545137c02c0abeccce21eaad97bc76f593e5f653a18e",
+          "hash_basis": "DECODED_RGBA8_PIXELS",
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-asad-al-lat/back.png",
+          "sha256": "c59b9e5f7122734433550a047a18bc24eba0813a34cfa8b76282f3d1f77f4921",
+          "state": "READY",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Digitally reconstructed heritage statue; useful low-size topology case.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {
+        "back": "c59b9e5f7122734433550a047a18bc24eba0813a34cfa8b76282f3d1f77f4921",
+        "front": "1acb5249630098404e45dd24bbc1146efb4f76b82b3080f6bf80a88d00f7d7fc",
+        "front_three_quarter": "8a68530f5d7cde251f2ce53106b98df17166a5e091650bc8535f55489d55d903",
+        "side": "3e8f921a1360a0e86e5a511ec73354b27a9b790bbb6a65480f02b6ceb5ff5ef9"
+      },
+      "rights_or_provenance": {
+        "author": "Georges Dahdouh",
+        "credit": "http://www.newpalmyra.org/models/asad-al-lat/",
+        "license": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:Asad_Al-Lat.stl?oldid=1066647155",
+        "title": "Asad Al-Lat"
+      },
+      "single_image_reference": {
+        "file_sha256": "f733634429c9e6f9e10819583b99269b5bcc201446b9784eee7043954b38218a",
+        "hash_basis": "DECODED_RGBA8_PIXELS",
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-asad-al-lat/front_three_quarter.png",
+        "sha256": "8a68530f5d7cde251f2ce53106b98df17166a5e091650bc8535f55489d55d903",
+        "state": "READY",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-asad-al-lat",
+      "source_sha256": "5748e4d150a370f34328ea768ced85ccafcaae6dd3c3891f2c0e80fb0a7a4ac8",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-asad-al-lat.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          101.577941895,
+          154.735855103,
+          208.686584473
+        ]
+      },
+      "case_hash": "9f076418d3ed4eec88deeb38a4cc37a8f743cbd8b808bb9b8df682c8009d4350",
+      "case_id": "statue-bastet",
+      "category": "figurine",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-bastet/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-bastet/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-bastet/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-bastet/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Small stylized statue representing a low-complexity regression case.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "Gargi ( https://www.thingiverse.com/Gargi ) / Christian Kuhn",
+        "credit": "https://www.thingiverse.com/thing:1548367",
+        "license": "CC-BY-4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:Thingiverse_-_Bastet.stl?oldid=722199083",
+        "title": "Bastet"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-bastet/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-bastet",
+      "source_sha256": "5fe8b7d22c7831f9e53dbd2ab70691945583be5fb3bcd681df16df7d5d683d22",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-bastet.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          3.740250111,
+          4.648711205,
+          6.662615776
+        ]
+      },
+      "case_hash": "43fa37e6319d13e565e8ee9a24b11daa516796bf4f24ee3c9046930d5bf02fba",
+      "case_id": "statue-bato-kannon-shirane",
+      "category": "temple_monument",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-bato-kannon-shirane/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-bato-kannon-shirane/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-bato-kannon-shirane/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-bato-kannon-shirane/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Weathered religious stone scan with inscriptions.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "小池 隆",
+        "credit": "Own work",
+        "license": "CC-BY-4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:%E9%A6%AC%E9%A0%AD%E8%A6%B3%E9%9F%B3%EF%BC%88%E6%A8%AA%E6%B5%9C%E5%B8%82%E6%97%AD%E5%8C%BA%E7%99%BD%E6%A0%B9%E7%94%BA%EF%BC%89.stl?oldid=1209099341",
+        "title": "Batō Kannon at Shirane"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-bato-kannon-shirane/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-bato-kannon-shirane",
+      "source_sha256": "e3695cb8fee26543780b9ab135a933d881c598a6247fde6fb2e265a73d4d5659",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-bato-kannon-shirane.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          65.785903931,
+          62.509109497,
+          125.0
+        ]
+      },
+      "case_hash": "46f7ef1845d41402e0b7a72f73a256cff9f93fdf1944a3058b262097640fd8fa",
+      "case_id": "statue-belvedere-torso",
+      "category": "fragment",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-belvedere-torso/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-belvedere-torso/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-belvedere-torso/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-belvedere-torso/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Fragmentary sculpture for incomplete-form regression coverage.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "Scan the World",
+        "credit": "Own work",
+        "license": "CC-BY-SA-4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:Scan_the_World_-_Belvedere_Torso.stl?oldid=719732658",
+        "title": "Belvedere Torso"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-belvedere-torso/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-belvedere-torso",
+      "source_sha256": "fb1499ce2052f47d693365d04b5e92e7eb0eee88051646a82b01e1bd3450e254",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-belvedere-torso.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          0.579562128,
+          0.680234492,
+          0.356370419
+        ]
+      },
+      "case_hash": "d3e4f52bfeeeefda1ec7a2e83a18ce387c707d636161eb3a920ac86afbb5967c",
+      "case_id": "statue-caracalla-bust",
+      "category": "bust",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-caracalla-bust/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-caracalla-bust/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-caracalla-bust/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-caracalla-bust/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Compact portrait-bust regression case.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "AsPJT",
+        "credit": "Own work",
+        "license": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:Bust_of_Emperor_Caracalla.stl?oldid=1102118096",
+        "title": "Bust of Emperor Caracalla"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-caracalla-bust/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-caracalla-bust",
+      "source_sha256": "a1a44d0b2ed7c64ebd4439ab4f8aaa8798ac8f8e77e449bdd01dbc58ee97b2a5",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-caracalla-bust.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          8.7020998,
+          6.806799889,
+          5.612299919
+        ]
+      },
+      "case_hash": "e14835f0e4ff5803cd216a15804581938d02d455d55ae782ba2bd163fdd9b130",
+      "case_id": "statue-castlestrange-stone",
+      "category": "ornamental_stone",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-castlestrange-stone/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-castlestrange-stone/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-castlestrange-stone/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-castlestrange-stone/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Carved stone provides a non-figurative sculptural surface case.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "roscommon3d",
+        "credit": "Sketchfab - roscommon3d",
+        "license": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:Castlestrange_Stone_-_3D_model_by_roscommon3d_-_Sketchfab.stl?oldid=1117245400",
+        "title": "Castlestrange Stone"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-castlestrange-stone/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-castlestrange-stone",
+      "source_sha256": "c49ddccd090fe0ff9657bfa653823dfd13e4112b08c0afbe35790a4cae1ee4e1",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-castlestrange-stone.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          635.63659668,
+          317.148803711,
+          1514.708740234
+        ]
+      },
+      "case_hash": "1844d30be3e1832daac29ac73b2424bc6ff392120ec373e3bfdbd81406b256f0",
+      "case_id": "statue-cosmic-buddha-smithsonian-150k",
+      "category": "full_statue",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": "d2d2975a30a85f169d478f4ff43cf423581d8e961ee303025511cbe47428162b",
+          "hash_basis": "DECODED_RGBA8_PIXELS",
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-cosmic-buddha-smithsonian-150k/front.png",
+          "sha256": "50d68ce5f87f41d11754eb6f39599725b8a6dcd9ae57454941881f0e18c765d0",
+          "state": "READY",
+          "view": "front"
+        },
+        {
+          "file_sha256": "7863f8a1089058c0636e55ac4893017e1819191b7c3a969890152d88204104ba",
+          "hash_basis": "DECODED_RGBA8_PIXELS",
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-cosmic-buddha-smithsonian-150k/front_three_quarter.png",
+          "sha256": "b79b27b5109057cb33e05bbe953cb270a97b3420f52786a4f5b152d4d532750c",
+          "state": "READY",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": "221816e18f27f4769f0a23517c11971e83a853a1bc06ed5939bebf712fef503d",
+          "hash_basis": "DECODED_RGBA8_PIXELS",
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-cosmic-buddha-smithsonian-150k/side.png",
+          "sha256": "0038a3d6bb6b689246dc052b79ecffe213312ce086aa052a1ae1afee74221a78",
+          "state": "READY",
+          "view": "side"
+        },
+        {
+          "file_sha256": "e23e516e55a4d2164a0fe43478899d36878d09dc4e2adee03d88171c29fefd61",
+          "hash_basis": "DECODED_RGBA8_PIXELS",
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-cosmic-buddha-smithsonian-150k/back.png",
+          "sha256": "c333ac00403994ba9a0c14dbefa408a7cb4171202564f8e527550a650e427902",
+          "state": "READY",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Decimated 150k-mesh derivative selected instead of the 2.88 GiB source.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {
+        "back": "c333ac00403994ba9a0c14dbefa408a7cb4171202564f8e527550a650e427902",
+        "front": "50d68ce5f87f41d11754eb6f39599725b8a6dcd9ae57454941881f0e18c765d0",
+        "front_three_quarter": "b79b27b5109057cb33e05bbe953cb270a97b3420f52786a4f5b152d4d532750c",
+        "side": "0038a3d6bb6b689246dc052b79ecffe213312ce086aa052a1ae1afee74221a78"
+      },
+      "rights_or_provenance": {
+        "author": "Smithsonian Institution",
+        "credit": "https://3d.si.edu/object/3d/buddha-draped-robes-portraying-realms-existence:d8c62be8-4ebc-11ea-b77f-2e728ce88125 https://web.archive.org/web/20230817191455/https://3d.si.edu/object/3d/buddha-draped-robes-portraying-realms-existence:d8c62be8-4ebc-11ea-b77f-2e728ce88125",
+        "license": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:Cosmic-buddha-laser-scan-150k_(Smithsonian_Institution).stl?oldid=1152115014",
+        "title": "Cosmic Buddha, 150k laser scan"
+      },
+      "single_image_reference": {
+        "file_sha256": "7863f8a1089058c0636e55ac4893017e1819191b7c3a969890152d88204104ba",
+        "hash_basis": "DECODED_RGBA8_PIXELS",
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-cosmic-buddha-smithsonian-150k/front_three_quarter.png",
+        "sha256": "b79b27b5109057cb33e05bbe953cb270a97b3420f52786a4f5b152d4d532750c",
+        "state": "READY",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-cosmic-buddha-smithsonian-150k",
+      "source_sha256": "de75f3aa58ed3da3e27884cd96671ef172c98ce26f1b78510c4f3dda88e91e72",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-cosmic-buddha-smithsonian-150k.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          2.922760963,
+          3.591210127,
+          4.439566612
+        ]
+      },
+      "case_hash": "58996f10c5a26168e2d027ab9387b673bac9909ff8aed0ad9ba93e6613cedc34",
+      "case_id": "statue-dainichi-nyorai-tower",
+      "category": "temple_monument",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-dainichi-nyorai-tower/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-dainichi-nyorai-tower/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-dainichi-nyorai-tower/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-dainichi-nyorai-tower/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Large inscribed stone monument scan.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "小池 隆",
+        "credit": "Own work",
+        "license": "CC-BY-4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E6%97%A5%E5%A6%82%E6%9D%A5%E5%A1%94%EF%BC%88%E5%8D%81%E4%BA%8C%E7%A5%9E%E7%A4%BE%EF%BC%89.stl?oldid=1158496989",
+        "title": "Dainichi Nyorai Tower at Jūni Shrine"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-dainichi-nyorai-tower/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-dainichi-nyorai-tower",
+      "source_sha256": "4df74fc23c926db090022b1f4104102322c94b95713d25a7f6a835ed79d5d9d8",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-dainichi-nyorai-tower.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          22.77299881,
+          12.269769669,
+          16.864620209
+        ]
+      },
+      "case_hash": "1858e1471adab0a21c0fad48e5180cde400312dcf4ebbe3d34a740d391b2a359",
+      "case_id": "statue-danaid-rodin",
+      "category": "full_statue",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-danaid-rodin/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-danaid-rodin/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-danaid-rodin/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-danaid-rodin/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Terracotta sculpture scan with a low, wide pose.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "Nationalmuseum",
+        "credit": "This file was made available from Sketchfab",
+        "license": "CC-BY-4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:Danaid_NMSk_1854_(Auguste_Rodin)_-_Nationalmuseum_-_76c5c234c6074b13a94bf793c276a509.stl?oldid=1127022594",
+        "title": "Danaid"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-danaid-rodin/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-danaid-rodin",
+      "source_sha256": "e369027a93ac6ad5b5765999f6c74fcc2fef1f9beceef244d02b9158d012c8e8",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-danaid-rodin.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          164.882003784,
+          113.752006531,
+          395.030029297
+        ]
+      },
+      "case_hash": "50d38bb6a52bee1abd26076279ad184704f4227536b4a486fc648966ab190308",
+      "case_id": "statue-david-michelangelo",
+      "category": "full_statue",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-david-michelangelo/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-david-michelangelo/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-david-michelangelo/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-david-michelangelo/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "High-detail full-body photogrammetry/structured-light model.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "Scan the World",
+        "credit": "Scan the World : Scan the World Homepage Information about artwork",
+        "license": "CC-BY-SA-4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:David_(Michelangelo).stl?oldid=1086853306",
+        "title": "David"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-david-michelangelo/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-david-michelangelo",
+      "source_sha256": "b41ad68e2b7a7377251f11201b6f9ba9569fa16422bec3719223f205d001c6f9",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-david-michelangelo.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          0.551629066,
+          0.468371689,
+          0.89809382
+        ]
+      },
+      "case_hash": "9b053b50985e68bfe7f26ab12b567fdc7151437e605a48c05a02b2fb5b59a754",
+      "case_id": "statue-ganesha-java-10c",
+      "category": "full_statue",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-ganesha-java-10c/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-ganesha-java-10c/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-ganesha-java-10c/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-ganesha-java-10c/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Volcanic-stone museum object scan.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "Minneapolis Institute of Art",
+        "credit": "Sketchfab - Minneapolis Institute of Art",
+        "license": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:Ganesha,_10th_-_11th_C_CE_-_3D_model_by_Minneapolis_Institute_of_Art_-_Sketchfab.stl?oldid=1102365366",
+        "title": "Ganesha, 10th–11th century CE"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-ganesha-java-10c/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-ganesha-java-10c",
+      "source_sha256": "5758dab5acda32bd928b0920c4fdb79ffc6c2211a141760a7ea6f15c261412b4",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-ganesha-java-10c.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          19.692323685,
+          20.078620911,
+          66.251602173
+        ]
+      },
+      "case_hash": "a95bd825385469728a8b3de368ed8a48ea23144db566c787ba1084b979f11302",
+      "case_id": "statue-greek-slave-smithsonian-150k",
+      "category": "full_statue",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-greek-slave-smithsonian-150k/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-greek-slave-smithsonian-150k/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-greek-slave-smithsonian-150k/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-greek-slave-smithsonian-150k/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Museum-provided decimated scan.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "Smithsonian Institution Smithsonian American Art Museum, Museum purchase in memory of Ralph Cross Johnson",
+        "credit": "https://3d.si.edu/object/3d/model-greek-slave:8edffe56-c358-4c3a-a61f-019f615ccef0 https://web.archive.org/web/20230820184207/https://3d.si.edu/object/3d/model-greek-slave:8edffe56-c358-4c3a-a61f-019f615ccef0",
+        "license": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:Greek-slave-plaster-cast-150k_(Smithsonian_Institution).stl?oldid=1043292947",
+        "title": "The Greek Slave, 150k plaster cast"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-greek-slave-smithsonian-150k/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-greek-slave-smithsonian-150k",
+      "source_sha256": "6057e7ac013894f5cff80f6faf4290c8356e6de0b1d6f227f0c38f3e74989f90",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-greek-slave-smithsonian-150k.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          0.404582977,
+          0.366312027,
+          0.594367027
+        ]
+      },
+      "case_hash": "acccaecf3b74fa82474aefb6f73a31b7473104f271ad2528a60c1bfe0d04c38a",
+      "case_id": "statue-hercules-archer-mia",
+      "category": "full_statue",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-hercules-archer-mia/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-hercules-archer-mia/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-hercules-archer-mia/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-hercules-archer-mia/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Museum object scan with extended limbs and weapon detail.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "Minneapolis Institute of Art",
+        "credit": "Sketchfab - Minneapolis Institute of Art",
+        "license": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:Pierre_Puget%27s_Hercules_as_Archer_-_3D_model_by_Minneapolis_Institute_of_Art_-_Sketchfab.stl?oldid=934019595",
+        "title": "Hercules as Archer"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-hercules-archer-mia/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-hercules-archer-mia",
+      "source_sha256": "30d178b8e2e8c769883409a1c85e28a429ce022385fa0a918e16eda41b223017",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-hercules-archer-mia.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          19.45866394,
+          30.60896492,
+          17.01115799
+        ]
+      },
+      "case_hash": "85ae713bc460c1323db8dccee5b8033b6fb3b220f4545ab481cffe23546734e5",
+      "case_id": "statue-heroic-head-pierre-de-wissant",
+      "category": "head",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-heroic-head-pierre-de-wissant/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-heroic-head-pierre-de-wissant/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-heroic-head-pierre-de-wissant/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-heroic-head-pierre-de-wissant/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "High-resolution expressive head study.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "Auguste Rodin",
+        "credit": "Sketchfab",
+        "license": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:1917.722_Heroic_Head_of_Pierre_de_Wissant_-_3D_model.stl?oldid=952762985",
+        "title": "Heroic Head of Pierre de Wissant"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-heroic-head-pierre-de-wissant/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-heroic-head-pierre-de-wissant",
+      "source_sha256": "e3fdcd7ff67f0400bb0517619998a0272e1b100858e1e4f8ad9ea88c622a571c",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-heroic-head-pierre-de-wissant.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          0.443898141,
+          0.527921379,
+          1.059275627
+        ]
+      },
+      "case_hash": "e3790599e41bd774cfeac8ebb73c3727e34f2f551768024d483024f8df22e3ce",
+      "case_id": "statue-hizen-komainu",
+      "category": "temple_guardian",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-hizen-komainu/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-hizen-komainu/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-hizen-komainu/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-hizen-komainu/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Large weathered photogrammetry mesh selected as a stress case.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "Kosuke Shinoda",
+        "credit": "Own work",
+        "license": "CC-BY-SA-4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:%E8%82%A5%E5%89%8D%E7%8B%9B%E7%8A%AC1%EF%BC%88%E5%85%AB%E9%BE%8D%E7%A4%BE%EF%BC%89.stl?oldid=1014662153",
+        "title": "Hizen Komainu at Hachiryū Shrine"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-hizen-komainu/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-hizen-komainu",
+      "source_sha256": "127e2da11069dbdc17166588cffae0e4f8eaca3128fbe6c8d78c8eb4808bcec8",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-hizen-komainu.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          2.015811205,
+          1.828345776,
+          1.802762866
+        ]
+      },
+      "case_hash": "0881cc6f4cb91fc601dad12e336a87c4245e732b74060b139c1a5d62bd6a5fe4",
+      "case_id": "statue-hotei-water-basin",
+      "category": "functional_sculpture",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-hotei-water-basin/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-hotei-water-basin/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-hotei-water-basin/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-hotei-water-basin/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Outdoor weathered sculpture scan.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "Asanagi",
+        "credit": "Own work",
+        "license": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:Ana-Hachimangu_water_basin_of_Hotei_2024-04-25.stl?oldid=1053387911",
+        "title": "Ana-Hachimangu Hotei water basin"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-hotei-water-basin/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-hotei-water-basin",
+      "source_sha256": "202b94e4eb8bb5d4c00cd1204aae620016dd1b2af114a89e6ab7295b5cc873da",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-hotei-water-basin.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          19.308298111,
+          30.12925148,
+          24.76385498
+        ]
+      },
+      "case_hash": "9e6f69052feb5fc6eaba8623cba1ee4ac8c52ca830b020af1d0c8f8d86c7b802",
+      "case_id": "statue-icarus-ioannidou",
+      "category": "full_statue",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-icarus-ioannidou/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-icarus-ioannidou/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-icarus-ioannidou/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-icarus-ioannidou/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Contemporary public-sculpture scan.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "citizenmordecai",
+        "credit": "https://sketchfab.com/3d-models/try-4-29ee3f6ce7c34b9e8dd5227b346300dd",
+        "license": "CC-BY-SA-4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:Icarus_sculpture_(Yiota_Ioannidou).stl?oldid=805323159",
+        "title": "Icarus"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-icarus-ioannidou/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-icarus-ioannidou",
+      "source_sha256": "00372f3bcd77cdcd7084b72bb16c8463f27c51e6a4b67dcbb43813023f94308e",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-icarus-ioannidou.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          80.327003479,
+          79.895004272,
+          129.350006104
+        ]
+      },
+      "case_hash": "f9f63d3d5abf9d4311996f383a9d8c4796395efe493f361231908d63b42127d5",
+      "case_id": "statue-juno-ludovisi",
+      "category": "head",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-juno-ludovisi/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-juno-ludovisi/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-juno-ludovisi/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-juno-ludovisi/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Large sculpted-head form.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "Scan the World",
+        "credit": "Own work",
+        "license": "CC-BY-SA-4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:Scan_the_World_-_Juno_Ludovisi.stl?oldid=971609087",
+        "title": "Juno Ludovisi"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-juno-ludovisi/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-juno-ludovisi",
+      "source_sha256": "972537da65064893f30d0859d2cb5801fb01aeb9c4de314959ddf58bce43b347",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-juno-ludovisi.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          87.179656982,
+          46.468536377,
+          122.591819763
+        ]
+      },
+      "case_hash": "9d4a180998f0cd13358e6f5e88999b731589b77c808c67de966e76831a645999",
+      "case_id": "statue-laocoon-group",
+      "category": "figure_group",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-laocoon-group/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-laocoon-group/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-laocoon-group/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-laocoon-group/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Complex multi-figure composition and repair-stress candidate.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "Scan the World",
+        "credit": "Own work",
+        "license": "CC-BY-SA-4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:Scan_the_World_-_Laocoon_Group.stl?oldid=922990168",
+        "title": "Laocoön Group"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-laocoon-group/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-laocoon-group",
+      "source_sha256": "8f962593056edf56ce0272b7c2c0c4d4fef0324a2fe90130ed6fc80fcb936700",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-laocoon-group.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          467.300994873,
+          501.532989502,
+          259.449951172
+        ]
+      },
+      "case_hash": "82cef62c63dc54eecfb0ad8a6b8cfde54c04cb3ad3b88252bb92904344615486",
+      "case_id": "statue-laurana-woman-bust",
+      "category": "bust",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-laurana-woman-bust/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-laurana-woman-bust/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-laurana-woman-bust/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-laurana-woman-bust/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Early structured-light digitization of a museum cast.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "ALoopingIcon",
+        "credit": "Own work",
+        "license": "CC-BY-SA-4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:Laurana.stl?oldid=1069945616",
+        "title": "Woman by Francesco Laurana"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-laurana-woman-bust/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-laurana-woman-bust",
+      "source_sha256": "607d09913adf730fc59c815ad4b38047a87b81148a8c16da8a5fec82a8485bce",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-laurana-woman-bust.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          3.200936317,
+          2.751725674,
+          2.87571907
+        ]
+      },
+      "case_hash": "d962a647d0d21b1be72284ca73c1cb3bb37f5d298134ba7d0b2d18a49f05c44b",
+      "case_id": "statue-mick-odwyer",
+      "category": "full_statue",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-mick-odwyer/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-mick-odwyer/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-mick-odwyer/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-mick-odwyer/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Modern clothed standing figure.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "Kerry3D @DH_Age",
+        "credit": "Sketchfab - Kerry3D @DH_Age",
+        "license": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:Mick_O%27Dwyer_-_3D_model_by_Kerry3D_@DH_Age_-_Sketchfab.stl?oldid=981936244",
+        "title": "Mick O'Dwyer"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-mick-odwyer/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-mick-odwyer",
+      "source_sha256": "3b72aa06f2458a69c232eaa8883bbff0aa7bbb089b82bb9f7986b2e0bb006c8a",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-mick-odwyer.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          130.000015259,
+          85.464004517,
+          123.936012268
+        ]
+      },
+      "case_hash": "54908d70fcbac9728446fc6ee6f0a269f2662161d4cea13adc8bf682b63ab395",
+      "case_id": "statue-pieta-michelangelo",
+      "category": "figure_group",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": "8fe7418c2369fb525e8eb246b51683c2737b4ceeb188863346bb3407c4784992",
+          "hash_basis": "DECODED_RGBA8_PIXELS",
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-pieta-michelangelo/front.png",
+          "sha256": "d89bb03626b646440fdd2fa15aac5379b808a254b28d8777fce974caa353a824",
+          "state": "READY",
+          "view": "front"
+        },
+        {
+          "file_sha256": "e165254bdc7848af19e027ed3fbd90ed4baa2c2d68e1c364fd65c1a43fc1f1fd",
+          "hash_basis": "DECODED_RGBA8_PIXELS",
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-pieta-michelangelo/front_three_quarter.png",
+          "sha256": "acd59a2a253f364dc14196a7800c067215a779aa4170a4a89444baad49b11262",
+          "state": "READY",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": "6e8d5cdc46ed43b069619aa920987d544908e5c023bf485c3b6a94caffcd1b79",
+          "hash_basis": "DECODED_RGBA8_PIXELS",
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-pieta-michelangelo/side.png",
+          "sha256": "bdee5df553126778849155beac982d70501d9fc316ed52c812f0bfabd0053036",
+          "state": "READY",
+          "view": "side"
+        },
+        {
+          "file_sha256": "860470f9dad2174abae6aea745c036259ba7c86a75f53d62e186493944255253",
+          "hash_basis": "DECODED_RGBA8_PIXELS",
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-pieta-michelangelo/back.png",
+          "sha256": "85513f3a6a6fb71117249e7abe10b642c17232546fe0e2641a2811d37140a505",
+          "state": "READY",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Drapery-rich two-figure composition.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {
+        "back": "85513f3a6a6fb71117249e7abe10b642c17232546fe0e2641a2811d37140a505",
+        "front": "d89bb03626b646440fdd2fa15aac5379b808a254b28d8777fce974caa353a824",
+        "front_three_quarter": "acd59a2a253f364dc14196a7800c067215a779aa4170a4a89444baad49b11262",
+        "side": "bdee5df553126778849155beac982d70501d9fc316ed52c812f0bfabd0053036"
+      },
+      "rights_or_provenance": {
+        "author": "Scan the World",
+        "credit": "Own work",
+        "license": "CC-BY-SA-4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:Scan_the_World_-_Piet%C3%A0_(Michelangelo).stl?oldid=874140670",
+        "title": "Pietà"
+      },
+      "single_image_reference": {
+        "file_sha256": "e165254bdc7848af19e027ed3fbd90ed4baa2c2d68e1c364fd65c1a43fc1f1fd",
+        "hash_basis": "DECODED_RGBA8_PIXELS",
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-pieta-michelangelo/front_three_quarter.png",
+        "sha256": "acd59a2a253f364dc14196a7800c067215a779aa4170a4a89444baad49b11262",
+        "state": "READY",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-pieta-michelangelo",
+      "source_sha256": "f77f638262a0e0fc7f3dc763bfeee228faad21057659de75c6c6697f420f60b4",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-pieta-michelangelo.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          77.316291809,
+          102.915237427,
+          130.0
+        ]
+      },
+      "case_hash": "2e6d0c86e1fb410da056fd1b07fe4c3a31754c953a1c4872f597a0363b040ab1",
+      "case_id": "statue-thinker-rodin",
+      "category": "full_statue",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-thinker-rodin/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-thinker-rodin/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-thinker-rodin/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-thinker-rodin/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Dense organic seated figure.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "Scan the World",
+        "credit": "Own work",
+        "license": "CC-BY-SA-4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:Scan_the_World_-_The_Thinker_(Auguste_Rodin).stl?oldid=1052789959",
+        "title": "The Thinker"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-thinker-rodin/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-thinker-rodin",
+      "source_sha256": "ae9427b19c0b5cc0c680a01793b361766cc6175be8ba6f1c9a0f0b30e2b3c5e7",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-thinker-rodin.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          0.838963509,
+          0.37879467,
+          1.518513918
+        ]
+      },
+      "case_hash": "f0b5d29396f8b53efa60454ba3bc37a707ce4f66225ec82de987a942a1f06696",
+      "case_id": "statue-uma-maheshvara-java-10c",
+      "category": "deity_group",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-uma-maheshvara-java-10c/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-uma-maheshvara-java-10c/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-uma-maheshvara-java-10c/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-uma-maheshvara-java-10c/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Sandstone museum object scan with multiple figures and attributes.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "Minneapolis Institute of Art",
+        "credit": "Sketchfab - Minneapolis Institute of Art",
+        "license": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:Uma-Maheshvara,_10th_-_11th_C_CE_-_3D_model_by_Minneapolis_Institute_of_Art_-_Sketchfab.stl?oldid=726063249",
+        "title": "Uma-Maheshvara, 10th–11th century CE"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-uma-maheshvara-java-10c/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-uma-maheshvara-java-10c",
+      "source_sha256": "db055654560c508fd97249b0c88c33663aceebd9d293091136e99fd259b86702",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-uma-maheshvara-java-10c.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          71.148002625,
+          64.978004456,
+          215.62600708
+        ]
+      },
+      "case_hash": "fc57a29bb2f6450c994d4fc9705f6b2ac05050067d4ec13ec533a00df0fbe12e",
+      "case_id": "statue-venus-de-milo",
+      "category": "full_statue",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-venus-de-milo/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-venus-de-milo/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-venus-de-milo/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-venus-de-milo/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Fragmentary full-body classical statue.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "Scan the World",
+        "credit": "Scan the World : Scan the World Homepage",
+        "license": "CC-BY-SA-4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:Scan_the_World_-_Venus_de_Milo.stl?oldid=967245707",
+        "title": "Venus de Milo"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-venus-de-milo/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-venus-de-milo",
+      "source_sha256": "4d00074ced679caf85e7539687626afa0410e17a9995188239ca820041fa13e8",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-venus-de-milo.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          69.883232117,
+          127.221031189,
+          58.056121826
+        ]
+      },
+      "case_hash": "f4614f41026bd846961d1530fbfa3edb13a5fc45a3f54aa0a5df6c5b13bcd567",
+      "case_id": "statue-venus-willendorf",
+      "category": "figurine",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-venus-willendorf/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-venus-willendorf/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-venus-willendorf/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-venus-willendorf/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Small artifact captured at comparatively high mesh density.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "Scan the World",
+        "credit": "MyMiniFactory",
+        "license": "CC-BY-SA-4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:Scan_the_World_-_Venus_of_Willendorf.stl?oldid=972874782",
+        "title": "Venus of Willendorf"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-venus-willendorf/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-venus-willendorf",
+      "source_sha256": "cafeab179c536661df227a1828f011080ae6c9704fd6021764e9fb53268a3029",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-venus-willendorf.stl"
+    },
+    {
+      "benchmark_tracks": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "canonical_dimensions": {
+        "normalization": "evaluation_copy_only",
+        "source_units": "unspecified",
+        "values": [
+          23.614601135,
+          23.71074295,
+          19.079969406
+        ]
+      },
+      "case_hash": "f3edb8847247ba5161a7e00812fd6542e41010077c51ec3a88083f77de63f9ec",
+      "case_id": "statue-water-buffalo-boy",
+      "category": "figure_group",
+      "ground_truth_geometry_available": true,
+      "multiview_references": [
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-water-buffalo-boy/front.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-water-buffalo-boy/front_three_quarter.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "front_three_quarter"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-water-buffalo-boy/side.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "side"
+        },
+        {
+          "file_sha256": null,
+          "hash_basis": null,
+          "path": ".validation-assets/generative-benchmark/reference-renders/statue-water-buffalo-boy/back.png",
+          "sha256": null,
+          "state": "NOT_RUN",
+          "view": "back"
+        }
+      ],
+      "notes": [
+        "Animal-and-human outdoor sculpture scan.",
+        "Source geometry is immutable; Track G is capability-only for this untextured ground truth."
+      ],
+      "prompt_if_defined": null,
+      "reference_render_hashes": {},
+      "rights_or_provenance": {
+        "author": "noe-3d.at",
+        "credit": "Sketchfab - noe-3d.at",
+        "license": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_revision_url": "https://commons.wikimedia.org/wiki/File:Wasserb%C3%BCffel_und_Knabe_-_3D_model_by_noe-3d.at_-_Sketchfab.stl?oldid=1088854094",
+        "title": "Water Buffalo and Boy"
+      },
+      "single_image_reference": {
+        "file_sha256": null,
+        "hash_basis": null,
+        "path": ".validation-assets/generative-benchmark/reference-renders/statue-water-buffalo-boy/front_three_quarter.png",
+        "sha256": null,
+        "state": "NOT_RUN",
+        "view": "front_three_quarter"
+      },
+      "source_dataset_version": "1.0.0",
+      "source_mesh_id": "statue-water-buffalo-boy",
+      "source_sha256": "6c08876527bf8d725224a85fce42048671e8ab67d9e5ca42cbd92a77b250951f",
+      "source_storage_hint": ".validation-assets/dataset/raw/statue-water-buffalo-boy.stl"
+    }
+  ],
+  "cgb_version": "0.1.0",
+  "corpus_hash": "d983ac3041e0e2c5568044c2e7cc88c9c5da7dbfa2bb9b7692d00d9e35299f0b",
+  "corpus_id": "CGB-GT27",
+  "render_config_hash": "629b3d1c93d9c4e3190a0b857cae580c21ba2b969e7f8f7e53993e8fe02133d1",
+  "rendered_case_count": 3,
+  "rights_cleared": true,
+  "schema_version": "1.0.0",
+  "source_dataset_name": null,
+  "source_dataset_version": "1.0.0",
+  "source_immutable": true,
+  "source_manifest_sha256": "3e763782e6271eff153c8c4097a8b841423b31962d1222e2baf208178559df9a",
+  "source_mutation_count": 0
+}

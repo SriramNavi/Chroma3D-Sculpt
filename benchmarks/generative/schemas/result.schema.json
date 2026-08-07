@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chroma3d.local/cgb/0.1/result.schema.json",
+  "title": "CGB Dimension-First Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "cgb_version", "run_id", "primary_truth", "dimension_directions", "scorecards", "pareto_frontier", "project_default_profile", "winner_declarations", "decision", "no_model_winner_declared", "limitations", "result_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "cgb_version": {"const": "0.1.0"},
+    "run_id": {"type": ["string", "null"]},
+    "primary_truth": {"const": "RAW_DIMENSIONS_AND_STATUSES"},
+    "dimension_directions": {"type": "object"},
+    "scorecards": {"type": "array", "items": {"type": "object"}},
+    "pareto_frontier": {"type": "array", "items": {"type": "string"}},
+    "project_default_profile": {"type": "object"},
+    "winner_declarations": {"type": "object"},
+    "decision": {"enum": ["G0_FRAMEWORK_COMPLETE_READY_FOR_BACKEND_EXECUTION", "G0_COMPLETE_WITH_RESULTS", "G0_COMPLETE_WITH_LIMITATIONS", "G0_BLOCKED"]},
+    "no_model_winner_declared": {"type": "boolean"},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "result_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

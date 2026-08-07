@@ -1,0 +1,25 @@
+{
+  "background_rgba": [0.18, 0.18, 0.18, 1.0],
+  "camera_lens_mm": 70.0,
+  "camera_positions": {
+    "back": [0.0, 4.0, 0.35],
+    "front": [0.0, -4.0, 0.35],
+    "front_three_quarter": [2.8284271247461903, -2.8284271247461903, 0.35],
+    "side": [4.0, 0.0, 0.35]
+  },
+  "clay_rgba": [0.62, 0.64, 0.68, 1.0],
+  "color_management": "Standard",
+  "engine": "BLENDER_EEVEE_NEXT",
+  "file_format": "PNG",
+  "lighting": "fixed_three_area_v1",
+  "normalization": "temporary_copy_center_and_uniform_max_dimension_to_2",
+  "reference_views": [
+    "front",
+    "front_three_quarter",
+    "side",
+    "back"
+  ],
+  "renderer_version": "cgb-reference-renderer-1.1.0",
+  "resolution": [256, 256],
+  "transparent": false
+}

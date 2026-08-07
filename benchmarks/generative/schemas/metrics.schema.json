@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chroma3d.local/cgb/0.1/metrics.schema.json",
+  "title": "CGB Geometry Metrics",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["evaluator_version", "status", "raw_geometry", "ground_truth_geometry", "alignment", "shape_fidelity", "silhouette", "detail"],
+  "properties": {
+    "evaluator_version": {"const": "cgb-geometry-evaluator-1.0.0"},
+    "status": {"enum": ["PASS", "ANALYSIS_FAILED", "ALIGNMENT_INDETERMINATE", "IMPORT_FAILED"]},
+    "raw_geometry": {"type": "object"},
+    "ground_truth_geometry": {"type": "object"},
+    "alignment": {"type": "object"},
+    "shape_fidelity": {"type": "object", "required": ["normalized_symmetric_chamfer", "f_score", "normal_consistency", "bounding_box_proportion_error", "surface_area_ratio", "volume_ratio", "component_count_difference"]},
+    "silhouette": {"type": "object", "required": ["method", "views", "mean_iou", "worst_view_iou"]},
+    "detail": {"type": "object", "required": ["status", "included_in_primary_ranking", "limitations"]}
+  }
+}

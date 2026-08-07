@@ -1,0 +1,21 @@
+{
+  "attempts": 1,
+  "case_count": 10,
+  "case_ids": [
+    "statue-asad-al-lat",
+    "statue-bastet",
+    "statue-cosmic-buddha-smithsonian-150k",
+    "statue-hizen-komainu",
+    "statue-hotei-water-basin",
+    "statue-laocoon-group",
+    "statue-mick-odwyer",
+    "statue-pieta-michelangelo",
+    "statue-thinker-rodin",
+    "statue-venus-willendorf"
+  ],
+  "cgb_version": "0.1.0",
+  "corpus_manifest_hash": "d983ac3041e0e2c5568044c2e7cc88c9c5da7dbfa2bb9b7692d00d9e35299f0b",
+  "primary_result_policy": "FIRST_SHOT",
+  "subset_hash": "89606b02d953885e68bc86b03d04f5904a3131f73ca296805f026aada63d7b89",
+  "subset_id": "CGB-CORE10"
+}

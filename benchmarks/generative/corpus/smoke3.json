@@ -1,0 +1,14 @@
+{
+  "attempts": 1,
+  "case_count": 3,
+  "case_ids": [
+    "statue-asad-al-lat",
+    "statue-cosmic-buddha-smithsonian-150k",
+    "statue-pieta-michelangelo"
+  ],
+  "cgb_version": "0.1.0",
+  "corpus_manifest_hash": "d983ac3041e0e2c5568044c2e7cc88c9c5da7dbfa2bb9b7692d00d9e35299f0b",
+  "primary_result_policy": "FIRST_SHOT",
+  "subset_hash": "bb748b25642bb4a94b98376e6c31c3aecb9d4a7d53fe30a8666e4faca5a9faf7",
+  "subset_id": "CGB-SMOKE3"
+}

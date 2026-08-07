@@ -1,0 +1,37 @@
+{
+  "cgb_version": "0.1.0",
+  "prompt_corpus_hash": "04cedcac4fc407a44d84a76e93a2c163ac8f03861ef0fd19762d24f0f1586d15",
+  "prompts": [
+    {
+      "prompt": "A plain ceramic mug with one handle.",
+      "prompt_id": "simple_object"
+    },
+    {
+      "prompt": "A natural branching coral specimen.",
+      "prompt_id": "organic_object"
+    },
+    {
+      "prompt": "A compact industrial gearbox housing.",
+      "prompt_id": "hard_surface_object"
+    },
+    {
+      "prompt": "A stylized low-poly owl figurine.",
+      "prompt_id": "stylized_object"
+    },
+    {
+      "prompt": "A high-detail stone statue of a robed scholar.",
+      "prompt_id": "high_detail_statue"
+    },
+    {
+      "prompt": "A heroic character bust with layered armor.",
+      "prompt_id": "character_bust"
+    },
+    {
+      "prompt": "An ornate wrought-iron lantern with thin curved bars.",
+      "prompt_id": "thin_feature_object"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "separate_from_ground_truth_reconstruction": true,
+  "track": "C"
+}
