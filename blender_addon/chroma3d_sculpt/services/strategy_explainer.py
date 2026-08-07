@@ -2,12 +2,11 @@
 
 from __future__ import annotations
 
-from typing import Any, Mapping, Sequence
+from typing import Sequence
 
 from ..models.intelligent_optimization_models import (
     ConstraintSeverity,
     ConstraintState,
-    EvidenceState,
     IntelligentStrategy,
     RankingRecord,
     StrategyEvaluation,

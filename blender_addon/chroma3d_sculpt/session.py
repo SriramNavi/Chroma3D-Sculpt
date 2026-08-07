@@ -29,12 +29,19 @@ def get_result(obj: Any | None = None) -> AnalysisResult | None:
     return _reports.get(key) if key is not None else None
 
 
-def has_result(obj: Any | None = None) -> bool:
-    return get_result(obj) is not None
+def discard_result(obj: Any) -> None:
+    """Discard only the report owned by ``obj`` and retain other cached reports."""
+
+    global _latest_key
+    key = object_session_key(obj)
+    if key is None:
+        return
+    _reports.pop(key, None)
+    if _latest_key == key:
+        _latest_key = next(reversed(_reports), None)
 
 
 def clear() -> None:
     global _latest_key
     _reports.clear()
     _latest_key = None
-

@@ -1,0 +1,1170 @@
+{
+  "decision": "H1_COMPLETE_WITH_FINDINGS",
+  "evidence": {
+    "baseline": {
+      "expected_merge": "6f20b8c3007658a78eb89e2d2937924175384feb",
+      "identity_classification": "NEWLINE_ONLY_EQUIVALENT",
+      "immutable_baseline_dirty_paths": [],
+      "manifest_sha256": "0c530092a086a5341fcfb422503f8cf4d8fe0bff6e9cdc870795dd40d3c8c4a5",
+      "manifest_status": "H0_BASELINE_COMPLETE_WITH_FINDINGS",
+      "normalized_manifest_sha256": "0c530092a086a5341fcfb422503f8cf4d8fe0bff6e9cdc870795dd40d3c8c4a5",
+      "status": "PASS",
+      "tag": "v0.8.0-h0-hardening-baseline",
+      "tag_target": "6f20b8c3007658a78eb89e2d2937924175384feb",
+      "tagged_manifest_byte_match": false,
+      "tagged_manifest_normalized_match": true,
+      "tagged_manifest_semantic_match": true,
+      "working_tree_manifest_sha256": "c24d4215064d46affc46d5aff834355d682ce025bcdd3029dd772e1de4ca4fec"
+    },
+    "combined_tests": {
+      "baseline_tests": 813,
+      "expected_delta": 1,
+      "failures": 0,
+      "status": "PASS",
+      "tests_run": 814
+    },
+    "dataset": {
+      "current_release_input_sha256": "5b699680acd7b9dc65dfeb1db7050393626c7ac1c6f855b519e80274b936ae23",
+      "decision": "FRESH_DATASET_VALIDATION_REQUIRED",
+      "full": {
+        "expected_count": 27,
+        "live_provider_calls": 0,
+        "model_count": 27,
+        "passed_count": 27,
+        "source_mutation_count": 0,
+        "status": "PASS",
+        "timeout_count": 0,
+        "unclassified_failure_count": 0
+      },
+      "h0_release_input_sha256": "3c91d5a44ae8f7a35f2e1a28aa935ae35d9d8fef7326a420b32c59e851e71759",
+      "reason": "H1 changed runtime release-input bytes; reuse was rejected fail closed.",
+      "representative": {
+        "expected_count": 10,
+        "live_provider_calls": 0,
+        "model_count": 10,
+        "passed_count": 10,
+        "source_mutation_count": 0,
+        "status": "PASS",
+        "timeout_count": 0,
+        "unclassified_failure_count": 0
+      },
+      "status": "PASS"
+    },
+    "dependency_comparison": {
+      "baseline_package_edges": 467,
+      "baseline_total_edges": 855,
+      "current_package_edges": 467,
+      "current_total_edges": 856,
+      "total_edge_delta_reason": "One test-only edge added by the new lifecycle regression; package graph unchanged."
+    },
+    "documentation": {
+      "checkpoint_commit": "d06e1a05890fe23e77e66f95fc40e0200638a765",
+      "checkpoint_tag": "v0.8.0-pre-hardening-backup",
+      "classification_counts": {
+        "CURRENT": 14
+      },
+      "documents": [
+        {
+          "classification": "CURRENT",
+          "evidence": "Required current-scope terms are present.",
+          "path": "README.md",
+          "recommended_h7_action": "KEEP"
+        },
+        {
+          "classification": "CURRENT",
+          "evidence": "Required current-scope terms are present.",
+          "path": "ARCHITECTURE.md",
+          "recommended_h7_action": "KEEP"
+        },
+        {
+          "classification": "CURRENT",
+          "evidence": "Required current-scope terms are present.",
+          "path": "ROADMAP.md",
+          "recommended_h7_action": "KEEP"
+        },
+        {
+          "classification": "CURRENT",
+          "evidence": "Required current-scope terms are present.",
+          "path": "TECHNICAL_ROADMAP.md",
+          "recommended_h7_action": "KEEP"
+        },
+        {
+          "classification": "CURRENT",
+          "evidence": "Required current-scope terms are present.",
+          "path": "PRODUCT_REQUIREMENTS.md",
+          "recommended_h7_action": "KEEP"
+        },
+        {
+          "classification": "CURRENT",
+          "evidence": "Required current-scope terms are present.",
+          "path": "REPAIR_SAFETY.md",
+          "recommended_h7_action": "KEEP"
+        },
+        {
+          "classification": "CURRENT",
+          "evidence": "Required current-scope terms are present.",
+          "path": "PROJECT_RULES.md",
+          "recommended_h7_action": "KEEP"
+        },
+        {
+          "classification": "CURRENT",
+          "evidence": "Required current-scope terms are present.",
+          "path": "AGENTS.md",
+          "recommended_h7_action": "KEEP"
+        },
+        {
+          "classification": "CURRENT",
+          "evidence": "Required current-scope terms are present.",
+          "path": "docs/printability/README.md",
+          "recommended_h7_action": "KEEP"
+        },
+        {
+          "classification": "CURRENT",
+          "evidence": "Required current-scope terms are present.",
+          "path": "docs/advanced-preparation/README.md",
+          "recommended_h7_action": "KEEP"
+        },
+        {
+          "classification": "CURRENT",
+          "evidence": "Required current-scope terms are present.",
+          "path": "docs/controlled-optimization/README.md",
+          "recommended_h7_action": "KEEP"
+        },
+        {
+          "classification": "CURRENT",
+          "evidence": "Required current-scope terms are present.",
+          "path": "docs/intelligent-optimization/README.md",
+          "recommended_h7_action": "KEEP"
+        },
+        {
+          "classification": "CURRENT",
+          "evidence": "Required current-scope terms are present.",
+          "path": "docs/ai-recommendation/README.md",
+          "recommended_h7_action": "KEEP"
+        },
+        {
+          "classification": "CURRENT",
+          "evidence": "Required current-scope terms are present.",
+          "path": "docs/sprint7",
+          "recommended_h7_action": "KEEP"
+        }
+      ],
+      "generated_at": "2026-08-07T07:47:31+00:00",
+      "limitations": [
+        "Keyword-backed truth checks identify review targets; semantic document review remains an H7 task."
+      ],
+      "schema_version": "1.0.0"
+    },
+    "focused": {
+      "gates": [
+        {
+          "id": "H1-F01",
+          "name": "compile",
+          "status": "PASS"
+        },
+        {
+          "id": "H1-F02",
+          "name": "ledger",
+          "status": "PASS"
+        },
+        {
+          "id": "H1-F03",
+          "name": "registration",
+          "status": "PASS"
+        },
+        {
+          "id": "H1-F04",
+          "name": "public_contract",
+          "status": "PASS"
+        },
+        {
+          "id": "H1-F05",
+          "name": "dependency_graph",
+          "status": "PASS"
+        },
+        {
+          "id": "H1-F06",
+          "name": "diff_check",
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS"
+    },
+    "ledger": {
+      "candidate_count": 912,
+      "classification_counts": {
+        "COMPATIBILITY": 0,
+        "DEV_TOOL_ONLY": 102,
+        "DUPLICATE_BUT_KEEP": 82,
+        "DYNAMIC_REFERENCE": 8,
+        "GENERATED_REFERENCE": 0,
+        "KEEP": 20,
+        "PUBLIC_CONTRACT": 136,
+        "REGISTERED_RUNTIME": 251,
+        "SAFE_TO_REMOVE": 16,
+        "SUSPICIOUS": 50,
+        "TEST_ONLY": 247,
+        "UNRESOLVED": 0
+      },
+      "removed_file_count": 0,
+      "removed_symbol_count": 16,
+      "removed_symbols": [
+        "chroma3d_sculpt.optimization_settings._ALL",
+        "chroma3d_sculpt.services.repair_coordinator.compare_results",
+        "chroma3d_sculpt.session.has_result",
+        "chroma3d_sculpt.ui.properties.reset_session_state",
+        "chroma3d_sculpt.utilities.units.object_dimensions_mm",
+        "chroma3d_sculpt.services.repair_coordinator._metric_summary",
+        "chroma3d_sculpt.services.pareto_frontier.Any",
+        "chroma3d_sculpt.services.pareto_frontier.Iterable",
+        "chroma3d_sculpt.services.pareto_frontier.Mapping",
+        "chroma3d_sculpt.services.pareto_frontier.stable_hash",
+        "chroma3d_sculpt.services.strategy_explainer.Any",
+        "chroma3d_sculpt.services.strategy_explainer.EvidenceState",
+        "chroma3d_sculpt.services.strategy_explainer.Mapping",
+        "chroma3d_sculpt.services.strategy_generator.asdict",
+        "chroma3d_sculpt.services.strategy_generator.is_dataclass",
+        "chroma3d_sculpt.services.strategy_generator.math"
+      ]
+    },
+    "lifecycle": {
+      "after_counts": {
+        "CONFIRMED_LEAK": 0,
+        "EXPECTED_RETENTION": 10,
+        "INCONCLUSIVE": 0,
+        "LIKELY_LEAK": 0,
+        "SUSPICIOUS_RETENTION": 0
+      },
+      "before_suspicious": 1,
+      "disposition": "CONFIRMED_BOUNDED_DEFECT_FIXED",
+      "findings": [],
+      "protected_source_unchanged": true,
+      "status": "PASS"
+    },
+    "package": {
+      "installed_smoke": {
+        "live_provider_calls": 0,
+        "registered_panel": true,
+        "source_immutability": true,
+        "status": "PASS",
+        "version": "0.8.0-alpha.1"
+      },
+      "native": {
+        "returncode": 0
+      },
+      "package": {
+        "archive_bytes": 349410,
+        "archive_file_count": 178,
+        "archive_filename": "chroma3d_sculpt-0.8.0-alpha.1.zip",
+        "archive_sha256": "df9e08d3e90ba697ece7adb0713e04f62b48ae28735b01048794bd58a7fb51b9",
+        "extension_version": "0.8.0-alpha.1",
+        "forbidden_files_absent": true,
+        "manifest_version": "0.8.0",
+        "repository_validator_errors": []
+      },
+      "status": "PASS"
+    },
+    "scope": {
+      "branch": "feature/v1.0-release-hardening",
+      "changed_paths": [
+        "README.md",
+        "blender_addon/chroma3d_sculpt/optimization_settings.py",
+        "blender_addon/chroma3d_sculpt/services/pareto_frontier.py",
+        "blender_addon/chroma3d_sculpt/services/repair_coordinator.py",
+        "blender_addon/chroma3d_sculpt/services/repair_session.py",
+        "blender_addon/chroma3d_sculpt/services/strategy_explainer.py",
+        "blender_addon/chroma3d_sculpt/services/strategy_generator.py",
+        "blender_addon/chroma3d_sculpt/session.py",
+        "blender_addon/chroma3d_sculpt/ui/properties.py",
+        "blender_addon/chroma3d_sculpt/utilities/units.py",
+        "docs/ai-recommendation/README.md",
+        "tests/blender/test_sprint2_repair.py",
+        "hardening/h1/H1_DISPOSITION_LEDGER.json",
+        "hardening/h1/H1_DISPOSITION_SUMMARY.md",
+        "hardening/h1/H1_FINAL_REPORT.md",
+        "hardening/h1/H1_FINAL_RESULT.json",
+        "hardening/h1/H1_FIRST_FAILURE.md",
+        "hardening/h1/H1_REMOVAL_LOG.md",
+        "hardening/h1/README.md",
+        "manual-tests/hardening/h1/run_h1_final_validation.py",
+        "manual-tests/hardening/h1/run_h1_validation.py",
+        "manual-tests/hardening/h1/verify_candidate_removal.py"
+      ],
+      "commits_since_h0": 0,
+      "deleted_paths": [],
+      "diff_name_status": [
+        "M\tREADME.md",
+        "M\tblender_addon/chroma3d_sculpt/optimization_settings.py",
+        "M\tblender_addon/chroma3d_sculpt/services/pareto_frontier.py",
+        "M\tblender_addon/chroma3d_sculpt/services/repair_coordinator.py",
+        "M\tblender_addon/chroma3d_sculpt/services/repair_session.py",
+        "M\tblender_addon/chroma3d_sculpt/services/strategy_explainer.py",
+        "M\tblender_addon/chroma3d_sculpt/services/strategy_generator.py",
+        "M\tblender_addon/chroma3d_sculpt/session.py",
+        "M\tblender_addon/chroma3d_sculpt/ui/properties.py",
+        "M\tblender_addon/chroma3d_sculpt/utilities/units.py",
+        "M\tdocs/ai-recommendation/README.md",
+        "M\ttests/blender/test_sprint2_repair.py"
+      ],
+      "diff_stat": [
+        " README.md                                          |  2 +-",
+        " .../chroma3d_sculpt/optimization_settings.py       |  1 -",
+        " .../chroma3d_sculpt/services/pareto_frontier.py    |  3 +-",
+        " .../chroma3d_sculpt/services/repair_coordinator.py | 63 +---------------------",
+        " .../chroma3d_sculpt/services/repair_session.py     |  3 +-",
+        " .../chroma3d_sculpt/services/strategy_explainer.py |  3 +-",
+        " .../chroma3d_sculpt/services/strategy_generator.py |  2 -",
+        " blender_addon/chroma3d_sculpt/session.py           | 13 +++--",
+        " blender_addon/chroma3d_sculpt/ui/properties.py     |  8 ---",
+        " blender_addon/chroma3d_sculpt/utilities/units.py   |  9 ----",
+        " docs/ai-recommendation/README.md                   |  2 +",
+        " tests/blender/test_sprint2_repair.py               | 10 ++++",
+        " 12 files changed, 29 insertions(+), 90 deletions(-)"
+      ],
+      "forbidden_h2_or_sprint8_paths": [],
+      "head": "6f20b8c3007658a78eb89e2d2937924175384feb",
+      "historical_evidence_changes": [],
+      "status": "PASS",
+      "unexpected_paths": []
+    },
+    "second_pass": {
+      "complexity": {
+        "report": {
+          "classification_counts": {
+            "CRITICAL_REVIEW_PRIORITY": 7,
+            "HIGH_REVIEW_PRIORITY": 29,
+            "LOW": 116,
+            "MODERATE": 69
+          }
+        }
+      },
+      "dependencies": {
+        "report": {
+          "internal_dependency_count": 856,
+          "module_count": 221,
+          "potential_circular_import_count": 0,
+          "statically_unreferenced_candidate_count": 82
+        }
+      },
+      "duplication": {
+        "report": {
+          "candidate_count": 82
+        }
+      },
+      "inventory": {
+        "report": {
+          "python_file_count": 221,
+          "python_physical_loc": 48207
+        }
+      },
+      "symbols": {
+        "report": {
+          "candidate_count": 623
+        }
+      }
+    },
+    "security": {
+      "retained_sprint7": {
+        "live_provider_calls": 0,
+        "package_violations": [],
+        "report_secret_hits": [],
+        "runtime_files_scanned": 23,
+        "status": "PASS",
+        "tracked_secret_or_bytecode_files": [],
+        "violations": []
+      },
+      "static": {
+        "classification_counts": {
+          "EXPECTED_RESTRICTED_PROVIDER_PATH": 2
+        },
+        "prohibited_runtime_finding_count": 0,
+        "status": "PASS",
+        "temporary_profile_leakage": "INCONCLUSIVE_STATIC",
+        "tracked_secret_or_bytecode_count": 0
+      },
+      "status": "PASS"
+    },
+    "source_immutability": {
+      "source_mutations": 0,
+      "status": "PASS"
+    }
+  },
+  "failures": [],
+  "gates": [
+    {
+      "detail": {
+        "expected_merge": "6f20b8c3007658a78eb89e2d2937924175384feb",
+        "identity_classification": "NEWLINE_ONLY_EQUIVALENT",
+        "immutable_baseline_dirty_paths": [],
+        "manifest_sha256": "0c530092a086a5341fcfb422503f8cf4d8fe0bff6e9cdc870795dd40d3c8c4a5",
+        "manifest_status": "H0_BASELINE_COMPLETE_WITH_FINDINGS",
+        "normalized_manifest_sha256": "0c530092a086a5341fcfb422503f8cf4d8fe0bff6e9cdc870795dd40d3c8c4a5",
+        "status": "PASS",
+        "tag": "v0.8.0-h0-hardening-baseline",
+        "tag_target": "6f20b8c3007658a78eb89e2d2937924175384feb",
+        "tagged_manifest_byte_match": false,
+        "tagged_manifest_normalized_match": true,
+        "tagged_manifest_semantic_match": true,
+        "working_tree_manifest_sha256": "c24d4215064d46affc46d5aff834355d682ce025bcdd3029dd772e1de4ca4fec"
+      },
+      "id": "H1-01",
+      "name": "baseline_integrity",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "candidate_count": 912,
+        "classification_counts": {
+          "COMPATIBILITY": 0,
+          "DEV_TOOL_ONLY": 102,
+          "DUPLICATE_BUT_KEEP": 82,
+          "DYNAMIC_REFERENCE": 8,
+          "GENERATED_REFERENCE": 0,
+          "KEEP": 20,
+          "PUBLIC_CONTRACT": 136,
+          "REGISTERED_RUNTIME": 251,
+          "SAFE_TO_REMOVE": 16,
+          "SUSPICIOUS": 50,
+          "TEST_ONLY": 247,
+          "UNRESOLVED": 0
+        },
+        "removed_file_count": 0,
+        "removed_symbol_count": 16,
+        "removed_symbols": [
+          "chroma3d_sculpt.optimization_settings._ALL",
+          "chroma3d_sculpt.services.repair_coordinator.compare_results",
+          "chroma3d_sculpt.session.has_result",
+          "chroma3d_sculpt.ui.properties.reset_session_state",
+          "chroma3d_sculpt.utilities.units.object_dimensions_mm",
+          "chroma3d_sculpt.services.repair_coordinator._metric_summary",
+          "chroma3d_sculpt.services.pareto_frontier.Any",
+          "chroma3d_sculpt.services.pareto_frontier.Iterable",
+          "chroma3d_sculpt.services.pareto_frontier.Mapping",
+          "chroma3d_sculpt.services.pareto_frontier.stable_hash",
+          "chroma3d_sculpt.services.strategy_explainer.Any",
+          "chroma3d_sculpt.services.strategy_explainer.EvidenceState",
+          "chroma3d_sculpt.services.strategy_explainer.Mapping",
+          "chroma3d_sculpt.services.strategy_generator.asdict",
+          "chroma3d_sculpt.services.strategy_generator.is_dataclass",
+          "chroma3d_sculpt.services.strategy_generator.math"
+        ]
+      },
+      "id": "H1-02",
+      "name": "disposition_ledger",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "all_mapped": true,
+        "removed_entries": 16
+      },
+      "id": "H1-03",
+      "name": "removal_proof",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "after_counts": {
+          "CONFIRMED_LEAK": 0,
+          "EXPECTED_RETENTION": 10,
+          "INCONCLUSIVE": 0,
+          "LIKELY_LEAK": 0,
+          "SUSPICIOUS_RETENTION": 0
+        },
+        "before_suspicious": 1,
+        "disposition": "CONFIRMED_BOUNDED_DEFECT_FIXED",
+        "findings": [],
+        "protected_source_unchanged": true,
+        "status": "PASS"
+      },
+      "id": "H1-04",
+      "name": "lifecycle_finding",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "CURRENT": 14
+      },
+      "id": "H1-05",
+      "name": "documentation_correction",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "blender_version": "4.4.3",
+        "class_count_reliably_measured": true,
+        "expected_class_count": 82,
+        "extension_import_seconds": 0.3867719,
+        "factory_startup": true,
+        "iterations": [
+          {
+            "after": {
+              "handlers": {
+                "_extension_repos_files_clear": 1,
+                "_extension_repos_sync": 1,
+                "_extension_repos_update_post": 1,
+                "_extension_repos_update_pre": 1,
+                "animation_playback_post": 0,
+                "animation_playback_pre": 0,
+                "annotation_post": 0,
+                "annotation_pre": 0,
+                "blend_import_post": 0,
+                "blend_import_pre": 0,
+                "composite_cancel": 0,
+                "composite_post": 0,
+                "composite_pre": 0,
+                "depsgraph_update_post": 0,
+                "depsgraph_update_pre": 0,
+                "frame_change_post": 0,
+                "frame_change_pre": 0,
+                "load_factory_preferences_post": 0,
+                "load_factory_startup_post": 0,
+                "load_post": 1,
+                "load_post_fail": 0,
+                "load_pre": 1,
+                "object_bake_cancel": 0,
+                "object_bake_complete": 0,
+                "object_bake_pre": 0,
+                "redo_post": 0,
+                "redo_pre": 0,
+                "render_cancel": 0,
+                "render_complete": 0,
+                "render_init": 0,
+                "render_post": 0,
+                "render_pre": 0,
+                "render_stats": 0,
+                "render_write": 0,
+                "save_post": 0,
+                "save_post_fail": 0,
+                "save_pre": 0,
+                "translation_update_post": 1,
+                "undo_post": 0,
+                "undo_pre": 0,
+                "version_update": 1,
+                "xr_session_start_pre": 0
+              },
+              "owned_resources": {
+                "collections": 0,
+                "meshes": 0,
+                "objects": 0
+              }
+            },
+            "before": {
+              "handlers": {
+                "_extension_repos_files_clear": 1,
+                "_extension_repos_sync": 1,
+                "_extension_repos_update_post": 1,
+                "_extension_repos_update_pre": 1,
+                "animation_playback_post": 0,
+                "animation_playback_pre": 0,
+                "annotation_post": 0,
+                "annotation_pre": 0,
+                "blend_import_post": 0,
+                "blend_import_pre": 0,
+                "composite_cancel": 0,
+                "composite_post": 0,
+                "composite_pre": 0,
+                "depsgraph_update_post": 0,
+                "depsgraph_update_pre": 0,
+                "frame_change_post": 0,
+                "frame_change_pre": 0,
+                "load_factory_preferences_post": 0,
+                "load_factory_startup_post": 0,
+                "load_post": 1,
+                "load_post_fail": 0,
+                "load_pre": 1,
+                "object_bake_cancel": 0,
+                "object_bake_complete": 0,
+                "object_bake_pre": 0,
+                "redo_post": 0,
+                "redo_pre": 0,
+                "render_cancel": 0,
+                "render_complete": 0,
+                "render_init": 0,
+                "render_post": 0,
+                "render_pre": 0,
+                "render_stats": 0,
+                "render_write": 0,
+                "save_post": 0,
+                "save_post_fail": 0,
+                "save_pre": 0,
+                "translation_update_post": 1,
+                "undo_post": 0,
+                "undo_pre": 0,
+                "version_update": 1,
+                "xr_session_start_pre": 0
+              },
+              "owned_resources": {
+                "collections": 0,
+                "meshes": 0,
+                "objects": 0
+              }
+            },
+            "during": {
+              "handlers": {
+                "_extension_repos_files_clear": 1,
+                "_extension_repos_sync": 1,
+                "_extension_repos_update_post": 1,
+                "_extension_repos_update_pre": 1,
+                "animation_playback_post": 0,
+                "animation_playback_pre": 0,
+                "annotation_post": 0,
+                "annotation_pre": 0,
+                "blend_import_post": 0,
+                "blend_import_pre": 0,
+                "composite_cancel": 0,
+                "composite_post": 0,
+                "composite_pre": 0,
+                "depsgraph_update_post": 0,
+                "depsgraph_update_pre": 0,
+                "frame_change_post": 0,
+                "frame_change_pre": 0,
+                "load_factory_preferences_post": 0,
+                "load_factory_startup_post": 0,
+                "load_post": 1,
+                "load_post_fail": 0,
+                "load_pre": 1,
+                "object_bake_cancel": 0,
+                "object_bake_complete": 0,
+                "object_bake_pre": 0,
+                "redo_post": 0,
+                "redo_pre": 0,
+                "render_cancel": 0,
+                "render_complete": 0,
+                "render_init": 0,
+                "render_post": 0,
+                "render_pre": 0,
+                "render_stats": 0,
+                "render_write": 0,
+                "save_post": 0,
+                "save_post_fail": 0,
+                "save_pre": 0,
+                "translation_update_post": 1,
+                "undo_post": 0,
+                "undo_pre": 0,
+                "version_update": 1,
+                "xr_session_start_pre": 0
+              },
+              "owned_resources": {
+                "collections": 0,
+                "meshes": 0,
+                "objects": 0
+              }
+            },
+            "handlers_restored": true,
+            "iteration": 1,
+            "owned_resources_restored": true,
+            "register_seconds": 0.0044865,
+            "registered_class_count": 82,
+            "unregister_seconds": 0.0004315
+          },
+          {
+            "after": {
+              "handlers": {
+                "_extension_repos_files_clear": 1,
+                "_extension_repos_sync": 1,
+                "_extension_repos_update_post": 1,
+                "_extension_repos_update_pre": 1,
+                "animation_playback_post": 0,
+                "animation_playback_pre": 0,
+                "annotation_post": 0,
+                "annotation_pre": 0,
+                "blend_import_post": 0,
+                "blend_import_pre": 0,
+                "composite_cancel": 0,
+                "composite_post": 0,
+                "composite_pre": 0,
+                "depsgraph_update_post": 0,
+                "depsgraph_update_pre": 0,
+                "frame_change_post": 0,
+                "frame_change_pre": 0,
+                "load_factory_preferences_post": 0,
+                "load_factory_startup_post": 0,
+                "load_post": 1,
+                "load_post_fail": 0,
+                "load_pre": 1,
+                "object_bake_cancel": 0,
+                "object_bake_complete": 0,
+                "object_bake_pre": 0,
+                "redo_post": 0,
+                "redo_pre": 0,
+                "render_cancel": 0,
+                "render_complete": 0,
+                "render_init": 0,
+                "render_post": 0,
+                "render_pre": 0,
+                "render_stats": 0,
+                "render_write": 0,
+                "save_post": 0,
+                "save_post_fail": 0,
+                "save_pre": 0,
+                "translation_update_post": 1,
+                "undo_post": 0,
+                "undo_pre": 0,
+                "version_update": 1,
+                "xr_session_start_pre": 0
+              },
+              "owned_resources": {
+                "collections": 0,
+                "meshes": 0,
+                "objects": 0
+              }
+            },
+            "before": {
+              "handlers": {
+                "_extension_repos_files_clear": 1,
+                "_extension_repos_sync": 1,
+                "_extension_repos_update_post": 1,
+                "_extension_repos_update_pre": 1,
+                "animation_playback_post": 0,
+                "animation_playback_pre": 0,
+                "annotation_post": 0,
+                "annotation_pre": 0,
+                "blend_import_post": 0,
+                "blend_import_pre": 0,
+                "composite_cancel": 0,
+                "composite_post": 0,
+                "composite_pre": 0,
+                "depsgraph_update_post": 0,
+                "depsgraph_update_pre": 0,
+                "frame_change_post": 0,
+                "frame_change_pre": 0,
+                "load_factory_preferences_post": 0,
+                "load_factory_startup_post": 0,
+                "load_post": 1,
+                "load_post_fail": 0,
+                "load_pre": 1,
+                "object_bake_cancel": 0,
+                "object_bake_complete": 0,
+                "object_bake_pre": 0,
+                "redo_post": 0,
+                "redo_pre": 0,
+                "render_cancel": 0,
+                "render_complete": 0,
+                "render_init": 0,
+                "render_post": 0,
+                "render_pre": 0,
+                "render_stats": 0,
+                "render_write": 0,
+                "save_post": 0,
+                "save_post_fail": 0,
+                "save_pre": 0,
+                "translation_update_post": 1,
+                "undo_post": 0,
+                "undo_pre": 0,
+                "version_update": 1,
+                "xr_session_start_pre": 0
+              },
+              "owned_resources": {
+                "collections": 0,
+                "meshes": 0,
+                "objects": 0
+              }
+            },
+            "during": {
+              "handlers": {
+                "_extension_repos_files_clear": 1,
+                "_extension_repos_sync": 1,
+                "_extension_repos_update_post": 1,
+                "_extension_repos_update_pre": 1,
+                "animation_playback_post": 0,
+                "animation_playback_pre": 0,
+                "annotation_post": 0,
+                "annotation_pre": 0,
+                "blend_import_post": 0,
+                "blend_import_pre": 0,
+                "composite_cancel": 0,
+                "composite_post": 0,
+                "composite_pre": 0,
+                "depsgraph_update_post": 0,
+                "depsgraph_update_pre": 0,
+                "frame_change_post": 0,
+                "frame_change_pre": 0,
+                "load_factory_preferences_post": 0,
+                "load_factory_startup_post": 0,
+                "load_post": 1,
+                "load_post_fail": 0,
+                "load_pre": 1,
+                "object_bake_cancel": 0,
+                "object_bake_complete": 0,
+                "object_bake_pre": 0,
+                "redo_post": 0,
+                "redo_pre": 0,
+                "render_cancel": 0,
+                "render_complete": 0,
+                "render_init": 0,
+                "render_post": 0,
+                "render_pre": 0,
+                "render_stats": 0,
+                "render_write": 0,
+                "save_post": 0,
+                "save_post_fail": 0,
+                "save_pre": 0,
+                "translation_update_post": 1,
+                "undo_post": 0,
+                "undo_pre": 0,
+                "version_update": 1,
+                "xr_session_start_pre": 0
+              },
+              "owned_resources": {
+                "collections": 0,
+                "meshes": 0,
+                "objects": 0
+              }
+            },
+            "handlers_restored": true,
+            "iteration": 2,
+            "owned_resources_restored": true,
+            "register_seconds": 0.0040636,
+            "registered_class_count": 82,
+            "unregister_seconds": 0.0005049
+          },
+          {
+            "after": {
+              "handlers": {
+                "_extension_repos_files_clear": 1,
+                "_extension_repos_sync": 1,
+                "_extension_repos_update_post": 1,
+                "_extension_repos_update_pre": 1,
+                "animation_playback_post": 0,
+                "animation_playback_pre": 0,
+                "annotation_post": 0,
+                "annotation_pre": 0,
+                "blend_import_post": 0,
+                "blend_import_pre": 0,
+                "composite_cancel": 0,
+                "composite_post": 0,
+                "composite_pre": 0,
+                "depsgraph_update_post": 0,
+                "depsgraph_update_pre": 0,
+                "frame_change_post": 0,
+                "frame_change_pre": 0,
+                "load_factory_preferences_post": 0,
+                "load_factory_startup_post": 0,
+                "load_post": 1,
+                "load_post_fail": 0,
+                "load_pre": 1,
+                "object_bake_cancel": 0,
+                "object_bake_complete": 0,
+                "object_bake_pre": 0,
+                "redo_post": 0,
+                "redo_pre": 0,
+                "render_cancel": 0,
+                "render_complete": 0,
+                "render_init": 0,
+                "render_post": 0,
+                "render_pre": 0,
+                "render_stats": 0,
+                "render_write": 0,
+                "save_post": 0,
+                "save_post_fail": 0,
+                "save_pre": 0,
+                "translation_update_post": 1,
+                "undo_post": 0,
+                "undo_pre": 0,
+                "version_update": 1,
+                "xr_session_start_pre": 0
+              },
+              "owned_resources": {
+                "collections": 0,
+                "meshes": 0,
+                "objects": 0
+              }
+            },
+            "before": {
+              "handlers": {
+                "_extension_repos_files_clear": 1,
+                "_extension_repos_sync": 1,
+                "_extension_repos_update_post": 1,
+                "_extension_repos_update_pre": 1,
+                "animation_playback_post": 0,
+                "animation_playback_pre": 0,
+                "annotation_post": 0,
+                "annotation_pre": 0,
+                "blend_import_post": 0,
+                "blend_import_pre": 0,
+                "composite_cancel": 0,
+                "composite_post": 0,
+                "composite_pre": 0,
+                "depsgraph_update_post": 0,
+                "depsgraph_update_pre": 0,
+                "frame_change_post": 0,
+                "frame_change_pre": 0,
+                "load_factory_preferences_post": 0,
+                "load_factory_startup_post": 0,
+                "load_post": 1,
+                "load_post_fail": 0,
+                "load_pre": 1,
+                "object_bake_cancel": 0,
+                "object_bake_complete": 0,
+                "object_bake_pre": 0,
+                "redo_post": 0,
+                "redo_pre": 0,
+                "render_cancel": 0,
+                "render_complete": 0,
+                "render_init": 0,
+                "render_post": 0,
+                "render_pre": 0,
+                "render_stats": 0,
+                "render_write": 0,
+                "save_post": 0,
+                "save_post_fail": 0,
+                "save_pre": 0,
+                "translation_update_post": 1,
+                "undo_post": 0,
+                "undo_pre": 0,
+                "version_update": 1,
+                "xr_session_start_pre": 0
+              },
+              "owned_resources": {
+                "collections": 0,
+                "meshes": 0,
+                "objects": 0
+              }
+            },
+            "during": {
+              "handlers": {
+                "_extension_repos_files_clear": 1,
+                "_extension_repos_sync": 1,
+                "_extension_repos_update_post": 1,
+                "_extension_repos_update_pre": 1,
+                "animation_playback_post": 0,
+                "animation_playback_pre": 0,
+                "annotation_post": 0,
+                "annotation_pre": 0,
+                "blend_import_post": 0,
+                "blend_import_pre": 0,
+                "composite_cancel": 0,
+                "composite_post": 0,
+                "composite_pre": 0,
+                "depsgraph_update_post": 0,
+                "depsgraph_update_pre": 0,
+                "frame_change_post": 0,
+                "frame_change_pre": 0,
+                "load_factory_preferences_post": 0,
+                "load_factory_startup_post": 0,
+                "load_post": 1,
+                "load_post_fail": 0,
+                "load_pre": 1,
+                "object_bake_cancel": 0,
+                "object_bake_complete": 0,
+                "object_bake_pre": 0,
+                "redo_post": 0,
+                "redo_pre": 0,
+                "render_cancel": 0,
+                "render_complete": 0,
+                "render_init": 0,
+                "render_post": 0,
+                "render_pre": 0,
+                "render_stats": 0,
+                "render_write": 0,
+                "save_post": 0,
+                "save_post_fail": 0,
+                "save_pre": 0,
+                "translation_update_post": 1,
+                "undo_post": 0,
+                "undo_pre": 0,
+                "version_update": 1,
+                "xr_session_start_pre": 0
+              },
+              "owned_resources": {
+                "collections": 0,
+                "meshes": 0,
+                "objects": 0
+              }
+            },
+            "handlers_restored": true,
+            "iteration": 3,
+            "owned_resources_restored": true,
+            "register_seconds": 0.0046743,
+            "registered_class_count": 82,
+            "unregister_seconds": 0.0003896
+          }
+        ],
+        "limitations": [
+          "Wall-clock startup timings include OS, filesystem, and Python cache noise; use min/median/max as comparison evidence, not a precise universal startup claim."
+        ],
+        "register": {
+          "maximum_seconds": 0.0046743,
+          "median_seconds": 0.0044865,
+          "minimum_seconds": 0.0040636
+        },
+        "schema_version": "1.0.0",
+        "status": "PASS",
+        "unregister": {
+          "maximum_seconds": 0.0005049,
+          "median_seconds": 0.0004315,
+          "minimum_seconds": 0.0003896
+        }
+      },
+      "id": "H1-06",
+      "name": "registration_integrity",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "added_serialized_keys": [],
+        "baseline_contract_sha256": "b5fe2b8b164ff36c07f0900bb0f2ae91c74cbb3c5bc1255b56e59fa2f7db18ac",
+        "changed_fields": [
+          "important_serialized_keys"
+        ],
+        "counts": {
+          "enums": 66,
+          "feature_flags": 14,
+          "operators": 70,
+          "panels": 7,
+          "properties": 170,
+          "schemas": 38
+        },
+        "current_contract_sha256": "b331ba4f9767a356c75825f1865164245d194ea81a41b39e37fe1110b56deb03",
+        "disposition": "EXPLAINED_DEAD_PRIVATE_HELPER_KEYS",
+        "external_contract_changed": false,
+        "removed_serialized_keys": [
+          "analysis_duration_ms",
+          "build_volume_result",
+          "degenerate_faces",
+          "loose_edges",
+          "loose_vertices",
+          "orientation_state",
+          "potential_duplicate_vertices",
+          "reliable_volume_mm3",
+          "surface_area_mm2",
+          "tiny_shell_candidates",
+          "watertightness",
+          "world_space_bounding_box_mm",
+          "zero_length_edges"
+        ],
+        "status": "PASS"
+      },
+      "id": "H1-07",
+      "name": "public_contract_integrity",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "circular_components": 0,
+        "internal_dependency_count": 856,
+        "module_count": 221,
+        "statically_unreferenced_candidates": 82
+      },
+      "id": "H1-08",
+      "name": "dependency_graph_integrity",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "baseline_tests": 813,
+        "expected_delta": 1,
+        "failures": 0,
+        "status": "PASS",
+        "tests_run": 814
+      },
+      "id": "H1-09",
+      "name": "combined_tests",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "archive_bytes": 349410,
+        "archive_file_count": 178,
+        "archive_sha256": "df9e08d3e90ba697ece7adb0713e04f62b48ae28735b01048794bd58a7fb51b9",
+        "installed_smoke": "PASS",
+        "native_returncode": 0,
+        "status": "PASS"
+      },
+      "id": "H1-10",
+      "name": "package_validation",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "current_release_input_sha256": "5b699680acd7b9dc65dfeb1db7050393626c7ac1c6f855b519e80274b936ae23",
+        "decision": "FRESH_DATASET_VALIDATION_REQUIRED",
+        "full": {
+          "model_count": 27,
+          "passed_count": 27,
+          "source_mutation_count": 0,
+          "status": "PASS"
+        },
+        "h0_release_input_sha256": "3c91d5a44ae8f7a35f2e1a28aa935ae35d9d8fef7326a420b32c59e851e71759",
+        "representative": {
+          "model_count": 10,
+          "passed_count": 10,
+          "source_mutation_count": 0,
+          "status": "PASS"
+        },
+        "status": "PASS"
+      },
+      "id": "H1-11",
+      "name": "dataset_disposition",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "source_mutations": 0,
+        "status": "PASS"
+      },
+      "id": "H1-12",
+      "name": "source_immutability",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "after": 0,
+        "before": 1,
+        "disposition": "CONFIRMED_BOUNDED_DEFECT_FIXED"
+      },
+      "id": "H1-13",
+      "name": "lifecycle_comparison",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "live_provider_calls": 0,
+        "prohibited_runtime_finding_count": 0,
+        "retained_sprint7_status": "PASS",
+        "static_status": "PASS"
+      },
+      "id": "H1-14",
+      "name": "security",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "deleted_paths": [],
+        "historical_evidence_changes": [],
+        "scope_status": "PASS",
+        "second_pass_tools": {
+          "complexity": 0,
+          "dependencies": 0,
+          "duplication": 0,
+          "inventory": 0,
+          "symbols": 0
+        },
+        "unexpected_paths": []
+      },
+      "id": "H1-15",
+      "name": "diff_scope_hygiene",
+      "status": "PASS"
+    }
+  ],
+  "generated_at": "2026-08-07T07:48:23.468265+00:00",
+  "safety": {
+    "bounded_lifecycle_defect_fixed": true,
+    "commit_push_pr_merge_tag_occurred": false,
+    "force_reset_clean_stash_rebase_occurred": false,
+    "h2_started": false,
+    "historical_evidence_changed": false,
+    "intended_runtime_behavior_changed": false,
+    "product_or_package_version_changed": false,
+    "profile_changed": false,
+    "public_contract_changed": false,
+    "schema_changed": false,
+    "source_geometry_mutated": false,
+    "sprint8_started": false,
+    "tests_weakened": false,
+    "threshold_changed": false
+  },
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

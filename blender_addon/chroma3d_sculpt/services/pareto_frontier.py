@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import math
-from typing import Any, Iterable, Mapping, Sequence
+from typing import Sequence
 
 from ..models.intelligent_optimization_models import (
     DominanceRecord,
@@ -14,7 +14,6 @@ from ..models.intelligent_optimization_models import (
     ParetoFrontier,
     ParetoPoint,
     StrategyEvaluation,
-    stable_hash,
 )
 
 

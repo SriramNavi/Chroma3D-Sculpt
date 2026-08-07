@@ -17,7 +17,7 @@ from ..models.repair_models import (
     RepairSessionStatus,
 )
 from ..repair_settings import RepairSettings
-from ..session import store_result
+from ..session import discard_result, store_result
 from ..utilities.context import object_session_key
 from ..utilities.repair_signatures import protected_source_snapshot, repair_workspace_signature
 from .mesh_analyzer import analyze_mesh
@@ -270,6 +270,7 @@ def start_session(
         bpy.context.view_layer.objects.active = workspace
         return session
     except Exception:
+        discard_result(workspace)
         for checkpoint_id, mesh in list(_checkpoint_meshes.items()):
             if mesh.name.startswith(workspace_mesh.name):
                 _checkpoint_meshes.pop(checkpoint_id, None)

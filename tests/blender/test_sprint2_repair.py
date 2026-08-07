@@ -16,6 +16,7 @@ if str(SOURCE_PARENT) not in sys.path:
     sys.path.insert(0, str(SOURCE_PARENT))
 
 from chroma3d_sculpt.analysis_settings import AnalysisSettings  # noqa: E402
+import chroma3d_sculpt.session as diagnostic_session  # noqa: E402
 from chroma3d_sculpt.models.repair_models import (  # noqa: E402
     RepairCandidateType,
     RepairDecision,
@@ -547,6 +548,15 @@ class Sprint2RepairTests(unittest.TestCase):
         self.assertIn(source.name, bpy.data.objects)
         self.assertIn(unrelated.name, bpy.data.objects)
         self.assertEqual(session.status, RepairSessionStatus.ROLLED_BACK)
+
+    def test_48b_rollback_discards_workspace_diagnostic_report(self):
+        diagnostic_session.clear()
+        session = self.start(self.create_cube())
+        self.assertIsNotNone(diagnostic_session.get_result())
+
+        rollback_repair_session(session, blend_file_path="")
+
+        self.assertIsNone(diagnostic_session.get_result())
 
     def test_49_accept_clears_checkpoint_meshes(self):
         session = self.start(self.create_cube())

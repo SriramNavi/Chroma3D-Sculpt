@@ -12,7 +12,6 @@ from .models.optimization_models import (
 )
 
 
-_ALL = tuple(OptimizationObjective)
 _PRESET_OBJECTIVES = {
     "Balanced FDM": {
         OptimizationObjective.BUILD_VOLUME_FIT: 1.0,
