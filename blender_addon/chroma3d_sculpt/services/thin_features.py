@@ -2,22 +2,12 @@
 
 from __future__ import annotations
 
-import math
 from time import perf_counter
 
 from ..models.printability_models import EvidenceState, PrintabilityConfidence, PrintabilityStatus, PrinterProfile, ThinFeatureResult
 from ..printability_settings import PrintabilitySettings
 from .geometry_facts import GeometryContext
-
-
-def _percentiles(values: list[float]) -> dict[str, float]:
-    if not values:
-        return {}
-    ordered = sorted(values)
-    return {
-        label: ordered[min(round((len(ordered) - 1) * fraction), len(ordered) - 1)]
-        for label, fraction in (("p05", 0.05), ("p25", 0.25), ("p50", 0.5), ("p75", 0.75), ("p95", 0.95))
-    }
+from .printability_statistics import percentiles
 
 
 def analyze_thin_features(
@@ -82,7 +72,7 @@ def analyze_thin_features(
         candidates_completed=len(candidates),
         candidates_skipped=len(context.shells.shells) - len(candidates),
         minimum_diameter_mm=min(diameters),
-        percentile_diameters_mm=_percentiles(diameters),
+        percentile_diameters_mm=percentiles(diameters),
         warning_feature_count=len(warning_items),
         critical_feature_count=len(critical_items),
         largest_affected_region_mm=max((item[2] for item in critical_items + warning_items), default=0.0),

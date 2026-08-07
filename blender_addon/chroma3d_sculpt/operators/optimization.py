@@ -2,20 +2,18 @@
 
 from __future__ import annotations
 
-from pathlib import Path
-
 import bpy
 from bpy.props import StringProperty
 from bpy_extras.io_utils import ExportHelper
 
 from ..models.optimization_models import OptimizationOperationType, OptimizationPolicy
 from ..optimization_settings import OptimizationSettings
-from ..services.optimization_audit import build_audit, sanitize_optimization_filename, write_json_audit, write_markdown_audit
+from ..services.optimization_audit import build_audit, write_json_audit, write_markdown_audit
 from ..services.optimization_coordinator import (
     accept_optimized_copy, apply_selected_step, discard_workspace, generate_session_candidates, generate_session_plan,
     rerun_comparison, restore_session_to_start, start_session, undo_last_step,
 )
-from ..services.optimization_session import get_active_session, get_archived_session, get_workspace
+from ..services.optimization_session import get_active_session, get_archived_session
 from ..utilities.context import active_mesh_object, is_valid_mesh_object
 from ..utilities.logging import get_logger
 

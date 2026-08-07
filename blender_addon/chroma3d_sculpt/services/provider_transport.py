@@ -4,7 +4,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 import http.client
-import json
 import ssl
 import threading
 from typing import Mapping

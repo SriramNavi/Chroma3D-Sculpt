@@ -12,7 +12,6 @@ from ..analysis_settings import AnalysisSettings
 from ..models.analysis_result import AnalysisResult
 from ..models.repair_models import (
     RepairCheckpointRecord,
-    RepairDecision,
     RepairSession,
     RepairSessionStatus,
 )

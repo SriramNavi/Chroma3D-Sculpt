@@ -16,9 +16,9 @@ from ..services.advanced_preparation_coordinator import analyze_advanced_prepara
 from ..services.advanced_preparation_report import (
     sanitize_preparation_filename, write_batch_json, write_batch_markdown, write_preparation_json, write_preparation_markdown,
 )
-from ..services.advanced_preparation_session import get_preparation_result, require_current_preparation, store_preparation_result
+from ..services.advanced_preparation_session import require_current_preparation, store_preparation_result
 from ..services.batch_preparation import analyze_preparation_batch
-from ..services.batch_preparation_session import get_batch_result, require_current_batch, store_batch_result
+from ..services.batch_preparation_session import require_current_batch, store_batch_result
 from ..services.hardware_profile_loader import hardware_from_property_group
 from ..services.material_profile_loader import material_from_property_group
 from ..services.printability_baseline import (

@@ -3,11 +3,10 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone
-import json
 from pathlib import Path
 import re
 from uuid import uuid4
-from typing import Any, Mapping
+from typing import Any
 
 from ..metadata import DISPLAY_VERSION
 from ..models.ai_assistance_models import AI_ASSISTANCE_SCHEMA_VERSION, AssistanceReport, AssistanceSession, ContextManifest, deterministic_id, plain_value

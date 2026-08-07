@@ -17,6 +17,7 @@ from ..models.printability_models import (
 )
 from ..printability_settings import PrintabilitySettings
 from .geometry_facts import GeometryContext
+from .printability_statistics import percentiles
 
 
 def overhang_angle_deg(normal: Vector, build_direction: Vector) -> float | None:
@@ -24,16 +25,6 @@ def overhang_angle_deg(normal: Vector, build_direction: Vector) -> float | None:
     if dot >= 0.0:
         return None
     return math.degrees(math.acos(max(-1.0, min(1.0, -dot))))
-
-
-def _percentiles(values: list[float]) -> dict[str, float]:
-    if not values:
-        return {}
-    ordered = sorted(values)
-    return {
-        label: ordered[min(round((len(ordered) - 1) * fraction), len(ordered) - 1)]
-        for label, fraction in (("p05", 0.05), ("p25", 0.25), ("p50", 0.5), ("p75", 0.75), ("p95", 0.95))
-    }
 
 
 def _regions(context: GeometryContext, bands: dict[int, str], angles: dict[int, float], settings: PrintabilitySettings) -> tuple[OverhangRegion, ...]:
@@ -142,7 +133,7 @@ def analyze_overhangs(context: GeometryContext, profile: PrinterProfile, setting
         critical_area_percent=critical_area / eligible_area * 100.0 if eligible_area else 0.0,
         suppressed_face_count=suppressed_count,
         suppressed_area_mm2=suppressed_area,
-        angle_percentiles_deg=_percentiles(downward_angles),
+        angle_percentiles_deg=percentiles(downward_angles),
         regions=regions[:cap],
         evidence_faces=evidence[:cap],
         build_direction=tuple(float(value) for value in direction),

@@ -3,10 +3,8 @@
 from __future__ import annotations
 
 from dataclasses import replace
-from pathlib import Path
-
 import bpy
-from bpy.props import BoolProperty, StringProperty
+from bpy.props import StringProperty
 from bpy_extras.io_utils import ExportHelper
 
 from ..intelligent_optimization_settings import IntelligentOptimizationSettings
@@ -24,7 +22,6 @@ from ..services.intelligent_optimization_coordinator import (
     rank_intelligent_strategies,
     record_strategy_history,
     rerun_intelligent_search,
-    select_strategy,
     start_intelligent_session,
 )
 from ..services.intelligent_optimization_session import get_active_session, get_archived_session

@@ -12,7 +12,6 @@ from ..models.intelligent_optimization_models import (
     IntelligentOptimizationAudit,
     IntelligentOptimizationSession,
     STRATEGY_SET_SCHEMA_VERSION,
-    plain_value,
 )
 
 

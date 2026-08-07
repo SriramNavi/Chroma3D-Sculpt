@@ -3,22 +3,19 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone
-from hashlib import sha256
 from typing import Any, Mapping
 from uuid import uuid4
 
 from ..intelligent_optimization_settings import IntelligentOptimizationSettings, ObjectiveProfile, build_objective_profile
-from ..metadata import DISPLAY_VERSION, PERFORMANCE_REGISTRY_VERSION
+from ..metadata import PERFORMANCE_REGISTRY_VERSION
 from ..models.intelligent_optimization_models import (
     IntelligentOptimizationSession,
     IntelligentSessionState,
     SearchBudgetUsage,
     SearchPolicy,
-    StrategyEvaluation,
     stable_hash,
 )
 from ..utilities.optimization_signatures import source_signature
-from .optimization_session import get_workspace as get_controlled_workspace
 from .optimization_session import start_session as start_controlled_session
 
 

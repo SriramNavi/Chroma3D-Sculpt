@@ -9,7 +9,7 @@ from bpy.props import EnumProperty, StringProperty
 from bpy_extras.io_utils import ExportHelper
 
 from ..analysis_settings import settings_from_property_group
-from ..models.repair_models import RepairCandidateType, RepairOperationType, RepairPlanStatus, RepairSessionStatus
+from ..models.repair_models import RepairCandidateType, RepairOperationType, RepairPlanStatus
 from ..repair_settings import settings_from_repair_property_group
 from ..services.repair_audit import sanitize_repair_audit_filename, write_repair_audit
 from ..services.repair_coordinator import (
